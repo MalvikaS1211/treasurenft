@@ -30,6 +30,8 @@ import "../src/css/chunk-vendors-b1d75844.25331d0a.css";
 import "../src/css/register.56847134.css";
 import Dashboard from "./Components/dashboard";
 import "../src/css/dashboard.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 function App() {
   return (
     <>

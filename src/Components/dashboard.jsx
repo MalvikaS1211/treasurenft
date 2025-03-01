@@ -1,18 +1,18 @@
 import React from "react";
-// import "./ExploreSection.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Dashboard = () => {
   return (
     <div className="explanationArea">
-      <div className="row-center">
-        <div className="text-area">
+      <div className="row justify-content-center text-center">
+        <div className="col-lg-4 col-md-6 col-12 text-area mb-4">
           <div className="title">
             Explore, Discover and Earn Big with one of the top Web3 NFT
             Marketplaces in the world
           </div>
         </div>
 
-        <div className="text-area">
+        <div className="col-lg-4 col-md-6 col-12 text-area mb-4">
           <img
             src="https://image.treasurenft.xyz/icon/icon_cardTick_01.png"
             alt="icon"
@@ -29,7 +29,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="text-area">
+        <div className="col-lg-4 col-md-6 col-12 text-area mb-4">
           <img
             src="https://image.treasurenft.xyz/icon/icon_histogram_01.png"
             alt="icon"
