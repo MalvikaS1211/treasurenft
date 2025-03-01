@@ -1,0 +1,41 @@
+.header-container {
+  padding: 35px;
+}
+
+.menu {
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+.search-box {
+  width: 350px;
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 8px 15px;
+  background: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #888;
+}
+
+.search-input::placeholder {
+  color: #ccc;
+  font-weight: 600;
+}
+
+.search-icon {
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+}
