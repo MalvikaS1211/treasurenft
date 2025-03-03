@@ -31,12 +31,14 @@ import "../src/css/register.56847134.css";
 import Dashboard from "./Components/dashboard";
 import "../src/css/dashboard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Footer from "./Components/footer";
 
 function App() {
   return (
     <>
       <Header />
       <Dashboard />
+      <Footer></Footer>
     </>
   );
 }
