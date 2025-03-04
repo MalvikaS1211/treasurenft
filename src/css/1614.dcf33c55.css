@@ -1,1 +1,16 @@
-.buy-success-modal .ivu-modal-wrap{overflow:visible}.buy-success-modal .ivu-modal{top:0;margin:0}.buy-success-modal .ivu-modal-content{width:100%;height:100%;background:rgba(0,0,0,.35)}.buy-success-modal .animation-block{-webkit-transform:translateY(-20px) scale(.9);transform:translateY(-20px) scale(.9)}
+.buy-success-modal .ivu-modal-wrap {
+  overflow: visible;
+}
+.buy-success-modal .ivu-modal {
+  top: 0;
+  margin: 0;
+}
+.buy-success-modal .ivu-modal-content {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+}
+.buy-success-modal .animation-block {
+  -webkit-transform: translateY(-20px) scale(0.9);
+  transform: translateY(-20px) scale(0.9);
+}

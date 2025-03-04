@@ -5,21 +5,72 @@
     rgba(153, 248, 207, 0.5),
     rgba(255, 214, 199, 0.5)
   );
-  padding: 7%;
+  padding: 7%; /* Default padding for desktop */
 }
 
 .title {
   font-size: 30px;
   font-weight: 700;
   color: black;
+  text-align: center; /* Center title on smaller screens */
 }
 
 .description {
   font-size: 14px;
   color: black;
   line-height: 21px;
+  text-align: left; /* Align left for desktop */
+}
 
-  text-align: left;
+@media (max-width: 992px) {
+  .explanationArea {
+    padding: 5%; /* Reduce padding */
+  }
+
+  .title {
+    font-size: 24px; /* Smaller title font size */
+    text-align: center; /* Center title */
+  }
+
+  .description {
+    font-size: 13px;
+    text-align: left; /* Center text on smaller screens */
+  }
+}
+
+/* 📱 For Mobile Screens (576px - 768px) */
+@media (max-width: 768px) {
+  .explanationArea {
+    padding: 4%; /* Compact padding */
+    text-align: center; /* Center whole content */
+  }
+
+  .title {
+    font-size: 20px; /* Smaller title */
+    margin-bottom: 10px;
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+/* 🔥 Extra Small Screens (Up to 576px) */
+@media (max-width: 576px) {
+  .explanationArea {
+    padding: 3%;
+  }
+
+  .title {
+    font-size: 18px; /* Smallest title size */
+  }
+
+  .description {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left; /* Center text */
+  }
 }
 
 .creators-block .small-box .small-product-img-wrap {
@@ -120,7 +171,10 @@
 }
 
 .text-section {
-  padding: 0 15px 5px;
+  padding: 0 15px 5px !important;
+}
+.text-section h3 {
+  font-size: 18px;
 }
 
 .text-section-usdt {
@@ -133,7 +187,7 @@
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .coinimage {
@@ -146,4 +200,49 @@
   /* font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif; */
   font-size: 0.625rem;
   color: #00ac4f;
+}
+
+.moreBtn-custom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.discover-more-btn {
+  margin: 75px 0;
+  width: 25%;
+}
+
+.video-block-custom {
+  position: relative;
+}
+
+.index-video-wrapper-custom {
+  padding: 0 15%;
+  margin: 7vw 0;
+}
+
+/* .index-video-mv-custom {
+  padding-bottom: 55%;
+} */
+.discovernft-btn.active {
+  background-color: #007bff; /* Change to your preferred color */
+  color: white;
+}
+
+/* Customize slick carousel arrows */
+.slick-prev:before,
+.slick-next:before {
+  color: black; /* Arrow color */
+  font-size: 24px; /* Arrow size */
+}
+
+.slick-prev {
+  left: -30px; /* Position left arrow */
+}
+
+.slick-next {
+  right: -30px; /* Position right arrow */
 }

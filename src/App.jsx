@@ -32,6 +32,7 @@ import Dashboard from "./Components/dashboard";
 import "../src/css/dashboard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Components/footer";
+import Carousel from "./Components/Carousel";
 
 function App() {
   return (

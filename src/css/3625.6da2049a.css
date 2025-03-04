@@ -1,1 +1,131 @@
-.fetured-nfts{background-image:-webkit-gradient(linear,left top,right top,from(rgba(153,188,237,.2)),color-stop(rgba(153,248,207,.3)),to(rgba(255,214,199,.3)));background-image:linear-gradient(90deg,rgba(153,188,237,.2),rgba(153,248,207,.3),rgba(255,214,199,.3));padding:4% 7% 7%}.fetured-nfts .fetured-title{text-align:center}.fetured-nfts .collection-outer{margin-top:40px}.fetured-nfts .collection-outer img{display:block}.fetured-nfts .collection-outer .img-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin-bottom:40px}.fetured-nfts .collection-outer .img-0{width:63vw;height:63vw;border-radius:10px;margin-right:10px}.fetured-nfts .collection-outer .img-1,.fetured-nfts .collection-outer .img-2,.fetured-nfts .collection-outer .img-3{width:19vw;height:19vw;border-radius:10px}.fetured-nfts .collection-outer .small-img-box{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin-left:5px}.fetured-nfts .collection-outer .small-img-box,.fetured-nfts .collection-outer .top-img{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.fetured-nfts .collection-outer .top-img{width:100%;margin-bottom:10px}.fetured-nfts .collection-outer .bottom-info{width:100%}.fetured-nfts .collection-outer .creator-box-outer{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.fetured-nfts .collection-outer .creator-box-outer,.fetured-nfts .collection-outer .creator-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.fetured-nfts .collection-outer .creator-wrap img{display:block;width:26px;height:100%;border-radius:50%;margin-right:10px}.fetured-nfts .collection-outer .total{padding:0 10px;height:25px;line-height:25px;border-radius:20px;text-align:center;background-image:-webkit-gradient(linear,left top,right top,from(#99bced),color-stop(#99f8cf),to(#ffd6c7));background-image:linear-gradient(90deg,#99bced,#99f8cf,#ffd6c7)}@media screen and (min-width:768px){.fetured-nfts .fetured-title{text-align:left}.fetured-nfts .collection-outer .img-wrap{margin-bottom:0}.fetured-nfts .collection-outer .img-0{width:20vw;height:20.2vw;margin-right:0}.fetured-nfts .collection-outer .img-1,.fetured-nfts .collection-outer .img-2,.fetured-nfts .collection-outer .img-3{width:7vw;height:6.5vw}.fetured-nfts .collection-outer .top-img{margin-bottom:20px}}
+.fetured-nfts {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(153, 188, 237, 0.2)),
+    color-stop(rgba(153, 248, 207, 0.3)),
+    to(rgba(255, 214, 199, 0.3))
+  );
+  background-image: linear-gradient(
+    90deg,
+    rgba(153, 188, 237, 0.2),
+    rgba(153, 248, 207, 0.3),
+    rgba(255, 214, 199, 0.3)
+  );
+  padding: 4% 7% 7%;
+}
+.fetured-nfts .fetured-title {
+  text-align: center;
+}
+.fetured-nfts .collection-outer {
+  margin-top: 40px;
+}
+.fetured-nfts .collection-outer img {
+  display: block;
+}
+.fetured-nfts .collection-outer .img-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.fetured-nfts .collection-outer .img-0 {
+  width: 63vw;
+  height: 63vw;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.fetured-nfts .collection-outer .img-1,
+.fetured-nfts .collection-outer .img-2,
+.fetured-nfts .collection-outer .img-3 {
+  width: 19vw;
+  height: 19vw;
+  border-radius: 10px;
+}
+.fetured-nfts .collection-outer .small-img-box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: 5px;
+}
+.fetured-nfts .collection-outer .small-img-box,
+.fetured-nfts .collection-outer .top-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.fetured-nfts .collection-outer .top-img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.fetured-nfts .collection-outer .bottom-info {
+  width: 100%;
+}
+.fetured-nfts .collection-outer .creator-box-outer {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.fetured-nfts .collection-outer .creator-box-outer,
+.fetured-nfts .collection-outer .creator-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.fetured-nfts .collection-outer .creator-wrap img {
+  display: block;
+  width: 26px;
+  height: 100%;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.fetured-nfts .collection-outer .total {
+  padding: 0 10px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 20px;
+  text-align: center;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#99bced),
+    color-stop(#99f8cf),
+    to(#ffd6c7)
+  );
+  background-image: linear-gradient(90deg, #99bced, #99f8cf, #ffd6c7);
+}
+@media screen and (min-width: 768px) {
+  .fetured-nfts .fetured-title {
+    text-align: left;
+  }
+  .fetured-nfts .collection-outer .img-wrap {
+    margin-bottom: 0;
+  }
+  .fetured-nfts .collection-outer .img-0 {
+    width: 20vw;
+    height: 20.2vw;
+    margin-right: 0;
+  }
+  .fetured-nfts .collection-outer .img-1,
+  .fetured-nfts .collection-outer .img-2,
+  .fetured-nfts .collection-outer .img-3 {
+    width: 7vw;
+    height: 6.5vw;
+  }
+  .fetured-nfts .collection-outer .top-img {
+    margin-bottom: 20px;
+  }
+}

@@ -1,1 +1,23 @@
-.PasswordLockMsg-modal[data-v-2d73641d] .ivu-modal-content{border-radius:20px}.PasswordLockMsg-modal[data-v-2d73641d] .ivu-modal-body{text-align:center;padding:5%;color:#3d4045}.PasswordLockMsg-modal[data-v-2d73641d] .ivu-modal-body .image-type{width:100px}.PasswordLockMsg-modal__cancelBtn[data-v-2d73641d]{height:45px;width:50%;border:1px solid #000!important;background-color:#fff!important;color:#000!important}.PasswordLockMsg-modal .icon-info[data-v-2d73641d]{width:16px;height:16px;vertical-align:sub}
+.PasswordLockMsg-modal[data-v-2d73641d] .ivu-modal-content {
+  border-radius: 20px;
+}
+.PasswordLockMsg-modal[data-v-2d73641d] .ivu-modal-body {
+  text-align: center;
+  padding: 5%;
+  color: #3d4045;
+}
+.PasswordLockMsg-modal[data-v-2d73641d] .ivu-modal-body .image-type {
+  width: 100px;
+}
+.PasswordLockMsg-modal__cancelBtn[data-v-2d73641d] {
+  height: 45px;
+  width: 50%;
+  border: 1px solid #000 !important;
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.PasswordLockMsg-modal .icon-info[data-v-2d73641d] {
+  width: 16px;
+  height: 16px;
+  vertical-align: sub;
+}
