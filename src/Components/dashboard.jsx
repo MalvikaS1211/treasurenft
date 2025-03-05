@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Penguin_Pals_4089 from "../assets/Penguin_Pals_4089.avif";
 import Penguin_Pals_2349 from "../assets/Penguin_Pals_2349.avif";
@@ -8,11 +8,17 @@ import "aos/dist/aos.css";
 import DiscoverNFTs from "./discoverNfts";
 import Carousel from "./Carousel";
 import TUsdt from "../assets/TUsdt.png";
-
+import SignUp from "./SignUp";
+import { Link } from "react-router-dom";
 const Dashboard = () => {
   useEffect(() => {
     AOS.init();
   });
+  const [showSignup, setShowSignup] = useState(false);
+
+  const handleSignup = () => {
+    setShowSignup(true); // Show Signup component on click
+  };
   return (
     <>
       <div className="explanationArea">
@@ -25,7 +31,7 @@ const Dashboard = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 col-12 text-area mb-4">
-            <div class="d-flex gap-2">
+            <div class="d-flex gap-2 pb-2">
               <img
                 src="https://image.treasurenft.xyz/icon/icon_cardTick_01.png"
                 alt="icon"
@@ -46,7 +52,7 @@ const Dashboard = () => {
           </div>
 
           <div className="col-lg-4 col-md-6 col-12 text-area mb-4">
-            <div class="d-flex  gap-2">
+            <div class="d-flex  gap-2 pb-2">
               <img
                 src="https://image.treasurenft.xyz/icon/icon_histogram_01.png"
                 alt="icon"
@@ -801,10 +807,14 @@ const Dashboard = () => {
               Earning income in TreasureNFT is simple: just RESERVE and then
               TRADE to EARN
             </p>
-            <div class="sign-up-wrap">
-              <p class="title-white-PR-16 text-transform-uppercase">
-                Sign Up Now
-              </p>
+            <div>
+              <div className="sign-up-wrap" onClick={handleSignup}>
+                <Link to="/signup">
+                  <p className="title-white-PR-16 text-transform-uppercase">
+                    Sign Up Now
+                  </p>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -812,7 +822,9 @@ const Dashboard = () => {
       {/*END OF RESERVE AND SELL YOUR NFT EASILY */}
 
       {/* discover more nfts */}
+
       <Carousel></Carousel>
+
       {/* end of discover more nfts */}
       {/* video */}
       <div data-v-7183eb8c="" className="video-block video-block-custom ">

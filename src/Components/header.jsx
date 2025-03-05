@@ -23,6 +23,7 @@ import { FaWallet, FaEye, FaEyeSlash } from "react-icons/fa";
 
 import { FaHeadphones, FaEnvelope, FaShieldAlt } from "react-icons/fa";
 import { IoPersonCircle } from "react-icons/io5";
+import ConnectWallet from "./ConnectWallet";
 export default function Header() {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -36,7 +37,7 @@ export default function Header() {
   };
   return (
     <>
-      <div className="header-container  d-flex align-items-center justify-content-between px-4 py-2">
+      <div className="header header-container  d-flex align-items-center justify-content-between px-4 py-2">
         <div className="logo d-flex align-items-center">
           <img
             src={Logo}
@@ -72,7 +73,7 @@ export default function Header() {
           <FaRegBell size={35} />
           <span className="menu"> Airdrop</span>
           <img src={VideoIcon} alt="App" className="app-icon" />
-          <img src={telegram} alt="telegram" width={50} />
+          <img src={telegram} alt="telegram" width={40} />
           <FaGlobe size={35} />
           <div className="dropdown-wrapper">
             <FaBars size={35} className="menu-icon" onClick={toggleDropdown} />
@@ -115,7 +116,10 @@ export default function Header() {
           <div class="modal-content modal-content-custom">
             <div
               class="modal-header p-0 d-flex justify-content-center align-items-center"
-              style={{ borderRadius: "30px" }}
+              style={{
+                borderTopLeftRadius: "30px",
+                borderTopRightRadius: "30px",
+              }}
             >
               <div>
                 <img src={Logo2} alt="Treasure NFT" class="mb-3" />
@@ -124,10 +128,11 @@ export default function Header() {
             <div class="modal-body">
               <h4 class="login-heading mt-3">Log in</h4>
 
-              <button class="wallet-btn">
+              {/* <button class="wallet-btn">
                 <img src={wallet} alt="" />
                 Wallet Connect
-              </button>
+              </button> */}
+              <ConnectWallet></ConnectWallet>
 
               <form>
                 <div class="mb-3 text-start">

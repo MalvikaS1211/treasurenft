@@ -60,6 +60,7 @@
 @media (max-width: 576px) {
   .explanationArea {
     padding: 3%;
+    padding-top: 65%;
   }
 
   .title {
@@ -82,7 +83,7 @@
   position: relative;
   padding: 7% 7% 5%;
 }
-
+/* 
 .discovernft-btn {
   background-image: linear-gradient(
     90deg,
@@ -93,12 +94,66 @@
   color: #fff !important;
   margin-right: 15px;
   border: none;
-  /* background: #efefef; */
+
   border-radius: 15px;
   line-height: 1.5;
   height: 35px;
   text-transform: capitalize;
   padding: 5px 16px;
+}
+
+.discovernft-btn.discovernft-btn:click {
+  background: #efefef;
+  color: black;
+} */
+
+.discovernft-btn:active {
+  background-image: linear-gradient(
+    90deg,
+    rgba(153, 188, 237, 0.9),
+    rgba(153, 248, 207, 0.9),
+    rgba(255, 214, 199, 0.9)
+  );
+  color: #fff !important;
+  margin-right: 15px;
+  border: none;
+  border-radius: 15px;
+  line-height: 1.5;
+  height: 35px;
+  text-transform: capitalize;
+  padding: 5px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.discovernft-btn-active {
+  background-image: linear-gradient(
+    90deg,
+    rgba(153, 188, 237, 0.9),
+    rgba(153, 248, 207, 0.9),
+    rgba(255, 214, 199, 0.9)
+  );
+  color: #fff !important;
+  margin-right: 15px;
+  border: none;
+  border-radius: 15px;
+  line-height: 1.5;
+  height: 35px;
+  text-transform: capitalize;
+  padding: 5px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.discovernft-btn {
+  margin-right: 15px;
+  border: none;
+
+  border-radius: 15px;
+  line-height: 1.5;
+  height: 35px;
+  text-transform: capitalize;
+  padding: 5px 16px;
+  background: #efefef;
+  color: black !important;
 }
 
 .discovernft-custom {

@@ -4106,7 +4106,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-60 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #000;
 }
@@ -4116,12 +4116,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-60 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #000;
 }
 #dev-id .title-black-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #000;
 }
@@ -4131,7 +4129,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #000;
 }
@@ -4140,7 +4137,7 @@
 }
 #dev-id .title-black-1927B-60,
 #dev-id .title-white-1927B-60 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
 }
 #dev-id .title-white-1927B-60 {
@@ -4152,7 +4149,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-60 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #fff;
 }
@@ -4162,7 +4159,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-60 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #333;
 }
@@ -4172,12 +4169,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-60 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #333;
 }
@@ -4187,17 +4182,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-60 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-60 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #666;
 }
@@ -4207,17 +4201,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-60 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-60 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #666;
 }
@@ -4227,12 +4219,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-60 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #999;
 }
@@ -4242,17 +4233,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-60 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-60 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #999;
 }
@@ -4262,12 +4251,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #999;
 }
 #dev-id .specialText-1927B-60 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-60,
 #dev-id .specialText-PSC-60 {
@@ -4286,7 +4274,6 @@
   font-size: 3.75rem;
 }
 #dev-id .specialText-PSC-60 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-60 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -4308,7 +4295,6 @@
   font-size: 3.75rem;
 }
 #dev-id .specialText-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-60 {
   font-family: "Poppins", sans-serif;
@@ -4330,10 +4316,10 @@
   font-size: 3.75rem;
 }
 #dev-id .specialText-SB-60 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-60 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #ff002f;
 }
@@ -4343,12 +4329,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-60 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-60 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #00ac4f;
 }
@@ -4358,12 +4344,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-60 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-60 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #1dcab3;
 }
@@ -4373,12 +4359,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-60 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-60 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #ec6898;
 }
@@ -4388,7 +4374,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-60 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.75rem;
   color: #ec6898;
 }
@@ -4414,7 +4400,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-56 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #000;
 }
@@ -4424,12 +4410,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-56 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #000;
 }
 #dev-id .title-black-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #000;
 }
@@ -4439,7 +4423,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #000;
 }
@@ -4448,7 +4431,7 @@
 }
 #dev-id .title-black-1927B-56,
 #dev-id .title-white-1927B-56 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
 }
 #dev-id .title-white-1927B-56 {
@@ -4460,7 +4443,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-56 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #fff;
 }
@@ -4470,7 +4453,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-56 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #333;
 }
@@ -4480,12 +4463,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-56 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #333;
 }
@@ -4495,17 +4476,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-56 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-56 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #666;
 }
@@ -4515,17 +4495,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-56 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-56 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #666;
 }
@@ -4535,12 +4513,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-56 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #999;
 }
@@ -4550,17 +4527,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-56 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-56 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #999;
 }
@@ -4570,12 +4545,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #999;
 }
 #dev-id .specialText-1927B-56 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-56,
 #dev-id .specialText-PSC-56 {
@@ -4594,7 +4568,6 @@
   font-size: 3.5rem;
 }
 #dev-id .specialText-PSC-56 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-56 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -4616,7 +4589,6 @@
   font-size: 3.5rem;
 }
 #dev-id .specialText-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-56 {
   font-family: "Poppins", sans-serif;
@@ -4638,10 +4610,10 @@
   font-size: 3.5rem;
 }
 #dev-id .specialText-SB-56 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-56 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #ff002f;
 }
@@ -4651,12 +4623,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-56 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-56 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #00ac4f;
 }
@@ -4666,12 +4638,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-56 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-56 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #1dcab3;
 }
@@ -4681,12 +4653,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-56 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-56 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #ec6898;
 }
@@ -4696,7 +4668,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-56 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3.5rem;
   color: #ec6898;
 }
@@ -4722,7 +4694,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-48 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #000;
 }
@@ -4732,12 +4704,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-48 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #000;
 }
 #dev-id .title-black-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #000;
 }
@@ -4747,7 +4717,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #000;
 }
@@ -4756,7 +4725,7 @@
 }
 #dev-id .title-black-1927B-48,
 #dev-id .title-white-1927B-48 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3rem;
 }
 #dev-id .title-white-1927B-48 {
@@ -4768,7 +4737,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-48 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #fff;
 }
@@ -4778,7 +4747,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-48 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #333;
 }
@@ -4788,12 +4757,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-48 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #333;
 }
@@ -4803,17 +4770,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-48 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-48 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #666;
 }
@@ -4823,17 +4789,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-48 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-48 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #666;
 }
@@ -4843,12 +4807,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-48 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #999;
 }
@@ -4858,17 +4821,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-48 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-48 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #999;
 }
@@ -4878,12 +4839,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #999;
 }
 #dev-id .specialText-1927B-48 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-48,
 #dev-id .specialText-PSC-48 {
@@ -4902,7 +4862,6 @@
   font-size: 3rem;
 }
 #dev-id .specialText-PSC-48 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-48 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -4924,7 +4883,6 @@
   font-size: 3rem;
 }
 #dev-id .specialText-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-48 {
   font-family: "Poppins", sans-serif;
@@ -4946,10 +4904,10 @@
   font-size: 3rem;
 }
 #dev-id .specialText-SB-48 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-48 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #ff002f;
 }
@@ -4959,12 +4917,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-48 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-48 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #00ac4f;
 }
@@ -4974,12 +4932,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-48 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-48 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #1dcab3;
 }
@@ -4989,12 +4947,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-48 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-48 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #ec6898;
 }
@@ -5004,7 +4962,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-48 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 3rem;
   color: #ec6898;
 }
@@ -5030,7 +4988,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-46 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #000;
 }
@@ -5040,12 +4998,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-46 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #000;
 }
 #dev-id .title-black-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #000;
 }
@@ -5055,7 +5011,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #000;
 }
@@ -5064,7 +5019,7 @@
 }
 #dev-id .title-black-1927B-46,
 #dev-id .title-white-1927B-46 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
 }
 #dev-id .title-white-1927B-46 {
@@ -5076,7 +5031,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-46 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #fff;
 }
@@ -5086,7 +5041,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-46 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #333;
 }
@@ -5096,12 +5051,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-46 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #333;
 }
@@ -5111,17 +5064,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-46 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-46 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #666;
 }
@@ -5131,17 +5083,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-46 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-46 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #666;
 }
@@ -5151,12 +5101,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-46 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #999;
 }
@@ -5166,17 +5115,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-46 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-46 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #999;
 }
@@ -5186,12 +5133,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #999;
 }
 #dev-id .specialText-1927B-46 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-46,
 #dev-id .specialText-PSC-46 {
@@ -5210,7 +5156,6 @@
   font-size: 2.875rem;
 }
 #dev-id .specialText-PSC-46 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-46 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -5232,7 +5177,6 @@
   font-size: 2.875rem;
 }
 #dev-id .specialText-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-46 {
   font-family: "Poppins", sans-serif;
@@ -5254,10 +5198,10 @@
   font-size: 2.875rem;
 }
 #dev-id .specialText-SB-46 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-46 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #ff002f;
 }
@@ -5267,12 +5211,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-46 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-46 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #00ac4f;
 }
@@ -5282,12 +5226,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-46 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-46 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #1dcab3;
 }
@@ -5297,12 +5241,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-46 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-46 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #ec6898;
 }
@@ -5312,7 +5256,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-46 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.875rem;
   color: #ec6898;
 }
@@ -5338,7 +5282,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-44 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #000;
 }
@@ -5348,12 +5292,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-44 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #000;
 }
 #dev-id .title-black-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #000;
 }
@@ -5363,7 +5305,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #000;
 }
@@ -5372,7 +5313,7 @@
 }
 #dev-id .title-black-1927B-44,
 #dev-id .title-white-1927B-44 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
 }
 #dev-id .title-white-1927B-44 {
@@ -5384,7 +5325,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-44 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #fff;
 }
@@ -5394,7 +5335,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-44 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #333;
 }
@@ -5404,12 +5345,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-44 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #333;
 }
@@ -5419,17 +5358,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-44 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-44 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #666;
 }
@@ -5439,17 +5377,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-44 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-44 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #666;
 }
@@ -5459,12 +5395,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-44 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #999;
 }
@@ -5474,17 +5409,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-44 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-44 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #999;
 }
@@ -5494,12 +5427,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #999;
 }
 #dev-id .specialText-1927B-44 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-44,
 #dev-id .specialText-PSC-44 {
@@ -5518,7 +5450,6 @@
   font-size: 2.75rem;
 }
 #dev-id .specialText-PSC-44 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-44 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -5540,7 +5471,6 @@
   font-size: 2.75rem;
 }
 #dev-id .specialText-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-44 {
   font-family: "Poppins", sans-serif;
@@ -5562,10 +5492,10 @@
   font-size: 2.75rem;
 }
 #dev-id .specialText-SB-44 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-44 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #ff002f;
 }
@@ -5575,12 +5505,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-44 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-44 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #00ac4f;
 }
@@ -5590,12 +5520,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-44 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-44 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #1dcab3;
 }
@@ -5605,12 +5535,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-44 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-44 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #ec6898;
 }
@@ -5620,7 +5550,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-44 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.75rem;
   color: #ec6898;
 }
@@ -5646,7 +5576,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-42 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #000;
 }
@@ -5656,12 +5586,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-42 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #000;
 }
 #dev-id .title-black-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #000;
 }
@@ -5671,7 +5599,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #000;
 }
@@ -5680,7 +5607,7 @@
 }
 #dev-id .title-black-1927B-42,
 #dev-id .title-white-1927B-42 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
 }
 #dev-id .title-white-1927B-42 {
@@ -5692,7 +5619,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-42 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #fff;
 }
@@ -5702,7 +5629,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-42 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #333;
 }
@@ -5712,12 +5639,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-42 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #333;
 }
@@ -5727,17 +5652,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-42 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-42 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #666;
 }
@@ -5747,17 +5671,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-42 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-42 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #666;
 }
@@ -5767,12 +5689,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-42 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #999;
 }
@@ -5782,17 +5703,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-42 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-42 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #999;
 }
@@ -5802,12 +5721,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #999;
 }
 #dev-id .specialText-1927B-42 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-42,
 #dev-id .specialText-PSC-42 {
@@ -5826,7 +5744,6 @@
   font-size: 2.625rem;
 }
 #dev-id .specialText-PSC-42 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-42 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -5848,7 +5765,6 @@
   font-size: 2.625rem;
 }
 #dev-id .specialText-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-42 {
   font-family: "Poppins", sans-serif;
@@ -5870,10 +5786,10 @@
   font-size: 2.625rem;
 }
 #dev-id .specialText-SB-42 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-42 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #ff002f;
 }
@@ -5883,12 +5799,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-42 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-42 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #00ac4f;
 }
@@ -5898,12 +5814,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-42 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-42 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #1dcab3;
 }
@@ -5913,12 +5829,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-42 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-42 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #ec6898;
 }
@@ -5928,7 +5844,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-42 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.625rem;
   color: #ec6898;
 }
@@ -5954,7 +5870,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-40 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #000;
 }
@@ -5964,12 +5880,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-40 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #000;
 }
 #dev-id .title-black-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #000;
 }
@@ -5979,7 +5893,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #000;
 }
@@ -5988,7 +5901,7 @@
 }
 #dev-id .title-black-1927B-40,
 #dev-id .title-white-1927B-40 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
 }
 #dev-id .title-white-1927B-40 {
@@ -6000,7 +5913,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-40 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #fff;
 }
@@ -6010,7 +5923,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-40 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #333;
 }
@@ -6020,12 +5933,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-40 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #333;
 }
@@ -6035,17 +5946,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-40 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-40 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #666;
 }
@@ -6055,17 +5965,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-40 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-40 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #666;
 }
@@ -6075,12 +5983,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-40 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #999;
 }
@@ -6090,17 +5997,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-40 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-40 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #999;
 }
@@ -6110,12 +6015,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #999;
 }
 #dev-id .specialText-1927B-40 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-40,
 #dev-id .specialText-PSC-40 {
@@ -6134,7 +6038,6 @@
   font-size: 2.5rem;
 }
 #dev-id .specialText-PSC-40 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-40 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -6156,7 +6059,6 @@
   font-size: 2.5rem;
 }
 #dev-id .specialText-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-40 {
   font-family: "Poppins", sans-serif;
@@ -6178,10 +6080,10 @@
   font-size: 2.5rem;
 }
 #dev-id .specialText-SB-40 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-40 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #ff002f;
 }
@@ -6191,12 +6093,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-40 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-40 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #00ac4f;
 }
@@ -6206,12 +6108,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-40 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-40 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #1dcab3;
 }
@@ -6221,12 +6123,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-40 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-40 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #ec6898;
 }
@@ -6236,7 +6138,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-40 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.5rem;
   color: #ec6898;
 }
@@ -6262,7 +6164,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-38 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #000;
 }
@@ -6272,12 +6174,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-38 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #000;
 }
 #dev-id .title-black-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #000;
 }
@@ -6287,7 +6187,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #000;
 }
@@ -6296,7 +6195,7 @@
 }
 #dev-id .title-black-1927B-38,
 #dev-id .title-white-1927B-38 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
 }
 #dev-id .title-white-1927B-38 {
@@ -6308,7 +6207,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-38 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #fff;
 }
@@ -6318,7 +6217,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-38 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #333;
 }
@@ -6328,12 +6227,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-38 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #333;
 }
@@ -6343,17 +6240,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-38 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-38 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #666;
 }
@@ -6363,17 +6259,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-38 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-38 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #666;
 }
@@ -6383,12 +6277,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-38 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #999;
 }
@@ -6398,17 +6291,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-38 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-38 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #999;
 }
@@ -6418,12 +6309,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #999;
 }
 #dev-id .specialText-1927B-38 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-38,
 #dev-id .specialText-PSC-38 {
@@ -6442,7 +6332,6 @@
   font-size: 2.375rem;
 }
 #dev-id .specialText-PSC-38 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-38 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -6464,7 +6353,6 @@
   font-size: 2.375rem;
 }
 #dev-id .specialText-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-38 {
   font-family: "Poppins", sans-serif;
@@ -6486,10 +6374,10 @@
   font-size: 2.375rem;
 }
 #dev-id .specialText-SB-38 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-38 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #ff002f;
 }
@@ -6499,12 +6387,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-38 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-38 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #00ac4f;
 }
@@ -6514,12 +6402,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-38 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-38 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #1dcab3;
 }
@@ -6529,12 +6417,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-38 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-38 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #ec6898;
 }
@@ -6544,7 +6432,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-38 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.375rem;
   color: #ec6898;
 }
@@ -6570,7 +6458,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-36 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #000;
 }
@@ -6580,12 +6468,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-36 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #000;
 }
 #dev-id .title-black-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #000;
 }
@@ -6595,7 +6481,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #000;
 }
@@ -6604,7 +6489,7 @@
 }
 #dev-id .title-black-1927B-36,
 #dev-id .title-white-1927B-36 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
 }
 #dev-id .title-white-1927B-36 {
@@ -6616,7 +6501,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-36 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #fff;
 }
@@ -6626,7 +6511,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-36 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #333;
 }
@@ -6636,12 +6521,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-36 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #333;
 }
@@ -6651,17 +6534,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-36 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-36 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #666;
 }
@@ -6671,17 +6553,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-36 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-36 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #666;
 }
@@ -6691,12 +6571,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-36 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #999;
 }
@@ -6706,17 +6585,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-36 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-36 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #999;
 }
@@ -6726,12 +6603,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #999;
 }
 #dev-id .specialText-1927B-36 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-36,
 #dev-id .specialText-PSC-36 {
@@ -6750,7 +6626,6 @@
   font-size: 2.25rem;
 }
 #dev-id .specialText-PSC-36 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-36 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -6772,7 +6647,6 @@
   font-size: 2.25rem;
 }
 #dev-id .specialText-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-36 {
   font-family: "Poppins", sans-serif;
@@ -6794,10 +6668,10 @@
   font-size: 2.25rem;
 }
 #dev-id .specialText-SB-36 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-36 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #ff002f;
 }
@@ -6807,12 +6681,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-36 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-36 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #00ac4f;
 }
@@ -6822,12 +6696,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-36 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-36 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #1dcab3;
 }
@@ -6837,12 +6711,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-36 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-36 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #ec6898;
 }
@@ -6852,7 +6726,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-36 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.25rem;
   color: #ec6898;
 }
@@ -6878,7 +6752,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-34 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #000;
 }
@@ -6888,12 +6762,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-34 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #000;
 }
 #dev-id .title-black-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #000;
 }
@@ -6903,7 +6775,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #000;
 }
@@ -6912,7 +6783,7 @@
 }
 #dev-id .title-black-1927B-34,
 #dev-id .title-white-1927B-34 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
 }
 #dev-id .title-white-1927B-34 {
@@ -6924,7 +6795,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-34 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #fff;
 }
@@ -6934,7 +6805,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-34 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #333;
 }
@@ -6944,12 +6815,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-34 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #333;
 }
@@ -6959,17 +6828,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-34 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-34 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #666;
 }
@@ -6979,17 +6847,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-34 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-34 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #666;
 }
@@ -6999,12 +6865,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-34 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #999;
 }
@@ -7014,17 +6879,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-34 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-34 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #999;
 }
@@ -7034,12 +6897,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #999;
 }
 #dev-id .specialText-1927B-34 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-34,
 #dev-id .specialText-PSC-34 {
@@ -7058,7 +6920,6 @@
   font-size: 2.125rem;
 }
 #dev-id .specialText-PSC-34 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-34 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -7080,7 +6941,6 @@
   font-size: 2.125rem;
 }
 #dev-id .specialText-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-34 {
   font-family: "Poppins", sans-serif;
@@ -7102,10 +6962,10 @@
   font-size: 2.125rem;
 }
 #dev-id .specialText-SB-34 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-34 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #ff002f;
 }
@@ -7115,12 +6975,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-34 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-34 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #00ac4f;
 }
@@ -7130,12 +6990,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-34 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-34 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #1dcab3;
 }
@@ -7145,12 +7005,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-34 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-34 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #ec6898;
 }
@@ -7160,7 +7020,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-34 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2.125rem;
   color: #ec6898;
 }
@@ -7186,7 +7046,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-32 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #000;
 }
@@ -7196,12 +7056,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-32 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #000;
 }
 #dev-id .title-black-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #000;
 }
@@ -7211,7 +7069,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #000;
 }
@@ -7220,7 +7077,7 @@
 }
 #dev-id .title-black-1927B-32,
 #dev-id .title-white-1927B-32 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2rem;
 }
 #dev-id .title-white-1927B-32 {
@@ -7232,7 +7089,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-32 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #fff;
 }
@@ -7242,7 +7099,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-32 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #333;
 }
@@ -7252,12 +7109,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-32 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #333;
 }
@@ -7267,17 +7122,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-32 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-32 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #666;
 }
@@ -7287,17 +7141,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-32 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-32 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #666;
 }
@@ -7307,12 +7159,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-32 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #999;
 }
@@ -7322,17 +7173,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-32 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-32 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #999;
 }
@@ -7342,12 +7191,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #999;
 }
 #dev-id .specialText-1927B-32 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-32,
 #dev-id .specialText-PSC-32 {
@@ -7366,7 +7214,6 @@
   font-size: 2rem;
 }
 #dev-id .specialText-PSC-32 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-32 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -7388,7 +7235,6 @@
   font-size: 2rem;
 }
 #dev-id .specialText-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-32 {
   font-family: "Poppins", sans-serif;
@@ -7410,10 +7256,10 @@
   font-size: 2rem;
 }
 #dev-id .specialText-SB-32 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-32 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #ff002f;
 }
@@ -7423,12 +7269,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-32 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-32 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #00ac4f;
 }
@@ -7438,12 +7284,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-32 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-32 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #1dcab3;
 }
@@ -7453,12 +7299,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-32 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-32 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #ec6898;
 }
@@ -7468,7 +7314,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-32 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 2rem;
   color: #ec6898;
 }
@@ -7494,7 +7340,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-30 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #000;
 }
@@ -7504,12 +7350,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-30 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #000;
 }
 #dev-id .title-black-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #000;
 }
@@ -7519,7 +7363,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #000;
 }
@@ -7528,7 +7371,7 @@
 }
 #dev-id .title-black-1927B-30,
 #dev-id .title-white-1927B-30 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
 }
 #dev-id .title-white-1927B-30 {
@@ -7540,7 +7383,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-30 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #fff;
 }
@@ -7550,7 +7393,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-30 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #333;
 }
@@ -7560,12 +7403,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-30 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #333;
 }
@@ -7575,17 +7416,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-30 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-30 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #666;
 }
@@ -7595,17 +7435,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-30 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-30 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #666;
 }
@@ -7615,12 +7453,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-30 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #999;
 }
@@ -7630,17 +7467,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-30 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-30 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #999;
 }
@@ -7650,12 +7485,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #999;
 }
 #dev-id .specialText-1927B-30 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-30,
 #dev-id .specialText-PSC-30 {
@@ -7674,7 +7508,6 @@
   font-size: 1.875rem;
 }
 #dev-id .specialText-PSC-30 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-30 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -7696,7 +7529,6 @@
   font-size: 1.875rem;
 }
 #dev-id .specialText-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-30 {
   font-family: "Poppins", sans-serif;
@@ -7718,10 +7550,10 @@
   font-size: 1.875rem;
 }
 #dev-id .specialText-SB-30 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-30 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #ff002f;
 }
@@ -7731,12 +7563,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-30 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-30 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #00ac4f;
 }
@@ -7746,12 +7578,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-30 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-30 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #1dcab3;
 }
@@ -7761,12 +7593,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-30 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-30 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #ec6898;
 }
@@ -7776,7 +7608,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-30 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.875rem;
   color: #ec6898;
 }
@@ -7802,7 +7634,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-28 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #000;
 }
@@ -7812,12 +7644,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-28 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #000;
 }
 #dev-id .title-black-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #000;
 }
@@ -7827,7 +7657,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #000;
 }
@@ -7836,7 +7665,7 @@
 }
 #dev-id .title-black-1927B-28,
 #dev-id .title-white-1927B-28 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
 }
 #dev-id .title-white-1927B-28 {
@@ -7848,7 +7677,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-28 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #fff;
 }
@@ -7858,7 +7687,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-28 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #333;
 }
@@ -7868,12 +7697,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-28 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #333;
 }
@@ -7883,17 +7710,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-28 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-28 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #666;
 }
@@ -7903,17 +7729,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-28 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-28 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #666;
 }
@@ -7923,12 +7747,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-28 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #999;
 }
@@ -7938,17 +7761,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-28 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-28 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #999;
 }
@@ -7958,12 +7779,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #999;
 }
 #dev-id .specialText-1927B-28 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-28,
 #dev-id .specialText-PSC-28 {
@@ -7982,7 +7802,6 @@
   font-size: 1.75rem;
 }
 #dev-id .specialText-PSC-28 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-28 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -8004,7 +7823,6 @@
   font-size: 1.75rem;
 }
 #dev-id .specialText-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-28 {
   font-family: "Poppins", sans-serif;
@@ -8026,10 +7844,10 @@
   font-size: 1.75rem;
 }
 #dev-id .specialText-SB-28 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-28 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #ff002f;
 }
@@ -8039,12 +7857,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-28 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-28 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #00ac4f;
 }
@@ -8054,12 +7872,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-28 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-28 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #1dcab3;
 }
@@ -8069,12 +7887,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-28 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-28 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #ec6898;
 }
@@ -8084,7 +7902,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-28 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.75rem;
   color: #ec6898;
 }
@@ -8110,7 +7928,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-26 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #000;
 }
@@ -8120,12 +7938,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-26 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #000;
 }
 #dev-id .title-black-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #000;
 }
@@ -8135,7 +7951,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #000;
 }
@@ -8144,7 +7959,7 @@
 }
 #dev-id .title-black-1927B-26,
 #dev-id .title-white-1927B-26 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
 }
 #dev-id .title-white-1927B-26 {
@@ -8156,7 +7971,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-26 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #fff;
 }
@@ -8166,7 +7981,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-26 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #333;
 }
@@ -8176,12 +7991,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-26 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #333;
 }
@@ -8191,17 +8004,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-26 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-26 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #666;
 }
@@ -8211,17 +8023,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-26 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-26 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #666;
 }
@@ -8231,12 +8041,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-26 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #999;
 }
@@ -8246,17 +8055,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-26 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-26 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #999;
 }
@@ -8266,12 +8073,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #999;
 }
 #dev-id .specialText-1927B-26 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-26,
 #dev-id .specialText-PSC-26 {
@@ -8290,7 +8096,6 @@
   font-size: 1.625rem;
 }
 #dev-id .specialText-PSC-26 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-26 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -8312,7 +8117,6 @@
   font-size: 1.625rem;
 }
 #dev-id .specialText-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-26 {
   font-family: "Poppins", sans-serif;
@@ -8334,10 +8138,10 @@
   font-size: 1.625rem;
 }
 #dev-id .specialText-SB-26 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-26 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #ff002f;
 }
@@ -8347,12 +8151,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-26 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-26 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #00ac4f;
 }
@@ -8362,12 +8166,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-26 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-26 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #1dcab3;
 }
@@ -8377,12 +8181,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-26 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-26 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #ec6898;
 }
@@ -8392,7 +8196,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-26 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.625rem;
   color: #ec6898;
 }
@@ -8418,7 +8222,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-24 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #000;
 }
@@ -8428,12 +8232,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-24 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #000;
 }
 #dev-id .title-black-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #000;
 }
@@ -8443,7 +8245,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #000;
 }
@@ -8452,7 +8253,7 @@
 }
 #dev-id .title-black-1927B-24,
 #dev-id .title-white-1927B-24 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
 }
 #dev-id .title-white-1927B-24 {
@@ -8464,7 +8265,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-24 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #fff;
 }
@@ -8474,7 +8275,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-24 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #333;
 }
@@ -8484,12 +8285,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-24 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #333;
 }
@@ -8499,17 +8298,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-24 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-24 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #666;
 }
@@ -8519,17 +8317,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-24 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-24 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #666;
 }
@@ -8539,12 +8335,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-24 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #999;
 }
@@ -8554,17 +8349,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-24 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-24 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #999;
 }
@@ -8574,12 +8367,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #999;
 }
 #dev-id .specialText-1927B-24 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-24,
 #dev-id .specialText-PSC-24 {
@@ -8598,7 +8390,6 @@
   font-size: 1.5rem;
 }
 #dev-id .specialText-PSC-24 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-24 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -8620,7 +8411,6 @@
   font-size: 1.5rem;
 }
 #dev-id .specialText-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-24 {
   font-family: "Poppins", sans-serif;
@@ -8642,10 +8432,10 @@
   font-size: 1.5rem;
 }
 #dev-id .specialText-SB-24 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-24 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #ff002f;
 }
@@ -8655,12 +8445,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-24 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-24 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #00ac4f;
 }
@@ -8670,12 +8460,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-24 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-24 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #1dcab3;
 }
@@ -8685,12 +8475,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-24 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-24 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #ec6898;
 }
@@ -8700,7 +8490,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-24 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.5rem;
   color: #ec6898;
 }
@@ -8726,7 +8516,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-22 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #000;
 }
@@ -8736,12 +8526,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-22 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #000;
 }
 #dev-id .title-black-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #000;
 }
@@ -8751,7 +8539,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #000;
 }
@@ -8760,7 +8547,7 @@
 }
 #dev-id .title-black-1927B-22,
 #dev-id .title-white-1927B-22 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
 }
 #dev-id .title-white-1927B-22 {
@@ -8772,7 +8559,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-22 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #fff;
 }
@@ -8782,7 +8569,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-22 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #333;
 }
@@ -8792,12 +8579,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-22 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #333;
 }
@@ -8807,17 +8592,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-22 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-22 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #666;
 }
@@ -8827,17 +8611,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-22 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-22 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #666;
 }
@@ -8847,12 +8629,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-22 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #999;
 }
@@ -8862,17 +8643,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-22 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-22 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #999;
 }
@@ -8882,12 +8661,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #999;
 }
 #dev-id .specialText-1927B-22 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-22,
 #dev-id .specialText-PSC-22 {
@@ -8906,7 +8684,6 @@
   font-size: 1.375rem;
 }
 #dev-id .specialText-PSC-22 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-22 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -8928,7 +8705,6 @@
   font-size: 1.375rem;
 }
 #dev-id .specialText-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-22 {
   font-family: "Poppins", sans-serif;
@@ -8950,10 +8726,10 @@
   font-size: 1.375rem;
 }
 #dev-id .specialText-SB-22 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-22 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #ff002f;
 }
@@ -8963,12 +8739,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-22 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-22 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #00ac4f;
 }
@@ -8978,12 +8754,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-22 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-22 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #1dcab3;
 }
@@ -8993,12 +8769,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-22 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-22 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #ec6898;
 }
@@ -9008,7 +8784,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-22 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.375rem;
   color: #ec6898;
 }
@@ -9034,7 +8810,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-20 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #000;
 }
@@ -9044,12 +8820,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-20 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #000;
 }
 #dev-id .title-black-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #000;
 }
@@ -9059,7 +8833,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #000;
 }
@@ -9068,7 +8841,7 @@
 }
 #dev-id .title-black-1927B-20,
 #dev-id .title-white-1927B-20 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
 }
 #dev-id .title-white-1927B-20 {
@@ -9080,7 +8853,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-20 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #fff;
 }
@@ -9090,7 +8863,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-20 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #333;
 }
@@ -9100,12 +8873,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-20 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #333;
 }
@@ -9115,17 +8886,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-20 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-20 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #666;
 }
@@ -9135,17 +8905,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-20 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-20 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #666;
 }
@@ -9155,12 +8923,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-20 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #999;
 }
@@ -9170,17 +8937,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-20 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-20 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #999;
 }
@@ -9190,12 +8955,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #999;
 }
 #dev-id .specialText-1927B-20 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-20,
 #dev-id .specialText-PSC-20 {
@@ -9214,7 +8978,6 @@
   font-size: 1.25rem;
 }
 #dev-id .specialText-PSC-20 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-20 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -9236,7 +8999,6 @@
   font-size: 1.25rem;
 }
 #dev-id .specialText-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-20 {
   font-family: "Poppins", sans-serif;
@@ -9258,10 +9020,10 @@
   font-size: 1.25rem;
 }
 #dev-id .specialText-SB-20 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-20 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #ff002f;
 }
@@ -9271,12 +9033,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-20 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-20 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #00ac4f;
 }
@@ -9286,12 +9048,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-20 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-20 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #1dcab3;
 }
@@ -9301,12 +9063,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-20 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-20 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #ec6898;
 }
@@ -9316,7 +9078,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-20 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.25rem;
   color: #ec6898;
 }
@@ -9342,7 +9104,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-18 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #000;
 }
@@ -9352,12 +9114,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-18 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #000;
 }
 #dev-id .title-black-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #000;
 }
@@ -9367,7 +9127,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #000;
 }
@@ -9376,7 +9135,7 @@
 }
 #dev-id .title-black-1927B-18,
 #dev-id .title-white-1927B-18 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
 }
 #dev-id .title-white-1927B-18 {
@@ -9388,7 +9147,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-18 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #fff;
 }
@@ -9398,7 +9157,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-18 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #333;
 }
@@ -9408,12 +9167,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-18 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #333;
 }
@@ -9423,17 +9180,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-18 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-18 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #666;
 }
@@ -9443,17 +9199,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-18 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-18 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #666;
 }
@@ -9463,12 +9217,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-18 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #999;
 }
@@ -9478,17 +9231,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-18 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-18 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #999;
 }
@@ -9498,12 +9249,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #999;
 }
 #dev-id .specialText-1927B-18 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-18,
 #dev-id .specialText-PSC-18 {
@@ -9522,7 +9272,6 @@
   font-size: 1.125rem;
 }
 #dev-id .specialText-PSC-18 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-18 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -9544,7 +9293,6 @@
   font-size: 1.125rem;
 }
 #dev-id .specialText-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-18 {
   font-family: "Poppins", sans-serif;
@@ -9566,10 +9314,10 @@
   font-size: 1.125rem;
 }
 #dev-id .specialText-SB-18 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-18 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #ff002f;
 }
@@ -9579,12 +9327,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-18 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-18 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #00ac4f;
 }
@@ -9594,12 +9342,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-18 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-18 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #1dcab3;
 }
@@ -9609,12 +9357,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-18 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-18 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #ec6898;
 }
@@ -9624,7 +9372,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-18 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1.125rem;
   color: #ec6898;
 }
@@ -9650,7 +9398,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-16 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #000;
 }
@@ -9660,12 +9408,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-16 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #000;
 }
 #dev-id .title-black-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #000;
 }
@@ -9675,7 +9421,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #000;
 }
@@ -9684,7 +9429,7 @@
 }
 #dev-id .title-black-1927B-16,
 #dev-id .title-white-1927B-16 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1rem;
 }
 #dev-id .title-white-1927B-16 {
@@ -9696,7 +9441,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-16 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #fff;
 }
@@ -9706,7 +9451,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-16 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #333;
 }
@@ -9716,12 +9461,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-16 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #333;
 }
@@ -9731,17 +9474,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-16 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-16 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #666;
 }
@@ -9751,17 +9493,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-16 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-16 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #666;
 }
@@ -9771,12 +9511,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-16 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #999;
 }
@@ -9786,17 +9525,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-16 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-16 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #999;
 }
@@ -9806,12 +9543,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #999;
 }
 #dev-id .specialText-1927B-16 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-16,
 #dev-id .specialText-PSC-16 {
@@ -9830,7 +9566,6 @@
   font-size: 1rem;
 }
 #dev-id .specialText-PSC-16 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-16 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -9852,7 +9587,6 @@
   font-size: 1rem;
 }
 #dev-id .specialText-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-16 {
   font-family: "Poppins", sans-serif;
@@ -9874,10 +9608,10 @@
   font-size: 1rem;
 }
 #dev-id .specialText-SB-16 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-16 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #ff002f;
 }
@@ -9887,12 +9621,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-16 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-16 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #00ac4f;
 }
@@ -9902,12 +9636,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-16 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-16 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #1dcab3;
 }
@@ -9917,12 +9651,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-16 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-16 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #ec6898;
 }
@@ -9932,7 +9666,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-16 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 1rem;
   color: #ec6898;
 }
@@ -9958,7 +9692,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-14 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #000;
 }
@@ -9968,12 +9702,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-14 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #000;
 }
 #dev-id .title-black-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #000;
 }
@@ -9983,7 +9715,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #000;
 }
@@ -9992,7 +9723,7 @@
 }
 #dev-id .title-black-1927B-14,
 #dev-id .title-white-1927B-14 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
 }
 #dev-id .title-white-1927B-14 {
@@ -10004,7 +9735,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-14 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #fff;
 }
@@ -10014,7 +9745,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-14 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #333;
 }
@@ -10024,12 +9755,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-14 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #333;
 }
@@ -10039,17 +9768,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-14 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-14 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #666;
 }
@@ -10059,17 +9787,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-14 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-14 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #666;
 }
@@ -10079,12 +9805,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-14 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #999;
 }
@@ -10094,17 +9819,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-14 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-14 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #999;
 }
@@ -10114,12 +9837,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #999;
 }
 #dev-id .specialText-1927B-14 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-14,
 #dev-id .specialText-PSC-14 {
@@ -10138,7 +9860,6 @@
   font-size: 0.875rem;
 }
 #dev-id .specialText-PSC-14 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-14 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -10160,7 +9881,6 @@
   font-size: 0.875rem;
 }
 #dev-id .specialText-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-14 {
   font-family: "Poppins", sans-serif;
@@ -10182,10 +9902,10 @@
   font-size: 0.875rem;
 }
 #dev-id .specialText-SB-14 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-14 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #ff002f;
 }
@@ -10195,12 +9915,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-14 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-14 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #00ac4f;
 }
@@ -10210,12 +9930,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-14 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-14 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #1dcab3;
 }
@@ -10225,12 +9945,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-14 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-14 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #ec6898;
 }
@@ -10240,7 +9960,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-14 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.875rem;
   color: #ec6898;
 }
@@ -10266,7 +9986,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-12 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #000;
 }
@@ -10276,12 +9996,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-12 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #000;
 }
 #dev-id .title-black-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #000;
 }
@@ -10291,7 +10009,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #000;
 }
@@ -10300,7 +10017,7 @@
 }
 #dev-id .title-black-1927B-12,
 #dev-id .title-white-1927B-12 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
 }
 #dev-id .title-white-1927B-12 {
@@ -10312,7 +10029,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-12 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #fff;
 }
@@ -10322,7 +10039,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-12 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #333;
 }
@@ -10332,12 +10049,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-12 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #333;
 }
@@ -10347,17 +10062,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-12 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-12 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #666;
 }
@@ -10367,17 +10081,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-12 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-12 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #666;
 }
@@ -10387,12 +10099,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-12 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #999;
 }
@@ -10402,17 +10113,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-12 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-12 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #999;
 }
@@ -10422,12 +10131,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #999;
 }
 #dev-id .specialText-1927B-12 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-12,
 #dev-id .specialText-PSC-12 {
@@ -10446,7 +10154,6 @@
   font-size: 0.75rem;
 }
 #dev-id .specialText-PSC-12 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-12 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -10468,7 +10175,6 @@
   font-size: 0.75rem;
 }
 #dev-id .specialText-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-12 {
   font-family: "Poppins", sans-serif;
@@ -10490,10 +10196,10 @@
   font-size: 0.75rem;
 }
 #dev-id .specialText-SB-12 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-12 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #ff002f;
 }
@@ -10503,12 +10209,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-12 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-12 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #00ac4f;
 }
@@ -10518,12 +10224,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-12 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-12 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #1dcab3;
 }
@@ -10533,12 +10239,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-12 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-12 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #ec6898;
 }
@@ -10548,7 +10254,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-12 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.75rem;
   color: #ec6898;
 }
@@ -10574,7 +10280,7 @@
   color: #000;
 }
 #dev-id .title-black-SB-10 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #000;
 }
@@ -10584,12 +10290,10 @@
   color: #000;
 }
 #dev-id .title-black-PSC-10 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #000;
 }
 #dev-id .title-black-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #000;
 }
@@ -10599,7 +10303,6 @@
   color: #000;
 }
 #dev-id .title-black-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #000;
 }
@@ -10608,7 +10311,7 @@
 }
 #dev-id .title-black-1927B-10,
 #dev-id .title-white-1927B-10 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
 }
 #dev-id .title-white-1927B-10 {
@@ -10620,7 +10323,7 @@
   color: #fff;
 }
 #dev-id .title-white-SB-10 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #fff;
 }
@@ -10630,7 +10333,7 @@
   color: #fff;
 }
 #dev-id .title-grey333-1927B-10 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #333;
 }
@@ -10640,12 +10343,10 @@
   color: #333;
 }
 #dev-id .title-grey333-PSC-10 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #333;
 }
 #dev-id .title-grey333-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #333;
 }
@@ -10655,17 +10356,16 @@
   color: #333;
 }
 #dev-id .title-grey333-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #333;
 }
 #dev-id .title-grey333-SB-10 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #333;
 }
 #dev-id .title-grey666-1927B-10 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #666;
 }
@@ -10675,17 +10375,15 @@
   color: #666;
 }
 #dev-id .title-grey666-SB-10 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #666;
 }
 #dev-id .title-grey666-PSC-10 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #666;
 }
 #dev-id .title-grey666-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #666;
 }
@@ -10695,12 +10393,11 @@
   color: #666;
 }
 #dev-id .title-grey666-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #666;
 }
 #dev-id .title-grey999-1927B-10 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #999;
 }
@@ -10710,17 +10407,15 @@
   color: #999;
 }
 #dev-id .title-grey999-SB-10 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #999;
 }
 #dev-id .title-grey999-PSC-10 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #999;
 }
 #dev-id .title-grey999-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #999;
 }
@@ -10730,12 +10425,11 @@
   color: #999;
 }
 #dev-id .title-grey999-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #999;
 }
 #dev-id .specialText-1927B-10 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
 }
 #dev-id .specialText-1927B-10,
 #dev-id .specialText-PSC-10 {
@@ -10754,7 +10448,6 @@
   font-size: 0.625rem;
 }
 #dev-id .specialText-PSC-10 {
-  font-family: PingFangSC, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PB-10 {
   font-family: PingFangSC-Medium, Times New Roman, Times, sans-serif;
@@ -10776,7 +10469,6 @@
   font-size: 0.625rem;
 }
 #dev-id .specialText-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
 }
 #dev-id .specialText-PR-10 {
   font-family: "Poppins", sans-serif;
@@ -10798,10 +10490,10 @@
   font-size: 0.625rem;
 }
 #dev-id .specialText-SB-10 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
 }
 #dev-id .title-red-1927B-10 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #ff002f;
 }
@@ -10811,12 +10503,12 @@
   color: #ff002f;
 }
 #dev-id .title-red-SB-10 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #ff002f;
 }
 #dev-id .title-green-1927B-10 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #00ac4f;
 }
@@ -10826,12 +10518,12 @@
   color: #00ac4f;
 }
 #dev-id .title-green-SB-10 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #00ac4f;
 }
 #dev-id .title-turquoiseGreen-1927B-10 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #1dcab3;
 }
@@ -10841,12 +10533,12 @@
   color: #1dcab3;
 }
 #dev-id .title-turquoiseGreen-SB-10 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #1dcab3;
 }
 #dev-id .title-pink-1927B-10 {
-  font-family: Posterama1927-Black, Times New Roman, Times, serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #ec6898;
 }
@@ -10856,7 +10548,7 @@
   color: #ec6898;
 }
 #dev-id .title-pink-SB-10 {
-  font-family: PosteramaText-SemiBold, Times New Roman, Times, sans-serif;
+  font-family: "Poppins";
   font-size: 0.625rem;
   color: #ec6898;
 }

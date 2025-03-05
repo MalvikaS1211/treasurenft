@@ -33,13 +33,12 @@ import "../src/css/dashboard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "./Components/footer";
 import Carousel from "./Components/Carousel";
-
+import AppRoutes from "./Components/AppRoutes/AppRoutes";
+import "../src/css/Signup.css";
 function App() {
   return (
     <>
-      <Header />
-      <Dashboard />
-      <Footer></Footer>
+      <AppRoutes></AppRoutes>
     </>
   );
 }

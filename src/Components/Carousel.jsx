@@ -18,7 +18,7 @@ import { Carousel as BootstrapCarousel } from "bootstrap";
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const [selectedButton, setSelectedButton] = useState(null);
   useEffect(() => {
     const carouselElement = document.getElementById("carouselExample");
     if (carouselElement) {
@@ -28,6 +28,7 @@ const Carousel = () => {
 
   const handleSelect = (index) => {
     setActiveIndex(index);
+    setSelectedButton(index);
     const carousel = new BootstrapCarousel(
       document.getElementById("carouselExample")
     );
@@ -49,21 +50,50 @@ const Carousel = () => {
         <span className="title-grey333-PR-16">All Filters</span>
       </div>
       <div className="bottons-section">
-        <div className="d-flex gap-3">
-          <button className="discovernft-btn" onClick={() => handleSelect(0)}>
+        <div className="d-flex gap-3 " style={{ flexWrap: "wrap" }}>
+          <button
+            className={`${
+              selectedButton === 0
+                ? "discovernft-btn-active"
+                : "discovernft-btn"
+            }`}
+            onClick={() => handleSelect(0)}
+          >
             Stake
           </button>
-          <button className="discovernft-btn" onClick={() => handleSelect(1)}>
+          <button
+            className={` ${
+              selectedButton === 1
+                ? "discovernft-btn-active"
+                : "discovernft-btn"
+            }`}
+            onClick={() => handleSelect(1)}
+          >
             PolygonNFT
           </button>
-          <button className="discovernft-btn" onClick={() => handleSelect(2)}>
+          <button
+            className={`${
+              selectedButton === 2
+                ? "discovernft-btn-active"
+                : "discovernft-btn"
+            }`}
+            onClick={() => handleSelect(2)}
+          >
             Art
           </button>
-          <button className="discovernft-btn" onClick={() => handleSelect(3)}>
+          <button
+            className={`${
+              selectedButton === 3
+                ? "discovernft-btn-active"
+                : "discovernft-btn"
+            }`}
+            onClick={() => handleSelect(3)}
+          >
             Collectibles
           </button>
         </div>
       </div>
+      <div className="bottons-section"></div>
       <div
         id="carouselExample"
         className="carousel slide"
@@ -78,7 +108,7 @@ const Carousel = () => {
             className={activeIndex === 0 ? "active" : ""}
             aria-current={activeIndex === 0 ? "true" : "false"}
             aria-label="Slide 1"
-            onClick={() => handleSelect(0)} // Manually handle slide change
+            onClick={() => handleSelect(0)}
           ></button>
           <button
             type="button"
@@ -87,7 +117,7 @@ const Carousel = () => {
             className={activeIndex === 1 ? "active" : ""}
             aria-current={activeIndex === 1 ? "true" : "false"}
             aria-label="Slide 2"
-            onClick={() => handleSelect(1)} // Manually handle slide change
+            onClick={() => handleSelect(1)}
           ></button>
           <button
             type="button"
@@ -96,7 +126,7 @@ const Carousel = () => {
             className={activeIndex === 2 ? "active" : ""}
             aria-current={activeIndex === 2 ? "true" : "false"}
             aria-label="Slide 3"
-            onClick={() => handleSelect(2)} // Manually handle slide change
+            onClick={() => handleSelect(2)}
           ></button>
           <button
             type="button"
@@ -105,7 +135,7 @@ const Carousel = () => {
             className={activeIndex === 3 ? "active" : ""}
             aria-current={activeIndex === 3 ? "true" : "false"}
             aria-label="Slide 4"
-            onClick={() => handleSelect(3)} // Manually handle slide change
+            onClick={() => handleSelect(3)}
           ></button>
         </div>
 

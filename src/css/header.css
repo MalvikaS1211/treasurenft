@@ -382,3 +382,36 @@ button {
 .dropdown-item:hover {
   color: blue;
 }
+
+.header {
+  width: 100vw;
+  position: fixed;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  background-color: transparent;
+  padding: 0 1rem;
+  z-index: 100;
+}
+/* .header {
+  width: auto;
+  position: static;
+  background-color: transparent;
+  padding: 1rem;
+  z-index: 1;
+  transform: none;
+  transition: none;
+} */
+.headerimg-custom {
+  height: 260px;
+}
+
+@media (max-width: 992px) {
+  .headerimg-custom {
+    height: 384px;
+  }
+  .custom-title-white-PR-16 {
+    font-size: 10px !important;
+  }
+}

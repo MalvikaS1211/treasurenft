@@ -2,10 +2,10 @@ import React from "react";
 import { IoChevronForwardOutline } from "react-icons/io5";
 export default function Footer() {
   return (
-    <footer style={{ background: "white" }}>
+    <footer className="container" style={{ background: "white" }}>
       <div
         className="ivu-row-flex ivu-row-flex-space-between"
-        style={{ width: "100%", padding: "5%" }}
+        style={{ width: "100%" }}
       >
         <div className="ivu-col ivu-col-span-xs-24 ivu-col-span-sm-24 ivu-col-span-md-6 ivu-col-span-lg-6 ivu-col-span-xl-6">
           <img
@@ -104,7 +104,9 @@ export default function Footer() {
                       alt="icon"
                       loading="lazy"
                     />
-                    <span class="title-white-PR-16">APP Store</span>
+                    <span class="title-white-PR-16 custom-title-white-PR-16 ">
+                      APP Store
+                    </span>
                     <IoChevronForwardOutline />
                   </a>
                 </div>
@@ -120,7 +122,9 @@ export default function Footer() {
                       alt="icon"
                       loading="lazy"
                     />
-                    <span class="title-white-PR-16">Google Play</span>
+                    <span class="title-white-PR-16 custom-title-white-PR-16">
+                      Google Play
+                    </span>
                     <IoChevronForwardOutline />
                   </a>
                 </div>
@@ -136,7 +140,9 @@ export default function Footer() {
                       alt="icon"
                       loading="lazy"
                     />
-                    <span class="title-white-PR-16">APK</span>
+                    <span class="title-white-PR-16 custom-title-white-PR-16">
+                      APK
+                    </span>
                     <IoChevronForwardOutline />
                   </a>
                 </div>
