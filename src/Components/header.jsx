@@ -4,6 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import "../css/header.css"; // Optional for custom styles
 import Logo from "../assets/Logo.webp";
 import Logo2 from "../assets/Logo2.webp";
+import magicverseLogo from "../assets/magicverse.jpg";
 
 import icon_header_wallet from "../assets/icon_header_wallet.webp";
 import services_icon from "../assets/services_icon.webp";

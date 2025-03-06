@@ -27,21 +27,14 @@ import {
 } from "@rainbow-me/rainbowkit/wallets";
 import { metaMaskWallet } from "@rainbow-me/rainbowkit/wallets";
 import { argentWallet } from "@rainbow-me/rainbowkit/wallets";
+import { okxWallet } from "@rainbow-me/rainbowkit/wallets";
 export const config = getDefaultConfig({
   appName: "My RainbowKit App",
   projectId: "21538b3e42773b1bcd26d4ab8f177d2d",
   wallets: [
     {
       groupName: "Popular Wallets",
-      wallets: [
-        injectedWallet,
-        metaMaskWallet,
-        rainbowWallet,
-        trustWallet,
-        walletConnectWallet,
-        tokenPocketWallet,
-        argentWallet,
-      ],
+      wallets: [injectedWallet, metaMaskWallet, walletConnectWallet, okxWallet],
     },
   ],
   chains: [opBNBTestnet],

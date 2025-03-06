@@ -1094,8 +1094,8 @@
     from(#5cbffe),
     color-stop(#a0f5d0),
     to(#ffd7c8)
-  );
-  background: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8);
+  ) !important;
+  background: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8) !important;
   height: 3px;
 }
 #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
@@ -1758,8 +1758,8 @@
     from(#5cbffe),
     color-stop(#a0f5d0),
     to(#ffd7c8)
-  );
-  background: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8);
+  ) !important;
+  background: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8) !important;
   height: 3px;
 }
 #dev-id ~ .v-transfer-dom .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {

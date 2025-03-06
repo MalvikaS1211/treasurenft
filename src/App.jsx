@@ -26,7 +26,7 @@ import "../src/css/app-8f9c9ce1.6caaf116.css";
 import "../src/css/app-29cc87d1.002c3af2.css";
 import "../src/css/app-89ec8940.a273c7fa.css";
 import "../src/css/chunk-vendors-b1d75844.25331d0a.css";
-
+import "../src/css/Explore.aba1c01b.css";
 import "../src/css/register.56847134.css";
 import Dashboard from "./Components/dashboard";
 import "../src/css/dashboard.css";
@@ -35,6 +35,7 @@ import Footer from "./Components/footer";
 import Carousel from "./Components/Carousel";
 import AppRoutes from "./Components/AppRoutes/AppRoutes";
 import "../src/css/Signup.css";
+
 function App() {
   return (
     <>
