@@ -138,11 +138,17 @@
   transition: background 0.3s ease, color 0.3s ease;
 }
 .discovernft-btn-active {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     90deg,
     rgba(153, 188, 237, 0.9),
     rgba(153, 248, 207, 0.9),
     rgba(255, 214, 199, 0.9)
+  ); */
+  background-image: linear-gradient(
+    to right,
+    #77a1d3 0%,
+    #79cbca 51%,
+    #77a1d3 100%
   );
   color: #fff !important;
   margin-right: 15px;
@@ -169,11 +175,17 @@
 }
 
 .discovernft-custom {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     90deg,
     rgba(153, 188, 237, 0.2),
     rgba(153, 248, 207, 0.3),
     rgba(255, 214, 199, 0.3)
+  ); */
+  background-image: linear-gradient(
+    to right,
+    #c5d5f1 0%,
+    #badcff 51%,
+    #bdd0f3 100%
   );
   padding: 4% 7% 0;
   position: relative;
@@ -208,18 +220,21 @@
   position: relative;
   padding-top: 5px;
 }
+
 .discover-card-wrap {
   background-color: #fff;
   border-radius: 15px;
   margin: 15px auto;
+  width: 100%; /* Ensure the card takes full width of its container */
 }
+
 .discover-img {
   display: block;
-  width: 18vw;
-  height: 16vw;
+  width: 100%; /* Make image width responsive */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 200px; /* Limit maximum height */
   margin: 10px auto 15px;
   border-radius: 10px;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -230,9 +245,100 @@
   border-radius: 50%;
   position: absolute;
   bottom: -14px;
-  left: 2vw;
+  left: 10%; /* Adjust position for responsiveness */
 }
 
+.text-section {
+  padding: 10px;
+  text-align: center;
+}
+
+.coin-price-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coinimage {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.price-text {
+  font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .discover-img {
+    max-height: 180px;
+  }
+
+  .staking-image {
+    width: 40px;
+    height: 40px;
+    left: 8%;
+  }
+}
+
+@media (max-width: 992px) {
+  .discover-img {
+    max-height: 160px;
+  }
+
+  .staking-image {
+    width: 35px;
+    height: 35px;
+    left: 6%;
+  }
+
+  .price-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-3 {
+    flex: 0 0 50%; /* Two columns on smaller screens */
+    max-width: 50%;
+  }
+
+  .discover-img {
+    max-height: 140px;
+  }
+
+  .staking-image {
+    width: 30px;
+    height: 30px;
+    left: 5%;
+  }
+
+  .price-text {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .col-3 {
+    flex: 0 0 100%; /* Single column on mobile */
+    max-width: 100%;
+  }
+
+  .discover-img {
+    max-height: 260px;
+  }
+
+  .staking-image {
+    width: 25px;
+    height: 25px;
+    left: 3%;
+  }
+
+  .price-text {
+    font-size: 8px;
+  }
+}
 .bottons-section {
   padding-bottom: 20px;
 }
@@ -279,7 +385,7 @@
 }
 .discover-more-btn {
   margin: 75px 0;
-  width: 25%;
+  /* width: 25%; */
 }
 
 .video-block-custom {
@@ -312,4 +418,28 @@
 
 .slick-next {
   right: -30px; /* Position right arrow */
+}
+
+@media screen and (max-width: 768px) {
+  .filter-btn-custom {
+    background: #efefef;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 135px;
+    height: 35px;
+    border-radius: 15px;
+    padding: 5px 16px;
+    position: absolute;
+    top: 126px;
+    right: 5%;
+    z-index: 1;
+    cursor: pointer;
+  }
 }

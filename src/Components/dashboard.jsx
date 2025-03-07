@@ -576,12 +576,12 @@ const Dashboard = () => {
                       src="https://treasurenft.xyz/userdata/img/20240425212105_20240402171501_下載 (2)_compre.png"
                     />
                   </picture>
-                  <span class="title-black-PR-12 font-weight-300">
+                  <span class="title-black-PR-12 font-weight-600">
                     by Stake
                   </span>
                 </div>
                 <div class="total">
-                  <p class="title-white-PR-10 font-weight-100">Total 4 Items</p>
+                  <p class="title-white-PR-10 font-weight-300">Total 4 Items</p>
                 </div>
               </div>
             </div>
@@ -665,12 +665,12 @@ const Dashboard = () => {
                       src="https://treasurenft.xyz/userdata/img/20230217145453_TheCryptoLuckyGirl_logo_compre.jpg"
                     />
                   </picture>
-                  <span class="title-black-PR-12 font-weight-300">
+                  <span class="title-black-PR-12 font-weight-600">
                     by CHRISTABEL
                   </span>
                 </div>
                 <div class="total">
-                  <p class="title-white-PR-10 font-weight-100">Total 4 Items</p>
+                  <p class="title-white-PR-10 font-weight-300">Total 4 Items</p>
                 </div>
               </div>
             </div>
@@ -752,12 +752,12 @@ const Dashboard = () => {
                       src="https://treasurenft.xyz/userdata/img/20230217145514_WildGirl_logo_compre.jpg"
                     />
                   </picture>
-                  <span class="title-black-PR-12 font-weight-300">
+                  <span class="title-black-PR-12 font-weight-600">
                     by BERNADETTE
                   </span>
                 </div>
                 <div class="total">
-                  <p class="title-white-PR-10 font-weight-100">Total 4 Items</p>
+                  <p class="title-white-PR-10 font-weight-300">Total 4 Items</p>
                 </div>
               </div>
             </div>

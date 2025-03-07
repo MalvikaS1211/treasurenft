@@ -37,23 +37,27 @@ export default function Explore() {
         left: "285px",
       };
     }
+
+    return {};
+  };
+  const getExclusiveInkBarStyle = () => {
     if (exclusiveTab === 1) {
       return {
         visibility: "visible",
-        width: "77px",
+        width: "136px",
         left: "0px",
       };
     }
     if (exclusiveTab === 2) {
+      console.log("free zone hit");
       return {
         visibility: "visible",
-        width: "139px",
-        left: "88px",
+        width: "122px",
+        left: "135px",
       };
     }
     return {};
   };
-
   const Art = () => {
     return (
       <>
@@ -631,7 +635,10 @@ export default function Explore() {
             <div className="ivu-tabs-nav-wrap" style={{ position: "relative" }}>
               <div className="ivu-tabs-nav-scroll overflow-nav-scroll">
                 <div class="ivu-tabs-nav">
-                  <div class="ivu-tabs-ink-bar" style={getInkBarStyle()}></div>
+                  <div
+                    class="ivu-tabs-ink-bar"
+                    style={getExclusiveInkBarStyle()}
+                  ></div>
                   <div
                     draggable="false"
                     class="ivu-tabs-tab ivu-tabs-tab-active ivu-tabs-tab-focused"
@@ -642,7 +649,7 @@ export default function Explore() {
                   <div
                     draggable="false"
                     class={`ivu-tabs-tab ${
-                      activeTab === 5
+                      exclusiveTab === 2
                         ? "ivu-tabs-tab-active ivu-tabs-tab-focused"
                         : ""
                     }`}
@@ -655,9 +662,19 @@ export default function Explore() {
             </div>
           </div>
         </div>
+        {/* 
+        {exclusiveTab === 1 && <ExclusiveZone />} */}
+        <div>
+          {showExclusiveStake === 5 ? (
+            <ExclusiveZoneBuyStake />
+          ) : exclusiveTab === 1 ? (
+            <ExclusiveZone />
+          ) : exclusiveTab === 2 ? (
+            <FreeZone />
+          ) : null}
+        </div>
 
-        {exclusiveTab == 1 && <ExclusiveZone />}
-        {exclusiveTab == 2 && <FreeZone />}
+        {/* {exclusiveTab === 2 && <FreeZone />} */}
       </>
     );
   };
@@ -1261,7 +1278,7 @@ export default function Explore() {
               type="button"
               class="ivu-btn ivu-btn-primary ivu-btn-long button-stake "
               data-v-567f87f6=""
-              onClick={() => setshowExclusiveStake(2)}
+              onClick={() => setshowExclusiveStake(5)}
             >
               <span> Go to stake </span>
             </button>
@@ -1286,8 +1303,8 @@ export default function Explore() {
 
                   <div
                     data-v-15fe7f40=""
-                    class="ivu-col margin-bottom-15 ivu-col-span-xs-24 ivu-col-span-sm-12
-          ivu-col-span-md-8 ivu-col-span-lg-6 ivu-col-span-xl-4 ivu-col-span-xxl-4"
+                    class="ivu-col margin-bottom-15 ivu-col-span-xs-24
+                  ivu-col-span-sm-12 ivu-col-span-md-8 ivu-col-span-lg-6 ivu-col-span-xl-4 ivu-col-span-xxl-4"
                     style={{ paddingLeft: "8px", paddingRight: "8px" }}
                   >
                     <div data-v-567f87f6="" class="stake-spec-card">
@@ -1319,8 +1336,8 @@ export default function Explore() {
                           data-v-567f87f6=""
                           style={{
                             marginright: "auto",
-                            paddingleft: "2.5px",
-                            paddingright: "2.5px",
+                            paddingLeft: "2.5px",
+                            paddingRight: "2.5px",
                           }}
                         >
                           <div
@@ -1367,8 +1384,8 @@ export default function Explore() {
                           <div data-v-567f87f6="" class="img-box">
                             <img
                               data-v-567f87f6=""
-                              src="https://image.treasurenft.xyz/PC/img/stake_card_img_spec_02.png"
-                              alt="discount img 2"
+                              src="https://image.treasurenft.xyz/PC/img/stake_card_img_spec_03.png"
+                              alt="discount img 3"
                               width="614"
                               height="200"
                               class="img"
@@ -1389,7 +1406,8 @@ export default function Explore() {
                         >
                           <div
                             data-v-15fe7f40=""
-                            class="ivu-row-flex ivu-row-flex-middle ivu-row-flex-space-between margin-bottom-10"
+                            class="ivu-row-flex ivu-row-flex-middle 
+                       ivu-row-flex-space-between margin-bottom-10"
                             data-v-567f87f6=""
                           >
                             <div
@@ -1413,6 +1431,7 @@ export default function Explore() {
                                 data-v-567f87f6=""
                                 class="title-white-PR-12 status-label status-label--enable"
                               >
+                                {" "}
                                 Open{" "}
                               </p>
                             </div>
@@ -1453,8 +1472,8 @@ export default function Explore() {
                                   class="ivu-col"
                                   data-v-567f87f6=""
                                   style={{
-                                    paddingleft: "4px",
-                                    paddingright: "4px",
+                                    paddingLeft: "4px",
+                                    paddingRight: "4px",
                                   }}
                                 >
                                   <img
@@ -1471,15 +1490,15 @@ export default function Explore() {
                                   class="ivu-col"
                                   data-v-567f87f6=""
                                   style={{
-                                    paddingleft: "4px",
-                                    paddingright: "4px",
+                                    paddingLeft: "4px",
+                                    paddingRight: "4px",
                                   }}
                                 >
                                   <p
                                     data-v-567f87f6=""
                                     class="title-black-PR-14"
                                   >
-                                    499~2000
+                                    799~3000
                                   </p>
                                 </div>
                               </div>
@@ -1508,13 +1527,14 @@ export default function Explore() {
                               data-v-567f87f6=""
                             >
                               <p data-v-567f87f6="" class="title-black-PR-14">
-                                1.8%
+                                2.1%
                               </p>
                             </div>
                           </div>
                           <div
                             data-v-15fe7f40=""
-                            class="ivu-row-flex ivu-row-flex-middle ivu-row-flex-space-between"
+                            class="ivu-row-flex
+                          ivu-row-flex-middle ivu-row-flex-space-between"
                             data-v-567f87f6=""
                           >
                             <div
@@ -1548,7 +1568,7 @@ export default function Explore() {
                         data-v-567f87f6=""
                       >
                         {" "}
-                        <span>Go to stake </span>
+                        <span> Go to stake </span>
                       </button>
                     </div>
                   </div>
@@ -3448,14 +3468,14 @@ export default function Explore() {
     );
   };
 
-  const ExclusiveZoneStake = () => {
+  const ExclusiveZoneBuyStake = () => {
     return (
       <>
         <div className="stake-tabs-tab-content">
           <div className="stake-tabs-tab-content-box">
             <div className="stake-area">
               <div className="commodity">
-                <div data-v-090235b6="" class="search-block">
+                <div data-v-090235b6="" class="search-block pb-3">
                   <div
                     data-v-090235b6=""
                     class="ivu-row-flex ivu-row-flex-middle"
@@ -3480,6 +3500,9 @@ export default function Explore() {
                       data-v-090235b6=""
                       class="ivu-col"
                       style={{ paddingLeft: "4px", paddingRight: "4px" }}
+                      onClick={() => {
+                        <ExclusiveZone></ExclusiveZone>;
+                      }}
                     >
                       <span
                         data-v-090235b6=""
@@ -3511,7 +3534,7 @@ export default function Explore() {
                           placeholder="Enter name to search"
                           class="ivu-input
                          ivu-input-default ivu-input-with-prefix"
-                        />{" "}
+                        />
                         <span class="ivu-input-prefix">
                           <img
                             data-v-090235b6=""
@@ -3538,6 +3561,405 @@ export default function Explore() {
                     </div>
                   </div>
                 </div>
+                <div className="bestSeller-product-wrap">
+                  <div className="bestSeller-products">
+                    <div
+                      className="ivu-row"
+                      style={{ marginLeft: "-8px", marginRight: "-8px" }}
+                    >
+                      <div
+                        data-v-090235b6=""
+                        class="ivu-col ivu-col-span-xs-12 ivu-col-span-sm-12 ivu-col-span-md-8 ivu-col-span-lg-6 ivu-col-span-xl-4 ivu-col-span-xxl-4"
+                        style={{ paddingLeft: "8px", paddingRight: "8px" }}
+                      >
+                        <div
+                          data-v-090235b6=""
+                          data-aos="zoom-in"
+                          data-aos-duration="1000"
+                          class="product-card aos-init aos-animate"
+                        >
+                          <div data-v-090235b6="" class="product-block">
+                            <div data-v-090235b6="" class="product-img">
+                              <picture data-v-090235b6="">
+                                <source
+                                  data-v-090235b6=""
+                                  type="image/avif"
+                                  srcset="https://prodimage-dan.treasurenft.xyz/Stake/Stake_08222.avif"
+                                />
+                                <img
+                                  data-v-090235b6=""
+                                  alt="img"
+                                  loading="lazy"
+                                  src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_08222_compre.png"
+                                />
+                              </picture>
+                            </div>
+                            <div
+                              data-v-090235b6=""
+                              class="product-detail margin-bottom-10"
+                            >
+                              <div data-v-090235b6="">
+                                <span
+                                  data-v-090235b6=""
+                                  class="name title-black-PR-18"
+                                >
+                                  Stake_250921
+                                </span>
+                              </div>
+                              <div
+                                data-v-090235b6=""
+                                class="product-detail-row"
+                              >
+                                <div data-v-090235b6="" class="price-block">
+                                  <img
+                                    data-v-090235b6=""
+                                    src={TUsdt}
+                                    alt="icon"
+                                    loading="lazy"
+                                  />
+                                  <span
+                                    data-v-090235b6=""
+                                    class="price title-grey999-PR-14"
+                                    style={{
+                                      textDecoration: "none",
+                                      marginLeft: "0px",
+                                    }}
+                                  >
+                                    {" "}
+                                    280{" "}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div data-v-090235b6="" class="ivu-row">
+                              <div data-v-090235b6="" class="ivu-col">
+                                <button
+                                  data-v-090235b6=""
+                                  type="button"
+                                  class="ivu-btn ivu-btn-primary ivu-btn-long button-stake"
+                                >
+                                  <span>Buy</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-v-090235b6=""
+                        class="ivu-col ivu-col-span-xs-12 ivu-col-span-sm-12 ivu-col-span-md-8 ivu-col-span-lg-6 ivu-col-span-xl-4 ivu-col-span-xxl-4"
+                        style={{ paddingLeft: "8px", paddingRight: "8px" }}
+                      >
+                        <div
+                          data-v-090235b6=""
+                          data-aos="zoom-in"
+                          data-aos-duration="1000"
+                          class="product-card aos-init aos-animate"
+                        >
+                          <div data-v-090235b6="" class="product-block">
+                            <div data-v-090235b6="" class="product-img">
+                              <picture data-v-090235b6="">
+                                <source
+                                  data-v-090235b6=""
+                                  type="image/avif"
+                                  srcset="https://prodimage-dan.treasurenft.xyz/Stake/Stake_01865.avif"
+                                />
+                                <img
+                                  data-v-090235b6=""
+                                  alt="img"
+                                  loading="lazy"
+                                  src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_01865_compre.png"
+                                />
+                              </picture>
+                            </div>
+                            <div
+                              data-v-090235b6=""
+                              class="product-detail margin-bottom-10"
+                            >
+                              <div data-v-090235b6="">
+                                <span
+                                  data-v-090235b6=""
+                                  class="name title-black-PR-18"
+                                >
+                                  Stake_258454
+                                </span>
+                              </div>
+                              <div
+                                data-v-090235b6=""
+                                class="product-detail-row"
+                              >
+                                <div data-v-090235b6="" class="price-block">
+                                  <img
+                                    data-v-090235b6=""
+                                    src={TUsdt}
+                                    alt="icon"
+                                    loading="lazy"
+                                  />
+                                  <span
+                                    data-v-090235b6=""
+                                    class="price title-grey999-PR-14"
+                                    style={{
+                                      textDecoration: "none",
+                                      marginLeft: "0px",
+                                    }}
+                                  >
+                                    280{" "}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div data-v-090235b6="" class="ivu-row">
+                              <div data-v-090235b6="" class="ivu-col">
+                                <button
+                                  data-v-090235b6=""
+                                  type="button"
+                                  class="ivu-btn ivu-btn-primary ivu-btn-long button-stake"
+                                >
+                                  {" "}
+                                  <span>Buy</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-v-090235b6=""
+                        class="ivu-col ivu-col-span-xs-12 ivu-col-span-sm-12 ivu-col-span-md-8 ivu-col-span-lg-6 ivu-col-span-xl-4 ivu-col-span-xxl-4"
+                        style={{ paddingLeft: "8px", paddingRight: "8px" }}
+                      >
+                        <div
+                          data-v-090235b6=""
+                          data-aos="zoom-in"
+                          data-aos-duration="1000"
+                          class="product-card aos-init aos-animate"
+                        >
+                          <div data-v-090235b6="" class="product-block">
+                            <div data-v-090235b6="" class="product-img">
+                              <picture data-v-090235b6="">
+                                <source
+                                  data-v-090235b6=""
+                                  type="image/avif"
+                                  srcset="https://prodimage-dan.treasurenft.xyz/Stake/Stake_00153.avif"
+                                />
+                                <img
+                                  data-v-090235b6=""
+                                  alt="img"
+                                  loading="lazy"
+                                  src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_00153_compre.png"
+                                />
+                              </picture>
+                            </div>
+                            <div
+                              data-v-090235b6=""
+                              class="product-detail margin-bottom-10"
+                            >
+                              <div data-v-090235b6="">
+                                <span
+                                  data-v-090235b6=""
+                                  class="name title-black-PR-18"
+                                >
+                                  Stake_258454
+                                </span>
+                              </div>
+                              <div
+                                data-v-090235b6=""
+                                class="product-detail-row"
+                              >
+                                <div data-v-090235b6="" class="price-block">
+                                  <img
+                                    data-v-090235b6=""
+                                    src={TUsdt}
+                                    alt="icon"
+                                    loading="lazy"
+                                  />
+                                  <span
+                                    data-v-090235b6=""
+                                    class="price title-grey999-PR-14"
+                                    style={{
+                                      textDecoration: "none",
+                                      marginLeft: "0px",
+                                    }}
+                                  >
+                                    280{" "}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div data-v-090235b6="" class="ivu-row">
+                              <div data-v-090235b6="" class="ivu-col">
+                                <button
+                                  data-v-090235b6=""
+                                  type="button"
+                                  class="ivu-btn ivu-btn-primary ivu-btn-long button-stake"
+                                >
+                                  {" "}
+                                  <span>Buy</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-v-090235b6=""
+                        class="ivu-col ivu-col-span-xs-12 ivu-col-span-sm-12 ivu-col-span-md-8 ivu-col-span-lg-6 ivu-col-span-xl-4 ivu-col-span-xxl-4"
+                        style={{ paddingLeft: "8px", paddingRight: "8px" }}
+                      >
+                        <div
+                          data-v-090235b6=""
+                          data-aos="zoom-in"
+                          data-aos-duration="1000"
+                          class="product-card aos-init aos-animate"
+                        >
+                          <div data-v-090235b6="" class="product-block">
+                            <div data-v-090235b6="" class="product-img">
+                              <picture data-v-090235b6="">
+                                <source
+                                  data-v-090235b6=""
+                                  type="image/avif"
+                                  srcset="https://prodimage-dan.treasurenft.xyz/Stake/Stake_06291.avif"
+                                />
+                                <img
+                                  data-v-090235b6=""
+                                  alt="img"
+                                  loading="lazy"
+                                  src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_06291_compre.png"
+                                />
+                              </picture>
+                            </div>
+                            <div
+                              data-v-090235b6=""
+                              class="product-detail margin-bottom-10"
+                            >
+                              <div data-v-090235b6="">
+                                <span
+                                  data-v-090235b6=""
+                                  class="name title-black-PR-18"
+                                >
+                                  Stake_258454
+                                </span>
+                              </div>
+                              <div
+                                data-v-090235b6=""
+                                class="product-detail-row"
+                              >
+                                <div data-v-090235b6="" class="price-block">
+                                  <img
+                                    data-v-090235b6=""
+                                    src={TUsdt}
+                                    alt="icon"
+                                    loading="lazy"
+                                  />
+                                  <span
+                                    data-v-090235b6=""
+                                    class="price title-grey999-PR-14"
+                                    style={{
+                                      textDecoration: "none",
+                                      marginLeft: "0px",
+                                    }}
+                                  >
+                                    280{" "}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div data-v-090235b6="" class="ivu-row">
+                              <div data-v-090235b6="" class="ivu-col">
+                                <button
+                                  data-v-090235b6=""
+                                  type="button"
+                                  class="ivu-btn ivu-btn-primary ivu-btn-long button-stake"
+                                >
+                                  {" "}
+                                  <span>Buy</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-v-090235b6=""
+                        class="ivu-col ivu-col-span-xs-12 ivu-col-span-sm-12 ivu-col-span-md-8 ivu-col-span-lg-6 ivu-col-span-xl-4 ivu-col-span-xxl-4"
+                        style={{ paddingLeft: "8px", paddingRight: "8px" }}
+                      >
+                        <div
+                          data-v-090235b6=""
+                          data-aos="zoom-in"
+                          data-aos-duration="1000"
+                          class="product-card aos-init aos-animate"
+                        >
+                          <div data-v-090235b6="" class="product-block">
+                            <div data-v-090235b6="" class="product-img">
+                              <picture data-v-090235b6="">
+                                <source
+                                  data-v-090235b6=""
+                                  type="image/avif"
+                                  srcset="https://prodimage-dan.treasurenft.xyz/Stake/Stake_02784.avif"
+                                />
+                                <img
+                                  data-v-090235b6=""
+                                  alt="img"
+                                  loading="lazy"
+                                  src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_02784_compre.png"
+                                />
+                              </picture>
+                            </div>
+                            <div
+                              data-v-090235b6=""
+                              class="product-detail margin-bottom-10"
+                            >
+                              <div data-v-090235b6="">
+                                <span
+                                  data-v-090235b6=""
+                                  class="name title-black-PR-18"
+                                >
+                                  Stake_258454
+                                </span>
+                              </div>
+                              <div
+                                data-v-090235b6=""
+                                class="product-detail-row"
+                              >
+                                <div data-v-090235b6="" class="price-block">
+                                  <img
+                                    data-v-090235b6=""
+                                    src={TUsdt}
+                                    alt="icon"
+                                    loading="lazy"
+                                  />
+                                  <span
+                                    data-v-090235b6=""
+                                    class="price title-grey999-PR-14"
+                                    style={{
+                                      textDecoration: "none",
+                                      marginLeft: "0px",
+                                    }}
+                                  >
+                                    280{" "}
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div data-v-090235b6="" class="ivu-row">
+                              <div data-v-090235b6="" class="ivu-col">
+                                <button
+                                  data-v-090235b6=""
+                                  type="button"
+                                  class="ivu-btn ivu-btn-primary ivu-btn-long button-stake"
+                                >
+                                  {" "}
+                                  <span>Buy</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -3551,25 +3973,27 @@ export default function Explore() {
       <div className="content-wrap">
         <div data-v-b49386ae="" data-v-014c2687="">
           <div className="headerCommon">
-            {" "}
             <div
               data-v-b49386ae=""
               class="headerImg headerimg-custom"
-              style={{ height: "354px" }}
+              style={{
+                height: "354px",
+                backgroundImage:
+                  "linear-gradient(to right, #2152af 0%, #6ba7e7 51%, #2152af 100%)",
+              }}
             >
-              <img
+              {/* <img
                 data-v-b49386ae=""
                 src="https://image.treasurenft.xyz/PC/img/header_bg_L.png"
                 alt="headerImg"
                 loading="lazy"
-              />
+              /> */}
               <h2 data-v-b49386ae="" class="headerImg-text title-black-PR-30">
                 Explore
               </h2>
             </div>
           </div>
           <div className="explore">
-            {" "}
             <div className="explore-main">
               <div className="tab-area tab-area-outer ivu-tabs ivu-tabs-no-animation">
                 <div className="ivu-tabs-bar">
@@ -3638,6 +4062,7 @@ export default function Explore() {
                       {activeTab == 2 && <PolygonNFT />}
                       {activeTab == 3 && <Art />}
                       {activeTab == 4 && <Collectibles />}
+
                       {/* {activeTab == 5 && <Exclusive />} */}
                     </div>
                   </div>

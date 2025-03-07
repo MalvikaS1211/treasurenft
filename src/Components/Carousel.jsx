@@ -96,11 +96,11 @@ const Carousel = () => {
       <div className="bottons-section"></div>
       <div
         id="carouselExample"
-        className="carousel slide"
+        className="carousel slide "
         // Remove data-bs-ride to disable automatic sliding
       >
         {/* Indicators */}
-        <div className="carousel-indicators">
+        {/* <div className="carousel-indicators">
           <button
             type="button"
             data-bs-target="#carouselExample"
@@ -137,179 +137,195 @@ const Carousel = () => {
             aria-label="Slide 4"
             onClick={() => handleSelect(3)}
           ></button>
-        </div>
+        </div> */}
 
         {/* Wrapper for slides */}
         <div className="carousel-inner">
           <div className={`carousel-item ${activeIndex === 0 ? "active" : ""}`}>
             <div className="discovernft-grid-stake ">
-              <div className="d-flex gap-3">
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_07758_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+              <div className="row">
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_07758_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_03083_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_03083_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_04050_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
-                    </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_04050_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_07123_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                  </div>{" "}
+                </div>
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_07123_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
+                    </div>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="d-flex gap-3">
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_06195_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+              <div className="row">
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_06195_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_02690_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_02690_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_01493_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
-                    </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_01493_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_01425_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                  </div>{" "}
+                </div>
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_01425_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
+                    </div>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -318,174 +334,190 @@ const Carousel = () => {
             </div>
           </div>
           <div className={`carousel-item ${activeIndex === 1 ? "active" : ""}`}>
-            <div className="discovernft-grid-polygonNFT ">
-              <div className="d-flex gap-3">
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_07758_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+            <div className="discovernft-grid-polygonNft ">
+              <div className="row">
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_07758_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_03083_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_03083_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_04050_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
-                    </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_04050_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_07123_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                  </div>{" "}
+                </div>
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_07123_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
+                    </div>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="d-flex gap-3">
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_06195_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+              <div className="row">
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_06195_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_02690_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_02690_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_01493_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
-                    </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_01493_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_01425_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                  </div>{" "}
+                </div>
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_01425_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
+                    </div>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -495,173 +527,189 @@ const Carousel = () => {
           </div>
           <div className={`carousel-item ${activeIndex === 2 ? "active" : ""}`}>
             <div className="discovernft-grid-art ">
-              <div className="d-flex gap-3">
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_07758_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+              <div className="row">
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_07758_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_03083_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_03083_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_04050_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
-                    </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_04050_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_07123_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                  </div>{" "}
+                </div>
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_07123_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
+                    </div>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="d-flex gap-3">
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_06195_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+              <div className="row">
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_06195_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_02690_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_02690_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_01493_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
-                    </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_01493_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_01425_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                  </div>{" "}
+                </div>
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_01425_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
+                    </div>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -671,173 +719,189 @@ const Carousel = () => {
           </div>
           <div className={`carousel-item ${activeIndex === 3 ? "active" : ""}`}>
             <div className="discovernft-grid-collectibles ">
-              <div className="d-flex gap-3">
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_07758_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+              <div className="row">
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_07758_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_03083_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_03083_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_04050_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
-                    </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_04050_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_07123_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                  </div>{" "}
+                </div>
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_07123_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
+                    </div>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="d-flex gap-3">
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_06195_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+              <div className="row">
+                <div className=" col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_06195_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_02690_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_02690_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_01493_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
-                    </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_01493_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
                       </div>
                     </div>
-                  </div>
-                </div>
-                <div className="discover-card-wrap col-3">
-                  <div className="discover-box">
-                    <div className="img-box">
-                      <img
-                        src={Stake_01425_compre}
-                        alt=""
-                        className="discover-img"
-                      />
-                      <img src={stake_img} alt="" className="staking-image" />
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-section">
-                    <h3>Stake_670416</h3>
-                    <div className="coin-price-text">
-                      <div className="text-section-usdt">
-                        <img src={TUsdt} alt="" className="coinimage" />
-                        <span className="price-text">321 USDT</span>
+                  </div>{" "}
+                </div>
+                <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                  <div className="discover-card-wrap">
+                    <div className="discover-box">
+                      <div className="img-box">
+                        <img
+                          src={Stake_01425_compre}
+                          alt=""
+                          className="discover-img"
+                        />
+                        <img src={stake_img} alt="" className="staking-image" />
+                      </div>
+                    </div>
+                    <div className="text-section">
+                      <h3>Stake_670416</h3>
+                      <div className="coin-price-text">
+                        <div className="text-section-usdt">
+                          <img src={TUsdt} alt="" className="coinimage" />
+                          <span className="price-text">321 USDT</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -848,7 +912,7 @@ const Carousel = () => {
         </div>
 
         {/* Left and right controls */}
-        <button
+        {/* <button
           className="carousel-control-prev"
           type="button"
           data-bs-target="#carouselExample"
@@ -860,8 +924,8 @@ const Carousel = () => {
             aria-hidden="true"
           ></span>
           <span className="visually-hidden">Previous</span>
-        </button>
-        <button
+        </button> */}
+        {/* <button
           className="carousel-control-next"
           type="button"
           data-bs-target="#carouselExample"
@@ -873,7 +937,7 @@ const Carousel = () => {
             aria-hidden="true"
           ></span>
           <span className="visually-hidden">Next</span>
-        </button>
+        </button> */}
       </div>
       <div className="moreBtn moreBtn-custom">
         <div className="gradient-btn discover-more-btn">

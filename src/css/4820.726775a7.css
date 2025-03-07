@@ -97,7 +97,13 @@ footer .email-block-btn {
     color-stop(#a0f5d0),
     to(#ffd7c8)
   );
-  background: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8);
+  /* background: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8); */
+  background-image: linear-gradient(
+    to right,
+    #77a1d3 0%,
+    #79cbca 51%,
+    #77a1d3 100%
+  );
   border-radius: 41.5px;
   padding: 10px 20px;
   color: #fff;

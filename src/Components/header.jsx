@@ -5,6 +5,7 @@ import "../css/header.css"; // Optional for custom styles
 import Logo from "../assets/Logo.webp";
 import Logo2 from "../assets/Logo2.webp";
 import magicverseLogo from "../assets/magicverse.jpg";
+import LogoMagicVerse from "../assets/LogoMagicVerse.png";
 
 import icon_header_wallet from "../assets/icon_header_wallet.webp";
 import services_icon from "../assets/services_icon.webp";
@@ -120,6 +121,8 @@ export default function Header() {
               style={{
                 borderTopLeftRadius: "30px",
                 borderTopRightRadius: "30px",
+                backgroundImage:
+                  " linear-gradient(to right, #2152af 0%, #6ba7e7 51%, #2152af 100%)",
               }}
             >
               <div>

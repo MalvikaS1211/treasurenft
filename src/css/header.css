@@ -266,7 +266,7 @@ button {
   cursor: pointer;
 }
 .gradient-btn-modal {
-  background: linear-gradient(90deg, #99bced, #99f8cf, #ffd6c7);
+  background: linear-gradient(to right, #77a1d3 0%, #79cbca 51%, #77a1d3 100%);
   border: none !important;
 }
 .gradient-btn:hover {
