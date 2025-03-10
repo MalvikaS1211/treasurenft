@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min"; // This is important
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import ConnectWallet from "./ConnectWallet";
 const countries = [
   "+1(Canada)",

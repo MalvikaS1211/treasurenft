@@ -1,420 +1,3 @@
-.header-container {
-  padding: 35px;
-}
-
-.menu {
-  gap: 10px;
-  font-size: 18px;
-  font-weight: 600;
-  color: black;
-  display: flex; /* Ensure menu is always flex */
-  align-items: center;
-}
-
-.search-box {
-  width: 350px;
-  position: relative;
-  border-radius: 40px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  border: 1px solid #ccc;
-  padding: 8px 15px;
-  background: white;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.search-input {
-  width: 100%;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  color: #888;
-}
-
-.search-input::placeholder {
-  color: #ccc;
-  font-weight: 600;
-}
-
-.search-icon {
-  font-size: 20px;
-  color: #888;
-  cursor: pointer;
-}
-
-.title-sub {
-  color: black;
-}
-/* 🔥 Media Queries for Responsiveness */
-
-/* Tablets & Small Screens */
-@media (max-width: 992px) {
-  .header-container {
-    padding: 20px;
-    flex-direction: column; /* Stack elements vertically */
-    text-align: center;
-    gap: 15px;
-  }
-
-  .search-box {
-    width: 100%; /* Full width search box */
-  }
-
-  .menu {
-    justify-content: center; /* Center Menu Items */
-    font-size: 16px; /* Smaller Font Size */
-  }
-}
-
-/* Mobile Devices */
-@media (max-width: 768px) {
-  .menu {
-    display: none; /* Hide Menu on Small Screens */
-  }
-
-  .search-box {
-    width: 100%; /* Full width */
-    padding: 6px 10px; /* Smaller padding */
-  }
-
-  .search-input {
-    font-size: 14px; /* Smaller font size */
-  }
-
-  .header-container {
-    padding: 15px;
-  }
-}
-
-/* Extra Small Screens */
-@media (max-width: 576px) {
-  .header-container {
-    padding: 10px;
-  }
-
-  .search-box {
-    padding: 5px 8px; /* Compact Search Box */
-  }
-
-  .search-icon {
-    font-size: 16px; /* Smaller Icon */
-  }
-}
-
-/* 
-.ivu-modal-header {
-  background-image: url(../assets/headerBg.png);
-  padding: 0;
-  border-bottom: 0;
-  height: 281px;
-  padding: 30px 0;
-  border-radius: 20px 20px 0 0;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-.login-modal-body {
-  padding: 5% 10%;
-} */
-
-/* modal css */
-.event-modal {
-  text-align: center;
-}
-.event-modal .ivu-modal-content {
-  border-radius: 24px;
-}
-.event-modal .ivu-modal-close .ivu-icon-ios-close {
-  color: #fff;
-}
-.event-modal .ivu-modal-header {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#5cbffe),
-    color-stop(#a0f5d0),
-    to(#ffd7c8)
-  );
-  background-image: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8);
-  border-radius: 24px 24px 0 0;
-  color: #fff;
-}
-.event-modal .ivu-modal-body {
-  padding: 30px 50px;
-}
-.event-modal p {
-  color: #8797b0;
-  font-size: 14px;
-}
-.event-modal img {
-  display: block;
-  width: 110px;
-  margin: 10px auto;
-}
-.event-modal .ivu-btn {
-  margin-top: 30px;
-}
-
-.common-modal[data-v-0a22c425] .ivu-modal-content {
-  border-radius: 20px;
-}
-.common-modal[data-v-0a22c425] .ivu-modal-body {
-  text-align: center;
-  padding: 5%;
-  color: #3d4045;
-}
-.common-modal[data-v-0a22c425] .ivu-modal-body .image-type {
-  width: 100px;
-}
-.common-modal .icon-info[data-v-0a22c425] {
-  width: 16px;
-  height: 16px;
-  vertical-align: sub;
-}
-
-.modal-content {
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-button {
-  border-radius: 20px;
-}
-
-.modal-header {
-  border: none;
-}
-.modal-body {
-  text-align: center;
-}
-.wallet-btn {
-  width: 100%;
-  height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  color: #999;
-  background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(#fff),
-      to(#fff)
-    ),
-    -webkit-gradient(linear, left top, left bottom, from(#5cbffe), color-stop(#a0f5d0), to(#ffd7c8));
-  background-image: linear-gradient(#fff, #fff),
-    linear-gradient(180deg, #5cbffe, #a0f5d0, #ffd7c8);
-  background-clip: content-box, border-box;
-  border-radius: 8px;
-  padding: 2px;
-  margin: 10px auto 20px;
-  border: none;
-}
-.wallet-btn i {
-  margin-right: 10px;
-}
-.cancel-btn {
-  width: 50%;
-  height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  color: #999;
-  background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(#fff),
-      to(#fff)
-    ),
-    -webkit-gradient(linear, left top, left bottom, from(#5cbffe), color-stop(#a0f5d0), to(#ffd7c8));
-  background-image: linear-gradient(#fff, #fff),
-    linear-gradient(180deg, #5cbffe, #a0f5d0, #ffd7c8);
-  background-clip: content-box, border-box;
-  border-radius: 8px;
-  padding: 2px;
-
-  border: none;
-}
-.password-eye {
-  position: absolute;
-  right: 15px;
-  top: 68%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-.gradient-btn-modal {
-  background: linear-gradient(to right, #77a1d3 0%, #79cbca 51%, #77a1d3 100%);
-  border: none !important;
-}
-.gradient-btn:hover {
-  opacity: 0.8;
-}
-.forgot-password {
-  color: #99bced;
-  text-decoration: none;
-}
-
-.modal-header {
-  /* background-image: url("../assets/headerBg.png"); */
-  padding: 0;
-  border-bottom: 0;
-  height: 281px;
-  padding: 30px 0;
-  border-radius: 20px 20px 0 0;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
-.modal-body {
-  padding: 20px 50px !important;
-}
-.modal-content-custom {
-  border-radius: 30px !important;
-}
-.login-heading {
-  font-size: 1.875rem;
-  color: #000;
-}
-
-.input-field {
-  border: 1px solid #80808066;
-}
-.input-field:hover {
-  border: 1px solid blue;
-}
-
-.sign-up {
-  color: transparent;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#5cbffe),
-    color-stop(#a0f5d0),
-    to(#ffd7c8)
-  );
-  background-image: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-size: 1rem;
-}
-
-.submit-btn:hover {
-  background-color: blue;
-}
-.custom-modal-width {
-  max-width: 700px !important;
-  width: 100%;
-}
-.dropdown-wrapper {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.menu-icon {
-  cursor: pointer;
-  color: #000;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  width: 200px;
-  background: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  opacity: 0;
-  visibility: hidden;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: all 0.3s ease-in-out;
-}
-
-.dropdown-menu.show {
-  opacity: 1;
-  visibility: visible;
-  transform: scaleY(1);
-}
-
-.dropdown-item {
-  display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  gap: 10px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.dropdown-item:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-.dropdown-icon {
-  font-size: 20px;
-}
-.dropdown-item:hover {
-  color: blue;
-}
-
-.header {
-  width: 100vw;
-  position: fixed;
-  -webkit-transform: translate(0);
-  transform: translate(0);
-  -webkit-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  background-color: transparent;
-  padding: 0 1rem;
-  z-index: 100;
-}
-/* .header {
-  width: auto;
-  position: static;
-  background-color: transparent;
-  padding: 1rem;
-  z-index: 1;
-  transform: none;
-  transition: none;
-} */
-.headerimg-custom {
-  height: 260px;
-}
-
-@media (max-width: 992px) {
-  .headerimg-custom {
-    height: 384px;
-  }
-  .custom-title-white-PR-16 {
-    font-size: 10px !important;
-  }
-}
 #dev-id .pc-class {
   font-family: PosteramaText-Regular;
 }
@@ -601,7 +184,7 @@ button {
   background-image: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #fff;
   height: 45px;
@@ -695,7 +278,7 @@ button {
 
 #dev-id .ivu-btn.ivu-btn-success span {
   background-color: none;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   width: 100%;
   color: #fff;
@@ -843,7 +426,7 @@ button {
 @media screen and (max-width: 450px) {
   #dev-id .ivu-btn.ivu-btn-primary,
   #dev-id .ivu-btn.ivu-btn-success span {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    font-family:  "Poppins", sans-serif;;
     font-size: 0.75rem;
   }
 }
@@ -934,7 +517,7 @@ button {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #333;
 }
@@ -954,7 +537,7 @@ button {
 
 @media screen and (max-width: 450px) {
   #dev-id .ivu-form-label-top .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    font-family:  "Poppins", sans-serif;;
     font-size: 0.875rem;
   }
 }
@@ -1682,14 +1265,14 @@ button {
 
 #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
   background: unset;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #333;
 }
 
 #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab-active {
   color: #000;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
   font-weight: 900;
 }
@@ -1715,13 +1298,13 @@ button {
 @media screen and (max-width: 450px) {
   #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
     background: unset;
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    font-family:  "Poppins", sans-serif;;
     font-size: 0.875rem;
     color: #333;
   }
 
   #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab-active {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    font-family:  "Poppins", sans-serif;;
     font-size: 1rem;
   }
 }
@@ -2443,7 +2026,7 @@ button {
 
 #dev-id ~ .v-transfer-dom .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
   background: unset;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #333;
 }
@@ -2454,7 +2037,7 @@ button {
   > .ivu-tabs-bar
   .ivu-tabs-tab-active {
   color: #000 !important;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
 }
 
@@ -2564,7 +2147,7 @@ button {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #333;
 }
@@ -2584,7 +2167,7 @@ button {
 
 @media screen and (max-width: 450px) {
   #dev-id ~ .v-transfer-dom .ivu-form-label-top .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    font-family:  "Poppins", sans-serif;;
     font-size: 0.875rem;
   }
 }
@@ -4622,7 +4205,7 @@ button {
 }
 
 #dev-id .mint .ivu-form-item-label {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
   font-weight: 700;
   color: #333 !important;
@@ -4676,7 +4259,7 @@ button {
   }
 
   #dev-id .mint .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    font-family:  "Poppins", sans-serif;;
     font-size: 1.125rem;
   }
 }
@@ -5089,7 +4672,7 @@ button {
 
   #dev-id .paymentSetting .ivu-form-item-label {
     color: #333;
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    font-family:  "Poppins", sans-serif;;
     font-size: 1rem;
   }
 
@@ -5136,7 +4719,7 @@ button {
 }
 
 #dev-id .title-black-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.75rem;
   color: #000;
 }
@@ -5192,7 +4775,7 @@ button {
 }
 
 #dev-id .title-white-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.75rem;
   color: #fff;
 }
@@ -5216,7 +4799,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.75rem;
   color: #333;
 }
@@ -5258,7 +4841,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.75rem;
   color: #666;
 }
@@ -5300,7 +4883,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.75rem;
   color: #999;
 }
@@ -5386,7 +4969,7 @@ button {
 }
 
 #dev-id .specialText-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-60,
@@ -5417,7 +5000,7 @@ button {
 }
 
 #dev-id .title-red-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.75rem;
   color: #ff002f;
 }
@@ -5435,7 +5018,7 @@ button {
 }
 
 #dev-id .title-green-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.75rem;
   color: #00ac4f;
 }
@@ -5453,7 +5036,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.75rem;
   color: #1dcab3;
 }
@@ -5471,7 +5054,7 @@ button {
 }
 
 #dev-id .title-pink-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.75rem;
   color: #ec6898;
 }
@@ -5488,7 +5071,7 @@ button {
 
 #dev-id .title-blue-PR-60,
 #dev-id .title-blue1-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.75rem;
 }
 
@@ -5497,13 +5080,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.5rem;
   color: #000;
 }
@@ -5559,7 +5142,7 @@ button {
 }
 
 #dev-id .title-white-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.5rem;
   color: #fff;
 }
@@ -5583,7 +5166,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.5rem;
   color: #333;
 }
@@ -5625,7 +5208,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.5rem;
   color: #666;
 }
@@ -5667,7 +5250,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.5rem;
   color: #999;
 }
@@ -5753,7 +5336,7 @@ button {
 }
 
 #dev-id .specialText-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-56,
@@ -5784,7 +5367,7 @@ button {
 }
 
 #dev-id .title-red-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.5rem;
   color: #ff002f;
 }
@@ -5802,7 +5385,7 @@ button {
 }
 
 #dev-id .title-green-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.5rem;
   color: #00ac4f;
 }
@@ -5820,7 +5403,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.5rem;
   color: #1dcab3;
 }
@@ -5838,7 +5421,7 @@ button {
 }
 
 #dev-id .title-pink-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.5rem;
   color: #ec6898;
 }
@@ -5855,7 +5438,7 @@ button {
 
 #dev-id .title-blue-PR-56,
 #dev-id .title-blue1-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.5rem;
 }
 
@@ -5864,13 +5447,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3rem;
   color: #000;
 }
@@ -5926,7 +5509,7 @@ button {
 }
 
 #dev-id .title-white-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3rem;
   color: #fff;
 }
@@ -5950,7 +5533,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3rem;
   color: #333;
 }
@@ -5992,7 +5575,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3rem;
   color: #666;
 }
@@ -6034,7 +5617,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3rem;
   color: #999;
 }
@@ -6120,7 +5703,7 @@ button {
 }
 
 #dev-id .specialText-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-48,
@@ -6151,7 +5734,7 @@ button {
 }
 
 #dev-id .title-red-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3rem;
   color: #ff002f;
 }
@@ -6169,7 +5752,7 @@ button {
 }
 
 #dev-id .title-green-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3rem;
   color: #00ac4f;
 }
@@ -6187,7 +5770,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3rem;
   color: #1dcab3;
 }
@@ -6205,7 +5788,7 @@ button {
 }
 
 #dev-id .title-pink-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3rem;
   color: #ec6898;
 }
@@ -6222,7 +5805,7 @@ button {
 
 #dev-id .title-blue-PR-48,
 #dev-id .title-blue1-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3rem;
 }
 
@@ -6231,13 +5814,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 3rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.875rem;
   color: #000;
 }
@@ -6293,7 +5876,7 @@ button {
 }
 
 #dev-id .title-white-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.875rem;
   color: #fff;
 }
@@ -6317,7 +5900,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.875rem;
   color: #333;
 }
@@ -6359,7 +5942,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.875rem;
   color: #666;
 }
@@ -6401,7 +5984,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.875rem;
   color: #999;
 }
@@ -6487,7 +6070,7 @@ button {
 }
 
 #dev-id .specialText-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-46,
@@ -6518,7 +6101,7 @@ button {
 }
 
 #dev-id .title-red-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.875rem;
   color: #ff002f;
 }
@@ -6536,7 +6119,7 @@ button {
 }
 
 #dev-id .title-green-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.875rem;
   color: #00ac4f;
 }
@@ -6554,7 +6137,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.875rem;
   color: #1dcab3;
 }
@@ -6572,7 +6155,7 @@ button {
 }
 
 #dev-id .title-pink-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.875rem;
   color: #ec6898;
 }
@@ -6589,7 +6172,7 @@ button {
 
 #dev-id .title-blue-PR-46,
 #dev-id .title-blue1-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.875rem;
 }
 
@@ -6598,13 +6181,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.75rem;
   color: #000;
 }
@@ -6660,7 +6243,7 @@ button {
 }
 
 #dev-id .title-white-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.75rem;
   color: #fff;
 }
@@ -6684,7 +6267,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.75rem;
   color: #333;
 }
@@ -6726,7 +6309,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.75rem;
   color: #666;
 }
@@ -6768,7 +6351,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.75rem;
   color: #999;
 }
@@ -6854,7 +6437,7 @@ button {
 }
 
 #dev-id .specialText-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-44,
@@ -6885,7 +6468,7 @@ button {
 }
 
 #dev-id .title-red-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.75rem;
   color: #ff002f;
 }
@@ -6903,7 +6486,7 @@ button {
 }
 
 #dev-id .title-green-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.75rem;
   color: #00ac4f;
 }
@@ -6921,7 +6504,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.75rem;
   color: #1dcab3;
 }
@@ -6939,7 +6522,7 @@ button {
 }
 
 #dev-id .title-pink-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.75rem;
   color: #ec6898;
 }
@@ -6956,7 +6539,7 @@ button {
 
 #dev-id .title-blue-PR-44,
 #dev-id .title-blue1-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.75rem;
 }
 
@@ -6965,13 +6548,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.625rem;
   color: #000;
 }
@@ -7027,7 +6610,7 @@ button {
 }
 
 #dev-id .title-white-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.625rem;
   color: #fff;
 }
@@ -7051,7 +6634,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.625rem;
   color: #333;
 }
@@ -7093,7 +6676,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.625rem;
   color: #666;
 }
@@ -7135,7 +6718,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.625rem;
   color: #999;
 }
@@ -7221,7 +6804,7 @@ button {
 }
 
 #dev-id .specialText-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-42,
@@ -7252,7 +6835,7 @@ button {
 }
 
 #dev-id .title-red-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.625rem;
   color: #ff002f;
 }
@@ -7270,7 +6853,7 @@ button {
 }
 
 #dev-id .title-green-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.625rem;
   color: #00ac4f;
 }
@@ -7288,7 +6871,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.625rem;
   color: #1dcab3;
 }
@@ -7306,7 +6889,7 @@ button {
 }
 
 #dev-id .title-pink-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.625rem;
   color: #ec6898;
 }
@@ -7323,7 +6906,7 @@ button {
 
 #dev-id .title-blue-PR-42,
 #dev-id .title-blue1-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.625rem;
 }
 
@@ -7332,13 +6915,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.625rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.5rem;
   color: #000;
 }
@@ -7394,7 +6977,7 @@ button {
 }
 
 #dev-id .title-white-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.5rem;
   color: #fff;
 }
@@ -7418,7 +7001,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.5rem;
   color: #333;
 }
@@ -7460,7 +7043,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.5rem;
   color: #666;
 }
@@ -7502,7 +7085,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.5rem;
   color: #999;
 }
@@ -7588,7 +7171,7 @@ button {
 }
 
 #dev-id .specialText-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-40,
@@ -7619,7 +7202,7 @@ button {
 }
 
 #dev-id .title-red-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.5rem;
   color: #ff002f;
 }
@@ -7637,7 +7220,7 @@ button {
 }
 
 #dev-id .title-green-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.5rem;
   color: #00ac4f;
 }
@@ -7655,7 +7238,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.5rem;
   color: #1dcab3;
 }
@@ -7673,7 +7256,7 @@ button {
 }
 
 #dev-id .title-pink-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.5rem;
   color: #ec6898;
 }
@@ -7690,7 +7273,7 @@ button {
 
 #dev-id .title-blue-PR-40,
 #dev-id .title-blue1-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.5rem;
 }
 
@@ -7699,13 +7282,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.375rem;
   color: #000;
 }
@@ -7761,7 +7344,7 @@ button {
 }
 
 #dev-id .title-white-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.375rem;
   color: #fff;
 }
@@ -7785,7 +7368,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.375rem;
   color: #333;
 }
@@ -7827,7 +7410,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.375rem;
   color: #666;
 }
@@ -7869,7 +7452,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.375rem;
   color: #999;
 }
@@ -7955,7 +7538,7 @@ button {
 }
 
 #dev-id .specialText-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-38,
@@ -7986,7 +7569,7 @@ button {
 }
 
 #dev-id .title-red-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.375rem;
   color: #ff002f;
 }
@@ -8004,7 +7587,7 @@ button {
 }
 
 #dev-id .title-green-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.375rem;
   color: #00ac4f;
 }
@@ -8022,7 +7605,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.375rem;
   color: #1dcab3;
 }
@@ -8040,7 +7623,7 @@ button {
 }
 
 #dev-id .title-pink-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.375rem;
   color: #ec6898;
 }
@@ -8057,7 +7640,7 @@ button {
 
 #dev-id .title-blue-PR-38,
 #dev-id .title-blue1-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.375rem;
 }
 
@@ -8066,13 +7649,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.375rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.25rem;
   color: #000;
 }
@@ -8128,7 +7711,7 @@ button {
 }
 
 #dev-id .title-white-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.25rem;
   color: #fff;
 }
@@ -8152,7 +7735,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.25rem;
   color: #333;
 }
@@ -8194,7 +7777,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.25rem;
   color: #666;
 }
@@ -8236,7 +7819,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.25rem;
   color: #999;
 }
@@ -8322,7 +7905,7 @@ button {
 }
 
 #dev-id .specialText-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-36,
@@ -8353,7 +7936,7 @@ button {
 }
 
 #dev-id .title-red-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.25rem;
   color: #ff002f;
 }
@@ -8371,7 +7954,7 @@ button {
 }
 
 #dev-id .title-green-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.25rem;
   color: #00ac4f;
 }
@@ -8389,7 +7972,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.25rem;
   color: #1dcab3;
 }
@@ -8407,7 +7990,7 @@ button {
 }
 
 #dev-id .title-pink-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.25rem;
   color: #ec6898;
 }
@@ -8424,7 +8007,7 @@ button {
 
 #dev-id .title-blue-PR-36,
 #dev-id .title-blue1-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.25rem;
 }
 
@@ -8433,13 +8016,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.25rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.125rem;
   color: #000;
 }
@@ -8495,7 +8078,7 @@ button {
 }
 
 #dev-id .title-white-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.125rem;
   color: #fff;
 }
@@ -8519,7 +8102,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.125rem;
   color: #333;
 }
@@ -8561,7 +8144,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.125rem;
   color: #666;
 }
@@ -8603,7 +8186,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.125rem;
   color: #999;
 }
@@ -8689,7 +8272,7 @@ button {
 }
 
 #dev-id .specialText-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-34,
@@ -8720,7 +8303,7 @@ button {
 }
 
 #dev-id .title-red-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.125rem;
   color: #ff002f;
 }
@@ -8738,7 +8321,7 @@ button {
 }
 
 #dev-id .title-green-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.125rem;
   color: #00ac4f;
 }
@@ -8756,7 +8339,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.125rem;
   color: #1dcab3;
 }
@@ -8774,7 +8357,7 @@ button {
 }
 
 #dev-id .title-pink-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.125rem;
   color: #ec6898;
 }
@@ -8791,7 +8374,7 @@ button {
 
 #dev-id .title-blue-PR-34,
 #dev-id .title-blue1-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.125rem;
 }
 
@@ -8800,13 +8383,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2.125rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2rem;
   color: #000;
 }
@@ -8862,7 +8445,7 @@ button {
 }
 
 #dev-id .title-white-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2rem;
   color: #fff;
 }
@@ -8886,7 +8469,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2rem;
   color: #333;
 }
@@ -8928,7 +8511,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2rem;
   color: #666;
 }
@@ -8970,7 +8553,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2rem;
   color: #999;
 }
@@ -9056,7 +8639,7 @@ button {
 }
 
 #dev-id .specialText-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-32,
@@ -9087,7 +8670,7 @@ button {
 }
 
 #dev-id .title-red-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2rem;
   color: #ff002f;
 }
@@ -9105,7 +8688,7 @@ button {
 }
 
 #dev-id .title-green-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2rem;
   color: #00ac4f;
 }
@@ -9123,7 +8706,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2rem;
   color: #1dcab3;
 }
@@ -9141,7 +8724,7 @@ button {
 }
 
 #dev-id .title-pink-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2rem;
   color: #ec6898;
 }
@@ -9158,7 +8741,7 @@ button {
 
 #dev-id .title-blue-PR-32,
 #dev-id .title-blue1-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2rem;
 }
 
@@ -9167,13 +8750,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 2rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.875rem;
   color: #000;
 }
@@ -9229,7 +8812,7 @@ button {
 }
 
 #dev-id .title-white-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.875rem;
   color: #fff;
 }
@@ -9253,7 +8836,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.875rem;
   color: #333;
 }
@@ -9295,7 +8878,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.875rem;
   color: #666;
 }
@@ -9337,7 +8920,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.875rem;
   color: #999;
 }
@@ -9423,7 +9006,7 @@ button {
 }
 
 #dev-id .specialText-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-30,
@@ -9454,7 +9037,7 @@ button {
 }
 
 #dev-id .title-red-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.875rem;
   color: #ff002f;
 }
@@ -9472,7 +9055,7 @@ button {
 }
 
 #dev-id .title-green-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.875rem;
   color: #00ac4f;
 }
@@ -9490,7 +9073,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.875rem;
   color: #1dcab3;
 }
@@ -9508,7 +9091,7 @@ button {
 }
 
 #dev-id .title-pink-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.875rem;
   color: #ec6898;
 }
@@ -9525,7 +9108,7 @@ button {
 
 #dev-id .title-blue-PR-30,
 #dev-id .title-blue1-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.875rem;
 }
 
@@ -9534,13 +9117,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.75rem;
   color: #000;
 }
@@ -9596,7 +9179,7 @@ button {
 }
 
 #dev-id .title-white-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.75rem;
   color: #fff;
 }
@@ -9620,7 +9203,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.75rem;
   color: #333;
 }
@@ -9662,7 +9245,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.75rem;
   color: #666;
 }
@@ -9704,7 +9287,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.75rem;
   color: #999;
 }
@@ -9790,7 +9373,7 @@ button {
 }
 
 #dev-id .specialText-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-28,
@@ -9821,7 +9404,7 @@ button {
 }
 
 #dev-id .title-red-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.75rem;
   color: #ff002f;
 }
@@ -9839,7 +9422,7 @@ button {
 }
 
 #dev-id .title-green-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.75rem;
   color: #00ac4f;
 }
@@ -9857,7 +9440,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.75rem;
   color: #1dcab3;
 }
@@ -9875,7 +9458,7 @@ button {
 }
 
 #dev-id .title-pink-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.75rem;
   color: #ec6898;
 }
@@ -9892,7 +9475,7 @@ button {
 
 #dev-id .title-blue-PR-28,
 #dev-id .title-blue1-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.75rem;
 }
 
@@ -9901,13 +9484,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.625rem;
   color: #000;
 }
@@ -9963,7 +9546,7 @@ button {
 }
 
 #dev-id .title-white-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.625rem;
   color: #fff;
 }
@@ -9987,7 +9570,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.625rem;
   color: #333;
 }
@@ -10029,7 +9612,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.625rem;
   color: #666;
 }
@@ -10071,7 +9654,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.625rem;
   color: #999;
 }
@@ -10157,7 +9740,7 @@ button {
 }
 
 #dev-id .specialText-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-26,
@@ -10188,7 +9771,7 @@ button {
 }
 
 #dev-id .title-red-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.625rem;
   color: #ff002f;
 }
@@ -10206,7 +9789,7 @@ button {
 }
 
 #dev-id .title-green-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.625rem;
   color: #00ac4f;
 }
@@ -10224,7 +9807,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.625rem;
   color: #1dcab3;
 }
@@ -10242,7 +9825,7 @@ button {
 }
 
 #dev-id .title-pink-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.625rem;
   color: #ec6898;
 }
@@ -10259,7 +9842,7 @@ button {
 
 #dev-id .title-blue-PR-26,
 #dev-id .title-blue1-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.625rem;
 }
 
@@ -10268,13 +9851,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.625rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.5rem;
   color: #000;
 }
@@ -10330,7 +9913,7 @@ button {
 }
 
 #dev-id .title-white-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.5rem;
   color: #fff;
 }
@@ -10354,7 +9937,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.5rem;
   color: #333;
 }
@@ -10396,7 +9979,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.5rem;
   color: #666;
 }
@@ -10438,7 +10021,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.5rem;
   color: #999;
 }
@@ -10524,7 +10107,7 @@ button {
 }
 
 #dev-id .specialText-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-24,
@@ -10555,7 +10138,7 @@ button {
 }
 
 #dev-id .title-red-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.5rem;
   color: #ff002f;
 }
@@ -10573,7 +10156,7 @@ button {
 }
 
 #dev-id .title-green-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.5rem;
   color: #00ac4f;
 }
@@ -10591,7 +10174,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.5rem;
   color: #1dcab3;
 }
@@ -10609,7 +10192,7 @@ button {
 }
 
 #dev-id .title-pink-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.5rem;
   color: #ec6898;
 }
@@ -10626,7 +10209,7 @@ button {
 
 #dev-id .title-blue-PR-24,
 #dev-id .title-blue1-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.5rem;
 }
 
@@ -10635,13 +10218,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.375rem;
   color: #000;
 }
@@ -10697,7 +10280,7 @@ button {
 }
 
 #dev-id .title-white-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.375rem;
   color: #fff;
 }
@@ -10721,7 +10304,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.375rem;
   color: #333;
 }
@@ -10763,7 +10346,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.375rem;
   color: #666;
 }
@@ -10805,7 +10388,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.375rem;
   color: #999;
 }
@@ -10891,7 +10474,7 @@ button {
 }
 
 #dev-id .specialText-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-22,
@@ -10922,7 +10505,7 @@ button {
 }
 
 #dev-id .title-red-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.375rem;
   color: #ff002f;
 }
@@ -10940,7 +10523,7 @@ button {
 }
 
 #dev-id .title-green-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.375rem;
   color: #00ac4f;
 }
@@ -10958,7 +10541,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.375rem;
   color: #1dcab3;
 }
@@ -10976,7 +10559,7 @@ button {
 }
 
 #dev-id .title-pink-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.375rem;
   color: #ec6898;
 }
@@ -10993,7 +10576,7 @@ button {
 
 #dev-id .title-blue-PR-22,
 #dev-id .title-blue1-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.375rem;
 }
 
@@ -11002,13 +10585,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.375rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.25rem;
   color: #000;
 }
@@ -11064,7 +10647,7 @@ button {
 }
 
 #dev-id .title-white-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.25rem;
   color: #fff;
 }
@@ -11088,7 +10671,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.25rem;
   color: #333;
 }
@@ -11130,7 +10713,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.25rem;
   color: #666;
 }
@@ -11172,7 +10755,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.25rem;
   color: #999;
 }
@@ -11258,7 +10841,7 @@ button {
 }
 
 #dev-id .specialText-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-20,
@@ -11289,7 +10872,7 @@ button {
 }
 
 #dev-id .title-red-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.25rem;
   color: #ff002f;
 }
@@ -11307,7 +10890,7 @@ button {
 }
 
 #dev-id .title-green-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.25rem;
   color: #00ac4f;
 }
@@ -11325,7 +10908,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.25rem;
   color: #1dcab3;
 }
@@ -11343,7 +10926,7 @@ button {
 }
 
 #dev-id .title-pink-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.25rem;
   color: #ec6898;
 }
@@ -11360,7 +10943,7 @@ button {
 
 #dev-id .title-blue-PR-20,
 #dev-id .title-blue1-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.25rem;
 }
 
@@ -11369,13 +10952,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.25rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
   color: #000;
 }
@@ -11431,7 +11014,7 @@ button {
 }
 
 #dev-id .title-white-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
   color: #fff;
 }
@@ -11455,7 +11038,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
   color: #333;
 }
@@ -11497,7 +11080,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
   color: #666;
 }
@@ -11539,7 +11122,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
   color: #999;
 }
@@ -11625,7 +11208,7 @@ button {
 }
 
 #dev-id .specialText-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-18,
@@ -11656,7 +11239,7 @@ button {
 }
 
 #dev-id .title-red-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
   color: #ff002f;
 }
@@ -11674,7 +11257,7 @@ button {
 }
 
 #dev-id .title-green-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
   color: #00ac4f;
 }
@@ -11692,7 +11275,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
   color: #1dcab3;
 }
@@ -11710,7 +11293,7 @@ button {
 }
 
 #dev-id .title-pink-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
   color: #ec6898;
 }
@@ -11727,7 +11310,7 @@ button {
 
 #dev-id .title-blue-PR-18,
 #dev-id .title-blue1-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
 }
 
@@ -11736,13 +11319,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1.125rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #000;
 }
@@ -11798,7 +11381,7 @@ button {
 }
 
 #dev-id .title-white-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #fff;
 }
@@ -11822,7 +11405,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #333;
 }
@@ -11864,7 +11447,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #666;
 }
@@ -11906,7 +11489,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #999;
 }
@@ -11992,7 +11575,7 @@ button {
 }
 
 #dev-id .specialText-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-16,
@@ -12023,7 +11606,7 @@ button {
 }
 
 #dev-id .title-red-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #ff002f;
 }
@@ -12041,7 +11624,7 @@ button {
 }
 
 #dev-id .title-green-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #00ac4f;
 }
@@ -12059,7 +11642,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #1dcab3;
 }
@@ -12077,7 +11660,7 @@ button {
 }
 
 #dev-id .title-pink-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #ec6898;
 }
@@ -12094,7 +11677,7 @@ button {
 
 #dev-id .title-blue-PR-16,
 #dev-id .title-blue1-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
 }
 
@@ -12103,13 +11686,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 1rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
   color: #000;
 }
@@ -12165,7 +11748,7 @@ button {
 }
 
 #dev-id .title-white-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
   color: #fff;
 }
@@ -12189,7 +11772,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
   color: #333;
 }
@@ -12231,7 +11814,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
   color: #666;
 }
@@ -12273,7 +11856,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
   color: #999;
 }
@@ -12359,7 +11942,7 @@ button {
 }
 
 #dev-id .specialText-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-14,
@@ -12390,7 +11973,7 @@ button {
 }
 
 #dev-id .title-red-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
   color: #ff002f;
 }
@@ -12408,7 +11991,7 @@ button {
 }
 
 #dev-id .title-green-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
   color: #00ac4f;
 }
@@ -12426,7 +12009,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
   color: #1dcab3;
 }
@@ -12444,7 +12027,7 @@ button {
 }
 
 #dev-id .title-pink-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
   color: #ec6898;
 }
@@ -12461,7 +12044,7 @@ button {
 
 #dev-id .title-blue-PR-14,
 #dev-id .title-blue1-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
 }
 
@@ -12470,13 +12053,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.75rem;
   color: #000;
 }
@@ -12532,7 +12115,7 @@ button {
 }
 
 #dev-id .title-white-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.75rem;
   color: #fff;
 }
@@ -12556,7 +12139,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.75rem;
   color: #333;
 }
@@ -12598,7 +12181,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.75rem;
   color: #666;
 }
@@ -12640,7 +12223,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.75rem;
   color: #999;
 }
@@ -12726,7 +12309,7 @@ button {
 }
 
 #dev-id .specialText-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-12,
@@ -12757,7 +12340,7 @@ button {
 }
 
 #dev-id .title-red-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.75rem;
   color: #ff002f;
 }
@@ -12775,7 +12358,7 @@ button {
 }
 
 #dev-id .title-green-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.75rem;
   color: #00ac4f;
 }
@@ -12793,7 +12376,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.75rem;
   color: #1dcab3;
 }
@@ -12811,7 +12394,7 @@ button {
 }
 
 #dev-id .title-pink-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.75rem;
   color: #ec6898;
 }
@@ -12828,7 +12411,7 @@ button {
 
 #dev-id .title-blue-PR-12,
 #dev-id .title-blue1-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.75rem;
 }
 
@@ -12837,13 +12420,13 @@ button {
 }
 
 #dev-id .title-blue2-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.625rem;
   color: #000;
 }
@@ -12899,7 +12482,7 @@ button {
 }
 
 #dev-id .title-white-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.625rem;
   color: #fff;
 }
@@ -12923,7 +12506,7 @@ button {
 }
 
 #dev-id .title-grey333-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.625rem;
   color: #333;
 }
@@ -12965,7 +12548,7 @@ button {
 }
 
 #dev-id .title-grey666-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.625rem;
   color: #666;
 }
@@ -13007,7 +12590,7 @@ button {
 }
 
 #dev-id .title-grey999-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.625rem;
   color: #999;
 }
@@ -13093,7 +12676,7 @@ button {
 }
 
 #dev-id .specialText-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
 }
 
 #dev-id .specialText-PR-10,
@@ -13124,7 +12707,7 @@ button {
 }
 
 #dev-id .title-red-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.625rem;
   color: #ff002f;
 }
@@ -13142,7 +12725,7 @@ button {
 }
 
 #dev-id .title-green-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.625rem;
   color: #00ac4f;
 }
@@ -13160,7 +12743,7 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.625rem;
   color: #1dcab3;
 }
@@ -13178,7 +12761,7 @@ button {
 }
 
 #dev-id .title-pink-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.625rem;
   color: #ec6898;
 }
@@ -13195,7 +12778,7 @@ button {
 
 #dev-id .title-blue-PR-10,
 #dev-id .title-blue1-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.625rem;
 }
 
@@ -13204,7 +12787,7 @@ button {
 }
 
 #dev-id .title-blue2-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-family:  "Poppins", sans-serif;;
   font-size: 0.625rem;
   color: #5cbffe;
 }
@@ -14595,7 +14178,231 @@ button {
   height: auto;
   margin-right: 3px;
 }
-.headerimg-custom {
-  height: "354px";
-  background-image: "linear-gradient(to right, #2152af 0%, #6ba7e7 51%, #2152af 100%)" !important;
+.collection[data-v-49807727] {
+    color: #3d4045
+}
+
+.collection .comingSoon[data-v-49807727] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 50vh;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.collection .comingSoon__Img[data-v-49807727] {
+    width: 150px;
+    height: 150px
+}
+
+.collection[data-v-49807727] .ivu-tabs-nav-scroll {
+    padding-left: 3%
+}
+
+.collection .ivu-tabs-bar[data-v-49807727] {
+    margin-bottom: 10px
+}
+
+.collection[data-v-49807727] .overflow-nav-scroll {
+    overflow: hidden;
+    overflow-x: auto
+}
+
+.collection .ivu-tabs-tabpane[data-v-49807727] {
+    background-color: #f7f7f7
+}
+
+.collection .tabpane-btnRow[data-v-49807727] {
+    background-color: #fff;
+    padding: 0 5% 30px
+}
+
+.collection .tabpane-wrap[data-v-49807727] {
+    background-color: #f7f7f7;
+    border-radius: 12px 12px 0 0;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    padding-top: 20px
+}
+
+.collection .btn-recharge[data-v-49807727] {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 5%
+}
+
+.collection .btn-recharge .nft-div[data-v-49807727],.collection .btn-recharge[data-v-49807727] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.collection .btn-recharge .nft-div[data-v-49807727] {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.collection .ivu-btn-success[data-v-49807727] {
+    border-radius: 30px;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 20px
+}
+
+@media screen and (min-width: 768px) {
+    .collection[data-v-49807727] {
+        padding:0 5%
+    }
+
+    .collection[data-v-49807727] .ivu-tabs-nav-scroll {
+        padding-left: 0
+    }
+
+    .collection[data-v-49807727] .ivu-tabs-nav-scroll .ivu-tabs-tab {
+        min-width: 150px;
+        text-align: center
+    }
+
+    .collection[data-v-49807727] .ivu-tabs-nav-scroll .ivu-tabs-ink-bar,.collection[data-v-49807727] .ivu-tabs-nav-scroll .ivu-tabs-ink-bar-animated,.collection[data-v-49807727] .ivu-tabs-nav-scroll .ivu-tabs-nav {
+        min-width: 150px
+    }
+
+    .collection .ivu-tabs-tabpane[data-v-49807727],.collection .tabpane-wrap[data-v-49807727] {
+        background-color: unset
+    }
+
+    .collection .recharge-btn[data-v-49807727] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        position: absolute;
+        right: 2vw;
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
+        top: 31%;
+
+    }
+
+    .collection .recharge-btn .nft-div .nft-text[data-v-49807727] {
+        width: auto!important
+    }
+}
+
+.teaching .content-area img {
+    width: 100%
+}
+.userMaterial {
+    margin-bottom: 200px
+}
+
+.userMaterial .headerBanner {
+    position: absolute;
+    top: 0;
+    background-image: url(../img/img_header_bg_S.5ccb4208.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    left: 0;
+    width: 100%;
+    height: 230px
+}
+
+.userMaterial .headerBanner .headerBanner-row {
+    height: 100%
+}
+
+.userMaterial .headerBanner .headerBanner-row .headerBanner-row-colLeft {
+    height: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 70px;
+    padding-left: 5%
+}
+
+.userMaterial .headerBanner .headerBanner-row .headerBanner-row-colRight {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-top: 95px
+}
+
+.userMaterial .headerBanner .headerBanner-row .headerBanner-row-colRight .headerBanner-row-colRight-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.userMaterial .headerBanner .headerBanner-row .headerBanner-row-colRight .medalIcon {
+    width: 35px;
+    margin-left: 10px
+}
+
+.userMaterial .headerBanner .user-img {
+    width: 85px;
+    height: 85px;
+    border-radius: 40px;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.userMaterial .headerBanner .user-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 95px;
+    height: 95px;
+    background: -webkit-gradient(linear,left top,left bottom,from(#5cbffe),color-stop(#a0f5d0),to(#ffd7c8));
+    background: linear-gradient(180deg,#5cbffe,#a0f5d0,#ffd7c8);
+    border-radius: 50px
+}
+
+.userMaterial .headerBanner .headerImg-text {
+    position: absolute;
+    bottom: 10%;
+    left: 5%
 }

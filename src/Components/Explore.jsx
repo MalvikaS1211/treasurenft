@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Header from "./header";
 import TUsdt from "../assets/TUsdt.png";
 import Footer from "./footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import { Link } from "react-router-dom";
 export default function Explore() {
   const [activeTab, setActiveTab] = useState(1);
   const [exclusiveTab, setExclusiveTab] = useState(1);
@@ -485,9 +488,12 @@ export default function Explore() {
                         />
                       </picture>
                     </div>
-                    <p class="title-black-SB-24 explore-card-text">
-                      Noxious Audience{" "}
-                    </p>
+                    <Link to="/exploreCreator">
+                      {" "}
+                      <p class="title-black-SB-24 explore-card-text">
+                        Noxious Audience
+                      </p>
+                    </Link>
                     <img
                       src="https://image.treasurenft.xyz/Treasure2.5/icon/icon_check_ok_02.png"
                       alt="icon"
@@ -662,8 +668,8 @@ export default function Explore() {
             </div>
           </div>
         </div>
-        {/* 
-        {exclusiveTab === 1 && <ExclusiveZone />} */}
+        {/* {exclusiveTab === 1 && <ExclusiveZone />} */}
+
         <div>
           {showExclusiveStake === 5 ? (
             <ExclusiveZoneBuyStake />
@@ -3637,6 +3643,8 @@ export default function Explore() {
                                   data-v-090235b6=""
                                   type="button"
                                   class="ivu-btn ivu-btn-primary ivu-btn-long button-stake"
+                                  data-bs-toggle="modal"
+                                  data-bs-target="#BuyModal"
                                 >
                                   <span>Buy</span>
                                 </button>
@@ -3964,6 +3972,66 @@ export default function Explore() {
             </div>
           </div>
         </div>
+        {/* Buy Modal */}
+        <div
+          class="modal fade"
+          id="BuyModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="BuyModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div className="modal-content">
+              <div className="m-4">
+                {/* Header */}
+                <div className="d-flex justify-content-between">
+                  <h3 className="font-bold text-lg">Buy</h3>
+                  <img
+                    src="https://image.treasurenft.xyz/PC/img/icon-close_01.svg"
+                    width="40"
+                    height="40"
+                    alt="close"
+                    data-bs-dismiss="modal"
+                    className="cursor-pointer"
+                  />
+                </div>
+              </div>
+              {/* Body */}
+              <div className="text-center py-4 modal-body">
+                <img
+                  src="https://image.treasurenft.xyz/PC/img/img-stake-warning_01.png"
+                  width="152"
+                  height="152"
+                  alt="stake-img"
+                  className="mx-auto mb-4"
+                />
+                <h4 className="font-semibold text-lg">
+                  Reached at Daily Purchase Limit
+                </h4>
+              </div>
+              {/* Footer */}
+              <div className="text-center mt-4 modal-footer">
+                {/* <button className="bg-blue-600 text-white py-2 px-6 rounded-lg w-full font-bold">
+                  Close
+                </button> */}
+
+                <div data-v-30490456="" class="ivu-col ivu-col-span-24 px-4">
+                  <button
+                    data-v-30490456=""
+                    type="button"
+                    class="ivu-btn ivu-btn-primary ivu-btn-long font-weight-700 button-stake"
+                    data-bs-dismiss="modal"
+                  >
+                    <span> Close </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Buy Modal */}
       </>
     );
   };

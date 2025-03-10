@@ -16,8 +16,8 @@ import icon_stationMessage from "../assets/icon_stationMessage.svg";
 import security_icon from "../assets/security_icon.webp";
 import account from "../assets/account.webp";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/js/bootstrap.bundle.min";
 import { FaRegBell } from "react-icons/fa6";
 import { useState } from "react";
 import { Modal, Button, Form } from "react-bootstrap";
@@ -26,6 +26,7 @@ import { FaWallet, FaEye, FaEyeSlash } from "react-icons/fa";
 import { FaHeadphones, FaEnvelope, FaShieldAlt } from "react-icons/fa";
 import { IoPersonCircle } from "react-icons/io5";
 import ConnectWallet from "./ConnectWallet";
+import { Link } from "react-router-dom";
 export default function Header() {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -39,7 +40,7 @@ export default function Header() {
   };
   return (
     <>
-      <div className="header header-container  d-flex align-items-center justify-content-between px-4 py-2">
+      <div className="d-flex align-items-center justify-content-between px-4 py-2">
         <div className="logo d-flex align-items-center">
           <img
             src={Logo}
@@ -57,7 +58,12 @@ export default function Header() {
           >
             Explore
           </span>
-          <span style={{ cursor: "pointer" }}>Earn</span>
+          <Link
+            to="/collection"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <span style={{ cursor: "pointer" }}>Earn</span>
+          </Link>
           <span style={{ cursor: "pointer" }} className="fw-bold">
             Reserve
           </span>
@@ -105,6 +111,83 @@ export default function Header() {
           </div>
         </div>
       </div>
+      {/* 
+      <div className="ivu-layout-header">
+        <div className="header header-container  d-flex align-items-center justify-content-between px-4 py-2">
+          <div className="logo d-flex align-items-center">
+            <img
+              src={Logo}
+              alt="Treasure NFT"
+              className="logo-img"
+              style={{ width: "65%" }}
+            />
+          </div>
+
+          <div className="menu d-flex gap-4">
+            <span
+              style={{ cursor: "pointer" }}
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Explore
+            </span>
+            <span style={{ cursor: "pointer" }}>Earn</span>
+            <span style={{ cursor: "pointer" }} className="fw-bold">
+              Reserve
+            </span>
+          </div>
+
+          <div className="search-box">
+            <input type="text" placeholder="Select" className="search-input" />
+            <AiOutlineSearch className="search-icon" />
+          </div>
+
+          <div
+            className="header-right d-flex align-items-center gap-3"
+            style={{ gap: "10px" }}
+          >
+            <FaRegBell size={35} />
+            <span className="menu"> Airdrop</span>
+            <img src={VideoIcon} alt="App" className="app-icon" />
+            <img src={telegram} alt="telegram" width={40} />
+            <FaGlobe size={35} />
+            <div className="dropdown-wrapper">
+              <FaBars
+                size={35}
+                className="menu-icon"
+                onClick={toggleDropdown}
+              />
+
+              <div className={`dropdown-menu ${show ? "show" : ""}`}>
+                <div className="dropdown-item d-flex gap-3">
+                  <img className="dropdown-icon" src={services_icon} />
+                  Service
+                </div>
+                <div className="dropdown-item d-flex gap-3">
+                  <img src={account} className="dropdown-icon" width={40} />
+                  Account
+                </div>
+                <div className="dropdown-item d-flex gap-3">
+                  <img src={icon_header_wallet} className="dropdown-icon" />
+                  Wallet
+                </div>
+                <div className="dropdown-item d-flex gap-3">
+                  <img src={icon_stationMessage} className="dropdown-icon" />
+                  Message
+                </div>
+                <div className="dropdown-item d-flex gap-3">
+                  <img
+                    src={security_icon}
+                    className="dropdown-icon"
+                    width={40}
+                  />
+                  Security TAP
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
 
       {/* modal */}
       <div

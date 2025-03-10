@@ -31,10 +31,14 @@ import "../src/css/register.56847134.css";
 import Dashboard from "./Components/dashboard";
 import "../src/css/dashboard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import Footer from "./Components/footer";
 import Carousel from "./Components/Carousel";
 import AppRoutes from "./Components/AppRoutes/AppRoutes";
 import "../src/css/Signup.css";
+import "../src/css/Collection.css";
+import "../src/css/depositNFT.css";
+import "../src/css/headernew.css";
 
 function App() {
   return (
