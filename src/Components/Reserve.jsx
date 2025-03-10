@@ -25,7 +25,17 @@ export default function Reserve() {
             <div
               className="ivu-col ivu-col-span-xs-24 ivu-col-span-sm-24 ivu-col-span-md-14 ivu-col-span-lg-14 ivu-col-span-xl-14"
               style={{ paddingLeft: "20px", paddingRight: "20px" }}
-            ></div>
+            >
+              <div className="analysis-chart-area wrap-col ivu-row-flex">
+                <div className="ivu-col ivu-col-span-xs-0 ivu-col-span-sm-0 ivu-col-span-md-24 ivu-col-span-lg-24 ivu-col-span-xl-24">
+                  <div className="DefiLineChart">
+                    <div className="ivu-row-flex ivu-row-flex-space-between">
+                      <div className="ivu-col ivu-col-span-xs-14 ivu-col-span-sm-14 ivu-col-span-md-6 ivu-col-span-lg-6 ivu-col-span-xl-6"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
