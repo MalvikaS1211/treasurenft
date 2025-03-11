@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Header from "./header";
 import TUsdt from "../assets/TUsdt.png";
-import Footer from "./footer";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { Link } from "react-router-dom";
+import Footer from "./Footer";
 export default function Explore() {
   const [activeTab, setActiveTab] = useState(1);
   const [exclusiveTab, setExclusiveTab] = useState(1);
@@ -1198,7 +1199,7 @@ export default function Explore() {
                 >
                   <div data-v-15fe7f40="" class="ivu-col" data-v-567f87f6="">
                     <p data-v-567f87f6="" class="exclusive-card-sub-head">
-                      Price Range:
+                      NFT Range:
                     </p>
                   </div>
                   <div data-v-15fe7f40="" class="ivu-col" data-v-567f87f6="">
@@ -1239,7 +1240,7 @@ export default function Explore() {
                         }}
                       >
                         <p data-v-567f87f6="" class="title-black-PR-14">
-                          199~1000
+                          50-100
                         </p>
                       </div>
                     </div>
@@ -1456,7 +1457,7 @@ export default function Explore() {
                                 data-v-567f87f6=""
                                 class="exclusive-card-sub-head"
                               >
-                                Price Range:
+                                NFT Range:
                               </p>
                             </div>
                             <div
@@ -1504,7 +1505,7 @@ export default function Explore() {
                                     data-v-567f87f6=""
                                     class="title-black-PR-14"
                                   >
-                                    799~3000
+                                    50-100
                                   </p>
                                 </div>
                               </div>
@@ -1727,7 +1728,7 @@ export default function Explore() {
                                 data-v-567f87f6=""
                                 class="exclusive-card-sub-head"
                               >
-                                Price Range:
+                                NFT Range:
                               </p>
                             </div>
                             <div
@@ -1775,7 +1776,7 @@ export default function Explore() {
                                     data-v-567f87f6=""
                                     class="title-black-PR-14"
                                   >
-                                    799~3000
+                                    50-100
                                   </p>
                                 </div>
                               </div>
@@ -1998,7 +1999,7 @@ export default function Explore() {
                                 data-v-567f87f6=""
                                 class="exclusive-card-sub-head"
                               >
-                                Price Range:
+                                NFT Range:
                               </p>
                             </div>
                             <div
@@ -2046,7 +2047,7 @@ export default function Explore() {
                                     data-v-567f87f6=""
                                     class="title-black-PR-14"
                                   >
-                                    999~4000
+                                    50-100
                                   </p>
                                 </div>
                               </div>
@@ -2268,7 +2269,7 @@ export default function Explore() {
                                 data-v-567f87f6=""
                                 class="exclusive-card-sub-head"
                               >
-                                Price Range:
+                                NFT Range:
                               </p>
                             </div>
                             <div
@@ -2316,7 +2317,7 @@ export default function Explore() {
                                     data-v-567f87f6=""
                                     class="title-black-PR-14"
                                   >
-                                    1499~5000
+                                    50-100
                                   </p>
                                 </div>
                               </div>
@@ -2537,7 +2538,7 @@ export default function Explore() {
                                 data-v-567f87f6=""
                                 class="exclusive-card-sub-head"
                               >
-                                Price Range:
+                                NFT Range:
                               </p>
                             </div>
                             <div
@@ -2585,7 +2586,7 @@ export default function Explore() {
                                     data-v-567f87f6=""
                                     class="title-black-PR-14"
                                   >
-                                    1999~6000
+                                    50-100
                                   </p>
                                 </div>
                               </div>
@@ -2826,7 +2827,7 @@ export default function Explore() {
                               data-v-567f87f6=""
                               class="exclusive-card-sub-head"
                             >
-                              Price Range:
+                              NFT Range:
                             </p>
                           </div>
                           <div
@@ -3088,7 +3089,7 @@ export default function Explore() {
                               data-v-567f87f6=""
                               class="exclusive-card-sub-head"
                             >
-                              Price Range:
+                              NFT Range:
                             </p>
                           </div>
                           <div
@@ -3349,7 +3350,7 @@ export default function Explore() {
                               data-v-567f87f6=""
                               class="exclusive-card-sub-head"
                             >
-                              Price Range:
+                              NFT Range:
                             </p>
                           </div>
                           <div
@@ -3597,6 +3598,7 @@ export default function Explore() {
                                   alt="img"
                                   loading="lazy"
                                   src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_08222_compre.png"
+                                  style={{ width: "100%" }}
                                 />
                               </picture>
                             </div>
@@ -3631,8 +3633,7 @@ export default function Explore() {
                                       marginLeft: "0px",
                                     }}
                                   >
-                                    {" "}
-                                    280{" "}
+                                    50
                                   </span>
                                 </div>
                               </div>
@@ -3646,7 +3647,7 @@ export default function Explore() {
                                   data-bs-toggle="modal"
                                   data-bs-target="#BuyModal"
                                 >
-                                  <span>Buy</span>
+                                  <span>Buy/Sell</span>
                                 </button>
                               </div>
                             </div>
@@ -3677,6 +3678,7 @@ export default function Explore() {
                                   alt="img"
                                   loading="lazy"
                                   src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_01865_compre.png"
+                                  style={{ width: "100%" }}
                                 />
                               </picture>
                             </div>
@@ -3711,7 +3713,7 @@ export default function Explore() {
                                       marginLeft: "0px",
                                     }}
                                   >
-                                    280{" "}
+                                    50
                                   </span>
                                 </div>
                               </div>
@@ -3724,7 +3726,7 @@ export default function Explore() {
                                   class="ivu-btn ivu-btn-primary ivu-btn-long button-stake"
                                 >
                                   {" "}
-                                  <span>Buy</span>
+                                  <span>Buy/Sell</span>
                                 </button>
                               </div>
                             </div>
@@ -3755,6 +3757,7 @@ export default function Explore() {
                                   alt="img"
                                   loading="lazy"
                                   src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_00153_compre.png"
+                                  style={{ width: "100%" }}
                                 />
                               </picture>
                             </div>
@@ -3789,7 +3792,7 @@ export default function Explore() {
                                       marginLeft: "0px",
                                     }}
                                   >
-                                    280{" "}
+                                    50
                                   </span>
                                 </div>
                               </div>
@@ -3802,7 +3805,7 @@ export default function Explore() {
                                   class="ivu-btn ivu-btn-primary ivu-btn-long button-stake"
                                 >
                                   {" "}
-                                  <span>Buy</span>
+                                  <span>Buy/Sell</span>
                                 </button>
                               </div>
                             </div>
@@ -3833,6 +3836,7 @@ export default function Explore() {
                                   alt="img"
                                   loading="lazy"
                                   src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_06291_compre.png"
+                                  style={{ width: "100%" }}
                                 />
                               </picture>
                             </div>
@@ -3880,7 +3884,7 @@ export default function Explore() {
                                   class="ivu-btn ivu-btn-primary ivu-btn-long button-stake"
                                 >
                                   {" "}
-                                  <span>Buy</span>
+                                  <span>Buy/Sell</span>
                                 </button>
                               </div>
                             </div>
@@ -3911,6 +3915,7 @@ export default function Explore() {
                                   alt="img"
                                   loading="lazy"
                                   src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_02784_compre.png"
+                                  style={{ width: "100%" }}
                                 />
                               </picture>
                             </div>
@@ -3945,7 +3950,7 @@ export default function Explore() {
                                       marginLeft: "0px",
                                     }}
                                   >
-                                    280{" "}
+                                    50
                                   </span>
                                 </div>
                               </div>
@@ -3958,7 +3963,7 @@ export default function Explore() {
                                   class="ivu-btn ivu-btn-primary ivu-btn-long button-stake"
                                 >
                                   {" "}
-                                  <span>Buy</span>
+                                  <span>Buy/Sell</span>
                                 </button>
                               </div>
                             </div>
@@ -4037,7 +4042,6 @@ export default function Explore() {
   };
   return (
     <>
-      <Header></Header>
       <div className="content-wrap">
         <div data-v-b49386ae="" data-v-014c2687="">
           <div className="headerCommon">
@@ -4056,6 +4060,7 @@ export default function Explore() {
                 alt="headerImg"
                 loading="lazy"
               /> */}
+              <Header></Header>
               <h2 data-v-b49386ae="" class="headerImg-text title-black-PR-30">
                 Explore
               </h2>
@@ -4140,7 +4145,7 @@ export default function Explore() {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 }

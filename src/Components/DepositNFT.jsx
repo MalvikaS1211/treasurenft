@@ -4,7 +4,6 @@ import Header from "./header";
 export default function DepositNFT() {
   return (
     <>
-      <Header></Header>
       <div className="content-wrap">
         <div data-v-b49386ae="" data-v-014c2687="" className="depositNFT">
           <div className="headerCommon">
@@ -17,6 +16,7 @@ export default function DepositNFT() {
                   "linear-gradient(to right, #2152af 0%, #6ba7e7 51%, #2152af 100%)",
               }}
             >
+              <Header></Header>
               {/* <img
                 data-v-b49386ae=""
                 src="https://image.treasurenft.xyz/PC/img/header_bg_L.png"
@@ -24,7 +24,7 @@ export default function DepositNFT() {
                 loading="lazy"
               /> */}
               <h2 data-v-b49386ae="" class="headerImg-text title-black-PR-30">
-                Explore
+                Deposit NFT
               </h2>
             </div>
           </div>
@@ -164,6 +164,7 @@ export default function DepositNFT() {
           class="helpIconStyle"
         /> */}
       </div>
+      <Footer />
     </>
   );
 }

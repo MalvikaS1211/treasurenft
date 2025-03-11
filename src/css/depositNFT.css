@@ -8215,7 +8215,7 @@
     min-height: auto;
   }
 
-  .depositNFT .left-side .left-inside[data-v-618a15fa] {
+  .depositNFT .left-side .left-inside {
     margin: 5vw auto;
     width: 400px;
   }
@@ -8240,5 +8240,11 @@
 
   .depositNFT .left-side .radioDiv .innerLayerDiv[data-v-618a15fa] {
     padding: 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .left-inside {
+    padding: 20px;
   }
 }

@@ -27,6 +27,7 @@ import { FaHeadphones, FaEnvelope, FaShieldAlt } from "react-icons/fa";
 import { IoPersonCircle } from "react-icons/io5";
 import ConnectWallet from "./ConnectWallet";
 import { Link } from "react-router-dom";
+import Account from "./Account";
 export default function Header() {
   const [showPassword, setShowPassword] = useState(false);
 
@@ -38,9 +39,10 @@ export default function Header() {
   const toggleDropdown = () => {
     setShow(!show);
   };
+
   return (
     <>
-      <div className="d-flex align-items-center justify-content-between px-4 py-2">
+      <div className="header headerimg-custom d-flex align-items-center  header-contain">
         <div className="logo d-flex align-items-center">
           <img
             src={Logo}
@@ -91,10 +93,13 @@ export default function Header() {
                 <img className="dropdown-icon" src={services_icon} />
                 Service
               </div>
-              <div className="dropdown-item d-flex gap-3">
-                <img src={account} className="dropdown-icon" width={40} />
-                Account
-              </div>
+              <Link to="/account">
+                <div className="dropdown-item d-flex gap-3">
+                  <img src={account} className="dropdown-icon" width={40} />
+                  Account
+                </div>
+              </Link>
+
               <div className="dropdown-item d-flex gap-3">
                 <img src={icon_header_wallet} className="dropdown-icon" />
                 Wallet

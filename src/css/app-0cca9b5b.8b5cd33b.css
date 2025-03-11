@@ -3016,7 +3016,7 @@ samp {
 .ivu-row-flex-middle {
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  /* align-items: center; */
 }
 .ivu-row-flex-bottom {
   -webkit-box-align: end;

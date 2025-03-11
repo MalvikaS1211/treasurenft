@@ -22,8 +22,8 @@ import "../src/css/9390.aa253ca7.css";
 import "../src/css/9592.833b8420.css";
 
 import "../src/css/app-0cca9b5b.8b5cd33b.css";
-import "../src/css/app-8f9c9ce1.6caaf116.css";
-import "../src/css/app-29cc87d1.002c3af2.css";
+import "./css/app-8f9c9ce1.6caaf116.css";
+import "./css/app-29cc87d1.002c3af2.css";
 import "../src/css/app-89ec8940.a273c7fa.css";
 import "../src/css/chunk-vendors-b1d75844.25331d0a.css";
 import "../src/css/Explore.aba1c01b.css";
@@ -32,13 +32,28 @@ import Dashboard from "./Components/dashboard";
 import "../src/css/dashboard.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import Footer from "./Components/footer";
+
 import Carousel from "./Components/Carousel";
 import AppRoutes from "./Components/AppRoutes/AppRoutes";
 import "../src/css/Signup.css";
 import "../src/css/Collection.css";
 import "../src/css/depositNFT.css";
 import "../src/css/headernew.css";
+import "../src/css/Buy.css";
+import "../src/css/Account.css";
+import "../src/css/Level.css";
+
+// import "./css/Style1.css";
+
+// import "./css/Style2.css";
+
+// import "./css/Style3.css";
+
+// import "./css/Style4.css";
+
+// import "./css/Style5.css";
+
+// import "./css/Style6.css";
 
 function App() {
   return (

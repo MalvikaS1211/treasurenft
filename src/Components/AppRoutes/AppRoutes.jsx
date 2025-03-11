@@ -13,6 +13,8 @@ import Explore from "../Explore";
 import Collection from "../Collection";
 import DepositNFT from "../DepositNFT";
 import NoxiousAudience from "../NoxiousAudience";
+import Account from "../Account";
+import Level from "../Level";
 function AppRoutes() {
   return (
     <>
@@ -24,6 +26,8 @@ function AppRoutes() {
           <Route path="/collection" element={<Collection />} />
           <Route path="/depositNFT" element={<DepositNFT />} />
           <Route path="/exploreCreator" element={<NoxiousAudience />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/account/level" element={<Level />} />
         </Routes>
       </Router>
     </>

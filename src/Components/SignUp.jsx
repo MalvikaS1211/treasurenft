@@ -4,6 +4,7 @@ import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import ConnectWallet from "./ConnectWallet";
+
 const countries = [
   "+1(Canada)",
   "+966(Saudi Arabia)",
@@ -16,7 +17,7 @@ export default function SignUp() {
   const [selected, setSelected] = useState("Select");
   return (
     <>
-      <Header></Header>
+
       <div className="content-wrap">
         <div data-v-b49386ae="" data-v-014c2687="">
           <div data-v-b49386ae="" class="headerImg headerimg-custom">
@@ -26,6 +27,7 @@ export default function SignUp() {
               alt="headerImg"
               loading="lazy"
             />
+            <Header/>
             <h2 data-v-b49386ae="" class="headerImg-text title-black-PR-30">
               Sign up
             </h2>
