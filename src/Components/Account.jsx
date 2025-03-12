@@ -2,11 +2,32 @@ import React from "react";
 import Header from "./header";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
+import LogoWhite from "../assets/LogoWhite.png";
+
 export default function Account() {
   return (
     <>
       {/* <Header /> */}
       <div className="content-wrap">
+        <div className="headerCommon">
+          <div
+            data-v-b49386ae=""
+            class="headerImg headerimg-custom"
+            style={{
+              height: "300px",
+              backgroundImage:
+                "linear-gradient(to right, #2152af 0%, #6ba7e7 51%, #2152af 100%)",
+            }}
+          >
+            {/* <img
+                                  data-v-b49386ae=""
+                                  src="https://image.treasurenft.xyz/PC/img/header_bg_L.png"
+                                  alt="headerImg"
+                                  loading="lazy"
+                                /> */}
+            <Header Logo={LogoWhite}></Header>
+          </div>
+        </div>
         <div className="userCenter">
           <div data-v-1d6f6910="" class="ivu-row UserAreaStraight-row">
             <div

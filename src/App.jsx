@@ -43,7 +43,7 @@ import "../src/css/Buy.css";
 import "../src/css/Account.css";
 import "../src/css/Level.css";
 
-// import "./css/Style1.css";
+import "./css/Style1.css";
 
 // import "./css/Style2.css";
 
@@ -51,9 +51,11 @@ import "../src/css/Level.css";
 
 // import "./css/Style4.css";
 
-// import "./css/Style5.css";
+import "./css/Style5.css";
 
-// import "./css/Style6.css";
+import "./css/Style6.css";
+import "./css/Style7.css";
+import "./css/Style8.css";
 
 function App() {
   return (

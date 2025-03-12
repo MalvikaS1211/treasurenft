@@ -2,7 +2,12 @@
   padding: 35px;
 }
 .header-contain {
-  justify-content: space-between;
+  justify-content: space-around;
+  height: 100px;
+}
+.logo-container {
+  width: 248px;
+  height: 30px;
 }
 .menu {
   gap: 10px;
@@ -117,6 +122,9 @@
 
   .search-icon {
     font-size: 16px; /* Smaller Icon */
+  }
+  .header-banner {
+    padding: 0px;
   }
 }
 
@@ -432,6 +440,9 @@ button {
   .custom-title-white-PR-16 {
     font-size: 10px !important;
   }
+  .header-banner {
+    padding: 0px;
+  }
 }
 #dev-id .pc-class {
   font-family: PosteramaText-Regular;
@@ -619,7 +630,7 @@ button {
   background-image: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+
   font-size: 1rem;
   color: #fff;
   height: 45px;
@@ -713,7 +724,7 @@ button {
 
 #dev-id .ivu-btn.ivu-btn-success span {
   background-color: none;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+
   font-size: 1rem;
   width: 100%;
   color: #fff;
@@ -861,7 +872,6 @@ button {
 @media screen and (max-width: 450px) {
   #dev-id .ivu-btn.ivu-btn-primary,
   #dev-id .ivu-btn.ivu-btn-success span {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
     font-size: 0.75rem;
   }
 }
@@ -952,7 +962,7 @@ button {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+
   font-size: 1rem;
   color: #333;
 }
@@ -972,7 +982,6 @@ button {
 
 @media screen and (max-width: 450px) {
   #dev-id .ivu-form-label-top .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
     font-size: 0.875rem;
   }
 }
@@ -1694,20 +1703,20 @@ button {
     color-stop(#a0f5d0),
     to(#ffd7c8)
   );
-  background: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8);
+  background: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8) !important;
   height: 3px;
 }
 
 #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
   background: unset;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+
   font-size: 1rem;
   color: #333;
 }
 
 #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab-active {
   color: #000;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+
   font-size: 1.125rem;
   font-weight: 900;
 }
@@ -1733,13 +1742,12 @@ button {
 @media screen and (max-width: 450px) {
   #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
     background: unset;
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+
     font-size: 0.875rem;
     color: #333;
   }
 
   #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab-active {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
     font-size: 1rem;
   }
 }
@@ -2461,7 +2469,7 @@ button {
 
 #dev-id ~ .v-transfer-dom .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
   background: unset;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+
   font-size: 1rem;
   color: #333;
 }
@@ -2472,7 +2480,7 @@ button {
   > .ivu-tabs-bar
   .ivu-tabs-tab-active {
   color: #000 !important;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+
   font-size: 1.125rem;
 }
 
@@ -2582,7 +2590,7 @@ button {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+
   font-size: 1rem;
   color: #333;
 }
@@ -2602,7 +2610,6 @@ button {
 
 @media screen and (max-width: 450px) {
   #dev-id ~ .v-transfer-dom .ivu-form-label-top .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
     font-size: 0.875rem;
   }
 }
@@ -4640,7 +4647,6 @@ button {
 }
 
 #dev-id .mint .ivu-form-item-label {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   color: #333 !important;
@@ -4694,7 +4700,6 @@ button {
   }
 
   #dev-id .mint .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
     font-size: 1.125rem;
   }
 }
@@ -5107,7 +5112,7 @@ button {
 
   #dev-id .paymentSetting .ivu-form-item-label {
     color: #333;
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+
     font-size: 1rem;
   }
 
@@ -5154,7 +5159,6 @@ button {
 }
 
 #dev-id .title-black-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #000;
 }
@@ -5210,7 +5214,6 @@ button {
 }
 
 #dev-id .title-white-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #fff;
 }
@@ -5234,7 +5237,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #333;
 }
@@ -5276,7 +5278,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #666;
 }
@@ -5318,7 +5319,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #999;
 }
@@ -5404,7 +5404,6 @@ button {
 }
 
 #dev-id .specialText-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-60,
@@ -5435,7 +5434,6 @@ button {
 }
 
 #dev-id .title-red-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #ff002f;
 }
@@ -5453,7 +5451,6 @@ button {
 }
 
 #dev-id .title-green-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #00ac4f;
 }
@@ -5471,7 +5468,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #1dcab3;
 }
@@ -5489,7 +5485,6 @@ button {
 }
 
 #dev-id .title-pink-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #ec6898;
 }
@@ -5506,7 +5501,6 @@ button {
 
 #dev-id .title-blue-PR-60,
 #dev-id .title-blue1-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
 }
 
@@ -5515,13 +5509,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #000;
 }
@@ -5577,7 +5569,6 @@ button {
 }
 
 #dev-id .title-white-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #fff;
 }
@@ -5601,7 +5592,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #333;
 }
@@ -5643,7 +5633,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #666;
 }
@@ -5685,7 +5674,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #999;
 }
@@ -5771,7 +5759,6 @@ button {
 }
 
 #dev-id .specialText-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-56,
@@ -5802,7 +5789,6 @@ button {
 }
 
 #dev-id .title-red-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #ff002f;
 }
@@ -5820,7 +5806,6 @@ button {
 }
 
 #dev-id .title-green-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #00ac4f;
 }
@@ -5838,7 +5823,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #1dcab3;
 }
@@ -5856,7 +5840,6 @@ button {
 }
 
 #dev-id .title-pink-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #ec6898;
 }
@@ -5873,7 +5856,6 @@ button {
 
 #dev-id .title-blue-PR-56,
 #dev-id .title-blue1-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
 }
 
@@ -5882,13 +5864,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #000;
 }
@@ -5944,7 +5924,6 @@ button {
 }
 
 #dev-id .title-white-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #fff;
 }
@@ -5968,7 +5947,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #333;
 }
@@ -6010,7 +5988,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #666;
 }
@@ -6052,7 +6029,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #999;
 }
@@ -6138,7 +6114,6 @@ button {
 }
 
 #dev-id .specialText-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-48,
@@ -6169,7 +6144,6 @@ button {
 }
 
 #dev-id .title-red-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #ff002f;
 }
@@ -6187,7 +6161,6 @@ button {
 }
 
 #dev-id .title-green-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #00ac4f;
 }
@@ -6205,7 +6178,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #1dcab3;
 }
@@ -6223,7 +6195,6 @@ button {
 }
 
 #dev-id .title-pink-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #ec6898;
 }
@@ -6240,7 +6211,6 @@ button {
 
 #dev-id .title-blue-PR-48,
 #dev-id .title-blue1-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3rem;
 }
 
@@ -6249,13 +6219,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 3rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #000;
 }
@@ -6311,7 +6279,6 @@ button {
 }
 
 #dev-id .title-white-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #fff;
 }
@@ -6335,7 +6302,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #333;
 }
@@ -6377,7 +6343,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #666;
 }
@@ -6419,7 +6384,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #999;
 }
@@ -6505,7 +6469,6 @@ button {
 }
 
 #dev-id .specialText-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-46,
@@ -6536,7 +6499,6 @@ button {
 }
 
 #dev-id .title-red-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #ff002f;
 }
@@ -6554,7 +6516,6 @@ button {
 }
 
 #dev-id .title-green-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #00ac4f;
 }
@@ -6572,7 +6533,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #1dcab3;
 }
@@ -6590,7 +6550,6 @@ button {
 }
 
 #dev-id .title-pink-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #ec6898;
 }
@@ -6607,7 +6566,6 @@ button {
 
 #dev-id .title-blue-PR-46,
 #dev-id .title-blue1-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
 }
 
@@ -6616,13 +6574,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #000;
 }
@@ -6678,7 +6634,6 @@ button {
 }
 
 #dev-id .title-white-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #fff;
 }
@@ -6702,7 +6657,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #333;
 }
@@ -6744,7 +6698,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #666;
 }
@@ -6786,7 +6739,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #999;
 }
@@ -6872,7 +6824,6 @@ button {
 }
 
 #dev-id .specialText-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-44,
@@ -6903,7 +6854,6 @@ button {
 }
 
 #dev-id .title-red-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #ff002f;
 }
@@ -6921,7 +6871,6 @@ button {
 }
 
 #dev-id .title-green-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #00ac4f;
 }
@@ -6939,7 +6888,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #1dcab3;
 }
@@ -6957,7 +6905,6 @@ button {
 }
 
 #dev-id .title-pink-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #ec6898;
 }
@@ -6974,7 +6921,6 @@ button {
 
 #dev-id .title-blue-PR-44,
 #dev-id .title-blue1-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
 }
 
@@ -6983,13 +6929,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #000;
 }
@@ -7045,7 +6989,6 @@ button {
 }
 
 #dev-id .title-white-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #fff;
 }
@@ -7069,7 +7012,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #333;
 }
@@ -7111,7 +7053,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #666;
 }
@@ -7153,7 +7094,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #999;
 }
@@ -7239,7 +7179,6 @@ button {
 }
 
 #dev-id .specialText-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-42,
@@ -7270,7 +7209,6 @@ button {
 }
 
 #dev-id .title-red-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #ff002f;
 }
@@ -7288,7 +7226,6 @@ button {
 }
 
 #dev-id .title-green-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #00ac4f;
 }
@@ -7306,7 +7243,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #1dcab3;
 }
@@ -7324,7 +7260,6 @@ button {
 }
 
 #dev-id .title-pink-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #ec6898;
 }
@@ -7341,7 +7276,6 @@ button {
 
 #dev-id .title-blue-PR-42,
 #dev-id .title-blue1-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
 }
 
@@ -7350,13 +7284,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.625rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #000;
 }
@@ -7412,7 +7344,6 @@ button {
 }
 
 #dev-id .title-white-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #fff;
 }
@@ -7436,7 +7367,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #333;
 }
@@ -7478,7 +7408,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #666;
 }
@@ -7520,7 +7449,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #999;
 }
@@ -7606,7 +7534,6 @@ button {
 }
 
 #dev-id .specialText-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-40,
@@ -7637,7 +7564,6 @@ button {
 }
 
 #dev-id .title-red-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #ff002f;
 }
@@ -7655,7 +7581,6 @@ button {
 }
 
 #dev-id .title-green-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #00ac4f;
 }
@@ -7673,7 +7598,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #1dcab3;
 }
@@ -7691,7 +7615,6 @@ button {
 }
 
 #dev-id .title-pink-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #ec6898;
 }
@@ -7708,7 +7631,6 @@ button {
 
 #dev-id .title-blue-PR-40,
 #dev-id .title-blue1-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
 }
 
@@ -7717,13 +7639,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #000;
 }
@@ -7779,7 +7699,6 @@ button {
 }
 
 #dev-id .title-white-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #fff;
 }
@@ -7803,7 +7722,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #333;
 }
@@ -7845,7 +7763,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #666;
 }
@@ -7887,7 +7804,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #999;
 }
@@ -7973,7 +7889,6 @@ button {
 }
 
 #dev-id .specialText-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-38,
@@ -8004,7 +7919,6 @@ button {
 }
 
 #dev-id .title-red-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #ff002f;
 }
@@ -8022,7 +7936,6 @@ button {
 }
 
 #dev-id .title-green-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #00ac4f;
 }
@@ -8040,7 +7953,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #1dcab3;
 }
@@ -8058,7 +7970,6 @@ button {
 }
 
 #dev-id .title-pink-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #ec6898;
 }
@@ -8075,7 +7986,6 @@ button {
 
 #dev-id .title-blue-PR-38,
 #dev-id .title-blue1-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
 }
 
@@ -8084,13 +7994,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.375rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #000;
 }
@@ -8146,7 +8054,6 @@ button {
 }
 
 #dev-id .title-white-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #fff;
 }
@@ -8170,7 +8077,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #333;
 }
@@ -8212,7 +8118,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #666;
 }
@@ -8254,7 +8159,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #999;
 }
@@ -8340,7 +8244,6 @@ button {
 }
 
 #dev-id .specialText-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-36,
@@ -8371,7 +8274,6 @@ button {
 }
 
 #dev-id .title-red-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #ff002f;
 }
@@ -8389,7 +8291,6 @@ button {
 }
 
 #dev-id .title-green-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #00ac4f;
 }
@@ -8407,7 +8308,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #1dcab3;
 }
@@ -8425,7 +8325,6 @@ button {
 }
 
 #dev-id .title-pink-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #ec6898;
 }
@@ -8442,7 +8341,6 @@ button {
 
 #dev-id .title-blue-PR-36,
 #dev-id .title-blue1-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
 }
 
@@ -8451,13 +8349,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.25rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #000;
 }
@@ -8513,7 +8409,6 @@ button {
 }
 
 #dev-id .title-white-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #fff;
 }
@@ -8537,7 +8432,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #333;
 }
@@ -8579,7 +8473,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #666;
 }
@@ -8621,7 +8514,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #999;
 }
@@ -8707,7 +8599,6 @@ button {
 }
 
 #dev-id .specialText-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-34,
@@ -8738,7 +8629,6 @@ button {
 }
 
 #dev-id .title-red-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #ff002f;
 }
@@ -8756,7 +8646,6 @@ button {
 }
 
 #dev-id .title-green-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #00ac4f;
 }
@@ -8774,7 +8663,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #1dcab3;
 }
@@ -8792,7 +8680,6 @@ button {
 }
 
 #dev-id .title-pink-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #ec6898;
 }
@@ -8809,7 +8696,6 @@ button {
 
 #dev-id .title-blue-PR-34,
 #dev-id .title-blue1-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
 }
 
@@ -8818,13 +8704,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2.125rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #000;
 }
@@ -8880,7 +8764,6 @@ button {
 }
 
 #dev-id .title-white-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #fff;
 }
@@ -8904,7 +8787,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #333;
 }
@@ -8946,7 +8828,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #666;
 }
@@ -8988,7 +8869,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #999;
 }
@@ -9074,7 +8954,6 @@ button {
 }
 
 #dev-id .specialText-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-32,
@@ -9105,7 +8984,6 @@ button {
 }
 
 #dev-id .title-red-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #ff002f;
 }
@@ -9123,7 +9001,6 @@ button {
 }
 
 #dev-id .title-green-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #00ac4f;
 }
@@ -9141,7 +9018,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #1dcab3;
 }
@@ -9159,7 +9035,6 @@ button {
 }
 
 #dev-id .title-pink-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #ec6898;
 }
@@ -9176,7 +9051,6 @@ button {
 
 #dev-id .title-blue-PR-32,
 #dev-id .title-blue1-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2rem;
 }
 
@@ -9185,13 +9059,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 2rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #000;
 }
@@ -9247,7 +9119,6 @@ button {
 }
 
 #dev-id .title-white-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #fff;
 }
@@ -9271,7 +9142,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #333;
 }
@@ -9313,7 +9183,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #666;
 }
@@ -9355,7 +9224,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #999;
 }
@@ -9441,7 +9309,6 @@ button {
 }
 
 #dev-id .specialText-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-30,
@@ -9472,7 +9339,6 @@ button {
 }
 
 #dev-id .title-red-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #ff002f;
 }
@@ -9490,7 +9356,6 @@ button {
 }
 
 #dev-id .title-green-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #00ac4f;
 }
@@ -9508,7 +9373,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #1dcab3;
 }
@@ -9526,7 +9390,6 @@ button {
 }
 
 #dev-id .title-pink-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #ec6898;
 }
@@ -9543,7 +9406,6 @@ button {
 
 #dev-id .title-blue-PR-30,
 #dev-id .title-blue1-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
 }
 
@@ -9552,13 +9414,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #000;
 }
@@ -9614,7 +9474,6 @@ button {
 }
 
 #dev-id .title-white-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #fff;
 }
@@ -9638,7 +9497,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #333;
 }
@@ -9680,7 +9538,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #666;
 }
@@ -9722,7 +9579,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #999;
 }
@@ -9808,7 +9664,6 @@ button {
 }
 
 #dev-id .specialText-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-28,
@@ -9839,7 +9694,6 @@ button {
 }
 
 #dev-id .title-red-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #ff002f;
 }
@@ -9857,7 +9711,6 @@ button {
 }
 
 #dev-id .title-green-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #00ac4f;
 }
@@ -9875,7 +9728,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #1dcab3;
 }
@@ -9893,7 +9745,6 @@ button {
 }
 
 #dev-id .title-pink-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #ec6898;
 }
@@ -9910,7 +9761,6 @@ button {
 
 #dev-id .title-blue-PR-28,
 #dev-id .title-blue1-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
 }
 
@@ -9919,13 +9769,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #000;
 }
@@ -9981,7 +9829,6 @@ button {
 }
 
 #dev-id .title-white-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #fff;
 }
@@ -10005,7 +9852,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #333;
 }
@@ -10047,7 +9893,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #666;
 }
@@ -10089,7 +9934,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #999;
 }
@@ -10175,7 +10019,6 @@ button {
 }
 
 #dev-id .specialText-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-26,
@@ -10206,7 +10049,6 @@ button {
 }
 
 #dev-id .title-red-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #ff002f;
 }
@@ -10224,7 +10066,6 @@ button {
 }
 
 #dev-id .title-green-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #00ac4f;
 }
@@ -10242,7 +10083,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #1dcab3;
 }
@@ -10260,7 +10100,6 @@ button {
 }
 
 #dev-id .title-pink-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #ec6898;
 }
@@ -10277,7 +10116,6 @@ button {
 
 #dev-id .title-blue-PR-26,
 #dev-id .title-blue1-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
 }
 
@@ -10286,13 +10124,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.625rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #000;
 }
@@ -10348,7 +10184,6 @@ button {
 }
 
 #dev-id .title-white-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #fff;
 }
@@ -10372,7 +10207,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #333;
 }
@@ -10414,7 +10248,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #666;
 }
@@ -10456,7 +10289,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #999;
 }
@@ -10542,7 +10374,6 @@ button {
 }
 
 #dev-id .specialText-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-24,
@@ -10573,7 +10404,6 @@ button {
 }
 
 #dev-id .title-red-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #ff002f;
 }
@@ -10591,7 +10421,6 @@ button {
 }
 
 #dev-id .title-green-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #00ac4f;
 }
@@ -10609,7 +10438,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #1dcab3;
 }
@@ -10627,7 +10455,6 @@ button {
 }
 
 #dev-id .title-pink-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #ec6898;
 }
@@ -10644,7 +10471,6 @@ button {
 
 #dev-id .title-blue-PR-24,
 #dev-id .title-blue1-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
 }
 
@@ -10653,13 +10479,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #000;
 }
@@ -10715,7 +10539,6 @@ button {
 }
 
 #dev-id .title-white-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #fff;
 }
@@ -10739,7 +10562,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #333;
 }
@@ -10781,7 +10603,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #666;
 }
@@ -10823,7 +10644,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #999;
 }
@@ -10909,7 +10729,6 @@ button {
 }
 
 #dev-id .specialText-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-22,
@@ -10940,7 +10759,6 @@ button {
 }
 
 #dev-id .title-red-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #ff002f;
 }
@@ -10958,7 +10776,6 @@ button {
 }
 
 #dev-id .title-green-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #00ac4f;
 }
@@ -10976,7 +10793,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #1dcab3;
 }
@@ -10994,7 +10810,6 @@ button {
 }
 
 #dev-id .title-pink-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #ec6898;
 }
@@ -11011,7 +10826,6 @@ button {
 
 #dev-id .title-blue-PR-22,
 #dev-id .title-blue1-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
 }
 
@@ -11020,13 +10834,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.375rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #000;
 }
@@ -11082,7 +10894,6 @@ button {
 }
 
 #dev-id .title-white-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #fff;
 }
@@ -11106,7 +10917,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #333;
 }
@@ -11148,7 +10958,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #666;
 }
@@ -11190,7 +10999,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #999;
 }
@@ -11276,7 +11084,6 @@ button {
 }
 
 #dev-id .specialText-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-20,
@@ -11307,7 +11114,6 @@ button {
 }
 
 #dev-id .title-red-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #ff002f;
 }
@@ -11325,7 +11131,6 @@ button {
 }
 
 #dev-id .title-green-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #00ac4f;
 }
@@ -11343,7 +11148,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #1dcab3;
 }
@@ -11361,7 +11165,6 @@ button {
 }
 
 #dev-id .title-pink-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #ec6898;
 }
@@ -11378,7 +11181,6 @@ button {
 
 #dev-id .title-blue-PR-20,
 #dev-id .title-blue1-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
 }
 
@@ -11387,13 +11189,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.25rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #000;
 }
@@ -11449,7 +11249,6 @@ button {
 }
 
 #dev-id .title-white-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #fff;
 }
@@ -11473,7 +11272,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #333;
 }
@@ -11515,7 +11313,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #666;
 }
@@ -11557,7 +11354,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #999;
 }
@@ -11643,7 +11439,6 @@ button {
 }
 
 #dev-id .specialText-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-18,
@@ -11674,7 +11469,6 @@ button {
 }
 
 #dev-id .title-red-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #ff002f;
 }
@@ -11692,7 +11486,6 @@ button {
 }
 
 #dev-id .title-green-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #00ac4f;
 }
@@ -11710,7 +11503,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #1dcab3;
 }
@@ -11728,7 +11520,6 @@ button {
 }
 
 #dev-id .title-pink-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #ec6898;
 }
@@ -11745,7 +11536,6 @@ button {
 
 #dev-id .title-blue-PR-18,
 #dev-id .title-blue1-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
 }
 
@@ -11754,13 +11544,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1.125rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #000;
 }
@@ -11816,7 +11604,6 @@ button {
 }
 
 #dev-id .title-white-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #fff;
 }
@@ -11840,7 +11627,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #333;
 }
@@ -11882,7 +11668,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #666;
 }
@@ -11924,7 +11709,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #999;
 }
@@ -12010,7 +11794,6 @@ button {
 }
 
 #dev-id .specialText-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-16,
@@ -12041,7 +11824,6 @@ button {
 }
 
 #dev-id .title-red-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #ff002f;
 }
@@ -12059,7 +11841,6 @@ button {
 }
 
 #dev-id .title-green-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #00ac4f;
 }
@@ -12077,7 +11858,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #1dcab3;
 }
@@ -12095,7 +11875,6 @@ button {
 }
 
 #dev-id .title-pink-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #ec6898;
 }
@@ -12112,7 +11891,6 @@ button {
 
 #dev-id .title-blue-PR-16,
 #dev-id .title-blue1-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1rem;
 }
 
@@ -12121,13 +11899,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 1rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #000;
 }
@@ -12183,7 +11959,6 @@ button {
 }
 
 #dev-id .title-white-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #fff;
 }
@@ -12207,7 +11982,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #333;
 }
@@ -12249,7 +12023,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #666;
 }
@@ -12291,7 +12064,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #999;
 }
@@ -12377,7 +12149,6 @@ button {
 }
 
 #dev-id .specialText-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-14,
@@ -12408,7 +12179,6 @@ button {
 }
 
 #dev-id .title-red-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #ff002f;
 }
@@ -12426,7 +12196,6 @@ button {
 }
 
 #dev-id .title-green-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #00ac4f;
 }
@@ -12444,7 +12213,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #1dcab3;
 }
@@ -12462,7 +12230,6 @@ button {
 }
 
 #dev-id .title-pink-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #ec6898;
 }
@@ -12479,7 +12246,6 @@ button {
 
 #dev-id .title-blue-PR-14,
 #dev-id .title-blue1-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
 }
 
@@ -12488,13 +12254,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #000;
 }
@@ -12550,7 +12314,6 @@ button {
 }
 
 #dev-id .title-white-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #fff;
 }
@@ -12574,7 +12337,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #333;
 }
@@ -12616,7 +12378,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #666;
 }
@@ -12658,7 +12419,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #999;
 }
@@ -12744,7 +12504,6 @@ button {
 }
 
 #dev-id .specialText-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-12,
@@ -12775,7 +12534,6 @@ button {
 }
 
 #dev-id .title-red-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #ff002f;
 }
@@ -12793,7 +12551,6 @@ button {
 }
 
 #dev-id .title-green-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #00ac4f;
 }
@@ -12811,7 +12568,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #1dcab3;
 }
@@ -12829,7 +12585,6 @@ button {
 }
 
 #dev-id .title-pink-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #ec6898;
 }
@@ -12846,7 +12601,6 @@ button {
 
 #dev-id .title-blue-PR-12,
 #dev-id .title-blue1-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
 }
 
@@ -12855,13 +12609,11 @@ button {
 }
 
 #dev-id .title-blue2-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #000;
 }
@@ -12917,7 +12669,6 @@ button {
 }
 
 #dev-id .title-white-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #fff;
 }
@@ -12941,7 +12692,6 @@ button {
 }
 
 #dev-id .title-grey333-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #333;
 }
@@ -12983,7 +12733,6 @@ button {
 }
 
 #dev-id .title-grey666-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #666;
 }
@@ -13025,7 +12774,6 @@ button {
 }
 
 #dev-id .title-grey999-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #999;
 }
@@ -13111,7 +12859,6 @@ button {
 }
 
 #dev-id .specialText-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
 }
 
 #dev-id .specialText-PR-10,
@@ -13142,7 +12889,6 @@ button {
 }
 
 #dev-id .title-red-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #ff002f;
 }
@@ -13160,7 +12906,6 @@ button {
 }
 
 #dev-id .title-green-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #00ac4f;
 }
@@ -13178,7 +12923,6 @@ button {
 }
 
 #dev-id .title-turquoiseGreen-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #1dcab3;
 }
@@ -13196,7 +12940,6 @@ button {
 }
 
 #dev-id .title-pink-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #ec6898;
 }
@@ -13213,7 +12956,6 @@ button {
 
 #dev-id .title-blue-PR-10,
 #dev-id .title-blue1-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
 }
 
@@ -13222,7 +12964,6 @@ button {
 }
 
 #dev-id .title-blue2-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
   font-size: 0.625rem;
   color: #5cbffe;
 }
@@ -14616,4 +14357,27 @@ button {
 .headerimg-custom {
   height: "354px";
   background-image: "linear-gradient(to right, #2152af 0%, #6ba7e7 51%, #2152af 100%)" !important;
+}
+
+.header-banner {
+  height: 354px !important;
+  background-image: url(../assets/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* padding: 0px 65px; */
+}
+
+.ivu-tabs-nav {
+  padding-left: 0;
+  margin: 0;
+  float: left;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }

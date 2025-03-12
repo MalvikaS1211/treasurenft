@@ -986,3 +986,13 @@
   border-radius: 20px;
   background: hsla(0, 0%, 93%, 0.5);
 }
+#dev-id .ivu-btn[disabled],
+#dev-id ~ .v-transfer-dom .ivu-btn.disabled {
+  background-color: #e2e2e2;
+  border-color: #e2e2e2;
+  color: #fff;
+}
+#dev-id .ivu-btn.disabled:hover,
+#dev-id .ivu-btn[disabled]:hover {
+  background: #e2e2e2;
+}

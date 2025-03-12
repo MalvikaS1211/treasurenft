@@ -1,0 +1,159 @@
+/* General Styles */
+.level-up-container {
+  background: #0b0e13;
+  color: #a0e7ff;
+  /* min-height: 100vh; */
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.level-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.level-item.unlocked {
+  background: rgba(0, 255, 255, 0.2);
+}
+
+.level-item.locked {
+  opacity: 0.5;
+}
+
+.level-item img {
+  width: 40px;
+}
+
+.level-item i {
+  margin-left: auto;
+  color: white;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.chest-container {
+  margin-top: 20px;
+}
+
+.reward-chest {
+  width: 100%;
+}
+
+/* Reward Box */
+.reward-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.open-btn {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .level-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reward-box {
+    width: 90%;
+  }
+}
+
+/* ✅ Fixed Class Name */
+.Level-card {
+  background-size: cover;
+  background-position: center;
+}
+
+.level-btn {
+  background-color: #e2e2e2;
+  background: #e2e2e2;
+  border-color: #e2e2e2;
+  padding: 3px;
+  color: #fff;
+
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  height: 45px;
+  border: 0;
+  border-radius: 10px;
+}
+
+.level-reward-card {
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(145deg, #1c1f26, #292c35);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.level-reward-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.treasure-box-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.treasure-box-img {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0px 5px 10px rgba(255, 215, 0, 0.5));
+}
+
+.btn-outline-warning {
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.btn-outline-warning:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import Header from "./header";
 import TUsdt from "../assets/TUsdt.png";
-
+import HeaderBanner from "../assets/banner.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import { Link } from "react-router-dom";
+import LogoWhite from "../assets/LogoWhite.png";
+
 import Footer from "./Footer";
+import PhoneHeader from "./PhoneHeader";
 export default function Explore() {
   const [activeTab, setActiveTab] = useState(1);
   const [exclusiveTab, setExclusiveTab] = useState(1);
@@ -4047,20 +4050,23 @@ export default function Explore() {
           <div className="headerCommon">
             <div
               data-v-b49386ae=""
-              class="headerImg headerimg-custom"
-              style={{
-                height: "354px",
-                backgroundImage:
-                  "linear-gradient(to right, #2152af 0%, #6ba7e7 51%, #2152af 100%)",
-              }}
+              class="headerImg headerimg-custom header-banner"
             >
               {/* <img
                 data-v-b49386ae=""
-                src="https://image.treasurenft.xyz/PC/img/header_bg_L.png"
+                src={HeaderBanner}
                 alt="headerImg"
                 loading="lazy"
               /> */}
-              <Header></Header>
+              <div className="d-none d-md-block">
+                <Header Logo={LogoWhite} />
+              </div>
+
+              {/* Show Phoneheader only on small (sm) screens */}
+              <div className="d-block d-md-none">
+                <PhoneHeader />
+              </div>
+              {/* <Header Logo={LogoWhite}></Header> */}
               <h2 data-v-b49386ae="" class="headerImg-text title-black-PR-30">
                 Explore
               </h2>

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Header from "./header";
-import Footer from "./footer";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import ConnectWallet from "./ConnectWallet";
+import Footer from "./Footer";
+import { FaEye } from "react-icons/fa";
+import LogoWhite from "../assets/LogoWhite.png";
 
 const countries = [
   "+1(Canada)",
@@ -17,20 +20,18 @@ export default function SignUp() {
   const [selected, setSelected] = useState("Select");
   return (
     <>
-
       <div className="content-wrap">
         <div data-v-b49386ae="" data-v-014c2687="">
-          <div data-v-b49386ae="" class="headerImg headerimg-custom">
-            <img
+          <div className="headerCommon">
+            <div
               data-v-b49386ae=""
-              src="https://image.treasurenft.xyz/PC/img/header_bg_L.png"
-              alt="headerImg"
-              loading="lazy"
-            />
-            <Header/>
-            <h2 data-v-b49386ae="" class="headerImg-text title-black-PR-30">
-              Sign up
-            </h2>
+              class="headerImg headerimg-custom header-banner"
+            >
+              <Header Logo={LogoWhite}></Header>
+              <h2 data-v-b49386ae="" class="headerImg-text title-black-PR-30">
+                Sign Up
+              </h2>
+            </div>
           </div>
           <div className="ivu-row" style={{ padding: "0% 5%" }}>
             <div className="ivu-col ivu-col-span-xs-24 ivu-col-span-sm-24 ivu-col-span-md-12">
@@ -77,7 +78,7 @@ export default function SignUp() {
                             class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type-password"
                           >
                             <span class="ivu-input-suffix">
-                              <i class="ivu-icon ivu-icon-ios-eye-outline"></i>
+                              <FaEye />
                             </span>
                             <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
                             <input
@@ -104,7 +105,7 @@ export default function SignUp() {
                           >
                             {" "}
                             <span class="ivu-input-suffix">
-                              <i class="ivu-icon ivu-icon-ios-eye-outline"></i>
+                              <FaEye />
                             </span>{" "}
                             <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>{" "}
                             <input
@@ -345,7 +346,7 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-      {/* <Footer></Footer> */}
+      <Footer />
     </>
   );
 }

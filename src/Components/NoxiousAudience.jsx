@@ -3,7 +3,10 @@ import TUsdt from "../assets/TUsdt.png";
 import Header from "./header";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowUp } from "react-icons/md";
-import Footer from "./footer";
+
+import LogoBlue from "../assets/LogoBlue.png";
+import Footer from "./Footer";
+
 export default function NoxiousAudience() {
   const [isExpanded, setIsExpanded] = useState(false);
   const shortText = "Michelangelo Buonarroti (foreign name: Michel...";
@@ -11,7 +14,7 @@ export default function NoxiousAudience() {
 
   return (
     <>
-      <Header />
+      <Header Logo={LogoBlue} />
       <div className="content-wrap">
         <div className="exploreCreator">
           <div class="banner-area">

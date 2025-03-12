@@ -1,5 +1,8 @@
 import React from "react";
 import { IoChevronForwardOutline } from "react-icons/io5";
+
+import LogoBlue from "../assets/LogoBlue.png";
+
 export default function Footer() {
   return (
     <footer className="container" style={{ background: "white" }}>
@@ -9,13 +12,13 @@ export default function Footer() {
       >
         <div className="ivu-col ivu-col-span-xs-24 ivu-col-span-sm-24 ivu-col-span-md-6 ivu-col-span-lg-6 ivu-col-span-xl-6">
           <img
-            src="https://image.treasurenft.xyz/PC/img/img_logo_footer_01.png"
+            src={LogoBlue}
             loading="lazy"
             alt="logo"
             className="logo-footer"
           />
-          <p className="title-grey666-PR-16 font-weight-500">
-            TreasureNFT is a Web3 revenue platform based on NFT collections
+          <p className="title-grey666-PR-16 font-weight-500 pt-4">
+            MagicVerse is a Web3 revenue platform based on NFT collections
           </p>
         </div>
 

@@ -1,5 +1,7 @@
 import React from "react";
 import Header from "./header";
+import Footer from "./Footer";
+import LogoWhite from "../assets/LogoWhite.png";
 
 export default function DepositNFT() {
   return (
@@ -9,14 +11,9 @@ export default function DepositNFT() {
           <div className="headerCommon">
             <div
               data-v-b49386ae=""
-              class="headerImg headerimg-custom"
-              style={{
-                height: "354px",
-                backgroundImage:
-                  "linear-gradient(to right, #2152af 0%, #6ba7e7 51%, #2152af 100%)",
-              }}
+              class="headerImg headerimg-custom header-banner"
             >
-              <Header></Header>
+              <Header Logo={LogoWhite}></Header>
               {/* <img
                 data-v-b49386ae=""
                 src="https://image.treasurenft.xyz/PC/img/header_bg_L.png"

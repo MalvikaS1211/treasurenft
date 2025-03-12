@@ -15,6 +15,7 @@ import DepositNFT from "../DepositNFT";
 import NoxiousAudience from "../NoxiousAudience";
 import Account from "../Account";
 import Level from "../Level";
+import Airdrop from "../Airdrop";
 function AppRoutes() {
   return (
     <>
@@ -28,6 +29,7 @@ function AppRoutes() {
           <Route path="/exploreCreator" element={<NoxiousAudience />} />
           <Route path="/account" element={<Account />} />
           <Route path="/account/level" element={<Level />} />
+          <Route path="/Airdrop" element={<Airdrop />} />
         </Routes>
       </Router>
     </>

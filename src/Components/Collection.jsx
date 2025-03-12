@@ -2,10 +2,11 @@ import React from "react";
 import Header from "./header";
 import commingsoon from "../assets/commingsoon.webp";
 import { Link } from "react-router-dom";
+import LogoWhite from "../assets/LogoWhite.png";
+
 export default function Collection() {
   return (
     <>
-      <Header></Header>
       <div data-v-082a2291="" class="content-wrap" style={{ paddingTop: "9%" }}>
         <div data-v-49807727="" data-v-082a2291="" class="collection">
           <div data-v-49807727="" class="userMaterial">
@@ -16,6 +17,7 @@ export default function Collection() {
                   "linear-gradient(to right, #2152af 0%, #6ba7e7 51%, #2152af 100%)",
               }}
             >
+              <Header Logo={LogoWhite}></Header>
               <div class="headerBanner-row ivu-row">
                 <div class="headerBanner-row-colLeft ivu-col ivu-col-span-xs-12 ivu-col-span-md-6 ivu-col-span-lg-4">
                   <div class="user-div">

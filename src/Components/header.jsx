@@ -6,6 +6,8 @@ import Logo from "../assets/Logo.webp";
 import Logo2 from "../assets/Logo2.webp";
 import magicverseLogo from "../assets/magicverse.jpg";
 import LogoMagicVerse from "../assets/LogoMagicVerse.png";
+import LogoBlue from "../assets/LogoBlue.png";
+import LogoModal from "../assets/LogoModal.png";
 
 import icon_header_wallet from "../assets/icon_header_wallet.webp";
 import services_icon from "../assets/services_icon.webp";
@@ -28,7 +30,7 @@ import { IoPersonCircle } from "react-icons/io5";
 import ConnectWallet from "./ConnectWallet";
 import { Link } from "react-router-dom";
 import Account from "./Account";
-export default function Header() {
+export default function Header({ style, Logo }) {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePassword = () => {
@@ -42,8 +44,11 @@ export default function Header() {
 
   return (
     <>
-      <div className="header headerimg-custom d-flex align-items-center  header-contain">
-        <div className="logo d-flex align-items-center">
+      <div
+        className=" headerimg-custom d-flex align-items-center  header-contain"
+        style={{ ...style }}
+      >
+        <div className="logo d-flex align-items-center logo-container">
           <img
             src={Logo}
             alt="Treasure NFT"
@@ -64,10 +69,10 @@ export default function Header() {
             to="/collection"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <span style={{ cursor: "pointer" }}>Earn</span>
+            <span style={{ cursor: "pointer" }}>Trade</span>
           </Link>
           <span style={{ cursor: "pointer" }} className="fw-bold">
-            Reserve
+            NFT Creation
           </span>
         </div>
 
@@ -81,7 +86,10 @@ export default function Header() {
           style={{ gap: "10px" }}
         >
           <FaRegBell size={35} />
-          <span className="menu"> Airdrop</span>
+          <Link to="/Airdrop">
+            <span className="menu"> Airdrop</span>
+          </Link>
+
           <img src={VideoIcon} alt="App" className="app-icon" />
           <img src={telegram} alt="telegram" width={40} />
           <FaGlobe size={35} />
