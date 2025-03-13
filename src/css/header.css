@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  font-family: Clash Grotesk, sans-serif;
+  background-color: #0f0f13;
+  color: #fff;
+}
 .header-container {
   padding: 35px;
 }

@@ -14,7 +14,7 @@ export default function Navbar({ isSidebarOpen }) {
           style={{ width: "160px" }}
         />
       </div>
-      <ul className="menu">
+      <ul className="menu" style={{ display: "flex", flexDirection: "column" }}>
         <Link to="/">
           <li
             className={
