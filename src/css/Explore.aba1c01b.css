@@ -173,20 +173,20 @@
     from(#5cbffe),
     color-stop(#a0f5d0),
     to(#ffd7c8)
-  );
+  ) !important;
   background-image: linear-gradient(
     to right,
     #77a1d3 0%,
     #79cbca 51%,
     #77a1d3 100%
-  );
+  ) !important;
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
 
   font-size: 1rem;
   color: #fff;
   height: 45px;
-  border: 0;
+  border: 0 !important;
   border-radius: 10px;
 }
 

@@ -66,14 +66,19 @@ export default function Header({ style, Logo }) {
             Explore
           </span>
           <Link
-            to="/collection"
+            to="/NFTBuySell"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <span style={{ cursor: "pointer" }}>Trade</span>
           </Link>
-          <span style={{ cursor: "pointer" }} className="fw-bold">
-            NFT Creation
-          </span>
+          <Link
+            to="/NFTcreation"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <span style={{ cursor: "pointer" }} className="fw-bold">
+              NFT Creation
+            </span>
+          </Link>
         </div>
 
         <div className="search-box">

@@ -9,6 +9,7 @@ import LogoWhite from "../assets/LogoWhite.png";
 
 import Footer from "./Footer";
 import PhoneHeader from "./PhoneHeader";
+import { CiSearch } from "react-icons/ci";
 export default function Explore() {
   const [activeTab, setActiveTab] = useState(1);
   const [exclusiveTab, setExclusiveTab] = useState(1);
@@ -3546,13 +3547,14 @@ export default function Explore() {
                          ivu-input-default ivu-input-with-prefix"
                         />
                         <span class="ivu-input-prefix">
-                          <img
+                          {/* <img
                             data-v-090235b6=""
                             src="https://image.treasurenft.xyz/icon/icon_search_03.png"
                             alt="search"
                             loading="lazy"
                             class="iconSearch"
-                          />
+                          /> */}
+                          <CiSearch size={25} />
                         </span>
                       </div>
                     </div>
@@ -3918,6 +3920,85 @@ export default function Explore() {
                                   alt="img"
                                   loading="lazy"
                                   src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_02784_compre.png"
+                                  style={{ width: "100%" }}
+                                />
+                              </picture>
+                            </div>
+                            <div
+                              data-v-090235b6=""
+                              class="product-detail margin-bottom-10"
+                            >
+                              <div data-v-090235b6="">
+                                <span
+                                  data-v-090235b6=""
+                                  class="name title-black-PR-18"
+                                >
+                                  Stake_258454
+                                </span>
+                              </div>
+                              <div
+                                data-v-090235b6=""
+                                class="product-detail-row"
+                              >
+                                <div data-v-090235b6="" class="price-block">
+                                  <img
+                                    data-v-090235b6=""
+                                    src={TUsdt}
+                                    alt="icon"
+                                    loading="lazy"
+                                  />
+                                  <span
+                                    data-v-090235b6=""
+                                    class="price title-grey999-PR-14"
+                                    style={{
+                                      textDecoration: "none",
+                                      marginLeft: "0px",
+                                    }}
+                                  >
+                                    50
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                            <div data-v-090235b6="" class="ivu-row">
+                              <div data-v-090235b6="" class="ivu-col">
+                                <button
+                                  data-v-090235b6=""
+                                  type="button"
+                                  class="ivu-btn ivu-btn-primary ivu-btn-long button-stake"
+                                >
+                                  {" "}
+                                  <span>Buy/Sell</span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        data-v-090235b6=""
+                        class="ivu-col ivu-col-span-xs-12 ivu-col-span-sm-12 ivu-col-span-md-8 ivu-col-span-lg-6 ivu-col-span-xl-4 ivu-col-span-xxl-4"
+                        style={{ paddingLeft: "8px", paddingRight: "8px" }}
+                      >
+                        <div
+                          data-v-090235b6=""
+                          data-aos="zoom-in"
+                          data-aos-duration="1000"
+                          class="product-card aos-init aos-animate"
+                        >
+                          <div data-v-090235b6="" class="product-block">
+                            <div data-v-090235b6="" class="product-img">
+                              <picture data-v-090235b6="">
+                                <source
+                                  data-v-090235b6=""
+                                  type="image/avif"
+                                  srcset="https://prodimage-dan.treasurenft.xyz/Stake/Stake_03549.avif"
+                                />
+                                <img
+                                  data-v-090235b6=""
+                                  alt="img"
+                                  loading="lazy"
+                                  src="https://prodimage-dan.treasurenft.xyz/Stake/Stake_03549_compre.png"
                                   style={{ width: "100%" }}
                                 />
                               </picture>

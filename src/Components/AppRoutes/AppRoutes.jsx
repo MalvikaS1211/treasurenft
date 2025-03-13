@@ -16,6 +16,8 @@ import NoxiousAudience from "../NoxiousAudience";
 import Account from "../Account";
 import Level from "../Level";
 import Airdrop from "../Airdrop";
+import NFTCreation from "../NftCreation";
+import NFTBuySell from "../NFTBuySell";
 function AppRoutes() {
   return (
     <>
@@ -30,6 +32,8 @@ function AppRoutes() {
           <Route path="/account" element={<Account />} />
           <Route path="/account/level" element={<Level />} />
           <Route path="/Airdrop" element={<Airdrop />} />
+          <Route path="/NFTcreation" element={<NFTCreation />} />
+          <Route path="/NFTBuySell" element={<NFTBuySell />} />
         </Routes>
       </Router>
     </>

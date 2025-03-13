@@ -5,7 +5,7 @@ import LogoBlue from "../assets/LogoBlue.png";
 
 export default function Footer() {
   return (
-    <footer className="container" style={{ background: "white" }}>
+    <footer className="container " style={{ background: "white" }}>
       <div
         className="ivu-row-flex ivu-row-flex-space-between"
         style={{ width: "100%" }}

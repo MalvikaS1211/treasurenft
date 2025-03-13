@@ -1,0 +1,133 @@
+.nft-card {
+  max-width: 450px;
+  margin: auto;
+  background: linear-gradient(145deg, #1f1f1f, #292929);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #77a1d3;
+}
+.nft-card .card-header {
+  /* background: rgba(255, 255, 255, 0.1); */
+  border-bottom: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nft-input,
+.nft-textarea,
+.nft-upload {
+  background-color: transparent;
+  border: 1px solid #77a1d3;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.nft-input::placeholder,
+.nft-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nft-input:focus,
+.nft-textarea:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  outline: none;
+}
+
+.nft-preview {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.nft-btn {
+  background-image: linear-gradient(
+    to right,
+    #77a1d3 0%,
+    #79cbca 51%,
+    #77a1d3 100%
+  );
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nft-btn:hover {
+  background-color: #77a1d3;
+  transform: scale(1.05);
+}
+
+.nft-card:hover {
+  box-shadow: 0 15px 25px rgba(0, 255, 128, 0.2);
+}
+
+/* .Footerbg {
+  height: 354px !important;
+  background-image: url(../assets/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+} */
+
+/* NFT buy Sell  */
+
+.nft-buy-sell-card {
+  max-width: 400px;
+  margin: auto;
+  background: linear-gradient(145deg, #1f1f1f, #292929);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.nft-buy-sell-card .card-header {
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nft-input {
+  background-color: transparent;
+  border: 1px solid #77a1d3;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.nft-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.nft-btn {
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nft-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.btn-group .btn {
+  width: 50%;
+  border-radius: 8px;
+}
+
+/* NFT buy Sell  */
