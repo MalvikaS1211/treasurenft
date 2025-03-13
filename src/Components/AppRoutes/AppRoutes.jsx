@@ -7,7 +7,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import SignUp from "../SignUp";
-import Dashboard from "../dashboard";
+
 import Home from "../Home";
 import Explore from "../Explore";
 import Collection from "../Collection";
@@ -18,6 +18,10 @@ import Level from "../Level";
 import Airdrop from "../Airdrop";
 import NFTCreation from "../NftCreation";
 import NFTBuySell from "../NFTBuySell";
+import Dashboard from "../dashboard";
+import Refferal from "../Refferal";
+import Community from "../Community";
+import DownLine from "../DownLine";
 function AppRoutes() {
   return (
     <>
@@ -34,6 +38,10 @@ function AppRoutes() {
           <Route path="/Airdrop" element={<Airdrop />} />
           <Route path="/NFTcreation" element={<NFTCreation />} />
           <Route path="/NFTBuySell" element={<NFTBuySell />} />
+          <Route path="/signup/dashboard" element={<Dashboard />} />
+          <Route path="/refferal" element={<Refferal />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/downline" element={<DownLine />} />
         </Routes>
       </Router>
     </>

@@ -7,6 +7,7 @@ import ConnectWallet from "./ConnectWallet";
 import Footer from "./Footer";
 import { FaEye } from "react-icons/fa";
 import LogoWhite from "../assets/LogoWhite.png";
+import { Link } from "react-router-dom";
 
 const countries = [
   "+1(Canada)",
@@ -88,7 +89,7 @@ export default function SignUp() {
                               placeholder="Please enter your password"
                               class="ivu-input ivu-input-default customize-input "
                             />
-                          </div>{" "}
+                          </div>
                         </div>
                       </div>
                       <div
@@ -97,25 +98,24 @@ export default function SignUp() {
                       >
                         <label class="ivu-form-item-label custom-label">
                           Confirm password
-                        </label>{" "}
+                        </label>
                         <div class="ivu-form-item-content">
                           <div
                             data-v-014c2687=""
                             class="ivu-input-wrapper ivu-input-wrapper-default ivu-input-type-password"
                           >
-                            {" "}
                             <span class="ivu-input-suffix">
                               <FaEye />
-                            </span>{" "}
-                            <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>{" "}
+                            </span>
+                            <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
                             <input
                               autocomplete="off"
                               spellcheck="false"
                               type="password"
                               placeholder="Please re-enter your password"
                               class="ivu-input ivu-input-default customize-input "
-                            />{" "}
-                          </div>{" "}
+                            />
+                          </div>
                         </div>
                       </div>
                       <div className="ivu-form-item">
@@ -171,7 +171,6 @@ export default function SignUp() {
                               }}
                             >
                               <div data-v-014c2687="" class="ivu-form-item">
-                                {" "}
                                 <div class="ivu-form-item-content">
                                   <div
                                     data-v-014c2687=""
@@ -184,8 +183,8 @@ export default function SignUp() {
                                       type="text"
                                       placeholder="Enter Mobile No."
                                       class="ivu-input ivu-input-default customize-input "
-                                    />{" "}
-                                  </div>{" "}
+                                    />
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -230,7 +229,6 @@ export default function SignUp() {
                                     class="verify-input margin-top-15 ivu-input-wrapper
                               ivu-input-wrapper-default ivu-input-type-text"
                                   >
-                                    {" "}
                                     <i class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-input-icon ivu-input-icon-validate"></i>
                                     <input
                                       autocomplete="off"
@@ -239,7 +237,7 @@ export default function SignUp() {
                                       placeholder="Email verification code"
                                       class="ivu-input ivu-input-default customize-input "
                                     />
-                                  </div>{" "}
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -263,7 +261,7 @@ export default function SignUp() {
                                 </div>
                               </div>
                             </div>
-                          </div>{" "}
+                          </div>
                         </div>
                       </div>
                       <div className="ivu-form-item ivu-form-item-required">
@@ -282,33 +280,32 @@ export default function SignUp() {
                               type="text"
                               placeholder="Please enter your Referral Code"
                               class="ivu-input ivu-input-default customize-input "
-                            />{" "}
-                          </div>{" "}
+                            />
+                          </div>
                         </div>
                       </div>
                       <div data-v-014c2687="" class="ivu-form-item">
-                        {" "}
                         <div class="ivu-form-item-content">
                           <div data-v-014c2687="" class="ivu-row-flex mx-n1">
                             <div
                               data-v-014c2687=""
                               class="ivu-col ivu-col-span-24 p-1"
                             >
-                              <button
-                                data-v-014c2687=""
-                                disabled="disabled"
-                                type="button"
-                                class="ivu-btn ivu-btn-success ivu-btn-long"
-                              >
-                                {" "}
-                                <span>Sign up</span>
-                              </button>
+                              <Link to="dashboard">
+                                <button
+                                  data-v-014c2687=""
+                                  // disabled="disabled"
+                                  type="button"
+                                  class="ivu-btn ivu-btn-success ivu-btn-long"
+                                >
+                                  <span>Sign up</span>
+                                </button>
+                              </Link>
                             </div>
-                          </div>{" "}
+                          </div>
                         </div>
                       </div>
                       <div data-v-014c2687="" class="ivu-form-item">
-                        {" "}
                         <div class="ivu-form-item-content">
                           <p
                             data-v-014c2687=""
@@ -319,10 +316,9 @@ export default function SignUp() {
                               data-v-014c2687=""
                               class="specialText-PR-16 font-weight-700"
                             >
-                              {" "}
                               Log in
                             </a>
-                          </p>{" "}
+                          </p>
                         </div>
                       </div>
                     </form>

@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./header";
-import Dashboard from "./dashboard";
+import FrontPage from "./FrontPage";
 import Footer from "./Footer";
 import LogoBlue from "../assets/LogoBlue.png";
 
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Header style={{ height: "250px" }} Logo={LogoBlue} />
-      <Dashboard />
+      <FrontPage />
       <Footer></Footer>
     </div>
   );
