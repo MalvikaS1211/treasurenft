@@ -22,6 +22,7 @@ import Dashboard from "../dashboard";
 import Refferal from "../Refferal";
 import Community from "../Community";
 import DownLine from "../DownLine";
+import NFTBuy from "../NFTBuy";
 function AppRoutes() {
   return (
     <>
@@ -37,11 +38,12 @@ function AppRoutes() {
           <Route path="/account/level" element={<Level />} />
           <Route path="/Airdrop" element={<Airdrop />} />
           <Route path="/NFTcreation" element={<NFTCreation />} />
-          <Route path="/NFTBuySell" element={<NFTBuySell />} />
+          {/* <Route path="/NFTBuySell" element={<NFTBuySell />} /> */}
           <Route path="/signup/dashboard" element={<Dashboard />} />
           <Route path="/refferal" element={<Refferal />} />
           <Route path="/community" element={<Community />} />
           <Route path="/downline" element={<DownLine />} />
+          <Route path="/buyNft" element={<NFTBuy />} />
         </Routes>
       </Router>
     </>

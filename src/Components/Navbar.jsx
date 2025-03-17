@@ -5,7 +5,10 @@ import Logo from "../assets/Logo.png";
 export default function Navbar({ isSidebarOpen }) {
   const location = useLocation();
   return (
-    <aside className={`sidebar ${isSidebarOpen ? "active" : ""}`} id="sidebar">
+    <aside
+      className={`dashboard-sidebar ${isSidebarOpen ? "active" : ""}`}
+      id="sidebar"
+    >
       <div className="logo">
         <img
           src={Logo}
@@ -18,7 +21,7 @@ export default function Navbar({ isSidebarOpen }) {
         <Link to="/">
           <li
             className={
-              location.pathname === "/dashboard" ? "active" : "inactive"
+              location.pathname === "/signup/dashboard" ? "active" : "inactive"
             }
           >
             <i className="fas fa-tachometer-alt"></i> Dashboard

@@ -1,4 +1,4 @@
-.sidebar {
+.dashboard-sidebar {
   width: 250px;
   height: 100vh;
   background-color: #161616;
@@ -10,7 +10,7 @@
   box-shadow: 4px 0 10px #00000080;
   z-index: 9999;
 }
-.sidebar .logo {
+.dashboard-sidebar .logo {
   text-align: center;
   margin-bottom: 20px;
 }
@@ -21,12 +21,12 @@
   font-weight: 700;
   text-align: center;
 }
-.sidebar ul {
+.dashboard-sidebar ul {
   list-style: none;
   padding: 0;
 }
-.sidebar ul li:hover,
-.sidebar ul .active {
+.dashboard-sidebar ul li:hover,
+.dashboard-sidebar ul .active {
   background-image: linear-gradient(
     to right,
     rgb(33, 82, 175) 0%,
@@ -35,18 +35,18 @@
   );
   border-radius: 5px;
 }
-.sidebar ul li {
+.dashboard-sidebar ul li {
   padding: 14px;
   margin-bottom: 10px;
   cursor: pointer;
   transition: 0.3s;
 }
-.sidebar ul .inactive {
+.dashboard-sidebar ul .inactive {
   background: transparent;
   border-radius: 5px;
 }
 
-.sidebar ul li {
+.dashboard-sidebar ul li {
   padding: 14px;
   margin-bottom: 10px;
   cursor: pointer;

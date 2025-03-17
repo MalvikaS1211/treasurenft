@@ -45,7 +45,7 @@ export default function Header({ style, Logo }) {
   return (
     <>
       <div
-        className=" headerimg-custom d-flex align-items-center  header-contain"
+        className="headerimg-custom d-flex align-items-center header-contain justify-content-around"
         style={{ ...style }}
       >
         <div className="logo d-flex align-items-center logo-container">
@@ -58,15 +58,18 @@ export default function Header({ style, Logo }) {
         </div>
 
         <div className="menu d-flex gap-4">
-          <span
-            style={{ cursor: "pointer" }}
-            data-bs-toggle="modal"
-            data-bs-target="#loginModal"
-          >
-            Explore
-          </span>
+          {/* <Link to="/explore">
+            <span
+              style={{ cursor: "pointer" }}
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Explore
+            </span>
+          </Link> */}
+
           <Link
-            to="/NFTBuySell"
+            to="/buyNft"
             style={{ textDecoration: "none", color: "inherit" }}
           >
             <span style={{ cursor: "pointer" }}>Trade</span>

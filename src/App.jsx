@@ -57,6 +57,7 @@ import "./css/Style6.css";
 import "./css/Style7.css";
 import "./css/Style8.css";
 import "./css/NFTCreation.css";
+import "./css/custom.css";
 
 function App() {
   return (

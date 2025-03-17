@@ -3,15 +3,23 @@ import "../css/Airdrop.css";
 import Header from "./header";
 import LogoBlue from "../assets/LogoBlue.png";
 import Footer from "./Footer";
+import PhoneHeader from "./PhoneHeader";
 
 const Airdrop = () => {
   return (
     <>
-      <Header Logo={LogoBlue} />
+      <div className="d-none d-md-block">
+        <Header Logo={LogoBlue} />
+      </div>
+
+      {/* Show Phoneheader only on small (sm) screens */}
+      <div className="d-block d-md-none">
+        <PhoneHeader Logo={LogoBlue} />
+      </div>
       <div className="container-fluid level-up-container ">
         <div className="row ">
           {/* Sidebar */}
-          <div className="col-md-4 col-sm-12 col-lg-4 sidebar">
+          <div className="col-md-4 col-sm-12 col-lg-4 level-container">
             <div className="level-item locked">
               <img
                 src="https://image.treasurenft.xyz/img/img_lv1_locked.avif"

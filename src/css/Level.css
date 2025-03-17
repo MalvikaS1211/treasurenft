@@ -184,7 +184,7 @@
   background-image: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #fff;
   height: 45px;
@@ -278,7 +278,7 @@
 
 #dev-id .ivu-btn.ivu-btn-success span {
   background-color: none;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   width: 100%;
   color: #fff;
@@ -426,7 +426,7 @@
 @media screen and (max-width: 450px) {
   #dev-id .ivu-btn.ivu-btn-primary,
   #dev-id .ivu-btn.ivu-btn-success span {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 0.75rem;
   }
 }
@@ -517,7 +517,7 @@
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -537,7 +537,7 @@
 
 @media screen and (max-width: 450px) {
   #dev-id .ivu-form-label-top .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 0.875rem;
   }
 }
@@ -1265,14 +1265,14 @@
 
 #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
   background: unset;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
 
 #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab-active {
   color: #000;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   font-weight: 900;
 }
@@ -1298,13 +1298,13 @@
 @media screen and (max-width: 450px) {
   #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
     background: unset;
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 0.875rem;
     color: #333;
   }
 
   #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab-active {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 1rem;
   }
 }
@@ -2026,7 +2026,7 @@
 
 #dev-id ~ .v-transfer-dom .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
   background: unset;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -2037,7 +2037,7 @@
   > .ivu-tabs-bar
   .ivu-tabs-tab-active {
   color: #000 !important;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
 }
 
@@ -2147,7 +2147,7 @@
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -2167,7 +2167,7 @@
 
 @media screen and (max-width: 450px) {
   #dev-id ~ .v-transfer-dom .ivu-form-label-top .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 0.875rem;
   }
 }
@@ -4205,7 +4205,7 @@
 }
 
 #dev-id .mint .ivu-form-item-label {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   font-weight: 700;
   color: #333 !important;
@@ -4259,7 +4259,7 @@
   }
 
   #dev-id .mint .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 1.125rem;
   }
 }
@@ -4672,7 +4672,7 @@
 
   #dev-id .paymentSetting .ivu-form-item-label {
     color: #333;
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 1rem;
   }
 
@@ -4719,7 +4719,7 @@
 }
 
 #dev-id .title-black-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #000;
 }
@@ -4743,7 +4743,7 @@
 }
 
 #dev-id .title-black-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #000;
 }
@@ -4755,7 +4755,7 @@
 }
 
 #dev-id .title-black-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #000;
 }
@@ -4775,7 +4775,7 @@
 }
 
 #dev-id .title-white-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #fff;
 }
@@ -4799,7 +4799,7 @@
 }
 
 #dev-id .title-grey333-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #333;
 }
@@ -4811,7 +4811,7 @@
 }
 
 #dev-id .title-grey333-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #333;
 }
@@ -4823,7 +4823,7 @@
 }
 
 #dev-id .title-grey333-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #333;
 }
@@ -4841,7 +4841,7 @@
 }
 
 #dev-id .title-grey666-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #666;
 }
@@ -4859,7 +4859,7 @@
 }
 
 #dev-id .title-grey666-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #666;
 }
@@ -4871,7 +4871,7 @@
 }
 
 #dev-id .title-grey666-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #666;
 }
@@ -4883,7 +4883,7 @@
 }
 
 #dev-id .title-grey999-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #999;
 }
@@ -4901,7 +4901,7 @@
 }
 
 #dev-id .title-grey999-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #999;
 }
@@ -4913,7 +4913,7 @@
 }
 
 #dev-id .title-grey999-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #999;
 }
@@ -4965,11 +4965,11 @@
 }
 
 #dev-id .specialText-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-60,
@@ -5000,7 +5000,7 @@
 }
 
 #dev-id .title-red-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #ff002f;
 }
@@ -5018,7 +5018,7 @@
 }
 
 #dev-id .title-green-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #00ac4f;
 }
@@ -5036,7 +5036,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #1dcab3;
 }
@@ -5054,7 +5054,7 @@
 }
 
 #dev-id .title-pink-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #ec6898;
 }
@@ -5071,7 +5071,7 @@
 
 #dev-id .title-blue-PR-60,
 #dev-id .title-blue1-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
 }
 
@@ -5080,13 +5080,13 @@
 }
 
 #dev-id .title-blue2-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #000;
 }
@@ -5110,7 +5110,7 @@
 }
 
 #dev-id .title-black-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #000;
 }
@@ -5122,7 +5122,7 @@
 }
 
 #dev-id .title-black-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #000;
 }
@@ -5142,7 +5142,7 @@
 }
 
 #dev-id .title-white-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #fff;
 }
@@ -5166,7 +5166,7 @@
 }
 
 #dev-id .title-grey333-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #333;
 }
@@ -5178,7 +5178,7 @@
 }
 
 #dev-id .title-grey333-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #333;
 }
@@ -5190,7 +5190,7 @@
 }
 
 #dev-id .title-grey333-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #333;
 }
@@ -5208,7 +5208,7 @@
 }
 
 #dev-id .title-grey666-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #666;
 }
@@ -5226,7 +5226,7 @@
 }
 
 #dev-id .title-grey666-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #666;
 }
@@ -5238,7 +5238,7 @@
 }
 
 #dev-id .title-grey666-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #666;
 }
@@ -5250,7 +5250,7 @@
 }
 
 #dev-id .title-grey999-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #999;
 }
@@ -5268,7 +5268,7 @@
 }
 
 #dev-id .title-grey999-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #999;
 }
@@ -5280,7 +5280,7 @@
 }
 
 #dev-id .title-grey999-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #999;
 }
@@ -5332,11 +5332,11 @@
 }
 
 #dev-id .specialText-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-56,
@@ -5367,7 +5367,7 @@
 }
 
 #dev-id .title-red-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #ff002f;
 }
@@ -5385,7 +5385,7 @@
 }
 
 #dev-id .title-green-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #00ac4f;
 }
@@ -5403,7 +5403,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #1dcab3;
 }
@@ -5421,7 +5421,7 @@
 }
 
 #dev-id .title-pink-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #ec6898;
 }
@@ -5438,7 +5438,7 @@
 
 #dev-id .title-blue-PR-56,
 #dev-id .title-blue1-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
 }
 
@@ -5447,13 +5447,13 @@
 }
 
 #dev-id .title-blue2-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #000;
 }
@@ -5477,7 +5477,7 @@
 }
 
 #dev-id .title-black-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #000;
 }
@@ -5489,7 +5489,7 @@
 }
 
 #dev-id .title-black-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #000;
 }
@@ -5509,7 +5509,7 @@
 }
 
 #dev-id .title-white-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #fff;
 }
@@ -5533,7 +5533,7 @@
 }
 
 #dev-id .title-grey333-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #333;
 }
@@ -5545,7 +5545,7 @@
 }
 
 #dev-id .title-grey333-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #333;
 }
@@ -5557,7 +5557,7 @@
 }
 
 #dev-id .title-grey333-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #333;
 }
@@ -5575,7 +5575,7 @@
 }
 
 #dev-id .title-grey666-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #666;
 }
@@ -5593,7 +5593,7 @@
 }
 
 #dev-id .title-grey666-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #666;
 }
@@ -5605,7 +5605,7 @@
 }
 
 #dev-id .title-grey666-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #666;
 }
@@ -5617,7 +5617,7 @@
 }
 
 #dev-id .title-grey999-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #999;
 }
@@ -5635,7 +5635,7 @@
 }
 
 #dev-id .title-grey999-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #999;
 }
@@ -5647,7 +5647,7 @@
 }
 
 #dev-id .title-grey999-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #999;
 }
@@ -5699,11 +5699,11 @@
 }
 
 #dev-id .specialText-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-48,
@@ -5734,7 +5734,7 @@
 }
 
 #dev-id .title-red-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #ff002f;
 }
@@ -5752,7 +5752,7 @@
 }
 
 #dev-id .title-green-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #00ac4f;
 }
@@ -5770,7 +5770,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #1dcab3;
 }
@@ -5788,7 +5788,7 @@
 }
 
 #dev-id .title-pink-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #ec6898;
 }
@@ -5805,7 +5805,7 @@
 
 #dev-id .title-blue-PR-48,
 #dev-id .title-blue1-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
 }
 
@@ -5814,13 +5814,13 @@
 }
 
 #dev-id .title-blue2-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #000;
 }
@@ -5844,7 +5844,7 @@
 }
 
 #dev-id .title-black-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #000;
 }
@@ -5856,7 +5856,7 @@
 }
 
 #dev-id .title-black-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #000;
 }
@@ -5876,7 +5876,7 @@
 }
 
 #dev-id .title-white-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #fff;
 }
@@ -5900,7 +5900,7 @@
 }
 
 #dev-id .title-grey333-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #333;
 }
@@ -5912,7 +5912,7 @@
 }
 
 #dev-id .title-grey333-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #333;
 }
@@ -5924,7 +5924,7 @@
 }
 
 #dev-id .title-grey333-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #333;
 }
@@ -5942,7 +5942,7 @@
 }
 
 #dev-id .title-grey666-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #666;
 }
@@ -5960,7 +5960,7 @@
 }
 
 #dev-id .title-grey666-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #666;
 }
@@ -5972,7 +5972,7 @@
 }
 
 #dev-id .title-grey666-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #666;
 }
@@ -5984,7 +5984,7 @@
 }
 
 #dev-id .title-grey999-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #999;
 }
@@ -6002,7 +6002,7 @@
 }
 
 #dev-id .title-grey999-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #999;
 }
@@ -6014,7 +6014,7 @@
 }
 
 #dev-id .title-grey999-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #999;
 }
@@ -6066,11 +6066,11 @@
 }
 
 #dev-id .specialText-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-46,
@@ -6101,7 +6101,7 @@
 }
 
 #dev-id .title-red-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #ff002f;
 }
@@ -6119,7 +6119,7 @@
 }
 
 #dev-id .title-green-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #00ac4f;
 }
@@ -6137,7 +6137,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #1dcab3;
 }
@@ -6155,7 +6155,7 @@
 }
 
 #dev-id .title-pink-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #ec6898;
 }
@@ -6172,7 +6172,7 @@
 
 #dev-id .title-blue-PR-46,
 #dev-id .title-blue1-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
 }
 
@@ -6181,13 +6181,13 @@
 }
 
 #dev-id .title-blue2-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #000;
 }
@@ -6211,7 +6211,7 @@
 }
 
 #dev-id .title-black-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #000;
 }
@@ -6223,7 +6223,7 @@
 }
 
 #dev-id .title-black-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #000;
 }
@@ -6243,7 +6243,7 @@
 }
 
 #dev-id .title-white-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #fff;
 }
@@ -6267,7 +6267,7 @@
 }
 
 #dev-id .title-grey333-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #333;
 }
@@ -6279,7 +6279,7 @@
 }
 
 #dev-id .title-grey333-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #333;
 }
@@ -6291,7 +6291,7 @@
 }
 
 #dev-id .title-grey333-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #333;
 }
@@ -6309,7 +6309,7 @@
 }
 
 #dev-id .title-grey666-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #666;
 }
@@ -6327,7 +6327,7 @@
 }
 
 #dev-id .title-grey666-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #666;
 }
@@ -6339,7 +6339,7 @@
 }
 
 #dev-id .title-grey666-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #666;
 }
@@ -6351,7 +6351,7 @@
 }
 
 #dev-id .title-grey999-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #999;
 }
@@ -6369,7 +6369,7 @@
 }
 
 #dev-id .title-grey999-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #999;
 }
@@ -6381,7 +6381,7 @@
 }
 
 #dev-id .title-grey999-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #999;
 }
@@ -6433,11 +6433,11 @@
 }
 
 #dev-id .specialText-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-44,
@@ -6468,7 +6468,7 @@
 }
 
 #dev-id .title-red-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #ff002f;
 }
@@ -6486,7 +6486,7 @@
 }
 
 #dev-id .title-green-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #00ac4f;
 }
@@ -6504,7 +6504,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #1dcab3;
 }
@@ -6522,7 +6522,7 @@
 }
 
 #dev-id .title-pink-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #ec6898;
 }
@@ -6539,7 +6539,7 @@
 
 #dev-id .title-blue-PR-44,
 #dev-id .title-blue1-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
 }
 
@@ -6548,13 +6548,13 @@
 }
 
 #dev-id .title-blue2-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #000;
 }
@@ -6578,7 +6578,7 @@
 }
 
 #dev-id .title-black-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #000;
 }
@@ -6590,7 +6590,7 @@
 }
 
 #dev-id .title-black-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #000;
 }
@@ -6610,7 +6610,7 @@
 }
 
 #dev-id .title-white-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #fff;
 }
@@ -6634,7 +6634,7 @@
 }
 
 #dev-id .title-grey333-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #333;
 }
@@ -6646,7 +6646,7 @@
 }
 
 #dev-id .title-grey333-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #333;
 }
@@ -6658,7 +6658,7 @@
 }
 
 #dev-id .title-grey333-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #333;
 }
@@ -6676,7 +6676,7 @@
 }
 
 #dev-id .title-grey666-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #666;
 }
@@ -6694,7 +6694,7 @@
 }
 
 #dev-id .title-grey666-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #666;
 }
@@ -6706,7 +6706,7 @@
 }
 
 #dev-id .title-grey666-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #666;
 }
@@ -6718,7 +6718,7 @@
 }
 
 #dev-id .title-grey999-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #999;
 }
@@ -6736,7 +6736,7 @@
 }
 
 #dev-id .title-grey999-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #999;
 }
@@ -6748,7 +6748,7 @@
 }
 
 #dev-id .title-grey999-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #999;
 }
@@ -6800,11 +6800,11 @@
 }
 
 #dev-id .specialText-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-42,
@@ -6835,7 +6835,7 @@
 }
 
 #dev-id .title-red-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #ff002f;
 }
@@ -6853,7 +6853,7 @@
 }
 
 #dev-id .title-green-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #00ac4f;
 }
@@ -6871,7 +6871,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #1dcab3;
 }
@@ -6889,7 +6889,7 @@
 }
 
 #dev-id .title-pink-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #ec6898;
 }
@@ -6906,7 +6906,7 @@
 
 #dev-id .title-blue-PR-42,
 #dev-id .title-blue1-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
 }
 
@@ -6915,13 +6915,13 @@
 }
 
 #dev-id .title-blue2-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #000;
 }
@@ -6945,7 +6945,7 @@
 }
 
 #dev-id .title-black-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #000;
 }
@@ -6957,7 +6957,7 @@
 }
 
 #dev-id .title-black-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #000;
 }
@@ -6977,7 +6977,7 @@
 }
 
 #dev-id .title-white-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #fff;
 }
@@ -7001,7 +7001,7 @@
 }
 
 #dev-id .title-grey333-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #333;
 }
@@ -7013,7 +7013,7 @@
 }
 
 #dev-id .title-grey333-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #333;
 }
@@ -7025,7 +7025,7 @@
 }
 
 #dev-id .title-grey333-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #333;
 }
@@ -7043,7 +7043,7 @@
 }
 
 #dev-id .title-grey666-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #666;
 }
@@ -7061,7 +7061,7 @@
 }
 
 #dev-id .title-grey666-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #666;
 }
@@ -7073,7 +7073,7 @@
 }
 
 #dev-id .title-grey666-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #666;
 }
@@ -7085,7 +7085,7 @@
 }
 
 #dev-id .title-grey999-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #999;
 }
@@ -7103,7 +7103,7 @@
 }
 
 #dev-id .title-grey999-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #999;
 }
@@ -7115,7 +7115,7 @@
 }
 
 #dev-id .title-grey999-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #999;
 }
@@ -7167,11 +7167,11 @@
 }
 
 #dev-id .specialText-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-40,
@@ -7202,7 +7202,7 @@
 }
 
 #dev-id .title-red-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #ff002f;
 }
@@ -7220,7 +7220,7 @@
 }
 
 #dev-id .title-green-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #00ac4f;
 }
@@ -7238,7 +7238,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #1dcab3;
 }
@@ -7256,7 +7256,7 @@
 }
 
 #dev-id .title-pink-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #ec6898;
 }
@@ -7273,7 +7273,7 @@
 
 #dev-id .title-blue-PR-40,
 #dev-id .title-blue1-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
 }
 
@@ -7282,13 +7282,13 @@
 }
 
 #dev-id .title-blue2-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #000;
 }
@@ -7312,7 +7312,7 @@
 }
 
 #dev-id .title-black-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #000;
 }
@@ -7324,7 +7324,7 @@
 }
 
 #dev-id .title-black-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #000;
 }
@@ -7344,7 +7344,7 @@
 }
 
 #dev-id .title-white-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #fff;
 }
@@ -7368,7 +7368,7 @@
 }
 
 #dev-id .title-grey333-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #333;
 }
@@ -7380,7 +7380,7 @@
 }
 
 #dev-id .title-grey333-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #333;
 }
@@ -7392,7 +7392,7 @@
 }
 
 #dev-id .title-grey333-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #333;
 }
@@ -7410,7 +7410,7 @@
 }
 
 #dev-id .title-grey666-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #666;
 }
@@ -7428,7 +7428,7 @@
 }
 
 #dev-id .title-grey666-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #666;
 }
@@ -7440,7 +7440,7 @@
 }
 
 #dev-id .title-grey666-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #666;
 }
@@ -7452,7 +7452,7 @@
 }
 
 #dev-id .title-grey999-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #999;
 }
@@ -7470,7 +7470,7 @@
 }
 
 #dev-id .title-grey999-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #999;
 }
@@ -7482,7 +7482,7 @@
 }
 
 #dev-id .title-grey999-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #999;
 }
@@ -7534,11 +7534,11 @@
 }
 
 #dev-id .specialText-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-38,
@@ -7569,7 +7569,7 @@
 }
 
 #dev-id .title-red-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #ff002f;
 }
@@ -7587,7 +7587,7 @@
 }
 
 #dev-id .title-green-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #00ac4f;
 }
@@ -7605,7 +7605,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #1dcab3;
 }
@@ -7623,7 +7623,7 @@
 }
 
 #dev-id .title-pink-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #ec6898;
 }
@@ -7640,7 +7640,7 @@
 
 #dev-id .title-blue-PR-38,
 #dev-id .title-blue1-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
 }
 
@@ -7649,13 +7649,13 @@
 }
 
 #dev-id .title-blue2-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #000;
 }
@@ -7679,7 +7679,7 @@
 }
 
 #dev-id .title-black-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #000;
 }
@@ -7691,7 +7691,7 @@
 }
 
 #dev-id .title-black-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #000;
 }
@@ -7711,7 +7711,7 @@
 }
 
 #dev-id .title-white-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #fff;
 }
@@ -7735,7 +7735,7 @@
 }
 
 #dev-id .title-grey333-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #333;
 }
@@ -7747,7 +7747,7 @@
 }
 
 #dev-id .title-grey333-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #333;
 }
@@ -7759,7 +7759,7 @@
 }
 
 #dev-id .title-grey333-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #333;
 }
@@ -7777,7 +7777,7 @@
 }
 
 #dev-id .title-grey666-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #666;
 }
@@ -7795,7 +7795,7 @@
 }
 
 #dev-id .title-grey666-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #666;
 }
@@ -7807,7 +7807,7 @@
 }
 
 #dev-id .title-grey666-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #666;
 }
@@ -7819,7 +7819,7 @@
 }
 
 #dev-id .title-grey999-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #999;
 }
@@ -7837,7 +7837,7 @@
 }
 
 #dev-id .title-grey999-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #999;
 }
@@ -7849,7 +7849,7 @@
 }
 
 #dev-id .title-grey999-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #999;
 }
@@ -7901,11 +7901,11 @@
 }
 
 #dev-id .specialText-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-36,
@@ -7936,7 +7936,7 @@
 }
 
 #dev-id .title-red-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #ff002f;
 }
@@ -7954,7 +7954,7 @@
 }
 
 #dev-id .title-green-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #00ac4f;
 }
@@ -7972,7 +7972,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #1dcab3;
 }
@@ -7990,7 +7990,7 @@
 }
 
 #dev-id .title-pink-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #ec6898;
 }
@@ -8007,7 +8007,7 @@
 
 #dev-id .title-blue-PR-36,
 #dev-id .title-blue1-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
 }
 
@@ -8016,13 +8016,13 @@
 }
 
 #dev-id .title-blue2-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #000;
 }
@@ -8046,7 +8046,7 @@
 }
 
 #dev-id .title-black-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #000;
 }
@@ -8058,7 +8058,7 @@
 }
 
 #dev-id .title-black-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #000;
 }
@@ -8078,7 +8078,7 @@
 }
 
 #dev-id .title-white-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #fff;
 }
@@ -8102,7 +8102,7 @@
 }
 
 #dev-id .title-grey333-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #333;
 }
@@ -8114,7 +8114,7 @@
 }
 
 #dev-id .title-grey333-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #333;
 }
@@ -8126,7 +8126,7 @@
 }
 
 #dev-id .title-grey333-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #333;
 }
@@ -8144,7 +8144,7 @@
 }
 
 #dev-id .title-grey666-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #666;
 }
@@ -8162,7 +8162,7 @@
 }
 
 #dev-id .title-grey666-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #666;
 }
@@ -8174,7 +8174,7 @@
 }
 
 #dev-id .title-grey666-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #666;
 }
@@ -8186,7 +8186,7 @@
 }
 
 #dev-id .title-grey999-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #999;
 }
@@ -8204,7 +8204,7 @@
 }
 
 #dev-id .title-grey999-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #999;
 }
@@ -8216,7 +8216,7 @@
 }
 
 #dev-id .title-grey999-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #999;
 }
@@ -8268,11 +8268,11 @@
 }
 
 #dev-id .specialText-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-34,
@@ -8303,7 +8303,7 @@
 }
 
 #dev-id .title-red-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #ff002f;
 }
@@ -8321,7 +8321,7 @@
 }
 
 #dev-id .title-green-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #00ac4f;
 }
@@ -8339,7 +8339,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #1dcab3;
 }
@@ -8357,7 +8357,7 @@
 }
 
 #dev-id .title-pink-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #ec6898;
 }
@@ -8374,7 +8374,7 @@
 
 #dev-id .title-blue-PR-34,
 #dev-id .title-blue1-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
 }
 
@@ -8383,13 +8383,13 @@
 }
 
 #dev-id .title-blue2-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #000;
 }
@@ -8413,7 +8413,7 @@
 }
 
 #dev-id .title-black-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #000;
 }
@@ -8425,7 +8425,7 @@
 }
 
 #dev-id .title-black-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #000;
 }
@@ -8445,7 +8445,7 @@
 }
 
 #dev-id .title-white-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #fff;
 }
@@ -8469,7 +8469,7 @@
 }
 
 #dev-id .title-grey333-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #333;
 }
@@ -8481,7 +8481,7 @@
 }
 
 #dev-id .title-grey333-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #333;
 }
@@ -8493,7 +8493,7 @@
 }
 
 #dev-id .title-grey333-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #333;
 }
@@ -8511,7 +8511,7 @@
 }
 
 #dev-id .title-grey666-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #666;
 }
@@ -8529,7 +8529,7 @@
 }
 
 #dev-id .title-grey666-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #666;
 }
@@ -8541,7 +8541,7 @@
 }
 
 #dev-id .title-grey666-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #666;
 }
@@ -8553,7 +8553,7 @@
 }
 
 #dev-id .title-grey999-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #999;
 }
@@ -8571,7 +8571,7 @@
 }
 
 #dev-id .title-grey999-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #999;
 }
@@ -8583,7 +8583,7 @@
 }
 
 #dev-id .title-grey999-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #999;
 }
@@ -8635,11 +8635,11 @@
 }
 
 #dev-id .specialText-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-32,
@@ -8670,7 +8670,7 @@
 }
 
 #dev-id .title-red-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #ff002f;
 }
@@ -8688,7 +8688,7 @@
 }
 
 #dev-id .title-green-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #00ac4f;
 }
@@ -8706,7 +8706,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #1dcab3;
 }
@@ -8724,7 +8724,7 @@
 }
 
 #dev-id .title-pink-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #ec6898;
 }
@@ -8741,7 +8741,7 @@
 
 #dev-id .title-blue-PR-32,
 #dev-id .title-blue1-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
 }
 
@@ -8750,13 +8750,13 @@
 }
 
 #dev-id .title-blue2-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #000;
 }
@@ -8780,7 +8780,7 @@
 }
 
 #dev-id .title-black-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #000;
 }
@@ -8792,7 +8792,7 @@
 }
 
 #dev-id .title-black-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #000;
 }
@@ -8812,7 +8812,7 @@
 }
 
 #dev-id .title-white-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #fff;
 }
@@ -8836,7 +8836,7 @@
 }
 
 #dev-id .title-grey333-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #333;
 }
@@ -8848,7 +8848,7 @@
 }
 
 #dev-id .title-grey333-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #333;
 }
@@ -8860,7 +8860,7 @@
 }
 
 #dev-id .title-grey333-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #333;
 }
@@ -8878,7 +8878,7 @@
 }
 
 #dev-id .title-grey666-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #666;
 }
@@ -8896,7 +8896,7 @@
 }
 
 #dev-id .title-grey666-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #666;
 }
@@ -8908,7 +8908,7 @@
 }
 
 #dev-id .title-grey666-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #666;
 }
@@ -8920,7 +8920,7 @@
 }
 
 #dev-id .title-grey999-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #999;
 }
@@ -8938,7 +8938,7 @@
 }
 
 #dev-id .title-grey999-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #999;
 }
@@ -8950,7 +8950,7 @@
 }
 
 #dev-id .title-grey999-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #999;
 }
@@ -9002,11 +9002,11 @@
 }
 
 #dev-id .specialText-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-30,
@@ -9037,7 +9037,7 @@
 }
 
 #dev-id .title-red-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #ff002f;
 }
@@ -9055,7 +9055,7 @@
 }
 
 #dev-id .title-green-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #00ac4f;
 }
@@ -9073,7 +9073,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #1dcab3;
 }
@@ -9091,7 +9091,7 @@
 }
 
 #dev-id .title-pink-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #ec6898;
 }
@@ -9108,7 +9108,7 @@
 
 #dev-id .title-blue-PR-30,
 #dev-id .title-blue1-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
 }
 
@@ -9117,13 +9117,13 @@
 }
 
 #dev-id .title-blue2-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #000;
 }
@@ -9147,7 +9147,7 @@
 }
 
 #dev-id .title-black-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #000;
 }
@@ -9159,7 +9159,7 @@
 }
 
 #dev-id .title-black-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #000;
 }
@@ -9179,7 +9179,7 @@
 }
 
 #dev-id .title-white-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #fff;
 }
@@ -9203,7 +9203,7 @@
 }
 
 #dev-id .title-grey333-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #333;
 }
@@ -9215,7 +9215,7 @@
 }
 
 #dev-id .title-grey333-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #333;
 }
@@ -9227,7 +9227,7 @@
 }
 
 #dev-id .title-grey333-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #333;
 }
@@ -9245,7 +9245,7 @@
 }
 
 #dev-id .title-grey666-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #666;
 }
@@ -9263,7 +9263,7 @@
 }
 
 #dev-id .title-grey666-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #666;
 }
@@ -9275,7 +9275,7 @@
 }
 
 #dev-id .title-grey666-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #666;
 }
@@ -9287,7 +9287,7 @@
 }
 
 #dev-id .title-grey999-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #999;
 }
@@ -9305,7 +9305,7 @@
 }
 
 #dev-id .title-grey999-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #999;
 }
@@ -9317,7 +9317,7 @@
 }
 
 #dev-id .title-grey999-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #999;
 }
@@ -9369,11 +9369,11 @@
 }
 
 #dev-id .specialText-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-28,
@@ -9404,7 +9404,7 @@
 }
 
 #dev-id .title-red-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #ff002f;
 }
@@ -9422,7 +9422,7 @@
 }
 
 #dev-id .title-green-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #00ac4f;
 }
@@ -9440,7 +9440,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #1dcab3;
 }
@@ -9458,7 +9458,7 @@
 }
 
 #dev-id .title-pink-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #ec6898;
 }
@@ -9475,7 +9475,7 @@
 
 #dev-id .title-blue-PR-28,
 #dev-id .title-blue1-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
 }
 
@@ -9484,13 +9484,13 @@
 }
 
 #dev-id .title-blue2-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #000;
 }
@@ -9514,7 +9514,7 @@
 }
 
 #dev-id .title-black-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #000;
 }
@@ -9526,7 +9526,7 @@
 }
 
 #dev-id .title-black-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #000;
 }
@@ -9546,7 +9546,7 @@
 }
 
 #dev-id .title-white-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #fff;
 }
@@ -9570,7 +9570,7 @@
 }
 
 #dev-id .title-grey333-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #333;
 }
@@ -9582,7 +9582,7 @@
 }
 
 #dev-id .title-grey333-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #333;
 }
@@ -9594,7 +9594,7 @@
 }
 
 #dev-id .title-grey333-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #333;
 }
@@ -9612,7 +9612,7 @@
 }
 
 #dev-id .title-grey666-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #666;
 }
@@ -9630,7 +9630,7 @@
 }
 
 #dev-id .title-grey666-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #666;
 }
@@ -9642,7 +9642,7 @@
 }
 
 #dev-id .title-grey666-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #666;
 }
@@ -9654,7 +9654,7 @@
 }
 
 #dev-id .title-grey999-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #999;
 }
@@ -9672,7 +9672,7 @@
 }
 
 #dev-id .title-grey999-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #999;
 }
@@ -9684,7 +9684,7 @@
 }
 
 #dev-id .title-grey999-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #999;
 }
@@ -9736,11 +9736,11 @@
 }
 
 #dev-id .specialText-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-26,
@@ -9771,7 +9771,7 @@
 }
 
 #dev-id .title-red-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #ff002f;
 }
@@ -9789,7 +9789,7 @@
 }
 
 #dev-id .title-green-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #00ac4f;
 }
@@ -9807,7 +9807,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #1dcab3;
 }
@@ -9825,7 +9825,7 @@
 }
 
 #dev-id .title-pink-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #ec6898;
 }
@@ -9842,7 +9842,7 @@
 
 #dev-id .title-blue-PR-26,
 #dev-id .title-blue1-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
 }
 
@@ -9851,13 +9851,13 @@
 }
 
 #dev-id .title-blue2-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #000;
 }
@@ -9881,7 +9881,7 @@
 }
 
 #dev-id .title-black-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #000;
 }
@@ -9893,7 +9893,7 @@
 }
 
 #dev-id .title-black-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #000;
 }
@@ -9913,7 +9913,7 @@
 }
 
 #dev-id .title-white-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #fff;
 }
@@ -9937,7 +9937,7 @@
 }
 
 #dev-id .title-grey333-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #333;
 }
@@ -9949,7 +9949,7 @@
 }
 
 #dev-id .title-grey333-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #333;
 }
@@ -9961,7 +9961,7 @@
 }
 
 #dev-id .title-grey333-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #333;
 }
@@ -9979,7 +9979,7 @@
 }
 
 #dev-id .title-grey666-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #666;
 }
@@ -9997,7 +9997,7 @@
 }
 
 #dev-id .title-grey666-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #666;
 }
@@ -10009,7 +10009,7 @@
 }
 
 #dev-id .title-grey666-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #666;
 }
@@ -10021,7 +10021,7 @@
 }
 
 #dev-id .title-grey999-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #999;
 }
@@ -10039,7 +10039,7 @@
 }
 
 #dev-id .title-grey999-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #999;
 }
@@ -10051,7 +10051,7 @@
 }
 
 #dev-id .title-grey999-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #999;
 }
@@ -10103,11 +10103,11 @@
 }
 
 #dev-id .specialText-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-24,
@@ -10138,7 +10138,7 @@
 }
 
 #dev-id .title-red-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #ff002f;
 }
@@ -10156,7 +10156,7 @@
 }
 
 #dev-id .title-green-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #00ac4f;
 }
@@ -10174,7 +10174,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #1dcab3;
 }
@@ -10192,7 +10192,7 @@
 }
 
 #dev-id .title-pink-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #ec6898;
 }
@@ -10209,7 +10209,7 @@
 
 #dev-id .title-blue-PR-24,
 #dev-id .title-blue1-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
 }
 
@@ -10218,13 +10218,13 @@
 }
 
 #dev-id .title-blue2-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #000;
 }
@@ -10248,7 +10248,7 @@
 }
 
 #dev-id .title-black-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #000;
 }
@@ -10260,7 +10260,7 @@
 }
 
 #dev-id .title-black-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #000;
 }
@@ -10280,7 +10280,7 @@
 }
 
 #dev-id .title-white-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #fff;
 }
@@ -10304,7 +10304,7 @@
 }
 
 #dev-id .title-grey333-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #333;
 }
@@ -10316,7 +10316,7 @@
 }
 
 #dev-id .title-grey333-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #333;
 }
@@ -10328,7 +10328,7 @@
 }
 
 #dev-id .title-grey333-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #333;
 }
@@ -10346,7 +10346,7 @@
 }
 
 #dev-id .title-grey666-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #666;
 }
@@ -10364,7 +10364,7 @@
 }
 
 #dev-id .title-grey666-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #666;
 }
@@ -10376,7 +10376,7 @@
 }
 
 #dev-id .title-grey666-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #666;
 }
@@ -10388,7 +10388,7 @@
 }
 
 #dev-id .title-grey999-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #999;
 }
@@ -10406,7 +10406,7 @@
 }
 
 #dev-id .title-grey999-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #999;
 }
@@ -10418,7 +10418,7 @@
 }
 
 #dev-id .title-grey999-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #999;
 }
@@ -10470,11 +10470,11 @@
 }
 
 #dev-id .specialText-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-22,
@@ -10505,7 +10505,7 @@
 }
 
 #dev-id .title-red-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #ff002f;
 }
@@ -10523,7 +10523,7 @@
 }
 
 #dev-id .title-green-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #00ac4f;
 }
@@ -10541,7 +10541,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #1dcab3;
 }
@@ -10559,7 +10559,7 @@
 }
 
 #dev-id .title-pink-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #ec6898;
 }
@@ -10576,7 +10576,7 @@
 
 #dev-id .title-blue-PR-22,
 #dev-id .title-blue1-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
 }
 
@@ -10585,13 +10585,13 @@
 }
 
 #dev-id .title-blue2-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #000;
 }
@@ -10615,7 +10615,7 @@
 }
 
 #dev-id .title-black-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #000;
 }
@@ -10627,7 +10627,7 @@
 }
 
 #dev-id .title-black-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #000;
 }
@@ -10647,7 +10647,7 @@
 }
 
 #dev-id .title-white-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #fff;
 }
@@ -10671,7 +10671,7 @@
 }
 
 #dev-id .title-grey333-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #333;
 }
@@ -10683,7 +10683,7 @@
 }
 
 #dev-id .title-grey333-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #333;
 }
@@ -10695,7 +10695,7 @@
 }
 
 #dev-id .title-grey333-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #333;
 }
@@ -10713,7 +10713,7 @@
 }
 
 #dev-id .title-grey666-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #666;
 }
@@ -10731,7 +10731,7 @@
 }
 
 #dev-id .title-grey666-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #666;
 }
@@ -10743,7 +10743,7 @@
 }
 
 #dev-id .title-grey666-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #666;
 }
@@ -10755,7 +10755,7 @@
 }
 
 #dev-id .title-grey999-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #999;
 }
@@ -10773,7 +10773,7 @@
 }
 
 #dev-id .title-grey999-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #999;
 }
@@ -10785,7 +10785,7 @@
 }
 
 #dev-id .title-grey999-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #999;
 }
@@ -10837,11 +10837,11 @@
 }
 
 #dev-id .specialText-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-20,
@@ -10872,7 +10872,7 @@
 }
 
 #dev-id .title-red-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #ff002f;
 }
@@ -10890,7 +10890,7 @@
 }
 
 #dev-id .title-green-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #00ac4f;
 }
@@ -10908,7 +10908,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #1dcab3;
 }
@@ -10926,7 +10926,7 @@
 }
 
 #dev-id .title-pink-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #ec6898;
 }
@@ -10943,7 +10943,7 @@
 
 #dev-id .title-blue-PR-20,
 #dev-id .title-blue1-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
 }
 
@@ -10952,13 +10952,13 @@
 }
 
 #dev-id .title-blue2-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #000;
 }
@@ -10982,7 +10982,7 @@
 }
 
 #dev-id .title-black-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #000;
 }
@@ -10994,7 +10994,7 @@
 }
 
 #dev-id .title-black-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #000;
 }
@@ -11014,7 +11014,7 @@
 }
 
 #dev-id .title-white-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #fff;
 }
@@ -11038,7 +11038,7 @@
 }
 
 #dev-id .title-grey333-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #333;
 }
@@ -11050,7 +11050,7 @@
 }
 
 #dev-id .title-grey333-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #333;
 }
@@ -11062,7 +11062,7 @@
 }
 
 #dev-id .title-grey333-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #333;
 }
@@ -11080,7 +11080,7 @@
 }
 
 #dev-id .title-grey666-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #666;
 }
@@ -11098,7 +11098,7 @@
 }
 
 #dev-id .title-grey666-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #666;
 }
@@ -11110,7 +11110,7 @@
 }
 
 #dev-id .title-grey666-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #666;
 }
@@ -11122,7 +11122,7 @@
 }
 
 #dev-id .title-grey999-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #999;
 }
@@ -11140,7 +11140,7 @@
 }
 
 #dev-id .title-grey999-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #999;
 }
@@ -11152,7 +11152,7 @@
 }
 
 #dev-id .title-grey999-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #999;
 }
@@ -11204,11 +11204,11 @@
 }
 
 #dev-id .specialText-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-18,
@@ -11239,7 +11239,7 @@
 }
 
 #dev-id .title-red-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #ff002f;
 }
@@ -11257,7 +11257,7 @@
 }
 
 #dev-id .title-green-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #00ac4f;
 }
@@ -11275,7 +11275,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #1dcab3;
 }
@@ -11293,7 +11293,7 @@
 }
 
 #dev-id .title-pink-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #ec6898;
 }
@@ -11310,7 +11310,7 @@
 
 #dev-id .title-blue-PR-18,
 #dev-id .title-blue1-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
 }
 
@@ -11319,13 +11319,13 @@
 }
 
 #dev-id .title-blue2-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #000;
 }
@@ -11349,7 +11349,7 @@
 }
 
 #dev-id .title-black-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #000;
 }
@@ -11361,7 +11361,7 @@
 }
 
 #dev-id .title-black-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #000;
 }
@@ -11381,7 +11381,7 @@
 }
 
 #dev-id .title-white-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #fff;
 }
@@ -11405,7 +11405,7 @@
 }
 
 #dev-id .title-grey333-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -11417,7 +11417,7 @@
 }
 
 #dev-id .title-grey333-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -11429,7 +11429,7 @@
 }
 
 #dev-id .title-grey333-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -11447,7 +11447,7 @@
 }
 
 #dev-id .title-grey666-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #666;
 }
@@ -11465,7 +11465,7 @@
 }
 
 #dev-id .title-grey666-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #666;
 }
@@ -11477,7 +11477,7 @@
 }
 
 #dev-id .title-grey666-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #666;
 }
@@ -11489,7 +11489,7 @@
 }
 
 #dev-id .title-grey999-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #999;
 }
@@ -11507,7 +11507,7 @@
 }
 
 #dev-id .title-grey999-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #999;
 }
@@ -11519,7 +11519,7 @@
 }
 
 #dev-id .title-grey999-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #999;
 }
@@ -11571,11 +11571,11 @@
 }
 
 #dev-id .specialText-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-16,
@@ -11606,7 +11606,7 @@
 }
 
 #dev-id .title-red-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #ff002f;
 }
@@ -11624,7 +11624,7 @@
 }
 
 #dev-id .title-green-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #00ac4f;
 }
@@ -11642,7 +11642,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #1dcab3;
 }
@@ -11660,7 +11660,7 @@
 }
 
 #dev-id .title-pink-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #ec6898;
 }
@@ -11677,7 +11677,7 @@
 
 #dev-id .title-blue-PR-16,
 #dev-id .title-blue1-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
 }
 
@@ -11686,13 +11686,13 @@
 }
 
 #dev-id .title-blue2-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #000;
 }
@@ -11716,7 +11716,7 @@
 }
 
 #dev-id .title-black-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #000;
 }
@@ -11728,7 +11728,7 @@
 }
 
 #dev-id .title-black-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #000;
 }
@@ -11748,7 +11748,7 @@
 }
 
 #dev-id .title-white-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #fff;
 }
@@ -11772,7 +11772,7 @@
 }
 
 #dev-id .title-grey333-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #333;
 }
@@ -11784,7 +11784,7 @@
 }
 
 #dev-id .title-grey333-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #333;
 }
@@ -11796,7 +11796,7 @@
 }
 
 #dev-id .title-grey333-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #333;
 }
@@ -11814,7 +11814,7 @@
 }
 
 #dev-id .title-grey666-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #666;
 }
@@ -11832,7 +11832,7 @@
 }
 
 #dev-id .title-grey666-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #666;
 }
@@ -11844,7 +11844,7 @@
 }
 
 #dev-id .title-grey666-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #666;
 }
@@ -11856,7 +11856,7 @@
 }
 
 #dev-id .title-grey999-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #999;
 }
@@ -11874,7 +11874,7 @@
 }
 
 #dev-id .title-grey999-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #999;
 }
@@ -11886,7 +11886,7 @@
 }
 
 #dev-id .title-grey999-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #999;
 }
@@ -11938,11 +11938,11 @@
 }
 
 #dev-id .specialText-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-14,
@@ -11973,7 +11973,7 @@
 }
 
 #dev-id .title-red-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #ff002f;
 }
@@ -11991,7 +11991,7 @@
 }
 
 #dev-id .title-green-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #00ac4f;
 }
@@ -12009,7 +12009,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #1dcab3;
 }
@@ -12027,7 +12027,7 @@
 }
 
 #dev-id .title-pink-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #ec6898;
 }
@@ -12044,7 +12044,7 @@
 
 #dev-id .title-blue-PR-14,
 #dev-id .title-blue1-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
 }
 
@@ -12053,13 +12053,13 @@
 }
 
 #dev-id .title-blue2-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #000;
 }
@@ -12083,7 +12083,7 @@
 }
 
 #dev-id .title-black-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #000;
 }
@@ -12095,7 +12095,7 @@
 }
 
 #dev-id .title-black-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #000;
 }
@@ -12115,7 +12115,7 @@
 }
 
 #dev-id .title-white-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #fff;
 }
@@ -12139,7 +12139,7 @@
 }
 
 #dev-id .title-grey333-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #333;
 }
@@ -12151,7 +12151,7 @@
 }
 
 #dev-id .title-grey333-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #333;
 }
@@ -12163,7 +12163,7 @@
 }
 
 #dev-id .title-grey333-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #333;
 }
@@ -12181,7 +12181,7 @@
 }
 
 #dev-id .title-grey666-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #666;
 }
@@ -12199,7 +12199,7 @@
 }
 
 #dev-id .title-grey666-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #666;
 }
@@ -12211,7 +12211,7 @@
 }
 
 #dev-id .title-grey666-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #666;
 }
@@ -12223,7 +12223,7 @@
 }
 
 #dev-id .title-grey999-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #999;
 }
@@ -12241,7 +12241,7 @@
 }
 
 #dev-id .title-grey999-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #999;
 }
@@ -12253,7 +12253,7 @@
 }
 
 #dev-id .title-grey999-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #999;
 }
@@ -12305,11 +12305,11 @@
 }
 
 #dev-id .specialText-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-12,
@@ -12340,7 +12340,7 @@
 }
 
 #dev-id .title-red-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #ff002f;
 }
@@ -12358,7 +12358,7 @@
 }
 
 #dev-id .title-green-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #00ac4f;
 }
@@ -12376,7 +12376,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #1dcab3;
 }
@@ -12394,7 +12394,7 @@
 }
 
 #dev-id .title-pink-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #ec6898;
 }
@@ -12411,7 +12411,7 @@
 
 #dev-id .title-blue-PR-12,
 #dev-id .title-blue1-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
 }
 
@@ -12420,13 +12420,13 @@
 }
 
 #dev-id .title-blue2-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #000;
 }
@@ -12450,7 +12450,7 @@
 }
 
 #dev-id .title-black-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #000;
 }
@@ -12462,7 +12462,7 @@
 }
 
 #dev-id .title-black-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #000;
 }
@@ -12482,7 +12482,7 @@
 }
 
 #dev-id .title-white-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #fff;
 }
@@ -12506,7 +12506,7 @@
 }
 
 #dev-id .title-grey333-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #333;
 }
@@ -12518,7 +12518,7 @@
 }
 
 #dev-id .title-grey333-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #333;
 }
@@ -12530,7 +12530,7 @@
 }
 
 #dev-id .title-grey333-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #333;
 }
@@ -12548,7 +12548,7 @@
 }
 
 #dev-id .title-grey666-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #666;
 }
@@ -12566,7 +12566,7 @@
 }
 
 #dev-id .title-grey666-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #666;
 }
@@ -12578,7 +12578,7 @@
 }
 
 #dev-id .title-grey666-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #666;
 }
@@ -12590,7 +12590,7 @@
 }
 
 #dev-id .title-grey999-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #999;
 }
@@ -12608,7 +12608,7 @@
 }
 
 #dev-id .title-grey999-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #999;
 }
@@ -12620,7 +12620,7 @@
 }
 
 #dev-id .title-grey999-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #999;
 }
@@ -12672,11 +12672,11 @@
 }
 
 #dev-id .specialText-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-10,
@@ -12707,7 +12707,7 @@
 }
 
 #dev-id .title-red-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #ff002f;
 }
@@ -12725,7 +12725,7 @@
 }
 
 #dev-id .title-green-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #00ac4f;
 }
@@ -12743,7 +12743,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #1dcab3;
 }
@@ -12761,7 +12761,7 @@
 }
 
 #dev-id .title-pink-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #ec6898;
 }
@@ -12778,7 +12778,7 @@
 
 #dev-id .title-blue-PR-10,
 #dev-id .title-blue1-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
 }
 
@@ -12787,7 +12787,7 @@
 }
 
 #dev-id .title-blue2-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #5cbffe;
 }
@@ -14364,7 +14364,7 @@
   background-image: linear-gradient(90deg, #5cbffe, #a0f5d0, #ffd7c8);
   background-clip: padding-box, border-box;
   background-origin: padding-box, border-box;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #fff;
   height: 45px;
@@ -14458,7 +14458,7 @@
 
 #dev-id .ivu-btn.ivu-btn-success span {
   background-color: none;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   width: 100%;
   color: #fff;
@@ -14606,7 +14606,7 @@
 @media screen and (max-width: 450px) {
   #dev-id .ivu-btn.ivu-btn-primary,
   #dev-id .ivu-btn.ivu-btn-success span {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 0.75rem;
   }
 }
@@ -14697,7 +14697,7 @@
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -14717,7 +14717,7 @@
 
 @media screen and (max-width: 450px) {
   #dev-id .ivu-form-label-top .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 0.875rem;
   }
 }
@@ -15445,14 +15445,14 @@
 
 #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
   background: unset;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
 
 #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab-active {
   color: #000;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   font-weight: 900;
 }
@@ -15478,13 +15478,13 @@
 @media screen and (max-width: 450px) {
   #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
     background: unset;
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 0.875rem;
     color: #333;
   }
 
   #dev-id .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab-active {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 1rem;
   }
 }
@@ -16206,7 +16206,7 @@
 
 #dev-id ~ .v-transfer-dom .ivu-tabs.ivu-tabs > .ivu-tabs-bar .ivu-tabs-tab {
   background: unset;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -16217,7 +16217,7 @@
   > .ivu-tabs-bar
   .ivu-tabs-tab-active {
   color: #000 !important;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
 }
 
@@ -16327,7 +16327,7 @@
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -16347,7 +16347,7 @@
 
 @media screen and (max-width: 450px) {
   #dev-id ~ .v-transfer-dom .ivu-form-label-top .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 0.875rem;
   }
 }
@@ -18385,7 +18385,7 @@
 }
 
 #dev-id .mint .ivu-form-item-label {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   font-weight: 700;
   color: #333 !important;
@@ -18439,7 +18439,7 @@
   }
 
   #dev-id .mint .ivu-form-item-label {
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 1.125rem;
   }
 }
@@ -18852,7 +18852,7 @@
 
   #dev-id .paymentSetting .ivu-form-item-label {
     color: #333;
-    font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+    
     font-size: 1rem;
   }
 
@@ -18899,7 +18899,7 @@
 }
 
 #dev-id .title-black-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #000;
 }
@@ -18923,7 +18923,7 @@
 }
 
 #dev-id .title-black-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #000;
 }
@@ -18935,7 +18935,7 @@
 }
 
 #dev-id .title-black-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #000;
 }
@@ -18955,7 +18955,7 @@
 }
 
 #dev-id .title-white-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #fff;
 }
@@ -18979,7 +18979,7 @@
 }
 
 #dev-id .title-grey333-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #333;
 }
@@ -18991,7 +18991,7 @@
 }
 
 #dev-id .title-grey333-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #333;
 }
@@ -19003,7 +19003,7 @@
 }
 
 #dev-id .title-grey333-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #333;
 }
@@ -19021,7 +19021,7 @@
 }
 
 #dev-id .title-grey666-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #666;
 }
@@ -19039,7 +19039,7 @@
 }
 
 #dev-id .title-grey666-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #666;
 }
@@ -19051,7 +19051,7 @@
 }
 
 #dev-id .title-grey666-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #666;
 }
@@ -19063,7 +19063,7 @@
 }
 
 #dev-id .title-grey999-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #999;
 }
@@ -19081,7 +19081,7 @@
 }
 
 #dev-id .title-grey999-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #999;
 }
@@ -19093,7 +19093,7 @@
 }
 
 #dev-id .title-grey999-PFSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #999;
 }
@@ -19145,11 +19145,11 @@
 }
 
 #dev-id .specialText-PSB-60 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-60,
@@ -19180,7 +19180,7 @@
 }
 
 #dev-id .title-red-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #ff002f;
 }
@@ -19198,7 +19198,7 @@
 }
 
 #dev-id .title-green-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #00ac4f;
 }
@@ -19216,7 +19216,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #1dcab3;
 }
@@ -19234,7 +19234,7 @@
 }
 
 #dev-id .title-pink-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #ec6898;
 }
@@ -19251,7 +19251,7 @@
 
 #dev-id .title-blue-PR-60,
 #dev-id .title-blue1-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
 }
 
@@ -19260,13 +19260,13 @@
 }
 
 #dev-id .title-blue2-PR-60 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #000;
 }
@@ -19290,7 +19290,7 @@
 }
 
 #dev-id .title-black-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #000;
 }
@@ -19302,7 +19302,7 @@
 }
 
 #dev-id .title-black-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #000;
 }
@@ -19322,7 +19322,7 @@
 }
 
 #dev-id .title-white-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #fff;
 }
@@ -19346,7 +19346,7 @@
 }
 
 #dev-id .title-grey333-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #333;
 }
@@ -19358,7 +19358,7 @@
 }
 
 #dev-id .title-grey333-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #333;
 }
@@ -19370,7 +19370,7 @@
 }
 
 #dev-id .title-grey333-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #333;
 }
@@ -19388,7 +19388,7 @@
 }
 
 #dev-id .title-grey666-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #666;
 }
@@ -19406,7 +19406,7 @@
 }
 
 #dev-id .title-grey666-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #666;
 }
@@ -19418,7 +19418,7 @@
 }
 
 #dev-id .title-grey666-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #666;
 }
@@ -19430,7 +19430,7 @@
 }
 
 #dev-id .title-grey999-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #999;
 }
@@ -19448,7 +19448,7 @@
 }
 
 #dev-id .title-grey999-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #999;
 }
@@ -19460,7 +19460,7 @@
 }
 
 #dev-id .title-grey999-PFSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #999;
 }
@@ -19512,11 +19512,11 @@
 }
 
 #dev-id .specialText-PSB-56 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-56,
@@ -19547,7 +19547,7 @@
 }
 
 #dev-id .title-red-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #ff002f;
 }
@@ -19565,7 +19565,7 @@
 }
 
 #dev-id .title-green-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #00ac4f;
 }
@@ -19583,7 +19583,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #1dcab3;
 }
@@ -19601,7 +19601,7 @@
 }
 
 #dev-id .title-pink-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #ec6898;
 }
@@ -19618,7 +19618,7 @@
 
 #dev-id .title-blue-PR-56,
 #dev-id .title-blue1-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
 }
 
@@ -19627,13 +19627,13 @@
 }
 
 #dev-id .title-blue2-PR-56 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #000;
 }
@@ -19657,7 +19657,7 @@
 }
 
 #dev-id .title-black-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #000;
 }
@@ -19669,7 +19669,7 @@
 }
 
 #dev-id .title-black-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #000;
 }
@@ -19689,7 +19689,7 @@
 }
 
 #dev-id .title-white-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #fff;
 }
@@ -19713,7 +19713,7 @@
 }
 
 #dev-id .title-grey333-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #333;
 }
@@ -19725,7 +19725,7 @@
 }
 
 #dev-id .title-grey333-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #333;
 }
@@ -19737,7 +19737,7 @@
 }
 
 #dev-id .title-grey333-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #333;
 }
@@ -19755,7 +19755,7 @@
 }
 
 #dev-id .title-grey666-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #666;
 }
@@ -19773,7 +19773,7 @@
 }
 
 #dev-id .title-grey666-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #666;
 }
@@ -19785,7 +19785,7 @@
 }
 
 #dev-id .title-grey666-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #666;
 }
@@ -19797,7 +19797,7 @@
 }
 
 #dev-id .title-grey999-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #999;
 }
@@ -19815,7 +19815,7 @@
 }
 
 #dev-id .title-grey999-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #999;
 }
@@ -19827,7 +19827,7 @@
 }
 
 #dev-id .title-grey999-PFSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #999;
 }
@@ -19879,11 +19879,11 @@
 }
 
 #dev-id .specialText-PSB-48 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-48,
@@ -19914,7 +19914,7 @@
 }
 
 #dev-id .title-red-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #ff002f;
 }
@@ -19932,7 +19932,7 @@
 }
 
 #dev-id .title-green-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #00ac4f;
 }
@@ -19950,7 +19950,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #1dcab3;
 }
@@ -19968,7 +19968,7 @@
 }
 
 #dev-id .title-pink-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #ec6898;
 }
@@ -19985,7 +19985,7 @@
 
 #dev-id .title-blue-PR-48,
 #dev-id .title-blue1-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
 }
 
@@ -19994,13 +19994,13 @@
 }
 
 #dev-id .title-blue2-PR-48 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 3rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #000;
 }
@@ -20024,7 +20024,7 @@
 }
 
 #dev-id .title-black-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #000;
 }
@@ -20036,7 +20036,7 @@
 }
 
 #dev-id .title-black-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #000;
 }
@@ -20056,7 +20056,7 @@
 }
 
 #dev-id .title-white-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #fff;
 }
@@ -20080,7 +20080,7 @@
 }
 
 #dev-id .title-grey333-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #333;
 }
@@ -20092,7 +20092,7 @@
 }
 
 #dev-id .title-grey333-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #333;
 }
@@ -20104,7 +20104,7 @@
 }
 
 #dev-id .title-grey333-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #333;
 }
@@ -20122,7 +20122,7 @@
 }
 
 #dev-id .title-grey666-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #666;
 }
@@ -20140,7 +20140,7 @@
 }
 
 #dev-id .title-grey666-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #666;
 }
@@ -20152,7 +20152,7 @@
 }
 
 #dev-id .title-grey666-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #666;
 }
@@ -20164,7 +20164,7 @@
 }
 
 #dev-id .title-grey999-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #999;
 }
@@ -20182,7 +20182,7 @@
 }
 
 #dev-id .title-grey999-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #999;
 }
@@ -20194,7 +20194,7 @@
 }
 
 #dev-id .title-grey999-PFSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #999;
 }
@@ -20246,11 +20246,11 @@
 }
 
 #dev-id .specialText-PSB-46 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-46,
@@ -20281,7 +20281,7 @@
 }
 
 #dev-id .title-red-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #ff002f;
 }
@@ -20299,7 +20299,7 @@
 }
 
 #dev-id .title-green-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #00ac4f;
 }
@@ -20317,7 +20317,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #1dcab3;
 }
@@ -20335,7 +20335,7 @@
 }
 
 #dev-id .title-pink-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #ec6898;
 }
@@ -20352,7 +20352,7 @@
 
 #dev-id .title-blue-PR-46,
 #dev-id .title-blue1-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
 }
 
@@ -20361,13 +20361,13 @@
 }
 
 #dev-id .title-blue2-PR-46 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #000;
 }
@@ -20391,7 +20391,7 @@
 }
 
 #dev-id .title-black-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #000;
 }
@@ -20403,7 +20403,7 @@
 }
 
 #dev-id .title-black-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #000;
 }
@@ -20423,7 +20423,7 @@
 }
 
 #dev-id .title-white-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #fff;
 }
@@ -20447,7 +20447,7 @@
 }
 
 #dev-id .title-grey333-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #333;
 }
@@ -20459,7 +20459,7 @@
 }
 
 #dev-id .title-grey333-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #333;
 }
@@ -20471,7 +20471,7 @@
 }
 
 #dev-id .title-grey333-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #333;
 }
@@ -20489,7 +20489,7 @@
 }
 
 #dev-id .title-grey666-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #666;
 }
@@ -20507,7 +20507,7 @@
 }
 
 #dev-id .title-grey666-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #666;
 }
@@ -20519,7 +20519,7 @@
 }
 
 #dev-id .title-grey666-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #666;
 }
@@ -20531,7 +20531,7 @@
 }
 
 #dev-id .title-grey999-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #999;
 }
@@ -20549,7 +20549,7 @@
 }
 
 #dev-id .title-grey999-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #999;
 }
@@ -20561,7 +20561,7 @@
 }
 
 #dev-id .title-grey999-PFSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #999;
 }
@@ -20613,11 +20613,11 @@
 }
 
 #dev-id .specialText-PSB-44 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-44,
@@ -20648,7 +20648,7 @@
 }
 
 #dev-id .title-red-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #ff002f;
 }
@@ -20666,7 +20666,7 @@
 }
 
 #dev-id .title-green-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #00ac4f;
 }
@@ -20684,7 +20684,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #1dcab3;
 }
@@ -20702,7 +20702,7 @@
 }
 
 #dev-id .title-pink-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #ec6898;
 }
@@ -20719,7 +20719,7 @@
 
 #dev-id .title-blue-PR-44,
 #dev-id .title-blue1-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
 }
 
@@ -20728,13 +20728,13 @@
 }
 
 #dev-id .title-blue2-PR-44 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #000;
 }
@@ -20758,7 +20758,7 @@
 }
 
 #dev-id .title-black-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #000;
 }
@@ -20770,7 +20770,7 @@
 }
 
 #dev-id .title-black-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #000;
 }
@@ -20790,7 +20790,7 @@
 }
 
 #dev-id .title-white-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #fff;
 }
@@ -20814,7 +20814,7 @@
 }
 
 #dev-id .title-grey333-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #333;
 }
@@ -20826,7 +20826,7 @@
 }
 
 #dev-id .title-grey333-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #333;
 }
@@ -20838,7 +20838,7 @@
 }
 
 #dev-id .title-grey333-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #333;
 }
@@ -20856,7 +20856,7 @@
 }
 
 #dev-id .title-grey666-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #666;
 }
@@ -20874,7 +20874,7 @@
 }
 
 #dev-id .title-grey666-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #666;
 }
@@ -20886,7 +20886,7 @@
 }
 
 #dev-id .title-grey666-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #666;
 }
@@ -20898,7 +20898,7 @@
 }
 
 #dev-id .title-grey999-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #999;
 }
@@ -20916,7 +20916,7 @@
 }
 
 #dev-id .title-grey999-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #999;
 }
@@ -20928,7 +20928,7 @@
 }
 
 #dev-id .title-grey999-PFSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #999;
 }
@@ -20980,11 +20980,11 @@
 }
 
 #dev-id .specialText-PSB-42 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-42,
@@ -21015,7 +21015,7 @@
 }
 
 #dev-id .title-red-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #ff002f;
 }
@@ -21033,7 +21033,7 @@
 }
 
 #dev-id .title-green-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #00ac4f;
 }
@@ -21051,7 +21051,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #1dcab3;
 }
@@ -21069,7 +21069,7 @@
 }
 
 #dev-id .title-pink-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #ec6898;
 }
@@ -21086,7 +21086,7 @@
 
 #dev-id .title-blue-PR-42,
 #dev-id .title-blue1-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
 }
 
@@ -21095,13 +21095,13 @@
 }
 
 #dev-id .title-blue2-PR-42 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.625rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #000;
 }
@@ -21125,7 +21125,7 @@
 }
 
 #dev-id .title-black-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #000;
 }
@@ -21137,7 +21137,7 @@
 }
 
 #dev-id .title-black-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #000;
 }
@@ -21157,7 +21157,7 @@
 }
 
 #dev-id .title-white-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #fff;
 }
@@ -21181,7 +21181,7 @@
 }
 
 #dev-id .title-grey333-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #333;
 }
@@ -21193,7 +21193,7 @@
 }
 
 #dev-id .title-grey333-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #333;
 }
@@ -21205,7 +21205,7 @@
 }
 
 #dev-id .title-grey333-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #333;
 }
@@ -21223,7 +21223,7 @@
 }
 
 #dev-id .title-grey666-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #666;
 }
@@ -21241,7 +21241,7 @@
 }
 
 #dev-id .title-grey666-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #666;
 }
@@ -21253,7 +21253,7 @@
 }
 
 #dev-id .title-grey666-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #666;
 }
@@ -21265,7 +21265,7 @@
 }
 
 #dev-id .title-grey999-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #999;
 }
@@ -21283,7 +21283,7 @@
 }
 
 #dev-id .title-grey999-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #999;
 }
@@ -21295,7 +21295,7 @@
 }
 
 #dev-id .title-grey999-PFSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #999;
 }
@@ -21347,11 +21347,11 @@
 }
 
 #dev-id .specialText-PSB-40 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-40,
@@ -21382,7 +21382,7 @@
 }
 
 #dev-id .title-red-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #ff002f;
 }
@@ -21400,7 +21400,7 @@
 }
 
 #dev-id .title-green-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #00ac4f;
 }
@@ -21418,7 +21418,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #1dcab3;
 }
@@ -21436,7 +21436,7 @@
 }
 
 #dev-id .title-pink-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #ec6898;
 }
@@ -21453,7 +21453,7 @@
 
 #dev-id .title-blue-PR-40,
 #dev-id .title-blue1-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
 }
 
@@ -21462,13 +21462,13 @@
 }
 
 #dev-id .title-blue2-PR-40 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #000;
 }
@@ -21492,7 +21492,7 @@
 }
 
 #dev-id .title-black-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #000;
 }
@@ -21504,7 +21504,7 @@
 }
 
 #dev-id .title-black-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #000;
 }
@@ -21524,7 +21524,7 @@
 }
 
 #dev-id .title-white-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #fff;
 }
@@ -21548,7 +21548,7 @@
 }
 
 #dev-id .title-grey333-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #333;
 }
@@ -21560,7 +21560,7 @@
 }
 
 #dev-id .title-grey333-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #333;
 }
@@ -21572,7 +21572,7 @@
 }
 
 #dev-id .title-grey333-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #333;
 }
@@ -21590,7 +21590,7 @@
 }
 
 #dev-id .title-grey666-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #666;
 }
@@ -21608,7 +21608,7 @@
 }
 
 #dev-id .title-grey666-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #666;
 }
@@ -21620,7 +21620,7 @@
 }
 
 #dev-id .title-grey666-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #666;
 }
@@ -21632,7 +21632,7 @@
 }
 
 #dev-id .title-grey999-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #999;
 }
@@ -21650,7 +21650,7 @@
 }
 
 #dev-id .title-grey999-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #999;
 }
@@ -21662,7 +21662,7 @@
 }
 
 #dev-id .title-grey999-PFSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #999;
 }
@@ -21714,11 +21714,11 @@
 }
 
 #dev-id .specialText-PSB-38 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-38,
@@ -21749,7 +21749,7 @@
 }
 
 #dev-id .title-red-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #ff002f;
 }
@@ -21767,7 +21767,7 @@
 }
 
 #dev-id .title-green-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #00ac4f;
 }
@@ -21785,7 +21785,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #1dcab3;
 }
@@ -21803,7 +21803,7 @@
 }
 
 #dev-id .title-pink-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #ec6898;
 }
@@ -21820,7 +21820,7 @@
 
 #dev-id .title-blue-PR-38,
 #dev-id .title-blue1-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
 }
 
@@ -21829,13 +21829,13 @@
 }
 
 #dev-id .title-blue2-PR-38 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.375rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #000;
 }
@@ -21859,7 +21859,7 @@
 }
 
 #dev-id .title-black-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #000;
 }
@@ -21871,7 +21871,7 @@
 }
 
 #dev-id .title-black-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #000;
 }
@@ -21891,7 +21891,7 @@
 }
 
 #dev-id .title-white-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #fff;
 }
@@ -21915,7 +21915,7 @@
 }
 
 #dev-id .title-grey333-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #333;
 }
@@ -21927,7 +21927,7 @@
 }
 
 #dev-id .title-grey333-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #333;
 }
@@ -21939,7 +21939,7 @@
 }
 
 #dev-id .title-grey333-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #333;
 }
@@ -21957,7 +21957,7 @@
 }
 
 #dev-id .title-grey666-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #666;
 }
@@ -21975,7 +21975,7 @@
 }
 
 #dev-id .title-grey666-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #666;
 }
@@ -21987,7 +21987,7 @@
 }
 
 #dev-id .title-grey666-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #666;
 }
@@ -21999,7 +21999,7 @@
 }
 
 #dev-id .title-grey999-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #999;
 }
@@ -22017,7 +22017,7 @@
 }
 
 #dev-id .title-grey999-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #999;
 }
@@ -22029,7 +22029,7 @@
 }
 
 #dev-id .title-grey999-PFSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #999;
 }
@@ -22081,11 +22081,11 @@
 }
 
 #dev-id .specialText-PSB-36 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-36,
@@ -22116,7 +22116,7 @@
 }
 
 #dev-id .title-red-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #ff002f;
 }
@@ -22134,7 +22134,7 @@
 }
 
 #dev-id .title-green-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #00ac4f;
 }
@@ -22152,7 +22152,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #1dcab3;
 }
@@ -22170,7 +22170,7 @@
 }
 
 #dev-id .title-pink-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #ec6898;
 }
@@ -22187,7 +22187,7 @@
 
 #dev-id .title-blue-PR-36,
 #dev-id .title-blue1-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
 }
 
@@ -22196,13 +22196,13 @@
 }
 
 #dev-id .title-blue2-PR-36 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.25rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #000;
 }
@@ -22226,7 +22226,7 @@
 }
 
 #dev-id .title-black-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #000;
 }
@@ -22238,7 +22238,7 @@
 }
 
 #dev-id .title-black-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #000;
 }
@@ -22258,7 +22258,7 @@
 }
 
 #dev-id .title-white-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #fff;
 }
@@ -22282,7 +22282,7 @@
 }
 
 #dev-id .title-grey333-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #333;
 }
@@ -22294,7 +22294,7 @@
 }
 
 #dev-id .title-grey333-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #333;
 }
@@ -22306,7 +22306,7 @@
 }
 
 #dev-id .title-grey333-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #333;
 }
@@ -22324,7 +22324,7 @@
 }
 
 #dev-id .title-grey666-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #666;
 }
@@ -22342,7 +22342,7 @@
 }
 
 #dev-id .title-grey666-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #666;
 }
@@ -22354,7 +22354,7 @@
 }
 
 #dev-id .title-grey666-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #666;
 }
@@ -22366,7 +22366,7 @@
 }
 
 #dev-id .title-grey999-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #999;
 }
@@ -22384,7 +22384,7 @@
 }
 
 #dev-id .title-grey999-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #999;
 }
@@ -22396,7 +22396,7 @@
 }
 
 #dev-id .title-grey999-PFSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #999;
 }
@@ -22448,11 +22448,11 @@
 }
 
 #dev-id .specialText-PSB-34 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-34,
@@ -22483,7 +22483,7 @@
 }
 
 #dev-id .title-red-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #ff002f;
 }
@@ -22501,7 +22501,7 @@
 }
 
 #dev-id .title-green-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #00ac4f;
 }
@@ -22519,7 +22519,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #1dcab3;
 }
@@ -22537,7 +22537,7 @@
 }
 
 #dev-id .title-pink-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #ec6898;
 }
@@ -22554,7 +22554,7 @@
 
 #dev-id .title-blue-PR-34,
 #dev-id .title-blue1-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
 }
 
@@ -22563,13 +22563,13 @@
 }
 
 #dev-id .title-blue2-PR-34 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2.125rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #000;
 }
@@ -22593,7 +22593,7 @@
 }
 
 #dev-id .title-black-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #000;
 }
@@ -22605,7 +22605,7 @@
 }
 
 #dev-id .title-black-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #000;
 }
@@ -22625,7 +22625,7 @@
 }
 
 #dev-id .title-white-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #fff;
 }
@@ -22649,7 +22649,7 @@
 }
 
 #dev-id .title-grey333-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #333;
 }
@@ -22661,7 +22661,7 @@
 }
 
 #dev-id .title-grey333-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #333;
 }
@@ -22673,7 +22673,7 @@
 }
 
 #dev-id .title-grey333-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #333;
 }
@@ -22691,7 +22691,7 @@
 }
 
 #dev-id .title-grey666-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #666;
 }
@@ -22709,7 +22709,7 @@
 }
 
 #dev-id .title-grey666-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #666;
 }
@@ -22721,7 +22721,7 @@
 }
 
 #dev-id .title-grey666-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #666;
 }
@@ -22733,7 +22733,7 @@
 }
 
 #dev-id .title-grey999-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #999;
 }
@@ -22751,7 +22751,7 @@
 }
 
 #dev-id .title-grey999-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #999;
 }
@@ -22763,7 +22763,7 @@
 }
 
 #dev-id .title-grey999-PFSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #999;
 }
@@ -22815,11 +22815,11 @@
 }
 
 #dev-id .specialText-PSB-32 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-32,
@@ -22850,7 +22850,7 @@
 }
 
 #dev-id .title-red-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #ff002f;
 }
@@ -22868,7 +22868,7 @@
 }
 
 #dev-id .title-green-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #00ac4f;
 }
@@ -22886,7 +22886,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #1dcab3;
 }
@@ -22904,7 +22904,7 @@
 }
 
 #dev-id .title-pink-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #ec6898;
 }
@@ -22921,7 +22921,7 @@
 
 #dev-id .title-blue-PR-32,
 #dev-id .title-blue1-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
 }
 
@@ -22930,13 +22930,13 @@
 }
 
 #dev-id .title-blue2-PR-32 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 2rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #000;
 }
@@ -22960,7 +22960,7 @@
 }
 
 #dev-id .title-black-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #000;
 }
@@ -22972,7 +22972,7 @@
 }
 
 #dev-id .title-black-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #000;
 }
@@ -22992,7 +22992,7 @@
 }
 
 #dev-id .title-white-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #fff;
 }
@@ -23016,7 +23016,7 @@
 }
 
 #dev-id .title-grey333-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #333;
 }
@@ -23028,7 +23028,7 @@
 }
 
 #dev-id .title-grey333-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #333;
 }
@@ -23040,7 +23040,7 @@
 }
 
 #dev-id .title-grey333-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #333;
 }
@@ -23058,7 +23058,7 @@
 }
 
 #dev-id .title-grey666-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #666;
 }
@@ -23076,7 +23076,7 @@
 }
 
 #dev-id .title-grey666-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #666;
 }
@@ -23088,7 +23088,7 @@
 }
 
 #dev-id .title-grey666-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #666;
 }
@@ -23100,7 +23100,7 @@
 }
 
 #dev-id .title-grey999-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #999;
 }
@@ -23118,7 +23118,7 @@
 }
 
 #dev-id .title-grey999-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #999;
 }
@@ -23130,7 +23130,7 @@
 }
 
 #dev-id .title-grey999-PFSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #999;
 }
@@ -23182,11 +23182,11 @@
 }
 
 #dev-id .specialText-PSB-30 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-30,
@@ -23217,7 +23217,7 @@
 }
 
 #dev-id .title-red-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #ff002f;
 }
@@ -23235,7 +23235,7 @@
 }
 
 #dev-id .title-green-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #00ac4f;
 }
@@ -23253,7 +23253,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #1dcab3;
 }
@@ -23271,7 +23271,7 @@
 }
 
 #dev-id .title-pink-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #ec6898;
 }
@@ -23288,7 +23288,7 @@
 
 #dev-id .title-blue-PR-30,
 #dev-id .title-blue1-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
 }
 
@@ -23297,13 +23297,13 @@
 }
 
 #dev-id .title-blue2-PR-30 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #000;
 }
@@ -23327,7 +23327,7 @@
 }
 
 #dev-id .title-black-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #000;
 }
@@ -23339,7 +23339,7 @@
 }
 
 #dev-id .title-black-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #000;
 }
@@ -23359,7 +23359,7 @@
 }
 
 #dev-id .title-white-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #fff;
 }
@@ -23383,7 +23383,7 @@
 }
 
 #dev-id .title-grey333-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #333;
 }
@@ -23395,7 +23395,7 @@
 }
 
 #dev-id .title-grey333-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #333;
 }
@@ -23407,7 +23407,7 @@
 }
 
 #dev-id .title-grey333-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #333;
 }
@@ -23425,7 +23425,7 @@
 }
 
 #dev-id .title-grey666-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #666;
 }
@@ -23443,7 +23443,7 @@
 }
 
 #dev-id .title-grey666-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #666;
 }
@@ -23455,7 +23455,7 @@
 }
 
 #dev-id .title-grey666-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #666;
 }
@@ -23467,7 +23467,7 @@
 }
 
 #dev-id .title-grey999-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #999;
 }
@@ -23485,7 +23485,7 @@
 }
 
 #dev-id .title-grey999-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #999;
 }
@@ -23497,7 +23497,7 @@
 }
 
 #dev-id .title-grey999-PFSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #999;
 }
@@ -23549,11 +23549,11 @@
 }
 
 #dev-id .specialText-PSB-28 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-28,
@@ -23584,7 +23584,7 @@
 }
 
 #dev-id .title-red-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #ff002f;
 }
@@ -23602,7 +23602,7 @@
 }
 
 #dev-id .title-green-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #00ac4f;
 }
@@ -23620,7 +23620,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #1dcab3;
 }
@@ -23638,7 +23638,7 @@
 }
 
 #dev-id .title-pink-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #ec6898;
 }
@@ -23655,7 +23655,7 @@
 
 #dev-id .title-blue-PR-28,
 #dev-id .title-blue1-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
 }
 
@@ -23664,13 +23664,13 @@
 }
 
 #dev-id .title-blue2-PR-28 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #000;
 }
@@ -23694,7 +23694,7 @@
 }
 
 #dev-id .title-black-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #000;
 }
@@ -23706,7 +23706,7 @@
 }
 
 #dev-id .title-black-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #000;
 }
@@ -23726,7 +23726,7 @@
 }
 
 #dev-id .title-white-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #fff;
 }
@@ -23750,7 +23750,7 @@
 }
 
 #dev-id .title-grey333-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #333;
 }
@@ -23762,7 +23762,7 @@
 }
 
 #dev-id .title-grey333-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #333;
 }
@@ -23774,7 +23774,7 @@
 }
 
 #dev-id .title-grey333-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #333;
 }
@@ -23792,7 +23792,7 @@
 }
 
 #dev-id .title-grey666-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #666;
 }
@@ -23810,7 +23810,7 @@
 }
 
 #dev-id .title-grey666-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #666;
 }
@@ -23822,7 +23822,7 @@
 }
 
 #dev-id .title-grey666-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #666;
 }
@@ -23834,7 +23834,7 @@
 }
 
 #dev-id .title-grey999-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #999;
 }
@@ -23852,7 +23852,7 @@
 }
 
 #dev-id .title-grey999-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #999;
 }
@@ -23864,7 +23864,7 @@
 }
 
 #dev-id .title-grey999-PFSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #999;
 }
@@ -23916,11 +23916,11 @@
 }
 
 #dev-id .specialText-PSB-26 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-26,
@@ -23951,7 +23951,7 @@
 }
 
 #dev-id .title-red-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #ff002f;
 }
@@ -23969,7 +23969,7 @@
 }
 
 #dev-id .title-green-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #00ac4f;
 }
@@ -23987,7 +23987,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #1dcab3;
 }
@@ -24005,7 +24005,7 @@
 }
 
 #dev-id .title-pink-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #ec6898;
 }
@@ -24022,7 +24022,7 @@
 
 #dev-id .title-blue-PR-26,
 #dev-id .title-blue1-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
 }
 
@@ -24031,13 +24031,13 @@
 }
 
 #dev-id .title-blue2-PR-26 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.625rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #000;
 }
@@ -24061,7 +24061,7 @@
 }
 
 #dev-id .title-black-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #000;
 }
@@ -24073,7 +24073,7 @@
 }
 
 #dev-id .title-black-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #000;
 }
@@ -24093,7 +24093,7 @@
 }
 
 #dev-id .title-white-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #fff;
 }
@@ -24117,7 +24117,7 @@
 }
 
 #dev-id .title-grey333-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #333;
 }
@@ -24129,7 +24129,7 @@
 }
 
 #dev-id .title-grey333-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #333;
 }
@@ -24141,7 +24141,7 @@
 }
 
 #dev-id .title-grey333-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #333;
 }
@@ -24159,7 +24159,7 @@
 }
 
 #dev-id .title-grey666-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #666;
 }
@@ -24177,7 +24177,7 @@
 }
 
 #dev-id .title-grey666-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #666;
 }
@@ -24189,7 +24189,7 @@
 }
 
 #dev-id .title-grey666-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #666;
 }
@@ -24201,7 +24201,7 @@
 }
 
 #dev-id .title-grey999-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #999;
 }
@@ -24219,7 +24219,7 @@
 }
 
 #dev-id .title-grey999-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #999;
 }
@@ -24231,7 +24231,7 @@
 }
 
 #dev-id .title-grey999-PFSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #999;
 }
@@ -24283,11 +24283,11 @@
 }
 
 #dev-id .specialText-PSB-24 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-24,
@@ -24318,7 +24318,7 @@
 }
 
 #dev-id .title-red-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #ff002f;
 }
@@ -24336,7 +24336,7 @@
 }
 
 #dev-id .title-green-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #00ac4f;
 }
@@ -24354,7 +24354,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #1dcab3;
 }
@@ -24372,7 +24372,7 @@
 }
 
 #dev-id .title-pink-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #ec6898;
 }
@@ -24389,7 +24389,7 @@
 
 #dev-id .title-blue-PR-24,
 #dev-id .title-blue1-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
 }
 
@@ -24398,13 +24398,13 @@
 }
 
 #dev-id .title-blue2-PR-24 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.5rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #000;
 }
@@ -24428,7 +24428,7 @@
 }
 
 #dev-id .title-black-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #000;
 }
@@ -24440,7 +24440,7 @@
 }
 
 #dev-id .title-black-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #000;
 }
@@ -24460,7 +24460,7 @@
 }
 
 #dev-id .title-white-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #fff;
 }
@@ -24484,7 +24484,7 @@
 }
 
 #dev-id .title-grey333-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #333;
 }
@@ -24496,7 +24496,7 @@
 }
 
 #dev-id .title-grey333-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #333;
 }
@@ -24508,7 +24508,7 @@
 }
 
 #dev-id .title-grey333-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #333;
 }
@@ -24526,7 +24526,7 @@
 }
 
 #dev-id .title-grey666-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #666;
 }
@@ -24544,7 +24544,7 @@
 }
 
 #dev-id .title-grey666-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #666;
 }
@@ -24556,7 +24556,7 @@
 }
 
 #dev-id .title-grey666-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #666;
 }
@@ -24568,7 +24568,7 @@
 }
 
 #dev-id .title-grey999-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #999;
 }
@@ -24586,7 +24586,7 @@
 }
 
 #dev-id .title-grey999-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #999;
 }
@@ -24598,7 +24598,7 @@
 }
 
 #dev-id .title-grey999-PFSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #999;
 }
@@ -24650,11 +24650,11 @@
 }
 
 #dev-id .specialText-PSB-22 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-22,
@@ -24685,7 +24685,7 @@
 }
 
 #dev-id .title-red-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #ff002f;
 }
@@ -24703,7 +24703,7 @@
 }
 
 #dev-id .title-green-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #00ac4f;
 }
@@ -24721,7 +24721,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #1dcab3;
 }
@@ -24739,7 +24739,7 @@
 }
 
 #dev-id .title-pink-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #ec6898;
 }
@@ -24756,7 +24756,7 @@
 
 #dev-id .title-blue-PR-22,
 #dev-id .title-blue1-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
 }
 
@@ -24765,13 +24765,13 @@
 }
 
 #dev-id .title-blue2-PR-22 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.375rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #000;
 }
@@ -24795,7 +24795,7 @@
 }
 
 #dev-id .title-black-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #000;
 }
@@ -24807,7 +24807,7 @@
 }
 
 #dev-id .title-black-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #000;
 }
@@ -24827,7 +24827,7 @@
 }
 
 #dev-id .title-white-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #fff;
 }
@@ -24851,7 +24851,7 @@
 }
 
 #dev-id .title-grey333-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #333;
 }
@@ -24863,7 +24863,7 @@
 }
 
 #dev-id .title-grey333-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #333;
 }
@@ -24875,7 +24875,7 @@
 }
 
 #dev-id .title-grey333-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #333;
 }
@@ -24893,7 +24893,7 @@
 }
 
 #dev-id .title-grey666-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #666;
 }
@@ -24911,7 +24911,7 @@
 }
 
 #dev-id .title-grey666-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #666;
 }
@@ -24923,7 +24923,7 @@
 }
 
 #dev-id .title-grey666-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #666;
 }
@@ -24935,7 +24935,7 @@
 }
 
 #dev-id .title-grey999-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #999;
 }
@@ -24953,7 +24953,7 @@
 }
 
 #dev-id .title-grey999-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #999;
 }
@@ -24965,7 +24965,7 @@
 }
 
 #dev-id .title-grey999-PFSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #999;
 }
@@ -25017,11 +25017,11 @@
 }
 
 #dev-id .specialText-PSB-20 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-20,
@@ -25052,7 +25052,7 @@
 }
 
 #dev-id .title-red-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #ff002f;
 }
@@ -25070,7 +25070,7 @@
 }
 
 #dev-id .title-green-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #00ac4f;
 }
@@ -25088,7 +25088,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #1dcab3;
 }
@@ -25106,7 +25106,7 @@
 }
 
 #dev-id .title-pink-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #ec6898;
 }
@@ -25123,7 +25123,7 @@
 
 #dev-id .title-blue-PR-20,
 #dev-id .title-blue1-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
 }
 
@@ -25132,13 +25132,13 @@
 }
 
 #dev-id .title-blue2-PR-20 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.25rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #000;
 }
@@ -25162,7 +25162,7 @@
 }
 
 #dev-id .title-black-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #000;
 }
@@ -25174,7 +25174,7 @@
 }
 
 #dev-id .title-black-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #000;
 }
@@ -25194,7 +25194,7 @@
 }
 
 #dev-id .title-white-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #fff;
 }
@@ -25218,7 +25218,7 @@
 }
 
 #dev-id .title-grey333-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #333;
 }
@@ -25230,7 +25230,7 @@
 }
 
 #dev-id .title-grey333-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #333;
 }
@@ -25242,7 +25242,7 @@
 }
 
 #dev-id .title-grey333-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #333;
 }
@@ -25260,7 +25260,7 @@
 }
 
 #dev-id .title-grey666-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #666;
 }
@@ -25278,7 +25278,7 @@
 }
 
 #dev-id .title-grey666-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #666;
 }
@@ -25290,7 +25290,7 @@
 }
 
 #dev-id .title-grey666-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #666;
 }
@@ -25302,7 +25302,7 @@
 }
 
 #dev-id .title-grey999-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #999;
 }
@@ -25320,7 +25320,7 @@
 }
 
 #dev-id .title-grey999-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #999;
 }
@@ -25332,7 +25332,7 @@
 }
 
 #dev-id .title-grey999-PFSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #999;
 }
@@ -25384,11 +25384,11 @@
 }
 
 #dev-id .specialText-PSB-18 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-18,
@@ -25419,7 +25419,7 @@
 }
 
 #dev-id .title-red-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #ff002f;
 }
@@ -25437,7 +25437,7 @@
 }
 
 #dev-id .title-green-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #00ac4f;
 }
@@ -25455,7 +25455,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #1dcab3;
 }
@@ -25473,7 +25473,7 @@
 }
 
 #dev-id .title-pink-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #ec6898;
 }
@@ -25490,7 +25490,7 @@
 
 #dev-id .title-blue-PR-18,
 #dev-id .title-blue1-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
 }
 
@@ -25499,13 +25499,13 @@
 }
 
 #dev-id .title-blue2-PR-18 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1.125rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #000;
 }
@@ -25529,7 +25529,7 @@
 }
 
 #dev-id .title-black-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #000;
 }
@@ -25541,7 +25541,7 @@
 }
 
 #dev-id .title-black-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #000;
 }
@@ -25561,7 +25561,7 @@
 }
 
 #dev-id .title-white-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #fff;
 }
@@ -25585,7 +25585,7 @@
 }
 
 #dev-id .title-grey333-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -25597,7 +25597,7 @@
 }
 
 #dev-id .title-grey333-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -25609,7 +25609,7 @@
 }
 
 #dev-id .title-grey333-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #333;
 }
@@ -25627,7 +25627,7 @@
 }
 
 #dev-id .title-grey666-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #666;
 }
@@ -25645,7 +25645,7 @@
 }
 
 #dev-id .title-grey666-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #666;
 }
@@ -25657,7 +25657,7 @@
 }
 
 #dev-id .title-grey666-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #666;
 }
@@ -25669,7 +25669,7 @@
 }
 
 #dev-id .title-grey999-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #999;
 }
@@ -25687,7 +25687,7 @@
 }
 
 #dev-id .title-grey999-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #999;
 }
@@ -25699,7 +25699,7 @@
 }
 
 #dev-id .title-grey999-PFSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #999;
 }
@@ -25751,11 +25751,11 @@
 }
 
 #dev-id .specialText-PSB-16 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-16,
@@ -25786,7 +25786,7 @@
 }
 
 #dev-id .title-red-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #ff002f;
 }
@@ -25804,7 +25804,7 @@
 }
 
 #dev-id .title-green-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #00ac4f;
 }
@@ -25822,7 +25822,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #1dcab3;
 }
@@ -25840,7 +25840,7 @@
 }
 
 #dev-id .title-pink-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #ec6898;
 }
@@ -25857,7 +25857,7 @@
 
 #dev-id .title-blue-PR-16,
 #dev-id .title-blue1-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
 }
 
@@ -25866,13 +25866,13 @@
 }
 
 #dev-id .title-blue2-PR-16 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 1rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #000;
 }
@@ -25896,7 +25896,7 @@
 }
 
 #dev-id .title-black-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #000;
 }
@@ -25908,7 +25908,7 @@
 }
 
 #dev-id .title-black-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #000;
 }
@@ -25928,7 +25928,7 @@
 }
 
 #dev-id .title-white-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #fff;
 }
@@ -25952,7 +25952,7 @@
 }
 
 #dev-id .title-grey333-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #333;
 }
@@ -25964,7 +25964,7 @@
 }
 
 #dev-id .title-grey333-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #333;
 }
@@ -25976,7 +25976,7 @@
 }
 
 #dev-id .title-grey333-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #333;
 }
@@ -25994,7 +25994,7 @@
 }
 
 #dev-id .title-grey666-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #666;
 }
@@ -26012,7 +26012,7 @@
 }
 
 #dev-id .title-grey666-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #666;
 }
@@ -26024,7 +26024,7 @@
 }
 
 #dev-id .title-grey666-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #666;
 }
@@ -26036,7 +26036,7 @@
 }
 
 #dev-id .title-grey999-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #999;
 }
@@ -26054,7 +26054,7 @@
 }
 
 #dev-id .title-grey999-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #999;
 }
@@ -26066,7 +26066,7 @@
 }
 
 #dev-id .title-grey999-PFSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #999;
 }
@@ -26118,11 +26118,11 @@
 }
 
 #dev-id .specialText-PSB-14 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-14,
@@ -26153,7 +26153,7 @@
 }
 
 #dev-id .title-red-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #ff002f;
 }
@@ -26171,7 +26171,7 @@
 }
 
 #dev-id .title-green-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #00ac4f;
 }
@@ -26189,7 +26189,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #1dcab3;
 }
@@ -26207,7 +26207,7 @@
 }
 
 #dev-id .title-pink-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #ec6898;
 }
@@ -26224,7 +26224,7 @@
 
 #dev-id .title-blue-PR-14,
 #dev-id .title-blue1-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
 }
 
@@ -26233,13 +26233,13 @@
 }
 
 #dev-id .title-blue2-PR-14 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.875rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #000;
 }
@@ -26263,7 +26263,7 @@
 }
 
 #dev-id .title-black-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #000;
 }
@@ -26275,7 +26275,7 @@
 }
 
 #dev-id .title-black-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #000;
 }
@@ -26295,7 +26295,7 @@
 }
 
 #dev-id .title-white-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #fff;
 }
@@ -26319,7 +26319,7 @@
 }
 
 #dev-id .title-grey333-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #333;
 }
@@ -26331,7 +26331,7 @@
 }
 
 #dev-id .title-grey333-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #333;
 }
@@ -26343,7 +26343,7 @@
 }
 
 #dev-id .title-grey333-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #333;
 }
@@ -26361,7 +26361,7 @@
 }
 
 #dev-id .title-grey666-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #666;
 }
@@ -26379,7 +26379,7 @@
 }
 
 #dev-id .title-grey666-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #666;
 }
@@ -26391,7 +26391,7 @@
 }
 
 #dev-id .title-grey666-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #666;
 }
@@ -26403,7 +26403,7 @@
 }
 
 #dev-id .title-grey999-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #999;
 }
@@ -26421,7 +26421,7 @@
 }
 
 #dev-id .title-grey999-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #999;
 }
@@ -26433,7 +26433,7 @@
 }
 
 #dev-id .title-grey999-PFSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #999;
 }
@@ -26485,11 +26485,11 @@
 }
 
 #dev-id .specialText-PSB-12 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-12,
@@ -26520,7 +26520,7 @@
 }
 
 #dev-id .title-red-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #ff002f;
 }
@@ -26538,7 +26538,7 @@
 }
 
 #dev-id .title-green-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #00ac4f;
 }
@@ -26556,7 +26556,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #1dcab3;
 }
@@ -26574,7 +26574,7 @@
 }
 
 #dev-id .title-pink-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #ec6898;
 }
@@ -26591,7 +26591,7 @@
 
 #dev-id .title-blue-PR-12,
 #dev-id .title-blue1-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
 }
 
@@ -26600,13 +26600,13 @@
 }
 
 #dev-id .title-blue2-PR-12 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.75rem;
   color: #5cbffe;
 }
 
 #dev-id .title-black-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #000;
 }
@@ -26630,7 +26630,7 @@
 }
 
 #dev-id .title-black-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #000;
 }
@@ -26642,7 +26642,7 @@
 }
 
 #dev-id .title-black-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #000;
 }
@@ -26662,7 +26662,7 @@
 }
 
 #dev-id .title-white-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #fff;
 }
@@ -26686,7 +26686,7 @@
 }
 
 #dev-id .title-grey333-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #333;
 }
@@ -26698,7 +26698,7 @@
 }
 
 #dev-id .title-grey333-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #333;
 }
@@ -26710,7 +26710,7 @@
 }
 
 #dev-id .title-grey333-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #333;
 }
@@ -26728,7 +26728,7 @@
 }
 
 #dev-id .title-grey666-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #666;
 }
@@ -26746,7 +26746,7 @@
 }
 
 #dev-id .title-grey666-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #666;
 }
@@ -26758,7 +26758,7 @@
 }
 
 #dev-id .title-grey666-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #666;
 }
@@ -26770,7 +26770,7 @@
 }
 
 #dev-id .title-grey999-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #999;
 }
@@ -26788,7 +26788,7 @@
 }
 
 #dev-id .title-grey999-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #999;
 }
@@ -26800,7 +26800,7 @@
 }
 
 #dev-id .title-grey999-PFSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #999;
 }
@@ -26852,11 +26852,11 @@
 }
 
 #dev-id .specialText-PSB-10 {
-  font-family: PingFangSC-Semibold, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
 }
 
 #dev-id .specialText-PR-10,
@@ -26887,7 +26887,7 @@
 }
 
 #dev-id .title-red-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #ff002f;
 }
@@ -26905,7 +26905,7 @@
 }
 
 #dev-id .title-green-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #00ac4f;
 }
@@ -26923,7 +26923,7 @@
 }
 
 #dev-id .title-turquoiseGreen-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #1dcab3;
 }
@@ -26941,7 +26941,7 @@
 }
 
 #dev-id .title-pink-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #ec6898;
 }
@@ -26958,7 +26958,7 @@
 
 #dev-id .title-blue-PR-10,
 #dev-id .title-blue1-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
 }
 
@@ -26967,7 +26967,7 @@
 }
 
 #dev-id .title-blue2-PR-10 {
-  font-family: PosteramaText-Regular, Times New Roman, Times, sans-serif;
+  
   font-size: 0.625rem;
   color: #5cbffe;
 }

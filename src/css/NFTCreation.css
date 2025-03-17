@@ -1,9 +1,14 @@
 .nft-card {
-  max-width: 450px;
+  max-width: 550px;
   margin: auto;
-  background: linear-gradient(145deg, #1f1f1f, #292929);
+  background: rgb(0, 51, 102);
+  background: linear-gradient(
+    159deg,
+    rgba(0, 51, 102, 1) 0%,
+    rgba(15, 82, 186, 1) 100%
+  );
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); */
   color: #fff;
 }
 .card-title {
@@ -61,15 +66,20 @@
   border-radius: 8px;
   transition: all 0.3s ease;
 }
+.card:hover {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transition: none !important;
+}
 
-.nft-btn:hover {
+/* .nft-btn:hover {
   background-color: #77a1d3;
   transform: scale(1.05);
-}
+} */
 
-.nft-card:hover {
+/* .nft-card:hover {
   box-shadow: 0 15px 25px rgba(0, 255, 128, 0.2);
-}
+} */
 
 /* .Footerbg {
   height: 354px !important;
@@ -131,3 +141,34 @@
 }
 
 /* NFT buy Sell  */
+.nav-pills {
+  /* background-color: #1e1e1e; */
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.nav-pills li {
+  list-style: none;
+  flex: 1;
+  text-align: center;
+}
+
+.nav-pills li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+/* 
+.nav-pills li a:hover {
+  background-color: #4a4a4a;
+} */
+
+.nav-pills li.active a {
+  border-bottom: 2px solid #036;
+  border-radius: 0px;
+}

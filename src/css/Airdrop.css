@@ -6,8 +6,8 @@
   padding: 20px;
 }
 
-/* Sidebar */
-.sidebar {
+/* level-container */
+.level-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -73,7 +73,7 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .sidebar {
+  .level-container {
     flex-direction: row;
     overflow-x: auto;
     white-space: nowrap;

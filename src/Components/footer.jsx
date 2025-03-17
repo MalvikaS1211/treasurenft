@@ -20,6 +20,151 @@ export default function Footer() {
           <p className="title-grey666-PR-16 font-weight-500 pt-4">
             MagicVerse is a Web3 revenue platform based on NFT collections
           </p>
+          <div class="sns-row">
+            <div
+              class="ivu-row"
+              style={{ marginLeft: "-8px", marginRight: "-8px" }}
+            >
+              <div
+                class="sns-row-block ivu-col ivu-col-span-xs-3 ivu-col-span-sm-3 ivu-col-span-md-4 ivu-col-span-lg-4 ivu-col-span-xl-4"
+                style={{ paddingLeft: "8px", paddingRight: "8px" }}
+              >
+                <a
+                  rel="nofollow"
+                  href="mailto: official@treasurenft.xyz "
+                  target=""
+                  class="social-icon"
+                >
+                  <img
+                    src="https://image.treasurenft.xyz/NewVer2212/logo/icon_mail_color.png"
+                    alt="social-icon"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div
+                class="sns-row-block ivu-col ivu-col-span-xs-3 ivu-col-span-sm-3 ivu-col-span-md-4 ivu-col-span-lg-4 ivu-col-span-xl-4"
+                style={{ paddingLeft: "8px", paddingRight: "8px" }}
+              >
+                <a
+                  rel="nofollow"
+                  href="https://www.tiktok.com/@treasurenft_xyz"
+                  target="https://www.tiktok.com/@treasurenft_xyz"
+                  class="social-icon"
+                >
+                  <img
+                    src="https://image.treasurenft.xyz/NewVer2212/logo/icon_tk_color.png"
+                    alt="social-icon"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div
+                class="sns-row-block ivu-col ivu-col-span-xs-3 ivu-col-span-sm-3 ivu-col-span-md-4 ivu-col-span-lg-4 ivu-col-span-xl-4"
+                style={{ paddingLeft: "8px", paddingRight: "8px" }}
+              >
+                <a
+                  rel="nofollow"
+                  href="https://twitter.com/Treasurenft_xyz"
+                  target="https://twitter.com/Treasurenft_xyz"
+                  class="social-icon"
+                  style={{ display: "none" }}
+                >
+                  <img
+                    src="https://image.treasurenft.xyz/NewVer2212/logo/icon_tw_color.png"
+                    alt="social-icon"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div
+                class="sns-row-block ivu-col ivu-col-span-xs-3 ivu-col-span-sm-3 ivu-col-span-md-4 ivu-col-span-lg-4 ivu-col-span-xl-4"
+                style={{ paddingLeft: "8px", paddingRight: "8px" }}
+              >
+                <a
+                  rel="nofollow"
+                  href="javascript:void();"
+                  target="_blank"
+                  class="social-icon"
+                >
+                  <img
+                    src="https://image.treasurenft.xyz/NewVer2212/logo/icon_yt2_color.png"
+                    alt="social-icon"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div
+                class="sns-row-block ivu-col ivu-col-span-xs-3 ivu-col-span-sm-3 ivu-col-span-md-4 ivu-col-span-lg-4 ivu-col-span-xl-4"
+                style={{ paddingLeft: "8px", paddingRight: "8px" }}
+              >
+                <a
+                  rel="nofollow"
+                  href="https://t.me/TreasureNFT"
+                  target="https://t.me/TreasureNFT"
+                  class="social-icon"
+                >
+                  <img
+                    src="https://image.treasurenft.xyz/NewVer2212/logo/icon_tg_color.png"
+                    alt="social-icon"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div
+                class="sns-row-block ivu-col ivu-col-span-xs-3 ivu-col-span-sm-3 ivu-col-span-md-4 ivu-col-span-lg-4 ivu-col-span-xl-4"
+                style={{ paddingLeft: "8px", paddingRight: "8px" }}
+              >
+                <a
+                  rel="nofollow"
+                  href="https://www.facebook.com/Treasurenft-101676776000520"
+                  target="https://www.facebook.com/Treasurenft-101676776000520"
+                  class="social-icon"
+                >
+                  <img
+                    src="https://image.treasurenft.xyz/NewVer2212/logo/icon_fb_color.png"
+                    alt="social-icon"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div
+                class="sns-row-block ivu-col ivu-col-span-xs-3 ivu-col-span-sm-3 ivu-col-span-md-4 ivu-col-span-lg-4 ivu-col-span-xl-4"
+                style={{ paddingLeft: "8px", paddingRight: "8px" }}
+              >
+                <a
+                  rel="nofollow"
+                  href="https://www.instagram.com/treasurenft_xyz/"
+                  target="https://www.instagram.com/treasurenft_xyz/"
+                  class="social-icon"
+                >
+                  <img
+                    src="https://image.treasurenft.xyz/icon/btn_ig_01.png"
+                    alt="social-icon"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+              <div
+                class="sns-row-block ivu-col ivu-col-span-xs-3 ivu-col-span-sm-3 ivu-col-span-md-4 ivu-col-span-lg-4 ivu-col-span-xl-4"
+                style={{ paddingLeft: "8px", paddingRight: "8px" }}
+              >
+                <a
+                  rel="nofollow"
+                  href="https://discord.gg/H54mUVeQRQ"
+                  target="https://discord.gg/H54mUVeQRQ"
+                  class="social-icon"
+                  style={{ display: "none" }}
+                >
+                  <img
+                    src="https://image.treasurenft.xyz/NewVer2212/logo/icon_dc_color.png"
+                    alt="social-icon"
+                    loading="lazy"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="ivu-col ivu-col-span-xs-24 ivu-col-span-sm-24 ivu-col-span-md-16">

@@ -4145,7 +4145,7 @@ export default function Explore() {
 
               {/* Show Phoneheader only on small (sm) screens */}
               <div className="d-block d-md-none">
-                <PhoneHeader />
+                <PhoneHeader Logo={LogoWhite} />
               </div>
               {/* <Header Logo={LogoWhite}></Header> */}
               <h2 data-v-b49386ae="" class="headerImg-text title-black-PR-30">

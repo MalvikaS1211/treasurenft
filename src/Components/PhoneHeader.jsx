@@ -9,7 +9,11 @@ import services_icon from "../assets/services_icon.webp";
 import icon_stationMessage from "../assets/icon_stationMessage.svg";
 import security_icon from "../assets/security_icon.webp";
 import account from "../assets/account.webp";
-export default function PhoneHeader() {
+import Trade from "../assets/Trade.png";
+import NFTCreationIcon from "../assets/NFTCreationIcon.png";
+import home from "../assets/home.webp";
+
+export default function PhoneHeader({ Logo }) {
   const [show, setShow] = useState(false);
 
   const toggleDropdown = () => {
@@ -21,7 +25,7 @@ export default function PhoneHeader() {
       <div className=" headerimg-custom d-flex align-items-center  header-contain">
         <div className="logo d-flex align-items-center logo-container">
           <img
-            src={LogoBlue}
+            src={Logo}
             alt="LogoBlue"
             className="logo-img"
             style={{ width: "65%" }}
@@ -34,7 +38,16 @@ export default function PhoneHeader() {
         >
           <FaRegBell size={35} />
           <Link to="/Airdrop">
-            <span className="menu"> Airdrop</span>
+            <span
+              className=""
+              style={{
+                fontWeight: "700",
+                textDecoration: "none",
+                color: "inherit",
+              }}
+            >
+              Airdrop
+            </span>
           </Link>
 
           <img src={VideoIcon} alt="App" className="app-icon" />
@@ -44,7 +57,7 @@ export default function PhoneHeader() {
             <FaBars size={35} className="menu-icon" onClick={toggleDropdown} />
 
             <div className={`dropdown-menu ${show ? "show" : ""}`}>
-              <Link
+              {/* <Link
                 to="/collection"
                 style={{ textDecoration: "none", color: "inherit" }}
               >
@@ -52,15 +65,30 @@ export default function PhoneHeader() {
                   <img className="dropdown-icon" src={services_icon} />
                   Explore
                 </div>
+              </Link> */}
+              <Link to="/">
+                <div className="dropdown-item d-flex gap-3">
+                  <img className="dropdown-icon" src={home} width={40} />
+                  Home
+                </div>
               </Link>
-              <div className="dropdown-item d-flex gap-3">
-                <img className="dropdown-icon" src={services_icon} />
-                Trade
-              </div>
-              <div className="dropdown-item d-flex gap-3">
-                <img className="dropdown-icon" src={services_icon} />
-                NFT Creation
-              </div>
+              <Link to="/buyNft">
+                <div className="dropdown-item d-flex gap-3">
+                  <img className="dropdown-icon" src={Trade} width={40} />
+                  Trade
+                </div>
+              </Link>
+              <Link to="/NFTcreation">
+                <div className="dropdown-item d-flex gap-3">
+                  <img
+                    className="dropdown-icon"
+                    src={NFTCreationIcon}
+                    width={40}
+                  />
+                  NFT Creation
+                </div>
+              </Link>
+
               <div className="dropdown-item d-flex gap-3">
                 <img className="dropdown-icon" src={services_icon} />
                 Service
