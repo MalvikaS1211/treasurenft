@@ -59,6 +59,15 @@ import "./css/Style8.css";
 import "./css/NFTCreation.css";
 import "./css/custom.css";
 
+import "./MalvikaCss/animate.css";
+import "./MalvikaCss/bootstrap.css";
+
+import "./MalvikaCss/font-awesome.css";
+import "./MalvikaCss/ntfs.css";
+import "./MalvikaCss/responsive.css";
+
+import "./MalvikaCss/shortcodes.css";
+import "./MalvikaCss/style.css";
 function App() {
   return (
     <>

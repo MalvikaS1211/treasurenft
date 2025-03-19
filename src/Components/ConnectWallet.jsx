@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 import toast from "react-hot-toast";
+import { FaWallet } from "react-icons/fa";
 
 function ConnectWallet() {
   useEffect(() => {
@@ -68,6 +69,18 @@ function ConnectWallet() {
                   return (
                     <>
                       <div
+                        class="sc-btn-top mg-r-12"
+                        id="site-header"
+                        onClick={openConnectModal}
+                      >
+                        <button className="connect-wallet-container">
+                          <div className="connect-wallet-btn">
+                            <FaWallet />
+                            Connect Wallet
+                          </div>
+                        </button>
+                      </div>
+                      {/* <div
                         data-v-014c2687=""
                         class="wallet-btn-wrap"
                         onClick={openConnectModal}
@@ -84,7 +97,7 @@ function ConnectWallet() {
                           />
                           <p data-v-014c2687=""> Connect Wallet &gt;</p>
                         </div>
-                      </div>
+                      </div> */}
                       {/* <button
                         onClick={openConnectModal}
                         type="button"

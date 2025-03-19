@@ -1,0 +1,177 @@
+/* General Header Styles */
+.header-new-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #14141f;
+  border-bottom: 1px solid rgba(235, 235, 235, 0.2);
+}
+
+/* Header Inner Container */
+.header-new {
+  width: 100%;
+  /* max-width: 1440px; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.header-logo {
+  width: 12%;
+}
+
+/* Navigation */
+.nav-head {
+  display: flex;
+  gap: 20px;
+  color: white;
+}
+
+.nav-head a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.nav-head a:hover {
+  color: #5142fc;
+}
+
+/* Search Box */
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.search-input {
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+/* .search-icon {
+  padding: 8px;
+  color: gray;
+} */
+
+/* Wallet Button */
+.connect-wallet-container {
+  padding: 10px;
+  border: 2px solid #5142fc;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.connect-wallet-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Offcanvas Menu */
+.offcanvas-header .btn-close {
+  filter: invert(1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .nav-head {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .header-logo {
+    width: 120px;
+  }
+
+  .search-box {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .connect-wallet-container {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+.dashboardbg {
+  background-image: url("../assets/dashboardbg.jpg");
+}
+.wallet-connect-icon {
+  font-size: 20px;
+}
+.sc-btn-top .mg-r-12 {
+  color: #5142fc;
+}
+/* White dots */
+.slick-dots li button:before {
+  color: white !important;
+}
+
+/* White arrows */
+.slick-prev:before,
+.slick-next:before {
+  /* background: linear-gradient(216.56deg, #e250e5 5.32%, #4b50e6 94.32%);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; */
+  color: white !important;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  gap: 16px; /* Adjust the gap between items */
+  padding: 16px; /* Optional: Add padding to the container */
+}
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 column for very small screens */
+  }
+}
+.Already-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+}

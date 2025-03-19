@@ -3,7 +3,8 @@ import Header from "./header";
 import LogoWhite from "../assets/LogoWhite.png";
 import Footer from "./Footer";
 import PhoneHeader from "./PhoneHeader";
-
+import HeaderNew from "./HeaderNew";
+import FooterNew from "./FooterNew";
 export default function NFTCreationCard() {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -156,21 +157,7 @@ export default function NFTCreationCard() {
   }, []);
   return (
     <>
-      <div
-        data-v-b49386ae=""
-        className="headerImg headerimg-custom header-banner"
-        style={{ padding: paddingValue }}
-      >
-        <div className="d-none d-md-block">
-          <Header Logo={LogoWhite} />
-        </div>
-        <div className="d-block d-md-none">
-          <PhoneHeader Logo={LogoWhite} />
-        </div>
-        <h2 data-v-b49386ae="" className="headerImg-text title-black-PR-30">
-          NFT Creation
-        </h2>
-      </div>
+      <HeaderNew />
 
       <div className="container justify-content-center">
         <ul className="nav nav-pills w-100">
@@ -190,7 +177,7 @@ export default function NFTCreationCard() {
       </div>
       {activeTab === "single" ? <SingleNFTCreation /> : <BulkNFTCreation />}
       <div className="Footerbg" style={{ paddingTop: "60px" }}>
-        <Footer />
+        <FooterNew />
       </div>
     </>
   );
