@@ -24,6 +24,7 @@ import Community from "../Community";
 import DownLine from "../DownLine";
 import NFTBuy from "../NFTBuy";
 import Registration from "../Registration";
+import CreateNFT from "../CreateNFT";
 function AppRoutes() {
   return (
     <>
@@ -38,7 +39,7 @@ function AppRoutes() {
           <Route path="/account" element={<Account />} />
           <Route path="/account/level" element={<Level />} />
           <Route path="/Airdrop" element={<Airdrop />} />
-          <Route path="/NFTcreation" element={<NFTCreation />} />
+          <Route path="/NFTcreation" element={<CreateNFT />} />
           {/* <Route path="/NFTBuySell" element={<NFTBuySell />} /> */}
           <Route path="/signup/dashboard" element={<Dashboard />} />
           <Route path="/refferal" element={<Refferal />} />

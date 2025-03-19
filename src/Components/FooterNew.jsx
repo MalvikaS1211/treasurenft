@@ -1,6 +1,7 @@
 import React from "react";
 import { BiSolidSend } from "react-icons/bi";
-import Logo from "../assets/LogoBlue.png";
+import Logo from "../assets/Logo.png";
+
 import { FaWhatsapp } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { IoIosArrowUp } from "react-icons/io";

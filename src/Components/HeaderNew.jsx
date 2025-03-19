@@ -3,7 +3,7 @@ import "../MalvikaCss/Custom2.css";
 import { AiOutlineSearch } from "react-icons/ai";
 import { WalletButton } from "@rainbow-me/rainbowkit";
 import ConnectWallet from "./ConnectWallet";
-import Logo from "../assets/LogoBlue.png";
+import Logo from "../assets/Logo.png";
 import { FaWallet } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
@@ -26,9 +26,9 @@ const Header = () => {
 
             <a href="/">Explore</a>
             <a href="/">Trade</a>
-            {/* <Link to="/NFTcreation"> */}
-            <a>Create NFT</a>
-            {/* </Link> */}
+            <Link to="/NFTcreation">
+              <a>Create NFT</a>
+            </Link>
           </nav>
           {/* <div className="search-box">
             <input type="text" placeholder="Select" className="search-input" />
