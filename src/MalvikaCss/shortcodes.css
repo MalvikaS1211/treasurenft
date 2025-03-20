@@ -257,8 +257,14 @@
 /* button style */
 /* style-1 */
 .sc-button.style-1 {
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #5142fc;
+  color: #5142fc;
+  background: transparent none repeat scroll 0 0;
+}
+
+.light .sc-button.style-1 {
+  border: 2px solid #5142fc;
+  color: #5142fc;
   background: transparent none repeat scroll 0 0;
 }
 
@@ -1717,7 +1723,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(52 52 68/30%);
+  /* background-color: rgb(52 52 68/30%); */
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -1734,7 +1740,7 @@
   font-size: 56px;
   line-height: 1.3;
   font-weight: 700;
-  color: #fff;
+  color: black;
 }
 
 .flat-slider .heading .style {
@@ -1777,7 +1783,7 @@
 .flat-slider .sub-heading {
   font-size: 20px;
   line-height: 30px;
-  color: #ebebeb;
+  color: black;
   text-transform: capitalize;
   margin-top: 29px;
   margin-bottom: 44px;
@@ -8439,4 +8445,19 @@ button.accordion-button {
 .slider-labels .title {
   color: #8a8aa0;
   margin-right: 3px;
+}
+
+.tab-create-item form select {
+  border: 1px solid rgba(138, 138, 160, 0.3);
+  border-radius: 8px;
+  color: var(--primary-color4);
+  font-size: 14px;
+  /* padding: 20px; */
+  width: 100%;
+  background: #fff;
+  outline: none;
+  /* transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; */
+  padding: 0px 20px;
+  margin-bottom: 24px;
+  line-height: 44px;
 }

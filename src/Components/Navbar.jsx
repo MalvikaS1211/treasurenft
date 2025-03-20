@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/Logo.png";
-
+import { FaHome } from "react-icons/fa";
+import { FaCrown } from "react-icons/fa6";
 export default function Navbar({ isSidebarOpen }) {
   const location = useLocation();
   return (
@@ -17,11 +18,23 @@ export default function Navbar({ isSidebarOpen }) {
           style={{ width: "160px" }}
         />
       </div>
-      <ul className="menu" style={{ display: "flex", flexDirection: "column" }}>
+      <ul
+        className="menu"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "baseline",
+        }}
+      >
         <Link to="/">
+          <li className={location.pathname === "/" ? "active" : "inactive"}>
+            <FaHome /> Home
+          </li>
+        </Link>
+        <Link to="/dashboard">
           <li
             className={
-              location.pathname === "/signup/dashboard" ? "active" : "inactive"
+              location.pathname === "/dashboard" ? "active" : "inactive"
             }
           >
             <i className="fas fa-tachometer-alt"></i> Dashboard
@@ -52,6 +65,16 @@ export default function Navbar({ isSidebarOpen }) {
             }
           >
             <i className="fas fa-sitemap"></i> Downline
+          </li>
+        </Link>
+        <Link to="/royality">
+          <li
+            className={
+              location.pathname === "/royality" ? "active" : "inactive"
+            }
+          >
+            <FaCrown />
+            Royality
           </li>
         </Link>
       </ul>

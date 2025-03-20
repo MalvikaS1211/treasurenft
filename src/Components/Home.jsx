@@ -5,7 +5,7 @@ import Footer from "./Footer";
 import LogoBlue from "../assets/LogoBlue.png";
 import PhoneHeader from "./PhoneHeader";
 import HeaderNew from "./HeaderNew";
-import DashboardNew from "./DashboardNew";
+import LandingPage from "./LandingPage";
 import FooterNew from "./FooterNew";
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <div className="">
         {" "}
         <HeaderNew />
-        <DashboardNew />
+        <LandingPage />
         <FooterNew />
       </div>
 

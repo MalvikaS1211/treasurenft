@@ -25,6 +25,9 @@ import DownLine from "../DownLine";
 import NFTBuy from "../NFTBuy";
 import Registration from "../Registration";
 import CreateNFT from "../CreateNFT";
+import LiveAuction from "../LiveAuction";
+import Trade from "../Trade";
+import Royality from "../Royality";
 function AppRoutes() {
   return (
     <>
@@ -41,11 +44,12 @@ function AppRoutes() {
           <Route path="/Airdrop" element={<Airdrop />} />
           <Route path="/NFTcreation" element={<CreateNFT />} />
           {/* <Route path="/NFTBuySell" element={<NFTBuySell />} /> */}
-          <Route path="/signup/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/refferal" element={<Refferal />} />
           <Route path="/community" element={<Community />} />
           <Route path="/downline" element={<DownLine />} />
-          <Route path="/buyNft" element={<NFTBuy />} />
+          <Route path="/royality" element={<Royality />} />
+          <Route path="/buyNft" element={<Trade />} />
           <Route path="/signup" element={<Registration />} />
         </Routes>
       </Router>

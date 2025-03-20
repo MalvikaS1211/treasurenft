@@ -23,11 +23,17 @@ const Header = () => {
             <Link to="/">
               <a href="/home">Home</a>
             </Link>
-
-            <a href="/">Explore</a>
-            <a href="/">Trade</a>
+            <Link to="/explore">
+              <a href="">Explore</a>
+            </Link>
+            <Link to="/buyNft">
+              <a>Trade</a>
+            </Link>
             <Link to="/NFTcreation">
               <a>Create NFT</a>
+            </Link>
+            <Link to="/dashboard">
+              <a>Dashboard</a>
             </Link>
           </nav>
           {/* <div className="search-box">
@@ -69,7 +75,7 @@ const Header = () => {
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasScrolling"
             aria-controls="offcanvasScrolling"
-            style={{ color: "white", fontSize: "20px" }}
+            className="hamburger-icon"
           />
         </div>
         <div
@@ -79,7 +85,6 @@ const Header = () => {
           tabindex="-1"
           id="offcanvasScrolling"
           aria-labelledby="offcanvasScrollingLabel"
-          style={{ backgroundColor: "#14141f" }}
         >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
@@ -92,18 +97,30 @@ const Header = () => {
             </h5>
             <button
               type="button"
-              class="btn-close text-white"
+              class="btn-close "
               data-bs-dismiss="offcanvas"
               aria-label="Close"
-              style={{ filter: "invert(1)" }}
             ></button>
           </div>
-          <div class="offcanvas-body" style={{ color: "white" }}>
+          <div class="offcanvas-body">
             <nav className="nav-head">
-              <a href="/home">Home</a>
-              <a href="/explore">Explore</a>
-              <a href="/activity">Trade</a>
-              <a href="/community">Create NFT</a>
+              <Link to="/">
+                <a href="/home">Home</a>
+              </Link>
+              <Link to="/explore">
+                <a href="">Explore</a>
+              </Link>
+
+              <Link to="/buyNft">
+                <a>Trade</a>
+              </Link>
+
+              <Link to="/NFTcreation">
+                <a>Create NFT</a>
+              </Link>
+              <Link to="/dashboard">
+                <a>Dashboard</a>
+              </Link>
             </nav>
           </div>
         </div>

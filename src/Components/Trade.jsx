@@ -18,7 +18,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { FaShoppingBag } from "react-icons/fa";
 import FooterNew from "./FooterNew";
 import HeaderNew from "./HeaderNew";
-export default function Expore() {
+export default function Trade() {
   return (
     <>
       <HeaderNew />
@@ -34,7 +34,7 @@ export default function Expore() {
               style={{ marginTop: "40px" }}
             >
               <h1 class="heading text-center mt-0" style={{ color: "black" }}>
-                Sell Item
+                Buy Item
               </h1>
             </div>
           </div>
@@ -59,7 +59,7 @@ export default function Expore() {
                     <div class="button-place-bid">
                       <button class="sc-button style-place-bid style bag fl-button pri-3">
                         <FaShoppingBag color="black" />
-                        <span>Sell</span>
+                        <span>Buy</span>
                       </button>
                     </div>
                     <div class="wishlist-button heart">
@@ -110,7 +110,7 @@ export default function Expore() {
                     <div class="button-place-bid">
                       <button class="sc-button style-place-bid style bag fl-button pri-3">
                         <FaShoppingBag color="black" />
-                        <span>Sell</span>
+                        <span>Buy</span>
                       </button>
                     </div>
                     <div class="wishlist-button heart">
@@ -161,7 +161,7 @@ export default function Expore() {
                     <div class="button-place-bid">
                       <button class="sc-button style-place-bid style bag fl-button pri-3">
                         <FaShoppingBag color="black" />
-                        <span>Sell</span>
+                        <span>Buy</span>
                       </button>
                     </div>
                     <div class="wishlist-button heart">
@@ -212,7 +212,7 @@ export default function Expore() {
                     <div class="button-place-bid">
                       <button class="sc-button style-place-bid style bag fl-button pri-3">
                         <FaShoppingBag color="black" />
-                        <span>Sell</span>
+                        <span>Buy</span>
                       </button>
                     </div>
                     <div class="wishlist-button heart">
@@ -263,7 +263,7 @@ export default function Expore() {
                     <div class="button-place-bid">
                       <button class="sc-button style-place-bid style bag fl-button pri-3">
                         <FaShoppingBag color="black" />
-                        <span>Sell</span>
+                        <span>Buy</span>
                       </button>
                     </div>
                     <div class="wishlist-button heart">
@@ -314,7 +314,7 @@ export default function Expore() {
                     <div class="button-place-bid">
                       <button class="sc-button style-place-bid style bag fl-button pri-3">
                         <FaShoppingBag color="black" />
-                        <span>Sell</span>
+                        <span>Buy</span>
                       </button>
                     </div>
                     <div class="wishlist-button heart">
@@ -365,7 +365,7 @@ export default function Expore() {
                     <div class="button-place-bid">
                       <button class="sc-button style-place-bid style bag fl-button pri-3">
                         <FaShoppingBag color="black" />
-                        <span>Sell</span>
+                        <span>Buy</span>
                       </button>
                     </div>
                     <div class="wishlist-button heart">
@@ -416,7 +416,7 @@ export default function Expore() {
                     <div class="button-place-bid">
                       <button class="sc-button style-place-bid style bag fl-button pri-3">
                         <FaShoppingBag color="black" />
-                        <span>Sell</span>
+                        <span>Buy</span>
                       </button>
                     </div>
                     <div class="wishlist-button heart">

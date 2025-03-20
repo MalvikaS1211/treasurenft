@@ -17,9 +17,10 @@ export default function FooterNew() {
                 <div class="logo-footer" id="logo-footer">
                   <a href="/">
                     <img
-                      class="logo-dark"
-                      id="logo_footer"
+                      // class="logo-dark"
+                      // id="logo_footer"
                       src={Logo}
+                      style={{ width: "50%" }}
                       alt="nft-Logo"
                     />
                   </a>
@@ -32,7 +33,7 @@ export default function FooterNew() {
             <div class="col-lg-2 col-md-4 col-sm-5 col-5">
               <div class="widget widget-menu style-1">
                 <h5 class="title-widget">My Account</h5>
-                <ul style={{ color: "white" }}>
+                <ul>
                   <li>
                     <a href="">Authors</a>
                   </li>
@@ -51,7 +52,7 @@ export default function FooterNew() {
             <div class="col-lg-2 col-md-4 col-sm-7 col-7">
               <div class="widget widget-menu style-2">
                 <h5 class="title-widget">Resources</h5>
-                <ul style={{ color: "white" }}>
+                <ul>
                   <li>
                     <a href="">Help &amp; Support</a>
                   </li>
@@ -70,7 +71,7 @@ export default function FooterNew() {
             <div class="col-lg-2 col-md-4 col-sm-5 col-5">
               <div class="widget widget-menu fl-st-3">
                 <h5 class="title-widget">Company</h5>
-                <ul style={{ color: "white" }}>
+                <ul>
                   <li>
                     <a href="">Explore</a>
                   </li>

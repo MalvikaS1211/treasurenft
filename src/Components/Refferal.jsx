@@ -6,34 +6,37 @@ import HeaderDashboard from "./HeaderDashboard";
 export default function Refferal() {
   return (
     <>
-      <Navbar></Navbar>
-      <main class="content">
-        <HeaderDashboard title="Refferal" />
-        <div>
-          <div class="flex flex-col" style={{ height: "100vh" }}>
-            <div class="rank-income" style={{ overflowX: "auto" }}>
-              <table>
-                <tr>
-                  <th>Sr.No</th>
-                  <th>Id</th>
-                  <th>Address</th>
-                  <th>Activation Date</th>
-                  <th>Level</th>
-                  <th>Direct Team</th>
-                </tr>
-                <tr>
-                  <td>0</td>
-                  <td>0</td>
-                  <td>0...</td>
-                  <td>dd-mm-yyyy</td>
-                  <td>0</td>
-                  <td>0</td>
-                </tr>
-              </table>
+      <div className="p-4 dashboardbgcolor">
+        {" "}
+        <Navbar></Navbar>
+        <main class="content-dashboard">
+          <HeaderDashboard title="Refferal" />
+          <div>
+            <div class="" style={{ height: "100vh" }}>
+              <div class="rank-income ">
+                <table className="table-responsiveness">
+                  <tr>
+                    <th>Sr.No</th>
+                    <th>Id</th>
+                    <th>Address</th>
+                    <th>Activation Date</th>
+                    <th>Level</th>
+                    <th>Direct Team</th>
+                  </tr>
+                  <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0...</td>
+                    <td>dd-mm-yyyy</td>
+                    <td>0</td>
+                    <td>0</td>
+                  </tr>
+                </table>
+              </div>
             </div>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </>
   );
 }

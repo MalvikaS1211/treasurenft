@@ -24,6 +24,7 @@
 .dashboard-sidebar ul {
   list-style: none;
   padding: 0;
+  color: white;
 }
 .dashboard-sidebar ul li:hover,
 .dashboard-sidebar ul .active {
@@ -34,6 +35,8 @@
     rgb(33, 82, 175) 100%
   );
   border-radius: 5px;
+  display: flex;
+  gap: 10px;
 }
 .dashboard-sidebar ul li {
   padding: 14px;
@@ -44,6 +47,8 @@
 .dashboard-sidebar ul .inactive {
   background: transparent;
   border-radius: 5px;
+  display: flex;
+  gap: 10px;
 }
 
 .dashboard-sidebar ul li {
@@ -58,7 +63,7 @@
   color: #fff;
   font-weight: 400;
   font-size: 16px;
-  bottom: 65px;
+  bottom: 82px;
 }
 .social-icons {
   display: flex;

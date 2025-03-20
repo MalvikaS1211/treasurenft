@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background-color: #14141f;
+  background-color: transparent;
   border-bottom: 1px solid rgba(235, 235, 235, 0.2);
 }
 
@@ -27,12 +27,12 @@
 .nav-head {
   display: flex;
   gap: 20px;
-  color: white;
+  color: black;
 }
 
 .nav-head a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-size: 16px;
   padding-top: 10px;
 }
@@ -66,7 +66,7 @@
 .connect-wallet-container {
   padding: 10px;
   border: 2px solid #5142fc;
-  color: white;
+  color: #5142fc;
   background: transparent;
   cursor: pointer;
   border-radius: 25px;
@@ -88,7 +88,7 @@
 
 /* Offcanvas Menu */
 .offcanvas-header .btn-close {
-  filter: invert(1);
+  /* filter: invert(1); */
 }
 
 /* Responsive Adjustments */
@@ -113,7 +113,7 @@
   }
 }
 .dashboardbg {
-  background-image: url("../assets/dashboardbg.jpg");
+  background-image: url("../assets/LightBG.jpg") !important;
 }
 .wallet-connect-icon {
   font-size: 20px;
@@ -123,7 +123,7 @@
 }
 /* White dots */
 .slick-dots li button:before {
-  color: white !important;
+  color: #4b50e6 !important;
 }
 
 /* White arrows */
@@ -137,7 +137,7 @@
   align-items: center;
   justify-content: center;
   z-index: 10; */
-  color: white !important;
+  color: #4b50e6 !important;
 }
 .grid-container {
   display: grid;
@@ -174,4 +174,13 @@
   align-items: center;
   gap: 10px;
   padding-top: 10px;
+}
+
+.hamburger-icon {
+  color: black;
+  font-size: 20px;
+}
+
+.createbtn:hover {
+  color: white;
 }

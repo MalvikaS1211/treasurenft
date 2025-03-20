@@ -6,16 +6,19 @@ import ConnectWallet from "./ConnectWallet";
 import HeaderDashboard from "./HeaderDashboard";
 import "../css/navbar.css";
 import "../css/dashboard.css";
-
+import { FaMedal } from "react-icons/fa6";
+import { FaCrown } from "react-icons/fa6";
+import { TfiCup } from "react-icons/tfi";
+import { PiFlowerTulipDuotone } from "react-icons/pi";
 export default function Dashboard() {
   return (
     <>
-      <div className="container">
+      <div className="p-4 dashboardbgcolor">
         <Navbar></Navbar>
-        <main class="content">
+        <main class="content-dashboard">
           <HeaderDashboard title="Dashboard"></HeaderDashboard>
           <div>
-            <div class="flex flex-col ">
+            <div class="">
               <div class="user-grid">
                 <div
                   class="user-card"
@@ -37,7 +40,7 @@ export default function Dashboard() {
                   }}
                 >
                   <h6>My Wallet Fund</h6>
-                  <p> 0 ETH</p>
+                  <p> 0 USDT</p>
                   <h6>My Wallet Address</h6>
                   <p>-</p>
                 </div>
@@ -55,7 +58,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <section class="dashboard">
-                <h2>Packages</h2>
+                <h3 className="dashboard-heading">Packages</h3>
                 <div class="package-grid">
                   <div class="package-card">
                     <span>0.000</span>
@@ -108,26 +111,14 @@ export default function Dashboard() {
                     <p style={{ color: " rgb(230, 10, 76)" }}>AMBASSADOR</p>
                   </div>
                 </div>
-                <h2>Daily Royalty Countdown</h2>
+                <h3 className="dashboard-heading">Daily Royalty Countdown</h3>
                 <div class="countdown-grid">
                   <div class="countdown-card">
-                    <div
-                      class="icon-container"
-                      style={{
-                        width: "25px",
-                        height: "25px",
-                        border: "1px solid rgb(175, 175, 175)",
-                        padding: "2px",
-                        borderRadius: "10px",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <i class="fas fa-medal"></i>
+                    <div class="icon-container">
+                      <FaMedal color="white" />
                     </div>
                     <h6 style={{ color: "rgb(108, 151, 207)" }}>DUPLEX</h6>
-                    <p> 0.00 ETH</p>
+                    <p> 0.00 USDT</p>
                     <p
                       style={{ fontSize: "14px", color: "rgb(108, 151, 207)" }}
                     >
@@ -135,23 +126,11 @@ export default function Dashboard() {
                     </p>
                   </div>
                   <div class="countdown-card">
-                    <div
-                      class="icon-container"
-                      style={{
-                        width: "25px",
-                        height: "25px",
-                        border: "1px solid rgb(175, 175, 175)",
-                        padding: "2px",
-                        borderRadius: "10px",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <i class="fas fa-award"></i>
+                    <div class="icon-container">
+                      <PiFlowerTulipDuotone color="white" />
                     </div>
                     <h6 style={{ color: "rgb(108, 207, 166)" }}>ALPHA</h6>
-                    <p> 0.00 ETH</p>
+                    <p> 0.00 USDT</p>
                     <p
                       style={{ fontSize: "14px", color: "rgb(108, 207, 166)" }}
                     >
@@ -159,23 +138,11 @@ export default function Dashboard() {
                     </p>
                   </div>
                   <div class="countdown-card">
-                    <div
-                      class="icon-container"
-                      style={{
-                        width: "25px",
-                        height: "25px",
-                        border: "1px solid rgb(175, 175, 175)",
-                        padding: "2px",
-                        borderRadius: "10px",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <i class="fas fa-trophy"></i>
+                    <div class="icon-container">
+                      <TfiCup color="white" />
                     </div>
                     <h6 style={{ color: "rgb(207, 205, 108)" }}>HELIX</h6>
-                    <p> 0.00 ETH</p>
+                    <p> 0.00 USDT</p>
                     <p
                       style={{ fontSize: "14px", color: "rgb(207, 205, 108)" }}
                     >
@@ -183,23 +150,11 @@ export default function Dashboard() {
                     </p>
                   </div>
                   <div class="countdown-card">
-                    <div
-                      class="icon-container"
-                      style={{
-                        width: "25px",
-                        height: "25px",
-                        border: "1px solid rgb(175, 175, 175)",
-                        padding: "2px",
-                        borderRadius: "10px",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      }}
-                    >
-                      <i class="fas fa-crown"></i>
+                    <div class="icon-container">
+                      <FaCrown color="white" />
                     </div>
                     <h6 style={{ color: "rgb(207, 161, 108)" }}>Ambassador</h6>
-                    <p> 0.00 ETH</p>
+                    <p> 0.00 USDT</p>
                     <p
                       style={{ fontSize: "14px", color: "rgb(207, 161, 108)" }}
                     >
@@ -207,12 +162,13 @@ export default function Dashboard() {
                     </p>
                   </div>
                 </div>
-                <h1
+                <h2
                   class="royalty_heading"
                   style={{ textAlign: "center", marginTop: "3%" }}
+                  className="dashboard-heading"
                 >
                   00 HH : 00 mm : 00 ss
-                </h1>
+                </h2>
                 <div
                   class="total-grid"
                   style={{ marginTop: "center", marginBottom: "3%" }}
@@ -222,7 +178,7 @@ export default function Dashboard() {
                       <h6>Total Income</h6>
                     </div>
                     <p>
-                      0<span> ETH</span>
+                      0<span> USDT</span>
                     </p>
                   </div>
                   <div class="total-card">
@@ -230,7 +186,7 @@ export default function Dashboard() {
                       <h6>Referral Income</h6>
                     </div>
                     <p>
-                      0<span> ETH</span>
+                      0<span> USDT</span>
                     </p>
                   </div>
                   <div class="total-card">
@@ -238,7 +194,7 @@ export default function Dashboard() {
                       <h6>Level Income</h6>
                     </div>
                     <p>
-                      0<span> ETH</span>
+                      0<span> USDT</span>
                     </p>
                   </div>
                 </div>
@@ -248,7 +204,7 @@ export default function Dashboard() {
                       <h6>Royalty Income</h6>
                     </div>
                     <p>
-                      0<span> ETH</span>
+                      0<span> USDT</span>
                     </p>
                   </div>
                   <div class="total-card">
@@ -269,7 +225,7 @@ export default function Dashboard() {
                   style={{ width: "70%", margin: "2rem auto" }}
                 >
                   <thead>
-                    <tr>
+                    <tr className="text-white">
                       <th style={{ fontWeight: "600", fontSize: "18px" }}>
                         Rank
                       </th>
@@ -278,7 +234,7 @@ export default function Dashboard() {
                       </th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="text-white" style={{ fontSize: "14px" }}>
                     <tr>
                       <td
                         style={{
@@ -288,7 +244,7 @@ export default function Dashboard() {
                       >
                         Frontline
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                     <tr>
                       <td
@@ -299,7 +255,7 @@ export default function Dashboard() {
                       >
                         Homestead
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                     <tr>
                       <td
@@ -310,7 +266,7 @@ export default function Dashboard() {
                       >
                         Metropolis
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                     <tr>
                       <td
@@ -321,7 +277,7 @@ export default function Dashboard() {
                       >
                         Serenity
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                     <tr>
                       <td
@@ -332,7 +288,7 @@ export default function Dashboard() {
                       >
                         Powerup
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                     <tr>
                       <td
@@ -343,7 +299,7 @@ export default function Dashboard() {
                       >
                         Superb
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                     <tr>
                       <td
@@ -354,7 +310,7 @@ export default function Dashboard() {
                       >
                         Mentor
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                     <tr>
                       <td
@@ -365,7 +321,7 @@ export default function Dashboard() {
                       >
                         ICON
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                     <tr>
                       <td
@@ -376,7 +332,7 @@ export default function Dashboard() {
                       >
                         DUPLEX
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                     <tr>
                       <td
@@ -387,7 +343,7 @@ export default function Dashboard() {
                       >
                         ALPHA
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                     <tr>
                       <td
@@ -398,7 +354,7 @@ export default function Dashboard() {
                       >
                         HELIX
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                     <tr>
                       <td
@@ -409,17 +365,17 @@ export default function Dashboard() {
                       >
                         Ambassador
                       </td>
-                      <td>0 ETH</td>
+                      <td>0 USDT</td>
                     </tr>
                   </tbody>
                 </table>
               </section>
-              <h2>Rank Income</h2>
+              <h3 className="dashboard-heading">Rank Income</h3>
               <div className="rank-income" style={{ overflowX: "auto" }}>
                 <table>
-                  <tr>
+                  <tr className="text-white">
                     <th>From</th>
-                    <th>Amount (ETH)</th>
+                    <th>Amount (USDT)</th>
                     <th>Rank Level</th>
                     <th>Time</th>
                   </tr>

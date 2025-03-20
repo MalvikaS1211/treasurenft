@@ -4,14 +4,14 @@ import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import ConnectWallet from "./ConnectWallet";
 import HeaderDashboard from "./HeaderDashboard";
-export default function DownLine() {
+export default function Royality() {
   return (
     <>
       <div className="p-4 dashboardbgcolor">
         {" "}
         <Navbar></Navbar>
         <main class="content-dashboard">
-          <HeaderDashboard title="DownLine"></HeaderDashboard>
+          <HeaderDashboard title="Royality"></HeaderDashboard>
           <div>
             <div class="" style={{ height: "100vh" }}>
               <div
@@ -100,7 +100,7 @@ export default function DownLine() {
                   </nav>
                 </div>
               </div>
-              <div class="rank-income ">
+              <div class="rank-income">
                 <table className="table-responsiveness">
                   <tr>
                     <th>Sr.No</th>
