@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import Navbar from "./Navbar";
@@ -10,7 +10,46 @@ import { FaMedal } from "react-icons/fa6";
 import { FaCrown } from "react-icons/fa6";
 import { TfiCup } from "react-icons/tfi";
 import { PiFlowerTulipDuotone } from "react-icons/pi";
+import { useAccount } from "wagmi";
+import { getUserInfo } from "../Helper/API_Functions";
+import { useBalance } from "wagmi";
+import { fetchBalance } from "@wagmi/core";
+
 export default function Dashboard() {
+  const { address } = useAccount();
+
+  const balance = fetchBalance({
+    address: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  });
+
+  const packages = [
+    { name: "Beginner", color: "rgb(212, 55, 55)", subscription: "$15" },
+    { name: "Seeker", color: "rgb(212, 139, 55)", subscription: "$30" },
+    { name: "Innovator", color: "rgb(209, 212, 55)", subscription: "$55" },
+    { name: "Tycoon", color: "rgb(55, 212, 133)", subscription: "$90" },
+    { name: "Elite", color: "rgb(55, 212, 204)", subscription: "$135" },
+    { name: "Visionary", color: "rgb(55, 149, 212)", subscription: "$190" },
+    { name: "Commander", color: "rgb(162, 55, 212)", subscription: "$255" },
+    { name: "Legend", color: "rgb(212, 55, 102)", subscription: "$330" },
+    { name: "Titan", color: "rgb(160, 212, 54)", subscription: "$415" },
+    { name: "Pioneer", color: "rgb(147, 99, 43)", subscription: "$510" },
+    { name: "Architect", color: "rgb(113, 114, 19)", subscription: "$615" },
+    { name: "Emperor", color: "rgb(230, 10, 76)", subscription: "$725" },
+    { name: "Master", color: "rgb(212, 55, 102)", subscription: "$845" },
+    { name: "King", color: "rgb(160, 212, 54)", subscription: "$980" },
+    { name: "Grandmaster", color: "rgb(147, 99, 43)", subscription: "$1125" },
+  ];
+
+  const UserInfo = async () => {
+    const res = await getUserInfo(address);
+    console.log("UserInfo", res);
+  };
+
+  useEffect(() => {
+    // WalletBalance(address);
+    UserInfo();
+  }, []);
+
   return (
     <>
       <div className="p-4 dashboardbgcolor">
@@ -40,9 +79,15 @@ export default function Dashboard() {
                   }}
                 >
                   <h6>My Wallet Fund</h6>
-                  <p> 0 USDT</p>
+                  <p>
+                    {/* {isLoading
+                      ? "Loading..."
+                      : isError
+                      ? "Error fetching balance"
+                      : `${data?.formatted} ${data?.symbol}`} */}
+                  </p>
                   <h6>My Wallet Address</h6>
-                  <p>-</p>
+                  <p className="text-white">{address}</p>
                 </div>
                 <div
                   class="user-card"
@@ -60,58 +105,16 @@ export default function Dashboard() {
               <section class="dashboard">
                 <h3 className="dashboard-heading">Packages</h3>
                 <div class="package-grid">
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: "color: rgb(212, 55, 55)" }}>
-                      FRONTLINE
-                    </p>
-                  </div>
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: " rgb(212, 139, 55)" }}>HOMESTEAD</p>
-                  </div>
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: " rgb(209, 212, 55)" }}>METROPOLIS</p>
-                  </div>
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: " rgb(55, 212, 133)" }}>SERENITY</p>
-                  </div>
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: " rgb(55, 212, 204)" }}>POWERUP</p>
-                  </div>
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: " rgb(55, 149, 212)" }}>SUPERB</p>
-                  </div>
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: " rgb(162, 55, 212)" }}>MENTOR</p>
-                  </div>
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: " rgb(212, 55, 102)" }}>ICON</p>
-                  </div>
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: " rgb(160, 212, 54)" }}>DUPLEX</p>
-                  </div>
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: " rgb(147, 99, 43)" }}>ALPHA</p>
-                  </div>
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: " rgb(113, 114, 19)" }}>HELIX</p>
-                  </div>
-                  <div class="package-card">
-                    <span>0.000</span>
-                    <p style={{ color: " rgb(230, 10, 76)" }}>AMBASSADOR</p>
-                  </div>
+                  {packages.map((pkg, index) => (
+                    <div className="package-card" key={index}>
+                      <span>{pkg.subscription}</span>
+                      <p style={{ color: pkg.color }}>{pkg.name}</p>
+
+                      <button className=" btn-upgrade">Upgrade</button>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="dashboard-heading">Daily Royalty Countdown</h3>
+                {/* <h3 className="dashboard-heading">Daily Royalty Countdown</h3>
                 <div class="countdown-grid">
                   <div class="countdown-card">
                     <div class="icon-container">
@@ -168,7 +171,7 @@ export default function Dashboard() {
                   className="dashboard-heading"
                 >
                   00 HH : 00 mm : 00 ss
-                </h2>
+                </h2> */}
                 <div
                   class="total-grid"
                   style={{ marginTop: "center", marginBottom: "3%" }}
@@ -370,7 +373,7 @@ export default function Dashboard() {
                   </tbody>
                 </table>
               </section>
-              <h3 className="dashboard-heading">Rank Income</h3>
+              {/* <h3 className="dashboard-heading">Rank Income</h3>
               <div className="rank-income" style={{ overflowX: "auto" }}>
                 <table>
                   <tr className="text-white">
@@ -379,12 +382,7 @@ export default function Dashboard() {
                     <th>Rank Level</th>
                     <th>Time</th>
                   </tr>
-                  <tr>
-                    {/* <td>-</td>
-                    <td>0.0</td>
-                    <td>Royalty</td>
-                    <td>1/1/1970, 5:30 AM</td> */}
-                  </tr>
+                  <tr></tr>
                 </table>
               </div>
               <div style={{ marginTop: "2%" }}>
@@ -414,7 +412,7 @@ export default function Dashboard() {
                     </ul>
                   </nav>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </main>

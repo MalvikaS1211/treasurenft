@@ -28,6 +28,7 @@ import CreateNFT from "../CreateNFT";
 import LiveAuction from "../LiveAuction";
 import Trade from "../Trade";
 import Royality from "../Royality";
+import SignIn from "../SignIn";
 function AppRoutes() {
   return (
     <>
@@ -51,6 +52,7 @@ function AppRoutes() {
           <Route path="/royality" element={<Royality />} />
           <Route path="/buyNft" element={<Trade />} />
           <Route path="/signup" element={<Registration />} />
+          <Route path="/signin" element={<SignIn />} />
         </Routes>
       </Router>
     </>

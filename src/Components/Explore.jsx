@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { FaGripfire } from "react-icons/fa";
 
@@ -18,7 +18,65 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { FaShoppingBag } from "react-icons/fa";
 import FooterNew from "./FooterNew";
 import HeaderNew from "./HeaderNew";
+import { getUserCreatedNftsFn } from "../Helper/API_Functions";
+import { useAccount } from "wagmi";
+import { getNfts } from "../Helper/Web3";
+import axios from "axios";
+
 export default function Expore() {
+  const { address } = useAccount();
+  const [createdNFTs, setCreateNft] = useState([]);
+
+  const ShowNFTs = async () => {
+    try {
+      const resNFT = await getUserCreatedNftsFn(address);
+      const data = await Promise.all(
+        resNFT.results.map(async (it) => {
+          try {
+            const res = await getNfts(it.tokenId);
+            const metadataUrl = res[2].replace(
+              "ipfs://",
+              "https://ipfs.io/ipfs/"
+            );
+            const metadataRes = await axios.get(metadataUrl);
+            const metadata = metadataRes.data;
+            const imageUrl = metadata.image.replace(
+              "ipfs://",
+              "https://ipfs.io/ipfs/"
+            );
+            return {
+              ...it,
+              title: metadata.name,
+              description: metadata.description,
+              img: imageUrl,
+              price: res[4],
+            };
+          } catch (err) {
+            console.error(
+              `Error fetching metadata for Token ID ${it.tokenId}:`,
+              err
+            );
+            return {
+              ...it,
+              title: res[0],
+              description: "Error loading",
+              img: "",
+            };
+          }
+        })
+      );
+
+      setCreateNft(data);
+      console.log("Fetched NFTs:", data);
+    } catch (error) {
+      console.error("Error fetching user-created NFTs:", error);
+    }
+  };
+
+  useEffect(() => {
+    ShowNFTs();
+  }, [address]);
+
   return (
     <>
       <HeaderNew />
@@ -42,15 +100,81 @@ export default function Expore() {
         <section className="tf-section today-pick">
           <div className="themesflat-container">
             <div className="row">
-              {/* <div class="col-md-12">
-                <div class="heading-live-auctions mg-bt-21">
-                  <h2 class="tf-title pb-18">Today's Picks</h2>
-                  <a class="exp style2" href="/explore-03">
-                      EXPLORE MORE
-                    </a>
+              {createdNFTs.map((nft, index) => (
+                <div
+                  key={index}
+                  className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
+                >
+                  <div
+                    className="sc-card-product explode style2 mg-bt "
+                    style={{ border: "1px solid #5142fc" }}
+                  >
+                    <div className="card-media">
+                      <a href="#">
+                        <img
+                          src={
+                            nft.img.startsWith("ipfs://")
+                              ? nft.img.replace(
+                                  "ipfs://",
+                                  "https://ipfs.io/ipfs/"
+                                )
+                              : nft.img
+                          }
+                          alt="NFT"
+                        />
+                      </a>
+
+                      <div className="button-place-bid">
+                        <button className="sc-button style-place-bid style bag fl-button pri-3">
+                          <FaShoppingBag color="black" />
+                          <span>Sell</span>
+                        </button>
+                      </div>
+                      {/* <div className="wishlist-button heart">
+                        <IoIosHeartEmpty size={18} />
+                        <span className="number-like">{nft.likes}</span>
+                      </div> */}
+                      <div className="coming-soon"></div>
+                    </div>
+                    <div className="card-title">
+                      <h5>
+                        <a href="">{nft.title}</a>
+                      </h5>
+                    </div>
+                    <div className="meta-info">
+                      <div className="author">
+                        {/* <div className="avatar">
+                          <img src={nft.creatorImg} alt="Creator" />
+                        </div> */}
+                        <div className="info">
+                          <span>Creator</span>
+                          <h6>
+                            {nft.creator
+                              ? `${nft.creator.slice(
+                                  0,
+                                  6
+                                )}...${nft.creator.slice(-8)}`
+                              : "Unknown"}
+                          </h6>
+                        </div>
+                      </div>
+                      {/* <div className="tags">{nft.chain}</div> */}
+                    </div>
+                    <div className="card-bottom style-explode">
+                      <div className="price">
+                        <span>Buy Price</span>
+                        <div className="price-details">
+                          <h5>{Number(nft.price) / 1e18} $</h5>
+                          {/* <span>= ${nft.usdValue}</span> */}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div> */}
-              <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              ))}
+
+              {/* <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                
                 <div class="sc-card-product explode style2 mg-bt  ">
                   <div class="card-media">
                     <a href="">
@@ -100,8 +224,8 @@ export default function Expore() {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              </div> */}
+              {/* <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
                 <div class="sc-card-product explode style2 mg-bt  ">
                   <div class="card-media">
                     <a href="">
@@ -457,7 +581,7 @@ export default function Expore() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

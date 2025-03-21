@@ -120,14 +120,18 @@ function ConnectWallet() {
 
                 return (
                   <div
-                    style={{ display: "grid", gap: 12 }}
+                    style={{
+                      display: "flex",
+                      // gap: 12,
+                      flexDirection: "column",
+                    }}
                     className="d-flex botttons-wallet"
                   >
                     <button
                       onClick={openChainModal}
                       style={{ display: "flex", alignItems: "center" }}
                       type="button"
-                      className="btn btn-success-gradient btn-wave chain-btn-wallet"
+                      className="btn btn-success-gradient btn-wave chain-btn-wallet "
                     >
                       {chain.hasIcon && (
                         <div
@@ -149,18 +153,21 @@ function ConnectWallet() {
                           )}
                         </div>
                       )}
-                      {chain.name}
+                      {/* {chain.name} */}
                     </button>
 
                     <button
                       onClick={openAccountModal}
                       type="button"
-                      className="btn btn-success-gradient btn-wave"
+                      className="connect-wallet-container"
                     >
-                      {account.displayName}
-                      {account.displayBalance
-                        ? ` (${account.displayBalance})`
-                        : ""}
+                      <div className="connect-wallet-btn">
+                        {" "}
+                        {account.displayName}
+                        {account.displayBalance
+                          ? ` (${account.displayBalance})`
+                          : ""}
+                      </div>
                     </button>
                   </div>
                 );

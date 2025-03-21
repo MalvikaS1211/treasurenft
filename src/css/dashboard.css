@@ -1717,7 +1717,7 @@ h2 {
   }
 
   .user-grid {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 
   .responsive-table tr {
@@ -2243,4 +2243,19 @@ header {
     width: 100%;
     overflow-x: auto;
   }
+}
+
+.btn-upgrade {
+  margin-top: 10px;
+  background-image: linear-gradient(
+    to right,
+    rgb(33, 82, 175) 0%,
+    rgb(107, 167, 231) 51%,
+    rgb(33, 82, 175) 100%
+  );
+  color: white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
