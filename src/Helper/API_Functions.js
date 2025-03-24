@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
-export const URLApi = "http://192.168.1.150:8081/api";
+
+export const URLApi = "http://64.227.155.146:8081/api";
 export async function getUserInfo(address) {
   try {
     const response = await axios.post(`${URLApi}/get-user-info`, {
@@ -62,5 +63,70 @@ export async function getDirectTeam(address, page, limit) {
     return response.data;
   } catch (error) {
     console.log("Error getUserInfo Admin:", error);
+  }
+}
+
+export async function getReadyForsaleFn(address, tokenId) {
+  try {
+    const response = await axios.post(`${URLApi}/get-ready-for-sale`, {
+      userAddress: address,
+      tokenId: tokenId,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getReadyForsaleFn :", error);
+  }
+}
+
+export async function getTradeUserFn(address) {
+  try {
+    const response = await axios.post(`${URLApi}/get-all-trades-for-user`, {
+      userAddress: address,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getTradeUserFn :", error);
+  }
+}
+
+export async function getReadyForBuyFn(
+  userAddress,
+  initialPrice,
+  title,
+  description,
+  metadataURI,
+  tokenId,
+  totalAmount
+) {
+  console.log(
+    userAddress,
+    initialPrice,
+    title,
+    description,
+    metadataURI,
+    tokenId,
+    totalAmount,
+    "in api call"
+  );
+  try {
+    if (!title) {
+      return;
+    }
+    const response = await axios.post(`${URLApi}/buy-nft-vrs`, {
+      userAddress,
+      initialPrice,
+      title,
+      description,
+      metadataURI,
+      tokenId,
+      totalAmount,
+    });
+
+    return response?.data;
+  } catch (error) {
+    console.log("Error getReadyForBuyFn :", error);
+    return false;
   }
 }

@@ -6,7 +6,7 @@ import HeaderDashboard from "./HeaderDashboard";
 export default function Community() {
   return (
     <>
-      <div className="p-4 dashboardbgcolor">
+      <div className="p-4 dashboardbg">
         {" "}
         <Navbar></Navbar>
         <main className="content-dashboard">

@@ -143,7 +143,7 @@ export default function SingleNFT() {
         if (res.success) {
           const tokenApp = await tokenApp1(totalAmount);
           if (tokenApp) {
-            const nft = await createNFTFn(
+            const nft = createNFTFn(
               res.vrs.title,
               res.vrs.description,
               res.vrs.metadataURI,
@@ -153,10 +153,20 @@ export default function SingleNFT() {
               res.vrs.signature.r,
               res.vrs.signature.s
             );
+            await toast.promise(nft, {
+              loading: "Nft creation in process",
+              success: "Nft created successfully",
+              error: "error in nft creation",
+            });
             console.log(nft, "ASFDDDDDDDDDD");
           }
         }
       }
+      setSelectedFile("");
+      setNftPrice("");
+      setTitle("");
+      setDescription("");
+      setPreview(CyberDoberman);
     } catch (error) {
       console.log(error);
     }
@@ -245,7 +255,7 @@ export default function SingleNFT() {
               <form>
                 <h4 className="title-create-item">Price</h4>
                 <select
-                  className=" mb-4"
+                  className=" mb-4 nft-price-dropdown"
                   value={nftPrice}
                   onChange={handleNFTPrice}
                 >

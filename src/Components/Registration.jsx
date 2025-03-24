@@ -1,16 +1,38 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../assets/LogoBlue.png";
 import HeaderNew from "./HeaderNew";
 import FooterNew from "./FooterNew";
 import ConnectWallet from "./ConnectWallet";
 import { useAccount } from "wagmi";
-import { approveToken, registerfn } from "../Helper/Web3";
+import { approveToken, isUserExist, registerfn } from "../Helper/Web3";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { base_url } from "../Helper/Config";
 
 export default function Registration() {
   const [ref, setRef] = useState();
   const { address } = useAccount();
+  const [userExist, setUserExist] = useState(false);
+  const referralLink = `${base_url}/?ref=${address}`;
+  const data = new URLSearchParams(window.location.search);
+  const refLink = data.get("ref");
+  console.log("refLink", refLink);
+  const userExistFn = async () => {
+    try {
+      if (address) {
+        const resUserExist = await isUserExist(address);
+        console.log(resUserExist, "resUserExist");
+        setUserExist(resUserExist);
+      }
+    } catch (error) {
+      console.error("Error checking user existence:", error);
+    }
+  };
+  useEffect(() => {
+    if (address) {
+      userExistFn();
+    } else toast.error("Please connect your wallet");
+  }, [address]);
 
   const tokenApp = async (amt) => {
     try {
@@ -29,13 +51,28 @@ export default function Registration() {
 
   const userReg = async () => {
     try {
+      if (!address) {
+        toast.error("Wallet address is required!");
+        return;
+      }
+
       const appRes = await tokenApp(15);
       if (appRes) {
         const reg = await registerfn(ref, 15);
         console.log(reg, ":::::");
+
+        if (reg) {
+          toast.success("User registered successfully!");
+        } else {
+          toast.error("Registration failed. Please try again.");
+        }
+        setRef("");
+      } else {
+        toast.error("Token approval failed. Please try again.");
       }
     } catch (error) {
       console.log(error);
+      toast.error("An error occurred during registration.");
     }
   };
 
@@ -48,12 +85,7 @@ export default function Registration() {
             <div className="col-12">
               <h2 className="tf-title-heading ct style-1">Sign Up To NFTs</h2>
 
-              {/* Email Login Section */}
               <div className="flat-form box-login-email">
-                {/* <div className="box-title-login">
-                  <h5>Or login with email</h5>
-                </div> */}
-
                 <div className="form-inner">
                   <form action="#" id="contactform">
                     <input
@@ -75,7 +107,7 @@ export default function Registration() {
                       }}
                     />
 
-                    {address ? (
+                    {address && !userExist ? (
                       <button
                         className="submit"
                         onClick={userReg}

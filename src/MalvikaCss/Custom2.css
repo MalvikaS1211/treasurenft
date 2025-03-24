@@ -114,6 +114,7 @@
 }
 .dashboardbg {
   background-image: url("../assets/LightBG.jpg") !important;
+  background-repeat: no-repeat;
 }
 .wallet-connect-icon {
   font-size: 20px;
@@ -183,4 +184,11 @@
 
 .createbtn:hover {
   color: white;
+}
+
+.create-nft-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }

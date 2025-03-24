@@ -60,9 +60,11 @@
   color: white;
 }
 .package-card {
-  background: linear-gradient(45deg, #1d1d23, #333);
+  /* background: linear-gradient(45deg, #1d1d23, #333); */
+  background: transparent;
   padding: 15px;
   text-align: center;
+  border: 1px solid rgb(33, 82, 175);
   border-radius: 5px;
 }
 .rank-income table {
@@ -75,7 +77,8 @@
   border-radius: 10px !important;
 }
 .rank-income tr:nth-child(2n) {
-  background-color: #414141;
+  background-color: #e0eaf7;
+  color: black;
 }
 .css-1ov46kg {
   display: flex;
@@ -162,15 +165,27 @@
 .responsive-table {
   width: 100%;
   border: none !important;
-  background: linear-gradient(45deg, #1d1d23, #333);
+  /* background: linear-gradient(45deg, #1d1d23, #333); */
+  background: linear-gradient(
+    to right,
+    rgb(142 175 239) 0%,
+    rgb(107, 167, 231) 51%,
+    rgb(124 165 241) 100%
+  );
   text-align: center !important;
   border-radius: 10px;
 }
 .rank-income {
-  background: linear-gradient(45deg, #1d1d23, #333);
   padding: 15px;
   border-radius: 10px;
   text-align: center;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    rgb(72 120 211) 0%,
+    rgb(107, 167, 231) 51%,
+    rgb(77 122 207) 100%
+  ) !important;
 }
 .countdown-card {
   background: linear-gradient(45deg, #1d1d23, #333);
@@ -195,7 +210,7 @@
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: white;
+  color: black;
 }
 .user-card:hover {
   background: linear-gradient(45deg, #333, #1d1d23);
@@ -1770,19 +1785,23 @@ header {
 }
 
 .package-card {
-  background: linear-gradient(45deg, #1d1d23, #333);
+  /* background: linear-gradient(45deg, #1d1d23, #333); */
+  background: transparent;
+  border: 1px solid rgb(33, 82, 175);
   padding: 15px;
   text-align: center;
   border-radius: 5px;
 }
 
 .package-card:hover {
-  background: linear-gradient(45deg, #333, #1d1d23);
+  /* background: linear-gradient(45deg, #333, #1d1d23); */
+  background: transparent;
 }
 
 .package-card span {
   font-size: 17px;
   font-weight: 400;
+  color: black;
 }
 
 .package-card p {
@@ -1856,7 +1875,7 @@ header {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: white;
+  color: black;
 }
 
 .user-card p {
@@ -1872,7 +1891,13 @@ header {
 }
 
 .total-card {
-  background: linear-gradient(45deg, #1d1d23, #333);
+  /* background: linear-gradient(45deg, #1d1d23, #333); */
+  background-image: linear-gradient(
+    to right,
+    rgb(33, 82, 175) 0%,
+    rgb(107, 167, 231) 51%,
+    rgb(33, 82, 175) 100%
+  );
   padding: 15px 18px;
   border-radius: 5px;
   text-align: center;
@@ -1885,7 +1910,13 @@ header {
 }
 
 .total-card:hover {
-  background: linear-gradient(45deg, #333, #1d1d23);
+  /* background: linear-gradient(45deg, #333, #1d1d23); */
+  background-image: linear-gradient(
+    to right,
+    rgb(33, 82, 175) 0%,
+    rgb(107, 167, 231) 51%,
+    rgb(33, 82, 175) 100%
+  );
 }
 
 .total-card h6 {
@@ -1897,6 +1928,7 @@ header {
 
 .total-card p {
   margin: 0;
+  color: #e7dfdf;
 }
 
 .sub-total {
@@ -1939,7 +1971,7 @@ header {
 .follow-us {
   position: absolute;
   text-align: center;
-  color: #fff;
+  color: black;
   font-weight: 400;
   font-size: 16px;
   /* bottom: 65px; */
@@ -1956,6 +1988,7 @@ header {
 .header-dashboard h1 {
   font-size: 25px;
   margin: 0;
+  color: #000;
 }
 
 .header-dashboard-right {
@@ -2001,7 +2034,8 @@ header {
 }
 
 .rank-income tr:nth-child(2n) {
-  background-color: #414141;
+  background-color: #e0eaf7;
+  color: black;
 }
 
 .rank-income {
@@ -2076,13 +2110,25 @@ header {
 .responsive-table {
   width: 100%;
   border: none !important;
-  background: linear-gradient(45deg, #1d1d23, #333);
+  /* background: linear-gradient(45deg, #1d1d23, #333); */
+  background: linear-gradient(
+    to right,
+    rgb(142 175 239) 0%,
+    rgb(107, 167, 231) 51%,
+    rgb(124 165 241) 100%
+  );
   text-align: center !important;
   border-radius: 10px;
 }
 
 .responsive-table:hover {
-  background: linear-gradient(45deg, #333, #1d1d23);
+  /* background: linear-gradient(45deg, #333, #1d1d23); */
+  background: linear-gradient(
+    to right,
+    rgb(142 175 239) 0%,
+    rgb(107, 167, 231) 51%,
+    rgb(124 165 241) 100%
+  );
 }
 
 .responsive-table th,
@@ -2202,7 +2248,7 @@ header {
 }
 
 .dashboard-heading {
-  color: white;
+  /* color: white; */
   padding-bottom: 20px;
 }
 
@@ -2258,4 +2304,10 @@ header {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+}
+
+.table,
+th,
+td {
+  border: none !important;
 }

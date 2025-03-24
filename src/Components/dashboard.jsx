@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import Navbar from "./Navbar";
@@ -14,45 +14,93 @@ import { useAccount } from "wagmi";
 import { getUserInfo } from "../Helper/API_Functions";
 import { useBalance } from "wagmi";
 import { fetchBalance } from "@wagmi/core";
+import { approveToken, upgradePackageFn, usersFn } from "../Helper/Web3";
+import toast from "react-hot-toast";
 
 export default function Dashboard() {
   const { address } = useAccount();
+  const [dashboardData, setDashboardData] = useState([]);
 
-  const balance = fetchBalance({
-    address: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  });
+  // const balance = fetchBalance({
+  //   address: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  // });
 
   const packages = [
-    { name: "Beginner", color: "rgb(212, 55, 55)", subscription: "$15" },
-    { name: "Seeker", color: "rgb(212, 139, 55)", subscription: "$30" },
-    { name: "Innovator", color: "rgb(209, 212, 55)", subscription: "$55" },
-    { name: "Tycoon", color: "rgb(55, 212, 133)", subscription: "$90" },
-    { name: "Elite", color: "rgb(55, 212, 204)", subscription: "$135" },
-    { name: "Visionary", color: "rgb(55, 149, 212)", subscription: "$190" },
-    { name: "Commander", color: "rgb(162, 55, 212)", subscription: "$255" },
-    { name: "Legend", color: "rgb(212, 55, 102)", subscription: "$330" },
-    { name: "Titan", color: "rgb(160, 212, 54)", subscription: "$415" },
-    { name: "Pioneer", color: "rgb(147, 99, 43)", subscription: "$510" },
-    { name: "Architect", color: "rgb(113, 114, 19)", subscription: "$615" },
-    { name: "Emperor", color: "rgb(230, 10, 76)", subscription: "$725" },
-    { name: "Master", color: "rgb(212, 55, 102)", subscription: "$845" },
-    { name: "King", color: "rgb(160, 212, 54)", subscription: "$980" },
-    { name: "Grandmaster", color: "rgb(147, 99, 43)", subscription: "$1125" },
+    { name: "Beginner", color: "rgb(212, 55, 55)", subscription: "15" },
+    { name: "Seeker", color: "rgb(212, 139, 55)", subscription: "30" },
+    { name: "Innovator", color: "rgb(209, 212, 55)", subscription: "55" },
+    { name: "Tycoon", color: "rgb(55, 212, 133)", subscription: "90" },
+    { name: "Elite", color: "rgb(55, 212, 204)", subscription: "135" },
+    { name: "Visionary", color: "rgb(55, 149, 212)", subscription: "190" },
+    { name: "Commander", color: "rgb(162, 55, 212)", subscription: "255" },
+    { name: "Legend", color: "rgb(212, 55, 102)", subscription: "330" },
+    { name: "Titan", color: "rgb(162, 55, 212)", subscription: "415" },
+    { name: "Pioneer", color: "rgb(147, 99, 43)", subscription: "510" },
+    { name: "Architect", color: "rgb(113, 114, 19)", subscription: "615" },
+    { name: "Emperor", color: "rgb(230, 10, 76)", subscription: "725" },
+    { name: "Master", color: "rgb(212, 55, 102)", subscription: "845" },
+    { name: "King", color: "rgb(160, 212, 54)", subscription: "980" },
+    { name: "Grandmaster", color: "rgb(147, 99, 43)", subscription: "1125" },
   ];
-
+  const [allUsers, setAllUsers] = useState({});
   const UserInfo = async () => {
-    const res = await getUserInfo(address);
-    console.log("UserInfo", res);
+    try {
+      const res = await getUserInfo(address);
+      setAllUsers(res);
+      console.log("UserInfo", res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  // console.log(userInfo, "userInfo::::");
+
+  const getUserInFoFromContract = async () => {
+    try {
+      const resUser = await usersFn(address);
+      setDashboardData(resUser);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const tokenApp = async (amt) => {
+    try {
+      const appres = approveToken(amt);
+      await toast.promise(appres, {
+        loading: "Approval in process",
+        success: "Approved",
+        error: "Error",
+      });
+      return appres;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  };
+
+  const handlePackage = async (pkg) => {
+    try {
+      const appRes = await tokenApp(pkg.subscription);
+      console.log("pkg.subscription", pkg.subscription);
+      console.log("appRes", appRes);
+      if (appRes) {
+        await upgradePackageFn();
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   useEffect(() => {
-    // WalletBalance(address);
-    UserInfo();
-  }, []);
+    if (address) {
+      UserInfo();
+      getUserInFoFromContract();
+    }
+  }, [address]);
 
   return (
     <>
-      <div className="p-4 dashboardbgcolor">
+      <div className="p-4 dashboardbg">
         <Navbar></Navbar>
         <main class="content-dashboard">
           <HeaderDashboard title="Dashboard"></HeaderDashboard>
@@ -67,7 +115,9 @@ export default function Dashboard() {
                   }}
                 >
                   <h6>User ID</h6>
-                  <p>-</p>
+                  <p>
+                    {allUsers?.userInfo?.[0]?.uniqueRandomId || "No user found"}
+                  </p>
                   <h6>Rank</h6>
                   <p>-</p>
                 </div>
@@ -76,6 +126,7 @@ export default function Dashboard() {
                   style={{
                     backgroundImage:
                       "linear-gradient(to right, rgb(33, 82, 175) 0%, rgb(107, 167, 231) 51%, rgb(33, 82, 175) 100%)",
+                    padding: "1px",
                   }}
                 >
                   <h6>My Wallet Fund</h6>
@@ -87,7 +138,7 @@ export default function Dashboard() {
                       : `${data?.formatted} ${data?.symbol}`} */}
                   </p>
                   <h6>My Wallet Address</h6>
-                  <p className="text-white">{address}</p>
+                  <p className="text-white p-2">{address}</p>
                 </div>
                 <div
                   class="user-card"
@@ -99,7 +150,7 @@ export default function Dashboard() {
                   <h6>Referral Link</h6>
                   <p>-</p>
                   <h6>Referred By</h6>
-                  <p>-</p>
+                  <p>{dashboardData[2]}</p>
                 </div>
               </div>
               <section class="dashboard">
@@ -107,71 +158,30 @@ export default function Dashboard() {
                 <div class="package-grid">
                   {packages.map((pkg, index) => (
                     <div className="package-card" key={index}>
-                      <span>{pkg.subscription}</span>
+                      <span>${pkg.subscription}</span>
                       <p style={{ color: pkg.color }}>{pkg.name}</p>
 
-                      <button className=" btn-upgrade">Upgrade</button>
+                      {index < Number(dashboardData[7]) ? (
+                        <button
+                          className="btn-upgrade"
+                          type="button"
+                          // onClick={() => handlePackage(pkg)}
+                          style={{ cursor: "default" }}
+                        >
+                          Active
+                        </button>
+                      ) : (
+                        <button
+                          className="btn-upgrade"
+                          type="button"
+                          onClick={() => handlePackage(pkg)}
+                        >
+                          Upgrade
+                        </button>
+                      )}
                     </div>
                   ))}
                 </div>
-                {/* <h3 className="dashboard-heading">Daily Royalty Countdown</h3>
-                <div class="countdown-grid">
-                  <div class="countdown-card">
-                    <div class="icon-container">
-                      <FaMedal color="white" />
-                    </div>
-                    <h6 style={{ color: "rgb(108, 151, 207)" }}>DUPLEX</h6>
-                    <p> 0.00 USDT</p>
-                    <p
-                      style={{ fontSize: "14px", color: "rgb(108, 151, 207)" }}
-                    >
-                      250
-                    </p>
-                  </div>
-                  <div class="countdown-card">
-                    <div class="icon-container">
-                      <PiFlowerTulipDuotone color="white" />
-                    </div>
-                    <h6 style={{ color: "rgb(108, 207, 166)" }}>ALPHA</h6>
-                    <p> 0.00 USDT</p>
-                    <p
-                      style={{ fontSize: "14px", color: "rgb(108, 207, 166)" }}
-                    >
-                      42
-                    </p>
-                  </div>
-                  <div class="countdown-card">
-                    <div class="icon-container">
-                      <TfiCup color="white" />
-                    </div>
-                    <h6 style={{ color: "rgb(207, 205, 108)" }}>HELIX</h6>
-                    <p> 0.00 USDT</p>
-                    <p
-                      style={{ fontSize: "14px", color: "rgb(207, 205, 108)" }}
-                    >
-                      28
-                    </p>
-                  </div>
-                  <div class="countdown-card">
-                    <div class="icon-container">
-                      <FaCrown color="white" />
-                    </div>
-                    <h6 style={{ color: "rgb(207, 161, 108)" }}>Ambassador</h6>
-                    <p> 0.00 USDT</p>
-                    <p
-                      style={{ fontSize: "14px", color: "rgb(207, 161, 108)" }}
-                    >
-                      37
-                    </p>
-                  </div>
-                </div>
-                <h2
-                  class="royalty_heading"
-                  style={{ textAlign: "center", marginTop: "3%" }}
-                  className="dashboard-heading"
-                >
-                  00 HH : 00 mm : 00 ss
-                </h2> */}
                 <div
                   class="total-grid"
                   style={{ marginTop: "center", marginBottom: "3%" }}
@@ -373,46 +383,6 @@ export default function Dashboard() {
                   </tbody>
                 </table>
               </section>
-              {/* <h3 className="dashboard-heading">Rank Income</h3>
-              <div className="rank-income" style={{ overflowX: "auto" }}>
-                <table>
-                  <tr className="text-white">
-                    <th>From</th>
-                    <th>Amount (USDT)</th>
-                    <th>Rank Level</th>
-                    <th>Time</th>
-                  </tr>
-                  <tr></tr>
-                </table>
-              </div>
-              <div style={{ marginTop: "2%" }}>
-                <div class="MuiStack-root css-1ov46kg">
-                  <nav
-                    aria-label="pagination navigation"
-                    class="MuiPagination-root MuiPagination-text css-1xdhyk6"
-                  >
-                    <ul class="MuiPagination-ul css-51eq8m">
-                      <li>
-                        <FaArrowLeft color="#6c6c6c" />
-                      </li>
-                      <li>
-                        <button
-                          class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-rounded Mui-selected MuiPaginationItem-page css-yv5wb4"
-                          tabindex="0"
-                          type="button"
-                          aria-current="true"
-                          aria-label="page 1"
-                        >
-                          1
-                        </button>
-                      </li>
-                      <li>
-                        <FaArrowRight color="#6c6c6c" />
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div> */}
             </div>
           </div>
         </main>

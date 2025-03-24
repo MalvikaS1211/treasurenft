@@ -4,13 +4,14 @@ import HeaderNew from "./HeaderNew";
 import FooterNew from "./FooterNew";
 import ConnectWallet from "./ConnectWallet";
 import { useAccount } from "wagmi";
-import { approveToken, isUserExist, registerfn } from "../Helper/Web3";
+import { isUserExist } from "../Helper/Web3";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SignIn() {
   const { address } = useAccount();
   const [userExist, setUserExist] = useState(false);
+  const navigate = useNavigate();
 
   const userExistFn = async () => {
     try {
@@ -20,13 +21,22 @@ export default function SignIn() {
         setUserExist(resUserExist);
       }
     } catch (error) {
-      console.log(error);
+      console.error("Error checking user existence:", error);
     }
   };
 
   useEffect(() => {
-    userExistFn;
+    userExistFn(); // Call the function properly
   }, [address]);
+
+  const handleSignIn = () => {
+    if (userExist) {
+      navigate("/dashboard");
+    } else {
+      toast.error("Please register first!");
+    }
+  };
+
   return (
     <>
       <HeaderNew />
@@ -38,10 +48,6 @@ export default function SignIn() {
 
               {/* Email Login Section */}
               <div className="flat-form box-login-email">
-                {/* <div className="box-title-login">
-                  <h5>Or login with email</h5>
-                </div> */}
-
                 <div className="form-inner">
                   <form action="#" id="contactform">
                     <input
@@ -51,14 +57,19 @@ export default function SignIn() {
                       placeholder="Wallet Address"
                       required
                       value={address}
+                      readOnly
                     />
 
-                    {address ? (
-                      <Link to="/dashboard">
-                        <button className="sub mit">SignIn</button>
-                      </Link>
+                    {address && userExist ? (
+                      <button
+                        className="submit"
+                        type="button"
+                        onClick={handleSignIn}
+                      >
+                        Sign In
+                      </button>
                     ) : (
-                      <ConnectWallet></ConnectWallet>
+                      <ConnectWallet />
                     )}
                   </form>
                 </div>

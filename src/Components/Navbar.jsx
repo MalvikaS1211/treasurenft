@@ -83,19 +83,19 @@ export default function Navbar({ isSidebarOpen }) {
 
       <div className="social-icons">
         <a href="" target="_blank">
-          <i className="fab fa-telegram-plane"></i>
+          <i className="fab fa-telegram-plane" style={{ color: "black" }}></i>
         </a>
         <a href="https://x.com/Etherforce_Defi/" target="_blank">
-          <i className="fab fa-x-twitter"></i>
+          <i className="fab fa-x-twitter" style={{ color: "black" }}></i>
         </a>
         <a href="" target="_blank">
-          <i className="fab fa-facebook-f"></i>
+          <i className="fab fa-facebook-f" style={{ color: "black" }}></i>
         </a>
         <a href="" target="_blank">
-          <i className="fab fa-instagram"></i>
+          <i className="fab fa-instagram" style={{ color: "black" }}></i>
         </a>
         <a href="" target="_blank">
-          <i className="fab fa-youtube"></i>
+          <i className="fab fa-youtube" style={{ color: "black" }}></i>
         </a>
       </div>
     </aside>

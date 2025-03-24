@@ -58,19 +58,42 @@ export async function approveToken(amt) {
   return result;
 }
 
-export async function buyNFTFn(tokenId, initialPrice, v, r, s) {
+export async function buyNFTFn(
+  tokenId,
+  initialPrice,
+  v,
+  r,
+  s,
+  title,
+  description,
+  metadataURI
+) {
+  console.log(
+    tokenId,
+    initialPrice,
+    v,
+    r,
+    s,
+    title,
+    description,
+    metadataURI,
+    "::::DAsdasdfsadfASDFSADF"
+  );
   const result = await writeContract(config, {
     abi: CONTRACT_ADDRESS_ABI,
     address: CONTRACT_ADDRESS,
     functionName: "buyNFT",
     args: [
       tokenId,
-      (initialPrice * 1e18).toLocaleString("fullwide", {
+      initialPrice.toLocaleString("fullwide", {
         useGrouping: false,
       }),
       v,
       r,
       s,
+      title,
+      description,
+      metadataURI,
     ],
   });
 
@@ -166,5 +189,33 @@ export async function getNfts(tokenId) {
   });
 
   console.log("eresrsafd", result);
+  return result;
+}
+
+export async function upgradePackageFn() {
+  const result = await writeContract(config, {
+    abi: CONTRACT_ADDRESS_ABI,
+    address: CONTRACT_ADDRESS,
+    functionName: "upgradePackage",
+    args: [],
+  });
+  const res = waitForTransactionReceipt(config, { hash: result });
+  const data = await toast.promise(res, {
+    loading: "User upgradation is pending...",
+    success: "User upgradation Successfully",
+    error: "Upgradation failed",
+  });
+  console.log(data, "upgradePackageFn");
+  return data;
+}
+
+export async function usersFn(address) {
+  const result = await readContract(config, {
+    abi: CONTRACT_ADDRESS_ABI,
+    address: CONTRACT_ADDRESS,
+    functionName: "users",
+    args: [address],
+  });
+
   return result;
 }

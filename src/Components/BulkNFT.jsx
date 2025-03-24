@@ -1,149 +1,142 @@
 import React, { useState } from "react";
 import CyberDoberman from "../assets/CyberDoberman.jpg";
 import MattRamos from "../assets/MattRamos.jpg";
+import { FaPlus } from "react-icons/fa";
 
 export default function BulkNFT() {
-  const [file, setFile] = useState(null);
-  const [price, setPrice] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [activeTab, setActiveTab] = useState("single");
-  const [nftValue, setNftValue] = useState("");
-  const [selectedFiles, setSelectedFiles] = useState([]);
+  const [nftPrice, setNftPrice] = useState("");
   const [selectedFile, setSelectedFile] = useState("");
+  const [nfts, setNfts] = useState([
+    { file: null, price: "", title: "", description: "" },
+  ]);
+  const [preview, setPreview] = useState(null);
+
   const BulkNFTpriceOptions = [
-    300, 500, 700, 1000, 1200, 1700, 2400, 3100, 3500, 4000, 4700, 5400, 5900,
-    6300, 7000,
+    250, 500, 750, 1000, 1250, 1750, 2500, 3250, 3750, 4250, 5000, 5750, 6250,
+    6750, 7500,
   ];
-  const handleBulkNFTFile = (event) => {
+
+  const handleFileChange = (event, index) => {
     const files = Array.from(event.target.files);
-    if (files.length > 0) {
-      setSelectedFiles((prevFiles) => [...prevFiles, ...files]);
+    const newNfts = [...nfts];
+    newNfts[index].file = files.length > 0 ? files[0] : null;
+    setNfts(newNfts);
+    const file = e.target.files[0];
+    if (file) {
+      setSelectedFile(file);
+      setPreview(URL.createObjectURL(file));
     }
   };
+
+  const handleInputChange = (event, index, field) => {
+    const newNfts = [...nfts];
+    newNfts[index][field] = event.target.value;
+    setNfts(newNfts);
+  };
+
+  const addNFTField = () => {
+    setNfts([...nfts, { file: null, price: "", title: "", description: "" }]);
+  };
+
   return (
-    <>
-      <div
-        class="col-xl-3 col-lg-6 col-md-6 col-12"
-        style={{ paddingTop: "40px" }}
-      >
-        <h4 class="title-create-item">Preview item</h4>
-        <div class="sc-card-product">
-          <div class="card-media">
-            <a href="/item-details-01">
-              <img src={CyberDoberman} alt="Axies" />
-            </a>
-            <a class="wishlist-button heart" href="/login">
-              <span class="number-like"> 100</span>
-            </a>
-            {/* <div class="featured-countdown">
-              <span class="slogan"></span>
-              <span>05:18:51:31</span>
-            </div> */}
-          </div>
-          <div class="card-title">
-            <h5>
-              <a href="/item-details-01">"Cyber Doberman #766”</a>
-            </h5>
-            <div class="tags">bsc</div>
-          </div>
-          <div class="meta-info">
-            <div class="author">
-              <div class="avatar">
-                <img src={MattRamos} alt="Axies" />
+    <div className="row" style={{ paddingTop: "40px" }}>
+      {nfts.map((nft, index) => (
+        <div key={index} className="col-12 d-flex flex-wrap">
+          {/* Left side - Preview */}
+          <div className="col-xl-3 col-lg-6 col-md-6 col-12">
+            <h4 className="title-create-item">Preview item</h4>
+            <div className="sc-card-product">
+              <div className="card-media">
+                <a href="">
+                  <img src={preview || CyberDoberman} alt="Axies" />
+                </a>
+                <a className="wishlist-button heart" href="/login">
+                  <span className="number-like">{nft.price || 0}</span>
+                </a>
               </div>
-              <div class="info">
-                <span>Owned By</span>
-                <h6>
-                  <a href="/author-02">Freddie Carpenter</a>
-                </h6>
+              <div class="card-title">
+                <h6>NFT Price</h6>
+                <div class="tags">{nft.price || 0}</div>
+              </div>
+              <div class="card-title">
+                <h6>Creation Fee (20%)</h6>
+                <div class="tags">{(nft.price * 20) / 100}</div>
+              </div>
+              <div class="card-title">
+                <h6>Total Amount</h6>
+                <div class="tags">
+                  {" "}
+                  <div class="tags">
+                    {parseFloat(nft.price || 0) +
+                      parseFloat((nft.price * 20) / 100 || 0)}
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="price">
-              <span>Current Bid</span>
-              <h5> 4.89 ETH</h5>
-            </div>
           </div>
-          {/* <div class="card-bottom">
-              <a
-                class="sc-button style 
-                                  bag fl-button pri-3"
-                href="/wallet-connect"
-              >
-                <span>Place Bid</span>
-              </a>
-              <a class="view-history reload" href="/activity-01">
-                      View History
-                    </a>
-            </div> */}
-        </div>
-      </div>
-      <div
-        className="col-xl-9 col-lg-6 col-md-12 col-12"
-        style={{ paddingTop: "40px" }}
-      >
-        <div className="form-create-item">
-          <form>
-            <h4 className="title-create-item">Upload File</h4>
-            <label className="uploadFile">
-              <span className="filename">
-                {selectedFiles.length > 0
-                  ? selectedFiles.map((file) => file.name).join(" , ")
-                  : "PNG, JPG, GIF, WEBP, or MP4. Max 200MB."}
-              </span>
-              <input
-                type="file"
-                className="inputfile form-control"
-                name="images"
-                onChange={handleBulkNFTFile}
-                multiple
-              />
-            </label>
-          </form>
 
-          <div className="flat-tabs tab-create-item">
-            <div className="react-tabs__tab-panel">
-              <form>
-                <h4 className="title-create-item">Price</h4>
-                <select
-                  className=" mb-4"
-                  value={nftValue}
-                  onChange={(e) => setNftValue(e.target.value)}
-                >
-                  <option value="">Enter price for bulk items (USDT)</option>
-                  {BulkNFTpriceOptions.map((price, index) => (
-                    <option key={index} value={price}>
-                      ${price}
-                    </option>
-                  ))}
-                </select>
-                {/* <input
-                    type="text"
-                    placeholder="Enter price for one item (USDT)"
-                    value={price}
-                    onChange={(e) => setPrice(e.target.value)}
-                  /> */}
-
-                <h4 className="title-create-item">Title</h4>
+          {/* Right side - Form */}
+          <div className="col-xl-9 col-lg-6 col-md-12 col-12">
+            <div className="form-create-item">
+              <h4 className="title-create-item">Upload NFT</h4>
+              <h4 className="title-create-item">{index + 1} NFT</h4>
+              <label className="uploadFile">
+                <span className="filename">
+                  {nft.file
+                    ? nft.file.name
+                    : "PNG, JPG, GIF, WEBP, or MP4. Max 200MB."}
+                </span>
                 <input
-                  type="text"
-                  placeholder="Item Name"
-                  value={title}
-                  onChange={(e) => setTitle(e.target.value)}
+                  type="file"
+                  className="inputfile form-control"
+                  name="images"
+                  accept="image/*"
+                  onChange={(e) => handleFileChange(e, index)}
                 />
+              </label>
 
-                <h4 className="title-create-item">Description</h4>
-                <textarea
-                  placeholder="e.g. “This is a very limited item”"
-                  value={description}
-                  onChange={(e) => setDescription(e.target.value)}
-                />
-                <button className="createbtn">Create NFT</button>
-              </form>
+              <h4 className="title-create-item">Price</h4>
+              <select
+                className="mb-4 nft-price-dropdown"
+                value={nft.price}
+                onChange={(e) => handleInputChange(e, index, "price")}
+              >
+                <option value="">Enter price for bulk items (USDT)</option>
+                {BulkNFTpriceOptions.map((price, idx) => (
+                  <option key={idx} value={price}>
+                    ${price} ({price / 5} * 5)
+                  </option>
+                ))}
+              </select>
+
+              <h4 className="title-create-item">Title</h4>
+              <input
+                type="text"
+                placeholder="Item Name"
+                className="mb-4"
+                value={nft.title}
+                onChange={(e) => handleInputChange(e, index, "title")}
+              />
+
+              <h4 className="title-create-item">Description</h4>
+              <textarea
+                placeholder="e.g. “This is a very limited item”"
+                className="mb-4"
+                value={nft.description}
+                onChange={(e) => handleInputChange(e, index, "description")}
+              />
             </div>
           </div>
         </div>
+      ))}
+
+      {/* Add NFT Button */}
+      <div className="create-nft-container">
+        <button className="createbtn">Create NFTs</button>
+        <FaPlus onClick={addNFTField} style={{ cursor: "pointer" }} />
       </div>
-    </>
+    </div>
   );
 }

@@ -8447,7 +8447,7 @@ button.accordion-button {
   margin-right: 3px;
 }
 
-.tab-create-item form select {
+.nft-price-dropdown {
   border: 1px solid rgba(138, 138, 160, 0.3);
   border-radius: 8px;
   color: var(--primary-color4);

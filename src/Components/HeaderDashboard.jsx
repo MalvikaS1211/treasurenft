@@ -18,7 +18,7 @@ export default function Header({ title }) {
         <div className="header-right">
           <ConnectWallet />
           <div className="d-md-block d-lg-none">
-            <GiHamburgerMenu onClick={toggleSidebar} size={25} />
+            <GiHamburgerMenu onClick={toggleSidebar} size={25} color="black" />
           </div>
         </div>
       </header>

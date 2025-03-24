@@ -7,7 +7,7 @@ import HeaderDashboard from "./HeaderDashboard";
 export default function DownLine() {
   return (
     <>
-      <div className="p-4 dashboardbgcolor">
+      <div className="p-4 dashboardbg">
         {" "}
         <Navbar></Navbar>
         <main class="content-dashboard">

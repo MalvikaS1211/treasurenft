@@ -129,7 +129,7 @@ function ConnectWallet() {
                   >
                     <button
                       onClick={openChainModal}
-                      style={{ display: "flex", alignItems: "center" }}
+                      style={{ display: "none", alignItems: "center" }}
                       type="button"
                       className="btn btn-success-gradient btn-wave chain-btn-wallet "
                     >

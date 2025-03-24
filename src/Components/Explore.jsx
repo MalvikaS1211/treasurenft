@@ -18,14 +18,32 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { FaShoppingBag } from "react-icons/fa";
 import FooterNew from "./FooterNew";
 import HeaderNew from "./HeaderNew";
-import { getUserCreatedNftsFn } from "../Helper/API_Functions";
+import {
+  getReadyForsaleFn,
+  getUserCreatedNftsFn,
+} from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
 import { getNfts } from "../Helper/Web3";
 import axios from "axios";
+import toast from "react-hot-toast";
 
 export default function Expore() {
-  const { address } = useAccount();
+  // const { address } = useAccount();
+  const address = "0x32d76106003aE43ece50504d610C073Ca52074f1";
   const [createdNFTs, setCreateNft] = useState([]);
+  const readyForSale = async (tokenId) => {
+    try {
+      await toast.promise(getReadyForsaleFn(address, tokenId), {
+        pending: "Processing sale...",
+        success: "NFT sell successfully!",
+        error: "Failed to list NFT for sale.",
+      });
+      console.log("NFT is now ready for sale.");
+    } catch (error) {
+      console.error("Error in Sell:", error);
+      toast.error("An error occurred while listing the NFT.");
+    }
+  };
 
   const ShowNFTs = async () => {
     try {
@@ -33,6 +51,8 @@ export default function Expore() {
       const data = await Promise.all(
         resNFT.results.map(async (it) => {
           try {
+            // const resSale = await getReadyForsaleFn(address, it.tokenId);
+            // console.log("resSale", resSale);
             const res = await getNfts(it.tokenId);
             const metadataUrl = res[2].replace(
               "ipfs://",
@@ -58,7 +78,7 @@ export default function Expore() {
             );
             return {
               ...it,
-              title: res[0],
+              title: "",
               description: "Error loading",
               img: "",
             };
@@ -123,13 +143,24 @@ export default function Expore() {
                           alt="NFT"
                         />
                       </a>
+                      {nft.isReadyForSale == false && (
+                        <div className="button-place-bid">
+                          <button
+                            className="sc-button style-place-bid style bag fl-button pri-3"
+                            onClick={() => {
+                              readyForSale(nft.tokenId);
+                            }}
+                          >
+                            <FaShoppingBag color="black" />
 
-                      <div className="button-place-bid">
-                        <button className="sc-button style-place-bid style bag fl-button pri-3">
-                          <FaShoppingBag color="black" />
-                          <span>Sell</span>
-                        </button>
-                      </div>
+                            <span>
+                              {createdNFTs.isReadyForSale
+                                ? "Not for Sell"
+                                : "Sell"}
+                            </span>
+                          </button>
+                        </div>
+                      )}
                       {/* <div className="wishlist-button heart">
                         <IoIosHeartEmpty size={18} />
                         <span className="number-like">{nft.likes}</span>
