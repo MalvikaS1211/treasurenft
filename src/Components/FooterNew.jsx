@@ -35,16 +35,16 @@ export default function FooterNew() {
                 <h5 class="title-widget">My Account</h5>
                 <ul>
                   <li>
-                    <a href="">Authors</a>
+                    <a>Authors</a>
                   </li>
                   <li>
-                    <a href="">Collection</a>
+                    <a>Collection</a>
                   </li>
                   <li>
-                    <a href="">Author Profile</a>
+                    <a>Author Profile</a>
                   </li>
                   <li>
-                    <a href="">Create Item</a>
+                    <a>Create Item</a>
                   </li>
                 </ul>
               </div>
@@ -54,16 +54,16 @@ export default function FooterNew() {
                 <h5 class="title-widget">Resources</h5>
                 <ul>
                   <li>
-                    <a href="">Help &amp; Support</a>
+                    <a>Help &amp; Support</a>
                   </li>
                   <li>
-                    <a href="">Live Auctions</a>
+                    <a>Live Auctions</a>
                   </li>
                   <li>
-                    <a href="">Item Details</a>
+                    <a>Item Details</a>
                   </li>
                   <li>
-                    <a href="">Activity</a>
+                    <a>Activity</a>
                   </li>
                 </ul>
               </div>
@@ -73,16 +73,16 @@ export default function FooterNew() {
                 <h5 class="title-widget">Company</h5>
                 <ul>
                   <li>
-                    <a href="">Explore</a>
+                    <a>Explore</a>
                   </li>
                   <li>
-                    <a href="">Contact Us</a>
+                    <a>Contact Us</a>
                   </li>
                   <li>
-                    <a href="">Our Blog</a>
+                    <a>Our Blog</a>
                   </li>
                   <li>
-                    <a href="">FAQ</a>
+                    <a>FAQ</a>
                   </li>
                 </ul>
               </div>
@@ -113,32 +113,32 @@ export default function FooterNew() {
                 <div class="widget-social style-1 mg-t32">
                   <ul>
                     <li>
-                      <a href="/home-02">
+                      <a>
                         <i class="fab fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="/home-02">
+                      <a>
                         <i class="fab fa-facebook"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="/home-02">
+                      <a>
                         <i class="fab fa-telegram-plane"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="/home-02">
+                      <a>
                         <i class="fab fa-youtube"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="/home-02">
+                      <a>
                         <FaWhatsapp />
                       </a>
                     </li>
                     <li>
-                      <a href="/home-02">
+                      <a>
                         <FaInstagram />
                       </a>
                     </li>
@@ -150,9 +150,9 @@ export default function FooterNew() {
         </div>
       </footer>
 
-      <a id="scroll-top" href="">
+      {/* <a id="scroll-top">
         <IoIosArrowUp size={30} color="#4b50e6 " />
-      </a>
+      </a> */}
     </div>
   );
 }

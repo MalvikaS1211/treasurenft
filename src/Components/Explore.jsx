@@ -28,8 +28,9 @@ import axios from "axios";
 import toast from "react-hot-toast";
 
 export default function Expore() {
-  // const { address } = useAccount();
-  const address = "0x32d76106003aE43ece50504d610C073Ca52074f1";
+  const [isFetch, setIsFetch] = useState(false);
+  const { address } = useAccount();
+  // const address = "0x32d76106003aE43ece50504d610C073Ca52074f1";
   const [createdNFTs, setCreateNft] = useState([]);
   const readyForSale = async (tokenId) => {
     try {
@@ -38,7 +39,10 @@ export default function Expore() {
         success: "NFT sell successfully!",
         error: "Failed to list NFT for sale.",
       });
-      console.log("NFT is now ready for sale.");
+
+      // console.log("NFT is now ready for sale.");
+
+      setIsFetch(!isFetch);
     } catch (error) {
       console.error("Error in Sell:", error);
       toast.error("An error occurred while listing the NFT.");
@@ -95,7 +99,7 @@ export default function Expore() {
 
   useEffect(() => {
     ShowNFTs();
-  }, [address]);
+  }, [address, isFetch]);
 
   return (
     <>
@@ -130,7 +134,14 @@ export default function Expore() {
                     style={{ border: "1px solid #5142fc" }}
                   >
                     <div className="card-media">
-                      <a href="#">
+                      <a
+                        href="#"
+                        style={{
+                          height: "288px",
+                          width: "288px",
+                          display: "flex",
+                        }}
+                      >
                         <img
                           src={
                             nft.img.startsWith("ipfs://")
@@ -141,6 +152,7 @@ export default function Expore() {
                               : nft.img
                           }
                           alt="NFT"
+                          style={{ width: "100%", height: "100%" }}
                         />
                       </a>
                       {nft.isReadyForSale == false && (
@@ -617,7 +629,7 @@ export default function Expore() {
           </div>
         </section>
       </div>
-      <div className="Footerbg">
+      <div className="mt-4">
         <FooterNew />
       </div>
     </>

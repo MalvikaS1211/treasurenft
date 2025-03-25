@@ -24,18 +24,9 @@ export default function Community() {
               <div className="button_container">
                 <input
                   type="text"
-                  className="ComunitySearch placeholder-white"
+                  className="ComunitySearch placeholder-white community-search"
                   placeholder="Enter User ID"
                   defaultValue="0"
-                  style={{
-                    backgroundColor: "rgb(34, 34, 34)",
-                    borderRadius: "30px",
-                    cursor: "pointer",
-                    color: "rgb(255, 255, 255)",
-                    outline: "none",
-                    border: "1px solid rgb(46, 46, 46)",
-                    paddingLeft: "15px",
-                  }}
                 />
                 <button
                   className="btn"
@@ -49,36 +40,10 @@ export default function Community() {
                 </button>
               </div>
               <div className="button_container" style={{ marginTop: "5%" }}>
-                <button
-                  disabled
-                  style={{
-                    borderRadius: "20px",
-                    width: "150px",
-                    backgroundColor: "rgb(26, 26, 26)",
-                    height: "40px",
-                    color: "rgb(255, 255, 255)",
-                    cursor: "not-allowed",
-                    fontSize: "16px",
-                    borderColor: "rgb(26, 26, 26)",
-                    fontFamily: "Geist Mono",
-                  }}
-                >
+                <button disabled className="prev-next-btn">
                   PREV
                 </button>
-                <button
-                  disabled
-                  style={{
-                    borderRadius: "20px",
-                    width: "120px",
-                    height: "40px",
-                    backgroundColor: "rgb(26, 26, 26)",
-                    color: "rgb(255, 255, 255)",
-                    cursor: "not-allowed",
-                    fontSize: "16px",
-                    borderColor: "rgb(26, 26, 26)",
-                    fontFamily: "Geist Mono",
-                  }}
-                >
+                <button disabled className="prev-next-btn">
                   NEXT
                 </button>
               </div>

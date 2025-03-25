@@ -30,10 +30,7 @@ export async function registerfn(refAddress, amt) {
     abi: CONTRACT_ADDRESS_ABI,
     address: CONTRACT_ADDRESS,
     functionName: "register",
-    args: [
-      refAddress,
-      //   (15 * 1e18).toLocaleString("fullwide", { useGrouping: false }),
-    ],
+    args: [refAddress],
   });
   const res = waitForTransactionReceipt(config, { hash: result });
   const data = await toast.promise(res, {
@@ -54,8 +51,8 @@ export async function approveToken(amt) {
       (amt * 1e18).toLocaleString("fullwide", { useGrouping: false }),
     ],
   });
-
-  return result;
+  const res = await waitForTransactionReceipt(config, { hash: result });
+  return res;
 }
 
 export async function buyNFTFn(
@@ -161,20 +158,22 @@ export async function createNFTsBulkFn(
   r,
   s
 ) {
+  console.log(
+    "createNFTsBulkFn in api",
+    title,
+    descriptions,
+    metadataURIs,
+    initialPrices,
+    totalAmt,
+    v,
+    r,
+    s
+  );
   const result = await writeContract(config, {
     abi: CONTRACT_ADDRESS_ABI,
     address: CONTRACT_ADDRESS,
-    functionName: "createNFTsBulk",
-    args: [
-      title,
-      descriptions,
-      metadataURIs,
-      (initialPrices * 1e18).toLocaleString("fullwide", { useGrouping: false }),
-      totalAmt,
-      v,
-      r,
-      s,
-    ],
+    functionName: "createNFTslast",
+    args: [title, descriptions, metadataURIs, initialPrices, totalAmt, v, r, s],
   });
 
   return result;
@@ -192,12 +191,12 @@ export async function getNfts(tokenId) {
   return result;
 }
 
-export async function upgradePackageFn() {
+export async function upgradePackageFn(amt) {
   const result = await writeContract(config, {
     abi: CONTRACT_ADDRESS_ABI,
     address: CONTRACT_ADDRESS,
     functionName: "upgradePackage",
-    args: [],
+    args: [0],
   });
   const res = waitForTransactionReceipt(config, { hash: result });
   const data = await toast.promise(res, {

@@ -13,9 +13,11 @@ export default function SingleNFT() {
   const [nftPrice, setNftPrice] = useState("");
   const [selectedFile, setSelectedFile] = useState("");
   const { address } = useAccount();
+  const [apiCall, setApiCall] = useState(false);
 
   const [preview, setPreview] = useState(null);
   const [creationFee, setCreationFee] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     setSelectedFile(file);
@@ -88,8 +90,8 @@ export default function SingleNFT() {
       const appres = approveToken(amt);
       await toast.promise(appres, {
         loading: "Approval in process",
-        success: "Approved",
-        error: "Error",
+        success: "Successfully Approved",
+        error: "Approval failed",
       });
       return appres;
     } catch (error) {
@@ -100,7 +102,7 @@ export default function SingleNFT() {
 
   const handleMintNFT = async () => {
     if (!selectedFile || !title || !description) {
-      alert("Please fill all fields and select a file!");
+      toast.error("Please fill all fields and select a file!");
       return;
     }
     try {
@@ -117,7 +119,16 @@ export default function SingleNFT() {
   };
 
   const nftCreate = async () => {
+    setIsLoading(true);
     try {
+      if (isLoading == true) {
+        setIsLoading(false);
+        return toast.error("Your request is pending");
+      }
+      if (!title || !description || !selectedFile || !amount) {
+        setIsLoading(false);
+        return toast.error("Please fill all fields and select a file!");
+      }
       const iphashRes = await handleMintNFT();
       console.log(iphashRes, "step 1 ");
       const totalAmount = Number(nftPrice) + 0.2 * Number(nftPrice);
@@ -159,14 +170,16 @@ export default function SingleNFT() {
               error: "error in nft creation",
             });
             console.log(nft, "ASFDDDDDDDDDD");
+            setIsLoading(false);
+            setSelectedFile("");
+            setNftPrice("");
+            setTitle("");
+            setDescription("");
+            setPreview(CyberDoberman);
+            setTimeout(() => {}, 2000);
           }
         }
       }
-      setSelectedFile("");
-      setNftPrice("");
-      setTitle("");
-      setDescription("");
-      setPreview(CyberDoberman);
     } catch (error) {
       console.log(error);
     }
@@ -179,52 +192,32 @@ export default function SingleNFT() {
         style={{ paddingTop: "40px" }}
       >
         <h4 class="title-create-item">Preview item</h4>
-        <div class="sc-card-product">
+        <div
+          class="sc-card-product"
+          style={{ border: " 1px solid rgb(81, 66, 252)" }}
+        >
           <div class="card-media">
             <a href="">
               <img src={preview || CyberDoberman} alt="Axies" />
             </a>
             <a class="wishlist-button heart" href="/login">
-              <span className="number-like">{nftPrice || 0}</span>
+              <span className="number-like">${nftPrice || 0}</span>
             </a>
           </div>
           <div class="card-title">
             <h6>NFT Price</h6>
-            <div class="tags">{nftPrice || 0}</div>
+            <div class="tags">${nftPrice || 0}</div>
           </div>
           <div class="card-title">
             <h6>Creation Fee (20%)</h6>
-            <div class="tags">{creationFee}</div>
+            <div class="tags">${creationFee}</div>
           </div>
           <div class="card-title">
             <h6>Total Amount</h6>
             <div class="tags">
-              {parseFloat(nftPrice || 0) + parseFloat(creationFee || 0)}
+              ${parseFloat(nftPrice || 0) + parseFloat(creationFee || 0)}
             </div>
           </div>
-          {/* <div class="card-title">
-            <h5>
-              <a href="">"Cyber Doberman #766”</a>
-            </h5>
-            <div class="tags">bsc</div>
-          </div> */}
-          {/* <div class="meta-info">
-            <div class="author">
-              <div class="avatar">
-                <img src={MattRamos} alt="Axies" />
-              </div>
-              <div class="info">
-                <span>Owned By</span>
-                <h6>
-                  <a href="/author-02">Freddie Carpenter</a>
-                </h6>
-              </div>
-            </div>
-            <div class="price">
-              <span>Current Bid</span>
-              <h5> 4.89 ETH</h5>
-            </div>
-          </div> */}
         </div>
       </div>
       <div
@@ -245,7 +238,6 @@ export default function SingleNFT() {
                 className="inputfile form-control"
                 name="file"
                 onChange={handleFileChange}
-                // onChange={(e) => setSelectedFile(e.target.files[0])}
               />
             </label>
           </form>
@@ -281,9 +273,22 @@ export default function SingleNFT() {
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                 />
-                <button className="createbtn" onClick={nftCreate} type="button">
-                  Create NFT
-                </button>
+                <div className="create-nft-container">
+                  <button
+                    className="createbtn"
+                    onClick={nftCreate}
+                    type="button"
+                  >
+                    {isLoading ? (
+                      <span
+                        className="spinner-border spinner-border-sm"
+                        role="status"
+                      ></span>
+                    ) : (
+                      "Create NFT"
+                    )}
+                  </button>
+                </div>
               </form>
             </div>
           </div>

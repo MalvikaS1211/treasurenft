@@ -678,7 +678,7 @@ input[type="reset"]:focus,
 input[type="submit"]:focus {
   outline: 0;
   border: 1px solid var(--primary-color3);
-  color: var(--primary-color3);
+  /* color: var(--primary-color3); */
 }
 
 /* Placeholder color */

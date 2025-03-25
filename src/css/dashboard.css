@@ -72,6 +72,7 @@
   width: 100%;
   font-size: 14px;
   color: white;
+  border: none;
 }
 .rank-income tr {
   border-radius: 10px !important;
@@ -235,7 +236,13 @@ main {
 .ComunitySearch {
   font-size: 16px;
   font-weight: 600;
-  font-family: Geist Mono, monospace;
+  background-color: rgb(34, 34, 34);
+  border-radius: 30px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: 1px solid rgb(46, 46, 46);
+  padding-left: 15px;
 }
 
 .navbar {
@@ -2021,6 +2028,7 @@ header {
   width: 100%;
   font-size: 14px;
   color: white;
+  border: none;
 }
 
 .rank-income tr {
@@ -2310,4 +2318,34 @@ header {
 th,
 td {
   border: none !important;
+}
+
+.rank-table-row {
+  color: rgb(241, 239, 96);
+  font-weight: 500;
+}
+.rank-table-row-head {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.prev-next-btn {
+  border-radius: 20px;
+  width: 150px;
+  background-color: #fff;
+  /* height: 40px; */
+  color: black;
+  cursor: not-allowed;
+  font-size: 16px;
+  border: none;
+}
+
+.community-search {
+  background-color: rgb(34, 34, 34);
+  border-radius: 30px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: 1px solid rgb(46, 46, 46);
+  padding-left: 15px;
 }

@@ -2,7 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const URLApi = "http://64.227.155.146:8081/api";
+// export const URLApi = "http://64.227.155.146:8081/api";
+export const URLApi = "http://192.168.1.161:8081/api";
+
 export async function getUserInfo(address) {
   try {
     const response = await axios.post(`${URLApi}/get-user-info`, {
@@ -127,6 +129,34 @@ export async function getReadyForBuyFn(
     return response?.data;
   } catch (error) {
     console.log("Error getReadyForBuyFn :", error);
+    return false;
+  }
+}
+
+export async function getCreateBulkNFT(
+  userAddress,
+  initialPrices,
+  titles,
+  descriptions,
+  metadataURIs,
+  totalAmount
+) {
+  try {
+    if (!titles) {
+      return;
+    }
+    const response = await axios.post(`${URLApi}/create-nft-bulk`, {
+      userAddress,
+      initialPrices,
+      titles,
+      descriptions,
+      metadataURIs,
+      totalAmount,
+    });
+
+    return response?.data;
+  } catch (error) {
+    console.log("Error getCreateBulkNFT :", error);
     return false;
   }
 }

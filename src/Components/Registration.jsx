@@ -10,13 +10,12 @@ import { Link } from "react-router-dom";
 import { base_url } from "../Helper/Config";
 
 export default function Registration() {
-  const [ref, setRef] = useState();
+  const [ref, setRef] = useState("");
   const { address } = useAccount();
   const [userExist, setUserExist] = useState(false);
   const referralLink = `${base_url}/?ref=${address}`;
   const data = new URLSearchParams(window.location.search);
   const refLink = data.get("ref");
-  console.log("refLink", refLink);
   const userExistFn = async () => {
     try {
       if (address) {
@@ -39,8 +38,8 @@ export default function Registration() {
       const appres = approveToken(amt);
       await toast.promise(appres, {
         loading: "Approval in process",
-        success: "Approved",
-        error: "Error",
+        success: "Successfully approved",
+        error: "Approve Failed",
       });
       return appres;
     } catch (error) {
@@ -59,16 +58,13 @@ export default function Registration() {
       const appRes = await tokenApp(15);
       if (appRes) {
         const reg = await registerfn(ref, 15);
-        console.log(reg, ":::::");
-
         if (reg) {
-          toast.success("User registered successfully!");
+          setTimeout(() => {
+            setRef("");
+          }, 2000);
         } else {
           toast.error("Registration failed. Please try again.");
         }
-        setRef("");
-      } else {
-        toast.error("Token approval failed. Please try again.");
       }
     } catch (error) {
       console.log(error);
@@ -105,6 +101,7 @@ export default function Registration() {
                       onChange={(e) => {
                         setRef(e.target.value);
                       }}
+                      value={ref}
                     />
 
                     {address && !userExist ? (

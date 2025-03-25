@@ -1,6 +1,7 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import { Toaster } from "react-hot-toast";
 import "./App.css";
 import Header from "./Components/header";
 // import "../src/css/740.21c7c664.css";
@@ -68,10 +69,45 @@ import "./MalvikaCss/responsive.css";
 
 import "./MalvikaCss/shortcodes.css";
 import "./MalvikaCss/style.css";
+
 function App() {
   return (
     <>
-      <AppRoutes></AppRoutes>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        toastOptions={{
+          success: {
+            style: {
+              fontWeight: "bold",
+              backgroundColor: "#f0f8ff",
+              color: "#333",
+              borderRadius: "8px",
+              padding: "10px",
+            },
+          },
+          error: {
+            style: {
+              fontWeight: "bold",
+              backgroundColor: "#ffe5e5",
+              color: "#900",
+              borderRadius: "8px",
+              padding: "10px",
+            },
+          },
+          loading: {
+            style: {
+              fontWeight: "bold",
+              backgroundColor: "#fffbe5",
+              color: "#555",
+              border: "1px solid #ffd700",
+              borderRadius: "8px",
+              padding: "10px",
+            },
+          },
+        }}
+      />
+      <AppRoutes />
     </>
   );
 }

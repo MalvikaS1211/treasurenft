@@ -7,7 +7,9 @@ import Logo from "../assets/Logo.png";
 import { FaWallet } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { useAccount } from "wagmi";
 const Header = () => {
+  const { address } = useAccount();
   return (
     <>
       <header className="header-new-container d-none d-md-block">
@@ -23,15 +25,16 @@ const Header = () => {
             <Link to="/">
               <a href="/home">Home</a>
             </Link>
-            <Link to="/explore">
-              <a href="">Explore</a>
-            </Link>
-            <Link to="/buyNft">
-              <a>Trade</a>
-            </Link>
-            <Link to="/NFTcreation">
-              <a>Create NFT</a>
-            </Link>
+            {address ? (
+              <>
+                <Link to="/explore">Explore</Link>
+                <Link to="/buyNft">Trade</Link>
+                <Link to="/NFTcreation">Create NFT</Link>
+              </>
+            ) : (
+              <></>
+            )}
+
             <Link to="/dashboard">
               <a>Dashboard</a>
             </Link>
@@ -107,17 +110,15 @@ const Header = () => {
               <Link to="/">
                 <a href="/home">Home</a>
               </Link>
-              <Link to="/explore">
-                <a href="">Explore</a>
-              </Link>
-
-              <Link to="/buyNft">
-                <a>Trade</a>
-              </Link>
-
-              <Link to="/NFTcreation">
-                <a>Create NFT</a>
-              </Link>
+              {address ? (
+                <>
+                  <Link to="/explore">Explore</Link>
+                  <Link to="/buyNft">Trade</Link>
+                  <Link to="/NFTcreation">Create NFT</Link>
+                </>
+              ) : (
+                <></>
+              )}
               <Link to="/dashboard">
                 <a>Dashboard</a>
               </Link>

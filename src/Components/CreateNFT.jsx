@@ -51,7 +51,7 @@ export default function CreateNFT() {
           </div>
         </div>
       </div>
-      <div className="Footerbg">
+      <div className="mt-4">
         <FooterNew />
       </div>
     </>

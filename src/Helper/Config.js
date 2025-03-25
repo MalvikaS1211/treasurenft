@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = "0x7A9bD94Ddd11531c0aB715def3296ce6693CDBa1";
+export const CONTRACT_ADDRESS = "0xc1Fb2A05ecB75123b6fE7B67A3458Fa926c9E22f";
 export const CONTRACT_ADDRESS_ABI = [
   {
     inputs: [
@@ -271,6 +271,12 @@ export const CONTRACT_ADDRESS_ABI = [
         name: "seller",
         type: "address",
       },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "count",
+        type: "uint256",
+      },
     ],
     name: "NFTSold",
     type: "event",
@@ -332,6 +338,37 @@ export const CONTRACT_ADDRESS_ABI = [
       },
     ],
     name: "RenewPackage",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: "address",
+        name: "toUser",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "address",
+        name: "fromUser",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "salesCount",
+        type: "uint256",
+      },
+    ],
+    name: "RoyalityTransferred",
     type: "event",
   },
   {
@@ -407,34 +444,6 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "event",
   },
   {
-    inputs: [],
-    name: "MAX_SALES",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "PRICE_INCREMENT",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "ROYALTY_PERCENT",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "SELLER_PERCENT",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
     inputs: [
       { internalType: "address", name: "to", type: "address" },
       { internalType: "uint256", name: "tokenId", type: "uint256" },
@@ -493,22 +502,6 @@ export const CONTRACT_ADDRESS_ABI = [
       { internalType: "bytes32", name: "s", type: "bytes32" },
     ],
     name: "createNFT",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      { internalType: "string[]", name: "titles", type: "string[]" },
-      { internalType: "string[]", name: "descriptions", type: "string[]" },
-      { internalType: "string[]", name: "metadataURIs", type: "string[]" },
-      { internalType: "uint256[]", name: "initialPrices", type: "uint256[]" },
-      { internalType: "uint256", name: "totalAmt", type: "uint256" },
-      { internalType: "uint8", name: "v", type: "uint8" },
-      { internalType: "bytes32", name: "r", type: "bytes32" },
-      { internalType: "bytes32", name: "s", type: "bytes32" },
-    ],
-    name: "createNFTsBulk",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -648,13 +641,6 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "renewPackage",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     inputs: [
       { internalType: "address", name: "from", type: "address" },
       { internalType: "address", name: "to", type: "address" },
@@ -727,7 +713,7 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
-    inputs: [],
+    inputs: [{ internalType: "uint256", name: "plan", type: "uint256" }],
     name: "upgradePackage",
     outputs: [],
     stateMutability: "nonpayable",
@@ -762,7 +748,6 @@ export const CONTRACT_ADDRESS_ABI = [
       { internalType: "address", name: "userAddress", type: "address" },
       { internalType: "address", name: "userReferralAddress", type: "address" },
       { internalType: "uint256", name: "totalDirect", type: "uint256" },
-      { internalType: "uint256", name: "totalIncome", type: "uint256" },
       { internalType: "address", name: "promoterAddress", type: "address" },
       { internalType: "bool", name: "position", type: "bool" },
       { internalType: "uint256", name: "latestPackage", type: "uint256" },
@@ -770,15 +755,6 @@ export const CONTRACT_ADDRESS_ABI = [
       { internalType: "uint256", name: "totalDirectIncome", type: "uint256" },
       { internalType: "uint256", name: "levelIncome", type: "uint256" },
       { internalType: "uint256", name: "totalRoyalityIncome", type: "uint256" },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "usersDetails",
-    outputs: [
-      { internalType: "uint256", name: "totalNFTCreated", type: "uint256" },
     ],
     stateMutability: "view",
     type: "function",

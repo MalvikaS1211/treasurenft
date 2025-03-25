@@ -16,14 +16,37 @@ import { useBalance } from "wagmi";
 import { fetchBalance } from "@wagmi/core";
 import { approveToken, upgradePackageFn, usersFn } from "../Helper/Web3";
 import toast from "react-hot-toast";
-
+import { getBalance } from "@wagmi/core";
+import { opBNBTestnet, polygon } from "wagmi/chains";
+import { createConfig, http } from "wagmi";
 export default function Dashboard() {
   const { address } = useAccount();
   const [dashboardData, setDashboardData] = useState([]);
+  const [allUsers, setAllUsers] = useState({});
+  const [isFetch, setIsFetch] = useState(false);
+  const balance = fetchBalance({
+    address: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
+  });
 
-  // const balance = fetchBalance({
-  //   address: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  // });
+  const config = createConfig({
+    chains: [opBNBTestnet],
+    transports: {
+      [opBNBTestnet.id]: http(),
+    },
+  });
+  const [balanceData, setBalanceData] = useState([]);
+  async function fetchUserTokenBalance() {
+    try {
+      const balance = await getBalance(config, {
+        address: "0x32d76106003aE43ece50504d610C073Ca52074f1", // User's wallet address
+        token: "0x8c5884b8B8281151abe5E381E252514b47FBCD05", // ERC-20 Token Contract Address
+      });
+      setBalanceData(parseFloat(balance.formatted).toFixed(4));
+      // console.log(balance, "tokenBalance");
+    } catch (error) {
+      console.error("Error fetching token balance:", error);
+    }
+  }
 
   const packages = [
     { name: "Beginner", color: "rgb(212, 55, 55)", subscription: "15" },
@@ -42,7 +65,7 @@ export default function Dashboard() {
     { name: "King", color: "rgb(160, 212, 54)", subscription: "980" },
     { name: "Grandmaster", color: "rgb(147, 99, 43)", subscription: "1125" },
   ];
-  const [allUsers, setAllUsers] = useState({});
+
   const UserInfo = async () => {
     try {
       const res = await getUserInfo(address);
@@ -58,6 +81,7 @@ export default function Dashboard() {
     try {
       const resUser = await usersFn(address);
       setDashboardData(resUser);
+      console.log("getUserInFoFromContract", resUser);
     } catch (error) {
       console.log(error);
     }
@@ -68,8 +92,8 @@ export default function Dashboard() {
       const appres = approveToken(amt);
       await toast.promise(appres, {
         loading: "Approval in process",
-        success: "Approved",
-        error: "Error",
+        success: "Approved Successfully",
+        error: "Approval Failed",
       });
       return appres;
     } catch (error) {
@@ -84,7 +108,10 @@ export default function Dashboard() {
       console.log("pkg.subscription", pkg.subscription);
       console.log("appRes", appRes);
       if (appRes) {
-        await upgradePackageFn();
+        await upgradePackageFn(0);
+        setTimeout(() => {
+          setIsFetch(!isFetch);
+        }, 2000);
       }
     } catch (error) {
       console.log(error);
@@ -93,10 +120,12 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (address) {
-      UserInfo();
       getUserInFoFromContract();
+      UserInfo();
+
+      fetchUserTokenBalance();
     }
-  }, [address]);
+  }, [address, isFetch]);
 
   return (
     <>
@@ -119,7 +148,7 @@ export default function Dashboard() {
                     {allUsers?.userInfo?.[0]?.uniqueRandomId || "No user found"}
                   </p>
                   <h6>Rank</h6>
-                  <p>-</p>
+                  <p>{allUsers?.rank}</p>
                 </div>
                 <div
                   class="user-card"
@@ -130,13 +159,7 @@ export default function Dashboard() {
                   }}
                 >
                   <h6>My Wallet Fund</h6>
-                  <p>
-                    {/* {isLoading
-                      ? "Loading..."
-                      : isError
-                      ? "Error fetching balance"
-                      : `${data?.formatted} ${data?.symbol}`} */}
-                  </p>
+                  <p className="text-white">{balanceData}</p>
                   <h6>My Wallet Address</h6>
                   <p className="text-white p-2">{address}</p>
                 </div>
@@ -161,7 +184,7 @@ export default function Dashboard() {
                       <span>${pkg.subscription}</span>
                       <p style={{ color: pkg.color }}>{pkg.name}</p>
 
-                      {index < Number(dashboardData[7]) ? (
+                      {index < Number(dashboardData[6]) ? (
                         <button
                           className="btn-upgrade"
                           type="button"
@@ -191,7 +214,13 @@ export default function Dashboard() {
                       <h6>Total Income</h6>
                     </div>
                     <p>
-                      0<span> USDT</span>
+                      {(
+                        (Number(dashboardData?.[8] ?? 0) +
+                          Number(dashboardData?.[9] ?? 0) +
+                          Number(dashboardData?.[10] ?? 0)) /
+                        1e18
+                      ).toFixed(4)}
+                      <span> USDT</span>
                     </p>
                   </div>
                   <div class="total-card">
@@ -199,7 +228,8 @@ export default function Dashboard() {
                       <h6>Referral Income</h6>
                     </div>
                     <p>
-                      0<span> USDT</span>
+                      {(Number(dashboardData?.[8]) / 1e18).toFixed(4) ?? "0"}
+                      <span> USDT</span>
                     </p>
                   </div>
                   <div class="total-card">
@@ -207,7 +237,8 @@ export default function Dashboard() {
                       <h6>Level Income</h6>
                     </div>
                     <p>
-                      0<span> USDT</span>
+                      {(Number(dashboardData?.[9]) / 1e18).toFixed(4) ?? "0"}
+                      <span> USDT</span>
                     </p>
                   </div>
                 </div>
@@ -217,171 +248,98 @@ export default function Dashboard() {
                       <h6>Royalty Income</h6>
                     </div>
                     <p>
-                      0<span> USDT</span>
+                      {(Number(dashboardData?.[10]) / 1e18).toFixed(4) ?? "0"}
+                      <span> USDT</span>
                     </p>
                   </div>
                   <div class="total-card">
                     <div class="sub-total">
                       <h6>My Community Size</h6>
                     </div>
-                    <p>0</p>
+                    <p>{allUsers?.userInfo?.[0]?.totalTeamCount ?? "0"}</p>
                   </div>
                   <div class="total-card">
                     <div class="sub-total">
                       <h6>Direct Referrals</h6>
                     </div>
-                    <p>0</p>
+                    <p>{allUsers?.userInfo?.[0]?.totalDirectCount ?? "0"}</p>
                   </div>
                 </div>
-                <table
+
+                {/* <table
                   class="responsive-table"
                   style={{ width: "70%", margin: "2rem auto" }}
                 >
                   <thead>
                     <tr className="text-white">
-                      <th style={{ fontWeight: "600", fontSize: "18px" }}>
-                        Rank
-                      </th>
-                      <th style={{ fontWeight: "600", fontSize: "18px" }}>
-                        Amount
-                      </th>
+                      <th className="rank-table-row-head">Rank</th>
+                      <th className="rank-table-row-head">Amount</th>
                     </tr>
                   </thead>
                   <tbody className="text-white" style={{ fontSize: "14px" }}>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Frontline
-                      </td>
+                      <td className="rank-table-row">Beginner</td>
                       <td>0 USDT</td>
                     </tr>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Homestead
-                      </td>
+                      <td className="rank-table-row">Seeker</td>
                       <td>0 USDT</td>
                     </tr>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Metropolis
-                      </td>
+                      <td className="rank-table-row">Innovator</td>
                       <td>0 USDT</td>
                     </tr>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Serenity
-                      </td>
+                      <td className="rank-table-row">Tycoon</td>
                       <td>0 USDT</td>
                     </tr>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Powerup
-                      </td>
+                      <td className="rank-table-row">Elite</td>
                       <td>0 USDT</td>
                     </tr>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Superb
-                      </td>
+                      <td className="rank-table-row">Visionary</td>
                       <td>0 USDT</td>
                     </tr>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Mentor
-                      </td>
+                      <td className="rank-table-row">Commander</td>
                       <td>0 USDT</td>
                     </tr>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        ICON
-                      </td>
+                      <td className="rank-table-row">Legend</td>
                       <td>0 USDT</td>
                     </tr>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        DUPLEX
-                      </td>
+                      <td className="rank-table-row">Titan</td>
                       <td>0 USDT</td>
                     </tr>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        ALPHA
-                      </td>
+                      <td className="rank-table-row">Pioneer</td>
                       <td>0 USDT</td>
                     </tr>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        HELIX
-                      </td>
+                      <td className="rank-table-row">Architect</td>
                       <td>0 USDT</td>
                     </tr>
                     <tr>
-                      <td
-                        style={{
-                          color: "rgb(241, 239, 96)",
-                          fontWeight: "500",
-                        }}
-                      >
-                        Ambassador
-                      </td>
+                      <td className="rank-table-row">Emperor</td>
+                      <td>0 USDT</td>
+                    </tr>
+
+                    <tr>
+                      <td className="rank-table-row">Master</td>
+                      <td>0 USDT</td>
+                    </tr>
+                    <tr>
+                      <td className="rank-table-row">King</td>
+                      <td>0 USDT</td>
+                    </tr>
+                    <tr>
+                      <td className="rank-table-row">Grandmaster</td>
                       <td>0 USDT</td>
                     </tr>
                   </tbody>
-                </table>
+                </table> */}
               </section>
             </div>
           </div>
