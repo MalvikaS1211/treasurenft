@@ -50,9 +50,6 @@ export default function Trade() {
   const ReadyForBuy = async (tokenId) => {
     try {
       await getReadyForBuyFn(address, tokenId);
-      setTimeout(() => {
-        setIsFetch(!isfetch);
-      }, 2000);
     } catch (error) {
       console.error("Error in Buy:", error);
     }
@@ -157,6 +154,9 @@ export default function Trade() {
             error: "Nft Buy failed!",
           });
           console.log(nft, "ASFDDDDDDDDDD");
+          setTimeout(() => {
+            setIsFetch(!isfetch);
+          }, 2000);
         }
       }
     } catch (error) {

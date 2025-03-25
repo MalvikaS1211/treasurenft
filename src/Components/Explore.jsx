@@ -30,19 +30,17 @@ import toast from "react-hot-toast";
 export default function Expore() {
   const [isFetch, setIsFetch] = useState(false);
   const { address } = useAccount();
-  // const address = "0x32d76106003aE43ece50504d610C073Ca52074f1";
   const [createdNFTs, setCreateNft] = useState([]);
   const readyForSale = async (tokenId) => {
     try {
       await toast.promise(getReadyForsaleFn(address, tokenId), {
         pending: "Processing sale...",
-        success: "NFT sell successfully!",
+        success: "Nft is ready to sell !",
         error: "Failed to list NFT for sale.",
       });
-
-      // console.log("NFT is now ready for sale.");
-
-      setIsFetch(!isFetch);
+      setTimeout(() => {
+        setIsFetch(!isFetch);
+      }, 2000);
     } catch (error) {
       console.error("Error in Sell:", error);
       toast.error("An error occurred while listing the NFT.");
@@ -55,8 +53,6 @@ export default function Expore() {
       const data = await Promise.all(
         resNFT.results.map(async (it) => {
           try {
-            // const resSale = await getReadyForsaleFn(address, it.tokenId);
-            // console.log("resSale", resSale);
             const res = await getNfts(it.tokenId);
             const metadataUrl = res[2].replace(
               "ipfs://",

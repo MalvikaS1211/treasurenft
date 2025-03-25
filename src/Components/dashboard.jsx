@@ -148,7 +148,7 @@ export default function Dashboard() {
                     {allUsers?.userInfo?.[0]?.uniqueRandomId || "No user found"}
                   </p>
                   <h6>Rank</h6>
-                  <p>{allUsers?.rank}</p>
+                  <p>{allUsers?.rank || 0}</p>
                 </div>
                 <div
                   class="user-card"
