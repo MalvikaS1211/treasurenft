@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = "0xc1Fb2A05ecB75123b6fE7B67A3458Fa926c9E22f";
+export const CONTRACT_ADDRESS = "0x659168424611126E7a5DC582681F9F9179569044";
 export const CONTRACT_ADDRESS_ABI = [
   {
     inputs: [
@@ -484,6 +484,13 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
+    inputs: [{ internalType: "address", name: "_operator", type: "address" }],
+    name: "changeOperator",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
     inputs: [{ internalType: "address", name: "_owner", type: "address" }],
     name: "changeOwner",
     outputs: [],
@@ -601,6 +608,7 @@ export const CONTRACT_ADDRESS_ABI = [
       { internalType: "uint256", name: "salesCount", type: "uint256" },
       { internalType: "address", name: "owner", type: "address" },
       { internalType: "uint256", name: "initialPrice", type: "uint256" },
+      { internalType: "uint256", name: "tokenId", type: "uint256" },
     ],
     stateMutability: "view",
     type: "function",

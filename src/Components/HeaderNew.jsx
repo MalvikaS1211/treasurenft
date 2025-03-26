@@ -22,22 +22,20 @@ const Header = () => {
           />
 
           <nav className="nav-head">
-            <Link to="/">
-              <a href="/home">Home</a>
-            </Link>
             {address ? (
               <>
+                <Link to="/">Home</Link>
                 <Link to="/explore">Explore</Link>
                 <Link to="/buyNft">Trade</Link>
                 <Link to="/NFTcreation">Create NFT</Link>
+                <Link to="/dashboard">Dashboard</Link>
               </>
             ) : (
-              <></>
+              <>
+                <Link to="/">Home</Link>
+                <Link to="/signup">SignUp</Link>
+              </>
             )}
-
-            <Link to="/dashboard">
-              <a>Dashboard</a>
-            </Link>
           </nav>
           {/* <div className="search-box">
             <input type="text" placeholder="Select" className="search-input" />
@@ -107,21 +105,20 @@ const Header = () => {
           </div>
           <div class="offcanvas-body">
             <nav className="nav-head">
-              <Link to="/">
-                <a href="/home">Home</a>
-              </Link>
               {address ? (
                 <>
+                  <Link to="/">Home</Link>
                   <Link to="/explore">Explore</Link>
                   <Link to="/buyNft">Trade</Link>
                   <Link to="/NFTcreation">Create NFT</Link>
+                  <Link to="/dashboard">Dashboard</Link>
                 </>
               ) : (
-                <></>
+                <>
+                  <Link to="/">Home</Link>
+                  <Link to="/signup">SignUp</Link>
+                </>
               )}
-              <Link to="/dashboard">
-                <a>Dashboard</a>
-              </Link>
             </nav>
           </div>
         </div>

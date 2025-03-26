@@ -36,11 +36,11 @@
 .user-grid {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-bottom: 20px;
 }
 .user-card {
-  background: linear-gradient(45deg, #1d1d23, #333);
+  /* background: linear-gradient(45deg, #1d1d23, #333); */
   padding: 15px;
   border-radius: 5px;
   text-align: center;
@@ -78,8 +78,8 @@
   border-radius: 10px !important;
 }
 .rank-income tr:nth-child(2n) {
-  background-color: #e0eaf7;
-  color: black;
+  /* background-color: #e0eaf7;
+  color: black; */
 }
 .css-1ov46kg {
   display: flex;
@@ -211,10 +211,10 @@
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: black;
+  color: #011655;
 }
 .user-card:hover {
-  background: linear-gradient(45deg, #333, #1d1d23);
+  /* background: linear-gradient(45deg, #333, #1d1d23); */
 }
 
 @import "https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,300,400,500,600,700,1&display=swap";
@@ -1739,7 +1739,7 @@ h2 {
   }
 
   .user-grid {
-    /* flex-direction: column; */
+    flex-direction: column;
   }
 
   .responsive-table tr {
@@ -1760,7 +1760,7 @@ h2 {
 .content-dashboard {
   margin-left: 290px;
   flex-grow: 1;
-  padding: 20px;
+  /* padding: 20px; */
   transition: margin-left 0.3s ease-in-out;
 }
 
@@ -1856,7 +1856,7 @@ header {
 .user-grid {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   margin-bottom: 20px;
 }
 
@@ -1875,7 +1875,7 @@ header {
 }
 
 .user-card:hover {
-  background: linear-gradient(45deg, #333, #1d1d23);
+  /* background: linear-gradient(45deg, #333, #1d1d23); */
 }
 
 .user-card h6 {
@@ -1888,6 +1888,9 @@ header {
 .user-card p {
   margin: 0;
   font-size: 14px;
+  color: #2458f1;
+  overflow-wrap: anywhere;
+  padding: 0px 10px;
 }
 
 .total-grid {
@@ -1899,12 +1902,12 @@ header {
 
 .total-card {
   /* background: linear-gradient(45deg, #1d1d23, #333); */
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     rgb(33, 82, 175) 0%,
     rgb(107, 167, 231) 51%,
     rgb(33, 82, 175) 100%
-  );
+  ); */
   padding: 15px 18px;
   border-radius: 5px;
   text-align: center;
@@ -1914,28 +1917,29 @@ header {
   align-items: center;
   flex: 1;
   gap: 10px;
+  background: #93bbff;
 }
 
 .total-card:hover {
   /* background: linear-gradient(45deg, #333, #1d1d23); */
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     rgb(33, 82, 175) 0%,
     rgb(107, 167, 231) 51%,
     rgb(33, 82, 175) 100%
-  );
+  ); */
 }
 
 .total-card h6 {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: white;
+  color: #011655;
 }
 
 .total-card p {
   margin: 0;
-  color: #e7dfdf;
+  color: #2458f1;
 }
 
 .sub-total {
@@ -1996,6 +2000,7 @@ header {
   font-size: 25px;
   margin: 0;
   color: #000;
+  font-weight: 500;
 }
 
 .header-dashboard-right {
@@ -2042,8 +2047,8 @@ header {
 }
 
 .rank-income tr:nth-child(2n) {
-  background-color: #e0eaf7;
-  color: black;
+  /* background-color: #e0eaf7;
+  color: black; */
 }
 
 .rank-income {
@@ -2258,6 +2263,7 @@ header {
 .dashboard-heading {
   /* color: white; */
   padding-bottom: 20px;
+  font-weight: 500;
 }
 
 .icon-container {
@@ -2274,6 +2280,7 @@ header {
 .dashboard-sidebar {
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%); /* Sidebar hidden by default */
+  background: linear-gradient(to right, #a0c4ff, #4383fe);
 }
 
 .dashboard-sidebar.active {
@@ -2348,4 +2355,16 @@ td {
   outline: none;
   border: 1px solid rgb(46, 46, 46);
   padding-left: 15px;
+}
+
+.wallet-card {
+  /* background-image: linear-gradient(
+    to right,
+    rgb(33, 82, 175) 0%,
+    rgb(107, 167, 231) 51%,
+    rgb(33, 82, 175) 100%
+  ); */
+  background: #93bbff;
+  padding: 10px 0px;
+  height: 179px;
 }

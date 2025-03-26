@@ -120,10 +120,7 @@ export default function DashboardNew() {
                               <div class="flat-bt-slider flex style2">
                                 <Link to="/signup">
                                   {" "}
-                                  <a
-                                    class="sc-button header-slider style style-1 rocket fl-button pri-1"
-                                    href=""
-                                  >
+                                  <a class="sc-button header-slider style style-1 rocket fl-button pri-1">
                                     <span className="pl-0">Sign Up</span>
                                   </a>
                                 </Link>
@@ -314,7 +311,7 @@ export default function DashboardNew() {
                   </div>
                 </div>
                 <h3 class="heading">
-                  <a href="">Set Up Your Wallet</a>
+                  <a>Set Up Your Wallet</a>
                 </h3>
                 <p class="content-custom">
                   Once you’ve set up your wallet of choice, connect it to
@@ -333,7 +330,7 @@ export default function DashboardNew() {
                   </div>
                 </div>
                 <h3 class="heading">
-                  <a href="">Create Your Collection</a>
+                  <a>Create Your Collection</a>
                 </h3>
                 <p class="content-custom">
                   Click Create and set up your collection. Add social links, a
@@ -353,7 +350,7 @@ export default function DashboardNew() {
                   </div>
                 </div>
                 <h3 class="heading">
-                  <a href="">Add Your NFTs</a>
+                  <a>Add Your NFTs</a>
                 </h3>
                 <p class="content-custom">
                   Upload your work (image, video, audio, or 3D art), add a title
@@ -373,7 +370,7 @@ export default function DashboardNew() {
                   </div>
                 </div>
                 <h3 class="heading">
-                  <a href="">List Them For Sale</a>
+                  <a>List Them For Sale</a>
                 </h3>
                 <p class="content-custom">
                   Choose between auctions, fixed-price listings, and
@@ -425,7 +422,7 @@ export default function DashboardNew() {
                           <div class="swiper-slide">
                             <div class="slider-item">
                               <div class="sc-card-collection style-3">
-                                <a href="">
+                                <a>
                                   <div class="media-images-box">
                                     <div class="top-media">
                                       <img src={collection1} alt="Axies" />
@@ -456,12 +453,12 @@ export default function DashboardNew() {
                                     </div>
                                     <div class="content-custom">
                                       <h4>
-                                        <a href="">Creative Art Collection</a>
+                                        <a>Creative Art Collection</a>
                                       </h4>
                                       <div class="infor">
                                         <span>Created by</span>
                                         <span class="name">
-                                          <a href="">Ralph Garraway</a>
+                                          <a>Ralph Garraway</a>
                                         </span>
                                       </div>
                                     </div>
@@ -509,7 +506,7 @@ export default function DashboardNew() {
                           <div class="swiper-slide">
                             <div class="slider-item">
                               <div class="sc-card-collection style-3">
-                                <a href="">
+                                <a>
                                   <div class="media-images-box">
                                     <div class="top-media">
                                       <img src={collection6} alt="Axies" />
@@ -540,12 +537,12 @@ export default function DashboardNew() {
                                     </div>
                                     <div class="content-custom">
                                       <h4>
-                                        <a href="">Colorful Abstract</a>
+                                        <a>Colorful Abstract</a>
                                       </h4>
                                       <div class="infor">
                                         <span>Created by</span>
                                         <span class="name">
-                                          <a href="">Ralph Garraway</a>
+                                          <a>Ralph Garraway</a>
                                         </span>
                                       </div>
                                     </div>
@@ -593,7 +590,7 @@ export default function DashboardNew() {
                           <div class="swiper-slide">
                             <div class="slider-item">
                               <div class="sc-card-collection style-3">
-                                <a href="">
+                                <a>
                                   <div class="media-images-box">
                                     <div class="top-media">
                                       <img src={collection1} alt="Axies" />
@@ -624,12 +621,12 @@ export default function DashboardNew() {
                                     </div>
                                     <div class="content-custom">
                                       <h4>
-                                        <a href="">Modern Art Collection</a>
+                                        <a>Modern Art Collection</a>
                                       </h4>
                                       <div class="infor">
                                         <span>Created by</span>
                                         <span class="name">
-                                          <a href="">Ralph Garraway</a>
+                                          <a>Ralph Garraway</a>
                                         </span>
                                       </div>
                                     </div>
@@ -665,7 +662,7 @@ export default function DashboardNew() {
                 <div class="box-item">
                   <div class="sc-author-box style-3 pd-0">
                     <div class="author-avatar">
-                      <a href="">
+                      <a>
                         <img src={creativeArt} alt="axies" class="avatar" />
                       </a>
                       <div class="badge">
@@ -674,7 +671,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a href="">Crispin Berry</a>
+                        <a>Crispin Berry</a>
                       </h5>
                       <span class="price">214.2 ETH</span>
                     </div>
@@ -683,7 +680,7 @@ export default function DashboardNew() {
                 <div class="box-item pl-17">
                   <div class="sc-author-box style-3 pd-0">
                     <div class="author-avatar">
-                      <a href="">
+                      <a>
                         <img src={SamsonFrost} alt="axies" class="avatar" />
                       </a>
                       <div class="badge">
@@ -692,7 +689,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a href="">Samson Frost</a>
+                        <a>Samson Frost</a>
                       </h5>
                       <span class="price">205.43 ETH</span>
                     </div>
@@ -701,7 +698,7 @@ export default function DashboardNew() {
                 <div class="box-item pl-34">
                   <div class="sc-author-box style-3 pd-0">
                     <div class="author-avatar">
-                      <a href="">
+                      <a>
                         <img src={TommyAlrez} alt="axies" class="avatar" />
                       </a>
                       <div class="badge">
@@ -710,7 +707,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a href="">Tommy Alrez</a>
+                        <a>Tommy Alrez</a>
                       </h5>
                       <span class="price">170.3 ETH</span>
                     </div>
@@ -719,7 +716,7 @@ export default function DashboardNew() {
                 <div class="box-item pl-51">
                   <div class="sc-author-box style-3 pd-0">
                     <div class="author-avatar">
-                      <a href="">
+                      <a>
                         <img src={WindsorLane} alt="axies" class="avatar" />
                       </a>
                       <div class="badge">
@@ -728,7 +725,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a href="">Windsor Lane</a>
+                        <a>Windsor Lane</a>
                       </h5>
                       <span class="price">120.7 ETH</span>
                     </div>
@@ -737,7 +734,7 @@ export default function DashboardNew() {
                 <div class="box-item pl-68">
                   <div class="sc-author-box style-3 pd-0">
                     <div class="author-avatar">
-                      <a href="">
+                      <a>
                         <img src={AndyHurlbutt} alt="axies" class="avatar" />
                       </a>
                       <div class="badge">
@@ -746,7 +743,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a href="">Andy Hurlbutt</a>
+                        <a>Andy Hurlbutt</a>
                       </h5>
                       <span class="price">82.79 ETH</span>
                     </div>
@@ -758,7 +755,7 @@ export default function DashboardNew() {
                                          style-3 pd-0"
                   >
                     <div class="author-avatar">
-                      <a href="">
+                      <a>
                         <img src={BlakeBanks} alt="axies" class="avatar" />
                       </a>
                       <div class="badge">
@@ -767,7 +764,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a href="">Blake Banks</a>
+                        <a>Blake Banks</a>
                       </h5>
                       <span class="price">68.2 ETH</span>
                     </div>
@@ -776,7 +773,7 @@ export default function DashboardNew() {
                 <div class="box-item pl-17">
                   <div class="sc-author-box style-3 pd-0">
                     <div class="author-avatar">
-                      <a href="">
+                      <a>
                         <img src={MonicaLucas} alt="axies" class="avatar" />
                       </a>
                       <div class="badge">
@@ -785,7 +782,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a href="">Monica Lucas</a>
+                        <a>Monica Lucas</a>
                       </h5>
                       <span class="price">52.8 ETH</span>
                     </div>
@@ -794,7 +791,7 @@ export default function DashboardNew() {
                 <div class="box-item pl-34">
                   <div class="sc-author-box style-3 pd-0">
                     <div class="author-avatar">
-                      <a href="">
+                      <a>
                         <img src={MattRamos} alt="axies" class="avatar" />
                       </a>
                       <div class="badge">
@@ -803,7 +800,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a href="">Matt Ramos</a>
+                        <a>Matt Ramos</a>
                       </h5>
                       <span class="price">38.4 ETH</span>
                     </div>
@@ -812,7 +809,7 @@ export default function DashboardNew() {
                 <div class="box-item pl-51">
                   <div class="sc-author-box style-3 pd-0">
                     <div class="author-avatar">
-                      <a href="">
+                      <a>
                         <img src={HarperWilcher} alt="axies" class="avatar" />
                       </a>
                       <div class="badge">
@@ -821,7 +818,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a href="">Harper Wilcher</a>
+                        <a>Harper Wilcher</a>
                       </h5>
                       <span class="price">29.2 ETH</span>
                     </div>
@@ -830,7 +827,7 @@ export default function DashboardNew() {
                 <div class="box-item pl-68">
                   <div class="sc-author-box style-3 pd-0">
                     <div class="author-avatar">
-                      <a href="">
+                      <a>
                         <img src={creativeArt} alt="axies" class="avatar" />
                       </a>
                       <div class="badge">
@@ -839,7 +836,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a href="">Crispin Berry</a>
+                        <a>Crispin Berry</a>
                       </h5>
                       <span class="price">214.2 ETH</span>
                     </div>
@@ -864,7 +861,7 @@ export default function DashboardNew() {
             <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
-                  <a href="">
+                  <a>
                     <img src={RenaiXance} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
@@ -881,7 +878,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a href="">"The RenaiXance Rising the sun "</a>
+                    <a>"The RenaiXance Rising the sun "</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -892,7 +889,7 @@ export default function DashboardNew() {
                     <div class="info">
                       <span>Creator</span>
                       <h6>
-                        <a href="">SalvadorDali</a>
+                        <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
@@ -915,7 +912,7 @@ export default function DashboardNew() {
             <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
-                  <a href="">
+                  <a>
                     <img src={cyberprimal} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
@@ -932,7 +929,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a href="">"The RenaiXance Rising the sun "</a>
+                    <a>"The RenaiXance Rising the sun "</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -943,7 +940,7 @@ export default function DashboardNew() {
                     <div class="info">
                       <span>Creator</span>
                       <h6>
-                        <a href="">SalvadorDali</a>
+                        <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
@@ -966,7 +963,7 @@ export default function DashboardNew() {
             <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
-                  <a href="">
+                  <a>
                     <img src={cryptoegg} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
@@ -983,7 +980,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a href="">"The RenaiXance Rising the sun "</a>
+                    <a>"The RenaiXance Rising the sun "</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -994,7 +991,7 @@ export default function DashboardNew() {
                     <div class="info">
                       <span>Creator</span>
                       <h6>
-                        <a href="">SalvadorDali</a>
+                        <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
@@ -1017,7 +1014,7 @@ export default function DashboardNew() {
             <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
-                  <a href="">
+                  <a>
                     <img src={space} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
@@ -1034,7 +1031,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a href="">"The RenaiXance Rising the sun "</a>
+                    <a>"The RenaiXance Rising the sun "</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -1045,7 +1042,7 @@ export default function DashboardNew() {
                     <div class="info">
                       <span>Creator</span>
                       <h6>
-                        <a href="">SalvadorDali</a>
+                        <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
@@ -1068,7 +1065,7 @@ export default function DashboardNew() {
             <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
-                  <a href="">
+                  <a>
                     <img src={FlameDress} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
@@ -1085,7 +1082,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a href="">"The RenaiXance Rising the sun "</a>
+                    <a>"The RenaiXance Rising the sun "</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -1096,7 +1093,7 @@ export default function DashboardNew() {
                     <div class="info">
                       <span>Creator</span>
                       <h6>
-                        <a href="">SalvadorDali</a>
+                        <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
@@ -1119,7 +1116,7 @@ export default function DashboardNew() {
             <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
-                  <a href="">
+                  <a>
                     <img src={LivingVase} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
@@ -1136,7 +1133,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a href="">"The RenaiXance Rising the sun "</a>
+                    <a>"The RenaiXance Rising the sun "</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -1147,7 +1144,7 @@ export default function DashboardNew() {
                     <div class="info">
                       <span>Creator</span>
                       <h6>
-                        <a href="">SalvadorDali</a>
+                        <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
@@ -1170,7 +1167,7 @@ export default function DashboardNew() {
             <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
-                  <a href="">
+                  <a>
                     <img src={CyberDoberman} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
@@ -1187,7 +1184,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a href="">"The RenaiXance Rising the sun "</a>
+                    <a>"The RenaiXance Rising the sun "</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -1198,7 +1195,7 @@ export default function DashboardNew() {
                     <div class="info">
                       <span>Creator</span>
                       <h6>
-                        <a href="">SalvadorDali</a>
+                        <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
@@ -1221,7 +1218,7 @@ export default function DashboardNew() {
             <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
-                  <a href="">
+                  <a>
                     <img src={hemlet} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
@@ -1238,7 +1235,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a href="">"The RenaiXance Rising the sun "</a>
+                    <a>"The RenaiXance Rising the sun "</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -1249,7 +1246,7 @@ export default function DashboardNew() {
                     <div class="info">
                       <span>Creator</span>
                       <h6>
-                        <a href="">SalvadorDali</a>
+                        <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>

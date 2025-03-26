@@ -3,7 +3,11 @@ import CyberDoberman from "../assets/CyberDoberman.jpg";
 import MattRamos from "../assets/MattRamos.jpg";
 import axios from "axios";
 import { createNftVrsFn } from "../Helper/API_Functions";
-import { approveToken, createNFTFn } from "../Helper/Web3";
+import {
+  approveToken,
+  createNFTFn,
+  fetchUserTokenBalance,
+} from "../Helper/Web3";
 import toast from "react-hot-toast";
 import { useAccount } from "wagmi";
 
@@ -18,6 +22,8 @@ export default function SingleNFT() {
   const [preview, setPreview] = useState(null);
   const [creationFee, setCreationFee] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
+  const [totalNFTAmount, setTotalNFTAmount] = useState(0);
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     setSelectedFile(file);
@@ -26,11 +32,14 @@ export default function SingleNFT() {
       setPreview(URL.createObjectURL(file));
     }
   };
-
   const handleNFTPrice = (e) => {
-    const price = e.target.value;
+    const price = parseFloat(e.target.value) || 0;
+    const fee = (price * 20) / 100; // Calculate creation fee
+    const total = price + fee; // Calculate total amount
+
     setNftPrice(price);
-    setCreationFee((price * 20) / 100);
+    setCreationFee(fee);
+    setTotalNFTAmount(total);
   };
 
   const SingleNFTpriceOptions = [
@@ -121,26 +130,28 @@ export default function SingleNFT() {
   const nftCreate = async () => {
     setIsLoading(true);
     try {
+      if (!address) {
+        setIsLoading(false);
+        toast.error("Please connect your wallet");
+        return;
+      }
       if (isLoading == true) {
         setIsLoading(false);
         return toast.error("Your request is pending");
       }
-      if (!title || !description || !selectedFile || !amount) {
+      if (!title || !description || !selectedFile || !nftPrice) {
         setIsLoading(false);
         return toast.error("Please fill all fields and select a file!");
       }
+      const userBalance = await fetchUserTokenBalance(address);
+      if (userBalance < totalNFTAmount) {
+        setIsLoading(false);
+        return toast.error(
+          `You need to have at least ${totalNFTAmount} USDT to register`
+        );
+      }
       const iphashRes = await handleMintNFT();
-      console.log(iphashRes, "step 1 ");
       const totalAmount = Number(nftPrice) + 0.2 * Number(nftPrice);
-      console.log(
-        address,
-        Number(nftPrice),
-        title,
-        description,
-        iphashRes,
-        totalAmount,
-        "step2"
-      );
       if (iphashRes) {
         const res = await createNftVrsFn(
           address,
@@ -150,7 +161,7 @@ export default function SingleNFT() {
           iphashRes,
           totalAmount
         );
-        console.log(res, res.vrs, res.success, "VRS response");
+        // console.log(res, res.data.message, "VRS response");
         if (res.success) {
           const tokenApp = await tokenApp1(totalAmount);
           if (tokenApp) {
@@ -169,7 +180,6 @@ export default function SingleNFT() {
               success: "Nft created successfully",
               error: "error in nft creation",
             });
-            console.log(nft, "ASFDDDDDDDDDD");
             setIsLoading(false);
             setSelectedFile("");
             setNftPrice("");
@@ -178,10 +188,16 @@ export default function SingleNFT() {
             setPreview(CyberDoberman);
             setTimeout(() => {}, 2000);
           }
+          setIsLoading(false);
+        } else {
+          setIsLoading(false);
+          toast.error(res.data.message);
+          return;
         }
       }
     } catch (error) {
       console.log(error);
+      setIsLoading(false);
     }
   };
 
@@ -214,9 +230,7 @@ export default function SingleNFT() {
           </div>
           <div class="card-title">
             <h6>Total Amount</h6>
-            <div class="tags">
-              ${parseFloat(nftPrice || 0) + parseFloat(creationFee || 0)}
-            </div>
+            <div class="tags">${totalNFTAmount}</div>
           </div>
         </div>
       </div>

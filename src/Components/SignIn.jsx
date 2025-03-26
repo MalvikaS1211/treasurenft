@@ -40,7 +40,7 @@ export default function SignIn() {
   return (
     <>
       <HeaderNew />
-      <section className="tf-login tf-section">
+      <section className="tf-login tf-section dashboardbg">
         <div className="themesflat-container">
           <div className="row">
             <div className="col-12">

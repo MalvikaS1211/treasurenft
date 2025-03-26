@@ -2,6 +2,7 @@ import {
   writeContract,
   readContract,
   waitForTransactionReceipt,
+  getBalance,
 } from "@wagmi/core";
 import { toast } from "react-hot-toast";
 import {
@@ -65,17 +66,6 @@ export async function buyNFTFn(
   description,
   metadataURI
 ) {
-  console.log(
-    tokenId,
-    initialPrice,
-    v,
-    r,
-    s,
-    title,
-    description,
-    metadataURI,
-    "::::DAsdasdfsadfASDFSADF"
-  );
   const result = await writeContract(config, {
     abi: CONTRACT_ADDRESS_ABI,
     address: CONTRACT_ADDRESS,
@@ -187,7 +177,7 @@ export async function getNfts(tokenId) {
     args: [tokenId],
   });
 
-  console.log("eresrsafd", result);
+  // console.log("eresrsafd", result);
   return result;
 }
 
@@ -217,4 +207,23 @@ export async function usersFn(address) {
   });
 
   return result;
+}
+
+export async function getAvailaibleBalance(address) {
+  const result = await readContract(config, {
+    abi: CONTRACT_ADDRESS_ABI,
+    address: CONTRACT_ADDRESS,
+    functionName: "availaibleBalance",
+    args: [address],
+  });
+
+  return Number(result);
+}
+
+export async function fetchUserTokenBalance(address) {
+  const balance = await getBalance(config, {
+    address: address,
+    token: USDT_TOKEN,
+  });
+  return balance.formatted;
 }

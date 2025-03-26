@@ -2,8 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const URLApi = "http://64.227.155.146:8081/api";
-// export const URLApi = "http://192.168.1.161:8081/api";
+// export const URLApi = "http://64.227.155.146:8081/api";
+export const URLApi = "http://192.168.1.161:8081/api";
 
 export async function getUserInfo(address) {
   try {
@@ -33,10 +33,11 @@ export async function createNftVrsFn(
       metadataURI: metadataURI,
       totalAmount: totalAmount,
     });
-
+    console.log(response, "from api call");
     return response.data;
   } catch (error) {
-    console.log("Error in  createNftVrsFn :", error);
+    console.log(error, "error in api");
+    return error.response;
   }
 }
 
@@ -158,5 +159,48 @@ export async function getCreateBulkNFT(
   } catch (error) {
     console.log("Error getCreateBulkNFT :", error);
     return false;
+  }
+}
+
+export async function getUserDirects(address, page = 1, limit = 10) {
+  try {
+    const response = await axios.post(`${URLApi}/get-user-directs`, {
+      userAddress: address,
+      page,
+      limit,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getUserDirects Admin:", error);
+  }
+}
+
+export async function getRoyalty(address, page = 1, limit = 10) {
+  try {
+    const response = await axios.post(`${URLApi}/user-royalty-transferred`, {
+      userAddress: address,
+      page,
+      limit,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getRoyalty Admin:", error);
+  }
+}
+
+export async function getTotalTeam(address, page = 1, limit = 10, level = 1) {
+  try {
+    const response = await axios.post(`${URLApi}/total-team`, {
+      userAddress: address,
+      page,
+      limit,
+      level,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getRoyalty Admin:", error);
   }
 }

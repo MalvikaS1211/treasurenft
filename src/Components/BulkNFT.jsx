@@ -203,11 +203,34 @@ export default function BulkNFT() {
     }
   };
 
+  const availablePkg = ["250", "230"];
   return (
     <>
+      <div className="row  available-packages">
+        <div className="row" style={{ paddingLeft: "34px" }}>
+          <h4
+            className="title-create-item mt-4 col-lg-12"
+            style={{ textAlign: "left" }}
+          >
+            Available Packages
+          </h4>
+          <div className="d-flex flex-wrap justify-content-start  gap-3">
+            {availablePkg.map((pkg, index) => (
+              <div className="package-container" key={index}>
+                <button
+                  type="button"
+                  className="sc-button  style style-1  "
+                  style={{ padding: "5px 26px" }}
+                >
+                  ${pkg}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="row" style={{ paddingTop: "40px" }}>
         <>
-          {" "}
           {nfts.map((nft, index) => (
             <div
               key={index}
@@ -218,7 +241,7 @@ export default function BulkNFT() {
               }}
             >
               <div className="col-xl-3 col-lg-6 col-md-6 col-12">
-                <h4 className="title-create-item mt-4">Preview item</h4>
+                <h4 className="title-create-item mt-4 ">Preview item</h4>
                 <div
                   className="sc-card-product"
                   style={{ border: " 1px solid rgb(81, 66, 252)" }}

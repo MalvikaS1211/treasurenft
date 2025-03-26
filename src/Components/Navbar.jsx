@@ -18,14 +18,7 @@ export default function Navbar({ isSidebarOpen }) {
           style={{ width: "160px" }}
         />
       </div>
-      <ul
-        className="menu"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "baseline",
-        }}
-      >
+      <ul className="menu menu-list">
         <Link to="/">
           <li className={location.pathname === "/" ? "active" : "inactive"}>
             <FaHome /> Home
@@ -49,7 +42,7 @@ export default function Navbar({ isSidebarOpen }) {
             <i className="fas fa-users"></i> Referral
           </li>
         </Link>
-        <Link to="/community">
+        {/* <Link to="/community">
           <li
             className={
               location.pathname === "/community" ? "active" : "inactive"
@@ -57,7 +50,7 @@ export default function Navbar({ isSidebarOpen }) {
           >
             <i className="fas fa-users-cog"></i> Community
           </li>
-        </Link>
+        </Link> */}
         <Link to="/downline">
           <li
             className={

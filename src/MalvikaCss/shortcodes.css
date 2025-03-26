@@ -1234,6 +1234,7 @@
 .sc-button.style-place-bid.fl-button.pri-3:hover {
   border-color: #5142fc;
   background: #5142fc;
+  color: #fff;
 }
 
 .is_dark .sc-button.style-place-bid.fl-button.pri-3:hover {

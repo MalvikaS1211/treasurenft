@@ -14,20 +14,27 @@ import { useAccount } from "wagmi";
 import { getUserInfo } from "../Helper/API_Functions";
 import { useBalance } from "wagmi";
 import { fetchBalance } from "@wagmi/core";
-import { approveToken, upgradePackageFn, usersFn } from "../Helper/Web3";
+import {
+  approveToken,
+  getAvailaibleBalance,
+  upgradePackageFn,
+  usersFn,
+} from "../Helper/Web3";
 import toast from "react-hot-toast";
 import { getBalance } from "@wagmi/core";
 import { opBNBTestnet, polygon } from "wagmi/chains";
 import { createConfig, http } from "wagmi";
+import { base_url } from "../Helper/Config";
 export default function Dashboard() {
   const { address } = useAccount();
   const [dashboardData, setDashboardData] = useState([]);
   const [allUsers, setAllUsers] = useState({});
   const [isFetch, setIsFetch] = useState(false);
-  const balance = fetchBalance({
-    address: "0xA0Cf798816D4b9b9866b5330EEa46a18382f251e",
-  });
+  const [availableBal, setAvailableBal] = useState(0);
+  const data = new URLSearchParams(window.location.search);
+  const refLink = data.get("ref");
 
+  const referralLink = `${base_url}/?ref=${address}`;
   const config = createConfig({
     chains: [opBNBTestnet],
     transports: {
@@ -38,8 +45,8 @@ export default function Dashboard() {
   async function fetchUserTokenBalance() {
     try {
       const balance = await getBalance(config, {
-        address: "0x32d76106003aE43ece50504d610C073Ca52074f1", // User's wallet address
-        token: "0x8c5884b8B8281151abe5E381E252514b47FBCD05", // ERC-20 Token Contract Address
+        address: address,
+        token: "0x8c5884b8B8281151abe5E381E252514b47FBCD05",
       });
       setBalanceData(parseFloat(balance.formatted).toFixed(4));
       // console.log(balance, "tokenBalance");
@@ -47,6 +54,8 @@ export default function Dashboard() {
       console.error("Error fetching token balance:", error);
     }
   }
+
+  const userBalance = fetchUserTokenBalance(address);
 
   const packages = [
     { name: "Beginner", color: "rgb(212, 55, 55)", subscription: "15" },
@@ -118,31 +127,36 @@ export default function Dashboard() {
     }
   };
 
+  const AvailableBalance = async () => {
+    try {
+      console.log("Fetching balance..."); // Debugging log
+      const resBal = await getAvailaibleBalance(address);
+      console.log("resBal", resBal); // Check if it logs the balance
+      setAvailableBal(resBal);
+    } catch (error) {
+      console.log("Error fetching balance:", error);
+    }
+  };
+
   useEffect(() => {
     if (address) {
       getUserInFoFromContract();
       UserInfo();
-
       fetchUserTokenBalance();
+      AvailableBalance();
     }
   }, [address, isFetch]);
 
   return (
     <>
-      <div className="p-4 dashboardbg">
+      <div className="p-4">
         <Navbar></Navbar>
         <main class="content-dashboard">
           <HeaderDashboard title="Dashboard"></HeaderDashboard>
           <div>
             <div class="">
               <div class="user-grid">
-                <div
-                  class="user-card"
-                  style={{
-                    background: "transparent",
-                    border: "1px solid rgb(33, 82, 175)",
-                  }}
-                >
+                <div class="user-card wallet-card">
                   <h6>User ID</h6>
                   <p>
                     {allUsers?.userInfo?.[0]?.uniqueRandomId || "No user found"}
@@ -150,30 +164,19 @@ export default function Dashboard() {
                   <h6>Rank</h6>
                   <p>{allUsers?.rank || 0}</p>
                 </div>
-                <div
-                  class="user-card"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(to right, rgb(33, 82, 175) 0%, rgb(107, 167, 231) 51%, rgb(33, 82, 175) 100%)",
-                    padding: "1px",
-                  }}
-                >
+                <div class="user-card wallet-card">
                   <h6>My Wallet Fund</h6>
-                  <p className="text-white">{balanceData}</p>
-                  <h6>My Wallet Address</h6>
-                  <p className="text-white p-2">{address}</p>
+                  <p className="">{balanceData}</p>
+                  <h6>My Available Balance</h6>
+                  <p className=" p-2">{availableBal}</p>
+                  {/* <h6>My Wallet Address</h6>
+                  <p className="text-white p-2">{address}</p> */}
                 </div>
-                <div
-                  class="user-card"
-                  style={{
-                    background: "transparent",
-                    border: "1px solid rgb(33, 82, 175)",
-                  }}
-                >
+                <div class="user-card wallet-card">
                   <h6>Referral Link</h6>
-                  <p>-</p>
+                  <p>{referralLink}</p>
                   <h6>Referred By</h6>
-                  <p>{dashboardData[2]}</p>
+                  <p>{dashboardData?.[2] ?? "No data available"}</p>
                 </div>
               </div>
               <section class="dashboard">

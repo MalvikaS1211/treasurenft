@@ -1,98 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
-import ConnectWallet from "./ConnectWallet";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import HeaderDashboard from "./HeaderDashboard";
+import { getRoyalty } from "../Helper/API_Functions";
+import { useAccount } from "wagmi";
+import moment from "moment";
+
 export default function Royality() {
+  const { address } = useAccount();
+  const [tableData, setTableData] = useState([]);
+
+  const handleRoyalty = async () => {
+    try {
+      const res = await getRoyalty(address);
+      setTableData(res.history);
+      console.log("resRoyalty", res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    if (address) {
+      handleRoyalty();
+    }
+  }, [address]);
+
   return (
     <>
       <div className="p-4 dashboardbg">
-        {" "}
-        <Navbar></Navbar>
-        <main class="content-dashboard">
-          <HeaderDashboard title="Royality"></HeaderDashboard>
+        <Navbar />
+        <main className="content-dashboard">
+          <HeaderDashboard title="Royalty" />
           <div>
-            <div class="" style={{ height: "100vh" }}>
+            <div style={{ height: "100vh" }}>
+              {/* Pagination Section */}
               <div
-                class="pagination"
+                className="pagination"
                 style={{ marginTop: "2%", marginBottom: "2%" }}
               >
-                <div class="MuiStack-root css-1ov46kg">
+                <div className="MuiStack-root css-1ov46kg">
                   <nav
                     aria-label="pagination navigation"
-                    class="MuiPagination-root MuiPagination-text css-1xdhyk6"
+                    className="MuiPagination-root MuiPagination-text css-1xdhyk6"
                   >
-                    <ul class="MuiPagination-ul css-51eq8m">
+                    <ul className="MuiPagination-ul css-51eq8m">
                       <li>
                         <FaArrowLeft color="#6c6c6c" />
                       </li>
-                      <li>
-                        <button
-                          class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-rounded Mui-selected MuiPaginationItem-page css-ksll4a"
-                          tabindex="0"
-                          type="button"
-                          aria-current="true"
-                          aria-label="page 1"
-                        >
-                          1<span class="MuiTouchRipple-root css-4mb1j7"></span>
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-rounded MuiPaginationItem-page css-ksll4a"
-                          tabindex="0"
-                          type="button"
-                          aria-label="Go to page 2"
-                        >
-                          2<span class="MuiTouchRipple-root css-4mb1j7"></span>
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-rounded MuiPaginationItem-page css-ksll4a"
-                          tabindex="0"
-                          type="button"
-                          aria-label="Go to page 3"
-                        >
-                          3<span class="MuiTouchRipple-root css-4mb1j7"></span>
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-rounded MuiPaginationItem-page css-ksll4a"
-                          tabindex="0"
-                          type="button"
-                          aria-label="Go to page 4"
-                        >
-                          4<span class="MuiTouchRipple-root css-4mb1j7"></span>
-                        </button>
-                      </li>
-                      <li>
-                        <button
-                          class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-rounded MuiPaginationItem-page css-ksll4a"
-                          tabindex="0"
-                          type="button"
-                          aria-label="Go to page 5"
-                        >
-                          5<span class="MuiTouchRipple-root css-4mb1j7"></span>
-                        </button>
-                      </li>
-                      <li>
-                        <div class="MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-rounded MuiPaginationItem-ellipsis css-15hk4e3">
-                          …
-                        </div>
-                      </li>
-                      <li>
-                        <button
-                          class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-rounded MuiPaginationItem-page css-ksll4a"
-                          tabindex="0"
-                          type="button"
-                          aria-label="Go to page 12"
-                        >
-                          12<span class="MuiTouchRipple-root css-4mb1j7"></span>
-                        </button>
-                      </li>
+                      {[1, 2, 3, 4, 5, "...", 12].map((page, index) => (
+                        <li key={index}>
+                          {page === "..." ? (
+                            <div className="MuiPaginationItem-root MuiPaginationItem-ellipsis css-15hk4e3">
+                              …
+                            </div>
+                          ) : (
+                            <button
+                              className="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-rounded MuiPaginationItem-page css-ksll4a"
+                              type="button"
+                            >
+                              {page}
+                            </button>
+                          )}
+                        </li>
+                      ))}
                       <li>
                         <FaArrowRight color="#6c6c6c" />
                       </li>
@@ -100,24 +70,49 @@ export default function Royality() {
                   </nav>
                 </div>
               </div>
-              <div class="rank-income">
+
+              <div className="rank-income">
                 <table className="table-responsiveness">
-                  <tr>
-                    <th>Sr.No</th>
-                    <th>Id</th>
-                    <th>Address</th>
-                    <th>Activation Date</th>
-                    <th>Level</th>
-                    <th>Direct Team</th>
-                  </tr>
-                  <tr>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0...</td>
-                    <td>dd-mm-yyyy</td>
-                    <td>0</td>
-                    <td>0</td>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <th>Sr.No</th>
+                      <th>Token Id</th>
+                      <th>Address</th>
+                      <th>Activation Date</th>
+                      <th>Sales Count</th>
+                      {/* <th>Direct Team</th> */}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {tableData?.length > 0 ? (
+                      tableData?.map((data, index) => (
+                        <tr key={index}>
+                          <td>{index + 1}</td>
+                          <td>{data.tokenId}</td>
+                          <td>
+                            {" "}
+                            {data.fromUser.slice(0, 4)}...
+                            {data.fromUser.slice(-7)}
+                          </td>
+                          <td>
+                            {data?.createdAt
+                              ? moment(data.createdAt).format(
+                                  "DD-MM-YYYY HH:mm:ss"
+                                )
+                              : "N/A"}
+                          </td>
+                          <td>{data.salesCount}</td>
+                          {/* <td>{data.directTeam}</td> */}
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="6" style={{ textAlign: "center" }}>
+                          No data available
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
                 </table>
               </div>
             </div>

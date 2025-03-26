@@ -32,6 +32,7 @@ export default function Trade() {
   // const address = "0x32d76106003aE43ece50504d610C073Ca52074f1";
   const [allTrade, setAllTrade] = useState([]);
   const [isfetch, setIsFetch] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const tokenApp1 = async (amt) => {
     try {
       const appres = approveToken(amt);
@@ -61,8 +62,6 @@ export default function Trade() {
       const data = await Promise.all(
         resNFT.userTrades.map(async (it) => {
           try {
-            // const resSale = await getReadyForsaleFn(address, it.tokenId);
-            // console.log("resSale", resSale);
             const res = await getNfts(it.tokenId);
             const metadataUrl = res[2].replace(
               "ipfs://",
@@ -100,7 +99,6 @@ export default function Trade() {
       );
 
       setAllTrade(data);
-      console.log("Fetched NFTs:", data);
     } catch (error) {
       console.error("Error fetching user-created NFTs:", error);
     }
@@ -114,17 +112,7 @@ export default function Trade() {
     totalAmount
   ) => {
     try {
-      console.log(
-        address,
-        Number(initialPrice),
-        title,
-        description,
-        metadataURI,
-        tokenId,
-        Number(totalAmount),
-        ":::change"
-      );
-
+      setIsLoading(true);
       const res = await getReadyForBuyFn(
         address,
         Number(initialPrice) / 1e18,
@@ -149,17 +137,20 @@ export default function Trade() {
             res.vrs.metadataURI
           );
           await toast.promise(nft, {
-            pending: "Processing buy...",
+            loading: "Processing buy...",
             success: "NFT Buy successfully!",
             error: "Nft Buy failed!",
           });
-          console.log(nft, "ASFDDDDDDDDDD");
+          setIsLoading(false);
           setTimeout(() => {
             setIsFetch(!isfetch);
           }, 2000);
         }
+        setIsLoading(false);
       }
+      setIsLoading(false);
     } catch (error) {
+      setIsLoading(false);
       console.log(error);
     }
   };
@@ -240,14 +231,16 @@ export default function Trade() {
                                   );
                                 }}
                               >
-                                <button
-                                  className="sc-button style-place-bid style bag fl-button pri-3"
-                                  onClick={() => ReadyForBuy(nft.tokenId)}
-                                  type="button"
-                                >
-                                  <FaShoppingBag color="black" />
-                                  <span>Buy</span>
-                                </button>
+                                {!isLoading && (
+                                  <button
+                                    className="sc-button style-place-bid style bag fl-button pri-3"
+                                    onClick={() => ReadyForBuy(nft.tokenId)}
+                                    type="button"
+                                  >
+                                    {/* <FaShoppingBag color="black" /> */}
+                                    Buy
+                                  </button>
+                                )}
                               </div>
                             )}
                           </div>

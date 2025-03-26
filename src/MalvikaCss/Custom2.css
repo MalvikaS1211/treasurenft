@@ -192,3 +192,25 @@
   align-items: center;
   gap: 10px;
 }
+
+.available-packages {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.package-container {
+  display: flex;
+  /* justify-content: center; */
+  margin: 10px 0;
+}
+
+.createbtn {
+  background-color: #4383fe;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  /* transition: 0.3s ease-in-out; */
+}
