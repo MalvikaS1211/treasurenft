@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CyberDoberman from "../assets/CyberDoberman.jpg";
 import MattRamos from "../assets/MattRamos.jpg";
 import { FaPlus } from "react-icons/fa";
 import axios from "axios";
-import { approveToken, createNFTsBulkFn } from "../Helper/Web3";
-import { createNftVrsFn, getCreateBulkNFT } from "../Helper/API_Functions";
+import {
+  approveToken,
+  createNFTsBulkFn,
+  fetchUserTokenBalance,
+  getAvailaibleBalance,
+} from "../Helper/Web3";
+import {
+  createNftVrsFn,
+  getCreateBulkNFT,
+  getMaturedNFTs,
+} from "../Helper/API_Functions";
 import toast from "react-hot-toast";
 import { useAccount } from "wagmi";
 
@@ -15,7 +24,9 @@ export default function BulkNFT() {
   const [selectedFile, setSelectedFile] = useState("");
   const [preview, setPreview] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [selectedAmount, setAmount] = useState();
   const { address } = useAccount();
+  // const address = "0x0f04D6B1641d192B4F138430E8745C3664528826";
   const [nfts, setNfts] = useState([
     { file: null, price: "", title: "", description: "", preview: null },
   ]);
@@ -129,17 +140,19 @@ export default function BulkNFT() {
   const nftCreate = async () => {
     setIsLoading(true);
     try {
-      if (
-        nfts.some(
-          (nft) => !nft.title || !nft.description || !nft.file || !nft.price
-        )
-      ) {
+      if (nfts.some((nft) => !nft.title || !nft.description || !nft.file)) {
         setIsLoading(false);
         return toast.error(
           "Please fill all fields and select a file for each NFT!"
         );
       }
-
+      const userBalance = await fetchUserTokenBalance(address);
+      const totalPrice = selectedAmount * 1.1;
+      // const totalPrice = nfts.reduce((sum, nft) => sum + Number(nft.price), 0);
+      if (userBalance < totalPrice) {
+        setIsLoading(false);
+        return toast.error(`You need at least ${totalPrice} USDT to Buy`);
+      }
       let metadataURIs = [];
       let titles = [];
       let descriptions = [];
@@ -157,7 +170,7 @@ export default function BulkNFT() {
         metadataURIs.push(metadataURI);
         titles.push(nft.title);
         descriptions.push(nft.description);
-        initialPrices.push(Number(50)); // to be changed
+        initialPrices.push(Number(selectedAmount / 5)); // to be changed
       }
 
       console.log("All metadata uploaded:", metadataURIs, nfts);
@@ -176,7 +189,7 @@ export default function BulkNFT() {
         titles,
         descriptions,
         metadataURIs,
-        275
+        selectedAmount * 1.1
       );
       console.log("BulkNFTVrs", res);
       const res1 = createNFTsBulkFn(
@@ -202,148 +215,199 @@ export default function BulkNFT() {
       setIsLoading(false);
     }
   };
+  const [availablePkg, setAvailablePkg] = useState([]);
+  const HandleAvailablePkg = async () => {
+    try {
+      const resPkg = await getMaturedNFTs(address);
+      setAvailablePkg(resPkg.userMaturedNfts);
+      console.log("Available packages:", resPkg);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  const [availableBalance, setAvailableBalance] = useState(0);
+  const ShowAvailablepkg = async () => {
+    const availablBal = await getAvailaibleBalance(address);
+    console.log(availablBal);
+    setAvailableBalance(availablBal);
+  };
 
-  const availablePkg = ["250", "230"];
+  useEffect(() => {
+    if (address) {
+      HandleAvailablePkg();
+      ShowAvailablepkg();
+    } else toast.error("Please connect your wallet");
+  }, [address]);
+
+  // const availablePkg = ["250", "230"];
   return (
     <>
-      <div className="row  available-packages">
-        <div className="row" style={{ paddingLeft: "34px" }}>
-          <h4
-            className="title-create-item mt-4 col-lg-12"
-            style={{ textAlign: "left" }}
-          >
-            Available Packages
-          </h4>
-          <div className="d-flex flex-wrap justify-content-start  gap-3">
-            {availablePkg.map((pkg, index) => (
-              <div className="package-container" key={index}>
-                <button
-                  type="button"
-                  className="sc-button  style style-1  "
-                  style={{ padding: "5px 26px" }}
-                >
-                  ${pkg}
-                </button>
+      {availableBalance > 0 ? (
+        <>
+          <div className="row available-packages">
+            <div className="row" style={{ paddingLeft: "34px" }}>
+              <h4
+                className="title-create-item mt-4 col-lg-12"
+                style={{ textAlign: "left" }}
+              >
+                Available Packages
+              </h4>
+              <div className="d-flex flex-wrap justify-content-start gap-3">
+                {availablePkg?.map((pkg, index) => (
+                  <div className="package-container" key={index}>
+                    <button
+                      type="button"
+                      className="sc-button style style-1"
+                      style={{ padding: "5px 26px" }}
+                      onClick={() => {
+                        setAmount(
+                          (Number(pkg.nftCreatedDetails.price) * 5) / 1e18
+                        );
+                      }}
+                    >
+                      $
+                      {(
+                        (Number(pkg.nftCreatedDetails.price) * 5 * 1.1) /
+                        1e18
+                      ).toFixed(2)}
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {selectedAmount > 0 && (
+            <div
+              style={{ fontSize: "20px", paddingLeft: "36px" }}
+              className="row mt-5"
+            >
+              Note: You had selected {selectedAmount * 1.1} USDT package. You
+              can create 5 NFTs of {selectedAmount / 5} USDT.
+            </div>
+          )}
+
+          <div className="row" style={{ paddingTop: "40px" }}>
+            {nfts.map((nft, index) => (
+              <div
+                key={index}
+                className="col-12 d-flex flex-wrap"
+                style={{
+                  borderTop: index !== 0 ? "1px solid #80808057" : "none",
+                  paddingTop: index !== 0 ? "10px" : "0",
+                }}
+              >
+                <div className="col-xl-3 col-lg-6 col-md-6 col-12">
+                  <h4 className="title-create-item mt-4">Preview item</h4>
+                  <div
+                    className="sc-card-product"
+                    style={{ border: "1px solid rgb(81, 66, 252)" }}
+                  >
+                    <div className="card-media">
+                      <a href="">
+                        <img src={nft.preview || CyberDoberman} alt="Axies" />
+                      </a>
+                      {/* <a className="wishlist-button heart" href="/login">
+                        <span className="number-like">${nft.price || 0}</span>
+                      </a> */}
+                    </div>
+                    {/* <div class="card-title">
+                      <h6>NFT Price</h6>
+                      <div class="tags">${nft.price || 0}</div>
+                    </div>
+                    <div class="card-title">
+                      <h6>Creation Fee (10%)</h6>
+                      <div class="tags">${(nft.price * 10) / 100}</div>
+                    </div>
+                    <div class="card-title">
+                      <h6>Total Amount</h6>
+                      <div class="tags">
+                        {" "}
+                        <div class="tags">
+                          $
+                          {parseFloat(nft.price || 0) +
+                            parseFloat((nft.price * 20) / 100 || 0)}
+                        </div>
+                      </div>
+                    </div> */}
+                  </div>
+                </div>
+
+                <div className="col-xl-9 col-lg-6 col-md-12 col-12">
+                  <div className="form-create-item mt-4">
+                    <h4 className="title-create-item">Upload NFT</h4>
+                    <h4 className="title-create-item">{index + 1} NFT</h4>
+                    <label className="uploadFile">
+                      <span className="filename">
+                        {nft.file
+                          ? nft.file.name
+                          : "PNG, JPG, GIF, WEBP, or MP4. Max 200MB."}
+                      </span>
+                      <input
+                        type="file"
+                        className="inputfile form-control"
+                        name="images"
+                        accept="image/*"
+                        onChange={(e) => handleFileChange(e, index)}
+                      />
+                    </label>
+
+                    <h4 className="title-create-item">Title</h4>
+                    <input
+                      type="text"
+                      placeholder="Item Name"
+                      className="mb-4"
+                      value={nft.title}
+                      onChange={(e) => handleInputChange(e, index, "title")}
+                    />
+
+                    <h4 className="title-create-item">Description</h4>
+                    <textarea
+                      placeholder="e.g. “This is a very limited item”"
+                      className="mb-4"
+                      value={nft.description}
+                      onChange={(e) =>
+                        handleInputChange(e, index, "description")
+                      }
+                    />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
-        </div>
-      </div>
-      <div className="row" style={{ paddingTop: "40px" }}>
-        <>
-          {nfts.map((nft, index) => (
-            <div
-              key={index}
-              className="col-12 d-flex flex-wrap"
+
+          <div className="create-nft-container">
+            <button className="createbtn" type="button" onClick={nftCreate}>
+              {isLoading ? (
+                <span
+                  className="spinner-border spinner-border-sm"
+                  role="status"
+                ></span>
+              ) : (
+                "Create NFT"
+              )}
+            </button>
+            <FaPlus
+              onClick={nfts.length < 5 ? addNFTField : null}
+              size={20}
               style={{
-                borderTop: index !== 0 ? "1px solid #80808057" : "none",
-                paddingTop: index !== 0 ? "10px" : "0",
+                cursor: nfts.length < 5 ? "pointer" : "not-allowed",
+                opacity: nfts.length < 5 ? 1 : 0.5,
               }}
-            >
-              <div className="col-xl-3 col-lg-6 col-md-6 col-12">
-                <h4 className="title-create-item mt-4 ">Preview item</h4>
-                <div
-                  className="sc-card-product"
-                  style={{ border: " 1px solid rgb(81, 66, 252)" }}
-                >
-                  <div className="card-media">
-                    <a href="">
-                      <img src={nft.preview || CyberDoberman} alt="Axies" />
-                    </a>
-                    <a className="wishlist-button heart" href="/login">
-                      <span className="number-like">${nft.price || 0}</span>
-                    </a>
-                  </div>
-                  <div class="card-title">
-                    <h6>NFT Price</h6>
-                    <div class="tags">${nft.price || 0}</div>
-                  </div>
-                  <div class="card-title">
-                    <h6>Creation Fee (10%)</h6>
-                    <div class="tags">${(nft.price * 10) / 100}</div>
-                  </div>
-                  <div class="card-title">
-                    <h6>Total Amount</h6>
-                    <div class="tags">
-                      {" "}
-                      <div class="tags">
-                        $
-                        {parseFloat(nft.price || 0) +
-                          parseFloat((nft.price * 20) / 100 || 0)}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-xl-9 col-lg-6 col-md-12 col-12">
-                <div className="form-create-item mt-4">
-                  <h4 className="title-create-item">Upload NFT</h4>
-                  <h4 className="title-create-item">{index + 1} NFT</h4>
-                  <label className="uploadFile">
-                    <span className="filename">
-                      {nft.file
-                        ? nft.file.name
-                        : "PNG, JPG, GIF, WEBP, or MP4. Max 200MB."}
-                    </span>
-                    <input
-                      type="file"
-                      className="inputfile form-control"
-                      name="images"
-                      accept="image/*"
-                      onChange={(e) => handleFileChange(e, index)}
-                    />
-                  </label>
-
-                  <h4 className="title-create-item">Price</h4>
-                  <select
-                    className="mb-4 nft-price-dropdown"
-                    value={nft.price}
-                    onChange={(e) => handleInputChange(e, index, "price")}
-                  >
-                    <option value="">Enter price for one item (USDT)</option>
-                    {BulkNFTpriceOptions.map((price, idx) => (
-                      <option key={idx} value={price / 5}>
-                        ${price / 5} ({price / 5} * 5)
-                      </option>
-                    ))}
-                  </select>
-
-                  <h4 className="title-create-item">Title</h4>
-                  <input
-                    type="text"
-                    placeholder="Item Name"
-                    className="mb-4"
-                    value={nft.title}
-                    onChange={(e) => handleInputChange(e, index, "title")}
-                  />
-
-                  <h4 className="title-create-item">Description</h4>
-                  <textarea
-                    placeholder="e.g. “This is a very limited item”"
-                    className="mb-4"
-                    value={nft.description}
-                    onChange={(e) => handleInputChange(e, index, "description")}
-                  />
-                </div>
-              </div>
-            </div>
-          ))}
+            />
+          </div>
         </>
-      </div>
-      <div className="create-nft-container  ">
-        <button className="createbtn mt-4" type="button" onClick={nftCreate}>
-          {isLoading ? (
-            <span
-              className="spinner-border spinner-border-sm"
-              role="status"
-            ></span>
-          ) : (
-            "Create NFT"
-          )}
-        </button>
-        <FaPlus onClick={addNFTField} size={20} style={{ cursor: "pointer" }} />
-      </div>
+      ) : (
+        <>
+          {" "}
+          <h4
+            className="title-create-item mt-4 col-lg-12"
+            style={{ textAlign: "center" }}
+          >
+            No Packages Available
+          </h4>
+        </>
+      )}
     </>
   );
 }

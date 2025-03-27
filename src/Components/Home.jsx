@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./header";
 import FrontPage from "./FrontPage";
-import Footer from "./Footer";
+
 import LogoBlue from "../assets/LogoBlue.png";
 import PhoneHeader from "./PhoneHeader";
 import HeaderNew from "./HeaderNew";

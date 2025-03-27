@@ -146,7 +146,11 @@ export default function Dashboard() {
       AvailableBalance();
     }
   }, [address, isFetch]);
-
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(referralLink).then(() => {
+      console.log("Copied to clipboard:", referralLink);
+    });
+  };
   return (
     <>
       <div className="p-4">
@@ -174,7 +178,9 @@ export default function Dashboard() {
                 </div>
                 <div class="user-card wallet-card">
                   <h6>Referral Link</h6>
-                  <p>{referralLink}</p>
+                  <p onClick={copyToClipboard} className="copytheRefferal">
+                    {referralLink}
+                  </p>
                   <h6>Referred By</h6>
                   <p>{dashboardData?.[2] ?? "No data available"}</p>
                 </div>

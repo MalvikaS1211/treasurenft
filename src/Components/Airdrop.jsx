@@ -2,7 +2,7 @@ import React from "react";
 import "../css/Airdrop.css";
 import Header from "./header";
 import LogoBlue from "../assets/LogoBlue.png";
-import Footer from "./Footer";
+
 import PhoneHeader from "./PhoneHeader";
 
 const Airdrop = () => {

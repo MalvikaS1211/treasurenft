@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./header";
-import Footer from "./Footer";
+//
 import { Link } from "react-router-dom";
 import LogoWhite from "../assets/LogoWhite.png";
 import PhoneHeader from "./PhoneHeader";

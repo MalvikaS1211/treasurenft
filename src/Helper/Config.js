@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = "0x659168424611126E7a5DC582681F9F9179569044";
+export const CONTRACT_ADDRESS = "0xB8174FC8f0056fc3A1ce8d3CF7535318f094b85f";
 export const CONTRACT_ADDRESS_ABI = [
   {
     inputs: [
@@ -203,6 +203,12 @@ export const CONTRACT_ADDRESS_ABI = [
         name: "lastUsedNonce",
         type: "uint256",
       },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "virtualBalance",
+        type: "uint256",
+      },
     ],
     name: "NFTCreated",
     type: "event",
@@ -365,6 +371,18 @@ export const CONTRACT_ADDRESS_ABI = [
         indexed: false,
         internalType: "uint256",
         name: "salesCount",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "ofPrice",
         type: "uint256",
       },
     ],

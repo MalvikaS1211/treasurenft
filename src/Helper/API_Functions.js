@@ -2,8 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-// export const URLApi = "http://64.227.155.146:8081/api";
-export const URLApi = "http://192.168.1.161:8081/api";
+export const URLApi = "http://64.227.155.146:8081/api";
+// export const URLApi = "http://192.168.1.10:8081/api";
 
 export async function getUserInfo(address) {
   try {
@@ -103,16 +103,16 @@ export async function getReadyForBuyFn(
   tokenId,
   totalAmount
 ) {
-  console.log(
-    userAddress,
-    initialPrice,
-    title,
-    description,
-    metadataURI,
-    tokenId,
-    totalAmount,
-    "in api call"
-  );
+  // console.log(
+  //   userAddress,
+  //   initialPrice,
+  //   title,
+  //   description,
+  //   metadataURI,
+  //   tokenId,
+  //   totalAmount,
+  //   "in api call"
+  // );
   try {
     if (!title) {
       return;
@@ -176,7 +176,7 @@ export async function getUserDirects(address, page = 1, limit = 10) {
   }
 }
 
-export async function getRoyalty(address, page = 1, limit = 10) {
+export async function getRoyalty(address, page = 1, limit = 52) {
   try {
     const response = await axios.post(`${URLApi}/user-royalty-transferred`, {
       userAddress: address,
@@ -190,7 +190,7 @@ export async function getRoyalty(address, page = 1, limit = 10) {
   }
 }
 
-export async function getTotalTeam(address, page = 1, limit = 10, level = 1) {
+export async function getTotalTeam(address, page = 1, limit = 10, level) {
   try {
     const response = await axios.post(`${URLApi}/total-team`, {
       userAddress: address,
@@ -198,9 +198,47 @@ export async function getTotalTeam(address, page = 1, limit = 10, level = 1) {
       limit,
       level,
     });
-
+    console.log(level, "level in api call");
     return response.data;
   } catch (error) {
     console.log("Error getRoyalty Admin:", error);
+  }
+}
+
+export async function getMaturedNFTs(address, page = 1, limit = 10) {
+  try {
+    const response = await axios.post(`${URLApi}/user-matured-nfts`, {
+      userAddress: address,
+      page,
+      limit,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getMaturedNFTs Admin:", error);
+  }
+}
+
+export async function getPurchasedNFTs(address) {
+  try {
+    const response = await axios.post(`${URLApi}/user-purchased-nft`, {
+      userAddress: address,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getPurchasedNFT Admin:", error);
+  }
+}
+
+export async function getOwnedNFTs(address) {
+  try {
+    const response = await axios.post(`${URLApi}/user-curr-nfts`, {
+      userAddress: address,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getOwnedNFTs Admin:", error);
   }
 }

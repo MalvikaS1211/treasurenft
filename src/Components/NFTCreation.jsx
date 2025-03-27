@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./header";
 import LogoWhite from "../assets/LogoWhite.png";
-import Footer from "./Footer";
+
 import PhoneHeader from "./PhoneHeader";
 import HeaderNew from "./HeaderNew";
 import FooterNew from "./FooterNew";

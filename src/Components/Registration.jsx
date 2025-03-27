@@ -11,23 +11,20 @@ import {
   registerfn,
 } from "../Helper/Web3";
 import toast from "react-hot-toast";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { base_url } from "../Helper/Config";
 
 export default function Registration() {
+  const navigate = useNavigate();
   const [ref, setRef] = useState("");
   const { address } = useAccount();
   const [userExist, setUserExist] = useState(false);
-  const data = new URLSearchParams(window.location.search);
-  const refLink = data.get("ref"); // Get ref from URL
 
-  const referralLink = `${base_url}/?ref=${refLink}`;
-  // console.log("refLink", refLink);
   const userExistFn = async () => {
     try {
       if (address) {
         const resUserExist = await isUserExist(address);
-        console.log(resUserExist, "resUserExist");
+        // console.log(resUserExist, "resUserExist");
         setUserExist(resUserExist);
       }
     } catch (error) {
@@ -40,13 +37,21 @@ export default function Registration() {
     } else {
       toast.error("Please connect your wallet");
     }
-  }, [address]);
+  }, [address, userExist]);
 
   useEffect(() => {
     if (userExist) {
       toast.success("You are already registered");
     }
   }, [userExist]);
+  useEffect(() => {
+    const data = new URLSearchParams(window.location.search);
+    const refLink = data.get("ref"); // Get ref from URL
+    console.log(refLink, "refLink");
+    const referralLink = `${base_url}/?ref=${refLink}`;
+    console.log(referralLink, "referralLink");
+    setRef(refLink);
+  }, [window.location.search]);
 
   const tokenApp = async (amt) => {
     try {
@@ -81,8 +86,10 @@ export default function Registration() {
       if (appRes) {
         const reg = await registerfn(ref, 15);
         if (reg) {
+          toast.success("You are navigating to the website!");
           setTimeout(() => {
             setRef("");
+            navigate("/");
           }, 2000);
         } else {
           toast.error("Registration failed. Please try again.");
@@ -94,36 +101,6 @@ export default function Registration() {
     }
   };
 
-  // const userReg = async () => {
-  //   try {
-  //     if (!address) {
-  //       toast.error("Wallet address is required!");
-  //       return;
-  //     }
-  //     if (userExist) {
-  //       toast.error("You are already registered");
-  //       return;
-  //     }
-
-  //     const appRes = await tokenApp(15);
-  //     if (appRes) {
-  //       // Use the referral link if available; otherwise, use the default ref
-  //       const referrer = refLink || ref;
-  //       const reg = await registerfn(referrer, 15);
-
-  //       if (reg) {
-  //         setTimeout(() => {
-  //           setRef("");
-  //         }, 2000);
-  //       } else {
-  //         toast.error("Registration failed. Please try again.");
-  //       }
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //     toast.error("An error occurred during registration.");
-  //   }
-  // };
   return (
     <>
       <HeaderNew />

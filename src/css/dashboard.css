@@ -4,6 +4,7 @@
   align-items: center;
   padding: 10px;
   color: #fff;
+  gap: 10px;
 }
 .header-dashboard-right {
   display: flex;
@@ -2215,7 +2216,7 @@ header {
 
 .css-ksll4a:hover {
   background-color: transparent;
-  color: rgb(221, 221, 221);
+  /* color: rgb(221, 221, 221); */
 }
 .css-ksll4a {
   display: inline-flex;
@@ -2366,5 +2367,15 @@ td {
   ); */
   background: #93bbff;
   padding: 10px 0px;
-  height: 179px;
+  height: 225px;
+}
+
+.copytheRefferal {
+  cursor: pointer;
+  display: inline-block; /* Ensures transform applies properly */
+  transition: transform 0.2s ease-in-out; /* Smooth animation */
+}
+
+.copytheRefferal:hover {
+  transform: translateY(-2px);
 }

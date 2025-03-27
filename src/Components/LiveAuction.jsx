@@ -70,7 +70,7 @@ export default function LiveAuction() {
                   <div className="slider-item">
                     <div className="sc-card-product explode style2">
                       <div className="card-media">
-                        <a href="">
+                        <a>
                           <img src={hemlet} alt="Hamlet Contemplates" />
                         </a>
                         <div className="featured-countdown">
@@ -86,7 +86,7 @@ export default function LiveAuction() {
                       </div>
                       <div className="card-title">
                         <h5>
-                          <a href="">Hamlet Contemplates</a>
+                          <a>Hamlet Contemplates</a>
                         </h5>
                       </div>
                       <div class="meta-info">
@@ -101,7 +101,7 @@ export default function LiveAuction() {
                             <span>Creator</span>
                             <h6>
                               {" "}
-                              <a href="">SalvadorDali</a>{" "}
+                              <a>SalvadorDali</a>{" "}
                             </h6>
                           </div>
                         </div>
@@ -115,9 +115,6 @@ export default function LiveAuction() {
                             <span>= $12.246</span>
                           </div>
                         </div>
-                        <a class="wishlist-button public heart" href="">
-                          <span class="number-like">100</span>
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -129,7 +126,7 @@ export default function LiveAuction() {
                   <div className="slider-item">
                     <div className="sc-card-product explode style2">
                       <div className="card-media">
-                        <a href="">
+                        <a>
                           <img src={Trimphant} alt="Trimphant" />
                         </a>
                         <div className="featured-countdown">
@@ -145,7 +142,7 @@ export default function LiveAuction() {
                       </div>
                       <div className="card-title">
                         <h5>
-                          <a href="">Trimphant</a>
+                          <a>Trimphant</a>
                         </h5>
                       </div>
                       <div class="meta-info">
@@ -160,7 +157,7 @@ export default function LiveAuction() {
                             <span>Creator</span>
                             <h6>
                               {" "}
-                              <a href="">SalvadorDali</a>{" "}
+                              <a>SalvadorDali</a>{" "}
                             </h6>
                           </div>
                         </div>
@@ -174,9 +171,6 @@ export default function LiveAuction() {
                             <span>= $12.246</span>
                           </div>
                         </div>
-                        <a class="wishlist-button public heart" href="">
-                          <span class="number-like">100</span>
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -188,7 +182,7 @@ export default function LiveAuction() {
                   <div className="slider-item">
                     <div className="sc-card-product explode style2">
                       <div className="card-media">
-                        <a href="">
+                        <a>
                           <img src={LivingVase} alt="Living Vase" />
                         </a>
                         <div className="featured-countdown">
@@ -204,7 +198,7 @@ export default function LiveAuction() {
                       </div>
                       <div className="card-title">
                         <h5>
-                          <a href="">Living Vase</a>
+                          <a>Living Vase</a>
                         </h5>
                       </div>
                       <div class="meta-info">
@@ -219,7 +213,7 @@ export default function LiveAuction() {
                             <span>Creator</span>
                             <h6>
                               {" "}
-                              <a href="">SalvadorDali</a>{" "}
+                              <a>SalvadorDali</a>{" "}
                             </h6>
                           </div>
                         </div>
@@ -233,9 +227,6 @@ export default function LiveAuction() {
                             <span>= $12.246</span>
                           </div>
                         </div>
-                        <a class="wishlist-button public heart" href="">
-                          <span class="number-like">100</span>
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -247,7 +238,7 @@ export default function LiveAuction() {
                   <div className="slider-item">
                     <div className="sc-card-product explode style2">
                       <div className="card-media">
-                        <a href="">
+                        <a>
                           <img src={FlameDress} alt="Flame Dress" />
                         </a>
                         <div className="featured-countdown">
@@ -263,7 +254,7 @@ export default function LiveAuction() {
                       </div>
                       <div className="card-title">
                         <h5>
-                          <a href="">Flame Dress</a>
+                          <a>Flame Dress</a>
                         </h5>
                       </div>
                       <div class="meta-info">
@@ -278,7 +269,7 @@ export default function LiveAuction() {
                             <span>Creator</span>
                             <h6>
                               {" "}
-                              <a href="">SalvadorDali</a>{" "}
+                              <a>SalvadorDali</a>{" "}
                             </h6>
                           </div>
                         </div>
@@ -292,9 +283,6 @@ export default function LiveAuction() {
                             <span>= $12.246</span>
                           </div>
                         </div>
-                        <a class="wishlist-button public heart" href="">
-                          <span class="number-like">100</span>
-                        </a>
                       </div>
                     </div>
                   </div>

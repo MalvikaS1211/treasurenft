@@ -67,7 +67,7 @@ export default function Navbar({ isSidebarOpen }) {
             }
           >
             <FaCrown />
-            Royality
+            NFT Royality
           </li>
         </Link>
       </ul>

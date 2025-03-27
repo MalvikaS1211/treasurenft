@@ -1,24 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-import { FaGripfire } from "react-icons/fa";
-
-import hemlet from "../assets/hemlet.jpg";
-
-import LivingVase from "../assets/LivingVase.jpg";
-import FlameDress from "../assets/FlameDress.jpg";
-
-import creativeArt from "../assets/creativeArt.jpg";
-
-import RenaiXance from "../assets/RenaiXance.jpg";
-import space from "../assets/space.jpg";
-import cryptoegg from "../assets/cryptoegg.jpg";
-import cyberprimal from "../assets/cyberprimal.jpg";
-import CyberDoberman from "../assets/CyberDoberman.jpg";
-import { IoIosHeartEmpty } from "react-icons/io";
 import { FaShoppingBag } from "react-icons/fa";
 import FooterNew from "./FooterNew";
 import HeaderNew from "./HeaderNew";
 import {
+  getOwnedNFTs,
+  getPurchasedNFTs,
   getReadyForsaleFn,
   getUserCreatedNftsFn,
 } from "../Helper/API_Functions";
@@ -31,6 +18,9 @@ export default function Expore() {
   const [isFetch, setIsFetch] = useState(false);
   const { address } = useAccount();
   const [createdNFTs, setCreateNft] = useState([]);
+  const [purchasedNFTs, setPurchasedNFTs] = useState([]);
+  const [ownedNFTs, setOwnedNFTs] = useState([]);
+
   const readyForSale = async (tokenId) => {
     try {
       await toast.promise(getReadyForsaleFn(address, tokenId), {
@@ -47,7 +37,7 @@ export default function Expore() {
     }
   };
 
-  const ShowNFTs = async () => {
+  const ShowCreatedNFTs = async () => {
     try {
       const resNFT = await getUserCreatedNftsFn(address);
       const data = await Promise.all(
@@ -93,8 +83,105 @@ export default function Expore() {
     }
   };
 
+  const ShowPurchasedNfts = async () => {
+    try {
+      const resNFT = await getPurchasedNFTs(address);
+      const data = await Promise.all(
+        resNFT.data.map(async (it) => {
+          try {
+            const res = await getNfts(it.tokenId);
+            const metadataUrl = res[2].replace(
+              "ipfs://",
+              "https://ipfs.io/ipfs/"
+            );
+            const metadataRes = await axios.get(metadataUrl);
+            const metadata = metadataRes.data;
+            const imageUrl = metadata.image.replace(
+              "ipfs://",
+              "https://ipfs.io/ipfs/"
+            );
+            return {
+              ...it,
+              title: metadata.name,
+              description: metadata.description,
+              img: imageUrl,
+              price: res[4],
+              creator: res[3],
+            };
+          } catch (err) {
+            console.error(
+              `Error fetching metadata for Token ID ${it.tokenId}:`,
+              err
+            );
+            return {
+              ...it,
+              title: "",
+              description: "Error loading",
+              img: "",
+            };
+          }
+        })
+      );
+
+      setPurchasedNFTs(data);
+      console.log("Fetched purchased NFTs:", data);
+    } catch (error) {
+      console.error("Error fetching purchased NFTs:", error);
+    }
+  };
+
+  const ShowOwnedNFTs = async () => {
+    try {
+      const resNFT = await getOwnedNFTs(address);
+      const data = await Promise.all(
+        resNFT.usercurrOwnedNfts.map(async (it) => {
+          try {
+            const res = await getNfts(it.tokenId);
+            const metadataUrl = res[2].replace(
+              "ipfs://",
+              "https://ipfs.io/ipfs/"
+            );
+            const metadataRes = await axios.get(metadataUrl);
+            const metadata = metadataRes.data;
+            const imageUrl = metadata.image.replace(
+              "ipfs://",
+              "https://ipfs.io/ipfs/"
+            );
+            return {
+              ...it,
+              title: metadata.name,
+              description: metadata.description,
+              img: imageUrl,
+              price: res[4],
+              creator: res[3],
+            };
+          } catch (err) {
+            console.error(
+              `Error fetching metadata for Token ID ${it.tokenId}:`,
+              err
+            );
+            return {
+              ...it,
+              title: "",
+              description: "Error loading",
+              img: "",
+            };
+          }
+        })
+      );
+
+      setOwnedNFTs(data);
+      console.log("Fetched Owned NFTs:", data);
+    } catch (error) {
+      console.error("Error fetching Owned NFTs:", error);
+    }
+  };
   useEffect(() => {
-    ShowNFTs();
+    if (address) {
+      ShowCreatedNFTs();
+      ShowPurchasedNfts();
+      ShowOwnedNFTs();
+    } else toast.error("Please connect your wallet");
   }, [address, isFetch]);
 
   return (
@@ -102,7 +189,6 @@ export default function Expore() {
       <HeaderNew />
       <div className="tf-create-item tf-section p-0">
         <div className="dashboardbg">
-          {" "}
           <div
             class="col-md-12 "
             style={{ paddingTop: "20px", paddingBottom: "20px" }}
@@ -119,14 +205,129 @@ export default function Expore() {
         </div>
         <section className="tf-section today-pick">
           <div className="themesflat-container">
+            <div className="row  available-packages">
+              <div className="row" style={{ paddingLeft: "34px" }}>
+                <h4
+                  className="title-create-item mt-4 col-lg-12"
+                  style={{ textAlign: "left" }}
+                >
+                  Your Created NFTs
+                </h4>
+              </div>
+            </div>
+
             <div className="row">
-              {createdNFTs.map((nft, index) => (
+              {createdNFTs.length > 0 ? (
+                createdNFTs.map((nft, index) => (
+                  <div
+                    key={index}
+                    className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
+                  >
+                    <div
+                      className="sc-card-product explode style2 mg-bt"
+                      style={{ border: "1px solid #5142fc" }}
+                    >
+                      <div className="card-media">
+                        <a
+                          href="#"
+                          style={{
+                            height: "288px",
+                            width: "288px",
+                            display: "flex",
+                          }}
+                        >
+                          <img
+                            src={
+                              nft.img.startsWith("ipfs://")
+                                ? nft.img.replace(
+                                    "ipfs://",
+                                    "https://ipfs.io/ipfs/"
+                                  )
+                                : nft.img
+                            }
+                            alt="NFT"
+                            style={{ width: "100%", height: "100%" }}
+                          />
+                        </a>
+                        {nft.isReadyForSale === false && (
+                          <div className="button-place-bid">
+                            <button
+                              className="sc-button style-place-bid style bag fl-button pri-3"
+                              onClick={() => readyForSale(nft.tokenId)}
+                            >
+                              <FaShoppingBag color="black" />
+                              <span>
+                                {nft.isReadyForSale ? "Not for Sell" : "Sell"}
+                              </span>
+                            </button>
+                          </div>
+                        )}
+                        <div className="coming-soon"></div>
+                      </div>
+                      <div className="card-title">
+                        <h5>
+                          <a href="">{nft.title}</a>
+                        </h5>
+                      </div>
+                      <div className="meta-info">
+                        <div className="author">
+                          <div className="info">
+                            <span>Creator</span>
+                            <h6>
+                              {nft.creator
+                                ? `${nft.creator.slice(
+                                    0,
+                                    6
+                                  )}...${nft.creator.slice(-8)}`
+                                : "Unknown"}
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="card-bottom style-explode">
+                        <div className="price">
+                          <span>Buy Price</span>
+                          <div className="price-details">
+                            <h5>{(Number(nft.price) / 1e18).toFixed(4)} $</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="no-data-container">
+                  <div className="no-data-available">No data available</div>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* your owned nft  section*/}
+      <section className="tf-section today-pick">
+        <div className="themesflat-container">
+          <div className="row  available-packages">
+            <div className="row" style={{ paddingLeft: "34px" }}>
+              <h4
+                className="title-create-item mt-4 col-lg-12"
+                style={{ textAlign: "left" }}
+              >
+                Your Owned NFTs
+              </h4>
+            </div>
+          </div>
+
+          <div className="row">
+            {ownedNFTs.length > 0 ? (
+              ownedNFTs.map((nft, index) => (
                 <div
                   key={index}
                   className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
                 >
                   <div
-                    className="sc-card-product explode style2 mg-bt "
+                    className="sc-card-product explode style2 mg-bt"
                     style={{ border: "1px solid #5142fc" }}
                   >
                     <div className="card-media">
@@ -151,28 +352,19 @@ export default function Expore() {
                           style={{ width: "100%", height: "100%" }}
                         />
                       </a>
-                      {nft.isReadyForSale == false && (
+                      {nft.isReadyForSale === false && (
                         <div className="button-place-bid">
                           <button
                             className="sc-button style-place-bid style bag fl-button pri-3"
-                            onClick={() => {
-                              readyForSale(nft.tokenId);
-                            }}
+                            onClick={() => readyForSale(nft.tokenId)}
                           >
                             <FaShoppingBag color="black" />
-
                             <span>
-                              {createdNFTs.isReadyForSale
-                                ? "Not for Sell"
-                                : "Sell"}
+                              {nft.isReadyForSale ? "Not for Sell" : "Sell"}
                             </span>
                           </button>
                         </div>
                       )}
-                      {/* <div className="wishlist-button heart">
-                        <IoIosHeartEmpty size={18} />
-                        <span className="number-like">{nft.likes}</span>
-                      </div> */}
                       <div className="coming-soon"></div>
                     </div>
                     <div className="card-title">
@@ -182,9 +374,6 @@ export default function Expore() {
                     </div>
                     <div className="meta-info">
                       <div className="author">
-                        {/* <div className="avatar">
-                          <img src={nft.creatorImg} alt="Creator" />
-                        </div> */}
                         <div className="info">
                           <span>Creator</span>
                           <h6>
@@ -197,434 +386,130 @@ export default function Expore() {
                           </h6>
                         </div>
                       </div>
-                      {/* <div className="tags">{nft.chain}</div> */}
                     </div>
                     <div className="card-bottom style-explode">
                       <div className="price">
                         <span>Buy Price</span>
                         <div className="price-details">
-                          <h5>{Number(nft.price) / 1e18} $</h5>
-                          {/* <span>= ${nft.usdValue}</span> */}
+                          <h5>{(Number(nft.price) / 1e18).toFixed(4)} $</h5>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              ))}
+              ))
+            ) : (
+              <div className="no-data-container">
+                <div className="no-data-available">No data available</div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+      {/*end of  your owned nft  section*/}
 
-              {/* <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                
-                <div class="sc-card-product explode style2 mg-bt  ">
-                  <div class="card-media">
-                    <a href="">
-                      <img src={RenaiXance} alt="Axies" />
-                    </a>
-                    <div class="button-place-bid">
-                      <button class="sc-button style-place-bid style bag fl-button pri-3">
-                        <FaShoppingBag color="black" />
-                        <span>Sell</span>
-                      </button>
-                    </div>
-                    <div class="wishlist-button heart">
-                      <IoIosHeartEmpty size={18} />
-                      <span class="number-like">100</span>
-                    </div>
-                    <div class="coming-soon"></div>
-                  </div>
-                  <div class="card-title">
-                    <h5>
-                      <a href="">"The RenaiXance Rising the sun "</a>
-                    </h5>
-                  </div>
-                  <div class="meta-info">
-                    <div class="author">
-                      <div class="avatar">
-                        <img src={creativeArt} alt="Axies" />
-                      </div>
-                      <div class="info">
-                        <span>Creator</span>
-                        <h6>
-                          <a href="">SalvadorDali</a>
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="tags">bsc</div>
-                  </div>
-                  <div
-                    class="card-bottom
-                            style-explode"
-                  >
-                    <div class="price">
-                      <span>Current Bid</span>
-                      <div class="price-details">
-                        <h5>4.89 ETH</h5>
-                        <span>= $12.246</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-              {/* <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                <div class="sc-card-product explode style2 mg-bt  ">
-                  <div class="card-media">
-                    <a href="">
-                      <img src={cyberprimal} alt="Axies" />
-                    </a>
-                    <div class="button-place-bid">
-                      <button class="sc-button style-place-bid style bag fl-button pri-3">
-                        <FaShoppingBag color="black" />
-                        <span>Sell</span>
-                      </button>
-                    </div>
-                    <div class="wishlist-button heart">
-                      <IoIosHeartEmpty size={18} />
-                      <span class="number-like">100</span>
-                    </div>
-                    <div class="coming-soon"></div>
-                  </div>
-                  <div class="card-title">
-                    <h5>
-                      <a href="">"The RenaiXance Rising the sun "</a>
-                    </h5>
-                  </div>
-                  <div class="meta-info">
-                    <div class="author">
-                      <div class="avatar">
-                        <img src={creativeArt} alt="Axies" />
-                      </div>
-                      <div class="info">
-                        <span>Creator</span>
-                        <h6>
-                          <a href="">SalvadorDali</a>
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="tags">bsc</div>
-                  </div>
-                  <div
-                    class="card-bottom
-                            style-explode"
-                  >
-                    <div class="price">
-                      <span>Current Bid</span>
-                      <div class="price-details">
-                        <h5>4.89 ETH</h5>
-                        <span>= $12.246</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                <div class="sc-card-product explode style2 mg-bt  ">
-                  <div class="card-media">
-                    <a href="">
-                      <img src={cryptoegg} alt="Axies" />
-                    </a>
-                    <div class="button-place-bid">
-                      <button class="sc-button style-place-bid style bag fl-button pri-3">
-                        <FaShoppingBag color="black" />
-                        <span>Sell</span>
-                      </button>
-                    </div>
-                    <div class="wishlist-button heart">
-                      <IoIosHeartEmpty size={18} />
-                      <span class="number-like">100</span>
-                    </div>
-                    <div class="coming-soon"></div>
-                  </div>
-                  <div class="card-title">
-                    <h5>
-                      <a href="">"The RenaiXance Rising the sun "</a>
-                    </h5>
-                  </div>
-                  <div class="meta-info">
-                    <div class="author">
-                      <div class="avatar">
-                        <img src={creativeArt} alt="Axies" />
-                      </div>
-                      <div class="info">
-                        <span>Creator</span>
-                        <h6>
-                          <a href="">SalvadorDali</a>
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="tags">bsc</div>
-                  </div>
-                  <div
-                    class="card-bottom
-                            style-explode"
-                  >
-                    <div class="price">
-                      <span>Current Bid</span>
-                      <div class="price-details">
-                        <h5>4.89 ETH</h5>
-                        <span>= $12.246</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                <div class="sc-card-product explode style2 mg-bt  ">
-                  <div class="card-media">
-                    <a href="">
-                      <img src={space} alt="Axies" />
-                    </a>
-                    <div class="button-place-bid">
-                      <button class="sc-button style-place-bid style bag fl-button pri-3">
-                        <FaShoppingBag color="black" />
-                        <span>Sell</span>
-                      </button>
-                    </div>
-                    <div class="wishlist-button heart">
-                      <IoIosHeartEmpty size={18} />
-                      <span class="number-like">100</span>
-                    </div>
-                    <div class="coming-soon"></div>
-                  </div>
-                  <div class="card-title">
-                    <h5>
-                      <a href="">"The RenaiXance Rising the sun "</a>
-                    </h5>
-                  </div>
-                  <div class="meta-info">
-                    <div class="author">
-                      <div class="avatar">
-                        <img src={creativeArt} alt="Axies" />
-                      </div>
-                      <div class="info">
-                        <span>Creator</span>
-                        <h6>
-                          <a href="">SalvadorDali</a>
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="tags">bsc</div>
-                  </div>
-                  <div
-                    class="card-bottom
-                            style-explode"
-                  >
-                    <div class="price">
-                      <span>Current Bid</span>
-                      <div class="price-details">
-                        <h5>4.89 ETH</h5>
-                        <span>= $12.246</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                <div class="sc-card-product explode style2 mg-bt  ">
-                  <div class="card-media">
-                    <a href="">
-                      <img src={FlameDress} alt="Axies" />
-                    </a>
-                    <div class="button-place-bid">
-                      <button class="sc-button style-place-bid style bag fl-button pri-3">
-                        <FaShoppingBag color="black" />
-                        <span>Sell</span>
-                      </button>
-                    </div>
-                    <div class="wishlist-button heart">
-                      <IoIosHeartEmpty size={18} />
-                      <span class="number-like">100</span>
-                    </div>
-                    <div class="coming-soon"></div>
-                  </div>
-                  <div class="card-title">
-                    <h5>
-                      <a href="">"The RenaiXance Rising the sun "</a>
-                    </h5>
-                  </div>
-                  <div class="meta-info">
-                    <div class="author">
-                      <div class="avatar">
-                        <img src={creativeArt} alt="Axies" />
-                      </div>
-                      <div class="info">
-                        <span>Creator</span>
-                        <h6>
-                          <a href="">SalvadorDali</a>
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="tags">bsc</div>
-                  </div>
-                  <div
-                    class="card-bottom
-                            style-explode"
-                  >
-                    <div class="price">
-                      <span>Current Bid</span>
-                      <div class="price-details">
-                        <h5>4.89 ETH</h5>
-                        <span>= $12.246</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                <div class="sc-card-product explode style2 mg-bt  ">
-                  <div class="card-media">
-                    <a href="">
-                      <img src={LivingVase} alt="Axies" />
-                    </a>
-                    <div class="button-place-bid">
-                      <button class="sc-button style-place-bid style bag fl-button pri-3">
-                        <FaShoppingBag color="black" />
-                        <span>Sell</span>
-                      </button>
-                    </div>
-                    <div class="wishlist-button heart">
-                      <IoIosHeartEmpty size={18} />
-                      <span class="number-like">100</span>
-                    </div>
-                    <div class="coming-soon"></div>
-                  </div>
-                  <div class="card-title">
-                    <h5>
-                      <a href="">"The RenaiXance Rising the sun "</a>
-                    </h5>
-                  </div>
-                  <div class="meta-info">
-                    <div class="author">
-                      <div class="avatar">
-                        <img src={creativeArt} alt="Axies" />
-                      </div>
-                      <div class="info">
-                        <span>Creator</span>
-                        <h6>
-                          <a href="">SalvadorDali</a>
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="tags">bsc</div>
-                  </div>
-                  <div
-                    class="card-bottom
-                            style-explode"
-                  >
-                    <div class="price">
-                      <span>Current Bid</span>
-                      <div class="price-details">
-                        <h5>4.89 ETH</h5>
-                        <span>= $12.246</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                <div class="sc-card-product explode style2 mg-bt  ">
-                  <div class="card-media">
-                    <a href="">
-                      <img src={CyberDoberman} alt="Axies" />
-                    </a>
-                    <div class="button-place-bid">
-                      <button class="sc-button style-place-bid style bag fl-button pri-3">
-                        <FaShoppingBag color="black" />
-                        <span>Sell</span>
-                      </button>
-                    </div>
-                    <div class="wishlist-button heart">
-                      <IoIosHeartEmpty size={18} />
-                      <span class="number-like">100</span>
-                    </div>
-                    <div class="coming-soon"></div>
-                  </div>
-                  <div class="card-title">
-                    <h5>
-                      <a href="">"The RenaiXance Rising the sun "</a>
-                    </h5>
-                  </div>
-                  <div class="meta-info">
-                    <div class="author">
-                      <div class="avatar">
-                        <img src={creativeArt} alt="Axies" />
-                      </div>
-                      <div class="info">
-                        <span>Creator</span>
-                        <h6>
-                          <a href="">SalvadorDali</a>
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="tags">bsc</div>
-                  </div>
-                  <div
-                    class="card-bottom
-                            style-explode"
-                  >
-                    <div class="price">
-                      <span>Current Bid</span>
-                      <div class="price-details">
-                        <h5>4.89 ETH</h5>
-                        <span>= $12.246</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                <div class="sc-card-product explode style2 mg-bt  ">
-                  <div class="card-media">
-                    <a href="">
-                      <img src={hemlet} alt="Axies" />
-                    </a>
-                    <div class="button-place-bid">
-                      <button class="sc-button style-place-bid style bag fl-button pri-3">
-                        <FaShoppingBag color="black" />
-                        <span>Sell</span>
-                      </button>
-                    </div>
-                    <div class="wishlist-button heart">
-                      <IoIosHeartEmpty size={18} />
-                      <span class="number-like">100</span>
-                    </div>
-                    <div class="coming-soon"></div>
-                  </div>
-                  <div class="card-title">
-                    <h5>
-                      <a href="">"The RenaiXance Rising the sun "</a>
-                    </h5>
-                  </div>
-                  <div class="meta-info">
-                    <div class="author">
-                      <div class="avatar">
-                        <img src={creativeArt} alt="Axies" />
-                      </div>
-                      <div class="info">
-                        <span>Creator</span>
-                        <h6>
-                          <a href="">SalvadorDali</a>
-                        </h6>
-                      </div>
-                    </div>
-                    <div class="tags">bsc</div>
-                  </div>
-                  <div
-                    class="card-bottom
-                            style-explode"
-                  >
-                    <div class="price">
-                      <span>Current Bid</span>
-                      <div class="price-details">
-                        <h5>4.89 ETH</h5>
-                        <span>= $12.246</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+      {/* your purchased nft  section*/}
+      <section className="tf-section today-pick">
+        <div className="themesflat-container">
+          <div className="row  available-packages">
+            <div className="row" style={{ paddingLeft: "34px" }}>
+              <h4
+                className="title-create-item mt-4 col-lg-12"
+                style={{ textAlign: "left" }}
+              >
+                Your Purchased NFTs
+              </h4>
             </div>
           </div>
-        </section>
-      </div>
+
+          <div className="row">
+            {purchasedNFTs.length > 0 ? (
+              purchasedNFTs.map((nft, index) => (
+                <div
+                  key={index}
+                  className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
+                >
+                  <div
+                    className="sc-card-product explode style2 mg-bt"
+                    style={{ border: "1px solid #5142fc" }}
+                  >
+                    <div className="card-media">
+                      <a
+                        href="#"
+                        style={{
+                          height: "288px",
+                          width: "288px",
+                          display: "flex",
+                        }}
+                      >
+                        <img
+                          src={
+                            nft.img.startsWith("ipfs://")
+                              ? nft.img.replace(
+                                  "ipfs://",
+                                  "https://ipfs.io/ipfs/"
+                                )
+                              : nft.img
+                          }
+                          alt="NFT"
+                          style={{ width: "100%", height: "100%" }}
+                        />
+                      </a>
+                      {nft.isReadyForSale === false && (
+                        <div className="button-place-bid">
+                          <button
+                            className="sc-button style-place-bid style bag fl-button pri-3"
+                            onClick={() => readyForSale(nft.tokenId)}
+                          >
+                            <FaShoppingBag color="black" />
+                            <span>
+                              {nft.isReadyForSale ? "Not for Sell" : "Sell"}
+                            </span>
+                          </button>
+                        </div>
+                      )}
+                      <div className="coming-soon"></div>
+                    </div>
+                    <div className="card-title">
+                      <h5>
+                        <a href="">{nft.title}</a>
+                      </h5>
+                    </div>
+                    <div className="meta-info">
+                      <div className="author">
+                        <div className="info">
+                          <span>Creator</span>
+                          <h6>
+                            {nft.creator
+                              ? `${nft.creator.slice(
+                                  0,
+                                  6
+                                )}...${nft.creator.slice(-8)}`
+                              : "Unknown"}
+                          </h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="card-bottom style-explode">
+                      <div className="price">
+                        <span>Buy Price</span>
+                        <div className="price-details">
+                          <h5>{(Number(nft.price) / 1e18).toFixed(4)} $</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="no-data-container">
+                <div className="no-data-available">No data available</div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+      {/*end of  your purchased  nft  section*/}
       <div className="mt-4">
         <FooterNew />
       </div>

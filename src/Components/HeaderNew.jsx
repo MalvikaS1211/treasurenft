@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../MalvikaCss/Custom2.css";
 import { AiOutlineSearch } from "react-icons/ai";
 import { WalletButton } from "@rainbow-me/rainbowkit";
@@ -8,8 +8,30 @@ import { FaWallet } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { useAccount } from "wagmi";
+import { isUserExist } from "../Helper/Web3";
+import toast from "react-hot-toast";
 const Header = () => {
   const { address } = useAccount();
+
+  const [userExist, setUserExist] = useState(false);
+
+  const userExistFn = async () => {
+    try {
+      if (address) {
+        const resUserExist = await isUserExist(address);
+        console.log(resUserExist, "resUserExist");
+        setUserExist(resUserExist);
+      }
+    } catch (error) {
+      console.error("Error checking user existence:", error);
+    }
+  };
+  useEffect(() => {
+    if (address) {
+      userExistFn();
+    } else toast.error("Please connect your wallet");
+  }, [address, userExist]);
+
   return (
     <>
       <header className="header-new-container d-none d-md-block">
@@ -22,7 +44,7 @@ const Header = () => {
           />
 
           <nav className="nav-head">
-            {address ? (
+            {address && userExist ? (
               <>
                 <Link to="/">Home</Link>
                 <Link to="/explore">Explore</Link>
@@ -62,14 +84,7 @@ const Header = () => {
             style={{ width: "30%" }}
           />
           <ConnectWallet />
-          {/* <div>
-            <button className="connect-wallet-container">
-              <div className="connect-wallet-btn">
-                <FaWallet />
-                Connect Wallet
-              </div>
-            </button>
-          </div> */}
+
           <GiHamburgerMenu
             class="text-white"
             type="button"
@@ -105,7 +120,7 @@ const Header = () => {
           </div>
           <div class="offcanvas-body">
             <nav className="nav-head">
-              {address ? (
+              {address && userExist ? (
                 <>
                   <Link to="/">Home</Link>
                   <Link to="/explore">Explore</Link>
@@ -123,55 +138,6 @@ const Header = () => {
           </div>
         </div>
       </header>
-
-      {/* <header id="header_main" class="header_1 js-header">
-        <div class="themesflat-container">
-          <div class="row">
-            <div class="col-md-12">
-              <div id="site-header-inner">
-                <div class="wrap-box flex">
-                  <div id="site-logo" class="clearfix">
-                    <div id="site-logo-inner">
-                      <a rel="home" class="main-logo" href="/">
-                        <img
-                          class="logo-dark"
-                          id="logo_header"
-                          src={Logo}
-                          alt="nft-gaming"
-                        />
-                      </a>
-                    </div>
-                  </div>
-                  <div class="mobile-button">
-                    <span></span>
-                  </div>
-                  <nav id="main-nav" class="main-nav">
-                    <ul id="menu-primary-menu" class="menu">
-                      <li class="menu-item menu-item-has-children  ">
-                        <a href="/home-02">Home</a>
-                      </li>
-                      <li class="menu-item menu-item-has-children  ">
-                        <a href="/home-02">Explore</a>
-                      </li>
-                      <li class="menu-item menu-item-has-children  ">
-                        <a href="/home-02">Trade</a>
-                      </li>
-                      <li class="menu-item menu-item-has-children  ">
-                        <a href="/home-02">Create NFT</a>
-                      </li>
-                    </ul>
-                  </nav>
-                  <div class="flat-search-btn flex">
-                    <ConnectWallet />
-                 
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-     
-      </header> */}
     </>
   );
 };

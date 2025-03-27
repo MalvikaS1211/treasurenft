@@ -1,21 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import { FaGripfire } from "react-icons/fa";
-
-import hemlet from "../assets/hemlet.jpg";
-
-import LivingVase from "../assets/LivingVase.jpg";
-import FlameDress from "../assets/FlameDress.jpg";
-
 import creativeArt from "../assets/creativeArt.jpg";
 
-import RenaiXance from "../assets/RenaiXance.jpg";
-import space from "../assets/space.jpg";
-import cryptoegg from "../assets/cryptoegg.jpg";
-import cyberprimal from "../assets/cyberprimal.jpg";
-import CyberDoberman from "../assets/CyberDoberman.jpg";
-import { IoIosHeartEmpty } from "react-icons/io";
-import { FaShoppingBag } from "react-icons/fa";
 import FooterNew from "./FooterNew";
 import HeaderNew from "./HeaderNew";
 import {
@@ -24,7 +10,12 @@ import {
   getUserCreatedNftsFn,
 } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
-import { approveToken, buyNFTFn, getNfts } from "../Helper/Web3";
+import {
+  approveToken,
+  buyNFTFn,
+  fetchUserTokenBalance,
+  getNfts,
+} from "../Helper/Web3";
 import axios from "axios";
 import toast from "react-hot-toast";
 export default function Trade() {
@@ -113,6 +104,12 @@ export default function Trade() {
   ) => {
     try {
       setIsLoading(true);
+
+      const userBalance = await fetchUserTokenBalance(address);
+      if (userBalance < totalAmount) {
+        setIsLoading(false);
+        return toast.error(`You need at least ${totalAmount} USDT to Buy`);
+      }
       const res = await getReadyForBuyFn(
         address,
         Number(initialPrice) / 1e18,
@@ -183,8 +180,8 @@ export default function Trade() {
         <section className="tf-section today-pick">
           <div className="themesflat-container">
             <div className="row">
-              {allTrade &&
-                allTrade.map((nft, index) => {
+              {allTrade.length > 0 ? (
+                allTrade?.map((nft, index) => {
                   if (nft.price > 0) {
                     return (
                       <div
@@ -277,8 +274,12 @@ export default function Trade() {
                       </div>
                     );
                   }
-                  return null;
-                })}
+                })
+              ) : (
+                <div className="no-data-container">
+                  <div className="no-data-available">No data available</div>
+                </div>
+              )}
             </div>
           </div>
         </section>

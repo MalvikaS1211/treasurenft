@@ -5,7 +5,6 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { MdKeyboardArrowUp } from "react-icons/md";
 
 import LogoBlue from "../assets/LogoBlue.png";
-import Footer from "./Footer";
 
 export default function NoxiousAudience() {
   const [isExpanded, setIsExpanded] = useState(false);

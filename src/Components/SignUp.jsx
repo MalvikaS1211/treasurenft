@@ -4,7 +4,7 @@ import Header from "./header";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import ConnectWallet from "./ConnectWallet";
-import Footer from "./Footer";
+//
 import { FaEye } from "react-icons/fa";
 import LogoWhite from "../assets/LogoWhite.png";
 import { Link } from "react-router-dom";
