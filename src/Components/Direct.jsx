@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import ConnectWallet from "./ConnectWallet";
 import HeaderDashboard from "./HeaderDashboard";
-import { getLevelIncome } from "../Helper/API_Functions";
+import { getDirectIncome } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
 import moment from "moment";
-export default function Level() {
+export default function Direct() {
   const { address } = useAccount();
   const [tabledata, setTableData] = useState([]);
 
   const handleTableData = async () => {
-    const res = await getLevelIncome(address);
+    const res = await getDirectIncome(address);
     setTableData(res.data);
     console.log("GetDirects", res);
   };
@@ -24,7 +24,7 @@ export default function Level() {
       <div className="p-4 dashboardbg">
         <Navbar />
         <main className="content-dashboard">
-          <HeaderDashboard title="Level" />
+          <HeaderDashboard title="Direct" />
           <div>
             <div style={{ height: "100vh" }}>
               <div className="rank-income">
@@ -46,17 +46,16 @@ export default function Level() {
                           <td>{index + 1}</td>
                           {/* <td>{data?.uniqueRandomId}</td> */}
                           <td>
-                            {data.fromUser.slice(0, 4)}...
-                            {data.fromUser.slice(-7)}
+                            {data.toUser.slice(0, 4)}...{data.toUser.slice(-7)}
                           </td>
                           <td>
-                            {data?.createdAt
-                              ? moment(data.createdAt).format(
+                            {data?.timestamp
+                              ? moment(data.timestamp).format(
                                   "DD-MM-YYYY HH:mm:ss"
                                 )
                               : "N/A"}
                           </td>
-                          <td>{data?.level}</td>
+                          <td>{(data?.amount / 1e18).toFixed(4)}</td>
                           {/* <td>{data?.directTeam}</td> */}
                         </tr>
                       ))

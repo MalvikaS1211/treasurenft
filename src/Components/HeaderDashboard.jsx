@@ -17,8 +17,15 @@ export default function Header({ title }) {
         <h1>{title}</h1>
         <div className="header-right">
           <ConnectWallet />
-          <div className="d-md-block d-lg-none">
-            <GiHamburgerMenu onClick={toggleSidebar} size={25} color="black" />
+          <div className="d-md-block d-lg-none ">
+            <GiHamburgerMenu
+              onClick={toggleSidebar}
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbardashboard"
+              aria-controls="offcanvasNavbar"
+              size={25}
+              color="black"
+            />
           </div>
         </div>
       </header>

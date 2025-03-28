@@ -198,7 +198,7 @@ export default function Expore() {
               style={{ marginTop: "40px" }}
             >
               <h1 class="heading text-center mt-0" style={{ color: "black" }}>
-                Sell Item
+                NFT History
               </h1>
             </div>
           </div>

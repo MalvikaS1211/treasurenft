@@ -2,10 +2,11 @@ import React from "react";
 import { BiSolidSend } from "react-icons/bi";
 import Logo from "../assets/Logo.png";
 
-import { FaWhatsapp } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
+import { FaRedditAlien, FaWhatsapp } from "react-icons/fa";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { IoIosArrowUp } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { BsMedium } from "react-icons/bs";
 export default function FooterNew() {
   return (
     <div>
@@ -44,7 +45,9 @@ export default function FooterNew() {
                     <a>Author Profile</a>
                   </li>
                   <li>
-                    <a>Create Item</a>
+                    <Link to="/NFTcreation">
+                      <a>Create Item</a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -73,7 +76,9 @@ export default function FooterNew() {
                 <h5 class="title-widget">Company</h5>
                 <ul>
                   <li>
-                    <a>Explore</a>
+                    <Link to="/explore">
+                      <a>Explore</a>
+                    </Link>
                   </li>
                   <li>
                     <a>Contact Us</a>
@@ -113,32 +118,44 @@ export default function FooterNew() {
                 <div class="widget-social style-1 mg-t32">
                   <ul>
                     <li>
-                      <a>
-                        <i class="fab fa-twitter"></i>
+                      <a
+                        href="https://x.com/i/flow/login?redirect_after_login=%2Fmagic_verse_666"
+                        target="_blank"
+                      >
+                        <FaXTwitter />
                       </a>
                     </li>
                     <li>
-                      <a>
-                        <i class="fab fa-facebook"></i>
+                      <a
+                        href="http://medium.com/@magicverse666"
+                        target="_blank"
+                      >
+                        <BsMedium />
                       </a>
                     </li>
                     <li>
-                      <a>
+                      <a href="https://t.me/magicverse_6669" target="_blank">
                         <i class="fab fa-telegram-plane"></i>
                       </a>
                     </li>
                     <li>
-                      <a>
-                        <i class="fab fa-youtube"></i>
+                      <a
+                        href="https://www.reddit.com/user/magicverse666/?share_id=dfg-TAP1_q9B4IkwOGI9U&utm_content=1&utm_medium=android_app&utm_name=androidcss&utm_source=share&utm_term=1/"
+                        target="_blank"
+                      >
+                        <FaRedditAlien />
                       </a>
                     </li>
-                    <li>
+                    {/* <li>
                       <a>
                         <FaWhatsapp />
                       </a>
-                    </li>
+                    </li> */}
                     <li>
-                      <a>
+                      <a
+                        href="https://www.instagram.com/magic_verse_666/?igsh=ZDZrcWV0ZWdycGw4#"
+                        target="_blank"
+                      >
                         <FaInstagram />
                       </a>
                     </li>

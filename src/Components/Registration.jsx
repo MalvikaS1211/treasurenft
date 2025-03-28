@@ -44,9 +44,15 @@ export default function Registration() {
       toast.success("You are already registered");
     }
   }, [userExist]);
+
+  const getIdFromUser = async () => {
+    const res = await getIdToAddress(address);
+    console.log(res, "getIdToAddress");
+  };
+
   useEffect(() => {
     const data = new URLSearchParams(window.location.search);
-    const refLink = data.get("ref"); // Get ref from URL
+    const refLink = data.get("ref");
     console.log(refLink, "refLink");
     const referralLink = `${base_url}/?ref=${refLink}`;
     console.log(referralLink, "referralLink");

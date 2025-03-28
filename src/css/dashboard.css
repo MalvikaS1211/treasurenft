@@ -2365,7 +2365,9 @@ td {
     rgb(107, 167, 231) 51%,
     rgb(33, 82, 175) 100%
   ); */
-  background: #93bbff;
+  /* background: #93bbff; */
+  border: 1px solid rgb(33, 82, 175);
+  background: transparent;
   padding: 10px 0px;
   height: 225px;
 }
@@ -2378,4 +2380,18 @@ td {
 
 .copytheRefferal:hover {
   transform: translateY(-2px);
+}
+
+.range-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Level-owner {
+  color: black;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
 }

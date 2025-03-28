@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 
 export const URLApi = "http://64.227.155.146:8081/api";
 // export const URLApi = "http://192.168.1.10:8081/api";
+// export const URLApi = "http://192.168.1.161:8081/api";
 
 export async function getUserInfo(address) {
   try {
@@ -240,5 +241,53 @@ export async function getOwnedNFTs(address) {
     return response.data;
   } catch (error) {
     console.log("Error getOwnedNFTs Admin:", error);
+  }
+}
+
+export async function getFetchTree(address) {
+  try {
+    const response = await axios.post(`${URLApi}/fetch-tree`, {
+      userAddress: address,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getOwnedNFTs Admin:", error);
+  }
+}
+
+export async function getIdToAddress(randomId) {
+  try {
+    const response = await axios.post(`${URLApi}/id-to-address`, {
+      randomId: randomId,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getOwnedNFTs Admin:", error);
+  }
+}
+
+export async function getDirectIncome(address) {
+  try {
+    const response = await axios.post(`${URLApi}/direct-income`, {
+      userAddress: address,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getDirectIncome Admin:", error);
+  }
+}
+
+export async function getLevelIncome(address) {
+  try {
+    const response = await axios.post(`${URLApi}/level-income`, {
+      userAddress: address,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getLevelIncome Admin:", error);
   }
 }

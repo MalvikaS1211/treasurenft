@@ -14,7 +14,7 @@ import Collection from "../Collection";
 import DepositNFT from "../DepositNFT";
 // import NoxiousAudience from "../NoxiousAudience";
 import Account from "../Account";
-import Level from "../Level";
+
 import Airdrop from "../Airdrop";
 import NFTCreation from "../NftCreation";
 import NFTBuySell from "../NFTBuySell";
@@ -29,6 +29,9 @@ import LiveAuction from "../LiveAuction";
 import Trade from "../Trade";
 import Royality from "../Royality";
 import SignIn from "../SignIn";
+import Direct from "../Direct";
+import Level from "../Level";
+
 function AppRoutes() {
   return (
     <>
@@ -41,7 +44,7 @@ function AppRoutes() {
           <Route path="/depositNFT" element={<DepositNFT />} />
 
           <Route path="/account" element={<Account />} />
-          <Route path="/account/level" element={<Level />} />
+          {/* <Route path="/account/level" element={<Level />} /> */}
           <Route path="/Airdrop" element={<Airdrop />} />
           <Route path="/NFTcreation" element={<CreateNFT />} />
           {/* <Route path="/NFTBuySell" element={<NFTBuySell />} /> */}
@@ -53,6 +56,8 @@ function AppRoutes() {
           <Route path="/buyNft" element={<Trade />} />
           <Route path="/signup" element={<Registration />} />
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/direct" element={<Direct />} />
+          <Route path="/level" element={<Level />} />
         </Routes>
       </Router>
     </>

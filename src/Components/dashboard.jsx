@@ -11,7 +11,7 @@ import { FaCrown } from "react-icons/fa6";
 import { TfiCup } from "react-icons/tfi";
 import { PiFlowerTulipDuotone } from "react-icons/pi";
 import { useAccount } from "wagmi";
-import { getUserInfo } from "../Helper/API_Functions";
+import { getIdToAddress, getUserInfo } from "../Helper/API_Functions";
 import { useBalance } from "wagmi";
 import { fetchBalance } from "@wagmi/core";
 import {
@@ -33,8 +33,8 @@ export default function Dashboard() {
   const [availableBal, setAvailableBal] = useState(0);
   const data = new URLSearchParams(window.location.search);
   const refLink = data.get("ref");
-
-  const referralLink = `${base_url}/?ref=${address}`;
+  const uniqueId = allUsers?.userInfo?.[0]?.uniqueRandomId || "defaultId";
+  const referralLink = `${base_url}/?ref=${uniqueId}`;
   const config = createConfig({
     chains: [opBNBTestnet],
     transports: {
@@ -58,21 +58,96 @@ export default function Dashboard() {
   const userBalance = fetchUserTokenBalance(address);
 
   const packages = [
-    { name: "Beginner", color: "rgb(212, 55, 55)", subscription: "15" },
-    { name: "Seeker", color: "rgb(212, 139, 55)", subscription: "30" },
-    { name: "Innovator", color: "rgb(209, 212, 55)", subscription: "55" },
-    { name: "Tycoon", color: "rgb(55, 212, 133)", subscription: "90" },
-    { name: "Elite", color: "rgb(55, 212, 204)", subscription: "135" },
-    { name: "Visionary", color: "rgb(55, 149, 212)", subscription: "190" },
-    { name: "Commander", color: "rgb(162, 55, 212)", subscription: "255" },
-    { name: "Legend", color: "rgb(212, 55, 102)", subscription: "330" },
-    { name: "Titan", color: "rgb(162, 55, 212)", subscription: "415" },
-    { name: "Pioneer", color: "rgb(147, 99, 43)", subscription: "510" },
-    { name: "Architect", color: "rgb(113, 114, 19)", subscription: "615" },
-    { name: "Emperor", color: "rgb(230, 10, 76)", subscription: "725" },
-    { name: "Master", color: "rgb(212, 55, 102)", subscription: "845" },
-    { name: "King", color: "rgb(160, 212, 54)", subscription: "980" },
-    { name: "Grandmaster", color: "rgb(147, 99, 43)", subscription: "1125" },
+    {
+      name: "Beginner",
+      color: "rgb(212, 55, 55)",
+      subscription: "15",
+      range: "$50-$100",
+    },
+    {
+      name: "Seeker",
+      color: "rgb(212, 139, 55)",
+      subscription: "30",
+      range: "$101-$200 ",
+    },
+    {
+      name: "Innovator",
+      color: "rgb(209, 212, 55)",
+      subscription: "55",
+      range: "$201-$350 ",
+    },
+    {
+      name: "Tycoon",
+      color: "rgb(55, 212, 133)",
+      subscription: "90",
+      range: "$351-$550",
+    },
+    {
+      name: "Elite",
+      color: "rgb(55, 212, 204)",
+      subscription: "135",
+      range: "$551-$800 ",
+    },
+    {
+      name: "Visionary",
+      color: "rgb(55, 149, 212)",
+      subscription: "190",
+      range: "$801-$1100",
+    },
+    {
+      name: "Commander",
+      color: "rgb(162, 55, 212)",
+      subscription: "255",
+      range: "$1101-$1450 ",
+    },
+    {
+      name: "Legend",
+      color: "rgb(212, 55, 102)",
+      subscription: "330",
+      range: "$1451-$1850",
+    },
+    {
+      name: "Titan",
+      color: "rgb(162, 55, 212)",
+      subscription: "415",
+      range: "$1851-$2300 ",
+    },
+    {
+      name: "Pioneer",
+      color: "rgb(147, 99, 43)",
+      subscription: "510",
+      range: "$2301-$2800 ",
+    },
+    {
+      name: "Architect",
+      color: "rgb(113, 114, 19)",
+      subscription: "615",
+      range: "$2801-$3350 ",
+    },
+    {
+      name: "Emperor",
+      color: "rgb(230, 10, 76)",
+      subscription: "725",
+      range: "$3351-$3900 ",
+    },
+    {
+      name: "Master",
+      color: "rgb(212, 55, 102)",
+      subscription: "845",
+      range: "$3901-$4550",
+    },
+    {
+      name: "King",
+      color: "rgb(160, 212, 54)",
+      subscription: "980",
+      range: "$4551-$5250 ",
+    },
+    {
+      name: "Grandmaster",
+      color: "rgb(147, 99, 43)",
+      subscription: "1125",
+      range: "$5251-$6750 ",
+    },
   ];
 
   const UserInfo = async () => {
@@ -138,24 +213,44 @@ export default function Dashboard() {
     }
   };
 
+  const getIdFromUser = async () => {
+    try {
+      console.log("adhakhd");
+      const uniqueId = allUsers?.userInfo[0]?.uniqueRandomId;
+      console.log("allUsers", uniqueId);
+      console.log(uniqueId, "::::");
+      const res = await getIdToAddress(uniqueId);
+      console.log("uniqueId", uniqueId);
+      console.log(res, "getIdToAddress");
+    } catch (error) {
+      console.error("Error in getIdFromUser:", error);
+    }
+  };
+
   useEffect(() => {
     if (address) {
       getUserInFoFromContract();
       UserInfo();
       fetchUserTokenBalance();
       AvailableBalance();
+      getIdFromUser();
     }
   }, [address, isFetch]);
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(referralLink).then(() => {
-      console.log("Copied to clipboard:", referralLink);
-    });
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(referralLink);
+      toast.success("Referral link copied!");
+    } catch (error) {
+      console.error("Copy failed:", error);
+      toast.error("Failed to copy the link.");
+    }
   };
+
   return (
     <>
-      <div className="p-4">
+      <div className="p-4 ">
         <Navbar></Navbar>
-        <main class="content-dashboard">
+        <main class="content-dashboard ">
           <HeaderDashboard title="Dashboard"></HeaderDashboard>
           <div>
             <div class="">
@@ -182,7 +277,14 @@ export default function Dashboard() {
                     {referralLink}
                   </p>
                   <h6>Referred By</h6>
-                  <p>{dashboardData?.[2] ?? "No data available"}</p>
+                  <p>
+                    {typeof dashboardData?.[2] === "string"
+                      ? ` ${dashboardData?.[2].slice(
+                          0,
+                          4
+                        )}...${dashboardData?.[2].slice(-6)}`
+                      : "No data available"}
+                  </p>
                 </div>
               </div>
               <section class="dashboard">
@@ -192,6 +294,10 @@ export default function Dashboard() {
                     <div className="package-card" key={index}>
                       <span>${pkg.subscription}</span>
                       <p style={{ color: pkg.color }}>{pkg.name}</p>
+                      <div className="range-container">
+                        <span style={{ fontSize: "15px" }}>Range</span>
+                        <span style={{ color: "#830499" }}>{pkg.range}</span>
+                      </div>
 
                       {index < Number(dashboardData[6]) ? (
                         <button

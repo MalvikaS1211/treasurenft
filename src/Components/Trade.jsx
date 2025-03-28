@@ -20,7 +20,6 @@ import axios from "axios";
 import toast from "react-hot-toast";
 export default function Trade() {
   const { address } = useAccount();
-  // const address = "0x32d76106003aE43ece50504d610C073Ca52074f1";
   const [allTrade, setAllTrade] = useState([]);
   const [isfetch, setIsFetch] = useState(false);
   const [isLoading, setIsLoading] = useState(false);

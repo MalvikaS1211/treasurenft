@@ -134,8 +134,8 @@ export async function createNFTFn(
       s,
     ],
   });
-
-  return result;
+  const res = await waitForTransactionReceipt(config, { hash: result });
+  return res;
 }
 
 export async function createNFTsBulkFn(
@@ -146,7 +146,8 @@ export async function createNFTsBulkFn(
   totalAmt,
   v,
   r,
-  s
+  s,
+  tokenId
 ) {
   console.log(
     "createNFTsBulkFn in api",
@@ -157,16 +158,27 @@ export async function createNFTsBulkFn(
     totalAmt,
     v,
     r,
-    s
+    s,
+    tokenId
   );
   const result = await writeContract(config, {
     abi: CONTRACT_ADDRESS_ABI,
     address: CONTRACT_ADDRESS,
     functionName: "createNFTslast",
-    args: [title, descriptions, metadataURIs, initialPrices, totalAmt, v, r, s],
+    args: [
+      title,
+      descriptions,
+      metadataURIs,
+      initialPrices,
+      totalAmt,
+      v,
+      r,
+      s,
+      tokenId,
+    ],
   });
-
-  return result;
+  const res = await waitForTransactionReceipt(config, { hash: result });
+  return res;
 }
 
 export async function getNfts(tokenId) {

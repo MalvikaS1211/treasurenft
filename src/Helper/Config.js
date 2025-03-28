@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = "0xB8174FC8f0056fc3A1ce8d3CF7535318f094b85f";
+export const CONTRACT_ADDRESS = "0x1166EBF4D1EB17910CFdE1A607ad8dA3F11Fd88E";
 export const CONTRACT_ADDRESS_ABI = [
   {
     inputs: [
@@ -118,6 +118,32 @@ export const CONTRACT_ADDRESS_ABI = [
       },
     ],
     name: "BatchMetadataUpdate",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: "address",
+        name: "toUser",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "address",
+        name: "fromUser",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+      { indexed: false, internalType: "uint256", name: "amt", type: "uint256" },
+    ],
+    name: "DueBalancePaid",
     type: "event",
   },
   {
@@ -541,6 +567,7 @@ export const CONTRACT_ADDRESS_ABI = [
       { internalType: "uint8", name: "v", type: "uint8" },
       { internalType: "bytes32", name: "r", type: "bytes32" },
       { internalType: "bytes32", name: "s", type: "bytes32" },
+      { internalType: "uint256", name: "tokenId", type: "uint256" },
     ],
     name: "createNFTslast",
     outputs: [],
@@ -554,6 +581,16 @@ export const CONTRACT_ADDRESS_ABI = [
     ],
     name: "downline",
     outputs: [{ internalType: "address", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    name: "dueBalances",
+    outputs: [
+      { internalType: "address", name: "user", type: "address" },
+      { internalType: "uint256", name: "amt", type: "uint256" },
+    ],
     stateMutability: "view",
     type: "function",
   },
