@@ -163,6 +163,8 @@ export default function BulkNFT() {
   const nftCreate = async () => {
     setIsLoading(true);
     try {
+      console.log("1");
+      toast.success("Please wait transaction is in process");
       if (isLoading) {
         return toast.error("Your previous transaction is pending");
       }
@@ -252,9 +254,10 @@ export default function BulkNFT() {
   const HandleAvailablePkg = async () => {
     try {
       const resPkg = await getMaturedNFTs(address);
-      setAvailablePkg(resPkg.userMaturedNfts);
+      setAvailablePkg(resPkg?.userMaturedNfts);
       console.log("Available packages:", resPkg);
     } catch (error) {
+      setAvailablePkg([]);
       console.log(error);
     }
   };
@@ -294,26 +297,28 @@ export default function BulkNFT() {
               Available Packages
             </h4>
             <div className="d-flex flex-wrap justify-content-start gap-3">
-              {availablePkg?.map((pkg, index) => (
-                <div className="package-container" key={index}>
-                  <button
-                    type="button"
-                    className="sc-button style style-1"
-                    style={{
-                      padding: "5px 26px",
-                      backgroundColor: selectedIndex === index ? "#5142fc" : "",
-                      color: selectedIndex === index ? "white" : "",
-                    }}
-                    onClick={() => handleClick(index, pkg)}
-                  >
-                    $
-                    {(
-                      (Number(pkg.nftCreatedDetails.price) * 5 * 1.1) /
-                      1e18
-                    ).toFixed(2)}
-                  </button>
-                </div>
-              ))}
+              {availablePkg &&
+                availablePkg?.map((pkg, index) => (
+                  <div className="package-container" key={index}>
+                    <button
+                      type="button"
+                      className="sc-button style style-1"
+                      style={{
+                        padding: "5px 26px",
+                        backgroundColor:
+                          selectedIndex === index ? "#5142fc" : "",
+                        color: selectedIndex === index ? "white" : "",
+                      }}
+                      onClick={() => handleClick(index, pkg)}
+                    >
+                      $
+                      {(
+                        (Number(pkg.nftCreatedDetails.price) * 5 * 1.1) /
+                        1e18
+                      ).toFixed(2)}
+                    </button>
+                  </div>
+                ))}
             </div>
           </div>
         </div>
@@ -414,7 +419,12 @@ export default function BulkNFT() {
         </div>
 
         <div className="create-nft-container">
-          <button className="createbtn" type="button" onClick={nftCreate}>
+          <button
+            className="createbtn"
+            type="button"
+            onClick={nftCreate}
+            disabled={isLoading}
+          >
             {isLoading ? (
               <span
                 className="spinner-border spinner-border-sm"

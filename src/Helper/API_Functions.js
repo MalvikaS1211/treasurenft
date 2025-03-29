@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const URLApi = "http://64.227.155.146:8081/api";
+export const URLApi = "https://magicverse.org/api";
 // export const URLApi = "http://192.168.1.10:8081/api";
 // export const URLApi = "http://192.168.1.161:8081/api";
 
