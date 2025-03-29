@@ -1,14 +1,5 @@
-export const CONTRACT_ADDRESS = "0x1166EBF4D1EB17910CFdE1A607ad8dA3F11Fd88E";
+export const CONTRACT_ADDRESS = "0x34d415A3b06eE5a2311e5E71d3fDD5aa07FAeb53";
 export const CONTRACT_ADDRESS_ABI = [
-  {
-    inputs: [
-      { internalType: "address", name: "usdtAddress", type: "address" },
-      { internalType: "address", name: "_owner", type: "address" },
-      { internalType: "address", name: "_operator", type: "address" },
-    ],
-    stateMutability: "nonpayable",
-    type: "constructor",
-  },
   {
     inputs: [
       { internalType: "address", name: "sender", type: "address" },
@@ -349,32 +340,6 @@ export const CONTRACT_ADDRESS_ABI = [
   {
     anonymous: false,
     inputs: [
-      { indexed: true, internalType: "address", name: "user", type: "address" },
-      {
-        indexed: false,
-        internalType: "uint256",
-        name: "package",
-        type: "uint256",
-      },
-      {
-        indexed: false,
-        internalType: "uint256",
-        name: "amount",
-        type: "uint256",
-      },
-      {
-        indexed: false,
-        internalType: "uint256",
-        name: "timestamp",
-        type: "uint256",
-      },
-    ],
-    name: "RenewPackage",
-    type: "event",
-  },
-  {
-    anonymous: false,
-    inputs: [
       {
         indexed: false,
         internalType: "address",
@@ -498,13 +463,6 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "availaibleBalance",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
     inputs: [{ internalType: "address", name: "owner", type: "address" }],
     name: "balanceOf",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
@@ -612,6 +570,17 @@ export const CONTRACT_ADDRESS_ABI = [
     name: "getHash",
     outputs: [{ internalType: "bytes32", name: "", type: "bytes32" }],
     stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "address", name: "usdtAddress", type: "address" },
+      { internalType: "address", name: "_owner", type: "address" },
+      { internalType: "address", name: "_operator", type: "address" },
+    ],
+    name: "initilize",
+    outputs: [],
+    stateMutability: "nonpayable",
     type: "function",
   },
   {
@@ -830,7 +799,7 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
 ];
-export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05";
+export const USDT_TOKEN = "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3";
 export const tokenAbi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {

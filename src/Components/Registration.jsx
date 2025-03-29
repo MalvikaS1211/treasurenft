@@ -13,6 +13,7 @@ import {
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import { base_url } from "../Helper/Config";
+import { getIdToAddress } from "../Helper/API_Functions";
 
 export default function Registration() {
   const navigate = useNavigate();
@@ -45,18 +46,21 @@ export default function Registration() {
     }
   }, [userExist]);
 
-  const getIdFromUser = async () => {
-    const res = await getIdToAddress(address);
-    console.log(res, "getIdToAddress");
-  };
-
   useEffect(() => {
-    const data = new URLSearchParams(window.location.search);
-    const refLink = data.get("ref");
-    console.log(refLink, "refLink");
-    const referralLink = `${base_url}/?ref=${refLink}`;
-    console.log(referralLink, "referralLink");
-    setRef(refLink);
+    const getRef = async () => {
+      const data = new URLSearchParams(window.location.search);
+      const refLink = data.get("ref");
+      console.log(refLink, "refLink");
+      if (refLink) {
+        const res = await getIdToAddress(refLink);
+        console.log(res, "refferal link to address");
+        if (res.success) {
+          console.log(res, ":::");
+          setRef(res.address);
+        }
+      }
+    };
+    getRef();
   }, [window.location.search]);
 
   const tokenApp = async (amt) => {

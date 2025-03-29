@@ -69,7 +69,7 @@ import "./MalvikaCss/responsive.css";
 
 import "./MalvikaCss/shortcodes.css";
 import "./MalvikaCss/style.css";
-
+import "./css/Blog.css";
 function App() {
   return (
     <>
@@ -79,30 +79,33 @@ function App() {
         toastOptions={{
           success: {
             style: {
-              fontWeight: "bold",
+              fontWeight: "500",
               backgroundColor: "#f0f8ff",
               color: "#333",
               borderRadius: "8px",
               padding: "10px",
+              fontSize: "14px",
             },
           },
           error: {
             style: {
-              fontWeight: "bold",
+              fontWeight: "500",
               backgroundColor: "#ffe5e5",
               color: "#900",
               borderRadius: "8px",
               padding: "10px",
+              fontSize: "14px",
             },
           },
           loading: {
             style: {
-              fontWeight: "bold",
+              fontWeight: "500",
               backgroundColor: "#fffbe5",
               color: "#555",
               border: "1px solid #ffd700",
               borderRadius: "8px",
               padding: "10px",
+              fontSize: "14px",
             },
           },
         }}

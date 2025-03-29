@@ -24,7 +24,7 @@ export default function BulkNFT() {
   const [selectedFile, setSelectedFile] = useState("");
   const [preview, setPreview] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [selectedAmount, setAmount] = useState();
+  const [selectedAmount, setAmount] = useState(0);
   const { address } = useAccount();
   const [tokenId, setTokenId] = useState();
   const [isFetch, setIsFetch] = useState(false);
@@ -36,6 +36,12 @@ export default function BulkNFT() {
   const handleFileChange = (event, index) => {
     const file = event.target.files[0];
     if (!file) return;
+
+    const allowedTypes = ["image/jpeg", "image/png"];
+    if (!allowedTypes.includes(file.type)) {
+      toast.error("Only JPG and PNG files are allowed.");
+      return;
+    }
 
     const newNfts = [...nfts];
     newNfts[index] = {
@@ -266,7 +272,16 @@ export default function BulkNFT() {
     } else toast.error("Please connect your wallet");
   }, [address, isFetch]);
 
-  // const availablePkg = ["250", "230"];
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  const handleClick = (index, pkg) => {
+    setSelectedIndex(index);
+    const amount = (Number(pkg.nftCreatedDetails.price) * 5) / 1e18;
+
+    setAmount(amount);
+    setTokenId(pkg.nftCreatedDetails.tokenId);
+  };
+
   return (
     <>
       <>
@@ -284,13 +299,12 @@ export default function BulkNFT() {
                   <button
                     type="button"
                     className="sc-button style style-1"
-                    style={{ padding: "5px 26px" }}
-                    onClick={() => {
-                      setAmount(
-                        (Number(pkg.nftCreatedDetails.price) * 5) / 1e18
-                      );
-                      setTokenId(pkg.nftCreatedDetails.tokenId);
+                    style={{
+                      padding: "5px 26px",
+                      backgroundColor: selectedIndex === index ? "#5142fc" : "",
+                      color: selectedIndex === index ? "white" : "",
                     }}
+                    onClick={() => handleClick(index, pkg)}
                   >
                     $
                     {(
@@ -366,15 +380,13 @@ export default function BulkNFT() {
                   <h4 className="title-create-item">{index + 1} NFT</h4>
                   <label className="uploadFile">
                     <span className="filename">
-                      {nft.file
-                        ? nft.file.name
-                        : "PNG, JPG, GIF, WEBP, or MP4. Max 200MB."}
+                      {nft.file ? nft.file.name : "PNG, JPG"}
                     </span>
                     <input
                       type="file"
                       className="inputfile form-control"
                       name="images"
-                      accept="image/*"
+                      accept="image/png, image/jpg"
                       onChange={(e) => handleFileChange(e, index)}
                     />
                   </label>

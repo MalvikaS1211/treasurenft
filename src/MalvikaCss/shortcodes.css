@@ -1186,7 +1186,7 @@
 
 .sc-card-product.explode .price .price-details {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   margin-top: 3px;
 }
 

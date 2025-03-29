@@ -34,7 +34,7 @@ export default function Dashboard() {
   const data = new URLSearchParams(window.location.search);
   const refLink = data.get("ref");
   const uniqueId = allUsers?.userInfo?.[0]?.uniqueRandomId || "defaultId";
-  const referralLink = `${base_url}/?ref=${uniqueId}`;
+  const referralLink = `${base_url}/signup?ref=${uniqueId}`;
   const config = createConfig({
     chains: [opBNBTestnet],
     transports: {
@@ -54,7 +54,6 @@ export default function Dashboard() {
       console.error("Error fetching token balance:", error);
     }
   }
-
   const userBalance = fetchUserTokenBalance(address);
 
   const packages = [
@@ -202,22 +201,23 @@ export default function Dashboard() {
     }
   };
 
-  const AvailableBalance = async () => {
-    try {
-      console.log("Fetching balance..."); // Debugging log
-      const resBal = await getAvailaibleBalance(address);
-      console.log("resBal", resBal); // Check if it logs the balance
-      setAvailableBal(resBal);
-    } catch (error) {
-      console.log("Error fetching balance:", error);
-    }
-  };
+  // const AvailableBalance = async () => {
+  //   try {
+  //     // console.log("Fetching balance..."); // Debugging log
+  //     const resBal = await getAvailaibleBalance(address);
+  //     // console.log("resBal", resBal); // Check if it logs the balance
+  //     setAvailableBal(resBal);
+  //   } catch (error) {
+  //     console.log("Error fetching balance:", error);
+  //   }
+  // };
 
   const getIdFromUser = async () => {
     try {
       console.log("adhakhd");
       const uniqueId = allUsers?.userInfo[0]?.uniqueRandomId;
-      console.log("allUsers", uniqueId);
+      console.log("123456", allUsers);
+      console.log("uniqueId", uniqueId);
       console.log(uniqueId, "::::");
       const res = await getIdToAddress(uniqueId);
       console.log("uniqueId", uniqueId);
@@ -232,7 +232,7 @@ export default function Dashboard() {
       getUserInFoFromContract();
       UserInfo();
       fetchUserTokenBalance();
-      AvailableBalance();
+
       getIdFromUser();
     }
   }, [address, isFetch]);
@@ -250,7 +250,15 @@ export default function Dashboard() {
     <>
       <div className="p-4 ">
         <Navbar></Navbar>
-        <main class="content-dashboard ">
+        <main
+          class="content-dashboard "
+          style={{
+            marginLeft:
+              window.innerWidth > 768 && window.innerWidth < 1200
+                ? "0px"
+                : "290px",
+          }}
+        >
           <HeaderDashboard title="Dashboard"></HeaderDashboard>
           <div>
             <div class="">
@@ -266,8 +274,12 @@ export default function Dashboard() {
                 <div class="user-card wallet-card">
                   <h6>My Wallet Fund</h6>
                   <p className="">{balanceData}</p>
-                  <h6>My Available Balance</h6>
-                  <p className=" p-2">{availableBal}</p>
+                  <h6>My Trading Profit</h6>
+                  <p className=" p-2">
+                    {(allUsers.tradingProfit > 0 &&
+                      allUsers?.tradingProfit[0]?.profitOrLoss) ||
+                      0}
+                  </p>
                   {/* <h6>My Wallet Address</h6>
                   <p className="text-white p-2">{address}</p> */}
                 </div>

@@ -353,9 +353,8 @@ export default function DashboardNew() {
                   <a>Add Your NFTs</a>
                 </h3>
                 <p class="content-custom">
-                  Upload your work (image, video, audio, or 3D art), add a title
-                  and description, and customize your NFTs with properties,
-                  stats
+                  Upload your work (image or 3D art), add a title and
+                  description, and customize your NFTs with properties, stats
                 </p>
               </div>
             </div>
@@ -673,7 +672,7 @@ export default function DashboardNew() {
                       <h5 class="fs-16">
                         <a>Crispin Berry</a>
                       </h5>
-                      <span class="price">214.2 ETH</span>
+                      <span class="price">214.2 $</span>
                     </div>
                   </div>
                 </div>
@@ -691,7 +690,7 @@ export default function DashboardNew() {
                       <h5 class="fs-16">
                         <a>Samson Frost</a>
                       </h5>
-                      <span class="price">205.43 ETH</span>
+                      <span class="price">205.43 $</span>
                     </div>
                   </div>
                 </div>
@@ -709,7 +708,7 @@ export default function DashboardNew() {
                       <h5 class="fs-16">
                         <a>Tommy Alrez</a>
                       </h5>
-                      <span class="price">170.3 ETH</span>
+                      <span class="price">170.3 $</span>
                     </div>
                   </div>
                 </div>
@@ -727,7 +726,7 @@ export default function DashboardNew() {
                       <h5 class="fs-16">
                         <a>Windsor Lane</a>
                       </h5>
-                      <span class="price">120.7 ETH</span>
+                      <span class="price">120.7 $</span>
                     </div>
                   </div>
                 </div>
@@ -745,7 +744,7 @@ export default function DashboardNew() {
                       <h5 class="fs-16">
                         <a>Andy Hurlbutt</a>
                       </h5>
-                      <span class="price">82.79 ETH</span>
+                      <span class="price">82.79 $</span>
                     </div>
                   </div>
                 </div>
@@ -766,7 +765,7 @@ export default function DashboardNew() {
                       <h5 class="fs-16">
                         <a>Blake Banks</a>
                       </h5>
-                      <span class="price">68.2 ETH</span>
+                      <span class="price">68.2 $</span>
                     </div>
                   </div>
                 </div>
@@ -784,7 +783,7 @@ export default function DashboardNew() {
                       <h5 class="fs-16">
                         <a>Monica Lucas</a>
                       </h5>
-                      <span class="price">52.8 ETH</span>
+                      <span class="price">52.8 $</span>
                     </div>
                   </div>
                 </div>
@@ -802,7 +801,7 @@ export default function DashboardNew() {
                       <h5 class="fs-16">
                         <a>Matt Ramos</a>
                       </h5>
-                      <span class="price">38.4 ETH</span>
+                      <span class="price">38.4 $</span>
                     </div>
                   </div>
                 </div>
@@ -820,7 +819,7 @@ export default function DashboardNew() {
                       <h5 class="fs-16">
                         <a>Harper Wilcher</a>
                       </h5>
-                      <span class="price">29.2 ETH</span>
+                      <span class="price">29.2 $</span>
                     </div>
                   </div>
                 </div>
@@ -838,7 +837,7 @@ export default function DashboardNew() {
                       <h5 class="fs-16">
                         <a>Crispin Berry</a>
                       </h5>
-                      <span class="price">214.2 ETH</span>
+                      <span class="price">214.2 $</span>
                     </div>
                   </div>
                 </div>
@@ -902,7 +901,7 @@ export default function DashboardNew() {
                   <div class="price">
                     <span>Current Bid</span>
                     <div class="price-details">
-                      <h5>4.89 ETH</h5>
+                      <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
                   </div>
@@ -953,7 +952,7 @@ export default function DashboardNew() {
                   <div class="price">
                     <span>Current Bid</span>
                     <div class="price-details">
-                      <h5>4.89 ETH</h5>
+                      <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
                   </div>
@@ -1004,7 +1003,7 @@ export default function DashboardNew() {
                   <div class="price">
                     <span>Current Bid</span>
                     <div class="price-details">
-                      <h5>4.89 ETH</h5>
+                      <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
                   </div>
@@ -1055,7 +1054,7 @@ export default function DashboardNew() {
                   <div class="price">
                     <span>Current Bid</span>
                     <div class="price-details">
-                      <h5>4.89 ETH</h5>
+                      <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
                   </div>
@@ -1106,7 +1105,7 @@ export default function DashboardNew() {
                   <div class="price">
                     <span>Current Bid</span>
                     <div class="price-details">
-                      <h5>4.89 ETH</h5>
+                      <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
                   </div>
@@ -1157,7 +1156,7 @@ export default function DashboardNew() {
                   <div class="price">
                     <span>Current Bid</span>
                     <div class="price-details">
-                      <h5>4.89 ETH</h5>
+                      <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
                   </div>
@@ -1208,7 +1207,7 @@ export default function DashboardNew() {
                   <div class="price">
                     <span>Current Bid</span>
                     <div class="price-details">
-                      <h5>4.89 ETH</h5>
+                      <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
                   </div>
@@ -1259,7 +1258,7 @@ export default function DashboardNew() {
                   <div class="price">
                     <span>Current Bid</span>
                     <div class="price-details">
-                      <h5>4.89 ETH</h5>
+                      <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
                   </div>

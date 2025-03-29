@@ -6,8 +6,10 @@ import HeaderDashboard from "./HeaderDashboard";
 import { useAccount } from "wagmi";
 import { getFetchTree } from "../Helper/API_Functions";
 import toast from "react-hot-toast";
+import ReferralModal from "./ReffrealModal";
 export default function Community() {
   const { address } = useAccount();
+  // const address = "0xf5da7d4bf240de446ca2f772e1f8cf6975b22f5e";
   const [tree, setTree] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [filteredValue, setFilteredValue] = useState(null);
@@ -22,10 +24,6 @@ export default function Community() {
     }
   };
 
-  // const owner = "0x9ccf0cd809843c239a6b6332985328a8b65dac7f";
-  const [owner, setOwner] = useState(
-    "0x9ccf0cd809843c239a6b6332985328a8b65dac7f"
-  );
   const handleTree = async (address) => {
     const res = await getFetchTree(address);
     if (res.success) {
@@ -41,7 +39,7 @@ export default function Community() {
       handleTree(address);
     } else toast.error("Please connect your wallet");
   }, [address]);
-
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
       <div className="p-4 dashboardbg">
@@ -90,61 +88,6 @@ export default function Community() {
                 </button>
               </div>
             </div>
-            {/* <div className="tree">
-              <img
-                src={Favicon}
-                alt="Tree Logo"
-                className="community-branch-icon"
-              />
-              <div className="logo" style={{ color: "black" }}>
-                {owner}
-              </div>
-              <div className="branch-connector">
-                <div className="line vertical"></div>
-                <div className="line horizontal"></div>
-                <div className="line diagonal-left"></div>
-                <div className="line diagonal-right"></div>
-              </div>
-              <div className="branches">
-                {[...tree].map((item, index) => (
-                  <div className="branch-item" key={index}>
-                    <img
-                      src={Favicon}
-                      alt="Branch Logo"
-                      className="community-branch-icon"
-                    />
-                    <p>{item.uniqueRandomId}</p>
-                    <button style={{ cursor: "pointer" }}>Vacant</button>
-                    <div className="branch-connector2">
-                      <div className="line vertical"></div>
-                      <div className="line horizontal"></div>
-                      <div className="line diagonal-left">
-                        <div className="status-container">
-                          <img
-                            src={Favicon}
-                            alt="Status Logo"
-                            className="community-branch-icon"
-                          />
-                          <p>{tree[index]?.uniqueRandomId}</p>
-                          <button style={{ cursor: "pointer" }}>Vacant</button>
-                        </div>
-                      </div>
-                      <div className="line diagonal-right">
-                        <div className="status-container2">
-                          <img
-                            src={Favicon}
-                            alt="Status Logo"
-                            className="community-branch-icon"
-                          />
-                          <p>0</p>
-                          <button style={{ cursor: "pointer" }}>Vacant</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div> */}
 
             <div className="tree">
               <img
@@ -152,9 +95,7 @@ export default function Community() {
                 className="community-branch-icon"
                 src={Favicon}
               />
-              <div className="logo Level-owner">
-                0x9ccf0cd809843c239a6b6332985328a8b65dac7f
-              </div>
+              <div className="logo Level-owner">{address}</div>
               <div className="branch-connector">
                 <div className="line vertical"></div>
                 <div className="line horizontal"></div>
@@ -170,7 +111,10 @@ export default function Community() {
                     src={Favicon}
                   />
                   <p>{(tree && tree[0]?.uniqueRandomId) || "N/A"}</p>
-                  <button style={{ cursor: "pointer" }}>Vacant</button>
+                  <button type="button" style={{ cursor: "pointer" }}>
+                    {tree && tree[0]?.uniqueRandomId ? "User" : "Vacant"}
+                  </button>
+
                   <div className="branch-connector2">
                     <div className="line vertical"></div>
                     <div className="line horizontal"></div>
@@ -182,7 +126,9 @@ export default function Community() {
                           src={Favicon}
                         />
                         <p>{(tree && tree[2]?.uniqueRandomId) || "N/A"}</p>
-                        <button style={{ cursor: "pointer" }}>Vacant</button>
+                        <button style={{ cursor: "pointer" }}>
+                          {tree && tree[2]?.uniqueRandomId ? "User" : "Vacant"}
+                        </button>
                       </div>
                     </div>
                     <div className="line diagonal-right">
@@ -193,7 +139,9 @@ export default function Community() {
                           src={Favicon}
                         />
                         <p>{(tree && tree[3]?.uniqueRandomId) || "N/A"}</p>
-                        <button style={{ cursor: "pointer" }}>Vacant</button>
+                        <button style={{ cursor: "pointer" }}>
+                          {tree && tree[3]?.uniqueRandomId ? "User" : "Vacant"}
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -205,7 +153,10 @@ export default function Community() {
                     src={Favicon}
                   />
                   <p>{(tree && tree[1]?.uniqueRandomId) || "N/A"}</p>
-                  <button style={{ cursor: "pointer" }}>Vacant</button>
+                  <button style={{ cursor: "pointer" }}>
+                    {" "}
+                    {tree && tree[1]?.uniqueRandomId ? "User" : "Vacant"}
+                  </button>
                   <div className="branch-connector2">
                     <div className="line vertical"></div>
                     <div className="line horizontal"></div>
@@ -217,7 +168,10 @@ export default function Community() {
                           src={Favicon}
                         />
                         <p>{(tree && tree[4]?.uniqueRandomId) || "N/A"}</p>
-                        <button style={{ cursor: "pointer" }}>Vacant</button>
+                        <button style={{ cursor: "pointer" }}>
+                          {" "}
+                          {tree && tree[4]?.uniqueRandomId ? "User" : "Vacant"}
+                        </button>
                       </div>
                     </div>
                     <div className="line diagonal-right">
@@ -228,7 +182,10 @@ export default function Community() {
                           src={Favicon}
                         />
                         <p>{(tree && tree[5]?.uniqueRandomId) || "N/A"}</p>
-                        <button style={{ cursor: "pointer" }}>Vacant</button>
+                        <button style={{ cursor: "pointer" }}>
+                          {" "}
+                          {tree && tree[5]?.uniqueRandomId ? "User" : "Vacant"}
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -237,6 +194,10 @@ export default function Community() {
               {/* )} */}
             </div>
           </div>
+          {/* <ReferralModal
+            isOpen={modalOpen}
+            onClose={() => setModalOpen(true)}
+          /> */}
         </main>
       </div>
     </>

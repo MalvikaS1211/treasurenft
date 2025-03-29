@@ -28,6 +28,11 @@ export default function SingleNFT() {
     const file = e.target.files[0];
     setSelectedFile(file);
     if (file) {
+      const allowedTypes = ["image/png", "image/jpg", "image/jpeg"];
+      if (!allowedTypes.includes(file.type)) {
+        toast.error("Only PNG and JPG files are allowed!");
+        return;
+      }
       setSelectedFile(file);
       setPreview(URL.createObjectURL(file));
     }
@@ -243,14 +248,13 @@ export default function SingleNFT() {
             <h4 className="title-create-item">Upload File</h4>
             <label className="uploadFile">
               <span className="filename">
-                {selectedFile
-                  ? selectedFile.name
-                  : "PNG, JPG, GIF, WEBP, or MP4."}
+                {selectedFile ? selectedFile.name : "PNG, JPG"}
               </span>
               <input
                 type="file"
                 className="inputfile form-control"
                 name="file"
+                accept="image/png, image/jpg"
                 onChange={handleFileChange}
               />
             </label>

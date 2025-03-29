@@ -31,6 +31,7 @@ import Royality from "../Royality";
 import SignIn from "../SignIn";
 import Direct from "../Direct";
 import Level from "../Level";
+import BlogPage from "../Blog";
 
 function AppRoutes() {
   return (
@@ -58,6 +59,7 @@ function AppRoutes() {
           <Route path="/signin" element={<SignIn />} />
           <Route path="/direct" element={<Direct />} />
           <Route path="/level" element={<Level />} />
+          <Route path="/blog" element={<BlogPage />} />
         </Routes>
       </Router>
     </>

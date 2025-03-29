@@ -8,7 +8,7 @@ import {
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
 import { WagmiProvider } from "wagmi";
-import { opBNBTestnet, polygon } from "wagmi/chains";
+import { opBNB, opBNBTestnet, polygon } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 // import { store } from "./Redux/Store.js";
@@ -21,6 +21,7 @@ import { Toaster } from "react-hot-toast";
 import {
   injectedWallet,
   rainbowWallet,
+  safepalWallet,
   tokenPocketWallet,
   trustWallet,
   walletConnectWallet,
@@ -34,10 +35,10 @@ export const config = getDefaultConfig({
   wallets: [
     {
       groupName: "Popular Wallets",
-      wallets: [injectedWallet, metaMaskWallet, walletConnectWallet, okxWallet],
+      wallets: [metaMaskWallet, safepalWallet, trustWallet],
     },
   ],
-  chains: [opBNBTestnet],
+  chains: [opBNB],
   ssr: false,
 });
 

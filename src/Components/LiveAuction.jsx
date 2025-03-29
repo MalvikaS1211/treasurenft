@@ -77,12 +77,12 @@ export default function LiveAuction() {
                           <FaGripfire color="#5142fc" size={25} />
                           <span>05:17:44:21</span>
                         </div>
-                        <div className="button-place-bid">
+                        {/* <div className="button-place-bid">
                           <button className="sc-button style-place-bid style bag fl-button pri-3">
                             <FaShoppingBag color="black" />
                             <span>Place Bid</span>
                           </button>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="card-title">
                         <h5>
@@ -111,7 +111,7 @@ export default function LiveAuction() {
                         <div class="price">
                           <span>Current Bid</span>
                           <div class="price-details">
-                            <h5>4.89 ETH</h5>
+                            <h5>4.89 $</h5>
                             <span>= $12.246</span>
                           </div>
                         </div>
@@ -133,12 +133,12 @@ export default function LiveAuction() {
                           <FaGripfire color="#5142fc" size={25} />
                           <span>04:10:30:12</span>
                         </div>
-                        <div className="button-place-bid">
+                        {/* <div className="button-place-bid">
                           <button className="sc-button style-place-bid style bag fl-button pri-3">
                             <FaShoppingBag color="black" />
                             <span>Place Bid</span>
                           </button>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="card-title">
                         <h5>
@@ -167,7 +167,7 @@ export default function LiveAuction() {
                         <div class="price">
                           <span>Current Bid</span>
                           <div class="price-details">
-                            <h5>4.89 ETH</h5>
+                            <h5>4.89 $</h5>
                             <span>= $12.246</span>
                           </div>
                         </div>
@@ -189,12 +189,12 @@ export default function LiveAuction() {
                           <FaGripfire color="#5142fc" size={25} />
                           <span>03:15:20:05</span>
                         </div>
-                        <div className="button-place-bid">
+                        {/* <div className="button-place-bid">
                           <button className="sc-button style-place-bid style bag fl-button pri-3">
                             <FaShoppingBag color="black" />
                             <span>Place Bid</span>
                           </button>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="card-title">
                         <h5>
@@ -223,7 +223,7 @@ export default function LiveAuction() {
                         <div class="price">
                           <span>Current Bid</span>
                           <div class="price-details">
-                            <h5>4.89 ETH</h5>
+                            <h5>4.89 $</h5>
                             <span>= $12.246</span>
                           </div>
                         </div>
@@ -245,12 +245,12 @@ export default function LiveAuction() {
                           <FaGripfire color="#5142fc" size={25} />
                           <span>06:20:40:10</span>
                         </div>
-                        <div className="button-place-bid">
+                        {/* <div className="button-place-bid">
                           <button className="sc-button style-place-bid style bag fl-button pri-3">
                             <FaShoppingBag color="black" />
                             <span>Place Bid</span>
                           </button>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="card-title">
                         <h5>
@@ -279,7 +279,7 @@ export default function LiveAuction() {
                         <div class="price">
                           <span>Current Bid</span>
                           <div class="price-details">
-                            <h5>4.89 ETH</h5>
+                            <h5>4.89 $</h5>
                             <span>= $12.246</span>
                           </div>
                         </div>

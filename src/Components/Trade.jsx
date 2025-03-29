@@ -105,9 +105,12 @@ export default function Trade() {
       setIsLoading(true);
 
       const userBalance = await fetchUserTokenBalance(address);
-      if (userBalance < totalAmount) {
+      console.log(userBalance, totalAmount, "::::");
+      if (Number(userBalance) < Number(totalAmount) / 1e18) {
         setIsLoading(false);
-        return toast.error(`You need at least ${totalAmount} USDT to Buy`);
+        return toast.error(
+          `You need at least ${Number(totalAmount) / 1e18} USDT to Buy`
+        );
       }
       const res = await getReadyForBuyFn(
         address,

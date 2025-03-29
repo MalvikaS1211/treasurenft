@@ -1187,7 +1187,13 @@ main {
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
-  background-color: #1358ed;
+  /* background-color: #1358ed; */
+  background-image: linear-gradient(
+    to right,
+    rgb(33, 82, 175) 0%,
+    rgb(107, 167, 231) 51%,
+    rgb(33, 82, 175) 100%
+  );
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -1195,7 +1201,13 @@ main {
 }
 
 .button_container .btn:hover {
-  background-color: #1358ed;
+  /* background-color: #1358ed; */
+  background-image: linear-gradient(
+    to right,
+    rgb(33, 82, 175) 0%,
+    rgb(107, 167, 231) 51%,
+    rgb(33, 82, 175) 100%
+  );
 }
 
 @media (min-width: 640px) {
