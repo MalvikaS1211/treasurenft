@@ -254,7 +254,7 @@ export default function Dashboard() {
           class="content-dashboard "
           style={{
             marginLeft:
-              window.innerWidth > 768 && window.innerWidth < 1200
+              window.innerWidth > 300 && window.innerWidth < 1200
                 ? "0px"
                 : "290px",
           }}
