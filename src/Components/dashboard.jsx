@@ -252,7 +252,6 @@ export default function Dashboard() {
   return (
     <>
       <div className="p-4 ">
-        <Navbar></Navbar>
         <main
           class="content-dashboard "
           style={{
@@ -262,7 +261,9 @@ export default function Dashboard() {
                 : "290px",
           }}
         >
-          <HeaderDashboard title="Dashboard"></HeaderDashboard>
+          {" "}
+          <Navbar title="Dashboard"></Navbar>
+          {/* <HeaderDashboard title="Dashboard"></HeaderDashboard> */}
           <div>
             <div class="">
               <div class="user-grid">
@@ -288,14 +289,15 @@ export default function Dashboard() {
                           Number(dashboardData[10] || 0)) / 1e18
                     ).toFixed(4)} */}
                     {(
-                      allUsers?.userLastDealProfit +
-                      (allUsers !== undefined &&
-                        allUsers?.tradingProfit.length > 0 &&
-                        Number(allUsers?.tradingProfit[0]?.profitOrLoss)) +
-                      (Number(dashboardData[8] || 0) +
-                        Number(dashboardData[9] || 0) +
-                        Number(dashboardData[10] || 0)) /
-                        1e18
+                      allUsers?.userLastDealProfit ||
+                      0 +
+                        (allUsers !== undefined &&
+                          allUsers?.tradingProfit.length > 0 &&
+                          Number(allUsers?.tradingProfit[0]?.profitOrLoss)) +
+                        (Number(dashboardData[8] || 0) +
+                          Number(dashboardData[9] || 0) +
+                          Number(dashboardData[10] || 0)) /
+                          1e18
                     ).toFixed(4)}
 
                     {/* {(allUsers.tradingProfit > 0 &&

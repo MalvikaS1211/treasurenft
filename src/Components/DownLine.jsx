@@ -37,9 +37,9 @@ export default function DownLine() {
   return (
     <>
       <div className="p-4 dashboardbg">
-        <Navbar />
         <main className="content-dashboard">
-          <HeaderDashboard title="DownLine" />
+          <Navbar title="DownLine" />
+          {/* <HeaderDashboard title="DownLine" /> */}
           <div>
             <div style={{ height: "100vh" }}>
               <div

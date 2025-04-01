@@ -4,3 +4,7 @@ body {
   font-family: "Poppins" !important;
   color: black;
 }
+
+.showBorder {
+  border: 1px solid red;
+}

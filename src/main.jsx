@@ -45,8 +45,7 @@ export const config = getDefaultConfig({
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    {/* <Provider store={store}> */}
+  <>
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider>
@@ -55,6 +54,5 @@ createRoot(document.getElementById("root")).render(
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
-    {/* </Provider> */}
-  </StrictMode>
+  </>
 );

@@ -22,9 +22,9 @@ export default function Level() {
   return (
     <>
       <div className="p-4 dashboardbg">
-        <Navbar />
         <main className="content-dashboard">
-          <HeaderDashboard title="Level" />
+          <Navbar title="Level" />
+          {/* <HeaderDashboard title="Level" /> */}
           <div>
             <div style={{ height: "100vh" }}>
               <div className="rank-income">

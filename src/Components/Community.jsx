@@ -8,11 +8,15 @@ import { getFetchTree } from "../Helper/API_Functions";
 import toast from "react-hot-toast";
 import ReferralModal from "./ReffrealModal";
 export default function Community() {
-  const { address } = useAccount();
-  // const address = "0xf5da7d4bf240de446ca2f772e1f8cf6975b22f5e";
+  // const { address } = useAccount();
+  const address = "0x6Fd4fB35dda502bdB88Ef66c8777c345F1a5BF0e";
   const [tree, setTree] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [filteredValue, setFilteredValue] = useState(null);
+  const [showSidebar, setShowSidebar] = useState(false);
+  const [rootUser, setRootUser] = useState(null);
+  const [prevStack, setPrevNext] = useState([]);
+  const [nextStack, setNextStack] = useState([]);
 
   const handleSearch = () => {
     try {
@@ -26,31 +30,96 @@ export default function Community() {
     }
   };
 
-  const handleTree = async (address) => {
+  const handleTree = async (address, isNavigation = false) => {
     try {
       const res = await getFetchTree(address);
       if (res.success) {
-        console.log(res.obj, res, "tree");
+        console.log(res.rootUserUniqueId, "tree");
+        if (!isNavigation) {
+          setPrevNext((prev) => [...prev, address]);
+          setNextStack([]);
+        }
         const data = res?.obj?.sort((a, b) => {
           return a.timestamp - b.timestamp;
         });
         setTree(data?.slice(0, 6));
+        setRootUser(res.rootUserUniqueId);
       }
     } catch (error) {
       console.log(error);
     }
   };
+
+  console.log(prevStack, ":::prevStack");
+
+  const handlePrevNext = (action) => {
+    setPrevNext((prev) => {
+      if (!prev || prev.length === 0) return prev;
+
+      // Handle "Prev" action
+      if (action === "p" && prev.length > 1) {
+        const lastItem = prev[prev.length - 1]; // Get last item
+        setNextStack((next) => [...next, lastItem]); // Store it in nextStack
+        const prevValue = prev[prev.length - 2]; // Get previous value
+        handleTree(prevValue, true); // Fetch previous tree data
+        return prev.slice(0, -1); // Remove last entry from prevStack
+      }
+
+      // Handle "Next" action
+      if (action === "n" && nextStack.length > 0) {
+        const nextValue = nextStack[nextStack.length - 1]; // Get last removed item
+        handleTree(nextValue, true); // Fetch next tree data
+        setPrevNext((prev) => [...prev, nextValue]); // Restore it to prevStack
+        setNextStack((next) => next.slice(0, -1)); // Remove from nextStack
+      }
+
+      return prev; // Return previous stack if no action is taken
+    });
+  };
+
+  // const handlePrevNext = (action) => {
+  //   setPrevNext((prev) => {
+  //     if (!prev || prev.length === 0) return prev;
+
+  //     if (action === "p" && prev.length > 1) {
+  //       const lastItem = prev[prev.length - 1]; // Get last item
+  //       setNextStack((next) => [...next, lastItem]); // Store it in nextStack
+  //       const prevValue = prev[prev.length - 2]; // Get previous value
+  //       handleTree(prevValue, true); // Fetch user with navigation flag
+  //       return prev.slice(0, -1); // Remove last entry from prevNext
+  //     }
+
+  //     if (action === "n") {
+  //       setNextStack((next) => {
+  //         if (next.length > 0) {
+  //           const nextValue = next[next.length - 1]; // Get last removed item
+  //           handleTree(nextValue, true); // Fetch user with navigation flag
+  //           setPrevNext((prev) => [...prev, nextValue]); // Restore it to prevNext
+  //           return next.slice(0, -1); // Remove from nextStack
+  //         }
+  //         return next;
+  //       });
+  //     }
+
+  //     return prev;
+  //   });
+  // };
+
   useEffect(() => {
     if (address) {
       handleTree(address);
     } else toast.error("Please connect your wallet");
   }, [address]);
+
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
+  };
   return (
     <>
       <div className="p-4 dashboardbg">
-        <Navbar></Navbar>
         <main className="content-dashboard">
-          <HeaderDashboard title="Community" />
+          <Navbar title="Community" />
+          {/* <HeaderDashboard title="Community" /> */}
           <div
             className=""
             style={{
@@ -82,10 +151,20 @@ export default function Community() {
                 </button>
               </div>
               <div className="button_container" style={{ marginTop: "5%" }}>
-                <button disabled className="prev-next-btn">
+                <button
+                  className="prev-next-btn"
+                  onClick={() => {
+                    handlePrevNext("p");
+                  }}
+                >
                   PREV
                 </button>
-                <button disabled className="prev-next-btn">
+                <button
+                  className="prev-next-btn"
+                  onClick={() => {
+                    handlePrevNext("n");
+                  }}
+                >
                   NEXT
                 </button>
               </div>
@@ -97,7 +176,7 @@ export default function Community() {
                 className="community-branch-icon"
                 src={Favicon}
               />
-              <div className="logo Level-owner">{address}</div>
+              <div className="logo Level-owner">{rootUser && rootUser}</div>
               <div className="branch-connector">
                 <div className="line vertical"></div>
                 <div className="line horizontal"></div>
@@ -111,6 +190,9 @@ export default function Community() {
                     alt="Branch Logo"
                     className="community-branch-icon"
                     src={Favicon}
+                    onClick={() => {
+                      handleTree(tree && tree[0]?.uniqueRandomId.toString());
+                    }}
                   />
                   <p>{(tree && tree[0]?.uniqueRandomId) || "N/A"}</p>
                   <button type="button" style={{ cursor: "pointer" }}>
@@ -126,6 +208,11 @@ export default function Community() {
                           alt="Status Logo"
                           className="community-branch-icon"
                           src={Favicon}
+                          onClick={() => {
+                            handleTree(
+                              tree && tree[2]?.uniqueRandomId.toString()
+                            );
+                          }}
                         />
                         <p>{(tree && tree[2]?.uniqueRandomId) || "N/A"}</p>
                         <button style={{ cursor: "pointer" }}>
@@ -139,6 +226,11 @@ export default function Community() {
                           alt="Status Logo"
                           className="community-branch-icon"
                           src={Favicon}
+                          onClick={() => {
+                            handleTree(
+                              tree && tree[3]?.uniqueRandomId.toString()
+                            );
+                          }}
                         />
                         <p>{(tree && tree[3]?.uniqueRandomId) || "N/A"}</p>
                         <button style={{ cursor: "pointer" }}>
@@ -153,6 +245,9 @@ export default function Community() {
                     alt="Branch Logo"
                     className="community-branch-icon"
                     src={Favicon}
+                    onClick={() => {
+                      handleTree(tree && tree[1]?.uniqueRandomId.toString());
+                    }}
                   />
                   <p>{(tree && tree[1]?.uniqueRandomId) || "N/A"}</p>
                   <button style={{ cursor: "pointer" }}>
@@ -168,6 +263,11 @@ export default function Community() {
                           alt="Status Logo"
                           className="community-branch-icon"
                           src={Favicon}
+                          onClick={() => {
+                            handleTree(
+                              tree && tree[4]?.uniqueRandomId.toString()
+                            );
+                          }}
                         />
                         <p>{(tree && tree[4]?.uniqueRandomId) || "N/A"}</p>
                         <button style={{ cursor: "pointer" }}>
@@ -182,6 +282,11 @@ export default function Community() {
                           alt="Status Logo"
                           className="community-branch-icon"
                           src={Favicon}
+                          onClick={() => {
+                            handleTree(
+                              tree && tree[5]?.uniqueRandomId.toString()
+                            );
+                          }}
                         />
                         <p>{(tree && tree[5]?.uniqueRandomId) || "N/A"}</p>
                         <button style={{ cursor: "pointer" }}>

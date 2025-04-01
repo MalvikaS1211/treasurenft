@@ -26,10 +26,10 @@ export default function Refferal() {
   return (
     <>
       <div className="p-4 dashboardbg">
-        <Navbar />
         <main className="content-dashboard">
+          <Navbar title="Refferal" />
           {/* Fixed className */}
-          <HeaderDashboard title="Refferal" />
+          {/* <HeaderDashboard title="Refferal" /> */}
           <div>
             <div style={{ height: "100vh" }}>
               <div className="rank-income">

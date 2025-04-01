@@ -22,9 +22,9 @@ export default function Direct() {
   return (
     <>
       <div className="p-4 dashboardbg">
-        <Navbar />
         <main className="content-dashboard">
-          <HeaderDashboard title="Direct" />
+          <Navbar title="Direct" />
+          {/* <HeaderDashboard title="Direct" /> */}
           <div>
             <div style={{ height: "100vh" }}>
               <div className="rank-income">

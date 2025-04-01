@@ -31,9 +31,9 @@ export default function Royality() {
         className="p-4 dashboardbg"
         style={{ height: "100vh", overflow: "hidden" }}
       >
-        <Navbar />
         <main className="content-dashboard">
-          <HeaderDashboard title="NFT Royalty" />
+          <Navbar title="NFT Royalty" />
+          {/* <HeaderDashboard title="NFT Royalty" /> */}
           <div>
             <div>
               <div className="rank-income">
