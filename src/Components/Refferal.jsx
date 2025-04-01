@@ -10,9 +10,13 @@ export default function Refferal() {
   const [tabledata, setTableData] = useState([]);
 
   const handleTableData = async () => {
-    const res = await getUserDirects(address);
-    setTableData(res.userDirects);
-    console.log("GetDirects", res);
+    try {
+      const res = await getUserDirects(address);
+      setTableData(res.userDirects);
+      console.log("GetDirects", res);
+    } catch (error) {
+      console.log(error);
+    }
   };
   console.log("tabledata:::", tabledata);
   useEffect(() => {

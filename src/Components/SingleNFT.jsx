@@ -25,26 +25,34 @@ export default function SingleNFT() {
   const [totalNFTAmount, setTotalNFTAmount] = useState(0);
 
   const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setSelectedFile(file);
-    if (file) {
-      const allowedTypes = ["image/png", "image/jpg", "image/jpeg"];
-      if (!allowedTypes.includes(file.type)) {
-        toast.error("Only PNG and JPG files are allowed!");
-        return;
-      }
+    try {
+      const file = e.target.files[0];
       setSelectedFile(file);
-      setPreview(URL.createObjectURL(file));
+      if (file) {
+        const allowedTypes = ["image/png", "image/jpg", "image/jpeg"];
+        if (!allowedTypes.includes(file.type)) {
+          toast.error("Only PNG and JPG files are allowed!");
+          return;
+        }
+        setSelectedFile(file);
+        setPreview(URL.createObjectURL(file));
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
   const handleNFTPrice = (e) => {
-    const price = parseFloat(e.target.value) || 0;
-    const fee = (price * 20) / 100; // Calculate creation fee
-    const total = price + fee; // Calculate total amount
+    try {
+      const price = parseFloat(e.target.value) || 0;
+      const fee = (price * 20) / 100;
+      const total = price + fee;
 
-    setNftPrice(price);
-    setCreationFee(fee);
-    setTotalNFTAmount(total);
+      setNftPrice(price);
+      setCreationFee(fee);
+      setTotalNFTAmount(total);
+    } catch (error) {
+      console.log("handleNFTPrice".error);
+    }
   };
 
   const SingleNFTpriceOptions = [
@@ -56,47 +64,55 @@ export default function SingleNFT() {
     "5d66447d15dde18b2851a2d6aefc48f4ca25b29c05440027f816f7d176cb7fdd";
 
   const uploadToIPFS = async (file) => {
-    const formData = new FormData();
-    formData.append("file", file);
-    const { data } = await axios.post(
-      "https://api.pinata.cloud/pinning/pinFileToIPFS",
-      formData,
-      {
-        headers: {
-          pinata_api_key: pinataApiKey,
-          pinata_secret_api_key: pinataSecretApiKey,
-        },
-      }
-    );
-    console.log("first one", data.IpfsHash, "::::");
-    return `ipfs://${data.IpfsHash}`;
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      const { data } = await axios.post(
+        "https://api.pinata.cloud/pinning/pinFileToIPFS",
+        formData,
+        {
+          headers: {
+            pinata_api_key: pinataApiKey,
+            pinata_secret_api_key: pinataSecretApiKey,
+          },
+        }
+      );
+      console.log("first one", data.IpfsHash, "::::");
+      return `ipfs://${data.IpfsHash}`;
+    } catch (error) {
+      console.log("uploadToIPFS", error);
+    }
   };
 
   const uploadMetadataToIPFS = async (imageHash) => {
-    const metadata = {
-      name: title,
-      description: description,
-      image: imageHash,
-    };
-    console.log(metadata, "metadata");
-    const blob = new Blob([JSON.stringify(metadata)], {
-      type: "application/json",
-    });
-    const formData = new FormData();
-    formData.append("file", blob, "metadata.json");
-    const { data } = await axios.post(
-      "https://api.pinata.cloud/pinning/pinFileToIPFS",
-      formData,
-      {
-        headers: {
-          pinata_api_key: pinataApiKey,
-          pinata_secret_api_key: pinataSecretApiKey,
-        },
-      }
-    );
-    console.log("second one ", data.IpfsHash, "::::");
+    try {
+      const metadata = {
+        name: title,
+        description: description,
+        image: imageHash,
+      };
+      console.log(metadata, "metadata");
+      const blob = new Blob([JSON.stringify(metadata)], {
+        type: "application/json",
+      });
+      const formData = new FormData();
+      formData.append("file", blob, "metadata.json");
+      const { data } = await axios.post(
+        "https://api.pinata.cloud/pinning/pinFileToIPFS",
+        formData,
+        {
+          headers: {
+            pinata_api_key: pinataApiKey,
+            pinata_secret_api_key: pinataSecretApiKey,
+          },
+        }
+      );
+      console.log("second one ", data.IpfsHash, "::::");
 
-    return `ipfs://${data.IpfsHash}`;
+      return `ipfs://${data.IpfsHash}`;
+    } catch (error) {
+      console.log("uploadMetadataToIPFS", error);
+    }
   };
 
   const tokenApp1 = async (amt) => {

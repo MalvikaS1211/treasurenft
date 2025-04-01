@@ -42,7 +42,7 @@ export default function Trade() {
     try {
       await getReadyForBuyFn(address, tokenId);
     } catch (error) {
-      console.error("Error in Buy:", error);
+      console.log("Error in Buy:", error);
     }
   };
 
@@ -74,7 +74,7 @@ export default function Trade() {
               creator: res[3],
             };
           } catch (err) {
-            console.error(
+            console.log(
               `Error fetching metadata for Token ID ${it.tokenId}:`,
               err
             );
@@ -90,7 +90,7 @@ export default function Trade() {
 
       setAllTrade(data);
     } catch (error) {
-      console.error("Error fetching user-created NFTs:", error);
+      console.log("Error fetching user-created NFTs:", error);
     }
   };
   const BuyNft = async (
@@ -123,7 +123,7 @@ export default function Trade() {
       );
 
       if (res) {
-        const tokenApp = await tokenApp1(Number(totalAmount) / 1e18);
+        const tokenApp = await tokenApp1(Number(totalAmount) / 1e18 + 0.1);
         if (tokenApp) {
           const nft = buyNFTFn(
             tokenId,

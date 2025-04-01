@@ -22,13 +22,14 @@ import {
 } from "../Helper/Web3";
 import toast from "react-hot-toast";
 import { getBalance } from "@wagmi/core";
-import { opBNBTestnet, polygon } from "wagmi/chains";
+import { opBNB, opBNBTestnet, polygon } from "wagmi/chains";
 import { createConfig, http } from "wagmi";
-import { base_url } from "../Helper/Config";
+import { base_url, USDT_TOKEN } from "../Helper/Config";
 export default function Dashboard() {
   const { address } = useAccount();
+  // const address = "0x3deCa2f62B20D6360e0948286D659dE2e19782Be";
   const [dashboardData, setDashboardData] = useState([]);
-  const [allUsers, setAllUsers] = useState({});
+  const [allUsers, setAllUsers] = useState(null);
   const [isFetch, setIsFetch] = useState(false);
   const [availableBal, setAvailableBal] = useState(0);
   const data = new URLSearchParams(window.location.search);
@@ -36,24 +37,26 @@ export default function Dashboard() {
   const uniqueId = allUsers?.userInfo?.[0]?.uniqueRandomId || "defaultId";
   const referralLink = `${base_url}/signup?ref=${uniqueId}`;
   const config = createConfig({
-    chains: [opBNBTestnet],
+    chains: [opBNB],
     transports: {
-      [opBNBTestnet.id]: http(),
+      [opBNB.id]: http(),
     },
   });
   const [balanceData, setBalanceData] = useState([]);
   async function fetchUserTokenBalance() {
+    // console.log(config, address, 123);
     try {
       const balance = await getBalance(config, {
         address: address,
-        token: "0x8c5884b8B8281151abe5E381E252514b47FBCD05",
+        token: USDT_TOKEN,
       });
+      // console.log("balanceData::::", balance.formatted);
       setBalanceData(parseFloat(balance.formatted).toFixed(4));
-      // console.log(balance, "tokenBalance");
     } catch (error) {
       console.error("Error fetching token balance:", error);
     }
   }
+
   const userBalance = fetchUserTokenBalance(address);
 
   const packages = [
@@ -274,11 +277,30 @@ export default function Dashboard() {
                 <div class="user-card wallet-card">
                   <h6>My Wallet Fund</h6>
                   <p className="">{balanceData}</p>
-                  <h6>My Trading Profit</h6>
+                  <h6>My Total Income</h6>
                   <p className=" p-2">
-                    {(allUsers.tradingProfit > 0 &&
+                    {/* {(
+                      (allUsers?.tradingProfit?.length > 0 &&
+                        Number(allUsers?.tradingProfit[0]?.profitOrLoss || 0) +
+                          Number(allUsers?.userLastDealProfit || 0) +
+                          Number(dashboardData[8] || 0) +
+                          Number(dashboardData[9] || 0) +
+                          Number(dashboardData[10] || 0)) / 1e18
+                    ).toFixed(4)} */}
+                    {(
+                      allUsers?.userLastDealProfit +
+                      (allUsers !== undefined &&
+                        allUsers?.tradingProfit.length > 0 &&
+                        Number(allUsers?.tradingProfit[0]?.profitOrLoss)) +
+                      (Number(dashboardData[8] || 0) +
+                        Number(dashboardData[9] || 0) +
+                        Number(dashboardData[10] || 0)) /
+                        1e18
+                    ).toFixed(4)}
+
+                    {/* {(allUsers.tradingProfit > 0 &&
                       allUsers?.tradingProfit[0]?.profitOrLoss) ||
-                      0}
+                      0} */}
                   </p>
                   {/* <h6>My Wallet Address</h6>
                   <p className="text-white p-2">{address}</p> */}
@@ -290,12 +312,13 @@ export default function Dashboard() {
                   </p>
                   <h6>Referred By</h6>
                   <p>
-                    {typeof dashboardData?.[2] === "string"
+                    {allUsers?.referrerInfo?.uniqueRandomId || 0}
+                    {/* {typeof dashboardData?.[2] === "string"
                       ? ` ${dashboardData?.[2].slice(
                           0,
                           4
                         )}...${dashboardData?.[2].slice(-6)}`
-                      : "No data available"}
+                      : "No data available"} */}
                   </p>
                 </div>
               </div>
@@ -338,15 +361,21 @@ export default function Dashboard() {
                 >
                   <div class="total-card">
                     <div class="sub-total">
-                      <h6>Total Income</h6>
+                      <h6>Trade Income</h6>
                     </div>
                     <p>
-                      {(
+                      {allUsers?.tradingProfit?.length > 0 &&
+                        (
+                          Number(allUsers.tradingProfit[0]?.profitOrLoss) +
+                          Number(allUsers?.userLastDealProfit)
+                        ).toFixed(4)}
+
+                      {/* {(
                         (Number(dashboardData?.[8] ?? 0) +
                           Number(dashboardData?.[9] ?? 0) +
                           Number(dashboardData?.[10] ?? 0)) /
                         1e18
-                      ).toFixed(4)}
+                      ).toFixed(4)} */}
                       <span> USDT</span>
                     </p>
                   </div>

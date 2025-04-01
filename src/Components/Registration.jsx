@@ -36,7 +36,7 @@ export default function Registration() {
     if (address) {
       userExistFn();
     } else {
-      toast.error("Please connect your wallet");
+      // toast.error("Please connect your wallet");
     }
   }, [address, userExist]);
 

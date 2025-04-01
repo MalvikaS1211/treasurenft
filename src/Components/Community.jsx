@@ -15,23 +15,29 @@ export default function Community() {
   const [filteredValue, setFilteredValue] = useState(null);
 
   const handleSearch = () => {
-    const validValues = ["730518", "386138"];
-    if (validValues.includes(searchValue)) {
-      setFilteredValue(searchValue);
-    } else {
-      setFilteredValue(null);
-      alert("User ID not found");
+    try {
+      if (searchValue.trim() === "") {
+        toast.error("Please enter a User ID");
+        return;
+      }
+      handleTree(searchValue);
+    } catch (error) {
+      console.log(error);
     }
   };
 
   const handleTree = async (address) => {
-    const res = await getFetchTree(address);
-    if (res.success) {
-      console.log(res.obj, res, "tree");
-      const data = res?.obj?.sort((a, b) => {
-        return a.timestamp - b.timestamp;
-      });
-      setTree(data?.slice(0, 6));
+    try {
+      const res = await getFetchTree(address);
+      if (res.success) {
+        console.log(res.obj, res, "tree");
+        const data = res?.obj?.sort((a, b) => {
+          return a.timestamp - b.timestamp;
+        });
+        setTree(data?.slice(0, 6));
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
   useEffect(() => {
@@ -39,7 +45,6 @@ export default function Community() {
       handleTree(address);
     } else toast.error("Please connect your wallet");
   }, [address]);
-  const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
       <div className="p-4 dashboardbg">
@@ -62,10 +67,7 @@ export default function Community() {
                   className="ComunitySearch placeholder-white community-search"
                   placeholder="Enter User ID"
                   value={searchValue}
-                  onChange={(e) => {
-                    handleTree(e.target.value);
-                    setSearchValue(e.target.value);
-                  }}
+                  onChange={(e) => setSearchValue(e.target.value)}
                 />
                 <button
                   className="btn"

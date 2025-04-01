@@ -2,9 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const URLApi = "https://magicverse.org/api";
+// export const URLApi = "https://magicverse.org/api";
 // export const URLApi = "http://192.168.1.10:8081/api";
-// export const URLApi = "http://192.168.1.161:8081/api";
+export const URLApi = "http://192.168.1.161:8081/api";
 
 export async function getUserInfo(address) {
   try {
