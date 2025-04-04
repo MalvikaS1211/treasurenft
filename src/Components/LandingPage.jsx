@@ -35,33 +35,29 @@ import cyberprimal from "../assets/cyberprimal.jpg";
 import CyberDoberman from "../assets/CyberDoberman.jpg";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { FaShoppingBag } from "react-icons/fa";
-
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LiveAuction from "./LiveAuction";
 import { Link } from "react-router-dom";
+import { jsPDF } from "jspdf";
+import PDF from "../assets/Pdf/MagicVerseOrg.pdf";
+import { GoDownload } from "react-icons/go";
+import toast from "react-hot-toast";
+import walletImage from "../assets/walletImage.png";
+import collectionBtn from "../assets/collectionBtn.png";
+import AddNftIcon from "../assets/AddNftIcon.png";
+import ListIcon from "../assets/ListIcon.png";
+
+const handleDownload = () => {
+  toast.success("PDF downloaded successfully!");
+};
+
 export default function DashboardNew() {
   return (
     <>
       <div class="mainslider">
         <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
-          {/* <div
-            class="swiper-button-prev swiper-button-disabled"
-            tabindex="-1"
-            role="button"
-            aria-label="Previous slide"
-            aria-controls="swiper-wrapper-b1d0a1eb310bca730"
-            aria-disabled="true"
-          ></div>
-          <div
-            class="swiper-button-next"
-            tabindex="0"
-            role="button"
-            aria-label="Next slide"
-            aria-controls="swiper-wrapper-b1d0a1eb310bca730"
-            aria-disabled="false"
-          ></div> */}
           <div class="swiper-scrollbar">
             <div
               class="swiper-scrollbar-drag"
@@ -119,11 +115,21 @@ export default function DashboardNew() {
                               </p>
                               <div class="flat-bt-slider flex style2">
                                 <Link to="/signup">
-                                  {" "}
                                   <a class="sc-button header-slider style style-1 rocket fl-button pri-1">
                                     <span className="pl-0">Sign Up</span>
                                   </a>
                                 </Link>
+                                <a
+                                  href={PDF}
+                                  download="MagicVerse.pdf"
+                                  class="sc-button header-slider style style-1 rocket fl-button pri-1"
+                                  onClick={handleDownload}
+                                >
+                                  <div className="d-flex justify-content-center gap-3">
+                                    <GoDownload color="#5142fc" size={20} />
+                                    <span className="pl-0">DownLoad Pdf</span>
+                                  </div>
+                                </a>
 
                                 {/* <a
                                   class="sc-button header-slider style style-1 note fl-button pri-1"
@@ -145,150 +151,6 @@ export default function DashboardNew() {
                 </div>
               </div>
             </div>
-            {/* <div
-              class="swiper-slide center swiper-slide-next"
-              role="group"
-              aria-label="2 / 3"
-              style={{ width: "1905px" }}
-            >
-              <div class="flat-title-page dashboardbg">
-                <img class="bgr-gradient gradient1" src={bg1} alt="Axies" />
-                <img class="bgr-gradient gradient2" src={bg2} alt="Axies" />
-                <img class="bgr-gradient gradient3" src={bg3} alt="Axies" />
-                <div class="shape item-w-16"></div>
-                <div class="shape item-w-22"></div>
-                <div class="shape item-w-32"></div>
-                <div class="shape item-w-48"></div>
-                <div class="shape style2 item-w-51"></div>
-                <div class="shape style2 item-w-51 position2"></div>
-                <div class="shape item-w-68"></div>
-                <div class="overlay"></div>
-                <div class="swiper-container mainslider home">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="slider-item">
-                        <div class="themesflat-container ">
-                          <div class="wrap-heading flat-slider flex">
-                            <div class="content">
-                              <h2 class="heading">Discover, find,</h2>
-                              <h1 class="heading mb-style">
-                                <span class="">Sell extraordinary</span>
-                              </h1>
-                              <h1 class="heading">
-                                <span class="fill">Monster </span>NFTs
-                              </h1>
-                              <p class="sub-heading">
-                                Marketplace for monster character cllections non
-                                fungible token NFTs
-                              </p>
-                              <div class="flat-bt-slider flex style2">
-                                <a
-                                  class="sc-button header-slider style style-1 rocket fl-button pri-1"
-                                  href="/explore-01"
-                                >
-                                  <span>Explore</span>
-                                </a>
-                                <a
-                                  class="sc-button header-slider
-                                 style style-1 note fl-button pri-1"
-                                  href="/create-item"
-                                >
-                                  <span>Create</span>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="image">
-                              <img
-                                class="img-bg"
-                                src="/static/media/bg_slide_2.ae0c7963c25db42b609a.png"
-                                alt="axies"
-                              />
-                              <img
-                                src="/static/media/slide_2.7e402c26b268dc0f8077.png"
-                                alt="axies"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="swiper-slide right"
-              role="group"
-              aria-label="3 / 3"
-              style={{ width: "1905px" }}
-            >
-              <div class="flat-title-page dashboardbg">
-                <img class="bgr-gradient gradient1" src={bg1} alt="Axies" />
-                <img class="bgr-gradient gradient2" src={bg2} alt="Axies" />
-                <img class="bgr-gradient gradient3" src={bg3} alt="Axies" />
-                <div class="shape item-w-16"></div>
-                <div class="shape item-w-22"></div>
-                <div class="shape item-w-32"></div>
-                <div class="shape item-w-48"></div>
-                <div class="shape style2 item-w-51"></div>
-                <div class="shape style2 item-w-51 position2"></div>
-                <div class="shape item-w-68"></div>
-                <div class="overlay"></div>
-                <div class="swiper-container mainslider home">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="slider-item">
-                        <div class="themesflat-container ">
-                          <div class="wrap-heading flat-slider flex">
-                            <div class="content">
-                              <h2 class="heading">Discover, find,</h2>
-                              <h1 class="heading mb-style">
-                                <span class="">Sell extraordinary</span>
-                              </h1>
-                              <h1 class="heading">
-                                <span class="fill">Monster</span>NFTs
-                              </h1>
-                              <p class="sub-heading">
-                                Marketplace for monster character cllections non
-                                fungible token NFTs
-                              </p>
-                              <div
-                                class="flat-bt-slider 
-                                            flex style2"
-                              >
-                                <a
-                                  class="sc-button header-slider style style-1 rocket fl-button pri-1"
-                                  href="/explore-01"
-                                >
-                                  <span>Explore</span>
-                                </a>
-                                <a
-                                  class="sc-button header-slider style style-1 note fl-button pri-1"
-                                  href="/create-item"
-                                >
-                                  <span>Create</span>
-                                </a>
-                              </div>
-                            </div>
-                            <div class="image">
-                              <img
-                                class="img-bg"
-                                src="/static/media/bg_slide_2.ae0c7963c25db42b609a.png"
-                                alt="axies"
-                              />
-                              <img
-                                src="/static/media/slide_2.7e402c26b268dc0f8077.png"
-                                alt="axies"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
           <span
             class="swiper-notification"
@@ -304,10 +166,7 @@ export default function DashboardNew() {
               <div class="sc-box-icon">
                 <div class="image center">
                   <div class="icon-create icon-color1">
-                    <img
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAVCAYAAABc6S4mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFTSURBVHgBtZVPSsNAFMbfDIFmYbCguI4i4qKC4s5dz+AB4g08gh7FI/QGzcKtGLfdJCC6kGKFrkr+PL9XEkhqU1on84Mvk0zy3jdvMswQlTBzH3qExtCMd2dWxgaSi+qgw4di7o5YctpKXjfpa3gEkE/d40P3Ci6vuLmsv3l7KWixWB/V6xGdD/Sy3YLIWU0+/WJ6Hhcbo7x9RSenirbAlwp4tffjnVsjZOSHR43kP9CTjBZK/gSwGTFXq6WFtRXswLFSKkGKQZ7n10VRNP6M1nqu6f+EZfKzNE1v0E5gEKKdVx/g2TMxSOSC5J60juN8uq47gcF3/SOTKYpQwRXCD2ByKx0yevR5XRkIQySUadnLsuwCz41/gKqmpqtINrhg0whMK6hIoNCmQSuyiiKyRyQGI7LHSKZITh/ZUX3qlgQaLu/Y5olWUZrcsfmZ/MC1M/kX69ie34G7DbAAAAAASUVORK5CYII="
-                      alt=""
-                    />
+                    <img src={walletImage} />
                   </div>
                 </div>
                 <h3 class="heading">
@@ -323,10 +182,7 @@ export default function DashboardNew() {
               <div class="sc-box-icon">
                 <div class="image center">
                   <div class="icon-create icon-color2">
-                    <img
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE0SURBVHgB7VaxEsFAEL1TSImSKpXaH+BP+ALjC/gD/oA/UKuk0zC0NKHRGTGpUp23mcREcrlsk4LxZl72svbtZmPvJlIASqkpzAisiyyW4FhK6SWd0FgwXbAJWilNAJ6h2UoEzqPkJjgI7qcK9GDaBbodFXjkPHkajbgLaKowA4YmqDCTE2qJtcXUWBVRMn6jgCdKBBU4MuIumKBrfIO1D3Nn6E5UYEgJTMnBvsa/Bn2D7gbuZXyH2e6Iz1EkPPG0xg6ha2ncAXScDr8A6VeU2dVo1TElyNF571eLABvcqHy4FKNJbEe/mXW4LFQxDpoCLkO3odNUCR7seC9EHbkMjVf2UVH/n6asAtzT9JlYczXhnzxnBC6TXxXR2uHowivGbgY+NHNMvhWY2eHkM+wh0k0o7gXC9y56K/HaIAAAAABJRU5ErkJggg=="
-                      alt=""
-                    />
+                    <img src={collectionBtn} alt="" />
                   </div>
                 </div>
                 <h3 class="heading">
@@ -343,10 +199,7 @@ export default function DashboardNew() {
               <div class="sc-box-icon">
                 <div class="image center">
                   <div class="icon-create icon-color3">
-                    <img
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE0SURBVHgBrVVBbsIwEFxHXCtF6qmc/IT2BeXUc35AflB+kidAf1Cpt16AFxBeEE5wQQIJ7stsWCMTBWISRhptbGfHm/VmTaRgZguOwYLDUaiPdTpGxVKYTOcmYE5heAcT0IKpMebHRca6U0wtAL8JuCsj9T6zlZgKxiqY9TTsGcLd6+ILzAB8A9fgHGuHe4LiK1HiMYmcoLf+pWKCPvhJYViCNqpZeK2M+/QA6gQ3lfGWOgpOPVHJ4T89gF51Agk+wvzdc8IBDGCGOpyV9XdLsAn6E4y9qVQ3yN0LgmGgmNV6u4moxkmKNAOn4MgVvFrJb9y06yVCjaCoaQDf4IIDcBHUyAruCDmUFV13jS7IRfAXHNFzkBs+N8cFNSW7GdJcPsoniKbcDVJKyZU8t78CMvaugBMYmvgoOw3BXwAAAABJRU5ErkJggg=="
-                      alt=""
-                    />
+                    <img src={AddNftIcon} alt="" />
                   </div>
                 </div>
                 <h3 class="heading">
@@ -362,10 +215,7 @@ export default function DashboardNew() {
               <div class="sc-box-icon">
                 <div class="image center">
                   <div class="icon-create icon-color4">
-                    <img
-                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAYAAAD6S912AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACpSURBVHgB7ZXBCcJAEEW/YgGCDawnr5YQsBBL0U5iB7EBsQS96iU2IClh8hc2EJZNMpDJKXnwcphsHoGFXSAgIhktaCl6XuGbM9pw8JTxFE3sKnZcVnyU7DrY8PNBgSFrGGMe3CRmb/qAjhM9DgU/9AsdhzjYtSl/6NjFgxnu8hJcghMF7zSje3obXN1znOfUJda78C5JHKz8vUC3ih9JhhGG6lBP2DfyGs02ca9t/Qo3AAAAAElFTkSuQmCC"
-                      alt=""
-                    />
+                    <img src={ListIcon} alt="" />
                   </div>
                 </div>
                 <h3 class="heading">
@@ -523,7 +373,7 @@ export default function DashboardNew() {
                                     <div class="sc-author-box style-2">
                                       <div class="author-avatar">
                                         <img
-                                          src={creativeArt}
+                                          src={MonicaLucas}
                                           alt=""
                                           class="avatar"
                                         />
@@ -592,13 +442,13 @@ export default function DashboardNew() {
                                 <a>
                                   <div class="media-images-box">
                                     <div class="top-media">
-                                      <img src={collection1} alt="Axies" />
+                                      <img src={Trimphant} alt="Axies" />
                                       <img src={collection2} alt="Axies" />
                                     </div>
                                     <div class="bottom-media">
-                                      <img src={collection3} alt="Axies" />
-                                      <img src={collection4} alt="Axies" />
-                                      <img src={collection5} alt="Axies" />
+                                      <img src={cryptoegg} alt="Axies" />
+                                      <img src={space} alt="Axies" />
+                                      <img src={collection7} alt="Axies" />
                                     </div>
                                   </div>
                                 </a>
@@ -607,7 +457,7 @@ export default function DashboardNew() {
                                     <div class="sc-author-box style-2">
                                       <div class="author-avatar">
                                         <img
-                                          src={creativeArt}
+                                          src={MattRamos}
                                           alt=""
                                           class="avatar"
                                         />

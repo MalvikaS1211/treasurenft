@@ -15,9 +15,10 @@ export default function LiveAuction() {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    // autoplaySpeed: 2000,
     arrows: true,
-    swipe: true,
+    swipe: true, // Enable swipe
+    swipeToSlide: true, // Allow direct swiping
+    touchMove: true, // Enable touch movement
     responsive: [
       {
         breakpoint: 1024,
@@ -26,7 +27,10 @@ export default function LiveAuction() {
           slidesToScroll: 1,
           infinite: true,
           dots: true,
-          arrows: false, // Hide arrows in responsive mode
+          arrows: false,
+          swipe: true, // Ensure swipe is enabled
+          swipeToSlide: true,
+          touchMove: true,
         },
       },
       {
@@ -35,8 +39,10 @@ export default function LiveAuction() {
           slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 2,
-          arrows: false, // Hide arrows
-          swipe: false, // Disable touch sliding
+          arrows: false,
+          swipe: true,
+          swipeToSlide: true,
+          touchMove: true,
         },
       },
       {
@@ -44,8 +50,10 @@ export default function LiveAuction() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false, // Hide arrows
-          swipe: false, // Disable touch sliding
+          arrows: false,
+          swipe: true,
+          swipeToSlide: true,
+          touchMove: true,
         },
       },
     ],

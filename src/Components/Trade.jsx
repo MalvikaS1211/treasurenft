@@ -8,6 +8,7 @@ import {
   getReadyForBuyFn,
   getTradeUserFn,
   getUserCreatedNftsFn,
+  getUserInfo,
 } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
 import {
@@ -109,7 +110,9 @@ export default function Trade() {
       if (Number(userBalance) < Number(totalAmount) / 1e18) {
         setIsLoading(false);
         return toast.error(
-          `You need at least ${Number(totalAmount) / 1e18} USDT to Buy`
+          `You need at least ${(Number(totalAmount) / 1e18).toFixed(
+            4
+          )} USDT to Buy`
         );
       }
       const res = await getReadyForBuyFn(
@@ -153,6 +156,21 @@ export default function Trade() {
       console.log(error);
     }
   };
+  const [allUsers, setAllUsers] = useState(null);
+
+  const UserInfo = async () => {
+    try {
+      const res = await getUserInfo(address);
+      setAllUsers(res.userLimits);
+      console.log("UserInfo in SingleNFT", res.userLimits);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    UserInfo();
+  }, [address]);
+
   useEffect(() => {
     if (address) {
       getTrade();
@@ -162,6 +180,7 @@ export default function Trade() {
   return (
     <>
       <HeaderNew />
+
       <div className="tf-create-item tf-section p-0">
         <div className="dashboardbg">
           {" "}
@@ -179,6 +198,47 @@ export default function Trade() {
             </div>
           </div>
         </div>
+        <div className="p-4">
+          <div
+            class="total-grid"
+            style={{ marginBottom: "3%", marginTop: "3%" }}
+          >
+            <div class="total-card" style={{ background: "#c2e8ff" }}>
+              <div class="sub-total">
+                <h6>Total Limit</h6>
+              </div>
+              <p>
+                {allUsers?.status == true
+                  ? (Number(allUsers?.userUpperLimit) || 0) / 1e18
+                  : 0}
+                <span> USDT</span>
+              </p>
+            </div>
+            <div class="total-card" style={{ background: "#c2e8ff" }}>
+              <div class="sub-total">
+                <h6>Total Limit Remaining</h6>
+              </div>
+              <p>
+                {allUsers?.status == true
+                  ? (Number(allUsers?.userRemainingLimit) || 0) / 1e18
+                  : 0}
+                <span> USDT</span>
+              </p>
+            </div>
+            <div class="total-card" style={{ background: "#c2e8ff" }}>
+              <div class="sub-total">
+                <h6>Total Limit Utilised</h6>
+              </div>
+              <p>
+                {allUsers?.status == true
+                  ? (Number(allUsers?.userTodayUtilisedLimit) || 0) / 1e18
+                  : 0}
+                <span> USDT</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
         <section className="tf-section today-pick">
           <div className="themesflat-container">
             <div className="row">

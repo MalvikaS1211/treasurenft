@@ -1998,7 +1998,7 @@ header {
   justify-content: center;
   gap: 15px;
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
 }
 
 .social-icons a {

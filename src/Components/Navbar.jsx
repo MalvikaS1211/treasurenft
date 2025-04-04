@@ -7,7 +7,7 @@ import { BsMedium } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ConnectWallet from "./ConnectWallet";
 
-export default function ({ title }) {
+export default function Navbar({ title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(
     window.innerWidth > 500 ? true : false
   );

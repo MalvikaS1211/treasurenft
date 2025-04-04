@@ -270,7 +270,7 @@ export default function Dashboard() {
                 <div class="user-card wallet-card">
                   <h6>User ID</h6>
                   <p>
-                    {allUsers?.userInfo?.[0]?.uniqueRandomId || "No user found"}
+                    {allUsers?.userInfo[0]?.uniqueRandomId || "No user found"}
                   </p>
                   <h6>Rank</h6>
                   <p>{allUsers?.rank || 0}</p>

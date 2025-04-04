@@ -164,7 +164,7 @@ export default function BulkNFT() {
     setIsLoading(true);
     try {
       console.log("1");
-      toast.success("Please wait transaction is in process");
+      toast.loading("Please wait transaction is in process");
       if (isLoading) {
         return toast.error("Your previous transaction is pending");
       }
@@ -177,10 +177,10 @@ export default function BulkNFT() {
       const userBalance = await fetchUserTokenBalance(address);
       const totalPrice = selectedAmount * 1.1;
       // const totalPrice = nfts.reduce((sum, nft) => sum + Number(nft.price), 0);
-      if (userBalance < totalPrice) {
-        setIsLoading(false);
-        return toast.error(`You need at least ${totalPrice} USDT to Buy`);
-      }
+      // if (userBalance < totalPrice) {
+      //   setIsLoading(false);
+      //   return toast.error(`You need at least ${totalPrice} USDT to Buy`);
+      // }
       let metadataURIs = [];
       let titles = [];
       let descriptions = [];

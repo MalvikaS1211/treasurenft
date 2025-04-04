@@ -198,11 +198,11 @@
   box-sizing: border-box;
   padding: 11px 35px;
   border-radius: 30px;
-  -webkit-transition: all 0.3s ease;
+  /* -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease; */
 }
 .sc-button.no-bg {
   background: transparent;
@@ -858,11 +858,11 @@
   border-radius: 20px;
   margin-bottom: 40px;
   overflow: hidden;
-  -webkit-transition: all 0.3s ease-in-out;
+  /* -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
 
 /* .sc-card-product:hover {
@@ -982,7 +982,7 @@
   color: #fff;
   padding: 1px 11px;
   border-radius: 8px;
-  background-color: #14141f;
+  /* background-color: #14141f; */
   cursor: pointer;
   flex-shrink: 0;
   border: none;
@@ -1076,7 +1076,7 @@
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
 }
 
 .sc-card-product .tags {
@@ -1198,7 +1198,7 @@
 .sc-card-product .card-media .button-place-bid {
   position: absolute;
   top: 60%;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   left: 0;
   right: 0;
   text-align: center;
@@ -1207,7 +1207,7 @@
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  /* transition: all 0.4s ease; */
 }
 
 .sc-card-product:hover .card-media .button-place-bid,

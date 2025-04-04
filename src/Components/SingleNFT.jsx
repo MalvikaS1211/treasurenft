@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CyberDoberman from "../assets/CyberDoberman.jpg";
 import MattRamos from "../assets/MattRamos.jpg";
 import axios from "axios";
-import { createNftVrsFn } from "../Helper/API_Functions";
+import { createNftVrsFn, getUserInfo } from "../Helper/API_Functions";
 import {
   approveToken,
   createNFTFn,
@@ -23,6 +23,20 @@ export default function SingleNFT() {
   const [creationFee, setCreationFee] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [totalNFTAmount, setTotalNFTAmount] = useState(0);
+  const [allUsers, setAllUsers] = useState(null);
+
+  const UserInfo = async () => {
+    try {
+      const res = await getUserInfo(address);
+      setAllUsers(res.userLimits);
+      console.log("UserInfo in SingleNFT", res.userLimits);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    UserInfo();
+  }, [address]);
 
   const handleFileChange = (e) => {
     try {
@@ -54,11 +68,11 @@ export default function SingleNFT() {
       console.log("handleNFTPrice".error);
     }
   };
-
-  const SingleNFTpriceOptions = [
-    50, 100, 150, 200, 250, 350, 500, 650, 750, 850, 1000, 1150, 1250, 1350,
-    1500,
-  ];
+  const SingleNFTpriceOptions = [15, 50, 200];
+  // const SingleNFTpriceOptions = [
+  //   50, 100, 150, 200, 250, 350, 500, 650, 750, 850, 1000, 1150, 1250, 1350,
+  //   1500,
+  // ];
   const pinataApiKey = "e45f06a4f288fd4c7ded";
   const pinataSecretApiKey =
     "5d66447d15dde18b2851a2d6aefc48f4ca25b29c05440027f816f7d176cb7fdd";
@@ -224,6 +238,41 @@ export default function SingleNFT() {
 
   return (
     <>
+      {/* <div class="total-grid" style={{ marginBottom: "3%", marginTop: "3%" }}>
+        <div class="total-card" style={{ background: "#c2e8ff" }}>
+          <div class="sub-total">
+            <h6>Total Limit</h6>
+          </div>
+          <p>
+            {allUsers?.status == true
+              ? (Number(allUsers?.userUpperLimit) || 0) / 1e18
+              : 0}
+            <span> USDT</span>
+          </p>
+        </div>
+        <div class="total-card" style={{ background: "#c2e8ff" }}>
+          <div class="sub-total">
+            <h6>Total Limit Remaining</h6>
+          </div>
+          <p>
+            {allUsers?.status == true
+              ? (Number(allUsers?.userRemainingLimit) || 0) / 1e18
+              : 0}
+            <span> USDT</span>
+          </p>
+        </div>
+        <div class="total-card" style={{ background: "#c2e8ff" }}>
+          <div class="sub-total">
+            <h6>Total Limit Utilised</h6>
+          </div>
+          <p>
+            {allUsers?.status == true
+              ? (Number(allUsers?.userTodayUtilisedLimit) || 0) / 1e18
+              : 0}
+            <span> USDT</span>
+          </p>
+        </div>
+      </div> */}
       <div
         class="col-xl-3 col-lg-6 col-md-6 col-12"
         style={{ paddingTop: "40px" }}
@@ -288,7 +337,7 @@ export default function SingleNFT() {
                   <option value="">Enter price for one item (USDT)</option>
                   {SingleNFTpriceOptions.map((price, index) => (
                     <option key={index} value={price}>
-                      ${price}
+                      $ {price}
                     </option>
                   ))}
                 </select>

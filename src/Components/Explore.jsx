@@ -249,7 +249,7 @@ export default function Expore() {
                             style={{ width: "100%", height: "100%" }}
                           />
                         </a>
-                        {nft.isReadyForSale === false && (
+                        {nft.isReadyForSale === true && (
                           <div className="button-place-bid">
                             <button
                               className="sc-button style-place-bid style bag fl-button pri-3"
@@ -352,7 +352,7 @@ export default function Expore() {
                           style={{ width: "100%", height: "100%" }}
                         />
                       </a>
-                      {nft.isReadyForSale === false && (
+                      {/* {nft.isReadyForSale === true && (
                         <div className="button-place-bid">
                           <button
                             className="sc-button style-place-bid style bag fl-button pri-3"
@@ -364,7 +364,7 @@ export default function Expore() {
                             </span>
                           </button>
                         </div>
-                      )}
+                      )} */}
                       <div className="coming-soon"></div>
                     </div>
                     <div className="card-title">
@@ -455,7 +455,7 @@ export default function Expore() {
                           style={{ width: "100%", height: "100%" }}
                         />
                       </a>
-                      {nft.isReadyForSale === false && (
+                      {/* {nft.isReadyForSale === true && (
                         <div className="button-place-bid">
                           <button
                             className="sc-button style-place-bid style bag fl-button pri-3"
@@ -467,7 +467,7 @@ export default function Expore() {
                             </span>
                           </button>
                         </div>
-                      )}
+                      )} */}
                       <div className="coming-soon"></div>
                     </div>
                     <div className="card-title">

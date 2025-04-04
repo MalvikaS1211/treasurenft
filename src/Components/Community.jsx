@@ -8,8 +8,8 @@ import { getFetchTree } from "../Helper/API_Functions";
 import toast from "react-hot-toast";
 import ReferralModal from "./ReffrealModal";
 export default function Community() {
-  // const { address } = useAccount();
-  const address = "0x6Fd4fB35dda502bdB88Ef66c8777c345F1a5BF0e";
+  const { address } = useAccount();
+  // const address = "0x6Fd4fB35dda502bdB88Ef66c8777c345F1a5BF0e";
   const [tree, setTree] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [filteredValue, setFilteredValue] = useState(null);
