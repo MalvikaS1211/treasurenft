@@ -64,91 +64,91 @@ export default function Dashboard() {
       name: "Beginner",
       color: "rgb(212, 55, 55)",
       subscription: "15",
-      range: "$50-$100",
+      range: "$100",
     },
     {
       name: "Seeker",
       color: "rgb(212, 139, 55)",
       subscription: "30",
-      range: "$101-$200 ",
+      range: "$200 ",
     },
     {
       name: "Innovator",
       color: "rgb(209, 212, 55)",
       subscription: "55",
-      range: "$201-$350 ",
+      range: "$350 ",
     },
     {
       name: "Tycoon",
       color: "rgb(55, 212, 133)",
       subscription: "90",
-      range: "$351-$550",
+      range: "$550",
     },
     {
       name: "Elite",
       color: "rgb(55, 212, 204)",
       subscription: "135",
-      range: "$551-$800 ",
+      range: "$800 ",
     },
     {
       name: "Visionary",
       color: "rgb(55, 149, 212)",
       subscription: "190",
-      range: "$801-$1100",
+      range: "$1100",
     },
     {
       name: "Commander",
       color: "rgb(162, 55, 212)",
       subscription: "255",
-      range: "$1101-$1450 ",
+      range: "$1450 ",
     },
     {
       name: "Legend",
       color: "rgb(212, 55, 102)",
       subscription: "330",
-      range: "$1451-$1850",
+      range: "$1850",
     },
     {
       name: "Titan",
       color: "rgb(162, 55, 212)",
       subscription: "415",
-      range: "$1851-$2300 ",
+      range: "$2300 ",
     },
     {
       name: "Pioneer",
       color: "rgb(147, 99, 43)",
       subscription: "510",
-      range: "$2301-$2800 ",
+      range: "$2800 ",
     },
     {
       name: "Architect",
       color: "rgb(113, 114, 19)",
       subscription: "615",
-      range: "$2801-$3350 ",
+      range: "$3350 ",
     },
     {
       name: "Emperor",
       color: "rgb(230, 10, 76)",
       subscription: "725",
-      range: "$3351-$3900 ",
+      range: "$3900 ",
     },
     {
       name: "Master",
       color: "rgb(212, 55, 102)",
       subscription: "845",
-      range: "$3901-$4550",
+      range: "$4550",
     },
     {
       name: "King",
       color: "rgb(160, 212, 54)",
       subscription: "980",
-      range: "$4551-$5250 ",
+      range: "$5250 ",
     },
     {
       name: "Grandmaster",
       color: "rgb(147, 99, 43)",
       subscription: "1125",
-      range: "$5251-$6750 ",
+      range: "$6750 ",
     },
   ];
 
@@ -332,7 +332,7 @@ export default function Dashboard() {
                       <span>${pkg.subscription}</span>
                       <p style={{ color: pkg.color }}>{pkg.name}</p>
                       <div className="range-container">
-                        <span style={{ fontSize: "15px" }}>Range</span>
+                        <span style={{ fontSize: "15px" }}>NFT Range</span>
                         <span style={{ color: "#830499" }}>{pkg.range}</span>
                       </div>
 
@@ -423,81 +423,6 @@ export default function Dashboard() {
                     <p>{allUsers?.userInfo?.[0]?.totalDirectCount ?? "0"}</p>
                   </div>
                 </div>
-
-                {/* <table
-                  class="responsive-table"
-                  style={{ width: "70%", margin: "2rem auto" }}
-                >
-                  <thead>
-                    <tr className="text-white">
-                      <th className="rank-table-row-head">Rank</th>
-                      <th className="rank-table-row-head">Amount</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-white" style={{ fontSize: "14px" }}>
-                    <tr>
-                      <td className="rank-table-row">Beginner</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Seeker</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Innovator</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Tycoon</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Elite</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Visionary</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Commander</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Legend</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Titan</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Pioneer</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Architect</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Emperor</td>
-                      <td>0 USDT</td>
-                    </tr>
-
-                    <tr>
-                      <td className="rank-table-row">Master</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">King</td>
-                      <td>0 USDT</td>
-                    </tr>
-                    <tr>
-                      <td className="rank-table-row">Grandmaster</td>
-                      <td>0 USDT</td>
-                    </tr>
-                  </tbody>
-                </table> */}
               </section>
             </div>
           </div>

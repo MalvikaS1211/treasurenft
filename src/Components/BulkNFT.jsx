@@ -163,6 +163,11 @@ export default function BulkNFT() {
   const nftCreate = async () => {
     setIsLoading(true);
     try {
+      if (selectedIndex == null) {
+        toast.error("Please select package before creating NFT.");
+        setIsLoading(true);
+        return;
+      }
       console.log("1");
       toast.loading("Please wait transaction is in process");
       if (isLoading) {

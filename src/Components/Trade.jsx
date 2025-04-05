@@ -176,14 +176,13 @@ export default function Trade() {
       getTrade();
     }
   }, [address, isfetch]);
-
+  console.log(address, "userAdd");
   return (
     <>
       <HeaderNew />
 
       <div className="tf-create-item tf-section p-0">
         <div className="dashboardbg">
-          {" "}
           <div
             class="col-md-12 "
             style={{ paddingTop: "20px", paddingBottom: "20px" }}
@@ -209,7 +208,7 @@ export default function Trade() {
               </div>
               <p>
                 {allUsers?.status == true
-                  ? (Number(allUsers?.userUpperLimit) || 0) / 1e18
+                  ? ((Number(allUsers?.userUpperLimit) || 0) / 1e18).toFixed(4)
                   : 0}
                 <span> USDT</span>
               </p>
@@ -220,7 +219,9 @@ export default function Trade() {
               </div>
               <p>
                 {allUsers?.status == true
-                  ? (Number(allUsers?.userRemainingLimit) || 0) / 1e18
+                  ? (
+                      (Number(allUsers?.userRemainingLimit) || 0) / 1e18
+                    ).toFixed(4)
                   : 0}
                 <span> USDT</span>
               </p>
@@ -231,7 +232,9 @@ export default function Trade() {
               </div>
               <p>
                 {allUsers?.status == true
-                  ? (Number(allUsers?.userTodayUtilisedLimit) || 0) / 1e18
+                  ? (
+                      (Number(allUsers?.userTodayUtilisedLimit) || 0) / 1e18
+                    ).toFixed(4)
                   : 0}
                 <span> USDT</span>
               </p>
