@@ -46,26 +46,26 @@ export default function Trade() {
       console.log("Error in Buy:", error);
     }
   };
-
   const getTrade = async () => {
     try {
-      const resNFT = await getTradeUserFn(address);
-      const data = await Promise.all(
-        resNFT.userTrades.map(async (it) => {
+      const { userTrades } = await getTradeUserFn(address);
+
+      const fetchedTrades = await Promise.all(
+        userTrades.map(async (trade) => {
           try {
-            const res = await getNfts(it.tokenId);
+            const res = await getNfts(trade.tokenId);
             const metadataUrl = res[2].replace(
               "ipfs://",
               "https://ipfs.io/ipfs/"
             );
-            const metadataRes = await axios.get(metadataUrl);
-            const metadata = metadataRes.data;
+            const { data: metadata } = await axios.get(metadataUrl);
             const imageUrl = metadata.image.replace(
               "ipfs://",
               "https://ipfs.io/ipfs/"
             );
+
             return {
-              ...it,
+              ...trade,
               title: metadata.name,
               description: metadata.description,
               img: imageUrl,
@@ -75,12 +75,12 @@ export default function Trade() {
               creator: res[3],
             };
           } catch (err) {
-            console.log(
-              `Error fetching metadata for Token ID ${it.tokenId}:`,
+            console.error(
+              `Error fetching metadata for Token ID ${trade.tokenId}:`,
               err
             );
             return {
-              ...it,
+              ...trade,
               title: "",
               description: "Error loading",
               img: "",
@@ -89,11 +89,78 @@ export default function Trade() {
         })
       );
 
-      setAllTrade(data);
+      const smallValue = fetchedTrades.find((t) => t.price <= 27e18);
+      const midValue = fetchedTrades.find(
+        (t) => t.price > 27e18 && t.price <= 54e18
+      );
+
+      const largeValue = fetchedTrades.find((t) => t.price > 54e18);
+
+      const finalData = [smallValue, midValue, largeValue].filter(Boolean); // avoid pushing undefined
+      console.log(finalData);
+      setAllTrade(finalData);
     } catch (error) {
-      console.log("Error fetching user-created NFTs:", error);
+      console.error("Error fetching user-created NFTs:", error);
     }
   };
+
+  // const getTrade = async () => {
+  //   try {
+  //     const resNFT = await getTradeUserFn(address);
+  //     const data = await Promise.all(
+  //       resNFT.userTrades.map(async (it) => {
+  //         try {
+  //           const res = await getNfts(it.tokenId);
+  //           const metadataUrl = res[2].replace(
+  //             "ipfs://",
+  //             "https://ipfs.io/ipfs/"
+  //           );
+  //           const metadataRes = await axios.get(metadataUrl);
+  //           const metadata = metadataRes.data;
+  //           const imageUrl = metadata.image.replace(
+  //             "ipfs://",
+  //             "https://ipfs.io/ipfs/"
+  //           );
+  //           return {
+  //             ...it,
+  //             title: metadata.name,
+  //             description: metadata.description,
+  //             img: imageUrl,
+  //             price: res[4],
+  //             owner: res[6],
+  //             metadataURI: res[2],
+  //             creator: res[3],
+  //           };
+  //         } catch (err) {
+  //           console.log(
+  //             `Error fetching metadata for Token ID ${it.tokenId}:`,
+  //             err
+  //           );
+  //           return {
+  //             ...it,
+  //             title: "",
+  //             description: "Error loading",
+  //             img: "",
+  //           };
+  //         }
+  //       })
+  //     );
+  //     console.log(data, "data");
+  //     const smallValue = data.filter((it) => {
+  //       return it.price >= 27 * 1e18 && it.price <= 54 * 1e18;
+  //     });
+  //     console.log(smallValue, "smallValue");
+  //     const midValue = data.filter((it) => {
+  //       return it.price >= 54 * 1e18;
+  //     });
+  //     console.log(midValue, "midValue");
+  //     const finalData = [smallValue[0], midValue[0]];
+  //     console.log(finalData);
+  //     setAllTrade(finalData);
+  //   } catch (error) {
+  //     console.log("Error fetching user-created NFTs:", error);
+  //   }
+  // };
   const BuyNft = async (
     initialPrice,
     title,
@@ -146,6 +213,7 @@ export default function Trade() {
           setIsLoading(false);
           setTimeout(() => {
             setIsFetch(!isfetch);
+            UserInfo();
           }, 2000);
         }
         setIsLoading(false);
@@ -167,12 +235,10 @@ export default function Trade() {
       console.log(error);
     }
   };
-  useEffect(() => {
-    UserInfo();
-  }, [address]);
 
   useEffect(() => {
     if (address) {
+      UserInfo();
       getTrade();
     }
   }, [address, isfetch]);

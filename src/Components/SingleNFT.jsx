@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import CyberDoberman from "../assets/CyberDoberman.jpg";
 import MattRamos from "../assets/MattRamos.jpg";
 import axios from "axios";
-import { createNftVrsFn, getUserInfo } from "../Helper/API_Functions";
+import {
+  createNftVrsFn,
+  getNftStartStop,
+  getUserInfo,
+} from "../Helper/API_Functions";
 import {
   approveToken,
   createNFTFn,
@@ -68,7 +72,7 @@ export default function SingleNFT() {
       console.log("handleNFTPrice".error);
     }
   };
-  const SingleNFTpriceOptions = [15, 50, 200];
+  const SingleNFTpriceOptions = [15, 50];
   // const SingleNFTpriceOptions = [
   //   50, 100, 150, 200, 250, 350, 500, 650, 750, 850, 1000, 1150, 1250, 1350,
   //   1500,
@@ -236,43 +240,23 @@ export default function SingleNFT() {
     }
   };
 
+  const [NftAction, setNftAction] = useState(false);
+  const handleNftAction = async () => {
+    try {
+      const response = await getNftStartStop("GET");
+      console.log(response.nftCreationBlockStatus, "response::::::");
+      setNftAction(response?.nftCreationBlockStatus);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    handleNftAction();
+  }, [address]);
+
   return (
     <>
-      {/* <div class="total-grid" style={{ marginBottom: "3%", marginTop: "3%" }}>
-        <div class="total-card" style={{ background: "#c2e8ff" }}>
-          <div class="sub-total">
-            <h6>Total Limit</h6>
-          </div>
-          <p>
-            {allUsers?.status == true
-              ? (Number(allUsers?.userUpperLimit) || 0) / 1e18
-              : 0}
-            <span> USDT</span>
-          </p>
-        </div>
-        <div class="total-card" style={{ background: "#c2e8ff" }}>
-          <div class="sub-total">
-            <h6>Total Limit Remaining</h6>
-          </div>
-          <p>
-            {allUsers?.status == true
-              ? (Number(allUsers?.userRemainingLimit) || 0) / 1e18
-              : 0}
-            <span> USDT</span>
-          </p>
-        </div>
-        <div class="total-card" style={{ background: "#c2e8ff" }}>
-          <div class="sub-total">
-            <h6>Total Limit Utilised</h6>
-          </div>
-          <p>
-            {allUsers?.status == true
-              ? (Number(allUsers?.userTodayUtilisedLimit) || 0) / 1e18
-              : 0}
-            <span> USDT</span>
-          </p>
-        </div>
-      </div> */}
       <div
         class="col-xl-3 col-lg-6 col-md-6 col-12"
         style={{ paddingTop: "40px" }}
@@ -357,20 +341,22 @@ export default function SingleNFT() {
                   onChange={(e) => setDescription(e.target.value)}
                 />
                 <div className="create-nft-container">
-                  <button
-                    className="createbtn"
-                    onClick={nftCreate}
-                    type="button"
-                  >
-                    {isLoading ? (
-                      <span
-                        className="spinner-border spinner-border-sm"
-                        role="status"
-                      ></span>
-                    ) : (
-                      "Create NFT"
-                    )}
-                  </button>
+                  {NftAction && (
+                    <button
+                      className="createbtn"
+                      onClick={nftCreate}
+                      type="button"
+                    >
+                      {isLoading ? (
+                        <span
+                          className="spinner-border spinner-border-sm"
+                          role="status"
+                        ></span>
+                      ) : (
+                        "Create NFT"
+                      )}
+                    </button>
+                  )}
                 </div>
               </form>
             </div>

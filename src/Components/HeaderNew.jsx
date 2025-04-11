@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { useAccount } from "wagmi";
 import { isUserExist } from "../Helper/Web3";
 import toast from "react-hot-toast";
+import News from "./News";
 const Header = () => {
   const { address } = useAccount();
 
@@ -34,6 +35,7 @@ const Header = () => {
 
   return (
     <>
+      <News />
       <header className="header-new-container d-none d-md-block">
         <div className="header-new">
           <img

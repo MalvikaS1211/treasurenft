@@ -32,6 +32,7 @@ import SignIn from "../SignIn";
 import Direct from "../Direct";
 import Level from "../Level";
 import BlogPage from "../Blog";
+import BlogDetail from "../BlogDetail";
 
 function AppRoutes() {
   return (
@@ -60,6 +61,7 @@ function AppRoutes() {
           <Route path="/direct" element={<Direct />} />
           <Route path="/level" element={<Level />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
         </Routes>
       </Router>
     </>

@@ -291,3 +291,16 @@ export async function getLevelIncome(address) {
     console.log("Error getLevelIncome Admin:", error);
   }
 }
+
+export async function getNftStartStop(action, status) {
+  try {
+    const response = await axios.post(`${URLApi}/block-single-nft-creation`, {
+      action,
+      status,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getLoginCredential Admin:", error);
+  }
+}

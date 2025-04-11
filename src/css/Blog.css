@@ -11,22 +11,6 @@
   }
 }
 
-/* body {
-  font-family: "Inter", "Open Sans", "Roboto", "Helvetica", sans-serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: var(--gray-dark-color);
-  background-color: var(--main-bg-color);
-  position: relative;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  width: 100%;
-} */
 *:not(dialog) {
   box-sizing: border-box;
 }
@@ -39,21 +23,7 @@ a {
 p {
   margin: 0 0 1rem;
 }
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-  color: var(--heading-color);
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.015em;
-  line-height: 1.4em;
-  font-weight: 400;
-  text-wrap: balance;
-} */
+
 .btn-Fx {
   overflow: hidden;
   color: var(--heading-color);
@@ -70,10 +40,6 @@ h6 {
   position: relative;
   z-index: 10;
   font-weight: 700;
-}
-
-.btn-Fx:hover {
-  /* color: #fff; */
 }
 
 .btn-Fx:before {
@@ -175,7 +141,7 @@ h6 {
   border-bottom-left-radius: 0;
 }
 
-.article-blog:hover .article__thumbnail {
+.article-blog:hover .article__thumbnail .article-blog:active {
   opacity: 1;
   background-color: transparent;
 }
@@ -282,4 +248,96 @@ h6 {
 
 .article-blog:hover .article__excerpt {
   opacity: 1;
+}
+
+/* responsive */
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .content-container {
+    padding: 3rem 5rem;
+  }
+
+  .front-blog-list {
+    gap: 1.5rem;
+  }
+
+  .article-blog {
+    height: 300px;
+  }
+
+  .article__title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .content-container {
+    padding: 2rem 3rem;
+  }
+
+  .front-blog-list {
+    flex-direction: column;
+  }
+
+  .article-blog {
+    height: 280px;
+  }
+
+  .article__body {
+    height: 140px;
+  }
+
+  .article-blog:hover .article__body {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    padding: 2rem;
+  }
+
+  .article__title {
+    font-size: 1rem;
+  }
+
+  .btn-Fx {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  .front-blog-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .article__body {
+    height: 120px;
+    padding: 15px;
+  }
+
+  .article-blog:hover .article__body {
+    height: 200px;
+  }
+
+  .article__excerpt {
+    font-size: 13px;
+  }
+
+  .article__footer {
+    font-size: 12px;
+  }
+
+  .btn-Fx {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
 }

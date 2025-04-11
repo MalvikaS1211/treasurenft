@@ -42,7 +42,7 @@ export default function Dashboard() {
       [opBNB.id]: http(),
     },
   });
-  const [balanceData, setBalanceData] = useState([]);
+  const [balanceData, setBalanceData] = useState(0);
   async function fetchUserTokenBalance() {
     // console.log(config, address, 123);
     try {
@@ -70,85 +70,85 @@ export default function Dashboard() {
       name: "Seeker",
       color: "rgb(212, 139, 55)",
       subscription: "30",
-      range: "$200 ",
+      range: "$300 ",
     },
     {
       name: "Innovator",
       color: "rgb(209, 212, 55)",
       subscription: "55",
-      range: "$350 ",
+      range: "$700 ",
     },
     {
       name: "Tycoon",
       color: "rgb(55, 212, 133)",
       subscription: "90",
-      range: "$550",
+      range: "$1300",
     },
     {
       name: "Elite",
       color: "rgb(55, 212, 204)",
       subscription: "135",
-      range: "$800 ",
+      range: "$2200 ",
     },
     {
       name: "Visionary",
       color: "rgb(55, 149, 212)",
       subscription: "190",
-      range: "$1100",
+      range: "$3500",
     },
     {
       name: "Commander",
       color: "rgb(162, 55, 212)",
       subscription: "255",
-      range: "$1450 ",
+      range: "$5200 ",
     },
     {
       name: "Legend",
       color: "rgb(212, 55, 102)",
       subscription: "330",
-      range: "$1850",
+      range: "$7400",
     },
     {
       name: "Titan",
       color: "rgb(162, 55, 212)",
       subscription: "415",
-      range: "$2300 ",
+      range: "$10100",
     },
     {
       name: "Pioneer",
       color: "rgb(147, 99, 43)",
       subscription: "510",
-      range: "$2800 ",
+      range: "$13500",
     },
     {
       name: "Architect",
       color: "rgb(113, 114, 19)",
       subscription: "615",
-      range: "$3350 ",
+      range: "$17600",
     },
     {
       name: "Emperor",
       color: "rgb(230, 10, 76)",
       subscription: "725",
-      range: "$3900 ",
+      range: "$22500",
     },
     {
       name: "Master",
       color: "rgb(212, 55, 102)",
       subscription: "845",
-      range: "$4550",
+      range: "$28100",
     },
     {
       name: "King",
       color: "rgb(160, 212, 54)",
-      subscription: "980",
-      range: "$5250 ",
+      subscription: "990",
+      range: "$34700",
     },
     {
       name: "Grandmaster",
       color: "rgb(147, 99, 43)",
       subscription: "1125",
-      range: "$6750 ",
+      range: "$42200",
     },
   ];
 
@@ -288,7 +288,7 @@ export default function Dashboard() {
                           Number(dashboardData[9] || 0) +
                           Number(dashboardData[10] || 0)) / 1e18
                     ).toFixed(4)} */}
-                    {(
+                    {/* {(
                       allUsers?.userLastDealProfit ||
                       0 +
                         (allUsers !== undefined &&
@@ -298,6 +298,17 @@ export default function Dashboard() {
                           Number(dashboardData[9] || 0) +
                           Number(dashboardData[10] || 0)) /
                           1e18
+                    ).toFixed(4)} */}
+
+                    {(
+                      Number(allUsers?.userLastDealProfit || 0) +
+                      (allUsers?.tradingProfit?.length > 0
+                        ? Number(allUsers.tradingProfit[0]?.profitOrLoss || 0)
+                        : 0) +
+                      (Number(dashboardData[8] || 0) +
+                        Number(dashboardData[9] || 0) +
+                        Number(dashboardData[10] || 0)) /
+                        1e18
                     ).toFixed(4)}
 
                     {/* {(allUsers.tradingProfit > 0 &&
@@ -366,11 +377,12 @@ export default function Dashboard() {
                       <h6>Trade Income</h6>
                     </div>
                     <p>
-                      {allUsers?.tradingProfit?.length > 0 &&
-                        (
-                          Number(allUsers.tradingProfit[0]?.profitOrLoss) +
-                          Number(allUsers?.userLastDealProfit)
-                        ).toFixed(4)}
+                      {allUsers?.tradingProfit?.length > 0
+                        ? (
+                            Number(allUsers.tradingProfit[0]?.profitOrLoss) +
+                            Number(allUsers?.userLastDealProfit)
+                          ).toFixed(4)
+                        : "0"}
 
                       {/* {(
                         (Number(dashboardData?.[8] ?? 0) +
@@ -386,7 +398,9 @@ export default function Dashboard() {
                       <h6>Referral Income</h6>
                     </div>
                     <p>
-                      {(Number(dashboardData?.[8]) / 1e18).toFixed(4) ?? "0"}
+                      {Number(dashboardData?.[8])
+                        ? (Number(dashboardData?.[8]) / 1e18).toFixed(4)
+                        : "0"}
                       <span> USDT</span>
                     </p>
                   </div>
@@ -395,7 +409,9 @@ export default function Dashboard() {
                       <h6>Level Income</h6>
                     </div>
                     <p>
-                      {(Number(dashboardData?.[9]) / 1e18).toFixed(4) ?? "0"}
+                      {Number(dashboardData?.[9])
+                        ? (Number(dashboardData?.[9]) / 1e18).toFixed(4)
+                        : "0"}
                       <span> USDT</span>
                     </p>
                   </div>
@@ -406,7 +422,10 @@ export default function Dashboard() {
                       <h6>Royalty Income</h6>
                     </div>
                     <p>
-                      {(Number(dashboardData?.[10]) / 1e18).toFixed(4) ?? "0"}
+                      {Number(dashboardData?.[10])
+                        ? (Number(dashboardData[10]) / 1e18).toFixed(4)
+                        : "0"}
+
                       <span> USDT</span>
                     </p>
                   </div>
