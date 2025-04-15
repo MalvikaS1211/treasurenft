@@ -5,6 +5,7 @@ import axios from "axios";
 import {
   createNftVrsFn,
   getNftStartStop,
+  getStatus,
   getUserInfo,
 } from "../Helper/API_Functions";
 import {
@@ -20,6 +21,7 @@ export default function SingleNFT() {
   const [description, setDescription] = useState("");
   const [nftPrice, setNftPrice] = useState("");
   const [selectedFile, setSelectedFile] = useState("");
+  // const address = "0x9ccf0cd809843c239a6b6332985328a8b65dac7f";
   const { address } = useAccount();
   const [apiCall, setApiCall] = useState(false);
 
@@ -28,7 +30,7 @@ export default function SingleNFT() {
   const [isLoading, setIsLoading] = useState(false);
   const [totalNFTAmount, setTotalNFTAmount] = useState(0);
   const [allUsers, setAllUsers] = useState(null);
-
+  const [isAllowed, setIsAllowed] = useState(false);
   const UserInfo = async () => {
     try {
       const res = await getUserInfo(address);
@@ -38,8 +40,18 @@ export default function SingleNFT() {
       console.log(error);
     }
   };
+
+  const handleIsAllowedNFT = async () => {
+    try {
+      const res = await getStatus(address);
+      console.log(res, "getStatus");
+      console.log(res.data.isAllowed, "IsAllowed");
+      setIsAllowed(res.data.isAllowed);
+    } catch (error) {}
+  };
   useEffect(() => {
     UserInfo();
+    handleIsAllowedNFT();
   }, [address]);
 
   const handleFileChange = (e) => {
@@ -341,7 +353,7 @@ export default function SingleNFT() {
                   onChange={(e) => setDescription(e.target.value)}
                 />
                 <div className="create-nft-container">
-                  {NftAction && (
+                  {isAllowed === true && (
                     <button
                       className="createbtn"
                       onClick={nftCreate}

@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 export const URLApi = "https://magicverse.org/api";
 // export const URLApi = "http://192.168.1.10:8081/api";
 // export const URLApi = "http://192.168.1.161:8081/api";
+// export const URLApi = "http://localhost:8081/api";
 
 export async function getUserInfo(address) {
   try {
@@ -297,6 +298,18 @@ export async function getNftStartStop(action, status) {
     const response = await axios.post(`${URLApi}/block-single-nft-creation`, {
       action,
       status,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getLoginCredential Admin:", error);
+  }
+}
+
+export async function getStatus(user) {
+  try {
+    const response = await axios.post(`${URLApi}/getStatus`, {
+      user,
     });
 
     return response.data;
