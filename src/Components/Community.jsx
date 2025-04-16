@@ -17,6 +17,12 @@ export default function Community() {
   const [rootUser, setRootUser] = useState(null);
   const [prevStack, setPrevNext] = useState([]);
   const [nextStack, setNextStack] = useState([]);
+  const [level1, setleve1] = useState();
+  const [level2, setleve2] = useState();
+  const [level3, setleve3] = useState();
+  const [level4, setleve4] = useState();
+  const [level5, setleve5] = useState();
+  const [level6, setleve6] = useState();
 
   const handleSearch = () => {
     try {
@@ -39,11 +45,60 @@ export default function Community() {
           setPrevNext((prev) => [...prev, address]);
           setNextStack([]);
         }
+
         const data = res?.obj?.sort((a, b) => {
           return a.timestamp - b.timestamp;
         });
+        console.log(data.length, ":data");
+
         setTree(data?.slice(0, 6));
+        const level1P = data?.filter(
+          (it) => it.level === 1 && it.position === false
+        );
+
+        const level2p = data?.filter(
+          (it) => it.level === 1 && it.position === true
+        );
+        console.log(level1P[0]?.user, level2p[0]?.user, ":data");
         setRootUser(res.rootUserUniqueId);
+
+        setleve1(data?.filter((it) => it.level === 1 && it.position === false));
+        setleve2(data?.filter((it) => it.level === 1 && it.position === true)); //
+
+        setleve4(
+          data?.filter(
+            (it) =>
+              it.level === 2 &&
+              it.position === true &&
+              it.promoter == level1P[0]?.user
+          )
+        );
+        setleve3(
+          data?.filter(
+            (it) =>
+              it.level === 2 &&
+              it.position === false &&
+              it.promoter == level1P[0]?.user
+          )
+        );
+        if (level2p) {
+          setleve6(
+            data?.filter(
+              (it) =>
+                it.level === 2 &&
+                it.position === true &&
+                it.promoter == level2p[0].user
+            )
+          );
+          setleve5(
+            data?.filter(
+              (it) =>
+                it.level === 2 &&
+                it.position === false &&
+                it.promoter == level2p[0].user
+            )
+          );
+        }
       }
     } catch (error) {
       console.log(error);
@@ -191,12 +246,14 @@ export default function Community() {
                     className="community-branch-icon"
                     src={Favicon}
                     onClick={() => {
-                      handleTree(tree && tree[0]?.uniqueRandomId.toString());
+                      handleTree(
+                        level1 && level1[0]?.uniqueRandomId.toString()
+                      );
                     }}
                   />
-                  <p>{(tree && tree[0]?.uniqueRandomId) || "N/A"}</p>
+                  <p>{(level1 && level1[0]?.uniqueRandomId) || "N/A"}</p>
                   <button type="button" style={{ cursor: "pointer" }}>
-                    {tree && tree[0]?.uniqueRandomId ? "User" : "Vacant"}
+                    {level1 && level1[0]?.uniqueRandomId ? "User" : "Vacant"}
                   </button>
 
                   <div className="branch-connector2">
@@ -210,13 +267,15 @@ export default function Community() {
                           src={Favicon}
                           onClick={() => {
                             handleTree(
-                              tree && tree[2]?.uniqueRandomId.toString()
+                              level3 && level3[0]?.uniqueRandomId.toString()
                             );
                           }}
                         />
-                        <p>{(tree && tree[2]?.uniqueRandomId) || "N/A"}</p>
+                        <p>{(level3 && level3[0]?.uniqueRandomId) || "N/A"}</p>
                         <button style={{ cursor: "pointer" }}>
-                          {tree && tree[2]?.uniqueRandomId ? "User" : "Vacant"}
+                          {level3 && level3[0]?.uniqueRandomId
+                            ? "User"
+                            : "Vacant"}
                         </button>
                       </div>
                     </div>
@@ -228,13 +287,15 @@ export default function Community() {
                           src={Favicon}
                           onClick={() => {
                             handleTree(
-                              tree && tree[3]?.uniqueRandomId.toString()
+                              level4 && level4[0]?.uniqueRandomId.toString()
                             );
                           }}
                         />
-                        <p>{(tree && tree[3]?.uniqueRandomId) || "N/A"}</p>
+                        <p>{(level4 && level4[0]?.uniqueRandomId) || "N/A"}</p>
                         <button style={{ cursor: "pointer" }}>
-                          {tree && tree[3]?.uniqueRandomId ? "User" : "Vacant"}
+                          {level4 && level4[0]?.uniqueRandomId
+                            ? "User"
+                            : "Vacant"}
                         </button>
                       </div>
                     </div>
@@ -246,13 +307,14 @@ export default function Community() {
                     className="community-branch-icon"
                     src={Favicon}
                     onClick={() => {
-                      handleTree(tree && tree[1]?.uniqueRandomId.toString());
+                      handleTree(
+                        level2 && level2[0]?.uniqueRandomId.toString()
+                      );
                     }}
                   />
-                  <p>{(tree && tree[1]?.uniqueRandomId) || "N/A"}</p>
+                  <p>{(level2 && level2[0]?.uniqueRandomId) || "N/A"}</p>
                   <button style={{ cursor: "pointer" }}>
-                    {" "}
-                    {tree && tree[1]?.uniqueRandomId ? "User" : "Vacant"}
+                    {level2 && level2[0]?.uniqueRandomId ? "User" : "Vacant"}
                   </button>
                   <div className="branch-connector2">
                     <div className="line vertical"></div>
@@ -265,14 +327,15 @@ export default function Community() {
                           src={Favicon}
                           onClick={() => {
                             handleTree(
-                              tree && tree[4]?.uniqueRandomId.toString()
+                              level5 && level5[0]?.uniqueRandomId.toString()
                             );
                           }}
                         />
-                        <p>{(tree && tree[4]?.uniqueRandomId) || "N/A"}</p>
+                        <p>{(level5 && level5[0]?.uniqueRandomId) || "N/A"}</p>
                         <button style={{ cursor: "pointer" }}>
-                          {" "}
-                          {tree && tree[4]?.uniqueRandomId ? "User" : "Vacant"}
+                          {level5 && level5[0]?.uniqueRandomId
+                            ? "User"
+                            : "Vacant"}
                         </button>
                       </div>
                     </div>
@@ -284,14 +347,15 @@ export default function Community() {
                           src={Favicon}
                           onClick={() => {
                             handleTree(
-                              tree && tree[5]?.uniqueRandomId.toString()
+                              level6 && level6[0]?.uniqueRandomId.toString()
                             );
                           }}
                         />
-                        <p>{(tree && tree[5]?.uniqueRandomId) || "N/A"}</p>
+                        <p>{(level6 && level6[0]?.uniqueRandomId) || "N/A"}</p>
                         <button style={{ cursor: "pointer" }}>
-                          {" "}
-                          {tree && tree[5]?.uniqueRandomId ? "User" : "Vacant"}
+                          {level6 && level6[0]?.uniqueRandomId
+                            ? "User"
+                            : "Vacant"}
                         </button>
                       </div>
                     </div>
