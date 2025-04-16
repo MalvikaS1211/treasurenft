@@ -23,7 +23,7 @@ export default function Direct() {
     <>
       <div className="p-4 dashboardbg">
         <main className="content-dashboard">
-          <Navbar title="Direct" />
+          <Navbar title="Direct Income " />
           {/* <HeaderDashboard title="Direct" /> */}
           <div>
             <div style={{ height: "100vh" }}>
@@ -50,7 +50,7 @@ export default function Direct() {
                           </td>
                           <td>
                             {data?.timestamp
-                              ? moment(data.timestamp).format(
+                              ? moment(data.timestamp * 1000).format(
                                   "DD-MM-YYYY HH:mm:ss"
                                 )
                               : "N/A"}

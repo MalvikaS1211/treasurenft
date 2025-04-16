@@ -82,6 +82,7 @@ export default function DownLine() {
                       {/* <th>Activation Date</th> */}
                       <th>Level</th>
                       <th>Direct Team</th>
+                      <th>Package</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -91,13 +92,13 @@ export default function DownLine() {
                           <td>{index + 1}</td>
                           <td>{data?.uniqueRandomId}</td>
                           <td>
-                            {" "}
                             {data?.user.slice(0, 4)}...
                             {data?.user.slice(-7)}
                           </td>
                           {/* <td>{data.activationDate}</td> */}
                           <td>{data?.level}</td>
                           <td>{data?.totalDirectCount}</td>
+                          <td>{data?.packages}</td>
                         </tr>
                       ))
                     ) : (
