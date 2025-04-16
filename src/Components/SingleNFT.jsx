@@ -269,6 +269,19 @@ export default function SingleNFT() {
 
   return (
     <>
+      <div>
+        <p
+          className="pt-4"
+          style={{ textAlign: "justify", color: "black", fontSize: "16px" }}
+        >
+          <b> Note :</b> All NFTs must follow the ERC-721 standard. Content must
+          not include political or religious themes, nudity or explicit
+          material, violence, copyright violations, or any illegal or offensive
+          material. The image must be in a square aspect ratio. Any breach of
+          these guidelines will result in the permanent deactivation of NFT
+          creation rights.
+        </p>
+      </div>
       <div
         class="col-xl-3 col-lg-6 col-md-6 col-12"
         style={{ paddingTop: "40px" }}
