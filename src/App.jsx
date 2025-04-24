@@ -70,6 +70,8 @@ import "./MalvikaCss/responsive.css";
 import "./MalvikaCss/shortcodes.css";
 import "./MalvikaCss/style.css";
 import "./css/Blog.css";
+import "./css/chat.css";
+
 function App() {
   return (
     <>

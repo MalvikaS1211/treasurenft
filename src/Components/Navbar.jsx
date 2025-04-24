@@ -6,7 +6,9 @@ import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { BsMedium } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ConnectWallet from "./ConnectWallet";
-
+import Support from "../assets/Support.jpg";
+import { MdOutlineSupportAgent } from "react-icons/md";
+import ChatSupport from "./ChatSupport";
 export default function Navbar({ title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(
     window.innerWidth > 500 ? true : false
@@ -16,7 +18,7 @@ export default function Navbar({ title }) {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-
+  const [isChatOpen, setChatOpen] = useState(false);
   return (
     <>
       {/* Header Section */}
@@ -126,6 +128,13 @@ export default function Navbar({ title }) {
           <a href="https://www.reddit.com/user/magicverse666" target="_blank">
             <FaRedditAlien style={{ color: "black" }} />
           </a>
+        </div>
+
+        <h3 className="support-container">Support</h3>
+        <div className="support-icon relative">
+          <Link to="/support">
+            <MdOutlineSupportAgent style={{ fontSize: "30px" }} />
+          </Link>
         </div>
       </aside>
     </>

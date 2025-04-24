@@ -1998,7 +1998,7 @@ header {
   justify-content: center;
   gap: 15px;
   position: absolute;
-  bottom: 20px;
+  bottom: 82px;
 }
 
 .social-icons a {
@@ -2018,7 +2018,7 @@ header {
   color: black;
   font-weight: 400;
   font-size: 16px;
-  /* bottom: 65px; */
+  bottom: 116px;
 }
 
 .header-dashboard {
@@ -2440,4 +2440,38 @@ td {
   height: 30px;
   display: flex;
   align-items: center;
+}
+
+.support-container {
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-weight: 400;
+  font-size: 16px;
+  bottom: 48px;
+}
+.support-icon {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: absolute;
+  bottom: 12px;
+}
+
+.modal-label {
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.modal-header {
+  background-image: linear-gradient(
+    to right,
+    rgb(72 120 211) 0%,
+    rgb(107, 167, 231) 51%,
+    rgb(77 122 207) 100%
+  ) !important;
+}
+
+.msg-container {
+  border: 1px solid #7fb1e799 !important;
+  border-radius: 9px;
 }

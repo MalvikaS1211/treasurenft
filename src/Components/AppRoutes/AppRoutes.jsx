@@ -33,6 +33,7 @@ import Direct from "../Direct";
 import Level from "../Level";
 import BlogPage from "../Blog";
 import BlogDetail from "../BlogDetail";
+import ChatSupport from "../ChatSupport";
 
 function AppRoutes() {
   return (
@@ -62,6 +63,7 @@ function AppRoutes() {
           <Route path="/level" element={<Level />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/support" element={<ChatSupport />} />
         </Routes>
       </Router>
     </>

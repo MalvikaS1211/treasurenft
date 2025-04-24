@@ -1,0 +1,97 @@
+.notification {
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.notification:before {
+  content: "";
+  position: absolute;
+  inset-block-start: 55px;
+  inset-block-end: 64px;
+  border-inline-start: 1px dashed var(--primary04);
+  inset-inline-start: 49.05%;
+  margin-inline-start: -1px;
+}
+.border.border-primary.border-opacity-50 {
+  border-color: #6aa6e682 !important;
+}
+.border.border-opacity-50 {
+  --bs-border-opacity: 0.5 !important;
+}
+.border.border-primary {
+  border: 1px solid var(--primary-color) !important;
+  opacity: 1;
+}
+.notification .notification-body {
+  margin-inline-start: 0;
+  margin-inline-end: 4%;
+  background: var(--custom-white);
+  border: 1px solid var(--default-border);
+  box-shadow: 0 2px #768afe08;
+  position: relative;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.notification-body {
+  background: #fff !important;
+}
+.bg-primary-transparent,
+.bg-primary-transparent:hover {
+  background-color: rgba(var(--primary-rgb), 0.1) !important;
+  color: #5142fc !important;
+}
+
+.badge {
+  padding: 0.25rem 0.45rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  font-size: 11px;
+}
+.badge {
+  --bs-badge-padding-x: 0.65em;
+  --bs-badge-padding-y: 0.35em;
+  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-weight: 700;
+  --bs-badge-color: #fff;
+  --bs-badge-border-radius: var(--bs-border-radius);
+  display: inline-block;
+  padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+  font-size: var(--bs-badge-font-size);
+  font-weight: var(--bs-badge-font-weight);
+  line-height: 1;
+  color: var(--bs-badge-color);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--bs-badge-border-radius);
+}
+.notification .notification-time {
+  margin-block: 2.1rem;
+}
+.notification > li {
+  position: relative;
+  min-height: 50px;
+  padding: 12px 0;
+}
+.circular-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.msg-text {
+  font-size: 13px;
+  line-height: normal;
+}
+.accordian-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.accordian-icon.rotate {
+  transform: rotate(90deg);
+}

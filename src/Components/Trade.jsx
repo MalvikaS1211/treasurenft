@@ -89,12 +89,12 @@ export default function Trade() {
         })
       );
 
-      const smallValue = fetchedTrades.find((t) => t.price <= 27e18);
+      const smallValue = fetchedTrades.find((t) => t.price <= 20e18);
       const midValue = fetchedTrades.find(
-        (t) => t.price > 27e18 && t.price <= 54e18
+        (t) => t.price > 20e18 && t.price <= 30e18
       );
 
-      const largeValue = fetchedTrades.find((t) => t.price > 54e18);
+      const largeValue = fetchedTrades.find((t) => t.price > 30e18);
 
       const finalData = [smallValue, midValue, largeValue].filter(Boolean); // avoid pushing undefined
       console.log(finalData);
@@ -211,17 +211,19 @@ export default function Trade() {
             error: "Nft Buy failed!",
           });
           setIsLoading(false);
-          setTimeout(() => {
-            setIsFetch(!isfetch);
-            UserInfo();
-          }, 2000);
         }
         setIsLoading(false);
       }
+      setTimeout(() => {
+        setIsFetch(!isfetch);
+      }, 2000);
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
       console.log(error);
+      setTimeout(() => {
+        setIsFetch(!isfetch);
+      }, 2000);
     }
   };
   const [allUsers, setAllUsers] = useState(null);
