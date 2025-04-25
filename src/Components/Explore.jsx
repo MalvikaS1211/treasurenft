@@ -133,6 +133,7 @@ export default function Expore() {
   const ShowOwnedNFTs = async () => {
     try {
       const resNFT = await getOwnedNFTs(address);
+      console.log(resNFT, "ownedNFT");
       const data = await Promise.all(
         resNFT.usercurrOwnedNfts.map(async (it) => {
           try {

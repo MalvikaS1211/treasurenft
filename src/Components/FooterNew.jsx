@@ -38,8 +38,8 @@ export default function FooterNew() {
                   <li>
                     <a>Authors</a>
                   </li>
-                  <li>
-                    <a>Collection</a>
+                  <li id="collections">
+                    <a href="#collections">Collection</a>
                   </li>
                   <li>
                     <a>Author Profile</a>
@@ -59,8 +59,8 @@ export default function FooterNew() {
                   <li>
                     <a>Help &amp; Support</a>
                   </li>
-                  <li>
-                    <a>Live Auctions</a>
+                  <li id="liveAution">
+                    <a href="#liveAution">Live Auctions</a>
                   </li>
                   <li>
                     <a>Item Details</a>

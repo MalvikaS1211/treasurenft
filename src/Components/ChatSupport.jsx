@@ -132,7 +132,7 @@ export default function ChatSupport() {
             </div>
           </div>
 
-          <div style={{ height: "100vh" }}>
+          <div>
             <div className="accordion-wrapper">
               {/* Accordion Item 1 - Rank Income Table */}
               <div className="accordion-item">
@@ -154,6 +154,7 @@ export default function ChatSupport() {
                           <td>24/4/25</td>
                           <td>Success</td>
                           <td>
+                            Show
                             <MdOutlineKeyboardArrowRight
                               onClick={() => toggleAccordion(0)}
                               style={{ fontSize: "20px", cursor: "pointer" }}
@@ -214,7 +215,7 @@ export default function ChatSupport() {
                                     <span className="avatar avatar-lg online"></span>
                                   </div>
                                   <div className="flex-fill ">
-                                    <h5 className="mb-1 fs-15 fw-medium text-dark">
+                                    <h5 className="mb-1 fs-4 fw-medium">
                                       Admin
                                     </h5>
                                     <p className="mb-0 text-muted msg-text">
@@ -247,7 +248,7 @@ export default function ChatSupport() {
                                     <span className="avatar avatar-lg online"></span>
                                   </div>
                                   <div className="flex-fill ">
-                                    <h5 className="mb-1 fs-15 fw-medium text-dark">
+                                    <h5 className="mb-1  fw-medium  fs-4">
                                       User
                                     </h5>
                                     <p className="mb-0 text-muted msg-text">

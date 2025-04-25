@@ -232,89 +232,91 @@ export default function DashboardNew() {
         </div>
       </section>
       <LiveAuction />
-      <section className="tf-section popular-collection">
-        <div className="themesflat-container">
-          <div className="row">
-            <div class="col-md-12">
-              <div class="heading-live-auctions">
-                <h2 class="tf-title pb-22 text-left">Popular Collection</h2>
-                {/* <a class="exp style2" href="/explore-03">
+      <div id="collections">
+        <section className="tf-section popular-collection">
+          <div className="themesflat-container">
+            <div className="row">
+              <div class="col-md-12">
+                <div class="heading-live-auctions">
+                  <h2 class="tf-title pb-22 text-left">Popular Collection</h2>
+                  {/* <a class="exp style2" href="/explore-03">
                   EXPLORE MORE
                 </a> */}
+                </div>
               </div>
-            </div>
-            <div className="col-md-12 col-lg-4 col-sm-12">
-              <div className="collection">
-                <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
-                  <div className="swiper-scrollbar">
+              <div className="col-md-12 col-lg-4 col-sm-12">
+                <div className="collection">
+                  <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                    <div className="swiper-scrollbar">
+                      <div
+                        className="swiper-scrollbar-drag"
+                        style={{
+                          transform: "translate3d(0px, 0px, 0px)",
+                          width: "346.963px",
+                        }}
+                      ></div>
+                    </div>
                     <div
-                      className="swiper-scrollbar-drag"
-                      style={{
-                        transform: "translate3d(0px, 0px, 0px)",
-                        width: "346.963px",
-                      }}
-                    ></div>
-                  </div>
-                  <div
-                    className="swiper-wrapper"
-                    id="swiper-wrapper-8504f942b2bafbdf"
-                    style={{ transform: "translate3d(0px, 0px, 0px)" }}
-                  >
-                    <div
-                      class="swiper-slide swiper-slide-active"
-                      role="group"
-                      aria-label="1 / 12"
-                      // style={{ width: "450px", marginRight: "30px" }}
+                      className="swiper-wrapper"
+                      id="swiper-wrapper-8504f942b2bafbdf"
+                      style={{ transform: "translate3d(0px, 0px, 0px)" }}
                     >
-                      <div class="swiper-container show-shadow carousel4 button-arow-style">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="slider-item">
-                              <div class="sc-card-collection style-3">
-                                <a>
-                                  <div class="media-images-box">
-                                    <div class="top-media">
-                                      <img src={collection1} alt="Axies" />
-                                      <img src={collection2} alt="Axies" />
+                      <div
+                        class="swiper-slide swiper-slide-active"
+                        role="group"
+                        aria-label="1 / 12"
+                        // style={{ width: "450px", marginRight: "30px" }}
+                      >
+                        <div class="swiper-container show-shadow carousel4 button-arow-style">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="slider-item">
+                                <div class="sc-card-collection style-3">
+                                  <a>
+                                    <div class="media-images-box">
+                                      <div class="top-media">
+                                        <img src={collection1} alt="Axies" />
+                                        <img src={collection2} alt="Axies" />
+                                      </div>
+                                      <div class="bottom-media">
+                                        <img src={collection3} alt="Axies" />
+                                        <img src={collection4} alt="Axies" />
+                                        <img src={collection5} alt="Axies" />
+                                      </div>
                                     </div>
-                                    <div class="bottom-media">
-                                      <img src={collection3} alt="Axies" />
-                                      <img src={collection4} alt="Axies" />
-                                      <img src={collection5} alt="Axies" />
-                                    </div>
-                                  </div>
-                                </a>
-                                <div class="card-bottom">
-                                  <div class="author">
-                                    <div class="sc-author-box style-2">
-                                      <div class="author-avatar">
-                                        <img
-                                          src={creativeArt}
-                                          alt=""
-                                          class="avatar"
-                                        />
-                                        <div class="badge">
-                                          <TiTick
-                                            style={{ fontSize: "15px" }}
+                                  </a>
+                                  <div class="card-bottom">
+                                    <div class="author">
+                                      <div class="sc-author-box style-2">
+                                        <div class="author-avatar">
+                                          <img
+                                            src={creativeArt}
+                                            alt=""
+                                            class="avatar"
                                           />
+                                          <div class="badge">
+                                            <TiTick
+                                              style={{ fontSize: "15px" }}
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="content-custom">
+                                        <h4>
+                                          <a>Creative Art Collection</a>
+                                        </h4>
+                                        <div class="infor">
+                                          <span>Created by</span>
+                                          <span class="name">
+                                            <a>Ralph Garraway</a>
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="content-custom">
-                                      <h4>
-                                        <a>Creative Art Collection</a>
-                                      </h4>
-                                      <div class="infor">
-                                        <span>Created by</span>
-                                        <span class="name">
-                                          <a>Ralph Garraway</a>
-                                        </span>
-                                      </div>
+                                    <div class="wishlist-button public heart">
+                                      <IoIosHeartEmpty size={18} />
+                                      <span class="number-like">100</span>
                                     </div>
-                                  </div>
-                                  <div class="wishlist-button public heart">
-                                    <IoIosHeartEmpty size={18} />
-                                    <span class="number-like">100</span>
                                   </div>
                                 </div>
                               </div>
@@ -326,79 +328,79 @@ export default function DashboardNew() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-md-12 col-lg-4 col-sm-12">
-              <div className="collection">
-                <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
-                  <div className="swiper-scrollbar">
+              <div className="col-md-12 col-lg-4 col-sm-12">
+                <div className="collection">
+                  <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                    <div className="swiper-scrollbar">
+                      <div
+                        className="swiper-scrollbar-drag"
+                        style={{
+                          transform: "translate3d(0px, 0px, 0px)",
+                          width: "346.963px",
+                        }}
+                      ></div>
+                    </div>
                     <div
-                      className="swiper-scrollbar-drag"
-                      style={{
-                        transform: "translate3d(0px, 0px, 0px)",
-                        width: "346.963px",
-                      }}
-                    ></div>
-                  </div>
-                  <div
-                    className="swiper-wrapper"
-                    id="swiper-wrapper-8504f942b2bafbdf"
-                    style={{ transform: "translate3d(0px, 0px, 0px)" }}
-                  >
-                    <div
-                      class="swiper-slide swiper-slide-active"
-                      role="group"
-                      aria-label="1 / 12"
-                      // style={{ width: "450px", marginRight: "30px" }}
+                      className="swiper-wrapper"
+                      id="swiper-wrapper-8504f942b2bafbdf"
+                      style={{ transform: "translate3d(0px, 0px, 0px)" }}
                     >
-                      <div class="swiper-container show-shadow carousel4 button-arow-style">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="slider-item">
-                              <div class="sc-card-collection style-3">
-                                <a>
-                                  <div class="media-images-box">
-                                    <div class="top-media">
-                                      <img src={collection6} alt="Axies" />
-                                      <img src={collection7} alt="Axies" />
+                      <div
+                        class="swiper-slide swiper-slide-active"
+                        role="group"
+                        aria-label="1 / 12"
+                        // style={{ width: "450px", marginRight: "30px" }}
+                      >
+                        <div class="swiper-container show-shadow carousel4 button-arow-style">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="slider-item">
+                                <div class="sc-card-collection style-3">
+                                  <a>
+                                    <div class="media-images-box">
+                                      <div class="top-media">
+                                        <img src={collection6} alt="Axies" />
+                                        <img src={collection7} alt="Axies" />
+                                      </div>
+                                      <div class="bottom-media">
+                                        <img src={collection8} alt="Axies" />
+                                        <img src={collection4} alt="Axies" />
+                                        <img src={collection9} alt="Axies" />
+                                      </div>
                                     </div>
-                                    <div class="bottom-media">
-                                      <img src={collection8} alt="Axies" />
-                                      <img src={collection4} alt="Axies" />
-                                      <img src={collection9} alt="Axies" />
-                                    </div>
-                                  </div>
-                                </a>
-                                <div class="card-bottom">
-                                  <div class="author">
-                                    <div class="sc-author-box style-2">
-                                      <div class="author-avatar">
-                                        <img
-                                          src={MonicaLucas}
-                                          alt=""
-                                          class="avatar"
-                                        />
-                                        <div class="badge">
-                                          <TiTick
-                                            style={{ fontSize: "15px" }}
+                                  </a>
+                                  <div class="card-bottom">
+                                    <div class="author">
+                                      <div class="sc-author-box style-2">
+                                        <div class="author-avatar">
+                                          <img
+                                            src={MonicaLucas}
+                                            alt=""
+                                            class="avatar"
                                           />
+                                          <div class="badge">
+                                            <TiTick
+                                              style={{ fontSize: "15px" }}
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="content-custom">
+                                        <h4>
+                                          <a>Colorful Abstract</a>
+                                        </h4>
+                                        <div class="infor">
+                                          <span>Created by</span>
+                                          <span class="name">
+                                            <a>Ralph Garraway</a>
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="content-custom">
-                                      <h4>
-                                        <a>Colorful Abstract</a>
-                                      </h4>
-                                      <div class="infor">
-                                        <span>Created by</span>
-                                        <span class="name">
-                                          <a>Ralph Garraway</a>
-                                        </span>
-                                      </div>
+                                    <div class="wishlist-button public heart">
+                                      <IoIosHeartEmpty size={18} />
+                                      <span class="number-like">100</span>
                                     </div>
-                                  </div>
-                                  <div class="wishlist-button public heart">
-                                    <IoIosHeartEmpty size={18} />
-                                    <span class="number-like">100</span>
                                   </div>
                                 </div>
                               </div>
@@ -410,79 +412,79 @@ export default function DashboardNew() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-md-12 col-lg-4 col-sm-12">
-              <div className="collection">
-                <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
-                  <div className="swiper-scrollbar">
+              <div className="col-md-12 col-lg-4 col-sm-12">
+                <div className="collection">
+                  <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+                    <div className="swiper-scrollbar">
+                      <div
+                        className="swiper-scrollbar-drag"
+                        style={{
+                          transform: "translate3d(0px, 0px, 0px)",
+                          width: "346.963px",
+                        }}
+                      ></div>
+                    </div>
                     <div
-                      className="swiper-scrollbar-drag"
-                      style={{
-                        transform: "translate3d(0px, 0px, 0px)",
-                        width: "346.963px",
-                      }}
-                    ></div>
-                  </div>
-                  <div
-                    className="swiper-wrapper"
-                    id="swiper-wrapper-8504f942b2bafbdf"
-                    style={{ transform: "translate3d(0px, 0px, 0px)" }}
-                  >
-                    <div
-                      class="swiper-slide swiper-slide-active"
-                      role="group"
-                      aria-label="1 / 12"
-                      // style={{ width: "450px", marginRight: "30px" }}
+                      className="swiper-wrapper"
+                      id="swiper-wrapper-8504f942b2bafbdf"
+                      style={{ transform: "translate3d(0px, 0px, 0px)" }}
                     >
-                      <div class="swiper-container show-shadow carousel4 button-arow-style">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="slider-item">
-                              <div class="sc-card-collection style-3">
-                                <a>
-                                  <div class="media-images-box">
-                                    <div class="top-media">
-                                      <img src={Trimphant} alt="Axies" />
-                                      <img src={collection2} alt="Axies" />
+                      <div
+                        class="swiper-slide swiper-slide-active"
+                        role="group"
+                        aria-label="1 / 12"
+                        // style={{ width: "450px", marginRight: "30px" }}
+                      >
+                        <div class="swiper-container show-shadow carousel4 button-arow-style">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="slider-item">
+                                <div class="sc-card-collection style-3">
+                                  <a>
+                                    <div class="media-images-box">
+                                      <div class="top-media">
+                                        <img src={Trimphant} alt="Axies" />
+                                        <img src={collection2} alt="Axies" />
+                                      </div>
+                                      <div class="bottom-media">
+                                        <img src={cryptoegg} alt="Axies" />
+                                        <img src={space} alt="Axies" />
+                                        <img src={collection7} alt="Axies" />
+                                      </div>
                                     </div>
-                                    <div class="bottom-media">
-                                      <img src={cryptoegg} alt="Axies" />
-                                      <img src={space} alt="Axies" />
-                                      <img src={collection7} alt="Axies" />
-                                    </div>
-                                  </div>
-                                </a>
-                                <div class="card-bottom">
-                                  <div class="author">
-                                    <div class="sc-author-box style-2">
-                                      <div class="author-avatar">
-                                        <img
-                                          src={MattRamos}
-                                          alt=""
-                                          class="avatar"
-                                        />
-                                        <div class="badge">
-                                          <TiTick
-                                            style={{ fontSize: "15px" }}
+                                  </a>
+                                  <div class="card-bottom">
+                                    <div class="author">
+                                      <div class="sc-author-box style-2">
+                                        <div class="author-avatar">
+                                          <img
+                                            src={MattRamos}
+                                            alt=""
+                                            class="avatar"
                                           />
+                                          <div class="badge">
+                                            <TiTick
+                                              style={{ fontSize: "15px" }}
+                                            />
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="content-custom">
+                                        <h4>
+                                          <a>Modern Art Collection</a>
+                                        </h4>
+                                        <div class="infor">
+                                          <span>Created by</span>
+                                          <span class="name">
+                                            <a>Ralph Garraway</a>
+                                          </span>
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="content-custom">
-                                      <h4>
-                                        <a>Modern Art Collection</a>
-                                      </h4>
-                                      <div class="infor">
-                                        <span>Created by</span>
-                                        <span class="name">
-                                          <a>Ralph Garraway</a>
-                                        </span>
-                                      </div>
+                                    <div className="wishlist-button public heart">
+                                      <IoIosHeartEmpty size={18} />
+                                      <span class="number-like">100</span>
                                     </div>
-                                  </div>
-                                  <div className="wishlist-button public heart">
-                                    <IoIosHeartEmpty size={18} />
-                                    <span class="number-like">100</span>
                                   </div>
                                 </div>
                               </div>
@@ -496,8 +498,9 @@ export default function DashboardNew() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+
       <section className="tf-section top-seller">
         <div className="themesflat-container">
           <div className="row">

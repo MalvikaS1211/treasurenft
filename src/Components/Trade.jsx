@@ -5,6 +5,7 @@ import creativeArt from "../assets/creativeArt.jpg";
 import FooterNew from "./FooterNew";
 import HeaderNew from "./HeaderNew";
 import {
+  getOwnedNFTs,
   getReadyForBuyFn,
   getTradeUserFn,
   getUserCreatedNftsFn,
@@ -24,6 +25,10 @@ export default function Trade() {
   const [allTrade, setAllTrade] = useState([]);
   const [isfetch, setIsFetch] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  const [allUsers, setAllUsers] = useState(null);
+
+  const [assetValue, setAssetValue] = useState(0);
   const tokenApp1 = async (amt) => {
     try {
       const appres = approveToken(amt);
@@ -95,6 +100,10 @@ export default function Trade() {
       );
 
       const largeValue = fetchedTrades.find((t) => t.price > 30e18);
+      const check = fetchedTrades.find(
+        (t) => t.price >= 30e18 && t.price >= 50e18
+      );
+      console.log(check, ":::check");
 
       const finalData = [smallValue, midValue, largeValue].filter(Boolean); // avoid pushing undefined
       console.log(finalData);
@@ -161,6 +170,7 @@ export default function Trade() {
   //     console.log("Error fetching user-created NFTs:", error);
   //   }
   // };
+  const [balance, getBalance] = useState(0);
   const BuyNft = async (
     initialPrice,
     title,
@@ -173,6 +183,7 @@ export default function Trade() {
       setIsLoading(true);
 
       const userBalance = await fetchUserTokenBalance(address);
+
       console.log(userBalance, totalAmount, "::::");
       if (Number(userBalance) < Number(totalAmount) / 1e18) {
         setIsLoading(false);
@@ -226,8 +237,6 @@ export default function Trade() {
       }, 2000);
     }
   };
-  const [allUsers, setAllUsers] = useState(null);
-
   const UserInfo = async () => {
     try {
       const res = await getUserInfo(address);
@@ -238,13 +247,40 @@ export default function Trade() {
     }
   };
 
+  const totalAssets = async () => {
+    const res = await getOwnedNFTs(address);
+
+    const filteredAssets = res.usercurrOwnedNfts.filter((item) => {
+      const nftPrice = item.nftPrice / 1e18;
+      console.log("filteredAssets nftPrice", nftPrice);
+
+      return nftPrice;
+    });
+
+    const totalNftPrice = filteredAssets.reduce((acc, item) => {
+      return acc + BigInt(item.nftPrice);
+    }, BigInt(0));
+
+    console.log(totalNftPrice.toString(), "total-owned");
+
+    const totalAssetValue = Number(totalNftPrice) / 1e18;
+
+    setAssetValue(totalAssetValue);
+  };
+
+  const getWalletFund = async () => {
+    const res = await fetchUserTokenBalance(address);
+    console.log(res, "getWalletFund");
+    getBalance(res);
+  };
   useEffect(() => {
     if (address) {
       UserInfo();
       getTrade();
+      totalAssets();
+      getWalletFund();
     }
   }, [address, isfetch]);
-  console.log(address, "userAdd");
   return (
     <>
       <HeaderNew />
@@ -262,6 +298,32 @@ export default function Trade() {
               <h1 class="heading text-center mt-0" style={{ color: "black" }}>
                 Buy Item
               </h1>
+            </div>
+          </div>
+        </div>
+        <div className="p-4">
+          <div
+            class="total-grid"
+            style={{ marginBottom: "3%", marginTop: "3%" }}
+          >
+            <div class="total-card" style={{ background: "#c2e8ff" }}>
+              <div class="sub-total">
+                <h6>Available Fund</h6>
+              </div>
+              <p>
+                {parseFloat(balance).toFixed(4)}
+
+                <span> USDT</span>
+              </p>
+            </div>
+            <div class="total-card" style={{ background: "#c2e8ff" }}>
+              <div class="sub-total">
+                <h6>Assets Value</h6>
+              </div>
+              <p>
+                {assetValue.toFixed(4)}
+                <span> USDT</span>
+              </p>
             </div>
           </div>
         </div>
