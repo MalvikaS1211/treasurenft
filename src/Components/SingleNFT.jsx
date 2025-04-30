@@ -84,7 +84,7 @@ export default function SingleNFT() {
       console.log("handleNFTPrice".error);
     }
   };
-  const SingleNFTpriceOptions = [15, 50];
+  const SingleNFTpriceOptions = [15, 50, 100];
   // const SingleNFTpriceOptions = [
   //   50, 100, 150, 200, 250, 350, 500, 650, 750, 850, 1000, 1150, 1250, 1350,
   //   1500,

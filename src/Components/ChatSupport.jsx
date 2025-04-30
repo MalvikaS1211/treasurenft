@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import ConnectWallet from "./ConnectWallet";
-import { getDirectIncome } from "../Helper/API_Functions";
+import { createNewTicketFn, getDirectIncome } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
 import moment from "moment";
-import ChatSupportModal from "./ChatSupportModal";
 import { IoMdClose } from "react-icons/io";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import AdminIcon from "../assets/MattRamos.jpg";
@@ -14,6 +13,8 @@ export default function ChatSupport() {
   const { address } = useAccount();
   const [tabledata, setTableData] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [name, setName] = useState("");
+  const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
   const handleTableData = async () => {
@@ -32,13 +33,23 @@ export default function ChatSupport() {
   const toggleAccordion = (index) => {
     setActiveIndex((prev) => (prev === index ? null : index));
   };
+
+  const handleNewTicket = async () => {
+    const res = await createNewTicketFn();
+    console.log("handleNewTicket", res);
+  };
+
+  const tableArray = [
+    { uniqueId: 1, Subject: "NFT", UpdateDate: "24/4/25", Status: "Success" },
+    { uniqueId: 2, Subject: "NFT2", UpdateDate: "29/4/25", Status: "Success" },
+  ];
   return (
     <>
       <div className="p-4 dashboardbg">
         <main className="content-dashboard">
           <Navbar title="Support " />
 
-          <div className="d-flex justify-content-end pb-4">
+          <div className="d-flex justify-content-end pb-4 ticket-btn">
             <button
               type="button"
               data-bs-toggle="modal"
@@ -68,56 +79,39 @@ export default function ChatSupport() {
                       aria-label="Close"
                       style={{ fontSize: "large" }}
                     />
-                    {/* <button
-                      type="button"
-                      class="close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">&times;</span>
-                    </button> */}
                   </div>
                   <div className="p-5 ">
-                    {/* Name */}
                     <div>
                       <label className="modal-label ">Your Name</label>
                       <input
                         type="text"
-                        maxLength={30}
-                        // value={name}
-                        // onChange={(e) => setName(e.target.value)}
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
                         className="mt-1 w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-emerald-500"
                         placeholder="Enter Your Name"
                       />
-                      <p className="text-xs text-gray-500 text-right">
-                        {/* {name.length}/30 */}
-                      </p>
+                      <p className="text-xs text-gray-500 text-right"></p>
                     </div>
 
-                    {/* Subject */}
                     <div>
                       <label className="modal-label">Subject</label>
                       <input
                         type="text"
-                        maxLength={30}
-                        // value={subject}
-                        // onChange={(e) => setSubject(e.target.value)}
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
                         className="mt-1 w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-emerald-500"
                         placeholder="Enter subject"
                       />
-                      <p className="text-xs text-gray-500 text-right">
-                        {/* {subject.length}/30 */}
-                      </p>
+                      <p className="text-xs text-gray-500 text-right"></p>
                     </div>
 
-                    {/* Message */}
                     <div>
                       <label className="modal-label">Message</label>
                       <textarea
                         rows="4"
                         maxLength={500}
-                        // value={message}
-                        // onChange={(e) => setMessage(e.target.value)}
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
                         className="mt-1 w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-emerald-500"
                         placeholder="Enter your message"
                       />
@@ -134,7 +128,6 @@ export default function ChatSupport() {
 
           <div>
             <div className="accordion-wrapper">
-              {/* Accordion Item 1 - Rank Income Table */}
               <div className="accordion-item">
                 <div className="accordion-header">
                   <div className="accordion-body rank-income">
@@ -148,22 +141,25 @@ export default function ChatSupport() {
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td>1</td>
-                          <td>NFT</td>
-                          <td>24/4/25</td>
-                          <td>Success</td>
-                          <td>
-                            Show
-                            <MdOutlineKeyboardArrowRight
-                              onClick={() => toggleAccordion(0)}
-                              style={{ fontSize: "20px", cursor: "pointer" }}
-                              className={`accordian-icon ${
-                                activeIndex === 0 ? "rotate" : ""
-                              }`}
-                            />
-                          </td>
-                        </tr>
+                        {tableArray.map((data, index) => (
+                          <tr>
+                            <td>{data.uniqueId}</td>
+                            <td>{data.Subject}</td>
+                            <td>{data.UpdateDate}</td>
+                            <td>{data.Status}</td>
+                            <td>
+                              {activeIndex === index ? "Hide" : "Show"}
+                              <MdOutlineKeyboardArrowRight
+                                onClick={() => toggleAccordion(0)}
+                                style={{ fontSize: "20px", cursor: "pointer" }}
+                                className={`accordian-icon ${
+                                  activeIndex === 0 ? "rotate" : ""
+                                }`}
+                              />
+                            </td>
+                          </tr>
+                        ))}
+
                         {/* {tabledata?.length > 0 ? (
                           tabledata.map((data, index) => (
                             <tr key={index}>

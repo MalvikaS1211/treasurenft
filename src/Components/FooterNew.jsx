@@ -35,15 +35,15 @@ export default function FooterNew() {
               <div class="widget widget-menu style-1">
                 <h5 class="title-widget">My Account</h5>
                 <ul>
-                  <li>
+                  {/* <li>
                     <a>Authors</a>
-                  </li>
+                  </li> */}
                   <li id="collections">
                     <a href="#collections">Collection</a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a>Author Profile</a>
-                  </li>
+                  </li> */}
                   <li>
                     <Link to="/NFTcreation">
                       <a>Create Item</a>
@@ -59,15 +59,20 @@ export default function FooterNew() {
                   <li>
                     <a>Help &amp; Support</a>
                   </li>
-                  <li id="liveAution">
-                    <a href="#liveAution">Live Auctions</a>
+                  <li id="liveAuctionMenu">
+                    <a href="#liveAuctionMenu">Live Auctions</a>
                   </li>
                   <li>
+                    <Link to="/buyNft">
+                      <a>Buy Item</a>
+                    </Link>
+                  </li>
+                  {/* <li>
                     <a>Item Details</a>
-                  </li>
-                  <li>
+                  </li> */}
+                  {/* <li>
                     <a>Activity</a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -80,15 +85,15 @@ export default function FooterNew() {
                       <a>Explore</a>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <a>Contact Us</a>
-                  </li>
+                  </li> */}
                   <li>
                     <a>Our Blog</a>
                   </li>
-                  <li>
+                  {/* <li>
                     <a>FAQ</a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

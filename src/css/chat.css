@@ -78,3 +78,24 @@
 .accordian-icon.rotate {
   transform: rotate(90deg);
 }
+
+@media (min-width: 300px) and (max-width: 500px) {
+  .ticket-btn {
+    width: 91%;
+  }
+}
+@media (min-width: 500px) and (max-width: 600px) {
+  .ticket-btn {
+    width: 93%;
+  }
+}
+@media (min-width: 880px) and (max-width: 1080px) {
+  .ticket-btn {
+    width: 94%;
+  }
+}
+@media (max-width: 768px) {
+  .ticket-btn {
+    width: 95%;
+  }
+}

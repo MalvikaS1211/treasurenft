@@ -100,13 +100,13 @@ export default function Trade() {
       );
 
       const largeValue = fetchedTrades.find((t) => t.price > 30e18);
-      const check = fetchedTrades.find(
-        (t) => t.price >= 30e18 && t.price >= 50e18
-      );
-      console.log(check, ":::check");
+      // const check = fetchedTrades.find(
+      //   (t) => t.price >= 30e18 && t.price >= 50e18
+      // );
+      // console.log(check, ":::check");
 
       const finalData = [smallValue, midValue, largeValue].filter(Boolean); // avoid pushing undefined
-      console.log(finalData);
+      console.log(fetchedTrades);
       setAllTrade(finalData);
     } catch (error) {
       console.error("Error fetching user-created NFTs:", error);
@@ -246,26 +246,25 @@ export default function Trade() {
       console.log(error);
     }
   };
-
   const totalAssets = async () => {
-    const res = await getOwnedNFTs(address);
+    try {
+      const res = await getOwnedNFTs(address);
+      const ownedNFTs = res.usercurrOwnedNfts || [];
 
-    const filteredAssets = res.usercurrOwnedNfts.filter((item) => {
-      const nftPrice = item.nftPrice / 1e18;
-      console.log("filteredAssets nftPrice", nftPrice);
+      const filteredNFTs = ownedNFTs.filter((item) => item?.newPrice);
 
-      return nftPrice;
-    });
+      const totalNftPrice = filteredNFTs.reduce(
+        (acc, item) => acc + BigInt(item.newPrice),
+        BigInt(0)
+      );
 
-    const totalNftPrice = filteredAssets.reduce((acc, item) => {
-      return acc + BigInt(item.nftPrice);
-    }, BigInt(0));
+      const totalAssetValue = Number(totalNftPrice) / 1e18;
 
-    console.log(totalNftPrice.toString(), "total-owned");
-
-    const totalAssetValue = Number(totalNftPrice) / 1e18;
-
-    setAssetValue(totalAssetValue);
+      console.log(totalAssetValue, "Total Asset Value");
+      setAssetValue(totalAssetValue);
+    } catch (error) {
+      console.error("Error calculating total assets:", error);
+    }
   };
 
   const getWalletFund = async () => {
