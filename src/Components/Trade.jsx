@@ -25,6 +25,7 @@ export default function Trade() {
   const [allTrade, setAllTrade] = useState([]);
   const [isfetch, setIsFetch] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [apiLoading, setApiLoading] = useState(false);
 
   const [allUsers, setAllUsers] = useState(null);
 
@@ -53,6 +54,8 @@ export default function Trade() {
   };
   const getTrade = async () => {
     try {
+      setApiLoading(true);
+
       const { userTrades } = await getTradeUserFn(address);
 
       const fetchedTrades = await Promise.all(
@@ -107,69 +110,14 @@ export default function Trade() {
 
       const finalData = [smallValue, midValue, largeValue].filter(Boolean); // avoid pushing undefined
       console.log(fetchedTrades);
-      setAllTrade(finalData);
+      setAllTrade(fetchedTrades);
+      setApiLoading(false);
     } catch (error) {
+      setApiLoading(false);
       console.error("Error fetching user-created NFTs:", error);
     }
   };
 
-  // const getTrade = async () => {
-  //   try {
-  //     const resNFT = await getTradeUserFn(address);
-  //     const data = await Promise.all(
-  //       resNFT.userTrades.map(async (it) => {
-  //         try {
-  //           const res = await getNfts(it.tokenId);
-  //           const metadataUrl = res[2].replace(
-  //             "ipfs://",
-  //             "https://ipfs.io/ipfs/"
-  //           );
-  //           const metadataRes = await axios.get(metadataUrl);
-  //           const metadata = metadataRes.data;
-  //           const imageUrl = metadata.image.replace(
-  //             "ipfs://",
-  //             "https://ipfs.io/ipfs/"
-  //           );
-  //           return {
-  //             ...it,
-  //             title: metadata.name,
-  //             description: metadata.description,
-  //             img: imageUrl,
-  //             price: res[4],
-  //             owner: res[6],
-  //             metadataURI: res[2],
-  //             creator: res[3],
-  //           };
-  //         } catch (err) {
-  //           console.log(
-  //             `Error fetching metadata for Token ID ${it.tokenId}:`,
-  //             err
-  //           );
-  //           return {
-  //             ...it,
-  //             title: "",
-  //             description: "Error loading",
-  //             img: "",
-  //           };
-  //         }
-  //       })
-  //     );
-  //     console.log(data, "data");
-  //     const smallValue = data.filter((it) => {
-  //       return it.price >= 27 * 1e18 && it.price <= 54 * 1e18;
-  //     });
-  //     console.log(smallValue, "smallValue");
-  //     const midValue = data.filter((it) => {
-  //       return it.price >= 54 * 1e18;
-  //     });
-  //     console.log(midValue, "midValue");
-  //     const finalData = [smallValue[0], midValue[0]];
-  //     console.log(finalData);
-  //     setAllTrade(finalData);
-  //   } catch (error) {
-  //     console.log("Error fetching user-created NFTs:", error);
-  //   }
-  // };
   const [balance, getBalance] = useState(0);
   const BuyNft = async (
     initialPrice,
@@ -179,6 +127,8 @@ export default function Trade() {
     tokenId,
     totalAmount
   ) => {
+    console.log("totalAmount", totalAmount);
+    return;
     try {
       setIsLoading(true);
 
@@ -370,113 +320,127 @@ export default function Trade() {
             </div>
           </div>
         </div>
-
-        <section className="tf-section today-pick">
-          <div className="themesflat-container">
-            <div className="row">
-              {allTrade.length > 0 ? (
-                allTrade?.map((nft, index) => {
-                  if (nft.price > 0) {
-                    return (
-                      <div
-                        key={index}
-                        className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
-                      >
+        {!apiLoading ? (
+          <section className="tf-section today-pick">
+            <div className="themesflat-container">
+              <div className="row">
+                {allTrade.length > 0 ? (
+                  allTrade?.map((nft, index) => {
+                    if (nft.price > 0) {
+                      return (
                         <div
-                          className="sc-card-product explode style2 mg-bt"
-                          style={{ border: "1px solid rgb(81, 66, 252)" }}
+                          key={index}
+                          className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
                         >
-                          <div className="card-media">
-                            <a
-                              href="#"
-                              style={{
-                                height: "288px",
-                                width: "288px",
-                                display: "flex",
-                              }}
-                            >
-                              <img
-                                src={
-                                  nft.img.startsWith("ipfs://")
-                                    ? nft.img.replace(
-                                        "ipfs://",
-                                        "https://ipfs.io/ipfs/"
-                                      )
-                                    : nft.img
-                                }
-                                alt="NFT"
-                                style={{ height: "100%", width: "100%" }}
-                              />
-                            </a>
-                            {nft.owner != address && (
-                              <div
-                                class="button-place-bid"
-                                onClick={() => {
-                                  BuyNft(
-                                    nft.price,
-                                    nft.title,
-                                    nft.description,
-                                    nft.metadataURI,
-                                    nft.tokenId,
-                                    nft.price
-                                  );
+                          <div
+                            className="sc-card-product explode style2 mg-bt"
+                            style={{ border: "1px solid rgb(81, 66, 252)" }}
+                          >
+                            <div className="card-media">
+                              <a
+                                href="#"
+                                style={{
+                                  height: "288px",
+                                  width: "288px",
+                                  display: "flex",
                                 }}
                               >
-                                {!isLoading && (
-                                  <button
-                                    className="sc-button style-place-bid style bag fl-button pri-3"
-                                    onClick={() => ReadyForBuy(nft.tokenId)}
-                                    type="button"
-                                  >
-                                    {/* <FaShoppingBag color="black" /> */}
-                                    Buy
-                                  </button>
-                                )}
-                              </div>
-                            )}
-                          </div>
-                          <div className="card-title">
-                            <h5>
-                              <a href="#">{nft.title}</a>
-                            </h5>
-                          </div>
-                          <div className="meta-info">
-                            <div className="author">
-                              <div className="avatar">
-                                <img src={creativeArt} alt="Creator Avatar" />
-                              </div>
-                              <div className="info">
-                                <span>Creator</span>
-                                <h6>
-                                  <a href="#">{nft.creator?.slice(-9)}</a>
-                                </h6>
-                              </div>
+                                <img
+                                  src={
+                                    nft.img.startsWith("ipfs://")
+                                      ? nft.img.replace(
+                                          "ipfs://",
+                                          "https://ipfs.io/ipfs/"
+                                        )
+                                      : nft.img
+                                  }
+                                  alt="NFT"
+                                  style={{ height: "100%", width: "100%" }}
+                                />
+                              </a>
+                              {nft.owner != address && (
+                                <div
+                                  class="button-place-bid"
+                                  onClick={() => {
+                                    BuyNft(
+                                      nft.price,
+                                      nft.title,
+                                      nft.description,
+                                      nft.metadataURI,
+                                      nft.tokenId,
+                                      Number(nft.price)
+                                    );
+                                  }}
+                                >
+                                  {!isLoading && (
+                                    <button
+                                      className="sc-button style-place-bid style bag fl-button pri-3"
+                                      onClick={() => ReadyForBuy(nft.tokenId)}
+                                      type="button"
+                                    >
+                                      {/* <FaShoppingBag color="black" /> */}
+                                      Buy
+                                    </button>
+                                  )}
+                                </div>
+                              )}
                             </div>
-                            <div className="tags">bsc</div>
-                          </div>
-                          <div className="card-bottom style-explode">
-                            <div className="price">
-                              <span>Current Price</span>
-                              <div className="price-details">
-                                <h5>
-                                  {(Number(nft?.price) / 1e18).toFixed(4)} USDT
-                                </h5>
+                            <div className="card-title">
+                              <h5>
+                                <a href="#">{nft.title}</a>
+                              </h5>
+                            </div>
+                            <div className="meta-info">
+                              <div className="author">
+                                <div className="avatar">
+                                  <img src={creativeArt} alt="Creator Avatar" />
+                                </div>
+                                <div className="info">
+                                  <span>Creator</span>
+                                  <h6>
+                                    <a href="#">{nft.creator?.slice(-9)}</a>
+                                  </h6>
+                                </div>
+                              </div>
+                              <div className="tags">bsc</div>
+                            </div>
+                            <div className="card-bottom style-explode">
+                              <div className="price">
+                                <span>Current Price</span>
+                                <div className="price-details">
+                                  <h5>
+                                    {(Number(nft?.price) / 1e18).toFixed(4)}{" "}
+                                    USDT
+                                  </h5>
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    );
-                  }
-                })
-              ) : (
-                <div className="no-data-container">
-                  <div className="no-data-available">No data available</div>
-                </div>
-              )}
+                      );
+                    }
+                  })
+                ) : (
+                  <div className="no-data-container">
+                    <div className="no-data-available">No data available</div>
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        ) : (
+          <>
+            {" "}
+            <div class="d-flex justify-content-center">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            <p className=" w-100" style={{ textAlign: "center" }}>
+              Please wait We are loading data
+            </p>
+          </>
+        )}
       </div>
       <div className="mt-4">
         <FooterNew />

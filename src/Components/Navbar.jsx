@@ -130,12 +130,12 @@ export default function Navbar({ title }) {
           </a>
         </div>
 
-        {/* <h3 className="support-container">Support</h3>
+        <h3 className="support-container">Support</h3>
         <div className="support-icon relative">
           <Link to="/support">
             <MdOutlineSupportAgent style={{ fontSize: "30px" }} />
           </Link>
-        </div> */}
+        </div>
       </aside>
     </>
   );

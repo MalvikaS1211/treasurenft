@@ -2,10 +2,11 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const URLApi = "https://magicverse.org/api";
+// export const URLApi = "https://magicverse.org/api";
 // export const URLApi = "http://192.168.1.214:8081/api";
 // export const URLApi = "http://192.168.1.161:8081/api";
 // export const URLApi = "http://localhost:8081/api";
+export const URLApi = "http://192.168.1.79:8081/api";
 
 export async function getUserInfo(address) {
   try {
@@ -327,5 +328,65 @@ export async function createNewTicketFn(user) {
     return response.data;
   } catch (error) {
     console.log("Error getLoginCredential Admin:", error);
+  }
+}
+
+export async function generateTicketFn(
+  UserAddress,
+  UserName,
+  Subject,
+  Message
+) {
+  try {
+    const response = await axios.post(`${URLApi}/generateTicket`, {
+      UserAddress,
+      UserName,
+      Subject,
+      Message,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error generateTicket Admin:", error);
+  }
+}
+
+export async function createMessageFn(Sender, Receiver, Message, TicketId) {
+  try {
+    const response = await axios.post(`${URLApi}/createMessage`, {
+      Sender,
+      Receiver,
+      Message,
+      TicketId,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error createMessageFn Admin:", error);
+  }
+}
+
+export async function getTicketByUserAddressFn(UserAddress) {
+  try {
+    const response = await axios.post(`${URLApi}/getTicketByUserAddress`, {
+      UserAddress,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getTicketByUserAddressFn Admin:", error);
+  }
+}
+
+export async function getAllTicket(TicketId, UserAddress) {
+  try {
+    const response = await axios.post(`${URLApi}/getAllTickets`, {
+      id: TicketId,
+      userAddress: UserAddress,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getAllTicket Admin:", error);
   }
 }

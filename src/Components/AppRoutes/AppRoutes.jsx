@@ -34,6 +34,7 @@ import Level from "../Level";
 import BlogPage from "../Blog";
 import BlogDetail from "../BlogDetail";
 import ChatSupport from "../ChatSupport";
+import ChatConversation from "../ChatConversation";
 
 function AppRoutes() {
   return (
@@ -64,6 +65,7 @@ function AppRoutes() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/support" element={<ChatSupport />} />
+          <Route path="/support-chat" element={<ChatConversation />} />
         </Routes>
       </Router>
     </>
