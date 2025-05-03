@@ -6,9 +6,9 @@ import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { BsMedium } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ConnectWallet from "./ConnectWallet";
-import Support from "../assets/Support.jpg";
+
 import { MdOutlineSupportAgent } from "react-icons/md";
-import ChatSupport from "./ChatSupport";
+
 export default function Navbar({ title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(
     window.innerWidth > 500 ? true : false
@@ -18,7 +18,7 @@ export default function Navbar({ title }) {
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-  const [isChatOpen, setChatOpen] = useState(false);
+
   return (
     <>
       {/* Header Section */}
@@ -114,19 +114,19 @@ export default function Navbar({ title }) {
         <h3 className="follow-us">Follow Us On</h3>
         <div className="social-icons">
           <a href="https://t.me/magicverse_6669" target="_blank">
-            <i className="fab fa-telegram-plane" style={{ color: "black" }}></i>
+            <i className="fab fa-telegram-plane text-black"></i>
           </a>
           <a href="https://x.com/magic_verse_666" target="_blank">
-            <i className="fab fa-x-twitter" style={{ color: "black" }}></i>
+            <i className="fab fa-x-twitter text-black"></i>
           </a>
           <a href="http://medium.com/@magicverse666" target="_blank">
-            <BsMedium style={{ color: "black" }} />
+            <BsMedium className="text-black" />
           </a>
           <a href="https://www.instagram.com/magic_verse_666" target="_blank">
-            <i className="fab fa-instagram" style={{ color: "black" }}></i>
+            <i className="fab fa-instagram text-black"></i>
           </a>
           <a href="https://www.reddit.com/user/magicverse666" target="_blank">
-            <FaRedditAlien style={{ color: "black" }} />
+            <FaRedditAlien className="text-black" />
           </a>
         </div>
 

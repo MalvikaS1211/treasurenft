@@ -281,26 +281,6 @@ export default function Dashboard() {
                   <h6>My Total Income</h6>
                   <p className=" p-2">
                     {/* {(
-                      (allUsers?.tradingProfit?.length > 0 &&
-                        Number(allUsers?.tradingProfit[0]?.profitOrLoss || 0) +
-                          Number(allUsers?.userLastDealProfit || 0) +
-                          Number(dashboardData[8] || 0) +
-                          Number(dashboardData[9] || 0) +
-                          Number(dashboardData[10] || 0)) / 1e18
-                    ).toFixed(4)} */}
-                    {/* {(
-                      allUsers?.userLastDealProfit ||
-                      0 +
-                        (allUsers !== undefined &&
-                          allUsers?.tradingProfit.length > 0 &&
-                          Number(allUsers?.tradingProfit[0]?.profitOrLoss)) +
-                        (Number(dashboardData[8] || 0) +
-                          Number(dashboardData[9] || 0) +
-                          Number(dashboardData[10] || 0)) /
-                          1e18
-                    ).toFixed(4)} */}
-
-                    {(
                       Number(allUsers?.userLastDealProfit || 0) +
                       (allUsers?.tradingProfit?.length > 0
                         ? Number(allUsers.tradingProfit[0]?.profitOrLoss || 0)
@@ -309,6 +289,18 @@ export default function Dashboard() {
                         Number(dashboardData[9] || 0) +
                         Number(dashboardData[10] || 0)) /
                         1e18
+                    ).toFixed(4)} */}
+
+                    {Math.max(
+                      Number(allUsers?.userLastDealProfit || 0) +
+                        (allUsers?.tradingProfit?.length > 0
+                          ? Number(allUsers.tradingProfit[0]?.profitOrLoss || 0)
+                          : 0) +
+                        (Number(dashboardData[8] || 0) +
+                          Number(dashboardData[9] || 0) +
+                          Number(dashboardData[10] || 0)) /
+                          1e18,
+                      0
                     ).toFixed(4)}
 
                     {/* {(allUsers.tradingProfit > 0 &&
@@ -377,19 +369,20 @@ export default function Dashboard() {
                       <h6>Trade Income</h6>
                     </div>
                     <p>
-                      {allUsers?.tradingProfit?.length > 0
+                      {/* {allUsers?.tradingProfit?.length > 0
                         ? (
                             Number(allUsers.tradingProfit[0]?.profitOrLoss) +
                             Number(allUsers?.userLastDealProfit)
                           ).toFixed(4)
+                        : "0"} */}
+                      {allUsers?.tradingProfit?.length > 0
+                        ? Math.max(
+                            Number(allUsers.tradingProfit[0]?.profitOrLoss) +
+                              Number(allUsers?.userLastDealProfit),
+                            0
+                          ).toFixed(4)
                         : "0"}
 
-                      {/* {(
-                        (Number(dashboardData?.[8] ?? 0) +
-                          Number(dashboardData?.[9] ?? 0) +
-                          Number(dashboardData?.[10] ?? 0)) /
-                        1e18
-                      ).toFixed(4)} */}
                       <span> USDT</span>
                     </p>
                   </div>

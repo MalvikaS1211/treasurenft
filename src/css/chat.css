@@ -61,8 +61,8 @@
   padding: 12px 0;
 }
 .circular-img {
-  width: 50px !important;
-  height: 50px !important;
+  width: 40px !important;
+  height: 40px !important;
   border-radius: 50% !important;
   object-fit: cover;
 }
@@ -90,14 +90,24 @@
     width: 93%;
   }
 }
-@media (min-width: 880px) and (max-width: 1080px) {
+@media (max-width: 800px) {
   .ticket-btn {
-    width: 94%;
+    width: 90%;
+  }
+}
+@media (max-width: 1024px) {
+  .ticket-btn {
+    width: 90%;
   }
 }
 @media (max-width: 768px) {
   .ticket-btn {
     width: 95%;
+  }
+}
+@media (max-width: 767px) {
+  .ticket-btn {
+    width: 89%;
   }
 }
 .msg-container {
@@ -122,5 +132,5 @@
 
 .textAreaBox {
   height: 40%;
-  font-size: 15px;
+  font-size: 15px !important;
 }

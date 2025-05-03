@@ -2457,7 +2457,9 @@ td {
   position: absolute;
   bottom: 12px;
 }
-
+.support-icon:hover {
+  color: black;
+}
 .modal-label {
   font-size: 15px;
   padding-bottom: 10px;

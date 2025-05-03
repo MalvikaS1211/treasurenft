@@ -299,7 +299,7 @@ export default function Header({ style, Logo }) {
               </form>
 
               <div class="mt-3 fw-bold">
-                Don't have an account?{" "}
+                Don't have an account?
                 <a href="#" class="sign-up">
                   Sign up
                 </a>

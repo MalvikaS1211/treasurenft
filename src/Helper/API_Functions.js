@@ -2,11 +2,11 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-// export const URLApi = "https://magicverse.org/api";
+export const URLApi = "https://magicverse.org/api";
 // export const URLApi = "http://192.168.1.214:8081/api";
 // export const URLApi = "http://192.168.1.161:8081/api";
 // export const URLApi = "http://localhost:8081/api";
-export const URLApi = "http://192.168.1.79:8081/api";
+// export const URLApi = "http://192.168.1.79:8081/api";
 
 export async function getUserInfo(address) {
   try {
@@ -106,16 +106,6 @@ export async function getReadyForBuyFn(
   tokenId,
   totalAmount
 ) {
-  // console.log(
-  //   userAddress,
-  //   initialPrice,
-  //   title,
-  //   description,
-  //   metadataURI,
-  //   tokenId,
-  //   totalAmount,
-  //   "in api call"
-  // );
   try {
     if (!title) {
       return;

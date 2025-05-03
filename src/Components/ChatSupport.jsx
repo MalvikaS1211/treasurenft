@@ -40,7 +40,7 @@ export default function ChatSupport() {
 
   return (
     <>
-      <div className="p-4 dashboardbg" style={{ height: "100%" }}>
+      <div className="p-4 dashboardbg" style={{ minHeight: "100vh" }}>
         <main className="content-dashboard">
           <Navbar title="Support " />
 
@@ -118,6 +118,7 @@ export default function ChatSupport() {
                       onClick={() => {
                         generateTicket();
                         toast.success("Ticket Generated!");
+                        getTicketByUserAddress();
                       }}
                       data-bs-dismiss="modal"
                       aria-label="Close"
@@ -140,7 +141,7 @@ export default function ChatSupport() {
                         <tr>
                           <th>Ticket Id</th>
                           <th>Subject of the query</th>
-                          <th>Ticket Generate Date</th>
+                          <th>Ticket Generated Date</th>
                           <th>Status of the request</th>
                         </tr>
                       </thead>
@@ -149,20 +150,23 @@ export default function ChatSupport() {
                           <tr
                             key={data._id}
                             style={{ cursor: "pointer" }}
-                            onClick={() =>
-                              navigate(
-                                `/support-chat?msgId=${data._id}&userAddress=${data.UserAddress}`
-                              )
-                            }
+                            onClick={(e) => {
+                              if (data?.Status === true) {
+                                navigate(
+                                  `/support-chat?msgId=${data._id}&userAddress=${data.UserAddress}`
+                                );
+                              } else {
+                                e.stopPropagation();
+                                toast.error("Window is Closed!");
+                              }
+                            }}
                           >
                             <td>{index + 1}</td>
                             <td>{data.Subject}</td>
                             <td>
-                              {moment(data.createdAt).format(
-                                "M/D/YYYY h:mm:ss A"
-                              )}
+                              {moment(data.createdAt).format("M/D/YYYY h:mm A")}
                             </td>
-                            <td>{data.Status == true ? "Open" : "Close"}</td>
+                            <td>{data?.Status == true ? "Open" : "Close"}</td>
                           </tr>
                         ))}
                       </tbody>

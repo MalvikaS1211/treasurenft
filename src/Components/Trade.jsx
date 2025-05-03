@@ -128,7 +128,7 @@ export default function Trade() {
     totalAmount
   ) => {
     console.log("totalAmount", totalAmount);
-    return;
+
     try {
       setIsLoading(true);
 

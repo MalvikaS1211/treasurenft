@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 import { createMessageFn, getAllTicket } from "../Helper/API_Functions";
 import moment from "moment";
 import toast from "react-hot-toast";
-
+import { IoSend } from "react-icons/io5";
 export default function ChatConversation() {
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState("");
@@ -50,7 +50,7 @@ export default function ChatConversation() {
   };
 
   return (
-    <div className="p-4 dashboardbg" style={{ height: "100%" }}>
+    <div className="p-4 dashboardbg" style={{ minHeight: "100vh" }}>
       <main className="content-dashboard">
         <Navbar title="Chat " />
         <div className="col-xxl-11">
@@ -81,13 +81,13 @@ export default function ChatConversation() {
                             {/* <h5 className="mb-1 fs-4 fw-medium">
                               {msg.Sender}
                             </h5> */}
-                            <p className="mb-0 text-muted msg-text">
+                            <p className="mb-4 text-muted msg-text text-break">
                               {msg.Message}
                             </p>
                           </div>
                           <div className="msg-date-div">
                             <span className="badge bg-primary-transparent">
-                              {moment(msg.Time).format("DD-MM-YYYY h:mm:ss A")}
+                              {moment(msg.Time).format("DD-MM-YYYY h:mm A")}
                             </span>
                           </div>
                         </div>
@@ -114,6 +114,7 @@ export default function ChatConversation() {
                   value={message}
                   placeholder="Enter your Message"
                   onChange={(e) => setMessage(e.target.value)}
+                  style={{ fontSize: "16px" }}
                 ></textarea>
               </div>
               <div className="d-flex justify-content-end pt-4 gap-3">
@@ -125,7 +126,7 @@ export default function ChatConversation() {
                 >
                   Send
                 </button>
-
+                {/* <IoSend onClick={handleSendMsg} style={{ fontSize: "25px" }} /> */}
                 <button
                   type="button"
                   className="button"

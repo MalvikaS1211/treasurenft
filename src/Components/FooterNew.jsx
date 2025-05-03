@@ -7,7 +7,9 @@ import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { IoIosArrowUp } from "react-icons/io";
 import { Link } from "react-router-dom";
 import { BsMedium } from "react-icons/bs";
+import { useAccount } from "wagmi";
 export default function FooterNew() {
+  const { address } = useAccount();
   return (
     <div>
       <footer id="footer" class="footer-light-style clearfix bg-style">
@@ -57,7 +59,11 @@ export default function FooterNew() {
                 <h5 class="title-widget">Resources</h5>
                 <ul>
                   <li>
-                    <a>Help &amp; Support</a>
+                    {address && (
+                      <Link to="/support">
+                        <a>Help &amp; Support</a>
+                      </Link>
+                    )}
                   </li>
                   <li id="liveAuctionMenu">
                     <a href="#liveAuctionMenu">Live Auctions</a>
@@ -112,7 +118,6 @@ export default function FooterNew() {
                       name="email"
                       class="email"
                       type="email"
-                      //   placeholder="info@yourgmail.com"
                       required=""
                     />
                     <button id="submit" name="submit" type="submit">
