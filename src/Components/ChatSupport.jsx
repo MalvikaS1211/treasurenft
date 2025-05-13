@@ -140,6 +140,7 @@ export default function ChatSupport() {
                       <thead>
                         <tr>
                           <th>Ticket Id</th>
+                          <th>User</th>
                           <th>Subject of the query</th>
                           <th>Ticket Generated Date</th>
                           <th>Status of the request</th>
@@ -162,6 +163,11 @@ export default function ChatSupport() {
                             }}
                           >
                             <td>{index + 1}</td>
+                            <td>{`${data.UserAddress.slice(
+                              0,
+                              5
+                            )}...${data.UserAddress.slice(-6)}`}</td>
+
                             <td>{data.Subject}</td>
                             <td>
                               {moment(data.createdAt).format("M/D/YYYY h:mm A")}

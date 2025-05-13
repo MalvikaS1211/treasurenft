@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import bg1 from "../assets/bg1.png";
 import bg2 from "../assets/bg2.png";
-import { FaGripfire } from "react-icons/fa";
 import bg3 from "../assets/bg3.png";
 import bg4 from "../assets/bg4.png";
 import bg5 from "../assets/bg5.png";
@@ -35,12 +34,11 @@ import cyberprimal from "../assets/cyberprimal.jpg";
 import CyberDoberman from "../assets/CyberDoberman.jpg";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { FaShoppingBag } from "react-icons/fa";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LiveAuction from "./LiveAuction";
-import { Link } from "react-router-dom";
-import { jsPDF } from "jspdf";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
 import PDF from "../assets/Pdf/MagicVersePDf.pdf";
 import { GoDownload } from "react-icons/go";
 import toast from "react-hot-toast";
@@ -49,11 +47,21 @@ import collectionBtn from "../assets/collectionBtn.png";
 import AddNftIcon from "../assets/AddNftIcon.png";
 import ListIcon from "../assets/ListIcon.png";
 
-const handleDownload = () => {
-  toast.success("PDF downloaded successfully!");
-};
-
 export default function DashboardNew() {
+  const handleDownload = () => {
+    toast.success("PDF downloaded successfully!");
+  };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <>
       <div class="mainslider">

@@ -1,15 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BiSolidSend } from "react-icons/bi";
 import Logo from "../assets/Logo.png";
 
 import { FaRedditAlien, FaWhatsapp } from "react-icons/fa";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { IoIosArrowUp } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsMedium } from "react-icons/bs";
 import { useAccount } from "wagmi";
+import { isUserExist } from "../Helper/Web3";
+import toast from "react-hot-toast";
 export default function FooterNew() {
   const { address } = useAccount();
+  const [userExist, setUserExist] = useState(false);
+  const userExistFn = async () => {
+    try {
+      if (address) {
+        const resUserExist = await isUserExist(address);
+        console.log(resUserExist, "resUserExist");
+        setUserExist(resUserExist);
+      }
+    } catch (error) {
+      console.error("Error checking user existence:", error);
+    }
+  };
+  useEffect(() => {
+    if (address) {
+      userExistFn();
+    } else toast.error("Please connect your wallet");
+  }, [address, userExist]);
+
+  const navigate = useNavigate();
+
+  const handleCollection = () => {
+    navigate("/", { state: { scrollTo: "collections" } });
+  };
+  const handleLiveAuction = () => {
+    navigate("/", { state: { scrollTo: "liveAuctionMenu" } });
+  };
   return (
     <div>
       <footer id="footer" class="footer-light-style clearfix bg-style">
@@ -40,16 +68,21 @@ export default function FooterNew() {
                   {/* <li>
                     <a>Authors</a>
                   </li> */}
-                  <li id="collections">
-                    <a href="#collections">Collection</a>
+                  <li>
+                    <a href="#collections" onClick={handleCollection}>
+                      Collection
+                    </a>
                   </li>
                   {/* <li>
                     <a>Author Profile</a>
                   </li> */}
+
                   <li>
-                    <Link to="/NFTcreation">
-                      <a>Create Item</a>
-                    </Link>
+                    {address && userExist ? (
+                      <Link to="/NFTcreation">Create Item</Link>
+                    ) : (
+                      <></>
+                    )}
                   </li>
                 </ul>
               </div>
@@ -59,20 +92,25 @@ export default function FooterNew() {
                 <h5 class="title-widget">Resources</h5>
                 <ul>
                   <li>
-                    {address && (
-                      <Link to="/support">
-                        <a>Help &amp; Support</a>
-                      </Link>
+                    {address && userExist ? (
+                      <Link to="/support">Help &amp; Support</Link>
+                    ) : (
+                      <></>
                     )}
                   </li>
                   <li id="liveAuctionMenu">
-                    <a href="#liveAuctionMenu">Live Auctions</a>
+                    <a href="#liveAuctionMenu" onClick={handleLiveAuction}>
+                      Live Auctions
+                    </a>
                   </li>
-                  <li>
-                    <Link to="/buyNft">
-                      <a>Buy Item</a>
-                    </Link>
-                  </li>
+                  {address && userExist ? (
+                    <li>
+                      <Link to="/buyNft">Buy Item</Link>
+                    </li>
+                  ) : (
+                    <></>
+                  )}
+
                   {/* <li>
                     <a>Item Details</a>
                   </li> */}
@@ -87,16 +125,18 @@ export default function FooterNew() {
                 <h5 class="title-widget">Company</h5>
                 <ul>
                   <li>
-                    <Link to="/explore">
-                      <a>Explore</a>
-                    </Link>
+                    {address && userExist ? (
+                      <Link to="/explore">Explore</Link>
+                    ) : (
+                      <></>
+                    )}
                   </li>
                   {/* <li>
                     <a>Contact Us</a>
                   </li> */}
-                  <li>
+                  {/* <li>
                     <a>Our Blog</a>
-                  </li>
+                  </li> */}
                   {/* <li>
                     <a>FAQ</a>
                   </li> */}
