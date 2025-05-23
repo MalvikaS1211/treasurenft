@@ -13,7 +13,7 @@ export default function DownLine() {
 
   const handleTableData = async () => {
     try {
-      const res = await getTotalTeam(address, 1, 10, selectedLevel);
+      const res = await getTotalTeam(address, 1, 70, selectedLevel);
       setTableData(res.userTeam);
       console.log("Downline", res);
     } catch (error) {

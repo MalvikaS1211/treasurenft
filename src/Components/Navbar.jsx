@@ -6,9 +6,9 @@ import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { BsMedium } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ConnectWallet from "./ConnectWallet";
-
+import { FaFacebook } from "react-icons/fa";
 import { MdOutlineSupportAgent } from "react-icons/md";
-
+import { FaYoutube } from "react-icons/fa";
 export default function Navbar({ title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(
     window.innerWidth > 500 ? true : false
@@ -122,11 +122,26 @@ export default function Navbar({ title }) {
           <a href="http://medium.com/@magicverse666" target="_blank">
             <BsMedium className="text-black" />
           </a>
-          <a href="https://www.instagram.com/magic_verse_666" target="_blank">
+          <a
+            href="https://www.instagram.com/magicverse_official?igsh=M2l3enZ4NGpyN2pl"
+            target="_blank"
+          >
             <i className="fab fa-instagram text-black"></i>
           </a>
           <a href="https://www.reddit.com/user/magicverse666" target="_blank">
             <FaRedditAlien className="text-black" />
+          </a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61576285054414"
+            target="_blank"
+          >
+            <FaFacebook className="text-black" />
+          </a>
+          <a
+            href="https://youtube.com/@magicverse-c4o?si=IkOqSaJgKGxw2-7S"
+            target="_blank"
+          >
+            <FaYoutube className="text-black" />
           </a>
         </div>
 

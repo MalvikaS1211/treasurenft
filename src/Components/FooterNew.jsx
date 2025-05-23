@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import { BiSolidSend } from "react-icons/bi";
 import Logo from "../assets/Logo.png";
 
-import { FaRedditAlien, FaWhatsapp } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaRedditAlien,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { IoIosArrowUp } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
@@ -207,6 +212,22 @@ export default function FooterNew() {
                         target="_blank"
                       >
                         <FaInstagram />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/profile.php?id=61576285054414"
+                        target="_blank"
+                      >
+                        <FaFacebook />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://youtube.com/@magicverse-c4o?si=IkOqSaJgKGxw2-7S"
+                        target="_blank"
+                      >
+                        <FaYoutube />
                       </a>
                     </li>
                   </ul>

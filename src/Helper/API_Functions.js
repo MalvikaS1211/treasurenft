@@ -183,7 +183,7 @@ export async function getRoyalty(address, page = 1, limit = 52) {
   }
 }
 
-export async function getTotalTeam(address, page = 1, limit = 10, level) {
+export async function getTotalTeam(address, page, limit, level) {
   try {
     const response = await axios.post(`${URLApi}/total-team`, {
       userAddress: address,
