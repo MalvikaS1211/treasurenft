@@ -2429,7 +2429,7 @@ td {
 }
 
 .marquee-div {
-  background: #000;
+  background: #221f7f;
   color: cornsilk;
   padding: 5px;
   font-size: 18px;
@@ -2476,4 +2476,9 @@ td {
 .msg-container {
   border: 1px solid #7fb1e799 !important;
   border-radius: 9px;
+}
+
+.time-heading {
+  padding-bottom: 2%;
+  text-align: center;
 }

@@ -57,7 +57,7 @@ export default function Trade() {
       setApiLoading(true);
 
       const { userTrades } = await getTradeUserFn(address);
-
+      console.log(userTrades, "userTrades");
       const fetchedTrades = await Promise.all(
         userTrades.map(async (trade) => {
           try {

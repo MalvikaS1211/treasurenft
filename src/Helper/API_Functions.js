@@ -90,10 +90,14 @@ export async function getTradeUserFn(address) {
     const response = await axios.post(`${URLApi}/get-all-trades-for-user`, {
       userAddress: address,
     });
-
+    console.log(response, "response in getTradeUserFn");
     return response.data;
   } catch (error) {
-    console.log("Error getTradeUserFn :", error);
+    const errorMessage =
+      error?.response?.data?.message || error.message || "Some error occured";
+    toast.error(errorMessage);
+    console.log("Error getTradeUserFn :", errorMessage);
+    return error;
   }
 }
 

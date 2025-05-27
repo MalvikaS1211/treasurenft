@@ -41,7 +41,7 @@ export default function DownLine() {
           <Navbar title="DownLine" />
           {/* <HeaderDashboard title="DownLine" /> */}
           <div>
-            <div style={{ height: "100vh" }}>
+            <div style={{ minHeight: "100vh" }}>
               <div
                 className="pagination"
                 style={{ marginTop: "2%", marginBottom: "2%" }}

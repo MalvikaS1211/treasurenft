@@ -199,7 +199,7 @@ export async function upgradePackageFn(amt) {
       abi: CONTRACT_ADDRESS_ABI,
       address: CONTRACT_ADDRESS,
       functionName: "upgradePackage",
-      args: [0],
+      args: [amt],
     });
     const res = waitForTransactionReceipt(config, { hash: result });
     const data = await toast.promise(res, {

@@ -81,7 +81,8 @@ export default function Community() {
               it.promoter == level1P[0]?.user
           )
         );
-        if (level2p) {
+        console.log(level2p, "level2p");
+        if (level2p.length > 0) {
           setleve6(
             data?.filter(
               (it) =>
@@ -98,6 +99,10 @@ export default function Community() {
                 it.promoter == level2p[0].user
             )
           );
+        } else {
+          console.log("hfhasifhnisa");
+          setleve6("");
+          setleve5("");
         }
       }
     } catch (error) {
@@ -329,6 +334,7 @@ export default function Community() {
                             handleTree(
                               level5 && level5[0]?.uniqueRandomId.toString()
                             );
+                            console.log("level5", level5);
                           }}
                         />
                         <p>{(level5 && level5[0]?.uniqueRandomId) || "N/A"}</p>

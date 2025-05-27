@@ -25,6 +25,7 @@ import { getBalance } from "@wagmi/core";
 import { opBNB, opBNBTestnet, polygon } from "wagmi/chains";
 import { createConfig, http } from "wagmi";
 import { base_url, USDT_TOKEN } from "../Helper/Config";
+import moment from "moment";
 export default function Dashboard() {
   const { address } = useAccount();
   // const address = "0x3deCa2f62B20D6360e0948286D659dE2e19782Be";
@@ -36,6 +37,8 @@ export default function Dashboard() {
   const refLink = data.get("ref");
   const uniqueId = allUsers?.userInfo?.[0]?.uniqueRandomId || "defaultId";
   const referralLink = `${base_url}/signup?ref=${uniqueId}`;
+  const [timeLeft, setTimeLeft] = useState(null);
+
   const config = createConfig({
     chains: [opBNB],
     transports: {
@@ -156,7 +159,7 @@ export default function Dashboard() {
     try {
       const res = await getUserInfo(address);
       setAllUsers(res);
-      console.log("UserInfo", res);
+      // console.log("UserInfo", res);
     } catch (error) {
       console.log(error);
     }
@@ -167,7 +170,7 @@ export default function Dashboard() {
     try {
       const resUser = await usersFn(address);
       setDashboardData(resUser);
-      console.log("getUserInFoFromContract", resUser);
+      // console.log("getUserInFoFromContract", resUser);
     } catch (error) {
       console.log(error);
     }
@@ -190,11 +193,15 @@ export default function Dashboard() {
 
   const handlePackage = async (pkg) => {
     try {
+      if (!address) {
+        return toast.error("Please connect your wallet");
+      }
+      console.log(timeLeft, "appRes", timeLeft == "Expired" ? 1 : 0);
       const appRes = await tokenApp(pkg.subscription);
       console.log("pkg.subscription", pkg.subscription);
-      console.log("appRes", appRes);
+      console.log("appRes", appRes, timeLeft);
       if (appRes) {
-        await upgradePackageFn(0);
+        await upgradePackageFn(timeLeft == "Expired" ? 1 : 0);
         setTimeout(() => {
           setIsFetch(!isFetch);
         }, 2000);
@@ -204,38 +211,68 @@ export default function Dashboard() {
     }
   };
 
-  // const AvailableBalance = async () => {
-  //   try {
-  //     // console.log("Fetching balance..."); // Debugging log
-  //     const resBal = await getAvailaibleBalance(address);
-  //     // console.log("resBal", resBal); // Check if it logs the balance
-  //     setAvailableBal(resBal);
-  //   } catch (error) {
-  //     console.log("Error fetching balance:", error);
-  //   }
-  // };
-
   const getIdFromUser = async () => {
     try {
-      console.log("adhakhd");
+      // console.log("adhakhd");
       const uniqueId = allUsers?.userInfo[0]?.uniqueRandomId;
-      console.log("123456", allUsers);
-      console.log("uniqueId", uniqueId);
-      console.log(uniqueId, "::::");
+      // console.log("123456", allUsers);
+      // console.log("uniqueId", uniqueId);
+      // console.log(uniqueId, "::::");
       const res = await getIdToAddress(uniqueId);
-      console.log("uniqueId", uniqueId);
-      console.log(res, "getIdToAddress");
+      // console.log("uniqueId", uniqueId);
+      // console.log(res, "getIdToAddress");
     } catch (error) {
       console.error("Error in getIdFromUser:", error);
     }
   };
+
+  const countdown = () => {
+    if (
+      !address ||
+      !allUsers?.userPackageInfo?.[0]?.time ||
+      !allUsers?.expiryTime
+    )
+      return;
+
+    const interval = setInterval(() => {
+      const time = allUsers?.userPackageInfo[0]?.time; // assumed to be Unix timestamp in seconds
+      const expiryDuration = allUsers?.expiryTime; // assumed to be in seconds
+
+      if (!time || !expiryDuration) {
+        console.log("Missing time or expiry duration");
+        return;
+      }
+
+      const expiryTime = time + expiryDuration;
+      const now = moment().unix(); // Current Unix timestamp in seconds
+      const remainingSeconds = expiryTime - now;
+      console.log(remainingSeconds, time, expiryDuration, now, "count:::");
+      if (remainingSeconds <= 0) {
+        clearInterval(interval);
+        setTimeLeft("Expired");
+        console.log("Package expired");
+      } else {
+        const duration = moment.duration(remainingSeconds, "seconds");
+        const days = Math.floor(duration.asDays());
+        const hours = duration.hours();
+        const minutes = duration.minutes();
+        const seconds = duration.seconds();
+        setTimeLeft(`${days}DD ${hours}HH ${minutes}MM ${seconds}SS`);
+      }
+    }, 1000); // update every second
+
+    return () => clearInterval(interval); // cleanup on unmount
+  };
+
+  useEffect(() => {
+    countdown();
+  }, [address, allUsers]);
 
   useEffect(() => {
     if (address) {
       getUserInFoFromContract();
       UserInfo();
       fetchUserTokenBalance();
-
       getIdFromUser();
     }
   }, [address, isFetch]);
@@ -261,9 +298,11 @@ export default function Dashboard() {
                 : "290px",
           }}
         >
-          {" "}
           <Navbar title="Dashboard"></Navbar>
           {/* <HeaderDashboard title="Dashboard"></HeaderDashboard> */}
+          <h3 class="time-heading" id="timeDisplay">
+            {timeLeft || "00 DD:00 HH:00 MM:00 SS"}
+          </h3>
           <div>
             <div class="">
               <div class="user-grid">
@@ -335,11 +374,37 @@ export default function Dashboard() {
                       <span>${pkg.subscription}</span>
                       <p style={{ color: pkg.color }}>{pkg.name}</p>
                       <div className="range-container">
-                        <span style={{ fontSize: "15px" }}>NFT Range</span>
+                        <span style={{ fontSize: "15px" }}>Trade Limit</span>
                         <span style={{ color: "#830499" }}>{pkg.range}</span>
                       </div>
 
-                      {index < Number(dashboardData[6]) ? (
+                      {(timeLeft == "Expired"
+                        ? index < Number(dashboardData[6]) - 1
+                        : index < Number(dashboardData[6])) && (
+                        <button
+                          className="btn-upgrade"
+                          type="button"
+                          // onClick={() => handlePackage(pkg)}
+                          style={{ cursor: "default" }}
+                        >
+                          Active
+                        </button>
+                      )}
+
+                      {(timeLeft == "Expired"
+                        ? index >= Number(dashboardData[6]) - 1
+                        : index >= Number(dashboardData[6])) && (
+                        <button
+                          className="btn-upgrade"
+                          type="button"
+                          onClick={() => handlePackage(pkg)}
+                        >
+                          Upgrade
+                        </button>
+                      )}
+
+                      {/* {index < Number(dashboardData[6]) &&
+                      timeLeft != "Expired" ? (
                         <button
                           className="btn-upgrade"
                           type="button"
@@ -356,7 +421,30 @@ export default function Dashboard() {
                         >
                           Upgrade
                         </button>
-                      )}
+                      )} */}
+
+                      {/* {(
+                        timeLeft == "Expired"
+                          ? index == Number(dashboardData[6]) - 1
+                          : index < Number(dashboardData[6])
+                      ) ? (
+                        <button
+                          className="btn-upgrade"
+                          type="button"
+                          // onClick={() => handlePackage(pkg)}
+                          style={{ cursor: "default" }}
+                        >
+                          Active
+                        </button>
+                      ) : (
+                        <button
+                          className="btn-upgrade"
+                          type="button"
+                          onClick={() => handlePackage(pkg)}
+                        >
+                          Upgrade
+                        </button>
+                      )} */}
                     </div>
                   ))}
                 </div>
