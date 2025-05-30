@@ -22,7 +22,7 @@ export default function FooterNew() {
     try {
       if (address) {
         const resUserExist = await isUserExist(address);
-        console.log(resUserExist, "resUserExist");
+        // console.log(resUserExist, "resUserExist");
         setUserExist(resUserExist);
       }
     } catch (error) {
@@ -53,10 +53,9 @@ export default function FooterNew() {
                 <div class="logo-footer" id="logo-footer">
                   <a href="/">
                     <img
-                      // class="logo-dark"
+                      // class="logo-footer-img"
                       // id="logo_footer"
                       src={Logo}
-                      style={{ width: "50%" }}
                       alt="nft-Logo"
                     />
                   </a>

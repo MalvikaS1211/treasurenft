@@ -17,7 +17,7 @@ export default function SignIn() {
     try {
       if (address) {
         const resUserExist = await isUserExist(address);
-        console.log(resUserExist, "resUserExist");
+        // console.log(resUserExist, "resUserExist");
         setUserExist(resUserExist);
       }
     } catch (error) {

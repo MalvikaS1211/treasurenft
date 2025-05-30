@@ -51,21 +51,17 @@ export async function registerfn(refAddress, amt) {
 }
 
 export async function approveToken(amt) {
-  try {
-    const result = await writeContract(config, {
-      abi: tokenAbi,
-      address: USDT_TOKEN,
-      functionName: "approve",
-      args: [
-        CONTRACT_ADDRESS,
-        (amt * 1e18).toLocaleString("fullwide", { useGrouping: false }),
-      ],
-    });
-    const res = await waitForTransactionReceipt(config, { hash: result });
-    return res;
-  } catch (error) {
-    console.log(error);
-  }
+  const result = await writeContract(config, {
+    abi: tokenAbi,
+    address: USDT_TOKEN,
+    functionName: "approve",
+    args: [
+      CONTRACT_ADDRESS,
+      (amt * 1e18).toLocaleString("fullwide", { useGrouping: false }),
+    ],
+  });
+  const res = await waitForTransactionReceipt(config, { hash: result });
+  return res;
 }
 
 export async function buyNFTFn(

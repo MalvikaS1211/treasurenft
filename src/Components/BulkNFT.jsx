@@ -261,6 +261,7 @@ export default function BulkNFT() {
       const resPkg = await getMaturedNFTs(address);
       setAvailablePkg(resPkg?.userMaturedNfts);
       console.log("Available packages:", resPkg);
+      console.log("Available package price", resPkg?.nftCreatedDetails.price);
     } catch (error) {
       setAvailablePkg([]);
       console.log(error);
@@ -317,10 +318,12 @@ export default function BulkNFT() {
                       onClick={() => handleClick(index, pkg)}
                     >
                       $
-                      {(
-                        (Number(pkg.nftCreatedDetails.price) * 5 * 1.1) /
-                        1e18
-                      ).toFixed(2)}
+                      {Number(pkg.nftCreatedDetails.price) === 15
+                        ? "110"
+                        : (
+                            (Number(pkg.nftCreatedDetails.price) * 5 * 1.1) /
+                            1e18
+                          ).toFixed(2)}
                     </button>
                   </div>
                 ))}
@@ -423,7 +426,7 @@ export default function BulkNFT() {
           ))}
         </div>
 
-        <div className="create-nft-container">
+        <div className="create-nft-container" style={{ display: "none" }}>
           <button
             className="createbtn"
             type="button"

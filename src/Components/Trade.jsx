@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import creativeArt from "../assets/creativeArt.jpg";
-
+import io from "socket.io-client";
 import FooterNew from "./FooterNew";
 import HeaderNew from "./HeaderNew";
 import {
@@ -10,6 +10,7 @@ import {
   getTradeUserFn,
   getUserCreatedNftsFn,
   getUserInfo,
+  SOCKET_SERVER_URL,
 } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
 import {
@@ -20,36 +21,112 @@ import {
 } from "../Helper/Web3";
 import axios from "axios";
 import toast from "react-hot-toast";
+import socket from "./Socket";
+
 export default function Trade() {
   const { address } = useAccount();
+  // const socket = io(SOCKET_SERVER_URL, {
+  //   transports: ["websocket"],
+  // });
   const [allTrade, setAllTrade] = useState([]);
   const [isfetch, setIsFetch] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [apiLoading, setApiLoading] = useState(false);
-
+  const [isAvailable, setIsAvailable] = useState(false);
   const [allUsers, setAllUsers] = useState(null);
 
   const [assetValue, setAssetValue] = useState(0);
   const tokenApp1 = async (amt) => {
     try {
-      const appres = approveToken(amt);
-      await toast.promise(appres, {
+      const appres = await toast.promise(approveToken(amt), {
         loading: "Approval in process",
         success: "Successfully Approved",
         error: "Approval failed",
       });
+
       return appres;
     } catch (error) {
-      console.log(error);
+      console.error("Approval error:", error);
       return false;
     }
   };
 
+  const handleIsTradeAvailable = (payload) => {
+    const { tokenId, isTradeAvailable } = payload;
+    console.log(tokenId, isTradeAvailable, "isTradeAvailable : ");
+    setIsAvailable(isTradeAvailable);
+  };
+  const handleTradeOngoing = (payload) => {
+    console.log(payload, "payload");
+    const { tokenId } = payload;
+    console.log(tokenId, "TradeOngoing  ");
+  };
+  useEffect(() => {
+    socket.on("connect", () => {
+      console.log("Connected to server");
+    });
+
+    socket.on("UpdateMarket", (payload) => {
+      getTrade();
+      console.log(payload, "payload");
+    });
+    socket.emit("join");
+    socket.on("joined", () => {
+      console.log("joined");
+    });
+    socket.on("isTradeAvailable", handleIsTradeAvailable);
+    socket.on("TradeOngoing", handleTradeOngoing);
+    // Cleanup on unmount
+    return () => {
+      socket.off("connect");
+      socket.off("UpdateMarket", (payload) => {
+        getTrade();
+        console.log(payload, "payload");
+      });
+      socket.off("joined");
+      socket.off("isTradeAvailable", handleIsTradeAvailable);
+      socket.off("TradeOngoing", handleTradeOngoing);
+
+      socket.disconnect();
+    };
+  }, []);
   const ReadyForBuy = async (tokenId) => {
     try {
-      await getReadyForBuyFn(address, tokenId);
+      const isTradeAvailable = await new Promise((resolve, reject) => {
+        const handleResponse = (payload) => {
+          const { tokenId: resTokenId, isTradeAvailable } = payload;
+          console.log(resTokenId, isTradeAvailable, "isTradeAvailable : ");
+          if (resTokenId === tokenId) {
+            socket.off("isTradeAvailable", handleResponse); // Clean up listener
+            resolve(isTradeAvailable);
+          }
+        };
+
+        socket.on("isTradeAvailable", handleResponse);
+        socket.emit("isNftAvailable", tokenId);
+
+        // Optional timeout to avoid hanging forever
+        setTimeout(() => {
+          socket.off("isTradeAvailable", handleResponse);
+          reject(new Error("Timeout waiting for trade availability"));
+        }, 5000);
+      });
+      if (isTradeAvailable) {
+        socket.emit("StartedTrade", tokenId);
+      } else {
+        console.log("trade not available");
+        toast.error("Sorry, this trade is not available!");
+        setApiLoading(false);
+        return false;
+      }
+      // const res = await getReadyForBuyFn(address, tokenId);
+      // return res;
+
+      return true;
     } catch (error) {
       console.log("Error in Buy:", error);
+
+      return true;
     }
   };
   const getTrade = async () => {
@@ -96,21 +173,46 @@ export default function Trade() {
           }
         })
       );
-
-      const smallValue = fetchedTrades.find((t) => t.price <= 20e18);
-      const midValue = fetchedTrades.find(
-        (t) => t.price > 20e18 && t.price <= 30e18
-      );
-
-      const largeValue = fetchedTrades.find((t) => t.price > 30e18);
-      // const check = fetchedTrades.find(
-      //   (t) => t.price >= 30e18 && t.price >= 50e18
-      // );
-      // console.log(check, ":::check");
-
-      const finalData = [smallValue, midValue, largeValue].filter(Boolean); // avoid pushing undefined
       console.log(fetchedTrades);
-      setAllTrade(fetchedTrades);
+      // setAllTrade(fetchedTrades);
+      const newList = fetchedTrades.filter(Boolean);
+      // setAllTrade((prevTrades) => {
+      //   const updatedTrades = fetchedTrades.map((newTrade) => {
+      //     const existing = prevTrades.find(
+      //       (t) => t.tokenId === newTrade.tokenId
+      //     );
+
+      //     // If price/owner changed, update
+      //     if (
+      //       !existing ||
+      //       existing.price !== newTrade.price ||
+      //       existing.owner !== newTrade.owner
+      //     ) {
+      //       return newTrade;
+      //     }
+
+      //     // Otherwise, keep the old one to avoid re-render
+      //     return existing;
+      //   });
+
+      //   return updatedTrades;
+      // });
+      setAllTrade((prevList) => {
+        // Only include NFTs that are still present
+        const updatedList = prevList.filter((nft) =>
+          newList.some((newNft) => newNft.tokenId === nft.tokenId)
+        );
+
+        // Add any new NFTs that weren't in the old list
+        newList.forEach((newNft) => {
+          const exists = updatedList.find((n) => n.tokenId === newNft.tokenId);
+          if (!exists) {
+            updatedList.push(newNft);
+          }
+        });
+
+        return updatedList;
+      });
       setApiLoading(false);
     } catch (error) {
       setApiLoading(false);
@@ -135,13 +237,17 @@ export default function Trade() {
       const userBalance = await fetchUserTokenBalance(address);
 
       console.log(userBalance, totalAmount, "::::");
-      if (Number(userBalance) < Number(totalAmount) / 1e18) {
-        setIsLoading(false);
-        return toast.error(
-          `You need at least ${(Number(totalAmount) / 1e18).toFixed(
-            4
-          )} USDT to Buy`
-        );
+      // if (Number(userBalance) < Number(totalAmount) / 1e18) {
+      //   setIsLoading(false);
+      //   return toast.error(
+      //     `You need at least ${(Number(totalAmount) / 1e18).toFixed(
+      //       4
+      //     )} USDT to Buy`
+      //   );
+      // }
+      const status = await ReadyForBuy(tokenId);
+      if (!status) {
+        return;
       }
       const res = await getReadyForBuyFn(
         address,
@@ -185,13 +291,15 @@ export default function Trade() {
       setTimeout(() => {
         setIsFetch(!isfetch);
       }, 2000);
+    } finally {
+      socket.emit("TradeDone", tokenId);
     }
   };
   const UserInfo = async () => {
     try {
       const res = await getUserInfo(address);
       setAllUsers(res.userLimits);
-      console.log("UserInfo in SingleNFT", res.userLimits);
+      // console.log("UserInfo in SingleNFT", res.userLimits);
     } catch (error) {
       console.log(error);
     }
@@ -320,7 +428,7 @@ export default function Trade() {
             </div>
           </div>
         </div>
-        {!apiLoading ? (
+        {allTrade.length !== 0 ? (
           <section className="tf-section today-pick">
             <div className="themesflat-container">
               <div className="row">
@@ -361,21 +469,21 @@ export default function Trade() {
                               {nft.owner != address && (
                                 <div
                                   class="button-place-bid"
-                                  onClick={() => {
-                                    BuyNft(
-                                      nft.price,
-                                      nft.title,
-                                      nft.description,
-                                      nft.metadataURI,
-                                      nft.tokenId,
-                                      Number(nft.price)
-                                    );
-                                  }}
+                                  onClick={() => {}}
                                 >
                                   {!isLoading && (
                                     <button
                                       className="sc-button style-place-bid style bag fl-button pri-3"
-                                      onClick={() => ReadyForBuy(nft.tokenId)}
+                                      onClick={() =>
+                                        BuyNft(
+                                          nft.price,
+                                          nft.title,
+                                          nft.description,
+                                          nft.metadataURI,
+                                          nft.tokenId,
+                                          Number(nft.price)
+                                        )
+                                      }
                                       type="button"
                                     >
                                       {/* <FaShoppingBag color="black" /> */}
@@ -430,7 +538,6 @@ export default function Trade() {
           </section>
         ) : (
           <>
-            {" "}
             <div class="d-flex justify-content-center">
               <div class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>

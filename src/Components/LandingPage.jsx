@@ -46,6 +46,7 @@ import walletImage from "../assets/walletImage.png";
 import collectionBtn from "../assets/collectionBtn.png";
 import AddNftIcon from "../assets/AddNftIcon.png";
 import ListIcon from "../assets/ListIcon.png";
+import WelcomeModal from "./WelcomeModal";
 
 export default function DashboardNew() {
   const handleDownload = () => {
