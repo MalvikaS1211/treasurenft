@@ -237,14 +237,14 @@ export default function Trade() {
       const userBalance = await fetchUserTokenBalance(address);
 
       console.log(userBalance, totalAmount, "::::");
-      // if (Number(userBalance) < Number(totalAmount) / 1e18) {
-      //   setIsLoading(false);
-      //   return toast.error(
-      //     `You need at least ${(Number(totalAmount) / 1e18).toFixed(
-      //       4
-      //     )} USDT to Buy`
-      //   );
-      // }
+      if (Number(userBalance) < Number(totalAmount) / 1e18) {
+        setIsLoading(false);
+        return toast.error(
+          `You need at least ${(Number(totalAmount) / 1e18).toFixed(
+            4
+          )} USDT to Buy`
+        );
+      }
       const status = await ReadyForBuy(tokenId);
       if (!status) {
         return;
