@@ -117,6 +117,7 @@ export default function Trade() {
         console.log("trade not available");
         toast.error("Sorry, this trade is not available!");
         setApiLoading(false);
+
         return false;
       }
       // const res = await getReadyForBuyFn(address, tokenId);
@@ -206,6 +207,7 @@ export default function Trade() {
         // Add any new NFTs that weren't in the old list
         newList.forEach((newNft) => {
           const exists = updatedList.find((n) => n.tokenId === newNft.tokenId);
+          console.log("NFT Exist", exists);
           if (!exists) {
             updatedList.push(newNft);
           }
@@ -247,6 +249,9 @@ export default function Trade() {
       }
       const status = await ReadyForBuy(tokenId);
       if (!status) {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 2000);
         return;
       }
       const res = await getReadyForBuyFn(
