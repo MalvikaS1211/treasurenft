@@ -207,7 +207,7 @@ export default function Trade() {
         // Add any new NFTs that weren't in the old list
         newList.forEach((newNft) => {
           const exists = updatedList.find((n) => n.tokenId === newNft.tokenId);
-          console.log("NFT Exist", exists);
+          // console.log("NFT Exist", exists);
           if (!exists) {
             updatedList.push(newNft);
           }
@@ -298,6 +298,7 @@ export default function Trade() {
       }, 2000);
     } finally {
       socket.emit("TradeDone", tokenId);
+      setIsLoading(false);
     }
   };
   const UserInfo = async () => {

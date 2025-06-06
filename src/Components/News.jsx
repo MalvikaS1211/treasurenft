@@ -11,11 +11,17 @@ const News = () => {
         12:00 AM (midnight), Australia time (AEST). This change is aimed at
         improving accessibility and providing a smoother trading experience for
         all users. */}
-        Important Notice – NFT Package Creation Temporarily Paused Please do not
+        {/* Important Notice – NFT Package Creation Temporarily Paused Please do not
         create any new NFT packages between 27th May 2025 to 28th May 2025. The
         system will be undergoing updates during this period. We appreciate your
         patience and cooperation. Wait for further official announcements before
-        resuming NFT creation. Thank you, Team Magic Verse
+        resuming NFT creation. Thank you, Team Magic Verse */}
+        📢 Important Update : Subscription Change Postponed We received valuable
+        suggestions and feedback from many of our affiliates. Based on your
+        input, we have decided to postpone the change in subscription validity
+        that was scheduled to take effect from 15th June 2025. Your voice
+        matters, and we appreciate your continued support in shaping the future
+        of MagicVerse. Stay tuned for further updates! — Team MagicVerse
       </marquee>
     </div>
   );

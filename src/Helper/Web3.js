@@ -74,29 +74,25 @@ export async function buyNFTFn(
   description,
   metadataURI
 ) {
-  try {
-    const result = await writeContract(config, {
-      abi: CONTRACT_ADDRESS_ABI,
-      address: CONTRACT_ADDRESS,
-      functionName: "buyNFT",
-      args: [
-        tokenId,
-        initialPrice.toLocaleString("fullwide", {
-          useGrouping: false,
-        }),
-        v,
-        r,
-        s,
-        title,
-        description,
-        metadataURI,
-      ],
-    });
+  const result = await writeContract(config, {
+    abi: CONTRACT_ADDRESS_ABI,
+    address: CONTRACT_ADDRESS,
+    functionName: "buyNFT",
+    args: [
+      tokenId,
+      initialPrice.toLocaleString("fullwide", {
+        useGrouping: false,
+      }),
+      v,
+      r,
+      s,
+      title,
+      description,
+      metadataURI,
+    ],
+  });
 
-    return result;
-  } catch (error) {
-    console.log(error);
-  }
+  return result;
 }
 
 export async function changeOwnerFn(ownerAddress) {
