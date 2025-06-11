@@ -16,12 +16,18 @@ const News = () => {
         system will be undergoing updates during this period. We appreciate your
         patience and cooperation. Wait for further official announcements before
         resuming NFT creation. Thank you, Team Magic Verse */}
-        📢 Important Update : Subscription Change Postponed We received valuable
+        {/* 📢 Important Update : Subscription Change Postponed We received valuable
         suggestions and feedback from many of our affiliates. Based on your
         input, we have decided to postpone the change in subscription validity
         that was scheduled to take effect from 15th June 2025. Your voice
         matters, and we appreciate your continued support in shaping the future
-        of MagicVerse. Stay tuned for further updates! — Team MagicVerse
+        of MagicVerse. Stay tuned for further updates! — Team MagicVerse */}
+        📢 NFT Trading Update : NFT trading activity is currently not performing
+        as usual due to some ongoing system-level factors. We're actively
+        working on calculations and gathering the necessary data to take the
+        right actions for restoring smooth performance—just like before. ⏳
+        Please allow 2 or more days as we make these improvements. Thank you for
+        your patience and continued trust. — Team MagicVerse
       </marquee>
     </div>
   );

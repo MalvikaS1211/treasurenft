@@ -6,7 +6,7 @@ export const URLApi = "https://magicverse.org/api";
 // export const URLApi = "http://192.168.1.214:8081/api";
 // export const URLApi = "http://192.168.1.161:8081/api";
 // export const URLApi = "http://localhost:8081/api";
-// export const URLApi = "http://192.168.1.79:8081/api";
+// export const URLApi = "http://192.168.1.42:8081/api";
 // export const SOCKET_SERVER_URL = "http://192.168.1.214:8081";
 export const SOCKET_SERVER_URL = "https://magicverse.org";
 

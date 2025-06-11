@@ -13,6 +13,7 @@ import {
   createNftVrsFn,
   getCreateBulkNFT,
   getMaturedNFTs,
+  getStatus,
 } from "../Helper/API_Functions";
 import toast from "react-hot-toast";
 import { useAccount } from "wagmi";
@@ -28,6 +29,12 @@ export default function BulkNFT() {
   const { address } = useAccount();
   const [tokenId, setTokenId] = useState();
   const [isFetch, setIsFetch] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [initialP, setInititalP] = useState();
+  const [availablePkg, setAvailablePkg] = useState([]);
+
+  const [availableBalance, setAvailableBalance] = useState(0);
+  const [isAllowed, setIsAllowed] = useState(false);
   // const address = "0x25b0ecc38e02e9ee0dfe4c22680d1605be80dcc9";
   const [nfts, setNfts] = useState([
     { file: null, price: "", title: "", description: "", preview: null },
@@ -103,33 +110,6 @@ export default function BulkNFT() {
     console.log("first one", data.IpfsHash, "::::");
     return `ipfs://${data.IpfsHash}`;
   };
-
-  // const uploadMetadataToIPFS = async (imageHash) => {
-  //   const metadata = {
-  //     name: title,
-  //     description: description,
-  //     image: imageHash,
-  //   };
-  //   console.log(metadata, "metadata");
-  //   const blob = new Blob([JSON.stringify(metadata)], {
-  //     type: "application/json",
-  //   });
-  //   const formData = new FormData();
-  //   formData.append("file", blob, "metadata.json");
-  //   const { data } = await axios.post(
-  //     "https://api.pinata.cloud/pinning/pinFileToIPFS",
-  //     formData,
-  //     {
-  //       headers: {
-  //         pinata_api_key: pinataApiKey,
-  //         pinata_secret_api_key: pinataSecretApiKey,
-  //       },
-  //     }
-  //   );
-  //   console.log("second one ", data.IpfsHash, "::::");
-
-  //   return `ipfs://${data.IpfsHash}`;
-  // };
 
   const uploadMetadataToIPFS = async (imageHash, nft) => {
     const metadata = {
@@ -275,7 +255,7 @@ export default function BulkNFT() {
       setIsLoading(false);
     }
   };
-  const [availablePkg, setAvailablePkg] = useState([]);
+
   const HandleAvailablePkg = async () => {
     try {
       const resPkg = await getMaturedNFTs(address);
@@ -287,7 +267,6 @@ export default function BulkNFT() {
       console.log(error);
     }
   };
-  const [availableBalance, setAvailableBalance] = useState(0);
   const ShowAvailablepkg = async () => {
     const availablBal = await getAvailaibleBalance(address);
     console.log(availablBal, "Available balance in package");
@@ -301,23 +280,29 @@ export default function BulkNFT() {
     } else toast.error("Please connect your wallet");
   }, [address, isFetch]);
 
-  const [selectedIndex, setSelectedIndex] = useState(null);
-  const [initialP, setInititalP] = useState();
-
   const handleClick = (index, pkg) => {
     setSelectedIndex(index);
     const amount = (Number(pkg.nftCreatedDetails.price) * 5) / 1e18;
     const ip = Number(pkg.nftCreatedDetails.price) / 1e18;
     setInititalP(ip);
-    // console.log(
-    //   amount,
-    //   Number(pkg.nftCreatedDetails.price) / 1e18,
-    //   ":ASDFFFFFFF"
-    // );
+
     setAmount(ip == 15 ? Number(100) : amount);
     setTokenId(pkg.nftCreatedDetails.tokenId);
   };
 
+  const handleIsAllowedNFT = async () => {
+    try {
+      const res = await getStatus(address);
+      console.log(res, "getStatus");
+      console.log(res.data.isBulkAllowed, "IsAllowed");
+      setIsAllowed(res?.data?.isBulkAllowed);
+    } catch (error) {
+      console.log("Error in isAllowedNFT", error);
+    }
+  };
+  useEffect(() => {
+    handleIsAllowedNFT();
+  }, [address]);
   return (
     <>
       <>
@@ -469,35 +454,36 @@ export default function BulkNFT() {
             </div>
           ))}
         </div>
-
-        <div className="create-nft-container">
-          <button
-            className="createbtn"
-            type="button"
-            onClick={nftCreate}
-            disabled={isLoading}
-          >
-            {isLoading ? (
-              <span
-                className="spinner-border spinner-border-sm"
-                role="status"
-              ></span>
-            ) : (
-              "Create NFT"
-            )}
-          </button>
-          <FaPlus
-            onClick={nfts.length < 5 ? addNFTField : null}
-            size={20}
-            style={{
-              cursor:
-                nfts.length < (initialP === 15 ? 2 : 5)
-                  ? "pointer"
-                  : "not-allowed",
-              opacity: nfts.length < (initialP === 15 ? 2 : 5) ? 1 : 0.5,
-            }}
-          />
-        </div>
+        {isAllowed == true && (
+          <div className="create-nft-container ">
+            <button
+              className="createbtn"
+              type="button"
+              onClick={nftCreate}
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <span
+                  className="spinner-border spinner-border-sm"
+                  role="status"
+                ></span>
+              ) : (
+                "Create NFT"
+              )}
+            </button>
+            <FaPlus
+              onClick={nfts.length < 5 ? addNFTField : null}
+              size={20}
+              style={{
+                cursor:
+                  nfts.length < (initialP === 15 ? 2 : 5)
+                    ? "pointer"
+                    : "not-allowed",
+                opacity: nfts.length < (initialP === 15 ? 2 : 5) ? 1 : 0.5,
+              }}
+            />
+          </div>
+        )}
       </>
     </>
   );
