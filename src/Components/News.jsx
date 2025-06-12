@@ -1,34 +1,26 @@
+import { useEffect, useState } from "react";
+import { getMessage } from "../Helper/API_Functions";
+
 const News = () => {
+  const [news, setNews] = useState("");
+
+  const handleMsg = async () => {
+    try {
+      const res = await getMessage();
+      setNews(res?.data?.Message || ""); // Safely access Message field
+    } catch (error) {
+      console.error("Error fetching message:", error);
+      setNews("Error loading news");
+    }
+  };
+
+  useEffect(() => {
+    handleMsg();
+  }, []);
+
   return (
     <div className="marquee-div">
-      <marquee className="marquee-msg">
-        {/* Big Update! Your NFT buying power just got a boost — the daily limit has
-        been increased for all subscribers! More buys, more chances, more
-        collectibles. Let the collecting begin! */}
-        {/* Important Update : NFT Trading Limit Time Change We’re updating our NFT
-        trading limit time to better serve our global community. Effective
-        immediately, the new trading limit time will be changed from 4:30 AM to
-        12:00 AM (midnight), Australia time (AEST). This change is aimed at
-        improving accessibility and providing a smoother trading experience for
-        all users. */}
-        {/* Important Notice – NFT Package Creation Temporarily Paused Please do not
-        create any new NFT packages between 27th May 2025 to 28th May 2025. The
-        system will be undergoing updates during this period. We appreciate your
-        patience and cooperation. Wait for further official announcements before
-        resuming NFT creation. Thank you, Team Magic Verse */}
-        {/* 📢 Important Update : Subscription Change Postponed We received valuable
-        suggestions and feedback from many of our affiliates. Based on your
-        input, we have decided to postpone the change in subscription validity
-        that was scheduled to take effect from 15th June 2025. Your voice
-        matters, and we appreciate your continued support in shaping the future
-        of MagicVerse. Stay tuned for further updates! — Team MagicVerse */}
-        📢 NFT Trading Update : NFT trading activity is currently not performing
-        as usual due to some ongoing system-level factors. We're actively
-        working on calculations and gathering the necessary data to take the
-        right actions for restoring smooth performance—just like before. ⏳
-        Please allow 2 or more days as we make these improvements. Thank you for
-        your patience and continued trust. — Team MagicVerse
-      </marquee>
+      <marquee className="marquee-msg">{news}</marquee>
     </div>
   );
 };

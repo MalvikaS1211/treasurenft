@@ -17,7 +17,7 @@ import {
 } from "../Helper/API_Functions";
 import toast from "react-hot-toast";
 import { useAccount } from "wagmi";
-
+import moment from "moment";
 export default function BulkNFT() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -317,30 +317,45 @@ export default function BulkNFT() {
             <div className="d-flex flex-wrap justify-content-start gap-3">
               {availablePkg &&
                 availablePkg?.map((pkg, index) => {
-                  // console.log("pkg", pkg.nftCreatedDetails.price);
+                  const Time = pkg?.time; // From API (in seconds)
+                  const currentTime = moment().unix(); // Current time in seconds
+
+                  const timeDifferenceInSeconds = currentTime - Time;
+                  const hoursDifference = timeDifferenceInSeconds / 3600;
+                  console.log(
+                    Time,
+                    currentTime,
+                    timeDifferenceInSeconds,
+                    hoursDifference,
+                    "123::"
+                  );
                   return (
-                    <div className="package-container" key={index}>
-                      <button
-                        type="button"
-                        className="sc-button style style-1"
-                        style={{
-                          padding: "5px 26px",
-                          backgroundColor:
-                            selectedIndex === index ? "#5142fc" : "",
-                          color: selectedIndex === index ? "white" : "",
-                        }}
-                        onClick={() => handleClick(index, pkg)}
-                      >
-                        $
-                        {Number(pkg.nftCreatedDetails.price) ==
-                        "15000000000000000000"
-                          ? "110.00"
-                          : (
-                              (Number(pkg.nftCreatedDetails.price) * 5 * 1.1) /
-                              1e18
-                            ).toFixed(2)}
-                      </button>
-                    </div>
+                    hoursDifference >= 24 && (
+                      <div className="package-container" key={index}>
+                        <button
+                          type="button"
+                          className="sc-button style style-1"
+                          style={{
+                            padding: "5px 26px",
+                            backgroundColor:
+                              selectedIndex === index ? "#5142fc" : "",
+                            color: selectedIndex === index ? "white" : "",
+                          }}
+                          onClick={() => handleClick(index, pkg)}
+                        >
+                          $
+                          {Number(pkg.nftCreatedDetails.price) ==
+                          "15000000000000000000"
+                            ? "110.00"
+                            : (
+                                (Number(pkg.nftCreatedDetails.price) *
+                                  5 *
+                                  1.1) /
+                                1e18
+                              ).toFixed(2)}
+                        </button>
+                      </div>
+                    )
                   );
                 })}
             </div>
