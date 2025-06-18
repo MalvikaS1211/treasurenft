@@ -92,7 +92,9 @@ export async function buyNFTFn(
     ],
   });
 
-  return result;
+  const data = await waitForTransactionReceipt(config, { hash: result });
+
+  return data;
 }
 
 export async function changeOwnerFn(ownerAddress) {

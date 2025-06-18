@@ -2,14 +2,15 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const URLApi = "https://magicverse.org/api";
+// export const URLApi = "https://magicverse.org/api";
 // export const URLApi = "http://192.168.1.214:8081/api";
 // export const URLApi = "http://192.168.1.161:8081/api";
-// export const URLApi = "http://localhost:8081/api";
+export const URLApi = "http://192.168.1.85:8081/api";
 // export const URLApi = "http://192.168.1.19:8081/api";
 // export const SOCKET_SERVER_URL = "http://192.168.1.214:8081";
-export const SOCKET_SERVER_URL = "https://magicverse.org";
+// export const SOCKET_SERVER_URL = "https://magicverse.org";
 
+export const SOCKET_SERVER_URL = "http://192.168.1.85:8081";
 export async function getUserInfo(address) {
   try {
     const response = await axios.post(`${URLApi}/get-user-info`, {
@@ -128,6 +129,7 @@ export async function getReadyForBuyFn(
     return response?.data;
   } catch (error) {
     console.log("Error getReadyForBuyFn :", error);
+    throw error;
     return false;
   }
 }

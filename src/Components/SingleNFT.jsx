@@ -366,22 +366,22 @@ export default function SingleNFT() {
                   onChange={(e) => setDescription(e.target.value)}
                 />
                 <div className="create-nft-container">
-                  {isAllowed === true && (
-                    <button
-                      className="createbtn"
-                      onClick={nftCreate}
-                      type="button"
-                    >
-                      {isLoading ? (
-                        <span
-                          className="spinner-border spinner-border-sm"
-                          role="status"
-                        ></span>
-                      ) : (
-                        "Create NFT"
-                      )}
-                    </button>
-                  )}
+                  {/* {isAllowed === true && ( */}
+                  <button
+                    className="createbtn"
+                    onClick={nftCreate}
+                    type="button"
+                  >
+                    {isLoading ? (
+                      <span
+                        className="spinner-border spinner-border-sm"
+                        role="status"
+                      ></span>
+                    ) : (
+                      "Create NFT"
+                    )}
+                  </button>
+                  {/* )} */}
                 </div>
               </form>
             </div>

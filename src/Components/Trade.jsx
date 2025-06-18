@@ -108,7 +108,7 @@ export default function Trade() {
         // Optional timeout to avoid hanging forever
         setTimeout(() => {
           socket.off("isTradeAvailable", handleResponse);
-          reject(new Error("Timeout waiting for trade availability"));
+          // reject(new Error("Timeout waiting for trade availability"));
         }, 5000);
       });
       if (isTradeAvailable) {
@@ -125,13 +125,20 @@ export default function Trade() {
 
       return true;
     } catch (error) {
+      const message =
+        error?.response?.data?.message ||
+        error?.message ||
+        "Something went wrong. Please try again.";
       console.log("Error in Buy:", error);
-
+      toast.error(message);
       return true;
     }
   };
   const getTrade = async () => {
     try {
+      if (!address) {
+        return;
+      }
       setApiLoading(true);
 
       const { userTrades } = await getTradeUserFn(address);
@@ -175,7 +182,8 @@ export default function Trade() {
         })
       );
       console.log(fetchedTrades);
-      // setAllTrade(fetchedTrades);
+      setAllTrade(fetchedTrades);
+      return;
       const newList = fetchedTrades.filter(Boolean);
       // setAllTrade((prevTrades) => {
       //   const updatedTrades = fetchedTrades.map((newTrade) => {
@@ -282,21 +290,25 @@ export default function Trade() {
             success: "NFT Buy successfully!",
             error: "Nft Buy failed!",
           });
+
           setIsLoading(false);
         }
         setIsLoading(false);
       }
-      setTimeout(() => {
-        setIsFetch(!isfetch);
-      }, 2000);
+
       setIsLoading(false);
     } catch (error) {
+      const message =
+        error?.response?.data?.message ||
+        "Something went wrong. Please try again.";
+      // toast.error(message);
       setIsLoading(false);
       console.log(error);
+    } finally {
       setTimeout(() => {
         setIsFetch(!isfetch);
-      }, 2000);
-    } finally {
+        console.log("time :");
+      }, 5000);
       socket.emit("TradeDone", tokenId);
       setIsLoading(false);
     }
@@ -441,6 +453,7 @@ export default function Trade() {
                 {allTrade.length > 0 ? (
                   allTrade?.map((nft, index) => {
                     if (nft.price > 0) {
+                      console.log(nft.owner, "nft.owner");
                       return (
                         <div
                           key={index}
@@ -480,7 +493,7 @@ export default function Trade() {
                                   {!isLoading && (
                                     <button
                                       className="sc-button style-place-bid style bag fl-button pri-3"
-                                      onClick={() =>
+                                      onClick={() => {
                                         BuyNft(
                                           nft.price,
                                           nft.title,
@@ -488,8 +501,8 @@ export default function Trade() {
                                           nft.metadataURI,
                                           nft.tokenId,
                                           Number(nft.price)
-                                        )
-                                      }
+                                        );
+                                      }}
                                       type="button"
                                     >
                                       {/* <FaShoppingBag color="black" /> */}

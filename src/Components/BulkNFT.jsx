@@ -90,9 +90,9 @@ export default function BulkNFT() {
     setNfts([...nfts, { file: null, price: "", title: "", description: "" }]);
   };
 
-  const pinataApiKey = "e45f06a4f288fd4c7ded";
+  const pinataApiKey = "ec2b20977ec88ae98dae";
   const pinataSecretApiKey =
-    "5d66447d15dde18b2851a2d6aefc48f4ca25b29c05440027f816f7d176cb7fdd";
+    "ee440345e6dfde3a21cce36f8b12b667d535968f9bdd48f5f919973f04c8ebee";
 
   const uploadToIPFS = async (file) => {
     const formData = new FormData();

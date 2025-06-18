@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = "0x34d415A3b06eE5a2311e5E71d3fDD5aa07FAeb53";
+export const CONTRACT_ADDRESS = "0xd68557f8cb480363fE2f23c899AF80a2548d55a0";
 export const CONTRACT_ADDRESS_ABI = [
   {
     inputs: [
@@ -302,6 +302,49 @@ export const CONTRACT_ADDRESS_ABI = [
       },
     ],
     name: "NFTSold",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: "address",
+        name: "toUser",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "address",
+        name: "fromUser",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "reward",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "NftPrice",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "tokenId",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "timestamp",
+        type: "uint256",
+      },
+    ],
+    name: "NetworkTrading",
     type: "event",
   },
   {
@@ -799,7 +842,7 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
 ];
-export const USDT_TOKEN = "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3";
+export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05";
 export const tokenAbi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {
