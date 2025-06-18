@@ -469,36 +469,36 @@ export default function BulkNFT() {
             </div>
           ))}
         </div>
-        {isAllowed == true && (
-          <div className="create-nft-container ">
-            <button
-              className="createbtn"
-              type="button"
-              onClick={nftCreate}
-              disabled={isLoading}
-            >
-              {isLoading ? (
-                <span
-                  className="spinner-border spinner-border-sm"
-                  role="status"
-                ></span>
-              ) : (
-                "Create NFT"
-              )}
-            </button>
-            <FaPlus
-              onClick={nfts.length < 5 ? addNFTField : null}
-              size={20}
-              style={{
-                cursor:
-                  nfts.length < (initialP === 15 ? 2 : 5)
-                    ? "pointer"
-                    : "not-allowed",
-                opacity: nfts.length < (initialP === 15 ? 2 : 5) ? 1 : 0.5,
-              }}
-            />
-          </div>
-        )}
+        {/* {isAllowed == true && ( */}
+        <div className="create-nft-container ">
+          <button
+            className="createbtn"
+            type="button"
+            onClick={nftCreate}
+            disabled={isLoading}
+          >
+            {isLoading ? (
+              <span
+                className="spinner-border spinner-border-sm"
+                role="status"
+              ></span>
+            ) : (
+              "Create NFT"
+            )}
+          </button>
+          <FaPlus
+            onClick={nfts.length < 5 ? addNFTField : null}
+            size={20}
+            style={{
+              cursor:
+                nfts.length < (initialP === 15 ? 2 : 5)
+                  ? "pointer"
+                  : "not-allowed",
+              opacity: nfts.length < (initialP === 15 ? 2 : 5) ? 1 : 0.5,
+            }}
+          />
+        </div>
+        {/* )} */}
       </>
     </>
   );
