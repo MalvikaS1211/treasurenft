@@ -39,7 +39,7 @@ import "slick-carousel/slick/slick-theme.css";
 import LiveAuction from "./LiveAuction";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import PDF from "../assets/Pdf/MagicVersePDf.pdf";
+import PDF from "../assets/Pdf/MagicVerse.Org.pdf";
 import { GoDownload } from "react-icons/go";
 import toast from "react-hot-toast";
 import walletImage from "../assets/walletImage.png";

@@ -105,54 +105,54 @@ export default function Dashboard() {
       subscription: "255",
       range: "$5200 ",
     },
-    {
-      name: "Legend",
-      color: "rgb(212, 55, 102)",
-      subscription: "330",
-      range: "$7400",
-    },
-    {
-      name: "Titan",
-      color: "rgb(162, 55, 212)",
-      subscription: "415",
-      range: "$10100",
-    },
-    {
-      name: "Pioneer",
-      color: "rgb(147, 99, 43)",
-      subscription: "510",
-      range: "$13500",
-    },
-    {
-      name: "Architect",
-      color: "rgb(113, 114, 19)",
-      subscription: "615",
-      range: "$17600",
-    },
-    {
-      name: "Emperor",
-      color: "rgb(230, 10, 76)",
-      subscription: "725",
-      range: "$22500",
-    },
-    {
-      name: "Master",
-      color: "rgb(212, 55, 102)",
-      subscription: "845",
-      range: "$28100",
-    },
-    {
-      name: "King",
-      color: "rgb(160, 212, 54)",
-      subscription: "990",
-      range: "$34700",
-    },
-    {
-      name: "Grandmaster",
-      color: "rgb(147, 99, 43)",
-      subscription: "1125",
-      range: "$42200",
-    },
+    // {
+    //   name: "Legend",
+    //   color: "rgb(212, 55, 102)",
+    //   subscription: "330",
+    //   range: "$7400",
+    // },
+    // {
+    //   name: "Titan",
+    //   color: "rgb(162, 55, 212)",
+    //   subscription: "415",
+    //   range: "$10100",
+    // },
+    // {
+    //   name: "Pioneer",
+    //   color: "rgb(147, 99, 43)",
+    //   subscription: "510",
+    //   range: "$13500",
+    // },
+    // {
+    //   name: "Architect",
+    //   color: "rgb(113, 114, 19)",
+    //   subscription: "615",
+    //   range: "$17600",
+    // },
+    // {
+    //   name: "Emperor",
+    //   color: "rgb(230, 10, 76)",
+    //   subscription: "725",
+    //   range: "$22500",
+    // },
+    // {
+    //   name: "Master",
+    //   color: "rgb(212, 55, 102)",
+    //   subscription: "845",
+    //   range: "$28100",
+    // },
+    // {
+    //   name: "King",
+    //   color: "rgb(160, 212, 54)",
+    //   subscription: "990",
+    //   range: "$34700",
+    // },
+    // {
+    //   name: "Grandmaster",
+    //   color: "rgb(147, 99, 43)",
+    //   subscription: "1125",
+    //   range: "$42200",
+    // },
   ];
 
   const UserInfo = async () => {
@@ -457,12 +457,6 @@ export default function Dashboard() {
                       <h6>Trade Income</h6>
                     </div>
                     <p>
-                      {/* {allUsers?.tradingProfit?.length > 0
-                        ? (
-                            Number(allUsers.tradingProfit[0]?.profitOrLoss) +
-                            Number(allUsers?.userLastDealProfit)
-                          ).toFixed(4)
-                        : "0"} */}
                       {allUsers?.tradingProfit?.length > 0
                         ? Math.max(
                             Number(allUsers.tradingProfit[0]?.profitOrLoss) +
@@ -521,6 +515,19 @@ export default function Dashboard() {
                       <h6>Direct Referrals</h6>
                     </div>
                     <p>{allUsers?.userInfo?.[0]?.totalDirectCount ?? "0"}</p>
+                  </div>
+                  <div class="total-card">
+                    <div class="sub-total">
+                      <h6>Group Trading Income</h6>
+                    </div>
+                    <p>
+                      <p>
+                        {(allUsers?.LevelTrade?.[0]?.totalReward ?? 0) /
+                          (1e18).toFixed(4)}
+                      </p>
+
+                      <span> USDT</span>
+                    </p>
                   </div>
                 </div>
               </section>
