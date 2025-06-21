@@ -7,7 +7,7 @@ import { BsMedium } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import ConnectWallet from "./ConnectWallet";
 import { FaFacebook } from "react-icons/fa";
-import { MdOutlineSupportAgent } from "react-icons/md";
+import { MdOutlineSupportAgent, MdTrendingUp } from "react-icons/md";
 import { FaYoutube } from "react-icons/fa";
 export default function Navbar({ title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(
@@ -107,6 +107,15 @@ export default function Navbar({ title }) {
               className={location.pathname === "/level" ? "active" : "inactive"}
             >
               <FaLevelUpAlt /> Level
+            </li>
+          </Link>
+          <Link to="/Trading-Income">
+            <li
+              className={
+                location.pathname === "/Trading-Income" ? "active" : "inactive"
+              }
+            >
+              <MdTrendingUp /> Trading Income
             </li>
           </Link>
         </ul>

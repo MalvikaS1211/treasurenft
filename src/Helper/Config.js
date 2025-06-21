@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = "0x447C987fC2F77D69D90951B385858FBaB5b582d5";
+export const CONTRACT_ADDRESS = "0x34d415A3b06eE5a2311e5E71d3fDD5aa07FAeb53";
 export const CONTRACT_ADDRESS_ABI = [
   {
     inputs: [
@@ -341,6 +341,12 @@ export const CONTRACT_ADDRESS_ABI = [
         indexed: false,
         internalType: "uint256",
         name: "timestamp",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "level",
         type: "uint256",
       },
     ],
@@ -842,7 +848,7 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
 ];
-export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05";
+export const USDT_TOKEN = "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3";
 export const tokenAbi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {

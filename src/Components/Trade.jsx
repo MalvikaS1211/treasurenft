@@ -488,21 +488,20 @@ export default function Trade() {
                               {nft.owner != address && (
                                 <div
                                   class="button-place-bid"
-                                  onClick={() => {}}
+                                  onClick={() => {
+                                    BuyNft(
+                                      nft.price,
+                                      nft.title,
+                                      nft.description,
+                                      nft.metadataURI,
+                                      nft.tokenId,
+                                      Number(nft.price)
+                                    );
+                                  }}
                                 >
                                   {!isLoading && (
                                     <button
                                       className="sc-button style-place-bid style bag fl-button pri-3"
-                                      onClick={() => {
-                                        BuyNft(
-                                          nft.price,
-                                          nft.title,
-                                          nft.description,
-                                          nft.metadataURI,
-                                          nft.tokenId,
-                                          Number(nft.price)
-                                        );
-                                      }}
                                       type="button"
                                     >
                                       {/* <FaShoppingBag color="black" /> */}

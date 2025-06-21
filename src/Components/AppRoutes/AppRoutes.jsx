@@ -35,6 +35,7 @@ import BlogPage from "../Blog";
 import BlogDetail from "../BlogDetail";
 import ChatSupport from "../ChatSupport";
 import ChatConversation from "../ChatConversation";
+import TradingIncome from "../TradingIncome";
 
 function AppRoutes() {
   return (
@@ -66,6 +67,7 @@ function AppRoutes() {
           <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/support" element={<ChatSupport />} />
           <Route path="/support-chat" element={<ChatConversation />} />
+          <Route path="/Trading-Income" element={<TradingIncome />} />
         </Routes>
       </Router>
     </>
