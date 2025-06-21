@@ -7,8 +7,8 @@ export const URLApi = "https://magicverse.org/api";
 // export const URLApi = "http://192.168.1.161:8081/api";
 // export const URLApi = "https://magicverse-backend.onrender.com/api";
 // export const URLApi = "http://localhost:8081/api";
-// export const URLApi = "http://192.168.1.19:8081/api";
-// export const SOCKET_SERVER_URL = "http://192.168.1.214:8081";
+// export const URLApi = "http://192.168.1.108:8081/api";
+// export const SOCKET_SERVER_URL = "http://192.168.1.108:8081";
 export const SOCKET_SERVER_URL = "https://magicverse.org";
 
 // export const SOCKET_SERVER_URL = "https://magicverse-backend.onrender.com";
@@ -43,7 +43,7 @@ export async function createNftVrsFn(
     console.log(response, "from api call");
     return response.data;
   } catch (error) {
-    console.log(error, "error in api");
+    console.log(error, "create-nft-vrs");
     return error.response;
   }
 }
@@ -72,7 +72,7 @@ export async function getDirectTeam(address, page, limit) {
 
     return response.data;
   } catch (error) {
-    console.log("Error getUserInfo Admin:", error);
+    console.log("Error getDirectTeam Admin:", error);
   }
 }
 
@@ -202,7 +202,7 @@ export async function getTotalTeam(address, page, limit, level) {
     console.log(level, "level in api call");
     return response.data;
   } catch (error) {
-    console.log("Error getRoyalty Admin:", error);
+    console.log("Error getTotalTeam Admin:", error);
   }
 }
 
@@ -252,7 +252,7 @@ export async function getFetchTree(address) {
 
     return response.data;
   } catch (error) {
-    console.log("Error getOwnedNFTs Admin:", error);
+    console.log("Error getFetchTree Admin:", error);
   }
 }
 
@@ -264,7 +264,7 @@ export async function getIdToAddress(randomId) {
 
     return response.data;
   } catch (error) {
-    console.log("Error getOwnedNFTs Admin:", error);
+    console.log("Error getIdToAddress Admin:", error);
   }
 }
 
@@ -301,7 +301,7 @@ export async function getNftStartStop(action, status) {
 
     return response.data;
   } catch (error) {
-    console.log("Error getLoginCredential Admin:", error);
+    console.log("Error getNftStartStop Admin:", error);
   }
 }
 
@@ -313,7 +313,7 @@ export async function getStatus(user) {
 
     return response.data;
   } catch (error) {
-    console.log("Error getLoginCredential Admin:", error);
+    console.log("Error getStatus Admin:", error);
   }
 }
 
@@ -325,7 +325,7 @@ export async function createNewTicketFn(user) {
 
     return response.data;
   } catch (error) {
-    console.log("Error getLoginCredential Admin:", error);
+    console.log("Error createNewTicketFn Admin:", error);
   }
 }
 
@@ -407,5 +407,57 @@ export async function getTradingIncome(address) {
     return response.data;
   } catch (error) {
     console.log("Error getTradingIncome Admin:", error);
+  }
+}
+
+export async function dueNFT(address) {
+  try {
+    const response = await axios.post(`${URLApi}/dueNFT`, {
+      userAddress: address,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error dueNFT Admin:", error);
+  }
+}
+
+export async function verifyNftFn(
+  tokenId,
+  userAddress,
+  initialPrice,
+  title,
+  description,
+  metadataURI,
+  totalAmount
+) {
+  try {
+    const response = await axios.post(`${URLApi}/verifyNft`, {
+      tokenId,
+      userAddress,
+      initialPrice,
+      title,
+      description,
+      metadataURI,
+      totalAmount,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error verifyNftFn Admin:", error);
+  }
+}
+
+export async function updateNFTDetails(address, tokenId, txDetails) {
+  try {
+    const response = await axios.post(`${URLApi}/updateDetails`, {
+      userAddress: address,
+      tokenId,
+      txDetails,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error updateNFTDetails Admin:", error);
   }
 }

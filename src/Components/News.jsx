@@ -19,9 +19,13 @@ const News = () => {
   }, []);
 
   return (
-    <div className="marquee-div">
-      <marquee className="marquee-msg">{news}</marquee>
-    </div>
+    <>
+      {news && (
+        <div className="marquee-div">
+          <marquee className="marquee-msg">{news}</marquee>
+        </div>
+      )}
+    </>
   );
 };
 

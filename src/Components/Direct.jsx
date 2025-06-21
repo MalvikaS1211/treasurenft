@@ -51,7 +51,7 @@ export default function Direct() {
                           <td>
                             {data?.timestamp
                               ? moment(data.timestamp * 1000).format(
-                                  "DD-MM-YYYY HH:mm:ss"
+                                  "DD-MM-YYYY HH:mm:ss A"
                                 )
                               : "N/A"}
                           </td>

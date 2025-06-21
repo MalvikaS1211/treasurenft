@@ -1467,7 +1467,7 @@ main {
   .status-container2 {
     width: 236px;
     margin-top: 22px;
-    margin-left: -16.5vw;
+    margin-left: -13.5vw;
   }
 
   .status-container {
@@ -2061,6 +2061,26 @@ header {
   }
 }
 
+@media (min-width: 390px) and (max-width: 400px) {
+  .status-container2 {
+    width: 293px;
+    margin-left: -28.9vh;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 768px) {
+  .status-container2 {
+    width: 293px;
+    margin-left: -29.9vh;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1024px) {
+  .status-container2 {
+    width: 293px;
+    margin-left: -30vh !important;
+  }
+}
 .rank-income table {
   border-collapse: collapse;
   width: 100%;

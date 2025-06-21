@@ -33,27 +33,24 @@ export default function Dashboard() {
   const [allUsers, setAllUsers] = useState(null);
   const [isFetch, setIsFetch] = useState(false);
   const [availableBal, setAvailableBal] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(null);
+  const [balanceData, setBalanceData] = useState(0);
   const data = new URLSearchParams(window.location.search);
   const refLink = data.get("ref");
   const uniqueId = allUsers?.userInfo?.[0]?.uniqueRandomId || "defaultId";
   const referralLink = `${base_url}/signup?ref=${uniqueId}`;
-  const [timeLeft, setTimeLeft] = useState(null);
-
   const config = createConfig({
     chains: [opBNB],
     transports: {
       [opBNB.id]: http(),
     },
   });
-  const [balanceData, setBalanceData] = useState(0);
   async function fetchUserTokenBalance() {
-    // console.log(config, address, 123);
     try {
       const balance = await getBalance(config, {
         address: address,
         token: USDT_TOKEN,
       });
-      // console.log("balanceData::::", balance.formatted);
       setBalanceData(parseFloat(balance.formatted).toFixed(4));
     } catch (error) {
       console.error("Error fetching token balance:", error);
@@ -159,18 +156,15 @@ export default function Dashboard() {
     try {
       const res = await getUserInfo(address);
       setAllUsers(res);
-      // console.log("UserInfo", res);
     } catch (error) {
       console.log(error);
     }
   };
-  // console.log(userInfo, "userInfo::::");
 
   const getUserInFoFromContract = async () => {
     try {
       const resUser = await usersFn(address);
       setDashboardData(resUser);
-      // console.log("getUserInFoFromContract", resUser);
     } catch (error) {
       console.log(error);
     }
@@ -213,14 +207,8 @@ export default function Dashboard() {
 
   const getIdFromUser = async () => {
     try {
-      // console.log("adhakhd");
       const uniqueId = allUsers?.userInfo[0]?.uniqueRandomId;
-      // console.log("123456", allUsers);
-      // console.log("uniqueId", uniqueId);
-      // console.log(uniqueId, "::::");
       const res = await getIdToAddress(uniqueId);
-      // console.log("uniqueId", uniqueId);
-      // console.log(res, "getIdToAddress");
     } catch (error) {
       console.error("Error in getIdFromUser:", error);
     }
@@ -246,7 +234,7 @@ export default function Dashboard() {
       const expiryTime = time + expiryDuration;
       const now = moment().unix(); // Current Unix timestamp in seconds
       const remainingSeconds = expiryTime - now;
-      console.log(remainingSeconds, time, expiryDuration, now, "count:::");
+      // console.log(remainingSeconds, time, expiryDuration, now, "count:::");
       if (remainingSeconds <= 0) {
         clearInterval(interval);
         setTimeLeft("Expired");
@@ -319,17 +307,6 @@ export default function Dashboard() {
                   <p className="">{balanceData}</p>
                   <h6>My Total Income</h6>
                   <p className=" p-2">
-                    {/* {(
-                      Number(allUsers?.userLastDealProfit || 0) +
-                      (allUsers?.tradingProfit?.length > 0
-                        ? Number(allUsers.tradingProfit[0]?.profitOrLoss || 0)
-                        : 0) +
-                      (Number(dashboardData[8] || 0) +
-                        Number(dashboardData[9] || 0) +
-                        Number(dashboardData[10] || 0)) /
-                        1e18
-                    ).toFixed(4)} */}
-
                     {Math.max(
                       Number(allUsers?.userLastDealProfit || 0) +
                         (allUsers?.tradingProfit?.length > 0
@@ -341,13 +318,7 @@ export default function Dashboard() {
                           1e18,
                       0
                     ).toFixed(4)}
-
-                    {/* {(allUsers.tradingProfit > 0 &&
-                      allUsers?.tradingProfit[0]?.profitOrLoss) ||
-                      0} */}
                   </p>
-                  {/* <h6>My Wallet Address</h6>
-                  <p className="text-white p-2">{address}</p> */}
                 </div>
                 <div class="user-card wallet-card">
                   <h6>Referral Link</h6>
@@ -355,15 +326,7 @@ export default function Dashboard() {
                     {referralLink}
                   </p>
                   <h6>Referred By</h6>
-                  <p>
-                    {allUsers?.referrerInfo?.uniqueRandomId || 0}
-                    {/* {typeof dashboardData?.[2] === "string"
-                      ? ` ${dashboardData?.[2].slice(
-                          0,
-                          4
-                        )}...${dashboardData?.[2].slice(-6)}`
-                      : "No data available"} */}
-                  </p>
+                  <p>{allUsers?.referrerInfo?.uniqueRandomId || 0}</p>
                 </div>
               </div>
               <section class="dashboard">
@@ -522,8 +485,7 @@ export default function Dashboard() {
                     </div>
                     <p>
                       <p>
-                        {(allUsers?.LevelTrade?.[0]?.totalReward ?? 0) /
-                          (1e18).toFixed(4)}
+                        {(allUsers?.totalRewardInEth ?? 0) / (1e18).toFixed(4)}
                       </p>
 
                       <span> USDT</span>

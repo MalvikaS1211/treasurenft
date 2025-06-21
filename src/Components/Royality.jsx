@@ -72,7 +72,7 @@ export default function Royality() {
                             <td>
                               {data?.createdAt
                                 ? moment(data.createdAt).format(
-                                    "DD-MM-YYYY HH:mm:ss"
+                                    "DD-MM-YYYY HH:mm:ss A"
                                   )
                                 : "N/A"}
                             </td>

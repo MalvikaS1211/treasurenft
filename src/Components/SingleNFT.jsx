@@ -4,9 +4,12 @@ import MattRamos from "../assets/MattRamos.jpg";
 import axios from "axios";
 import {
   createNftVrsFn,
+  dueNFT,
   getNftStartStop,
   getStatus,
   getUserInfo,
+  updateNFTDetails,
+  verifyNftFn,
 } from "../Helper/API_Functions";
 import {
   approveToken,
@@ -17,20 +20,26 @@ import toast from "react-hot-toast";
 import { useAccount } from "wagmi";
 
 export default function SingleNFT() {
+  const { address } = useAccount();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [nftPrice, setNftPrice] = useState("");
   const [selectedFile, setSelectedFile] = useState("");
-  // const address = "0x9ccf0cd809843c239a6b6332985328a8b65dac7f";
-  const { address } = useAccount();
-  const [apiCall, setApiCall] = useState(false);
-
   const [preview, setPreview] = useState(null);
   const [creationFee, setCreationFee] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [totalNFTAmount, setTotalNFTAmount] = useState(0);
   const [allUsers, setAllUsers] = useState(null);
   const [isAllowed, setIsAllowed] = useState(false);
+  const [NftAction, setNftAction] = useState(false);
+  const [dueNFts, setDueNFTs] = useState();
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [selectedNft, setSelectedNft] = useState({
+    tokenId: "",
+    buyer: "",
+    buyerPaid: "",
+  });
+
   const UserInfo = async () => {
     try {
       const res = await getUserInfo(address);
@@ -49,9 +58,22 @@ export default function SingleNFT() {
       setIsAllowed(res.data.isAllowed);
     } catch (error) {}
   };
+
+  const handleDueNFT = async () => {
+    try {
+      const response = await dueNFT(address);
+      console.log(response, "DueNFT");
+      setDueNFTs(response?.dueData);
+      console.log(response?.dueData, "buyerpaid");
+    } catch (error) {
+      setDueNFTs([]);
+    }
+  };
+
   useEffect(() => {
     UserInfo();
     handleIsAllowedNFT();
+    handleDueNFT();
   }, [address]);
 
   const handleFileChange = (e) => {
@@ -252,7 +274,6 @@ export default function SingleNFT() {
     }
   };
 
-  const [NftAction, setNftAction] = useState(false);
   const handleNftAction = async () => {
     try {
       const response = await getNftStartStop("GET");
@@ -266,6 +287,97 @@ export default function SingleNFT() {
   useEffect(() => {
     handleNftAction();
   }, [address]);
+
+  const dueNFTCreate = async () => {
+    try {
+      if (!address) {
+        setIsLoading(false);
+        toast.error("Please connect your wallet");
+        return;
+      }
+      if (isLoading == true) {
+        setIsLoading(false);
+        return toast.error("Your request is pending");
+      }
+      if (!title || !description || !selectedFile) {
+        setIsLoading(false);
+        return toast.error("Please fill all fields and select a file!");
+      }
+      const iphashRes = await handleMintNFT();
+      let totalAmount = 0;
+      if (iphashRes) {
+        const res = await verifyNftFn(
+          selectedNft.tokenId,
+          address,
+          Number(selectedNft.buyerPaid) / 1e18,
+          title,
+          description,
+          iphashRes,
+          totalAmount
+        );
+        // console.log(res, res.data.message, "VRS response");
+        if (res.success) {
+          const tokenApp = await tokenApp1(totalAmount);
+          if (tokenApp) {
+            const nft = createNFTFn(
+              res.vrs.title,
+              res.vrs.description,
+              res.vrs.metadataURI,
+              res.vrs.initialPrice,
+              res.vrs.totalAmount,
+              res.vrs.signature.v,
+              res.vrs.signature.r,
+              res.vrs.signature.s
+            );
+            const tx = await toast.promise(nft, {
+              loading: "Nft creation in process",
+              success: "Nft created successfully",
+              error: "error in nft creation",
+            });
+
+            console.log(tx);
+            let obj = {};
+            obj["txHash"] = tx.transactionHash;
+            obj["from"] = tx.from;
+            obj["blockNumber"] = Number(tx.blockNumber);
+            console.log(obj, ":::obj");
+            if (tx) {
+              const apiRes = await updateNFTDetails(
+                address,
+                selectedNft.tokenId,
+                obj
+              );
+              console.log(apiRes);
+
+              setTimeout(() => {
+                handleDueNFT();
+              }, 3000);
+            }
+            console.log(tx, "::::::::asdfasfdfsadfdsfsdafdsasadfdfs");
+            setIsLoading(false);
+            setSelectedFile("");
+            setNftPrice("");
+            setTitle("");
+            setDescription("");
+            setPreview(CyberDoberman);
+            setTimeout(() => {}, 2000);
+          }
+          setIsLoading(false);
+        } else {
+          setIsLoading(false);
+          toast.error(res.data.message);
+          return;
+        }
+      }
+    } catch (error) {
+      const message =
+        error?.response?.data?.message ||
+        error.message ||
+        "Something went wrong. Please try again.";
+      toast.error(message);
+      console.log("Error in dueNFTCreate", error);
+    }
+  };
 
   return (
     <>
@@ -281,6 +393,47 @@ export default function SingleNFT() {
           these guidelines will result in the permanent deactivation of NFT
           creation rights.
         </p>
+      </div>
+      <div className="row available-packages">
+        <div className="row" style={{ paddingLeft: "34px" }}>
+          <h4
+            className="title-create-item mt-4 col-lg-12"
+            style={{ textAlign: "left" }}
+            onClick={dueNFTCreate}
+          >
+            Due NFTs
+          </h4>
+          <div className="d-flex flex-wrap justify-content-start gap-3">
+            {dueNFts &&
+              dueNFts?.map((nft, index) => {
+                return (
+                  <div className="package-container" key={index}>
+                    {/* <span> ${nft?.buyerPaid}</span> */}
+                    <button
+                      type="button"
+                      className="sc-button style style-1"
+                      style={{
+                        padding: "5px 26px",
+                        backgroundColor:
+                          selectedIndex === index ? "#5142fc" : "",
+                        color: selectedIndex === index ? "white" : "",
+                      }}
+                      onClick={() => {
+                        setSelectedIndex(index);
+                        setSelectedNft({
+                          tokenId: nft?.tokenId,
+                          buyer: nft?.buyer,
+                          buyerPaid: nft?.buyerPaid,
+                        });
+                      }}
+                    >
+                      ${(nft?.buyerPaid / 1e18).toFixed(4)}
+                    </button>
+                  </div>
+                );
+              })}
+          </div>
+        </div>
       </div>
       <div
         class="col-xl-3 col-lg-6 col-md-6 col-12"
@@ -337,20 +490,23 @@ export default function SingleNFT() {
           <div className="flat-tabs tab-create-item">
             <div className="react-tabs__tab-panel">
               <form>
-                <h4 className="title-create-item">Price</h4>
-                <select
-                  className=" mb-4 nft-price-dropdown"
-                  value={nftPrice}
-                  onChange={handleNFTPrice}
-                >
-                  <option value="">Enter price for one item (USDT)</option>
-                  {SingleNFTpriceOptions.map((price, index) => (
-                    <option key={index} value={price}>
-                      $ {price}
-                    </option>
-                  ))}
-                </select>
-
+                {!selectedNft.tokenId && (
+                  <>
+                    <h4 className="title-create-item">Price</h4>
+                    <select
+                      className=" mb-4 nft-price-dropdown"
+                      value={nftPrice}
+                      onChange={handleNFTPrice}
+                    >
+                      <option value="">Enter price for one item (USDT)</option>
+                      {SingleNFTpriceOptions.map((price, index) => (
+                        <option key={index} value={price}>
+                          $ {price}
+                        </option>
+                      ))}
+                    </select>
+                  </>
+                )}
                 <h4 className="title-create-item">Title</h4>
                 <input
                   type="text"
@@ -367,7 +523,44 @@ export default function SingleNFT() {
                 />
                 <div className="create-nft-container">
                   {/* {isAllowed === true && ( */}
-                  <button
+                  {selectedNft.tokenId ? (
+                    <>
+                      {" "}
+                      <button
+                        className="createbtn"
+                        onClick={dueNFTCreate}
+                        type="button"
+                      >
+                        {isLoading ? (
+                          <span
+                            className="spinner-border spinner-border-sm"
+                            role="status"
+                          ></span>
+                        ) : (
+                          "Due Create NFT"
+                        )}
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      {" "}
+                      <button
+                        className="createbtn"
+                        onClick={nftCreate}
+                        type="button"
+                      >
+                        {isLoading ? (
+                          <span
+                            className="spinner-border spinner-border-sm"
+                            role="status"
+                          ></span>
+                        ) : (
+                          "Create NFT"
+                        )}
+                      </button>
+                    </>
+                  )}
+                  {/* <button
                     className="createbtn"
                     onClick={nftCreate}
                     type="button"
@@ -380,7 +573,7 @@ export default function SingleNFT() {
                     ) : (
                       "Create NFT"
                     )}
-                  </button>
+                  </button> */}
                   {/* )} */}
                 </div>
               </form>

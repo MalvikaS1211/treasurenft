@@ -34,7 +34,7 @@ export default function Trade() {
   const [apiLoading, setApiLoading] = useState(false);
   const [isAvailable, setIsAvailable] = useState(false);
   const [allUsers, setAllUsers] = useState(null);
-
+  const [balance, getBalance] = useState(0);
   const [assetValue, setAssetValue] = useState(0);
   const tokenApp1 = async (amt) => {
     try {
@@ -230,7 +230,6 @@ export default function Trade() {
     }
   };
 
-  const [balance, getBalance] = useState(0);
   const BuyNft = async (
     initialPrice,
     title,
@@ -301,7 +300,7 @@ export default function Trade() {
       const message =
         error?.response?.data?.message ||
         "Something went wrong. Please try again.";
-      // toast.error(message);
+      toast.error(message);
       setIsLoading(false);
       console.log(error);
     } finally {

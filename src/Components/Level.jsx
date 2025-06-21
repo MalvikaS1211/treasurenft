@@ -32,11 +32,10 @@ export default function Level() {
                   <thead>
                     <tr>
                       <th>Sr.No</th>
-                      {/* <th>Id</th> */}
+
                       <th>Address</th>
                       <th>Activation Date</th>
                       <th>Level</th>
-                      {/* <th>Direct Team</th> */}
                     </tr>
                   </thead>
                   <tbody>
@@ -44,7 +43,7 @@ export default function Level() {
                       tabledata?.map((data, index) => (
                         <tr key={index}>
                           <td>{index + 1}</td>
-                          {/* <td>{data?.uniqueRandomId}</td> */}
+
                           <td>
                             {data.fromUser.slice(0, 4)}...
                             {data.fromUser.slice(-7)}
@@ -52,12 +51,11 @@ export default function Level() {
                           <td>
                             {data?.createdAt
                               ? moment(data.createdAt).format(
-                                  "DD-MM-YYYY HH:mm:ss"
+                                  "DD-MM-YYYY HH:mm:ss A"
                                 )
                               : "N/A"}
                           </td>
                           <td>{data?.level}</td>
-                          {/* <td>{data?.directTeam}</td> */}
                         </tr>
                       ))
                     ) : (
