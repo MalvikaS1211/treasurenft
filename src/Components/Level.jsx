@@ -8,17 +8,29 @@ import moment from "moment";
 export default function Level() {
   const { address } = useAccount();
   const [tabledata, setTableData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
+  const itemPerpage = 15;
   const handleTableData = async () => {
-    const res = await getLevelIncome(address);
+    const res = await getLevelIncome(address, currentPage, itemPerpage);
     setTableData(res.data);
+    setTotalPages(res?.pagination?.totalPages);
     console.log("GetDirects", res);
   };
   console.log("tabledata:::", tabledata);
   useEffect(() => {
     handleTableData();
-  }, [address]);
+  }, [address, currentPage]);
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) =>
+      prevPage < totalPages ? prevPage + 1 : prevPage
+    );
+  };
 
+  const handlePreviousPage = () => {
+    setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage));
+  };
   return (
     <>
       <div className="p-4 dashboardbg">
@@ -26,7 +38,7 @@ export default function Level() {
           <Navbar title="Level" />
           {/* <HeaderDashboard title="Level" /> */}
           <div>
-            <div style={{ height: "100vh" }}>
+            <div style={{ minHeight: "100vh" }}>
               <div className="rank-income">
                 <table className="table-responsiveness">
                   <thead>
@@ -42,7 +54,7 @@ export default function Level() {
                     {tabledata?.length > 0 ? (
                       tabledata?.map((data, index) => (
                         <tr key={index}>
-                          <td>{index + 1}</td>
+                          <td>{(currentPage - 1) * itemPerpage + index + 1}</td>
 
                           <td>
                             {data.fromUser.slice(0, 4)}...
@@ -67,6 +79,33 @@ export default function Level() {
                     )}
                   </tbody>
                 </table>
+                <div
+                  className="text-center mb-3 col-lg-6"
+                  style={{ margin: "auto" }}
+                >
+                  <div className=" filter-pagination mt-3 ">
+                    <button
+                      className="custom-pagination-btn m-2"
+                      onClick={handlePreviousPage}
+                      disabled={currentPage === 1}
+                    >
+                      Previous
+                    </button>
+
+                    <button
+                      type="button"
+                      className="custom-pagination-btn m-2"
+                      onClick={handleNextPage}
+                      disabled={currentPage === totalPages}
+                    >
+                      Next
+                    </button>
+
+                    <span style={{ fontSize: "13px" }}>
+                      Page {currentPage} of {totalPages}
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

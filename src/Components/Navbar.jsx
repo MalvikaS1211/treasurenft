@@ -1,23 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 import { FaHome, FaRedditAlien, FaCrown, FaLevelUpAlt } from "react-icons/fa";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { BsMedium } from "react-icons/bs";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu, GiReceiveMoney } from "react-icons/gi";
 import ConnectWallet from "./ConnectWallet";
 import { FaFacebook } from "react-icons/fa";
 import { MdOutlineSupportAgent, MdTrendingUp } from "react-icons/md";
 import { FaYoutube } from "react-icons/fa";
+import { getStakingDetail } from "../Helper/API_Functions";
+import { useAccount } from "wagmi";
 export default function Navbar({ title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(
     window.innerWidth > 500 ? true : false
   );
+  const [btnShow, setBtnShow] = useState();
   const location = useLocation();
-
+  const { address } = useAccount();
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
+  const handleStakingBtn = async () => {
+    try {
+      const res = await getStakingDetail(address);
+      console.log(address, "address in navbar");
+      setBtnShow(res?.data);
+    } catch (error) {}
+  };
+  useEffect(() => {
+    if (address) {
+      handleStakingBtn();
+    }
+  }, [address]);
 
   return (
     <>
@@ -118,6 +134,17 @@ export default function Navbar({ title }) {
               <MdTrendingUp /> Trading Income
             </li>
           </Link>
+          {btnShow?.length > 0 && (
+            <Link to="/staking">
+              <li
+                className={
+                  location.pathname === "/staking" ? "active" : "inactive"
+                }
+              >
+                <GiReceiveMoney /> Staking
+              </li>
+            </Link>
+          )}
         </ul>
 
         <h3 className="follow-us">Follow Us On</h3>

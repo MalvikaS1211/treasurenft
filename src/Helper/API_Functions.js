@@ -3,15 +3,19 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 
 export const URLApi = "https://magicverse.org/api";
-// export const URLApi = "http://192.168.1.214:8081/api";
-// export const URLApi = "http://192.168.1.161:8081/api";
-// export const URLApi = "https://magicverse-backend.onrender.com/api";
-// export const URLApi = "http://localhost:8081/api";
-// export const URLApi = "http://192.168.1.108:8081/api";
-// export const SOCKET_SERVER_URL = "http://192.168.1.108:8081";
 export const SOCKET_SERVER_URL = "https://magicverse.org";
 
+// export const URLApi = "https://magicverse-backend.onrender.com/api";
+// export const URLApi = "http://localhost:8081/api";
+// export const URLApi = "http://192.168.1.171:8081/api";
+// export const SOCKET_SERVER_URL = "http://192.168.1.171:8081/api";
+
 // export const SOCKET_SERVER_URL = "https://magicverse-backend.onrender.com";
+
+export const pinataApiKey = "e45f06a4f288fd4c7ded";
+export const pinataSecretApiKey =
+  "5d66447d15dde18b2851a2d6aefc48f4ca25b29c05440027f816f7d176cb7fdd";
+
 export async function getUserInfo(address) {
   try {
     const response = await axios.post(`${URLApi}/get-user-info`, {
@@ -163,7 +167,7 @@ export async function getCreateBulkNFT(
   }
 }
 
-export async function getUserDirects(address, page = 1, limit = 10) {
+export async function getUserDirects(address, page, limit) {
   try {
     const response = await axios.post(`${URLApi}/get-user-directs`, {
       userAddress: address,
@@ -177,7 +181,7 @@ export async function getUserDirects(address, page = 1, limit = 10) {
   }
 }
 
-export async function getRoyalty(address, page = 1, limit = 52) {
+export async function getRoyalty(address, page, limit) {
   try {
     const response = await axios.post(`${URLApi}/user-royalty-transferred`, {
       userAddress: address,
@@ -268,10 +272,12 @@ export async function getIdToAddress(randomId) {
   }
 }
 
-export async function getDirectIncome(address) {
+export async function getDirectIncome(address, page, limit) {
   try {
     const response = await axios.post(`${URLApi}/direct-income`, {
       userAddress: address,
+      page,
+      limit,
     });
 
     return response.data;
@@ -280,10 +286,12 @@ export async function getDirectIncome(address) {
   }
 }
 
-export async function getLevelIncome(address) {
+export async function getLevelIncome(address, page, limit) {
   try {
     const response = await axios.post(`${URLApi}/level-income`, {
       userAddress: address,
+      page,
+      limit,
     });
 
     return response.data;
@@ -398,10 +406,12 @@ export async function getMessage() {
     console.log("Error getMessage Admin:", error);
   }
 }
-export async function getTradingIncome(address) {
+export async function getTradingIncome(address, page, limit) {
   try {
     const response = await axios.post(`${URLApi}/trading-income`, {
       userAddress: address,
+      page,
+      limit,
     });
 
     return response.data;
@@ -454,6 +464,20 @@ export async function updateNFTDetails(address, tokenId, txDetails) {
       userAddress: address,
       tokenId,
       txDetails,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error updateNFTDetails Admin:", error);
+  }
+}
+
+export async function getStakingDetail(address, page, limit) {
+  try {
+    const response = await axios.post(`${URLApi}/getStakingDetails`, {
+      user: address,
+      page,
+      limit,
     });
 
     return response.data;

@@ -17,12 +17,12 @@ import Account from "../Account";
 
 import Airdrop from "../Airdrop";
 import NFTCreation from "../NftCreation";
-import NFTBuySell from "../NFTBuySell";
+
 import Dashboard from "../dashboard";
 import Refferal from "../Refferal";
 import Community from "../Community";
 import DownLine from "../DownLine";
-import NFTBuy from "../NFTBuy";
+
 import Registration from "../Registration";
 import CreateNFT from "../CreateNFT";
 import LiveAuction from "../LiveAuction";
@@ -36,6 +36,7 @@ import BlogDetail from "../BlogDetail";
 import ChatSupport from "../ChatSupport";
 import ChatConversation from "../ChatConversation";
 import TradingIncome from "../TradingIncome";
+import Staking from "../Staking";
 
 function AppRoutes() {
   return (
@@ -52,7 +53,7 @@ function AppRoutes() {
           {/* <Route path="/account/level" element={<Level />} /> */}
           <Route path="/Airdrop" element={<Airdrop />} />
           <Route path="/NFTcreation" element={<CreateNFT />} />
-          {/* <Route path="/NFTBuySell" element={<NFTBuySell />} /> */}
+
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/refferal" element={<Refferal />} />
           <Route path="/community" element={<Community />} />
@@ -68,6 +69,7 @@ function AppRoutes() {
           <Route path="/support" element={<ChatSupport />} />
           <Route path="/support-chat" element={<ChatConversation />} />
           <Route path="/Trading-Income" element={<TradingIncome />} />
+          <Route path="/staking" element={<Staking />} />
         </Routes>
       </Router>
     </>

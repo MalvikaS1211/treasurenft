@@ -1,31 +1,25 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import ConnectWallet from "./ConnectWallet";
-import HeaderDashboard from "./HeaderDashboard";
-import { getUserDirects } from "../Helper/API_Functions";
+
+import { getStakingDetail, getTradingIncome } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
 import moment from "moment";
-export default function Refferal() {
+export default function Staking() {
   const { address } = useAccount();
   const [tabledata, setTableData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-
   const itemPerpage = 15;
-  const handleTableData = async () => {
-    try {
-      const res = await getUserDirects(address, currentPage, itemPerpage);
-      setTableData(res.userDirects);
-      setTotalPages(res?.pagination?.totalPages);
-      console.log("GetDirects", res);
-    } catch (error) {
-      console.log(error);
-    }
+  const [totals, setTotals] = useState();
+
+  const handleGetDetals = async () => {
+    const res = await getStakingDetail(address, currentPage, itemPerpage);
+    setTableData(res.data);
+    setTotals(res.stakingDetais);
+    setTotalPages(res?.pagination?.totalPages);
+    console.log("getStakingDetail", res);
   };
-  console.log("tabledata:::", tabledata);
-  useEffect(() => {
-    handleTableData();
-  }, [address, currentPage]);
+
   const handleNextPage = () => {
     setCurrentPage((prevPage) =>
       prevPage < totalPages ? prevPage + 1 : prevPage
@@ -36,13 +30,46 @@ export default function Refferal() {
     setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage));
   };
 
+  useEffect(() => {
+    if (address) {
+      // handleTableData();
+      handleGetDetals();
+    }
+  }, [address, currentPage]);
+
   return (
     <>
       <div className="p-4 dashboardbg">
         <main className="content-dashboard">
-          <Navbar title="Refferal" />
-          {/* Fixed className */}
-          {/* <HeaderDashboard title="Refferal" /> */}
+          <Navbar title="Staking" />
+
+          <div class="total-grid" style={{ marginTop: "0px" }}>
+            <div class="total-card" style={{ border: "1px solid white" }}>
+              <div class="sub-total">
+                <h6>Total Amount</h6>
+              </div>
+              <p>
+                {((totals?.totalPaid ?? 0) / 1e18).toFixed(4)}
+
+                <span> USDT</span>
+              </p>
+            </div>
+            <div class="total-card" style={{ border: "1px solid white" }}>
+              <div class="sub-total">
+                <h6>Total NFT</h6>
+              </div>
+              <p> {totals?.totalHold ?? 0}</p>
+            </div>
+            <div class="total-card" style={{ border: "1px solid white" }}>
+              <div class="sub-total">
+                <h6>ROI</h6>
+              </div>
+              <p>0</p>
+            </div>
+            {/* <div className="d-flex justify-content-center align-items-center ">
+              <button className="stake-btn  m-2">Claim ROI</button>
+            </div> */}
+          </div>
           <div>
             <div style={{ minHeight: "100vh" }}>
               <div className="rank-income">
@@ -50,11 +77,12 @@ export default function Refferal() {
                   <thead>
                     <tr>
                       <th>Sr.No</th>
-                      <th>Id</th>
-                      <th>Address</th>
-                      <th>Activation Date</th>
-                      {/* <th>Level</th>
-                      <th>Direct Team</th> */}
+
+                      <th>Token Id</th>
+                      <th>Sales Count</th>
+                      <th>Buyer Paid</th>
+
+                      <th>Time</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -62,19 +90,16 @@ export default function Refferal() {
                       tabledata?.map((data, index) => (
                         <tr key={index}>
                           <td>{(currentPage - 1) * itemPerpage + index + 1}</td>
-                          <td>{data?.uniqueRandomId}</td>
+
+                          <td>{data?.tokenId}</td>
+                          <td>{data?.salesCount}</td>
+
+                          <td>{(data?.buyerPaid / 1e18).toFixed(4)}</td>
                           <td>
-                            {data.user.slice(0, 4)}...{data.user.slice(-7)}
+                            {moment
+                              .unix(data?.time)
+                              .format("DD-MM-YYYY HH:mm:ss A")}
                           </td>
-                          <td>
-                            {data?.createdAt
-                              ? moment(data.createdAt).format(
-                                  "DD-MM-YYYY HH:mm:ss A"
-                                )
-                              : "N/A"}
-                          </td>
-                          {/* <td>{data?.level}</td>
-                          <td>{data?.directTeam}</td> */}
                         </tr>
                       ))
                     ) : (

@@ -8,6 +8,8 @@ import {
   getNftStartStop,
   getStatus,
   getUserInfo,
+  pinataApiKey,
+  pinataSecretApiKey,
   updateNFTDetails,
   verifyNftFn,
 } from "../Helper/API_Functions";
@@ -111,9 +113,9 @@ export default function SingleNFT() {
   //   50, 100, 150, 200, 250, 350, 500, 650, 750, 850, 1000, 1150, 1250, 1350,
   //   1500,
   // ];
-  const pinataApiKey = "e45f06a4f288fd4c7ded";
-  const pinataSecretApiKey =
-    "5d66447d15dde18b2851a2d6aefc48f4ca25b29c05440027f816f7d176cb7fdd";
+  // const pinataApiKey = "e45f06a4f288fd4c7ded";
+  // const pinataSecretApiKey =
+  //   "5d66447d15dde18b2851a2d6aefc48f4ca25b29c05440027f816f7d176cb7fdd";
 
   const uploadToIPFS = async (file) => {
     try {
@@ -318,7 +320,6 @@ export default function SingleNFT() {
         );
         console.log(iphashRes, "iphashRes");
 
-        // console.log(res, res.data.message, "VRS response");
         if (res.success) {
           const tokenApp = await tokenApp1(totalAmount);
           if (tokenApp) {
@@ -364,11 +365,13 @@ export default function SingleNFT() {
             setDescription("");
             setPreview(CyberDoberman);
             setTimeout(() => {}, 2000);
+            setSelectedNft({});
           }
           setIsLoading(false);
         } else {
           setIsLoading(false);
           toast.error(res.data.message);
+          setSelectedNft({});
           return;
         }
       }

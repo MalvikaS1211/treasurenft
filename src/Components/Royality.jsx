@@ -9,11 +9,15 @@ import moment from "moment";
 export default function Royality() {
   const { address } = useAccount();
   const [tableData, setTableData] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
+  const itemPerpage = 15;
   const handleRoyalty = async () => {
     try {
-      const res = await getRoyalty(address);
+      const res = await getRoyalty(address, currentPage, itemPerpage);
       setTableData(res.history);
+      setTotalPages(res?.pagination?.totalPages);
       console.log("resRoyalty", res);
     } catch (error) {
       console.log(error);
@@ -23,73 +27,94 @@ export default function Royality() {
     if (address) {
       handleRoyalty();
     }
-  }, [address]);
+  }, [address, currentPage]);
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) =>
+      prevPage < totalPages ? prevPage + 1 : prevPage
+    );
+  };
 
+  const handlePreviousPage = () => {
+    setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage));
+  };
   return (
     <>
-      <div
-        className="p-4 dashboardbg"
-        style={{ height: "100vh", overflow: "hidden" }}
-      >
+      <div className="p-4 dashboardbg">
         <main className="content-dashboard">
           <Navbar title="NFT Royalty" />
           {/* <HeaderDashboard title="NFT Royalty" /> */}
           <div>
-            <div>
+            <div style={{ minHeight: "100vh" }}>
               <div className="rank-income">
-                <div
-                  style={{
-                    maxHeight: "70vh",
-                    overflowY: "auto",
-                    overflowX: "auto",
-
-                    borderRadius: "8px",
-                    padding: "10px",
-                  }}
-                >
-                  <table className="table-responsiveness">
-                    <thead>
-                      <tr>
-                        <th>Sr.No</th>
-                        <th>Token Id</th>
-                        <th>Address</th>
-                        <th>Activation Date</th>
-                        <th>Sales Count</th>
-                        <th>Received Amount</th>
-                        <th>Nft Price</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {tableData?.length > 0 ? (
-                        tableData?.map((data, index) => (
-                          <tr key={index}>
-                            <td>{index + 1}</td>
-                            <td>{data?.tokenId}</td>
-                            <td>
-                              {data?.fromUser.slice(0, 4)}...
-                              {data?.fromUser.slice(-7)}
-                            </td>
-                            <td>
-                              {data?.createdAt
-                                ? moment(data.createdAt).format(
-                                    "DD-MM-YYYY HH:mm:ss A"
-                                  )
-                                : "N/A"}
-                            </td>
-                            <td>{data?.salesCount}</td>
-                            <td>{(data?.amount / 1e18).toFixed(4)}</td>
-                            <td>{(data?.ofAmount / 1e18).toFixed(4)}</td>
-                          </tr>
-                        ))
-                      ) : (
-                        <tr>
-                          <td colSpan="7" style={{ textAlign: "center" }}>
-                            No data available
+                <table className="table-responsiveness">
+                  <thead>
+                    <tr>
+                      <th>Sr.No</th>
+                      <th>Token Id</th>
+                      <th>Address</th>
+                      <th>Activation Date</th>
+                      <th>Sales Count</th>
+                      <th>Received Amount</th>
+                      <th>Nft Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {tableData?.length > 0 ? (
+                      tableData?.map((data, index) => (
+                        <tr key={index}>
+                          <td>{(currentPage - 1) * itemPerpage + index + 1}</td>
+                          <td>{data?.tokenId}</td>
+                          <td>
+                            {data?.fromUser.slice(0, 4)}...
+                            {data?.fromUser.slice(-7)}
                           </td>
+                          <td>
+                            {data?.createdAt
+                              ? moment(data.createdAt).format(
+                                  "DD-MM-YYYY HH:mm:ss A"
+                                )
+                              : "N/A"}
+                          </td>
+                          <td>{data?.salesCount}</td>
+                          <td>{(data?.amount / 1e18).toFixed(4)}</td>
+                          <td>{(data?.ofAmount / 1e18).toFixed(4)}</td>
                         </tr>
-                      )}
-                    </tbody>
-                  </table>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan="7" style={{ textAlign: "center" }}>
+                          No data available
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+                <div
+                  className="text-center mb-3 col-lg-6"
+                  style={{ margin: "auto" }}
+                >
+                  <div className=" filter-pagination mt-3 ">
+                    <button
+                      className="custom-pagination-btn m-2"
+                      onClick={handlePreviousPage}
+                      disabled={currentPage === 1}
+                    >
+                      Previous
+                    </button>
+
+                    <button
+                      type="button"
+                      className="custom-pagination-btn m-2"
+                      onClick={handleNextPage}
+                      disabled={currentPage === totalPages}
+                    >
+                      Next
+                    </button>
+
+                    <span style={{ fontSize: "13px" }}>
+                      Page {currentPage} of {totalPages}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

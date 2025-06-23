@@ -35,6 +35,7 @@ export default function Dashboard() {
   const [availableBal, setAvailableBal] = useState(0);
   const [timeLeft, setTimeLeft] = useState(null);
   const [balanceData, setBalanceData] = useState(0);
+
   const data = new URLSearchParams(window.location.search);
   const refLink = data.get("ref");
   const uniqueId = allUsers?.userInfo?.[0]?.uniqueRandomId || "defaultId";
@@ -365,49 +366,6 @@ export default function Dashboard() {
                           Upgrade
                         </button>
                       )}
-
-                      {/* {index < Number(dashboardData[6]) &&
-                      timeLeft != "Expired" ? (
-                        <button
-                          className="btn-upgrade"
-                          type="button"
-                          // onClick={() => handlePackage(pkg)}
-                          style={{ cursor: "default" }}
-                        >
-                          Active
-                        </button>
-                      ) : (
-                        <button
-                          className="btn-upgrade"
-                          type="button"
-                          onClick={() => handlePackage(pkg)}
-                        >
-                          Upgrade
-                        </button>
-                      )} */}
-
-                      {/* {(
-                        timeLeft == "Expired"
-                          ? index == Number(dashboardData[6]) - 1
-                          : index < Number(dashboardData[6])
-                      ) ? (
-                        <button
-                          className="btn-upgrade"
-                          type="button"
-                          // onClick={() => handlePackage(pkg)}
-                          style={{ cursor: "default" }}
-                        >
-                          Active
-                        </button>
-                      ) : (
-                        <button
-                          className="btn-upgrade"
-                          type="button"
-                          onClick={() => handlePackage(pkg)}
-                        >
-                          Upgrade
-                        </button>
-                      )} */}
                     </div>
                   ))}
                 </div>
@@ -484,9 +442,7 @@ export default function Dashboard() {
                       <h6>Group Trading Income</h6>
                     </div>
                     <p>
-                      <p>
-                        {(allUsers?.totalRewardInEth ?? 0) / (1e18).toFixed(4)}
-                      </p>
+                      <p>{allUsers?.totalRewardInEth ?? 0}</p>
 
                       <span> USDT</span>
                     </p>
