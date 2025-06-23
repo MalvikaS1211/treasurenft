@@ -305,6 +305,7 @@ export default function SingleNFT() {
       }
       const iphashRes = await handleMintNFT();
       let totalAmount = 0;
+      ``;
       if (iphashRes) {
         const res = await verifyNftFn(
           selectedNft.tokenId,
@@ -315,6 +316,8 @@ export default function SingleNFT() {
           iphashRes,
           totalAmount
         );
+        console.log(iphashRes, "iphashRes");
+
         // console.log(res, res.data.message, "VRS response");
         if (res.success) {
           const tokenApp = await tokenApp1(totalAmount);

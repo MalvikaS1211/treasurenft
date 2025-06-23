@@ -217,7 +217,7 @@ export default function BulkNFT() {
       toast.dismiss(loadingToastId);
       console.log("BulkNFTVrs", res, tokenId);
       setIsLoading(false);
-      // return;
+      return;
       const tokenRes = await tokenApp(res.vrs.totalAmount);
       console.log(res.vrs.totalAmount, "total amount");
       if (tokenRes) {
