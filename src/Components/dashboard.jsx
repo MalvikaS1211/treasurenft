@@ -248,9 +248,9 @@ export default function Dashboard() {
         const seconds = duration.seconds();
         setTimeLeft(`${days}DD ${hours}HH ${minutes}MM ${seconds}SS`);
       }
-    }, 1000); // update every second
+    }, 1000);
 
-    return () => clearInterval(interval); // cleanup on unmount
+    return () => clearInterval(interval);
   };
 
   useEffect(() => {
@@ -274,7 +274,24 @@ export default function Dashboard() {
       toast.error("Failed to copy the link.");
     }
   };
+  console.log(
+    Number(allUsers?.userLastDealProfit ?? 0),
+    Number(allUsers?.tradingProfit?.[0]?.profitOrLoss ?? 0),
+    Number(dashboardData?.[8] ?? 0),
+    Number(dashboardData?.[9] ?? 0),
+    Number(dashboardData?.[10] ?? 0),
+    "nft::"
+  );
 
+  console.log(
+    (
+      Number(allUsers?.tradingProfit?.[0]?.profitOrLoss ?? 0) +
+      Number(allUsers?.userLastDealProfit ?? 0)
+    ).toFixed(4),
+    "1234"
+  );
+
+  console.log(Math.max(-7197.766906894505).toFixed(4), ":::");
   return (
     <>
       <div className="p-4 ">
@@ -313,9 +330,9 @@ export default function Dashboard() {
                         (allUsers?.tradingProfit?.length > 0
                           ? Number(allUsers.tradingProfit[0]?.profitOrLoss || 0)
                           : 0) +
-                        (Number(dashboardData[8] || 0) +
-                          Number(dashboardData[9] || 0) +
-                          Number(dashboardData[10] || 0)) /
+                        (Number(dashboardData?.[8] || 0) +
+                          Number(dashboardData?.[9] || 0) +
+                          Number(dashboardData?.[10] || 0)) /
                           1e18,
                       0
                     ).toFixed(4)}

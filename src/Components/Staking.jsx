@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 
-import { getStakingDetail, getTradingIncome } from "../Helper/API_Functions";
+import { getROI, getStakingDetail } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
 import moment from "moment";
 export default function Staking() {
@@ -11,13 +11,24 @@ export default function Staking() {
   const [totalPages, setTotalPages] = useState(1);
   const itemPerpage = 15;
   const [totals, setTotals] = useState();
+  const [roi, setROI] = useState();
 
   const handleGetDetals = async () => {
     const res = await getStakingDetail(address, currentPage, itemPerpage);
     setTableData(res.data);
     setTotals(res.stakingDetais);
     setTotalPages(res?.pagination?.totalPages);
-    console.log("getStakingDetail", res);
+    // console.log("getStakingDetail", res);
+  };
+
+  const handleGetROI = async () => {
+    try {
+      const res = await getROI(address);
+      console.log("getROI", res);
+      setROI(res?.roi);
+    } catch (error) {
+      console.log("error in getROI", error);
+    }
   };
 
   const handleNextPage = () => {
@@ -32,7 +43,7 @@ export default function Staking() {
 
   useEffect(() => {
     if (address) {
-      // handleTableData();
+      handleGetROI();
       handleGetDetals();
     }
   }, [address, currentPage]);
@@ -64,7 +75,10 @@ export default function Staking() {
               <div class="sub-total">
                 <h6>ROI</h6>
               </div>
-              <p>0</p>
+              <p>
+                {((roi ?? 0) / 1e18).toFixed(4)}
+                <span> USDT</span>
+              </p>
             </div>
             {/* <div className="d-flex justify-content-center align-items-center ">
               <button className="stake-btn  m-2">Claim ROI</button>

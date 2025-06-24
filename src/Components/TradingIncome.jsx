@@ -9,18 +9,20 @@ export default function TradingIncome() {
   const [tabledata, setTableData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
-
   const itemPerpage = 15;
+
   const handleTableData = async () => {
     const res = await getTradingIncome(address, currentPage, itemPerpage);
     setTableData(res.data);
     setTotalPages(res?.pagination?.totalPages);
     console.log("GetTradingIncome", res);
   };
-  console.log("tabledata:::", tabledata);
+  // console.log("tabledata:::", tabledata);
+
   useEffect(() => {
     handleTableData();
   }, [address, currentPage]);
+
   const handleNextPage = () => {
     setCurrentPage((prevPage) =>
       prevPage < totalPages ? prevPage + 1 : prevPage
@@ -44,11 +46,9 @@ export default function TradingIncome() {
                   <thead>
                     <tr>
                       <th>Sr.No</th>
-
                       <th>From</th>
                       <th>Reward</th>
                       <th>Token Id</th>
-
                       <th>Level</th>
                       <th> Date</th>
                     </tr>
@@ -58,7 +58,6 @@ export default function TradingIncome() {
                       tabledata?.map((data, index) => (
                         <tr key={index}>
                           <td>{(currentPage - 1) * itemPerpage + index + 1}</td>
-
                           <td>
                             {data.fromUser.slice(0, 4)}...
                             {data.fromUser.slice(-7)}

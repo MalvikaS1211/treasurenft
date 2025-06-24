@@ -13,14 +13,14 @@ export default function DownLine() {
 
   const handleTableData = async () => {
     try {
-      const res = await getTotalTeam(address, 1, 70, selectedLevel);
+      const res = await getTotalTeam(address, 1, 100, selectedLevel);
       setTableData(res.userTeam);
       console.log("Downline", res);
     } catch (error) {
       console.log("Error", error);
     }
   };
-  console.log(selectedLevel, "::::");
+  // console.log(selectedLevel, "::::");
   useEffect(() => {
     if (address) {
       handleTableData();

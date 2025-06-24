@@ -7,6 +7,8 @@ export const SOCKET_SERVER_URL = "https://magicverse.org";
 
 // export const URLApi = "https://magicverse-backend.onrender.com/api";
 // export const URLApi = "http://localhost:8081/api";
+// export const SOCKET_SERVER_URL = "http://localhost:8081";
+
 // export const URLApi = "http://192.168.1.171:8081/api";
 // export const SOCKET_SERVER_URL = "http://192.168.1.171:8081/api";
 
@@ -478,6 +480,18 @@ export async function getStakingDetail(address, page, limit) {
       user: address,
       page,
       limit,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error updateNFTDetails Admin:", error);
+  }
+}
+
+export async function getROI(address) {
+  try {
+    const response = await axios.post(`${URLApi}/get-roi`, {
+      user: address,
     });
 
     return response.data;

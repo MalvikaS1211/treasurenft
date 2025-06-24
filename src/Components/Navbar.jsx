@@ -1,13 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/Logo.png";
-import { FaHome, FaRedditAlien, FaCrown, FaLevelUpAlt } from "react-icons/fa";
+import {
+  FaHome,
+  FaRedditAlien,
+  FaCrown,
+  FaLevelUpAlt,
+  FaMoneyBillWave,
+} from "react-icons/fa";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { BsMedium } from "react-icons/bs";
 import { GiHamburgerMenu, GiReceiveMoney } from "react-icons/gi";
 import ConnectWallet from "./ConnectWallet";
 import { FaFacebook } from "react-icons/fa";
-import { MdOutlineSupportAgent, MdTrendingUp } from "react-icons/md";
+import {
+  MdAttachMoney,
+  MdOutlineSupportAgent,
+  MdTrendingUp,
+} from "react-icons/md";
 import { FaYoutube } from "react-icons/fa";
 import { getStakingDetail } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
@@ -25,7 +35,7 @@ export default function Navbar({ title }) {
   const handleStakingBtn = async () => {
     try {
       const res = await getStakingDetail(address);
-      console.log(address, "address in navbar");
+      // console.log(address, "address in navbar");
       setBtnShow(res?.data);
     } catch (error) {}
   };
@@ -115,7 +125,7 @@ export default function Navbar({ title }) {
                 location.pathname === "/direct" ? "active" : "inactive"
               }
             >
-              <RiMoneyDollarCircleFill /> Direct
+              <MdAttachMoney /> Direct
             </li>
           </Link>
           <Link to="/level">
