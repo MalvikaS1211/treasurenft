@@ -332,7 +332,7 @@ export default function BulkNFT() {
                   //   "123::"
                   // );
                   return (
-                    hoursDifference >= 24 && (
+                    hoursDifference >= 12 && (
                       <div className="package-container" key={index}>
                         <button
                           type="button"
