@@ -499,3 +499,18 @@ export async function getROI(address) {
     console.log("Error updateNFTDetails Admin:", error);
   }
 }
+
+export async function getPendingMaturedNFT(address) {
+  try {
+    const response = await axios.post(
+      `${URLApi}/get-total-matured-nfts-pending`,
+      {
+        user: address,
+      }
+    );
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getPendingMaturedNFT Admin:", error);
+  }
+}

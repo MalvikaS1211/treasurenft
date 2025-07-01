@@ -6,6 +6,7 @@ import FooterNew from "./FooterNew";
 import HeaderNew from "./HeaderNew";
 import {
   getOwnedNFTs,
+  getPendingMaturedNFT,
   getReadyForBuyFn,
   getTradeUserFn,
   getUserCreatedNftsFn,
@@ -347,12 +348,25 @@ export default function Trade() {
     console.log(res, "getWalletFund");
     getBalance(res);
   };
+
+  const [pendingNft, setPendingNFT] = useState(0);
+
+  const handlependingNft = async () => {
+    try {
+      const res = await getPendingMaturedNFT(address);
+      console.log(res?.totalCount, "handlependingNft");
+      setPendingNFT(res?.totalCount);
+    } catch (error) {
+      console.log(error, "eror in handlependingNft");
+    }
+  };
   useEffect(() => {
     if (address) {
       UserInfo();
       getTrade();
       totalAssets();
       getWalletFund();
+      handlependingNft();
     }
   }, [address, isfetch]);
   return (
@@ -376,10 +390,7 @@ export default function Trade() {
           </div>
         </div>
         <div className="p-4">
-          <div
-            class="total-grid"
-            style={{ marginBottom: "3%", marginTop: "3%" }}
-          >
+          <div class="total-grid" style={{ marginTop: "3%" }}>
             <div class="total-card" style={{ background: "#c2e8ff" }}>
               <div class="sub-total">
                 <h6>Available Fund</h6>
@@ -400,12 +411,23 @@ export default function Trade() {
               </p>
             </div>
           </div>
+          <div>
+            <p
+              class=""
+              style={{
+                textAlign: "justify",
+                color: "black",
+                fontSize: "16px",
+                margin: "0px",
+              }}
+            >
+              <b>Note : You have {pendingNft ?? 0} matured pending nfts</b>
+            </p>
+          </div>
         </div>
+
         <div className="p-4">
-          <div
-            class="total-grid"
-            style={{ marginBottom: "3%", marginTop: "3%" }}
-          >
+          <div class="total-grid" style={{ marginBottom: "3%" }}>
             <div class="total-card" style={{ background: "#c2e8ff" }}>
               <div class="sub-total">
                 <h6>Total Limit</h6>
@@ -527,14 +549,14 @@ export default function Trade() {
                                   </h6>
                                 </div>
                               </div>
-                              <div className="tags">bsc</div>
+                              <div className="tags">{nft.tokenId}</div>
                             </div>
                             <div className="card-bottom style-explode">
                               <div className="price">
                                 <span>Current Price</span>
                                 <div className="price-details">
                                   <h5>
-                                    {(Number(nft?.price) / 1e18).toFixed(4)}{" "}
+                                    {(Number(nft?.price) / 1e18).toFixed(4)}
                                     USDT
                                   </h5>
                                 </div>
