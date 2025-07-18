@@ -148,11 +148,36 @@ export default function Trade() {
         userTrades.map(async (trade) => {
           try {
             const res = await getNfts(trade.tokenId);
-            const metadataUrl = res[2].replace(
-              "ipfs://",
-              "https://ipfs.io/ipfs/"
-            );
-            const { data: metadata } = await axios.get(metadataUrl);
+
+            // Extract the IPFS hash from the metadata URI
+            const ipfsHash = res[2].replace("ipfs://", "");
+
+            // Define multiple gateways
+            const gateways = [
+              "https://ipfs.io/ipfs/",
+              "https://gateway.pinata.cloud/ipfs/",
+              "https://cloudflare-ipfs.com/ipfs/",
+            ];
+
+            let metadata, metadataUrl;
+
+            // Try each gateway until one works
+            for (const gateway of gateways) {
+              try {
+                metadataUrl = `${gateway}${ipfsHash}`;
+                const response = await axios.get(metadataUrl, {
+                  timeout: 5000,
+                }); // 5 sec timeout
+                metadata = response.data;
+                break; // If successful, exit loop
+              } catch (error) {
+                console.warn(`Failed to fetch from ${gateway}, trying next...`);
+              }
+            }
+
+            if (!metadata) throw new Error("All IPFS gateways failed");
+
+            // Fix image URL
             const imageUrl = metadata.image.replace(
               "ipfs://",
               "https://ipfs.io/ipfs/"
@@ -160,8 +185,8 @@ export default function Trade() {
 
             return {
               ...trade,
-              title: metadata.name,
-              description: metadata.description,
+              title: metadata.name || "",
+              description: metadata.description || "",
               img: imageUrl,
               price: res[4],
               owner: res[6],
@@ -171,7 +196,7 @@ export default function Trade() {
           } catch (err) {
             console.error(
               `Error fetching metadata for Token ID ${trade.tokenId}:`,
-              err
+              err.message
             );
             return {
               ...trade,
@@ -182,7 +207,11 @@ export default function Trade() {
           }
         })
       );
-      console.log(fetchedTrades);
+      console.log(
+        fetchedTrades.length,
+        "fetchedTrades length",
+        userTrades.length
+      );
       setAllTrade(fetchedTrades);
       return;
       const newList = fetchedTrades.filter(Boolean);
@@ -473,8 +502,13 @@ export default function Trade() {
               <div className="row">
                 {allTrade.length > 0 ? (
                   allTrade?.map((nft, index) => {
-                    if (nft.price > 0) {
-                      console.log(nft.owner, "nft.owner");
+                    if (Number(nft.price) > 0) {
+                      console.log(
+                        // nft.owner,
+                        Number(nft.price),
+                        nft.tokenId,
+                        "nft.owner"
+                      );
                       return (
                         <div
                           key={index}

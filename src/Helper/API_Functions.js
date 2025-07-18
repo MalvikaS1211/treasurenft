@@ -9,7 +9,7 @@ export const SOCKET_SERVER_URL = "https://magicverse.org";
 // export const URLApi = "http://localhost:8081/api";
 // export const SOCKET_SERVER_URL = "http://localhost:8081";
 
-// export const URLApi = "http://192.168.1.171:8081/api";
+// export const URLApi = "http://192.168.1.29:8081/api";
 // export const SOCKET_SERVER_URL = "http://192.168.1.171:8081/api";
 
 // export const SOCKET_SERVER_URL = "https://magicverse-backend.onrender.com";
