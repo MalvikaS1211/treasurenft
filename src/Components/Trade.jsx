@@ -438,6 +438,19 @@ export default function Trade() {
                 <span> USDT</span>
               </p>
             </div>
+            <div class="total-card" style={{ background: "#c2e8ff" }}>
+              <div class="sub-total">
+                {/* <h6>Total Limit</h6> */}
+
+                <h6>Daily Limit</h6>
+              </div>
+              <p>
+                {allUsers?.status == true
+                  ? ((Number(allUsers?.userUpperLimit) || 0) / 1e18).toFixed(4)
+                  : 0}
+                <span> USDT</span>
+              </p>
+            </div>
           </div>
           <div>
             <p
@@ -458,11 +471,24 @@ export default function Trade() {
           <div class="total-grid" style={{ marginBottom: "3%" }}>
             <div class="total-card" style={{ background: "#c2e8ff" }}>
               <div class="sub-total">
-                <h6>Total Limit</h6>
+                <h6>Bonus Limit</h6>
               </div>
               <p>
                 {allUsers?.status == true
                   ? ((Number(allUsers?.userUpperLimit) || 0) / 1e18).toFixed(4)
+                  : 0}
+                <span> USDT</span>
+              </p>
+            </div>
+            <div class="total-card" style={{ background: "#c2e8ff" }}>
+              <div class="sub-total">
+                <h6>Max Limit </h6>
+              </div>
+              <p>
+                {allUsers?.status == true
+                  ? (
+                      (Number(allUsers?.userUpperLimit) * 90 || 0) / 1e18
+                    ).toFixed(4)
                   : 0}
                 <span> USDT</span>
               </p>
@@ -495,6 +521,7 @@ export default function Trade() {
             </div>
           </div>
         </div>
+
         {allTrade.length !== 0 ? (
           <section className="tf-section today-pick">
             <div className="themesflat-container">

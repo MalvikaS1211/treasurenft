@@ -115,6 +115,7 @@
 .dashboardbg {
   background-image: url("../assets/LightBG.jpg") !important;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .wallet-connect-icon {
   font-size: 20px;
