@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BiSolidSend } from "react-icons/bi";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/LogoNew.png";
 
 import {
   FaFacebook,
@@ -61,7 +61,8 @@ export default function FooterNew() {
                   </a>
                 </div>
                 <p class="sub-widget-logo">
-                  MagicVerse is a Web3 revenue platform based on NFT collections
+                  Mirai Vault is a Web3 revenue platform based on NFT
+                  collections
                 </p>
               </div>
             </div>

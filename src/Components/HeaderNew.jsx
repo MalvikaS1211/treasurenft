@@ -3,7 +3,8 @@ import "../MalvikaCss/Custom2.css";
 import { AiOutlineSearch } from "react-icons/ai";
 import { WalletButton } from "@rainbow-me/rainbowkit";
 import ConnectWallet from "./ConnectWallet";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/LogoNew.png";
+
 import { FaWallet } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
@@ -35,7 +36,7 @@ const Header = () => {
 
   return (
     <>
-      <News />
+      {/* <News /> */}
       <header className="header-new-container d-none d-md-block">
         <div className="header-new">
           <img

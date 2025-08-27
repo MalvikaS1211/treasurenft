@@ -1092,7 +1092,7 @@ label.error {
   padding: 0 15px;
 }
 .bg-style {
-  background-color: var(--primary-color5) !important;
+  background-color: #030303 !important;
 }
 .bg-style2 {
   background-color: #fff !important;
@@ -2180,6 +2180,7 @@ header {
 #footer {
   padding: 80px 0 80px;
   background: var(--bg-section);
+  color: #fff;
 }
 
 #footer.style-2 {
@@ -2246,6 +2247,7 @@ header {
 .widget p,
 .widget .title-widget {
   color: var(--primary-color2);
+  color: #fff;
 }
 
 .fl-dark .widget p,
@@ -2343,7 +2345,7 @@ header {
 }
 
 .widget-social.style-1 a {
-  background-color: #ebebeb;
+  background-color: #2d2b2b;
   color: #7a798a;
 }
 
@@ -2483,6 +2485,7 @@ header {
 
 .widget-menu .title-widget {
   margin-bottom: 24px;
+  color: #fff;
 }
 
 .widget-menu ul li {
@@ -2549,7 +2552,7 @@ header {
 
 .widget-subcribe .form-subcribe input {
   border-radius: 10px;
-  background: #f8f8f8;
+  background: #2d2b2b;
   width: 100%;
   padding: 13px 50px 12px 22px;
   font-size: 14px;

@@ -1578,8 +1578,11 @@ main {
 .heading {
   text-align: center;
   margin-top: 5%;
+  color: #fff !important;
 }
-
+.title-create-item {
+  color: #fff;
+}
 .countdown-heading {
   text-align: center;
   font-size: 2rem;

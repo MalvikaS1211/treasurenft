@@ -92,7 +92,7 @@ export default function DashboardNew() {
               aria-label="1 / 3"
               // style={{ width: "1905px" }}
             >
-              <div class="flat-title-page dashboardbg">
+              <div class="flat-title-page ">
                 <img class="bgr-gradient gradient1" src={bg1} alt="Axies" />
                 <img class="bgr-gradient gradient2" src={bg2} alt="Axies" />
                 <img class="bgr-gradient gradient3" src={bg3} alt="Axies" />
@@ -168,7 +168,10 @@ export default function DashboardNew() {
           ></span>
         </div>
       </div>
-      <section class="tf-box-icon create tf-section bg-home-3">
+      <section
+        class="tf-box-icon create tf-section bg-home-3 "
+        style={{ background: "#14141f" }}
+      >
         <div class="themesflat-container">
           <div class="row">
             <div class="col-lg-3 col-md-6 col-12">

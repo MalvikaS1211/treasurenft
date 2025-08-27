@@ -190,18 +190,18 @@ export default function Expore() {
       <HeaderNew />
       <div className="tf-create-item tf-section p-0">
         <div className="dashboardbg">
-          <div
-            class="col-md-12 "
-            style={{ paddingTop: "20px", paddingBottom: "20px" }}
-          >
+          <div className="dashboard-image">
             <div
-              class="page-title-heading mg-bt-40"
-              style={{ marginTop: "40px" }}
+              class="col-md-12 "
+              style={{ paddingTop: "20px", paddingBottom: "20px" }}
             >
-              <h1 class="heading text-center mt-0" style={{ color: "black" }}>
-                NFT History
-              </h1>
-            </div>
+              <div
+                class="page-title-heading mg-bt-40"
+                style={{ marginTop: "40px" }}
+              >
+                <h1 class="heading text-center mt-0">NFT History</h1>
+              </div>
+            </div>{" "}
           </div>
         </div>
         <section className="tf-section today-pick">
@@ -224,10 +224,7 @@ export default function Expore() {
                     key={index}
                     className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
                   >
-                    <div
-                      className="sc-card-product explode style2 mg-bt"
-                      style={{ border: "1px solid #5142fc" }}
-                    >
+                    <div className="sc-card-product explode style2 mg-bt">
                       <div className="card-media">
                         <a
                           href="#"
@@ -327,10 +324,7 @@ export default function Expore() {
                   key={index}
                   className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
                 >
-                  <div
-                    className="sc-card-product explode style2 mg-bt"
-                    style={{ border: "1px solid #5142fc" }}
-                  >
+                  <div className="sc-card-product explode style2 mg-bt">
                     <div className="card-media">
                       <a
                         href="#"
@@ -430,10 +424,7 @@ export default function Expore() {
                   key={index}
                   className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
                 >
-                  <div
-                    className="sc-card-product explode style2 mg-bt"
-                    style={{ border: "1px solid #5142fc" }}
-                  >
+                  <div className="sc-card-product explode style2 mg-bt">
                     <div className="card-media">
                       <a
                         href="#"
