@@ -399,10 +399,7 @@ export default function BulkNFT() {
             >
               <div className="col-xl-3 col-lg-6 col-md-6 col-12">
                 <h4 className="title-create-item mt-4">Preview item</h4>
-                <div
-                  className="sc-card-product"
-                  style={{ border: "1px solid rgb(81, 66, 252)" }}
-                >
+                <div className="sc-card-product">
                   <div className="card-media">
                     <a href="">
                       <img src={nft.preview || CyberDoberman} alt="Axies" />

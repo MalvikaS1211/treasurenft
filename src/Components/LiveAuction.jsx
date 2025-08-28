@@ -83,10 +83,10 @@ export default function LiveAuction() {
                           <a>
                             <img src={hemlet} alt="Hamlet Contemplates" />
                           </a>
-                          <div className="featured-countdown">
+                          {/* <div className="featured-countdown">
                             <FaGripfire color="#5142fc" size={25} />
                             <span>05:17:44:21</span>
-                          </div>
+                          </div> */}
                           {/* <div className="button-place-bid">
                           <button className="sc-button style-place-bid style bag fl-button pri-3">
                             <FaShoppingBag color="black" />
@@ -135,10 +135,10 @@ export default function LiveAuction() {
                           <a>
                             <img src={Trimphant} alt="Trimphant" />
                           </a>
-                          <div className="featured-countdown">
+                          {/* <div className="featured-countdown">
                             <FaGripfire color="#5142fc" size={25} />
                             <span>04:10:30:12</span>
-                          </div>
+                          </div> */}
                           {/* <div className="button-place-bid">
                           <button className="sc-button style-place-bid style bag fl-button pri-3">
                             <FaShoppingBag color="black" />
@@ -187,10 +187,10 @@ export default function LiveAuction() {
                           <a>
                             <img src={LivingVase} alt="Living Vase" />
                           </a>
-                          <div className="featured-countdown">
+                          {/* <div className="featured-countdown">
                             <FaGripfire color="#5142fc" size={25} />
                             <span>03:15:20:05</span>
-                          </div>
+                          </div> */}
                           {/* <div className="button-place-bid">
                           <button className="sc-button style-place-bid style bag fl-button pri-3">
                             <FaShoppingBag color="black" />
@@ -239,10 +239,10 @@ export default function LiveAuction() {
                           <a>
                             <img src={FlameDress} alt="Flame Dress" />
                           </a>
-                          <div className="featured-countdown">
+                          {/* <div className="featured-countdown">
                             <FaGripfire color="#5142fc" size={25} />
                             <span>06:20:40:10</span>
-                          </div>
+                          </div> */}
                           {/* <div className="button-place-bid">
                           <button className="sc-button style-place-bid style bag fl-button pri-3">
                             <FaShoppingBag color="black" />

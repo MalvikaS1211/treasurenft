@@ -268,11 +268,9 @@
   color: #fff;
   background: transparent none repeat scroll 0 0;
 }
-
-.is_dark .sc-button.style-1 {
-  border: 2px solid #5142fc;
-  color: #fff;
-  background: transparent none repeat scroll 0 0;
+.light .sc-button.style-1:hover {
+  background: #fff;
+  color: #5142fc;
 }
 
 .sc-button.style-1:hover span,
@@ -1756,7 +1754,7 @@
   -webkit-text-fill-color: rgb(0 0 0/0%);
 }
 
-.is_dark .flat-slider .heading .s1 {
+.heading .s1 {
   color: #14141f;
   background: linear-gradient(-45deg, #e250e5, #4b50e6, #e250e5, #4b50e6);
   background-size: 100% 100%;
@@ -2567,7 +2565,7 @@ section.today-picks {
 
 .flat-title-page .shape.item-w-22 {
   top: 60.5%;
-  left: 35.5%;
+  left: 42.5%;
 }
 
 .flat-title-page .shape.item-w-32 {

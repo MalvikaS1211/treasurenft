@@ -188,22 +188,19 @@ export default function Expore() {
   return (
     <>
       <HeaderNew />
+
       <div className="tf-create-item tf-section p-0">
         <div className="dashboardbg">
-          <div className="dashboard-image">
-            <div
-              class="col-md-12 "
-              style={{ paddingTop: "20px", paddingBottom: "20px" }}
-            >
-              <div
-                class="page-title-heading mg-bt-40"
-                style={{ marginTop: "40px" }}
-              >
-                <h1 class="heading text-center mt-0">NFT History</h1>
-              </div>
-            </div>{" "}
+          <div
+            class="col-md-12 "
+            style={{ paddingTop: "50px", paddingBottom: "20px" }}
+          >
+            <h1 class="heading mb-style" style={{ textAlign: "center" }}>
+              <span class="tf-text s1">NFT History</span>
+            </h1>
           </div>
         </div>
+
         <section className="tf-section today-pick">
           <div className="themesflat-container">
             <div className="row  available-packages">
@@ -502,7 +499,7 @@ export default function Expore() {
         </div>
       </section>
       {/*end of  your purchased  nft  section*/}
-      <div className="mt-4">
+      <div className="">
         <FooterNew />
       </div>
     </>

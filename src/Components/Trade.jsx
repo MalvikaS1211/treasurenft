@@ -407,14 +407,9 @@ export default function Trade() {
             class="col-md-12 "
             style={{ paddingTop: "20px", paddingBottom: "20px" }}
           >
-            <div
-              class="page-title-heading mg-bt-40"
-              style={{ marginTop: "40px" }}
-            >
-              <h1 class="heading text-center mt-0" style={{ color: "black" }}>
-                Buy Item
-              </h1>
-            </div>
+            <h1 class="heading mb-style" style={{ textAlign: "center" }}>
+              <span class="tf-text s1">Buy Item</span>
+            </h1>
           </div>
         </div>
         <div className="p-4">
@@ -540,10 +535,7 @@ export default function Trade() {
                           key={index}
                           className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
                         >
-                          <div
-                            className="sc-card-product explode style2 mg-bt"
-                            style={{ border: "1px solid rgb(81, 66, 252)" }}
-                          >
+                          <div className="sc-card-product explode style2 mg-bt">
                             <div className="card-media">
                               <a
                                 href="#"
@@ -648,7 +640,7 @@ export default function Trade() {
           </>
         )}
       </div>
-      <div className="mt-4">
+      <div className="">
         <FooterNew />
       </div>
     </>

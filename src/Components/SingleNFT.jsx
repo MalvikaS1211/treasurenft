@@ -389,7 +389,7 @@ export default function SingleNFT() {
     <>
       <div>
         <p
-          className="pt-4"
+          className="pt-4 text-white"
           style={{ textAlign: "justify", color: "black", fontSize: "16px" }}
         >
           <b> Note :</b> All NFTs must follow the ERC-721 standard. Content must
@@ -446,10 +446,7 @@ export default function SingleNFT() {
         style={{ paddingTop: "40px" }}
       >
         <h4 class="title-create-item">Preview item</h4>
-        <div
-          class="sc-card-product"
-          style={{ border: " 1px solid rgb(81, 66, 252)" }}
-        >
+        <div class="sc-card-product">
           <div class="card-media">
             <a href="">
               <img src={preview || CyberDoberman} alt="Axies" />
@@ -500,13 +497,20 @@ export default function SingleNFT() {
                   <>
                     <h4 className="title-create-item">Price</h4>
                     <select
-                      className=" mb-4 nft-price-dropdown"
+                      className=" mb-4 nft-price-dropdown "
+                      style={{ background: "#14141f" }}
                       value={nftPrice}
                       onChange={handleNFTPrice}
                     >
-                      <option value="">Enter price for one item (USDT)</option>
+                      <option className="text-white" value="">
+                        Enter price for one item (USDT)
+                      </option>
                       {SingleNFTpriceOptions.map((price, index) => (
-                        <option key={index} value={price}>
+                        <option
+                          key={index}
+                          value={price}
+                          className="text-white"
+                        >
                           $ {price}
                         </option>
                       ))}
