@@ -10,7 +10,7 @@ export const SOCKET_SERVER_URL = "https://magicverse.org";
 // export const SOCKET_SERVER_URL = "http://localhost:8081";
 
 // export const URLApi = "http://192.168.1.226:8081/api";
-// export const SOCKET_SERVER_URL = "http://192.168.1.171:8081/api";
+// export const SOCKET_SERVER_URL = "http://192.168.1.226:8081/api";
 
 // export const SOCKET_SERVER_URL = "https://magicverse-backend.onrender.com";
 
@@ -508,6 +508,17 @@ export async function getPendingMaturedNFT(address) {
         user: address,
       }
     );
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getPendingMaturedNFT Admin:", error);
+  }
+}
+export async function getAllTradeForUser(address) {
+  try {
+    const response = await axios.post(`${URLApi}/get-all-trades-for-user-v2`, {
+      userAddress: address,
+    });
 
     return response.data;
   } catch (error) {

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import bg1 from "../assets/bg1.png";
 import bg2 from "../assets/bg2.png";
 import bg3 from "../assets/bg3.png";
@@ -47,8 +47,10 @@ import collectionBtn from "../assets/collectionBtn.png";
 import AddNftIcon from "../assets/AddNftIcon.png";
 import ListIcon from "../assets/ListIcon.png";
 import WelcomeModal from "./WelcomeModal";
+import PayModal from "./PayModal";
 
 export default function DashboardNew() {
+  const [isOpen, setIsOpen] = useState(false);
   const handleDownload = () => {
     toast.success("PDF downloaded successfully!");
   };
@@ -63,6 +65,7 @@ export default function DashboardNew() {
       }
     }
   }, [location]);
+
   return (
     <>
       <div class="mainslider">
@@ -122,30 +125,39 @@ export default function DashboardNew() {
                                 Marketplace for monster character cllections non
                                 fungible token NFTs
                               </p>
-                              <div class="flat-bt-slider flex style2">
-                                <Link to="/signup">
-                                  <a class="sc-button header-slider style style-1 rocket fl-button pri-1">
+                              <div className="flat-bt-slider flex flex-wrap gap-3 style2">
+                                <Link
+                                  to="/signup"
+                                  className="flex-1 sm:flex-none"
+                                >
+                                  <button className="sc-button header-slider style style-1 rocket fl-button pri-1 w-full">
                                     <span className="pl-0">Sign Up</span>
-                                  </a>
+                                  </button>
                                 </Link>
+
                                 <a
                                   href={PDF}
                                   download="MagicVerse.pdf"
-                                  class="sc-button header-slider style style-1 rocket fl-button pri-1"
+                                  className="sc-button header-slider style style-1 rocket fl-button pri-1 flex-1 sm:flex-none w-full"
                                   onClick={handleDownload}
                                 >
-                                  <div className="d-flex justify-content-center gap-3">
+                                  <div className="flex justify-center gap-3">
                                     <GoDownload color="#5142fc" size={20} />
-                                    <span className="pl-0">DownLoad Pdf</span>
+                                    <span className="pl-0">Download Pdf</span>
                                   </div>
                                 </a>
 
-                                {/* <a
-                                  class="sc-button header-slider style style-1 note fl-button pri-1"
-                                  href="/create-item"
+                                <button
+                                  className="sc-button header-slider style style-1 rocket fl-button pri-1 flex-1 sm:flex-none w-full"
+                                  style={{ cursor: "pointer" }}
+                                  onClick={() => setIsOpen(true)}
                                 >
-                                  <span>Create</span>
-                                </a> */}
+                                  <div className="flex justify-center gap-3">
+                                    <span className="pl-0">
+                                      Buy Crypto Debit Card
+                                    </span>
+                                  </div>
+                                </button>
                               </div>
                             </div>
                             <div class="image">
@@ -1130,6 +1142,7 @@ export default function DashboardNew() {
           </div>
         </div>
       </section>
+      <PayModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </>
   );
 }

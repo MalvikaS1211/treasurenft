@@ -194,7 +194,7 @@ export default function BulkNFT() {
           selectedAmount,
           "ASFsadfsafdsadfnasifhas"
         );
-        initialPrices.push(Number(selectedAmount / (initialP == 15 ? 2 : 5))); // to be changed
+        initialPrices.push(Number(selectedAmount / 5)); // to be changed
       }
 
       console.log("All metadata uploaded:", metadataURIs, nfts);
@@ -286,9 +286,9 @@ export default function BulkNFT() {
     setSelectedIndex(index);
     const amount = (Number(pkg.nftCreatedDetails.price) * 5) / 1e18;
     const ip = Number(pkg.nftCreatedDetails.price) / 1e18;
-    setInititalP(ip);
+    // setInititalP(ip);
 
-    setAmount(ip == 15 ? Number(100) : amount);
+    setAmount(amount);
     setTokenId(pkg.nftCreatedDetails.tokenId);
   };
 
@@ -346,15 +346,14 @@ export default function BulkNFT() {
                           onClick={() => handleClick(index, pkg)}
                         >
                           $
-                          {Number(pkg.nftCreatedDetails.price) ==
+                          {/* {Number(pkg.nftCreatedDetails.price) ==
                           "15000000000000000000"
                             ? "110.00"
-                            : (
-                                (Number(pkg.nftCreatedDetails.price) *
-                                  5 *
-                                  1.1) /
-                                1e18
-                              ).toFixed(2)}
+                            : ( */}
+                          {(
+                            (Number(pkg.nftCreatedDetails.price) * 5 * 1.1) /
+                            1e18
+                          ).toFixed(2)}
                         </button>
                       </div>
                     )
@@ -369,19 +368,19 @@ export default function BulkNFT() {
             style={{ fontSize: "20px", paddingLeft: "36px" }}
             className="row mt-5"
           >
-            {selectedAmount &&
-              (initialP === 15 ? (
-                <p>
-                  Note: You had selected{" "}
-                  {Number(selectedAmount * 1.1)?.toFixed(0)} USDT package. You
-                  can create 2 NFTs of {selectedAmount / 2} USDT.
-                </p>
-              ) : (
-                <p>
-                  Note: You had selected {selectedAmount * 1.1} USDT package.
-                  You can create 5 NFTs of {selectedAmount / 5} USDT.
-                </p>
-              ))}
+            {selectedAmount && (
+              // (initialP === 15 ? (
+              //   <p>
+              //     Note: You had selected{" "}
+              //     {Number(selectedAmount * 1.1)?.toFixed(0)} USDT package. You
+              //     can create 2 NFTs of {selectedAmount / 2} USDT.
+              //   </p>
+              // ) : (
+              <p>
+                Note: You had selected {selectedAmount * 1.1} USDT package. You
+                can create 5 NFTs of {selectedAmount / 5} USDT.
+              </p>
+            )}
             {/* Note: You had selected {selectedAmount * 1.1} USDT package. You can
             create 5 NFTs of {selectedAmount / 5} USDT. */}
           </div>

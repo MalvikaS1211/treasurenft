@@ -65,6 +65,7 @@ export default function FooterNew() {
                 </p>
               </div>
             </div>
+
             <div class="col-lg-2 col-md-4 col-sm-5 col-5">
               <div class="widget widget-menu style-1">
                 <h5 class="title-widget">My Account</h5>
@@ -231,6 +232,24 @@ export default function FooterNew() {
                     </li>
                   </ul>
                 </div>
+                <p
+                  class="sub-widget-logo text-black "
+                  style={{ paddingTop: "15px" }}
+                >
+                  <div style={{ fontSize: "18px" }}> Address : </div>
+                  <div
+                    style={{
+                      color: "#1f1f2c",
+                      fontSize: "15px",
+                      paddingTop: "6px",
+                    }}
+                  >
+                    MAGICVERSE LTD
+                  </div>
+                  <div style={{ color: "#1f1f2c", fontSize: "15px" }}>
+                    82a, James Carter Road, Mildenhall, United Kingdom, IP28 7DE
+                  </div>
+                </p>
               </div>
             </div>
           </div>

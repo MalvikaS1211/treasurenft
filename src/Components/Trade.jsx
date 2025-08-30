@@ -5,6 +5,7 @@ import io from "socket.io-client";
 import FooterNew from "./FooterNew";
 import HeaderNew from "./HeaderNew";
 import {
+  getAllTradeForUser,
   getOwnedNFTs,
   getPendingMaturedNFT,
   getReadyForBuyFn,
@@ -26,9 +27,6 @@ import socket from "./Socket";
 
 export default function Trade() {
   const { address } = useAccount();
-  // const socket = io(SOCKET_SERVER_URL, {
-  //   transports: ["websocket"],
-  // });
   const [allTrade, setAllTrade] = useState([]);
   const [isfetch, setIsFetch] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -37,6 +35,8 @@ export default function Trade() {
   const [allUsers, setAllUsers] = useState(null);
   const [balance, getBalance] = useState(0);
   const [assetValue, setAssetValue] = useState(0);
+  const [pendingNft, setPendingNFT] = useState(0);
+  const [newData, setNewData] = useState([]);
   const tokenApp1 = async (amt) => {
     try {
       const appres = await toast.promise(approveToken(amt), {
@@ -82,6 +82,8 @@ export default function Trade() {
       socket.off("connect");
       socket.off("UpdateMarket", (payload) => {
         getTrade();
+        handleGetAllTradeForUser();
+
         console.log(payload, "payload");
       });
       socket.off("joined");
@@ -143,7 +145,7 @@ export default function Trade() {
       setApiLoading(true);
 
       const { userTrades } = await getTradeUserFn(address);
-      console.log(userTrades, "userTrades");
+      // console.log(userTrades, "userTrades");
       const fetchedTrades = await Promise.all(
         userTrades.map(async (trade) => {
           try {
@@ -206,53 +208,8 @@ export default function Trade() {
           }
         })
       );
-      // console.log(
-      //   fetchedTrades.length,
-      //   "fetchedTrades length",
-      //   userTrades.length
-      // );
+
       setAllTrade(fetchedTrades);
-      return;
-      const newList = fetchedTrades.filter(Boolean);
-      // setAllTrade((prevTrades) => {
-      //   const updatedTrades = fetchedTrades.map((newTrade) => {
-      //     const existing = prevTrades.find(
-      //       (t) => t.tokenId === newTrade.tokenId
-      //     );
-
-      //     // If price/owner changed, update
-      //     if (
-      //       !existing ||
-      //       existing.price !== newTrade.price ||
-      //       existing.owner !== newTrade.owner
-      //     ) {
-      //       return newTrade;
-      //     }
-
-      //     // Otherwise, keep the old one to avoid re-render
-      //     return existing;
-      //   });
-
-      //   return updatedTrades;
-      // });
-      setAllTrade((prevList) => {
-        // Only include NFTs that are still present
-        const updatedList = prevList.filter((nft) =>
-          newList.some((newNft) => newNft.tokenId === nft.tokenId)
-        );
-
-        // Add any new NFTs that weren't in the old list
-        newList.forEach((newNft) => {
-          const exists = updatedList.find((n) => n.tokenId === newNft.tokenId);
-          // console.log("NFT Exist", exists);
-          if (!exists) {
-            updatedList.push(newNft);
-          }
-        });
-
-        return updatedList;
-      });
-      setApiLoading(false);
     } catch (error) {
       setApiLoading(false);
       console.error("Error fetching user-created NFTs:", error);
@@ -377,8 +334,6 @@ export default function Trade() {
     getBalance(res);
   };
 
-  const [pendingNft, setPendingNFT] = useState(0);
-
   const handlependingNft = async () => {
     try {
       const res = await getPendingMaturedNFT(address);
@@ -388,6 +343,59 @@ export default function Trade() {
       console.log(error, "eror in handlependingNft");
     }
   };
+
+  const handleGetAllTradeForUser = async () => {
+    try {
+      const tradeRes = await getAllTradeForUser(address);
+      if (!tradeRes.success || !tradeRes.newData?.length) return;
+
+      const data = tradeRes.newData[0];
+      const nftRes = await getNfts(data.tokenId);
+
+      const ipfsHash = nftRes[2].replace("ipfs://", "");
+      const gateways = [
+        "https://ipfs.io/ipfs/",
+        "https://gateway.pinata.cloud/ipfs/",
+        "https://cloudflare-ipfs.com/ipfs/",
+      ];
+
+      console.log(data, "handleGetAllTradeForUser 1");
+
+      let metadata, metadataUrl;
+      for (const gateway of gateways) {
+        try {
+          metadataUrl = `${gateway}${ipfsHash}`;
+          const response = await axios.get(metadataUrl, { timeout: 5000 });
+          metadata = response.data;
+          break; // Exit if successful
+        } catch (error) {
+          console.warn(`Failed to fetch from ${gateway}, trying next...`);
+        }
+      }
+
+      if (!metadata) throw new Error("All IPFS gateways failed");
+
+      const imageUrl = metadata.image
+        ? metadata.image.replace("ipfs://", "https://ipfs.io/ipfs/")
+        : "https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d456a2af571d980d8b2985472c262b31";
+
+      const formattedData = {
+        ...data,
+        title: metadata.name || "",
+        description: metadata.description || "",
+        img: imageUrl,
+        price: nftRes[4],
+        owner: nftRes[6],
+        metadataURI: nftRes[2],
+        creator: nftRes[3],
+      };
+      console.log(formattedData, "handleGetAllTradeForUser 2");
+      setNewData(formattedData);
+    } catch (error) {
+      console.log("Error in handleGetAllTradeForUser:", error);
+    }
+  };
+
   useEffect(() => {
     if (address) {
       UserInfo();
@@ -395,6 +403,7 @@ export default function Trade() {
       totalAssets();
       getWalletFund();
       handlependingNft();
+      handleGetAllTradeForUser();
     }
   }, [address, isfetch]);
   return (
@@ -630,6 +639,96 @@ export default function Trade() {
                 ) : (
                   <div className="no-data-container">
                     <div className="no-data-available">No data available</div>
+                  </div>
+                )}
+                {newData.price > 0 && (
+                  <div
+                    // key={index}
+                    className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
+                  >
+                    <div
+                      className="sc-card-product explode style2 mg-bt"
+                      style={{ border: "1px solid rgb(81, 66, 252)" }}
+                    >
+                      <div className="card-media">
+                        <a
+                          href="#"
+                          style={{
+                            height: "288px",
+                            width: "288px",
+                            display: "flex",
+                          }}
+                        >
+                          <img
+                            src={
+                              newData?.img?.startsWith("ipfs://")
+                                ? newData?.img?.replace(
+                                    "ipfs://",
+                                    "https://ipfs.io/ipfs/"
+                                  )
+                                : newData.img
+                            }
+                            alt="newData"
+                            style={{ height: "100%", width: "100%" }}
+                          />
+                        </a>
+                        {newData.owner != address && (
+                          <div
+                            class="button-place-bid"
+                            onClick={() => {
+                              BuyNft(
+                                newData.price,
+                                newData.title,
+                                newData.description,
+                                newData.metadataURI,
+                                newData.tokenId,
+                                Number(newData.price)
+                              );
+                            }}
+                          >
+                            {!isLoading && (
+                              <button
+                                className="sc-button style-place-bid style bag fl-button pri-3"
+                                type="button"
+                              >
+                                {/* <FaShoppingBag color="black" /> */}
+                                Buy
+                              </button>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                      <div className="card-title">
+                        <h5>
+                          <a href="#">{newData.title}</a>
+                        </h5>
+                      </div>
+                      <div className="meta-info">
+                        <div className="author">
+                          <div className="avatar">
+                            <img src={creativeArt} alt="Creator Avatar" />
+                          </div>
+                          <div className="info">
+                            <span>Creator</span>
+                            <h6>
+                              <a href="#">{newData.creator?.slice(-9)}</a>
+                            </h6>
+                          </div>
+                        </div>
+                        <div className="tags">{newData.tokenId}</div>
+                      </div>
+                      <div className="card-bottom style-explode">
+                        <div className="price">
+                          <span>Current Price</span>
+                          <div className="price-details">
+                            <h5>
+                              {(Number(newData?.price) / 1e18).toFixed(4)}
+                              USDT
+                            </h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

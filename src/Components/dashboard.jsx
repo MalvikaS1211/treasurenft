@@ -157,6 +157,7 @@ export default function Dashboard() {
     try {
       const res = await getUserInfo(address);
       setAllUsers(res);
+      console.log(res, "res:::UserInfo");
     } catch (error) {
       console.log(error);
     }
@@ -274,24 +275,24 @@ export default function Dashboard() {
       toast.error("Failed to copy the link.");
     }
   };
-  console.log(
-    Number(allUsers?.userLastDealProfit ?? 0),
-    Number(allUsers?.tradingProfit?.[0]?.profitOrLoss ?? 0),
-    Number(dashboardData?.[8] ?? 0),
-    Number(dashboardData?.[9] ?? 0),
-    Number(dashboardData?.[10] ?? 0),
-    "nft::"
-  );
+  // console.log(
+  //   Number(allUsers?.userLastDealProfit ?? 0),
+  //   Number(allUsers?.tradingProfit?.[0]?.profitOrLoss ?? 0),
+  //   Number(dashboardData?.[8] ?? 0),
+  //   Number(dashboardData?.[9] ?? 0),
+  //   Number(dashboardData?.[10] ?? 0),
+  //   "nft::"
+  // );
 
-  console.log(
-    (
-      Number(allUsers?.tradingProfit?.[0]?.profitOrLoss ?? 0) +
-      Number(allUsers?.userLastDealProfit ?? 0)
-    ).toFixed(4),
-    "1234"
-  );
+  // console.log(
+  //   (
+  //     Number(allUsers?.tradingProfit?.[0]?.profitOrLoss ?? 0) +
+  //     Number(allUsers?.userLastDealProfit ?? 0)
+  //   ).toFixed(4),
+  //   "1234 :: "
+  // );
 
-  console.log(Math.max(-7197.766906894505).toFixed(4), ":::");
+  // console.log(Math.max(-7197.766906894505).toFixed(4), ":::");
   return (
     <>
       <div className="p-4 ">

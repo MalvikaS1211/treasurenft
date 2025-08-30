@@ -58,8 +58,7 @@ import "./MalvikaCss/shortcodes.css";
 import "./MalvikaCss/style.css";
 import "./css/Blog.css";
 import "./css/chat.css";
-import WelcomeModal from "./Components/WelcomeModal";
-
+import PayModal from "./Components/PayModal";
 function App() {
   return (
     <>
@@ -101,7 +100,6 @@ function App() {
         }}
       />
       <AppRoutes />
-      {/* <WelcomeModal /> */}
     </>
   );
 }
