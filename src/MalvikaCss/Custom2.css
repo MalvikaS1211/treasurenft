@@ -1,4 +1,10 @@
 /* General Header Styles */
+
+:root {
+  --primary-bg-color: #18181a;
+  --secondary-bg-color: #030303;
+  --card-bg: #303031;
+}
 .header-new-container {
   display: flex;
   justify-content: space-between;
@@ -6,7 +12,7 @@
   padding: 15px 20px;
   background-color: transparent;
   border-bottom: 1px solid rgba(235, 235, 235, 0.2);
-  background: #14141f;
+  background: var(--primary-bg-color);
 }
 
 /* Header Inner Container */
@@ -119,7 +125,7 @@
   background-size: cover;
 } */
 .dashboardbg {
-  background: #14141f;
+  background: var(--primary-bg-color);
   position: relative;
 }
 /* .dashboard-image {

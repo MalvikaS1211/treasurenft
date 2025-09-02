@@ -412,9 +412,9 @@ export default function Trade() {
             </h1>
           </div>
         </div>
-        <div className="p-4">
+        <div className="p-4" style={{ background: "var(--primary-bg-color)" }}>
           <div class="total-grid" style={{ marginTop: "3%" }}>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
+            <div class="total-card">
               <div class="sub-total">
                 <h6>Available Fund</h6>
               </div>
@@ -424,7 +424,7 @@ export default function Trade() {
                 <span> USDT</span>
               </p>
             </div>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
+            <div class="total-card">
               <div class="sub-total">
                 <h6>Assets Value</h6>
               </div>
@@ -433,7 +433,7 @@ export default function Trade() {
                 <span> USDT</span>
               </p>
             </div>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
+            <div class="total-card">
               <div class="sub-total">
                 {/* <h6>Total Limit</h6> */}
 
@@ -452,7 +452,7 @@ export default function Trade() {
               class=""
               style={{
                 textAlign: "justify",
-                color: "black",
+                color: "#fff",
                 fontSize: "16px",
                 margin: "0px",
               }}
@@ -462,9 +462,9 @@ export default function Trade() {
           </div>
         </div>
 
-        <div className="p-4">
+        <div className="p-4" style={{ background: "var(--primary-bg-color)" }}>
           <div class="total-grid" style={{ marginBottom: "3%" }}>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
+            <div class="total-card">
               <div class="sub-total">
                 <h6>Bonus Limit</h6>
               </div>
@@ -475,7 +475,7 @@ export default function Trade() {
                 <span> USDT</span>
               </p>
             </div>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
+            <div class="total-card">
               <div class="sub-total">
                 <h6>Max Limit </h6>
               </div>
@@ -488,7 +488,7 @@ export default function Trade() {
                 <span> USDT</span>
               </p>
             </div>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
+            <div class="total-card">
               <div class="sub-total">
                 <h6>Total Limit Remaining</h6>
               </div>
@@ -501,7 +501,7 @@ export default function Trade() {
                 <span> USDT</span>
               </p>
             </div>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
+            <div class="total-card">
               <div class="sub-total">
                 <h6>Total Limit Utilised</h6>
               </div>

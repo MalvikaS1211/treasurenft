@@ -62,51 +62,56 @@ export default function ChatSupport() {
               aria-hidden="true"
             >
               <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
+                <div class="modal-content" style={{ background: "#303031" }}>
                   <div class="modal-header" style={{ height: "80px" }}>
-                    <h5 class="modal-title" id="exampleModalLongTitle">
+                    <h5
+                      class="modal-title text-white "
+                      id="exampleModalLongTitle"
+                    >
                       New Ticket
                     </h5>
                     <IoMdClose
-                      class="close"
+                      className="close text-white"
                       data-bs-dismiss="modal"
                       aria-label="Close"
                       style={{ fontSize: "large" }}
                     />
                   </div>
                   <div className="p-5 ">
-                    <div>
-                      <label className="modal-label ">Your Name</label>
+                    <div className="mb-4">
+                      <label className="modal-label text-white">
+                        Your Name
+                      </label>
                       <input
                         type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="mt-1 w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-emerald-500"
+                        className="mt-1 w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-emerald-500 chat-inputs"
                         placeholder="Enter Your Name"
                       />
                       <p className="text-xs text-gray-500 text-right"></p>
                     </div>
 
-                    <div>
-                      <label className="modal-label">Subject</label>
+                    <div className="mb-4">
+                      <label className="modal-label text-white">Subject</label>
                       <input
                         type="text"
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
-                        className="mt-1 w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-emerald-500"
+                        className="mt-1 w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-emerald-500 chat-inputs"
                         placeholder="Enter subject"
                       />
                       <p className="text-xs text-gray-500 text-right"></p>
                     </div>
 
                     <div>
-                      <label className="modal-label">Message</label>
+                      <label className="modal-label text-white">Message</label>
                       <textarea
                         rows="4"
                         maxLength={500}
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="mt-1 w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-emerald-500"
+                        className="mt-1 w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-emerald-500 chat-inputs"
                         placeholder="Enter your message"
                       />
                       <p className="text-xs text-gray-500 text-right"></p>

@@ -498,7 +498,7 @@ export default function SingleNFT() {
                     <h4 className="title-create-item">Price</h4>
                     <select
                       className=" mb-4 nft-price-dropdown "
-                      style={{ background: "#14141f" }}
+                      style={{ background: "var(--primary-bg-color)" }}
                       value={nftPrice}
                       onChange={handleNFTPrice}
                     >

@@ -274,27 +274,10 @@ export default function Dashboard() {
       toast.error("Failed to copy the link.");
     }
   };
-  console.log(
-    Number(allUsers?.userLastDealProfit ?? 0),
-    Number(allUsers?.tradingProfit?.[0]?.profitOrLoss ?? 0),
-    Number(dashboardData?.[8] ?? 0),
-    Number(dashboardData?.[9] ?? 0),
-    Number(dashboardData?.[10] ?? 0),
-    "nft::"
-  );
 
-  console.log(
-    (
-      Number(allUsers?.tradingProfit?.[0]?.profitOrLoss ?? 0) +
-      Number(allUsers?.userLastDealProfit ?? 0)
-    ).toFixed(4),
-    "1234"
-  );
-
-  console.log(Math.max(-7197.766906894505).toFixed(4), ":::");
   return (
     <>
-      <div className="p-4 ">
+      <div className="p-4 dashboard-container">
         <main
           class="content-dashboard "
           style={{
@@ -356,7 +339,9 @@ export default function Dashboard() {
                       <p style={{ color: pkg.color }}>{pkg.name}</p>
                       <div className="range-container">
                         <span style={{ fontSize: "15px" }}>Trade Limit</span>
-                        <span style={{ color: "#830499" }}>{pkg.range}</span>
+                        <span style={{ color: "rgb(221 148 233)" }}>
+                          {pkg.range}
+                        </span>
                       </div>
 
                       {(timeLeft == "Expired"

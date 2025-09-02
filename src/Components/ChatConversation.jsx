@@ -102,7 +102,10 @@ export default function ChatConversation() {
             <div className="p-4 border rounded-md w-full max-w-4xl mx-auto mt-10 msg-container">
               <div class="mb-3 ">
                 <div className="d-flex">
-                  <label className="form-label msg-label" for="form1">
+                  <label
+                    className="form-label msg-label text-white"
+                    for="form1"
+                  >
                     Message
                   </label>
                 </div>

@@ -170,7 +170,7 @@ export default function DashboardNew() {
       </div>
       <section
         class="tf-box-icon create tf-section bg-home-3 "
-        style={{ background: "#14141f" }}
+        style={{ background: "var(--primary-bg-color)" }}
       >
         <div class="themesflat-container">
           <div class="row">

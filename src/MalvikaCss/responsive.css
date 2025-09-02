@@ -533,7 +533,7 @@
     padding: 190px 0 73px;
   }
   .is_dark .main-nav.active {
-    background-color: #14141f;
+    background-color: var(--primary-bg-color);
     box-shadow: 0px 3px 16px rgb(47 83 109 / 20%);
   }
 
@@ -642,7 +642,7 @@
   }
 
   .is_dark .main-nav.active ul ul li {
-    background-color: #14141f;
+    background-color: var(--primary-bg-color);
   }
 
   .mobile-button,
@@ -825,7 +825,7 @@
   }
   .flat-title-page.style-3,
   .is_dark .flat-title-page {
-    border-bottom: 1px solid #343444;
+    border-bottom: 1px solid var(--card-bg);
   }
 
   .header_1.header_2.is-fixed .mode_switcher {

@@ -78,10 +78,16 @@ export default function LiveAuction() {
                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div className="swiper-slide">
                     <div className="slider-item">
-                      <div className="sc-card-product explode style2">
+                      <div
+                        className="sc-card-product explode style2"
+                        style={{ height: "50.5rem" }}
+                      >
                         <div className="card-media">
                           <a>
-                            <img src={hemlet} alt="Hamlet Contemplates" />
+                            <img
+                              src="https://axiesreact.themesflat.co/static/media/card-item-7.7f4ad6d33deea16f00f9.jpg"
+                              alt="Hamlet Contemplates"
+                            />
                           </a>
                           {/* <div className="featured-countdown">
                             <FaGripfire color="#5142fc" size={25} />
@@ -133,7 +139,10 @@ export default function LiveAuction() {
                       <div className="sc-card-product explode style2">
                         <div className="card-media">
                           <a>
-                            <img src={Trimphant} alt="Trimphant" />
+                            <img
+                              src="https://axiesreact.themesflat.co/static/media/card-item-2.bfe0307457e2f66fb932.jpg"
+                              alt="Trimphant"
+                            />
                           </a>
                           {/* <div className="featured-countdown">
                             <FaGripfire color="#5142fc" size={25} />
@@ -185,7 +194,10 @@ export default function LiveAuction() {
                       <div className="sc-card-product explode style2">
                         <div className="card-media">
                           <a>
-                            <img src={LivingVase} alt="Living Vase" />
+                            <img
+                              src="https://axiesreact.themesflat.co/static/media/image-box-31.59e66da3fd7a717dfc59.jpg"
+                              alt="Living Vase"
+                            />
                           </a>
                           {/* <div className="featured-countdown">
                             <FaGripfire color="#5142fc" size={25} />

@@ -62,10 +62,10 @@
 }
 .package-card {
   /* background: linear-gradient(45deg, #1d1d23, #333); */
-  background: transparent;
+  background: #1d1d1f;
   padding: 15px;
   text-align: center;
-  border: 1px solid rgb(33, 82, 175);
+
   border-radius: 5px;
 }
 .rank-income table {
@@ -182,12 +182,12 @@
   border-radius: 10px;
   text-align: center;
   color: white;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     rgb(72 120 211) 0%,
     rgb(107, 167, 231) 51%,
     rgb(77 122 207) 100%
-  ) !important;
+  ) !important; */
 }
 .countdown-card {
   background: linear-gradient(45deg, #1d1d23, #333);
@@ -212,7 +212,7 @@
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: #011655;
+  color: #e1e1e1;
 }
 .user-card:hover {
   /* background: linear-gradient(45deg, #333, #1d1d23); */
@@ -1187,13 +1187,8 @@ main {
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
-  /* background-color: #1358ed; */
-  background-image: linear-gradient(
-    to right,
-    rgb(33, 82, 175) 0%,
-    rgb(107, 167, 231) 51%,
-    rgb(33, 82, 175) 100%
-  );
+  background-color: #5142fc;
+
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -1543,7 +1538,7 @@ main {
     padding: 10px;
     width: max-content;
     margin-top: 20px;
-    margin-left: -50px;
+    margin-left: -36px;
   }
 
   .status-container2 {
@@ -1551,7 +1546,7 @@ main {
     width: max-content;
     rotate: 0deg;
     margin-top: 20px;
-    margin-left: -6vh;
+    margin-left: -4vh;
   }
 
   .branch-connector {
@@ -1830,22 +1825,17 @@ header {
 
 .package-card {
   /* background: linear-gradient(45deg, #1d1d23, #333); */
-  background: transparent;
-  border: 1px solid rgb(33, 82, 175);
+  background: #1d1d1f;
+  /* border: 1px solid rgb(33, 82, 175); */
   padding: 15px;
   text-align: center;
   border-radius: 5px;
 }
 
-.package-card:hover {
-  /* background: linear-gradient(45deg, #333, #1d1d23); */
-  background: transparent;
-}
-
 .package-card span {
   font-size: 17px;
   font-weight: 400;
-  color: black;
+  color: #e1e1e1;
 }
 
 .package-card p {
@@ -1919,13 +1909,13 @@ header {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: black;
+  color: #e1e1e1;
 }
 
 .user-card p {
   margin: 0;
   font-size: 14px;
-  color: #2458f1;
+  color: #7b9bf9;
   overflow-wrap: anywhere;
   padding: 0px 10px;
 }
@@ -1954,7 +1944,7 @@ header {
   align-items: center;
   flex: 1;
   gap: 10px;
-  background: #93bbff;
+  background: #1d1d1f;
 }
 
 .total-card:hover {
@@ -1971,12 +1961,12 @@ header {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: #011655;
+  color: #e1e1e1;
 }
 
 .total-card p {
   margin: 0;
-  color: #2458f1;
+  color: #fff;
 }
 
 .sub-total {
@@ -2019,7 +2009,7 @@ header {
 .follow-us {
   position: absolute;
   text-align: center;
-  color: black;
+  color: #fff;
   font-weight: 400;
   font-size: 16px;
   bottom: 116px;
@@ -2036,7 +2026,7 @@ header {
 .header-dashboard h1 {
   font-size: 25px;
   margin: 0;
-  color: #000;
+  color: #fff;
   font-weight: 500;
 }
 
@@ -2075,7 +2065,7 @@ header {
 @media (min-width: 400px) and (max-width: 768px) {
   .status-container2 {
     width: 293px;
-    margin-left: -29.9vh;
+    margin-left: -16.9vh;
   }
 }
 
@@ -2318,7 +2308,7 @@ header {
 }
 
 .dashboard-heading {
-  /* color: white; */
+  color: white;
   padding-bottom: 20px;
   font-weight: 500;
 }
@@ -2337,7 +2327,8 @@ header {
 .dashboard-sidebar {
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%); /* Sidebar hidden by default */
-  background: linear-gradient(to right, #a0c4ff, #4383fe);
+  /* background: linear-gradient(to right, #a0c4ff, #4383fe); */
+  background: #1e1e20;
 }
 
 .dashboard-sidebar.active {
@@ -2362,15 +2353,21 @@ header {
     overflow-x: auto;
   }
 }
+@media (max-width: 748px) {
+  .dashboard-container {
+    min-height: 100vh; /* let it grow naturally */
+    overflow-y: auto; /* enable vertical scrolling */
+  }
+}
 
 .btn-upgrade {
   margin-top: 10px;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     rgb(33, 82, 175) 0%,
     rgb(107, 167, 231) 51%,
     rgb(33, 82, 175) 100%
-  );
+  ); */
   color: white;
   border-radius: 30px;
   padding: 10px 20px;
@@ -2422,8 +2419,8 @@ td {
     rgb(33, 82, 175) 100%
   ); */
   /* background: #93bbff; */
-  border: 1px solid rgb(33, 82, 175);
-  background: transparent;
+  /* border: 1px solid rgb(33, 82, 175); */
+  background: #1d1d1f;
   padding: 10px 0px;
   height: 225px;
 }
@@ -2446,7 +2443,7 @@ td {
 }
 
 .Level-owner {
-  color: black;
+  color: #e3e3e3;
   padding: 10px;
   font-size: 14px;
   font-weight: 500;
@@ -2469,7 +2466,7 @@ td {
 .support-container {
   position: absolute;
   text-align: center;
-  color: black;
+  color: #fff;
   font-weight: 400;
   font-size: 16px;
   bottom: 48px;
@@ -2488,14 +2485,14 @@ td {
   font-size: 15px;
   padding-bottom: 10px;
 }
-.modal-header {
+/* .modal-header {
   background-image: linear-gradient(
     to right,
     rgb(72 120 211) 0%,
     rgb(107, 167, 231) 51%,
     rgb(77 122 207) 100%
   ) !important;
-}
+} */
 
 .msg-container {
   border: 1px solid #7fb1e799 !important;
@@ -2505,4 +2502,12 @@ td {
 .time-heading {
   padding-bottom: 2%;
   text-align: center;
+  color: #fff;
+  font-weight: 400;
+}
+
+.dashboard-container {
+  height: 100vh;
+  padding: 1.5rem 1.5rem !important;
+  background: var(--secondary-bg-color);
 }

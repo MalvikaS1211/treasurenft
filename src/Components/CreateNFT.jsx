@@ -22,7 +22,7 @@ export default function CreateNFT() {
             </h1>
           </div>
         </div>
-        <div style={{ background: "#14141f" }}>
+        <div style={{ background: "var(--primary-bg-color)" }}>
           <div className="container justify-content-center ">
             <ul
               className="nav nav-pills w-100 text-white"
@@ -43,7 +43,7 @@ export default function CreateNFT() {
             </ul>
           </div>
         </div>
-        <div style={{ background: "#14141f" }}>
+        <div style={{ background: "var(--primary-bg-color)" }}>
           {" "}
           <div className="themesflat-container">
             <div className="row">

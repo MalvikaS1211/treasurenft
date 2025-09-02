@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/LogoNew.png";
 import {
   FaHome,
   FaRedditAlien,
@@ -56,7 +56,7 @@ export default function Navbar({ title }) {
             <GiHamburgerMenu
               onClick={toggleSidebar}
               size={25}
-              color="black"
+              color="#fff"
               className=""
             />
           </div>
@@ -160,34 +160,34 @@ export default function Navbar({ title }) {
         <h3 className="follow-us">Follow Us On</h3>
         <div className="social-icons">
           <a href="https://t.me/magicverse_6669" target="_blank">
-            <i className="fab fa-telegram-plane text-black"></i>
+            <i className="fab fa-telegram-plane text-white"></i>
           </a>
           <a href="https://x.com/magic_verse_666" target="_blank">
-            <i className="fab fa-x-twitter text-black"></i>
+            <i className="fab fa-x-twitter text-white"></i>
           </a>
           <a href="http://medium.com/@magicverse666" target="_blank">
-            <BsMedium className="text-black" />
+            <BsMedium className="text-white" />
           </a>
           <a
             href="https://www.instagram.com/magicverse_official?igsh=M2l3enZ4NGpyN2pl"
             target="_blank"
           >
-            <i className="fab fa-instagram text-black"></i>
+            <i className="fab fa-instagram text-white"></i>
           </a>
           <a href="https://www.reddit.com/user/magicverse666" target="_blank">
-            <FaRedditAlien className="text-black" />
+            <FaRedditAlien className="text-white" />
           </a>
           <a
             href="https://www.facebook.com/profile.php?id=61576285054414"
             target="_blank"
           >
-            <FaFacebook className="text-black" />
+            <FaFacebook className="text-white" />
           </a>
           <a
             href="https://youtube.com/@magicverse-c4o?si=IkOqSaJgKGxw2-7S"
             target="_blank"
           >
-            <FaYoutube className="text-black" />
+            <FaYoutube className="text-white" />
           </a>
         </div>
 

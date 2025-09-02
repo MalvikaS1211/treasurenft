@@ -25,7 +25,7 @@
 
 .tf-section {
   padding: 80px 0;
-  background: var(--bg-section);
+  background: var(--secondary-bg-color);
   margin-bottom: 0 !important;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -137,7 +137,7 @@
 .tf-title-heading {
   position: relative;
   line-height: 44px;
-  color: var(--primary-color2);
+  color: #fff;
 }
 
 .box-right {
@@ -176,7 +176,7 @@
 }
 
 .is_dark .divider {
-  background-color: #343444;
+  background-color: var(--card-bg);
 }
 
 /* container */
@@ -483,16 +483,16 @@
   height: 56px;
 }
 .icon-color1 {
-  background: #5142fc;
+  background: #e13872;
 }
 .icon-color2 {
-  background: #47a432;
+  background: #00bcd4;
 }
 .icon-color3 {
-  background: #9835fb;
+  background: #df4949;
 }
 .icon-color4 {
-  background: #df4949;
+  background: #9835fb;
 }
 .sc-box-icon .heading {
   margin-bottom: 14px;
@@ -854,7 +854,7 @@
 }
 .sc-card-product {
   padding: 20px;
-  background: #343444;
+  background: var(--card-bg);
   box-shadow: 0px 3px 16px rgba(47, 83, 109, 0.12);
   border-radius: 20px;
   margin-bottom: 40px;
@@ -971,7 +971,7 @@
   color: #fff;
   padding: 2px 22px;
   border-radius: 8px;
-  background-color: #14141f;
+  background-color: var(--primary-bg-color);
   cursor: pointer;
   border: none;
 }
@@ -983,7 +983,7 @@
   color: #fff;
   padding: 1px 11px;
   border-radius: 8px;
-  /* background-color: #14141f; */
+  /* background-color: var(--primary-bg-color); */
   cursor: pointer;
   flex-shrink: 0;
   border: none;
@@ -1019,7 +1019,7 @@
   font-size: 14px;
   line-height: 22px;
   text-transform: capitalize;
-  color: #343444;
+  color: var(--card-bg);
   padding: 3px 19px;
   border-radius: 13px;
   background-color: #ffbd0c;
@@ -1178,11 +1178,11 @@
 .sc-card-product.explode .card-bottom {
   margin-top: 18px;
   padding-top: 15px;
-  border-top: 1px solid #14141f;
+  border-top: 1px solid var(--primary-bg-color);
 }
 
 .is_dark .sc-card-product.explode .card-bottom {
-  border-color: #14141f;
+  border-color: var(--primary-bg-color);
 }
 
 .sc-card-product.explode .price .price-details {
@@ -1229,7 +1229,7 @@
 }
 
 .is_dark .sc-button.fl-button.pri-3:hover span {
-  color: #14141f;
+  color: var(--primary-bg-color);
 }
 
 .sc-button.fl-button.pri-3:hover,
@@ -1266,7 +1266,7 @@
 }
 
 .is_dark .sc-button.bag.fl-button:hover span {
-  color: #14141f;
+  color: var(--primary-bg-color);
 }
 
 .is_dark .sc-button.bag.fl-button:hover span::before {
@@ -1276,7 +1276,7 @@
 /* sc card collection
   --------------------------------------------------*/
 .sc-card-collection {
-  background: #343444;
+  background: var(--card-bg);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 30px;
@@ -1576,7 +1576,7 @@
 }
 
 .is_dark .sc-card-activity .button-active {
-  background-color: #14141f;
+  background-color: var(--primary-bg-color);
 }
 
 .sc-card-activity .button-active.icon {
@@ -1711,7 +1711,7 @@
   -------------------------------------------------------------- */
 .flat-title-page {
   position: relative;
-  background: #14141f;
+  background: var(--primary-bg-color);
   background-size: cover;
   padding: 100px 0 20px;
 }
@@ -1755,12 +1755,12 @@
 }
 
 .heading .s1 {
-  color: #14141f;
+  color: var(--primary-bg-color);
   background: linear-gradient(-45deg, #e250e5, #4b50e6, #e250e5, #4b50e6);
   background-size: 100% 100%;
   -webkit-background-clip: text;
   -webkit-text-stroke: 3px transparent;
-  -webkit-text-fill-color: #14141f;
+  -webkit-text-fill-color: var(--primary-bg-color);
 }
 
 .flat-slider .heading .fill {
@@ -1845,7 +1845,7 @@
 
 .flat-bt-slider .sc-button.style.active span,
 .sc-button.style-place-bid span {
-  color: #343444;
+  color: var(--card-bg);
 }
 
 .flat-bt-slider .sc-button.style.active::before,
@@ -2371,11 +2371,11 @@ section.tf-section.live-auctions.home3 {
 /* Top Seller */
 .tf-section.top-seller {
   padding: 58px 0 43px;
-  background: #030303;
+  background: var(--secondary-bg-color);
 }
 .tf-section.popular-collection {
   padding: 38px 0 0px;
-  background: #14141f;
+  background: var(--primary-bg-color);
 }
 .home-2 .tf-section.popular-collection {
   padding: 81px 0 36px;
@@ -2501,7 +2501,7 @@ section.today-picks {
 
 .is_dark .flat-title-page.style2 .overlay,
 .is_dark .flat-title-page .overlay {
-  background: #14141f;
+  background: var(--primary-bg-color);
 }
 
 .is_dark .flat-title-page.inner .overlay {
@@ -2705,7 +2705,7 @@ section.today-picks {
   content: "";
   width: 47px;
   height: 47px;
-  background: #14141f;
+  background: var(--primary-bg-color);
   border-radius: 50%;
   position: absolute;
   top: 2px;
@@ -2809,7 +2809,7 @@ section.today-picks {
 
 .tf-section.today-pick {
   padding: 58px 0 43px;
-  background: #14141f;
+  background: var(--primary-bg-color);
 }
 .home-2 .tf-section.today-pick {
   padding: 49px 0 79px;
@@ -3060,10 +3060,10 @@ section.today-picks {
   color: #5142fc;
 }
 .is_dark .seclect-box .dropdown .dropdown-toggle {
-  background: #343444 !important;
+  background: var(--card-bg) !important;
 }
 .is_dark .seclect-box .dropdown .dropdown-menu {
-  background: #343444;
+  background: var(--card-bg);
 }
 
 .dropdown > a {
@@ -3087,7 +3087,7 @@ section.today-picks {
   z-index: 10;
 }
 .is_dark .dropdown > a {
-  background: #343444;
+  background: var(--card-bg);
 }
 .seclect-box.style-2 .dropdown > a:after {
   right: 15px;
@@ -3152,7 +3152,7 @@ section.today-picks {
   transition: all 0.3s ease;
 }
 .is_dark .dropdown li {
-  background: #343444;
+  background: var(--card-bg);
 }
 .dropdown ul,
 .dropdown li.active,
@@ -3356,7 +3356,7 @@ section.today-picks {
 }
 .is_dark .box-title-login::before,
 .is_dark .box-title-login::after {
-  background-color: #343444;
+  background-color: var(--card-bg);
 }
 .box-title-login h5 {
   line-height: 28px;
@@ -3465,10 +3465,13 @@ section.today-picks {
 
 .form-inner button {
   width: 100%;
-  background: rgba(81, 66, 252, 0.1);
-  border: 1px solid rgba(81, 66, 252, 0.1);
+
   border: none;
-  color: var(--primary-color3);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--primary-color3);
 }
 .is_dark .form-inner button {
   background: transparent;
@@ -3504,7 +3507,7 @@ section.today-picks {
   margin-bottom: 40px;
 }
 .is_dark .tf-login .sc-button.fl-button.pri-3:hover i {
-  color: #14141f;
+  color: var(--primary-bg-color);
 }
 /* Contact
   -------------------------------------------------------------- */
@@ -4488,7 +4491,7 @@ section.today-picks {
 }
 
 .is_dark .mode_switcher a {
-  background: #343444;
+  background: var(--card-bg);
 }
 
 .mode_switcher a i {
@@ -4872,7 +4875,7 @@ button.accordion-button {
   font-size: 20px;
 }
 .is_dark .flat-accordion2 .accordion-item {
-  background-color: #343444;
+  background-color: var(--card-bg);
 }
 
 .flat-accordion2 .accordion-item .accordion-button {
@@ -5247,7 +5250,7 @@ button.accordion-button {
 }
 
 .is_dark .table-ranking .item {
-  background: #343444;
+  background: var(--card-bg);
 }
 
 .table-ranking .item .infor-item .media {
@@ -5415,7 +5418,7 @@ button.accordion-button {
 }
 
 .is_dark .modal-content .btn-close {
-  background-color: #14141f;
+  background-color: var(--primary-bg-color);
 }
 
 .is_dark .modal-content .btn-close span {
@@ -5542,7 +5545,7 @@ button.accordion-button {
 }
 
 .is_dark .flat-cart-item .overlay {
-  background: #14141f;
+  background: var(--primary-bg-color);
 }
 
 /* Home Update
@@ -5698,11 +5701,11 @@ button.accordion-button {
 
 .menu_card .dropdown .dropdown-toggle i {
   font-size: 16px;
-  color: #343444;
+  color: var(--card-bg);
 }
 
 .is_dark .menu_card .dropdown-menu {
-  background: #343444;
+  background: var(--card-bg);
   border: 1px solid #3c3c56;
 }
 
@@ -5876,7 +5879,7 @@ button.accordion-button {
 }
 
 .is_dark .flat-title-page.home5 {
-  background-color: #14141f;
+  background-color: var(--primary-bg-color);
 }
 
 .flat-title-page.home5 .flat-slider {
@@ -6047,7 +6050,7 @@ button.accordion-button {
 
 .is_dark .top-seller.home5 .react-tabs__tab-list li:hover,
 .is_dark .top-seller.home5 .react-tabs__tab-list li.react-tabs__tab--selected {
-  background-color: #343444;
+  background-color: var(--card-bg);
 }
 
 .top-seller.home5 .react-tabs__tab-list li {
@@ -6098,7 +6101,7 @@ button.accordion-button {
 }
 
 .is_dark .top-seller.home5 .sc-author-box.style-3 {
-  background-color: #343444;
+  background-color: var(--card-bg);
 }
 
 .home-7 .top-seller.home5 .sc-author-box.style-3 {
@@ -6233,7 +6236,7 @@ button.accordion-button {
   background: #f8f8f8;
 }
 .is_dark .tf-soft .dropdown .dropdown-menu {
-  background: #343444;
+  background: var(--card-bg);
 }
 .tf-soft .dropdown .dropdown-menu .dropdown-item {
   font-size: 15px;
@@ -6285,7 +6288,7 @@ button.accordion-button {
   width: 311px;
 }
 .is_dark .tf-soft .soft-right .dropdown-menu {
-  background: #343444;
+  background: var(--card-bg);
 }
 
 .tf-soft .soft-right .dropdown-menu h6 {
@@ -6431,7 +6434,7 @@ button.accordion-button {
   height: 93px;
   border-radius: 50%;
   padding: 3px;
-  background-color: #343444;
+  background-color: var(--card-bg);
 }
 
 .sc-card-collection.style-2.home5 {
@@ -6498,7 +6501,7 @@ button.accordion-button {
   color: #fff;
   padding: 2px 11px;
   border-radius: 8px;
-  background-color: #14141f;
+  background-color: var(--primary-bg-color);
   cursor: pointer;
   border: none;
 }
@@ -6573,7 +6576,7 @@ button.accordion-button {
 
 .is_dark .home-6 .flat-cart-item .swiper-button-prev,
 .is_dark .home-6 .flat-cart-item .swiper-button-next {
-  background-color: #343444;
+  background-color: var(--card-bg);
 }
 
 .home-6 .flat-cart-item .swiper-button-prev {
@@ -6681,7 +6684,7 @@ button.accordion-button {
 
 .is_dark .seller-slider3.button-arow-style .swiper-button-next,
 .is_dark .seller-slider3.button-arow-style .swiper-button-prev {
-  background-color: #343444;
+  background-color: var(--card-bg);
   box-shadow: none;
 }
 
@@ -6758,7 +6761,7 @@ button.accordion-button {
 }
 
 .is_dark .home-7 .tf-section {
-  background: #14141f;
+  background: var(--primary-bg-color);
 }
 
 .flat-title-page.style3 {
@@ -6768,7 +6771,7 @@ button.accordion-button {
 }
 
 .is_dark .flat-title-page.style3 {
-  border-bottom: 1px solid #343444;
+  border-bottom: 1px solid var(--card-bg);
 }
 
 .flat-title-page.style3 .overlay {
@@ -6929,7 +6932,7 @@ button.accordion-button {
   color: #fff;
   padding: 2px 11px;
   border-radius: 8px;
-  background-color: #14141f;
+  background-color: var(--primary-bg-color);
   cursor: pointer;
   border: none;
 }
@@ -7222,7 +7225,7 @@ button.accordion-button {
 }
 
 .is_dark .sc-author-box.style-3 .action .btn-follow:hover a {
-  color: #14141f;
+  color: var(--primary-bg-color);
 }
 
 .sc-author-box.style-3 .action .btn-follow a {
@@ -7428,7 +7431,7 @@ button.accordion-button {
 }
 
 .sc-card-collection.style-2.sc-card-style7 .sc-author-box .author-avatar {
-  background-color: #343444;
+  background-color: var(--card-bg);
   border-radius: 50%;
   display: flex;
   display: -webkit-box;
@@ -7503,14 +7506,14 @@ button.accordion-button {
 
 .is_dark .header_1.header_2.style2.style3 {
   border-bottom: 1px solid #1f1f2c;
-  background: #14141f;
+  background: var(--primary-bg-color);
 }
 .is_dark .header_1.header_2.style2 {
   background: rgba(20, 20, 31, 0.9);
 }
 .is_dark .header_1.header_2.style2.is-fixed,
 .is_dark .header_1.is-fixed {
-  background: #14141f;
+  background: var(--primary-bg-color);
   box-shadow: 1px 1px 5px 0px rgb(0 0 0 / 50%);
 }
 .header_1.header_2.style2 {
@@ -7881,7 +7884,7 @@ button.accordion-button {
 }
 
 .is_dark .content-item2 .sc-button.style-place-bid.bag.fl-button:hover span {
-  color: #14141f;
+  color: var(--primary-bg-color);
 }
 .is_dark
   .content-item2
@@ -7967,7 +7970,7 @@ button.accordion-button {
   color: #fff;
   padding: 2px 9px;
   border-radius: 8px;
-  background-color: #14141f;
+  background-color: var(--primary-bg-color);
   cursor: pointer;
   border: none;
 }
@@ -8054,8 +8057,8 @@ button.accordion-button {
 
 .is_dark .flat-tabs.items .react-tabs__tab-panel .option .view ul li:hover,
 .is_dark .flat-tabs.items .react-tabs__tab-panel .option .view ul li.active {
-  background-color: #343444;
-  border: 1px solid #343444;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-bg);
 }
 
 .flat-tabs.items .react-tabs__tab-panel .option .view ul li:hover a span,
@@ -8208,11 +8211,11 @@ button.accordion-button {
   top: 100%;
   left: 0;
   flex-wrap: wrap;
-  background-color: #343444;
+  background-color: var(--card-bg);
 }
 
 .btn-sort-by.dropdown ul li {
-  background-color: #343444;
+  background-color: var(--card-bg);
 }
 
 .btn-sort-by.dropdown ul li span {

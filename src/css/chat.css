@@ -30,11 +30,12 @@
   margin-inline-start: 0;
   margin-inline-end: 4%;
   background: var(--custom-white);
-  border: 1px solid var(--default-border);
+  /* border: 1px solid var(--default-border); */
   box-shadow: 0 2px #768afe08;
   position: relative;
   padding: 1rem;
   border-radius: 6px;
+  background-color: #1e1e20 !important;
 }
 .notification-body {
   background: #fff !important;
@@ -133,4 +134,9 @@
 .textAreaBox {
   height: 40%;
   font-size: 15px !important;
+}
+
+.chat-inputs {
+  border: 1px solid #797676 !important;
+  border-radius: 10px !important;
 }

@@ -494,6 +494,7 @@ export default function BulkNFT() {
                   ? "pointer"
                   : "not-allowed",
               opacity: nfts.length < (initialP === 15 ? 2 : 5) ? 1 : 0.5,
+              color: "#ddd7d7",
             }}
           />
         </div>
