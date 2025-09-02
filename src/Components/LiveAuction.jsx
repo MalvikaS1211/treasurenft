@@ -9,6 +9,10 @@ import FlameDress from "../assets/FlameDress.jpg";
 import { FaGripfire } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
 import Axies from "../assets/Axies.jpg";
+import Piggy from "../assets/pigy.jpg";
+import Rino from "../assets/charming-rhinoceros-figurine.jpg";
+
+import squirel from "../assets/squirel.jpg";
 
 export default function LiveAuction() {
   const settings = {
@@ -84,21 +88,8 @@ export default function LiveAuction() {
                       >
                         <div className="card-media">
                           <a>
-                            <img
-                              src="https://axiesreact.themesflat.co/static/media/card-item-7.7f4ad6d33deea16f00f9.jpg"
-                              alt="Hamlet Contemplates"
-                            />
+                            <img src={Piggy} alt="Hamlet Contemplates" />
                           </a>
-                          {/* <div className="featured-countdown">
-                            <FaGripfire color="#5142fc" size={25} />
-                            <span>05:17:44:21</span>
-                          </div> */}
-                          {/* <div className="button-place-bid">
-                          <button className="sc-button style-place-bid style bag fl-button pri-3">
-                            <FaShoppingBag color="black" />
-                            <span>Place Bid</span>
-                          </button>
-                        </div> */}
                         </div>
                         <div className="card-title">
                           <h5>
@@ -139,21 +130,8 @@ export default function LiveAuction() {
                       <div className="sc-card-product explode style2">
                         <div className="card-media">
                           <a>
-                            <img
-                              src="https://axiesreact.themesflat.co/static/media/card-item-2.bfe0307457e2f66fb932.jpg"
-                              alt="Trimphant"
-                            />
+                            <img src={Trimphant} alt="Trimphant" />
                           </a>
-                          {/* <div className="featured-countdown">
-                            <FaGripfire color="#5142fc" size={25} />
-                            <span>04:10:30:12</span>
-                          </div> */}
-                          {/* <div className="button-place-bid">
-                          <button className="sc-button style-place-bid style bag fl-button pri-3">
-                            <FaShoppingBag color="black" />
-                            <span>Place Bid</span>
-                          </button>
-                        </div> */}
                         </div>
                         <div className="card-title">
                           <h5>
@@ -194,21 +172,8 @@ export default function LiveAuction() {
                       <div className="sc-card-product explode style2">
                         <div className="card-media">
                           <a>
-                            <img
-                              src="https://axiesreact.themesflat.co/static/media/image-box-31.59e66da3fd7a717dfc59.jpg"
-                              alt="Living Vase"
-                            />
+                            <img src={squirel} alt="Living Vase" />
                           </a>
-                          {/* <div className="featured-countdown">
-                            <FaGripfire color="#5142fc" size={25} />
-                            <span>03:15:20:05</span>
-                          </div> */}
-                          {/* <div className="button-place-bid">
-                          <button className="sc-button style-place-bid style bag fl-button pri-3">
-                            <FaShoppingBag color="black" />
-                            <span>Place Bid</span>
-                          </button>
-                        </div> */}
                         </div>
                         <div className="card-title">
                           <h5>
@@ -249,18 +214,8 @@ export default function LiveAuction() {
                       <div className="sc-card-product explode style2">
                         <div className="card-media">
                           <a>
-                            <img src={FlameDress} alt="Flame Dress" />
+                            <img src={Rino} alt="Flame Dress" />
                           </a>
-                          {/* <div className="featured-countdown">
-                            <FaGripfire color="#5142fc" size={25} />
-                            <span>06:20:40:10</span>
-                          </div> */}
-                          {/* <div className="button-place-bid">
-                          <button className="sc-button style-place-bid style bag fl-button pri-3">
-                            <FaShoppingBag color="black" />
-                            <span>Place Bid</span>
-                          </button>
-                        </div> */}
                         </div>
                         <div className="card-title">
                           <h5>

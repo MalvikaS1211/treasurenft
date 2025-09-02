@@ -3,7 +3,7 @@ import bg1 from "../assets/bg1.png";
 import bg2 from "../assets/bg2.png";
 import bg3 from "../assets/bg3.png";
 import bg4 from "../assets/bg4.png";
-import bg5 from "../assets/bg5.png";
+import bg5 from "../assets/cartoon-kid-with-vr-helmet.png";
 import hemlet from "../assets/hemlet.jpg";
 import Trimphant from "../assets/Trimphant.jpg";
 import LivingVase from "../assets/LivingVase.jpg";
@@ -54,7 +54,7 @@ export default function DashboardNew() {
   };
 
   const location = useLocation();
-
+  const navigate = useNavigate();
   useEffect(() => {
     if (location.state?.scrollTo) {
       const element = document.getElementById(location.state.scrollTo);
@@ -99,7 +99,7 @@ export default function DashboardNew() {
                 <div class="shape item-w-16"></div>
                 <div class="shape item-w-22"></div>
                 <div class="shape item-w-32"></div>
-                <div class="shape item-w-48"></div>
+                {/* <div class="shape item-w-48"></div> */}
                 <div class="shape style2 item-w-51"></div>
                 <div class="shape style2 item-w-51 position2"></div>
                 <div class="shape item-w-68"></div>
@@ -122,12 +122,16 @@ export default function DashboardNew() {
                                 Marketplace for monster character cllections non
                                 fungible token NFTs
                               </p>
-                              <div class="flat-bt-slider flex style2">
-                                <Link to="/signup">
-                                  <a class="sc-button header-slider style style-1 rocket fl-button pri-1">
+                              <div class="flat-bt-slider flex style2 button-container">
+                                <a
+                                  class="sc-button header-slider style style-1 rocket fl-button pri-1"
+                                  onClick={() => navigate("/signup")}
+                                >
+                                  <div className="d-flex justify-content-center gap-3">
                                     <span className="pl-0">Sign Up</span>
-                                  </a>
-                                </Link>
+                                  </div>
+                                </a>
+
                                 <a
                                   href={PDF}
                                   download="MagicVerse.pdf"
@@ -150,7 +154,11 @@ export default function DashboardNew() {
                             </div>
                             <div class="image">
                               <img class="img-bg" src={bg4} alt="axies" />
-                              <img src={bg5} alt="axies" />
+                              <img
+                                src={bg5}
+                                alt="axies"
+                                style={{ width: "90%" }}
+                              />
                             </div>
                           </div>
                         </div>

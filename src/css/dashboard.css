@@ -2352,6 +2352,11 @@ header {
     width: 100%;
     overflow-x: auto;
   }
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 @media (max-width: 748px) {
   .dashboard-container {

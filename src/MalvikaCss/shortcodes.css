@@ -2564,7 +2564,7 @@ section.today-picks {
 }
 
 .flat-title-page .shape.item-w-22 {
-  top: 60.5%;
+  top: 65.7%;
   left: 42.5%;
 }
 
@@ -2589,8 +2589,8 @@ section.today-picks {
 }
 
 .flat-title-page .shape.item-w-68 {
-  top: 28%;
-  right: 13.5%;
+  top: 48%;
+  right: 5.5%;
 }
 
 .flat-title-page .img-bg {
@@ -8472,3 +8472,12 @@ button.accordion-button {
   margin-bottom: 24px;
   line-height: 44px;
 }
+/* .flat-title-page .shape.item-w-51.position2::before {
+  content: "NFT";
+  position: absolute;
+  top: 34%;
+  right: 29.8%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+} */
