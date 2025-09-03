@@ -8,9 +8,11 @@ import LivingVase from "../assets/LivingVase.jpg";
 import FlameDress from "../assets/FlameDress.jpg";
 import { FaGripfire } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
-import Axies from "../assets/Axies.jpg";
+import Axies from "../assets/long-hair-woman.jpg";
 import Piggy from "../assets/pigy.jpg";
 import Rino from "../assets/charming-rhinoceros-figurine.jpg";
+import kungfuPanda from "../assets/kungfuPanda.jpg";
+import robot from "../assets/robot1.jpg";
 
 import squirel from "../assets/squirel.jpg";
 
@@ -82,10 +84,7 @@ export default function LiveAuction() {
                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div className="swiper-slide">
                     <div className="slider-item">
-                      <div
-                        className="sc-card-product explode style2"
-                        style={{ height: "50.5rem" }}
-                      >
+                      <div className="sc-card-product explode style2 live-Auction-card">
                         <div className="card-media">
                           <a>
                             <img src={Piggy} alt="Hamlet Contemplates" />
@@ -93,7 +92,7 @@ export default function LiveAuction() {
                         </div>
                         <div className="card-title">
                           <h5>
-                            <a>Hamlet Contemplates</a>
+                            <a>The Piggy Paradox</a>
                           </h5>
                         </div>
                         <div class="meta-info">
@@ -104,7 +103,7 @@ export default function LiveAuction() {
                             <div class="info">
                               <span>Creator</span>
                               <h6>
-                                <a>SalvadorDali</a>
+                                <a>VisionMorph</a>
                               </h6>
                             </div>
                           </div>
@@ -130,7 +129,7 @@ export default function LiveAuction() {
                       <div className="sc-card-product explode style2">
                         <div className="card-media">
                           <a>
-                            <img src={Trimphant} alt="Trimphant" />
+                            <img src={LivingVase} alt="Trimphant" />
                           </a>
                         </div>
                         <div className="card-title">
@@ -172,12 +171,12 @@ export default function LiveAuction() {
                       <div className="sc-card-product explode style2">
                         <div className="card-media">
                           <a>
-                            <img src={squirel} alt="Living Vase" />
+                            <img src={robot} alt="Living Vase" />
                           </a>
                         </div>
                         <div className="card-title">
                           <h5>
-                            <a>Living Vase</a>
+                            <a>Crystal Echoes</a>
                           </h5>
                         </div>
                         <div class="meta-info">
@@ -188,7 +187,49 @@ export default function LiveAuction() {
                             <div class="info">
                               <span>Creator</span>
                               <h6>
-                                <a>SalvadorDali</a>
+                                <a>PixelOracle</a>
+                              </h6>
+                            </div>
+                          </div>
+                          <div class="tags">bsc</div>
+                        </div>
+                        <div class="card-bottom style-explode">
+                          <div class="price">
+                            <span>Current Bid</span>
+                            <div class="price-details">
+                              <h5>8.67 $</h5>
+                              <span>= $12.246</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <div className="swiper-slide">
+                    <div className="slider-item">
+                      <div className="sc-card-product explode style2">
+                        <div className="card-media">
+                          <a>
+                            <img src={Rino} alt="Flame Dress" />
+                          </a>
+                        </div>
+                        <div className="card-title">
+                          <h5>
+                            <a>Flame Dress</a>
+                          </h5>
+                        </div>
+                        <div class="meta-info">
+                          <div class="author">
+                            <div class="avatar">
+                              <img src={Axies} alt="axies" />
+                            </div>
+                            <div class="info">
+                              <span>Creator</span>
+                              <h6>
+                                <a>Mike Winkelmann</a>
                               </h6>
                             </div>
                           </div>
@@ -214,12 +255,12 @@ export default function LiveAuction() {
                       <div className="sc-card-product explode style2">
                         <div className="card-media">
                           <a>
-                            <img src={Rino} alt="Flame Dress" />
+                            <img src={kungfuPanda} alt="Flame Dress" />
                           </a>
                         </div>
                         <div className="card-title">
                           <h5>
-                            <a>Flame Dress</a>
+                            <a>Kungfu Panda</a>
                           </h5>
                         </div>
                         <div class="meta-info">

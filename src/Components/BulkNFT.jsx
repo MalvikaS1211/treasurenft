@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CyberDoberman from "../assets/CyberDoberman.jpg";
+import CyberDoberman from "../assets/blogbg3.jpg";
 import MattRamos from "../assets/MattRamos.jpg";
 import { FaPlus } from "react-icons/fa";
 import axios from "axios";

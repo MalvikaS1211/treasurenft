@@ -57,6 +57,7 @@ export default function FooterNew() {
                       // id="logo_footer"
                       src={Logo}
                       alt="nft-Logo"
+                      width={200}
                     />
                   </a>
                 </div>

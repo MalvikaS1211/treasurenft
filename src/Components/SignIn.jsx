@@ -42,7 +42,7 @@ export default function SignIn() {
       <HeaderNew />
       <section className="tf-login tf-section dashboardbg">
         <div className="themesflat-container">
-          <div className="row">
+          <div className="row" style={{ padding: "97px 0" }}>
             <div className="col-12">
               <h2 className="tf-title-heading ct style-1">Sign In To NFTs</h2>
 

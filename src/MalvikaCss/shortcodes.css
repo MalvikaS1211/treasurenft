@@ -504,7 +504,7 @@
 }
 
 .sc-box-icon:hover .image .icon-create {
-  transform: rotateY(360deg);
+  transform: rotateX(360deg);
   transition: 1s all;
 }
 
@@ -1817,7 +1817,7 @@
 }
 
 .flat-bt-slider .sc-button {
-  padding: 16px 35px;
+  padding: 15px 27px;
 }
 
 .sc-button.header-slider span,
@@ -2537,8 +2537,8 @@ section.today-picks {
 .mainslider.home .image {
   position: relative;
   width: 50%;
-  padding-top: 30px;
-  padding-right: 132px;
+  padding-top: 18px;
+  padding-right: 200px;
 }
 
 .mainslider.home .image img {
@@ -2572,10 +2572,14 @@ section.today-picks {
   top: 56.7%;
   right: 18.8%;
 }
+.flat-title-page .shape.item-w-35 {
+  top: 88.7%;
+  right: 18.8%;
+}
 
 .flat-title-page .shape.item-w-48 {
-  top: 53.5%;
-  right: 39.6%;
+  top: 80.5%;
+  right: 48.6%;
 }
 
 .flat-title-page .shape.item-w-51 {
@@ -3398,7 +3402,7 @@ section.today-picks {
 
 .form-inner form input,
 .form-inner form textarea {
-  color: var(--primary-color2);
+  color: #fff;
 }
 
 .form-inner form input::placeholder,

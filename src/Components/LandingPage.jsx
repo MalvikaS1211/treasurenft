@@ -9,25 +9,46 @@ import Trimphant from "../assets/Trimphant.jpg";
 import LivingVase from "../assets/LivingVase.jpg";
 import FlameDress from "../assets/FlameDress.jpg";
 import { TiTick } from "react-icons/ti";
-import collection1 from "../assets/collection1.jpg";
-import collection2 from "../assets/collection2.jpg";
-import collection3 from "../assets/collection3.jpg";
-import collection4 from "../assets/collection4.jpg";
-import collection5 from "../assets/collection5.jpg";
-import collection6 from "../assets/collection6.jpg";
+import collection1 from "../assets/scene.jpg";
+import collection2 from "../assets/squirrel.jpg";
+import collection3 from "../assets/dolphinart.jpg";
+import collection4 from "../assets/art1.jpg";
+import collection5 from "../assets/deer.jpg";
+import collection6 from "../assets/peacock.jpg";
 import collection7 from "../assets/collection7.jpg";
-import collection8 from "../assets/collection8.jpg";
+import collection8 from "../assets/butterfly.jpg";
 import collection9 from "../assets/collection9.jpg";
-import creativeArt from "../assets/creativeArt.jpg";
-import TommyAlrez from "../assets/TommyAlrez.jpg";
-import SamsonFrost from "../assets/SamsonFrost.jpg";
-import WindsorLane from "../assets/WindsorLane.jpg";
-import AndyHurlbutt from "../assets/AndyHurlbutt.jpg";
-import MattRamos from "../assets/MattRamos.jpg";
-import BlakeBanks from "../assets/BlakeBanks.jpg";
-import MonicaLucas from "../assets/MonicaLucas.jpg";
-import HarperWilcher from "../assets/HarperWilcher.jpg";
-import RenaiXance from "../assets/RenaiXance.jpg";
+import collection10 from "../assets/collection10.jpg";
+import collection11 from "../assets/collection11.jpg";
+import collection12 from "../assets/parrot.jpg";
+import collection13 from "../assets/collection13.jpg";
+import collection14 from "../assets/collection14.jpg";
+import collection15 from "../assets/collection15.jpg";
+import collection16 from "../assets/collection16.jpg";
+import collection17 from "../assets/collection17.jpg";
+import collection18 from "../assets/collection18.jpg";
+
+import creativeArt from "../assets/man-with-hat.jpg";
+import women from "../assets/woman-with-hijab.jpg";
+
+import TommyAlrez from "../assets/long-hair-woman.jpg";
+import SamsonFrost from "../assets/with-glasses.jpg";
+import WindsorLane from "../assets/short-hair-man-with-glasses.jpg";
+import AndyHurlbutt from "../assets/curly-hair-man-with-glasses.jpg";
+import MattRamos from "../assets/long-hair-woman-with-glasses.jpg";
+import BlakeBanks from "../assets/man-with-beard.jpg";
+import MonicaLucas from "../assets/dreadlocked-man-with-glasses.jpg";
+import HarperWilcher from "../assets/curly-hair-man-with-glasses-2.jpg";
+import Man from "../assets/man.jpg";
+import img1 from "../assets/Stake_01493_compre.webp";
+import img2 from "../assets/Stake_06195_compre.webp";
+import img3 from "../assets/Penguin_Pals_549781.webp";
+import sonic from "../assets/sonic.jpg";
+import animal from "../assets/animal.jpg";
+import elephant from "../assets/elephant.jpg";
+import bunny from "../assets/bunny.jpg";
+import elephantpic from "../assets/elephantpic.jpg";
+import { FiUserPlus } from "react-icons/fi";
 import space from "../assets/space.jpg";
 import cryptoegg from "../assets/cryptoegg.jpg";
 import cyberprimal from "../assets/cyberprimal.jpg";
@@ -97,11 +118,14 @@ export default function DashboardNew() {
                 <img class="bgr-gradient gradient2" src={bg2} alt="Axies" />
                 <img class="bgr-gradient gradient3" src={bg3} alt="Axies" />
                 <div class="shape item-w-16"></div>
-                <div class="shape item-w-22"></div>
                 <div class="shape item-w-32"></div>
-                {/* <div class="shape item-w-48"></div> */}
+                <div class="shape item-w-22"></div>
+                <div class="shape item-w-35"></div>
+
+                <div class="shape item-w-48"></div>
                 <div class="shape style2 item-w-51"></div>
                 <div class="shape style2 item-w-51 position2"></div>
+
                 <div class="shape item-w-68"></div>
                 <div class="overlay"></div>
                 <div class="swiper-container mainslider home">
@@ -111,16 +135,16 @@ export default function DashboardNew() {
                         <div class="themesflat-container ">
                           <div class="wrap-heading flat-slider flex">
                             <div class="content-custom">
-                              <h2 class="heading">Discover, and collect</h2>
+                              <h2 class="heading">Unleash and Trade</h2>
                               <h1 class="heading mb-style">
-                                <span class="">extraordinary</span>
+                                <span class="">mythical</span>
                               </h1>
                               <h1 class="heading">
                                 <span class="fill">Monster </span>NFTs
                               </h1>
                               <p class="sub-heading">
-                                Marketplace for monster character cllections non
-                                fungible token NFTs
+                                Unleash your collection with exclusive beastly
+                                tokens at Mythic Monster Market
                               </p>
                               <div class="flat-bt-slider flex style2 button-container">
                                 <a
@@ -128,11 +152,12 @@ export default function DashboardNew() {
                                   onClick={() => navigate("/signup")}
                                 >
                                   <div className="d-flex justify-content-center gap-3">
+                                    <FiUserPlus color="#5142fc" size={20} />
                                     <span className="pl-0">Sign Up</span>
                                   </div>
                                 </a>
 
-                                <a
+                                {/* <a
                                   href={PDF}
                                   download="MagicVerse.pdf"
                                   class="sc-button header-slider style style-1 rocket fl-button pri-1"
@@ -142,13 +167,6 @@ export default function DashboardNew() {
                                     <GoDownload color="#5142fc" size={20} />
                                     <span className="pl-0">DownLoad Pdf</span>
                                   </div>
-                                </a>
-
-                                {/* <a
-                                  class="sc-button header-slider style style-1 note fl-button pri-1"
-                                  href="/create-item"
-                                >
-                                  <span>Create</span>
                                 </a> */}
                               </div>
                             </div>
@@ -190,11 +208,12 @@ export default function DashboardNew() {
                   </div>
                 </div>
                 <h3 class="heading">
-                  <a>Set Up Your Wallet</a>
+                  <a>Connect Your Wallet</a>
                 </h3>
                 <p class="content-custom">
-                  Once you’ve set up your wallet of choice, connect it to
-                  OpenSeaby clicking the NFT Marketplacein the top right corner.
+                  After setting up your preferred wallet, connect it to OpenSea
+                  by selecting the NFT Marketplace option in the top right
+                  corner of the platform.
                 </p>
               </div>
             </div>
@@ -209,9 +228,9 @@ export default function DashboardNew() {
                   <a>Create Your Collection</a>
                 </h3>
                 <p class="content-custom">
-                  Click Create and set up your collection. Add social links, a
-                  description, profile &amp; banner images, and set a secondary
-                  sales fee.
+                  Click "Create NFT" to set up your collection. Add social
+                  links, a description, profile and banner images, and specify a
+                  secondary sales fee.
                 </p>
               </div>
             </div>
@@ -227,7 +246,8 @@ export default function DashboardNew() {
                 </h3>
                 <p class="content-custom">
                   Upload your work (image or 3D art), add a title and
-                  description, and customize your NFTs with properties, stats
+                  description, and customize your NFTs with properties and
+                  stats.
                 </p>
               </div>
             </div>
@@ -239,12 +259,12 @@ export default function DashboardNew() {
                   </div>
                 </div>
                 <h3 class="heading">
-                  <a>List Them For Sale</a>
+                  <a>Sell Your NFTs</a>
                 </h3>
                 <p class="content-custom">
-                  Choose between auctions, fixed-price listings, and
-                  declining-price listings. You choose how you want to sell your
-                  NFTs!
+                  Select your preferred selling method, such as auctions,
+                  fixed-price listings, or declining-price listings, to showcase
+                  and sell your NFTs your way!
                 </p>
               </div>
             </div>
@@ -300,7 +320,7 @@ export default function DashboardNew() {
                                       </div>
                                       <div class="bottom-media">
                                         <img src={collection3} alt="Axies" />
-                                        <img src={collection4} alt="Axies" />
+                                        <img src={collection8} alt="Axies" />
                                         <img src={collection5} alt="Axies" />
                                       </div>
                                     </div>
@@ -333,10 +353,10 @@ export default function DashboardNew() {
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="wishlist-button public heart">
+                                    {/* <div class="wishlist-button public heart">
                                       <IoIosHeartEmpty size={18} />
                                       <span class="number-like">100</span>
-                                    </div>
+                                    </div> */}
                                   </div>
                                 </div>
                               </div>
@@ -380,12 +400,12 @@ export default function DashboardNew() {
                                     <div class="media-images-box">
                                       <div class="top-media">
                                         <img src={collection6} alt="Axies" />
-                                        <img src={collection7} alt="Axies" />
+                                        <img src={collection11} alt="Axies" />
                                       </div>
                                       <div class="bottom-media">
-                                        <img src={collection8} alt="Axies" />
-                                        <img src={collection4} alt="Axies" />
-                                        <img src={collection9} alt="Axies" />
+                                        <img src={collection13} alt="Axies" />
+                                        <img src={collection12} alt="Axies" />
+                                        <img src={collection10} alt="Axies" />
                                       </div>
                                     </div>
                                   </a>
@@ -417,10 +437,10 @@ export default function DashboardNew() {
                                         </div>
                                       </div>
                                     </div>
-                                    <div class="wishlist-button public heart">
+                                    {/* <div class="wishlist-button public heart">
                                       <IoIosHeartEmpty size={18} />
                                       <span class="number-like">100</span>
-                                    </div>
+                                    </div> */}
                                   </div>
                                 </div>
                               </div>
@@ -463,13 +483,13 @@ export default function DashboardNew() {
                                   <a>
                                     <div class="media-images-box">
                                       <div class="top-media">
-                                        <img src={Trimphant} alt="Axies" />
-                                        <img src={collection2} alt="Axies" />
+                                        <img src={collection17} alt="Axies" />
+                                        <img src={collection18} alt="Axies" />
                                       </div>
                                       <div class="bottom-media">
-                                        <img src={cryptoegg} alt="Axies" />
-                                        <img src={space} alt="Axies" />
-                                        <img src={collection7} alt="Axies" />
+                                        <img src={collection16} alt="Axies" />
+                                        <img src={collection15} alt="Axies" />
+                                        <img src={collection14} alt="Axies" />
                                       </div>
                                     </div>
                                   </a>
@@ -501,10 +521,10 @@ export default function DashboardNew() {
                                         </div>
                                       </div>
                                     </div>
-                                    <div className="wishlist-button public heart">
+                                    {/* <div className="wishlist-button public heart">
                                       <IoIosHeartEmpty size={18} />
                                       <span class="number-like">100</span>
-                                    </div>
+                                    </div> */}
                                   </div>
                                 </div>
                               </div>
@@ -579,7 +599,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a>Tommy Alrez</a>
+                        <a>Chris Torres</a>
                       </h5>
                       <span class="price">170.3 $</span>
                     </div>
@@ -636,7 +656,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a>Blake Banks</a>
+                        <a>Micah Dowbak</a>
                       </h5>
                       <span class="price">68.2 $</span>
                     </div>
@@ -700,7 +720,7 @@ export default function DashboardNew() {
                   <div class="sc-author-box style-3 pd-0">
                     <div class="author-avatar">
                       <a>
-                        <img src={creativeArt} alt="axies" class="avatar" />
+                        <img src={women} alt="axies" class="avatar" />
                       </a>
                       <div class="badge">
                         <TiTick style={{ fontSize: "15px" }} />
@@ -708,7 +728,7 @@ export default function DashboardNew() {
                     </div>
                     <div class="author-infor">
                       <h5 class="fs-16">
-                        <a>Crispin Berry</a>
+                        <a>Kevin McCoy</a>
                       </h5>
                       <span class="price">214.2 $</span>
                     </div>
@@ -734,7 +754,7 @@ export default function DashboardNew() {
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
                   <a>
-                    <img src={RenaiXance} alt="Axies" />
+                    <img src={img1} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
                     <button class="sc-button style-place-bid style bag fl-button pri-3">
@@ -742,15 +762,219 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  <div class="wishlist-button heart">
+                  {/* <div class="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
                     <span class="number-like">100</span>
-                  </div>
+                  </div> */}
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
                   <h5>
                     <a>"The RenaiXance Rising the sun "</a>
+                  </h5>
+                </div>
+                <div class="meta-info">
+                  <div class="author">
+                    <div class="avatar">
+                      <img src={AndyHurlbutt} alt="Axies" />
+                    </div>
+                    <div class="info">
+                      <span>Creator</span>
+                      <h6>
+                        <a>SalvadorDali</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="tags">bsc</div>
+                </div>
+                <div
+                  class="card-bottom
+                        style-explode"
+                >
+                  <div class="price">
+                    <span>Current Bid</span>
+                    <div class="price-details">
+                      <h5>4.89 $</h5>
+                      <span>= $12.246</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="sc-card-product explode style2 mg-bt  ">
+                <div class="card-media">
+                  <a>
+                    <img src={bunny} alt="Axies" />
+                  </a>
+                  <div class="button-place-bid">
+                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                      <FaShoppingBag color="black" />
+                      <span>Place Bid</span>
+                    </button>
+                  </div>
+                  {/* <div class="wishlist-button heart">
+                    <IoIosHeartEmpty size={18} />
+                    <span class="number-like">100</span>
+                  </div> */}
+                  <div class="coming-soon"></div>
+                </div>
+                <div class="card-title">
+                  <h5>
+                    <a>"The RenaiXance Rising the sun "</a>
+                  </h5>
+                </div>
+                <div class="meta-info">
+                  <div class="author">
+                    <div class="avatar">
+                      <img src={TommyAlrez} alt="Axies" />
+                    </div>
+                    <div class="info">
+                      <span>Creator</span>
+                      <h6>
+                        <a>SalvadorDali</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="tags">bsc</div>
+                </div>
+                <div
+                  class="card-bottom
+                        style-explode"
+                >
+                  <div class="price">
+                    <span>Current Bid</span>
+                    <div class="price-details">
+                      <h5>4.89 $</h5>
+                      <span>= $12.246</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="sc-card-product explode style2 mg-bt  ">
+                <div class="card-media">
+                  <a>
+                    <img src={elephantpic} alt="Axies" />
+                  </a>
+                  <div class="button-place-bid">
+                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                      <FaShoppingBag color="black" />
+                      <span>Place Bid</span>
+                    </button>
+                  </div>
+                  {/* <div class="wishlist-button heart">
+                    <IoIosHeartEmpty size={18} />
+                    <span class="number-like">100</span>
+                  </div> */}
+                  <div class="coming-soon"></div>
+                </div>
+                <div class="card-title">
+                  <h5>
+                    <a>"The RenaiXance Rising the sun "</a>
+                  </h5>
+                </div>
+                <div class="meta-info">
+                  <div class="author">
+                    <div class="avatar">
+                      <img src={Man} alt="Axies" />
+                    </div>
+                    <div class="info">
+                      <span>Creator</span>
+                      <h6>
+                        <a>SalvadorDali</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="tags">bsc</div>
+                </div>
+                <div
+                  class="card-bottom
+                        style-explode"
+                >
+                  <div class="price">
+                    <span>Current Bid</span>
+                    <div class="price-details">
+                      <h5>4.89 $</h5>
+                      <span>= $12.246</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="sc-card-product explode style2 mg-bt  ">
+                <div class="card-media">
+                  <a>
+                    <img src={img3} alt="Axies" />
+                  </a>
+                  <div class="button-place-bid">
+                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                      <FaShoppingBag color="black" />
+                      <span>Place Bid</span>
+                    </button>
+                  </div>
+                  {/* <div class="wishlist-button heart">
+                    <IoIosHeartEmpty size={18} />
+                    <span class="number-like">100</span>
+                  </div> */}
+                  <div class="coming-soon"></div>
+                </div>
+                <div class="card-title">
+                  <h5>
+                    <a>"The RenaiXance Rising the sun "</a>
+                  </h5>
+                </div>
+                <div class="meta-info">
+                  <div class="author">
+                    <div class="avatar">
+                      <img src={women} alt="Axies" />
+                    </div>
+                    <div class="info">
+                      <span>Creator</span>
+                      <h6>
+                        <a>SalvadorDali</a>
+                      </h6>
+                    </div>
+                  </div>
+                  <div class="tags">bsc</div>
+                </div>
+                <div
+                  class="card-bottom
+                        style-explode"
+                >
+                  <div class="price">
+                    <span>Current Bid</span>
+                    <div class="price-details">
+                      <h5>4.89 $</h5>
+                      <span>= $12.246</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div class="sc-card-product explode style2 mg-bt  ">
+                <div class="card-media">
+                  <a>
+                    <img src={sonic} alt="Axies" />
+                  </a>
+                  <div class="button-place-bid">
+                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                      <FaShoppingBag color="black" />
+                      <span>Place Bid</span>
+                    </button>
+                  </div>
+                  {/* <div class="wishlist-button heart">
+                    <IoIosHeartEmpty size={18} />
+                    <span class="number-like">100</span>
+                  </div> */}
+                  <div class="coming-soon"></div>
+                </div>
+                <div class="card-title">
+                  <h5>
+                    <a>"Eternal Sunrise "</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -785,7 +1009,7 @@ export default function DashboardNew() {
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
                   <a>
-                    <img src={cyberprimal} alt="Axies" />
+                    <img src={img2} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
                     <button class="sc-button style-place-bid style bag fl-button pri-3">
@@ -793,10 +1017,10 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  <div class="wishlist-button heart">
+                  {/* <div class="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
                     <span class="number-like">100</span>
-                  </div>
+                  </div> */}
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
@@ -807,7 +1031,7 @@ export default function DashboardNew() {
                 <div class="meta-info">
                   <div class="author">
                     <div class="avatar">
-                      <img src={creativeArt} alt="Axies" />
+                      <img src={BlakeBanks} alt="Axies" />
                     </div>
                     <div class="info">
                       <span>Creator</span>
@@ -836,7 +1060,7 @@ export default function DashboardNew() {
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
                   <a>
-                    <img src={cryptoegg} alt="Axies" />
+                    <img src={animal} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
                     <button class="sc-button style-place-bid style bag fl-button pri-3">
@@ -844,10 +1068,10 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  <div class="wishlist-button heart">
+                  {/* <div class="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
                     <span class="number-like">100</span>
-                  </div>
+                  </div> */}
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
@@ -858,7 +1082,7 @@ export default function DashboardNew() {
                 <div class="meta-info">
                   <div class="author">
                     <div class="avatar">
-                      <img src={creativeArt} alt="Axies" />
+                      <img src={SamsonFrost} alt="Axies" />
                     </div>
                     <div class="info">
                       <span>Creator</span>
@@ -887,7 +1111,7 @@ export default function DashboardNew() {
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
                   <a>
-                    <img src={space} alt="Axies" />
+                    <img src={elephant} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
                     <button class="sc-button style-place-bid style bag fl-button pri-3">
@@ -895,10 +1119,10 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  <div class="wishlist-button heart">
+                  {/* <div class="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
                     <span class="number-like">100</span>
-                  </div>
+                  </div> */}
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
@@ -909,211 +1133,7 @@ export default function DashboardNew() {
                 <div class="meta-info">
                   <div class="author">
                     <div class="avatar">
-                      <img src={creativeArt} alt="Axies" />
-                    </div>
-                    <div class="info">
-                      <span>Creator</span>
-                      <h6>
-                        <a>SalvadorDali</a>
-                      </h6>
-                    </div>
-                  </div>
-                  <div class="tags">bsc</div>
-                </div>
-                <div
-                  class="card-bottom
-                        style-explode"
-                >
-                  <div class="price">
-                    <span>Current Bid</span>
-                    <div class="price-details">
-                      <h5>4.89 $</h5>
-                      <span>= $12.246</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
-                  <a>
-                    <img src={FlameDress} alt="Axies" />
-                  </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
-                      <FaShoppingBag color="black" />
-                      <span>Place Bid</span>
-                    </button>
-                  </div>
-                  <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div>
-                  <div class="coming-soon"></div>
-                </div>
-                <div class="card-title">
-                  <h5>
-                    <a>"The RenaiXance Rising the sun "</a>
-                  </h5>
-                </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
-                      <img src={creativeArt} alt="Axies" />
-                    </div>
-                    <div class="info">
-                      <span>Creator</span>
-                      <h6>
-                        <a>SalvadorDali</a>
-                      </h6>
-                    </div>
-                  </div>
-                  <div class="tags">bsc</div>
-                </div>
-                <div
-                  class="card-bottom
-                        style-explode"
-                >
-                  <div class="price">
-                    <span>Current Bid</span>
-                    <div class="price-details">
-                      <h5>4.89 $</h5>
-                      <span>= $12.246</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
-                  <a>
-                    <img src={LivingVase} alt="Axies" />
-                  </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
-                      <FaShoppingBag color="black" />
-                      <span>Place Bid</span>
-                    </button>
-                  </div>
-                  <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div>
-                  <div class="coming-soon"></div>
-                </div>
-                <div class="card-title">
-                  <h5>
-                    <a>"The RenaiXance Rising the sun "</a>
-                  </h5>
-                </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
-                      <img src={creativeArt} alt="Axies" />
-                    </div>
-                    <div class="info">
-                      <span>Creator</span>
-                      <h6>
-                        <a>SalvadorDali</a>
-                      </h6>
-                    </div>
-                  </div>
-                  <div class="tags">bsc</div>
-                </div>
-                <div
-                  class="card-bottom
-                        style-explode"
-                >
-                  <div class="price">
-                    <span>Current Bid</span>
-                    <div class="price-details">
-                      <h5>4.89 $</h5>
-                      <span>= $12.246</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
-                  <a>
-                    <img src={CyberDoberman} alt="Axies" />
-                  </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
-                      <FaShoppingBag color="black" />
-                      <span>Place Bid</span>
-                    </button>
-                  </div>
-                  <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div>
-                  <div class="coming-soon"></div>
-                </div>
-                <div class="card-title">
-                  <h5>
-                    <a>"The RenaiXance Rising the sun "</a>
-                  </h5>
-                </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
-                      <img src={creativeArt} alt="Axies" />
-                    </div>
-                    <div class="info">
-                      <span>Creator</span>
-                      <h6>
-                        <a>SalvadorDali</a>
-                      </h6>
-                    </div>
-                  </div>
-                  <div class="tags">bsc</div>
-                </div>
-                <div
-                  class="card-bottom
-                        style-explode"
-                >
-                  <div class="price">
-                    <span>Current Bid</span>
-                    <div class="price-details">
-                      <h5>4.89 $</h5>
-                      <span>= $12.246</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
-                  <a>
-                    <img src={hemlet} alt="Axies" />
-                  </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
-                      <FaShoppingBag color="black" />
-                      <span>Place Bid</span>
-                    </button>
-                  </div>
-                  <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div>
-                  <div class="coming-soon"></div>
-                </div>
-                <div class="card-title">
-                  <h5>
-                    <a>"The RenaiXance Rising the sun "</a>
-                  </h5>
-                </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
-                      <img src={creativeArt} alt="Axies" />
+                      <img src={HarperWilcher} alt="Axies" />
                     </div>
                     <div class="info">
                       <span>Creator</span>
