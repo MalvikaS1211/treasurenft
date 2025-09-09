@@ -1,31 +1,46 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 
-import { getROI, getStakingDetail } from "../Helper/API_Functions";
+import {
+  claimRoi,
+  getROI,
+  getROIDetails,
+  getStakingDetail,
+  stakeNft,
+} from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
 import moment from "moment";
+import toast from "react-hot-toast";
+import { step } from "viem/chains";
 export default function Staking() {
   const { address } = useAccount();
-  const [tabledata, setTableData] = useState([]);
+  const [stakeData, setstakeData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const itemPerpage = 15;
   const [totals, setTotals] = useState();
   const [roi, setROI] = useState();
+  const [isLoading, setIsLoading] = useState(false);
+  const [tabledata, setTableData] = useState([]);
 
   const handleGetDetals = async () => {
     const res = await getStakingDetail(address, currentPage, itemPerpage);
-    setTableData(res.data);
-    setTotals(res.stakingDetais);
-    setTotalPages(res?.pagination?.totalPages);
-    // console.log("getStakingDetail", res);
+    if (res.success) {
+      console.log(
+        res.data || { totalAmountStaked: 0 },
+        "res in getStakingDetail"
+      );
+      setstakeData(res.data || { totalAmountStaked: 0 });
+    }
   };
 
   const handleGetROI = async () => {
     try {
       const res = await getROI(address);
-      console.log("getROI", res);
-      setROI(res?.roi);
+      console.log("getROI", res.roi);
+      if (res.success) {
+        setROI(res?.roi);
+      }
     } catch (error) {
       console.log("error in getROI", error);
     }
@@ -45,8 +60,80 @@ export default function Staking() {
     if (address) {
       handleGetROI();
       handleGetDetals();
+      getRoiHistory();
     }
   }, [address, currentPage]);
+
+  const stake = async () => {
+    try {
+      setIsLoading(true);
+
+      if (!address) {
+        return toast.error("Please connect your wallet");
+      }
+      const isStake = await stakeNft(address);
+      if (isStake.success) {
+        setIsLoading(false);
+        handleGetDetals();
+        handleGetROI();
+        toast.success(isStake?.message);
+      } else {
+        setIsLoading(false);
+        toast.error(isStake?.message);
+      }
+
+      console.log(isStake);
+    } catch (error) {
+      console.log(error, "erron in stake");
+      setIsLoading(false);
+      toast.error(error.response.data.message);
+    }
+  };
+
+  const getRoiHistory = async () => {
+    try {
+      if (!address) {
+        setTableData([]);
+        return;
+      }
+      const res = await getROIDetails(address);
+      console.log(res);
+      if (res.success) {
+        setTableData(res?.data);
+        setTotals(res?.total);
+        setTotalPages(Math.ceil(res?.total / itemPerpage));
+      }
+    } catch (error) {
+      console.log(error);
+      setTableData([]);
+    }
+  };
+
+  const claimRoiF = async () => {
+    try {
+      setIsLoading(true);
+      if (!address) {
+        setIsLoading(false);
+        return toast.error("Please connect your wallet");
+      }
+      console.log("step 1");
+      const isClaim = await claimRoi(address);
+      console.log("step 2", isClaim);
+      if (isClaim.success) {
+        setIsLoading(false);
+        handleGetDetals();
+        handleGetROI();
+        toast.success(isClaim?.message);
+      } else {
+        setIsLoading(false);
+        toast.error(isClaim?.message);
+      }
+    } catch (error) {
+      console.log(error, "error in claimRoi");
+      toast.error(error.response.data.message);
+      setIsLoading(false);
+    }
+  };
 
   return (
     <>
@@ -60,7 +147,7 @@ export default function Staking() {
                 <h6>Total Amount</h6>
               </div>
               <p>
-                {((totals?.totalPaid ?? 0) / 1e18).toFixed(4)}
+                {Number(stakeData?.totalAmountStaked || 0).toFixed(4)}
 
                 <span> USDT</span>
               </p>
@@ -69,21 +156,48 @@ export default function Staking() {
               <div class="sub-total">
                 <h6>Total NFT</h6>
               </div>
-              <p> {totals?.totalHold ?? 0}</p>
+              <p> {stakeData?.totalNft ?? 0}</p>
             </div>
             <div class="total-card" style={{ border: "1px solid white" }}>
               <div class="sub-total">
                 <h6>ROI</h6>
               </div>
               <p>
-                {((roi ?? 0) / 1e18).toFixed(4)}
+                {(roi ?? 0).toFixed(4)}
                 <span> USDT</span>
               </p>
             </div>
-            {/* <div className="d-flex justify-content-center align-items-center ">
-              <button className="stake-btn  m-2">Claim ROI</button>
-            </div> */}
           </div>
+          <div className="d-flex mb-4">
+            {Number(stakeData.totalAmountStaked) <= 0 && (
+              <div
+                className=" col-lg-2 d-flex justify-content-center align-items-center "
+                style={{ padding: "0px" }}
+              >
+                <button
+                  className=" w-100 stake-btn  m-2"
+                  disabled={isLoading}
+                  onClick={stake}
+                >
+                  Stake NFT
+                </button>
+              </div>
+            )}
+
+            <div
+              className="  col-lg-2 d-flex justify-content-center align-items-center "
+              style={{ padding: "0px" }}
+            >
+              <button
+                className=" w-100 stake-btn  m-2"
+                onClick={claimRoiF}
+                disabled={isLoading}
+              >
+                Claim ROI
+              </button>
+            </div>
+          </div>
+
           <div>
             <div style={{ minHeight: "100vh" }}>
               <div className="rank-income">
@@ -92,10 +206,8 @@ export default function Staking() {
                     <tr>
                       <th>Sr.No</th>
 
-                      <th>Token Id</th>
-                      <th>Sales Count</th>
-                      <th>Buyer Paid</th>
-
+                      <th>Amount Claimed</th>
+                      <th>Status</th>
                       <th>Time</th>
                     </tr>
                   </thead>
@@ -105,14 +217,12 @@ export default function Staking() {
                         <tr key={index}>
                           <td>{(currentPage - 1) * itemPerpage + index + 1}</td>
 
-                          <td>{data?.tokenId}</td>
-                          <td>{data?.salesCount}</td>
-
-                          <td>{(data?.buyerPaid / 1e18).toFixed(4)}</td>
+                          <td>{data?.amount?.toFixed(2)}</td>
+                          <td>{data?.status}</td>
                           <td>
-                            {moment
-                              .unix(data?.time)
-                              .format("DD-MM-YYYY HH:mm:ss A")}
+                            {moment(data?.createdAt).format(
+                              "DD-MM-YYYY HH:mm:ss A"
+                            )}
                           </td>
                         </tr>
                       ))
@@ -148,7 +258,7 @@ export default function Staking() {
                     </button>
 
                     <span style={{ fontSize: "13px" }}>
-                      Page {currentPage} of {totalPages}
+                      {/* Page {currentPage} of {totalPages} */}
                     </span>
                   </div>
                 </div>

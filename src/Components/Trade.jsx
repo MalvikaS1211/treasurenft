@@ -193,6 +193,7 @@ export default function Trade() {
               owner: res[6],
               metadataURI: res[2],
               creator: res[3],
+              initialPrice: Number(res[7]),
             };
           } catch (err) {
             console.error(
@@ -208,7 +209,7 @@ export default function Trade() {
           }
         })
       );
-
+      // console.log(fetchedTrades)
       setAllTrade(fetchedTrades);
     } catch (error) {
       setApiLoading(false);
@@ -231,7 +232,7 @@ export default function Trade() {
 
       const userBalance = await fetchUserTokenBalance(address);
 
-      // console.log(userBalance, totalAmount, "::::");
+      console.log(userBalance, totalAmount, "::::");
       if (Number(userBalance) < Number(totalAmount) / 1e18) {
         setIsLoading(false);
         return toast.error(
@@ -249,16 +250,18 @@ export default function Trade() {
       }
       const res = await getReadyForBuyFn(
         address,
-        Number(initialPrice) / 1e18,
+        (Number(totalAmount) - Number(initialPrice)) / 1e18,
         title,
         description,
         metadataURI,
         tokenId,
-        Number(totalAmount) / 1e18
+        (Number(totalAmount) - Number(initialPrice)) / 1e18
       );
 
       if (res) {
-        const tokenApp = await tokenApp1(Number(totalAmount) / 1e18 + 0.1);
+        const tokenApp = await tokenApp1(
+          (Number(totalAmount) - Number(initialPrice)) / 1e18 + 0.1
+        );
         if (tokenApp) {
           const nft = buyNFTFn(
             tokenId,
@@ -344,57 +347,57 @@ export default function Trade() {
     }
   };
 
-  const handleGetAllTradeForUser = async () => {
-    try {
-      const tradeRes = await getAllTradeForUser(address);
-      if (!tradeRes.success || !tradeRes.newData?.length) return;
+  // const handleGetAllTradeForUser = async () => {
+  //   try {
+  //     const tradeRes = await getAllTradeForUser(address);
+  //     if (!tradeRes.success || !tradeRes.newData?.length) return;
 
-      const data = tradeRes.newData[0];
-      const nftRes = await getNfts(data.tokenId);
+  //     const data = tradeRes.newData[0];
+  //     const nftRes = await getNfts(data.tokenId);
 
-      const ipfsHash = nftRes[2].replace("ipfs://", "");
-      const gateways = [
-        "https://ipfs.io/ipfs/",
-        "https://gateway.pinata.cloud/ipfs/",
-        "https://cloudflare-ipfs.com/ipfs/",
-      ];
+  //     const ipfsHash = nftRes[2].replace("ipfs://", "");
+  //     const gateways = [
+  //       "https://ipfs.io/ipfs/",
+  //       "https://gateway.pinata.cloud/ipfs/",
+  //       "https://cloudflare-ipfs.com/ipfs/",
+  //     ];
 
-      console.log(data, "handleGetAllTradeForUser 1");
+  //     console.log(data, "handleGetAllTradeForUser 1");
 
-      let metadata, metadataUrl;
-      for (const gateway of gateways) {
-        try {
-          metadataUrl = `${gateway}${ipfsHash}`;
-          const response = await axios.get(metadataUrl, { timeout: 5000 });
-          metadata = response.data;
-          break; // Exit if successful
-        } catch (error) {
-          console.warn(`Failed to fetch from ${gateway}, trying next...`);
-        }
-      }
+  //     let metadata, metadataUrl;
+  //     for (const gateway of gateways) {
+  //       try {
+  //         metadataUrl = `${gateway}${ipfsHash}`;
+  //         const response = await axios.get(metadataUrl, { timeout: 5000 });
+  //         metadata = response.data;
+  //         break; // Exit if successful
+  //       } catch (error) {
+  //         console.warn(`Failed to fetch from ${gateway}, trying next...`);
+  //       }
+  //     }
 
-      if (!metadata) throw new Error("All IPFS gateways failed");
+  //     if (!metadata) throw new Error("All IPFS gateways failed");
 
-      const imageUrl = metadata.image
-        ? metadata.image.replace("ipfs://", "https://ipfs.io/ipfs/")
-        : "https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d456a2af571d980d8b2985472c262b31";
+  //     const imageUrl = metadata.image
+  //       ? metadata.image.replace("ipfs://", "https://ipfs.io/ipfs/")
+  //       : "https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d456a2af571d980d8b2985472c262b31";
 
-      const formattedData = {
-        ...data,
-        title: metadata.name || "",
-        description: metadata.description || "",
-        img: imageUrl,
-        price: nftRes[4],
-        owner: nftRes[6],
-        metadataURI: nftRes[2],
-        creator: nftRes[3],
-      };
-      console.log(formattedData, "handleGetAllTradeForUser 2");
-      setNewData(formattedData);
-    } catch (error) {
-      console.log("Error in handleGetAllTradeForUser:", error);
-    }
-  };
+  //     const formattedData = {
+  //       ...data,
+  //       title: metadata.name || "",
+  //       description: metadata.description || "",
+  //       img: imageUrl,
+  //       price: nftRes[4],
+  //       owner: nftRes[6],
+  //       metadataURI: nftRes[2],
+  //       creator: nftRes[3],
+  //     };
+  //     console.log(formattedData, "handleGetAllTradeForUser 2");
+  //     setNewData(formattedData);
+  //   } catch (error) {
+  //     console.log("Error in handleGetAllTradeForUser:", error);
+  //   }
+  // };
 
   useEffect(() => {
     if (address) {
@@ -403,7 +406,7 @@ export default function Trade() {
       totalAssets();
       getWalletFund();
       handlependingNft();
-      handleGetAllTradeForUser();
+      // handleGetAllTradeForUser();
     }
   }, [address, isfetch]);
   return (
@@ -579,8 +582,16 @@ export default function Trade() {
                                 <div
                                   class="button-place-bid"
                                   onClick={() => {
-                                    BuyNft(
+                                    console.log(
                                       nft.price,
+                                      nft.title,
+                                      nft.description,
+                                      nft.metadataURI,
+                                      nft.tokenId,
+                                      Number(nft.price)
+                                    );
+                                    BuyNft(
+                                      nft.initialPrice,
                                       nft.title,
                                       nft.description,
                                       nft.metadataURI,

@@ -2,17 +2,11 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const URLApi = "https://magicverse.org/api";
-export const SOCKET_SERVER_URL = "https://magicverse.org";
+// export const URLApi = "https://magicverse.org/api";
+// export const SOCKET_SERVER_URL = "https://magicverse.org";
 
-// export const URLApi = "https://magicverse-backend.onrender.com/api";
-// export const URLApi = "http://localhost:8081/api";
-// export const SOCKET_SERVER_URL = "http://localhost:8081";
-
-// export const URLApi = "http://192.168.1.226:8081/api";
-// export const SOCKET_SERVER_URL = "http://192.168.1.226:8081/api";
-
-// export const SOCKET_SERVER_URL = "https://magicverse-backend.onrender.com";
+export const URLApi = "http://143.110.253.184:8081/api";
+export const SOCKET_SERVER_URL = "http://143.110.253.184:8081/";
 
 export const pinataApiKey = "e45f06a4f288fd4c7ded";
 export const pinataSecretApiKey =
@@ -476,10 +470,8 @@ export async function updateNFTDetails(address, tokenId, txDetails) {
 
 export async function getStakingDetail(address, page, limit) {
   try {
-    const response = await axios.post(`${URLApi}/getStakingDetails`, {
-      user: address,
-      page,
-      limit,
+    const response = await axios.post(`${URLApi}/get-stake-history`, {
+      userAddress: address,
     });
 
     return response.data;
@@ -524,4 +516,25 @@ export async function getAllTradeForUser(address) {
   } catch (error) {
     console.log("Error getPendingMaturedNFT Admin:", error);
   }
+}
+
+export async function stakeNft(address) {
+  const response = await axios.post(URLApi + "/stake-nft", {
+    userAddress: address,
+  });
+  return response.data;
+}
+
+export async function claimRoi(address) {
+  const response = await axios.post(URLApi + "/claim-roi", {
+    userAddress: address,
+  });
+  return response.data;
+}
+
+export async function getROIDetails(address) {
+  const response = await axios.post(URLApi + "/get-roi-history", {
+    userAddress: address,
+  });
+  return response.data;
 }

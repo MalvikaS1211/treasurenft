@@ -34,6 +34,7 @@ export default function BulkNFT() {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [initialP, setInititalP] = useState();
   const [availablePkg, setAvailablePkg] = useState([]);
+  const [initialPrice, setInitialPrice] = useState(0);
 
   const [availableBalance, setAvailableBalance] = useState(0);
   const [isAllowed, setIsAllowed] = useState(false);
@@ -146,8 +147,6 @@ export default function BulkNFT() {
     setIsLoading(true);
     let loadingToastId;
     try {
-      // console.log("asdfsadfasd", selectedAmount);
-      // return;
       if (selectedIndex == null) {
         toast.error("Please select package before creating NFT.");
         setIsLoading(false);
@@ -167,11 +166,7 @@ export default function BulkNFT() {
 
       const userBalance = await fetchUserTokenBalance(address);
       const totalPrice = selectedAmount * 1.1;
-      // const totalPrice = nfts.reduce((sum, nft) => sum + Number(nft.price), 0);
-      // if (userBalance < totalPrice) {
-      //   setIsLoading(false);
-      //   return toast.error(`You need at least ${totalPrice} USDT to Buy`);
-      // }
+
       let metadataURIs = [];
       let titles = [];
       let descriptions = [];
@@ -189,12 +184,7 @@ export default function BulkNFT() {
         metadataURIs.push(metadataURI);
         titles.push(nft.title);
         descriptions.push(nft.description);
-        console.log(
-          Number(selectedAmount / (initialP == 15 ? 2 : 5)),
-          selectedAmount,
-          "ASFsadfsafdsadfnasifhas"
-        );
-        initialPrices.push(Number(selectedAmount / 5)); // to be changed
+        initialPrices.push(initialPrice); // to be changed
       }
 
       console.log("All metadata uploaded:", metadataURIs, nfts);
@@ -213,7 +203,7 @@ export default function BulkNFT() {
         titles,
         descriptions,
         metadataURIs,
-        selectedAmount * 1.1
+        selectedAmount + selectedAmount * 0.02
       );
 
       toast.dismiss(loadingToastId);
@@ -284,11 +274,12 @@ export default function BulkNFT() {
 
   const handleClick = (index, pkg) => {
     setSelectedIndex(index);
-    const amount = (Number(pkg.nftCreatedDetails.price) * 5) / 1e18;
+    const amount = (Number(pkg.nftCreatedDetails.price) * 0.6) / 1e18;
     const ip = Number(pkg.nftCreatedDetails.price) / 1e18;
     // setInititalP(ip);
 
     setAmount(amount);
+    setInitialPrice(Number(pkg.nftCreatedDetails.price) / 1e18);
     setTokenId(pkg.nftCreatedDetails.tokenId);
   };
 
@@ -324,15 +315,9 @@ export default function BulkNFT() {
 
                   const timeDifferenceInSeconds = currentTime - Time;
                   const hoursDifference = timeDifferenceInSeconds / 3600;
-                  // console.log(
-                  //   Time,
-                  //   currentTime,
-                  //   timeDifferenceInSeconds,
-                  //   hoursDifference,
-                  //   "123::"
-                  // );
+
                   return (
-                    hoursDifference >= 12 && (
+                    hoursDifference >= 0 && (
                       <div className="package-container" key={index}>
                         <button
                           type="button"
@@ -346,12 +331,11 @@ export default function BulkNFT() {
                           onClick={() => handleClick(index, pkg)}
                         >
                           $
-                          {/* {Number(pkg.nftCreatedDetails.price) ==
-                          "15000000000000000000"
-                            ? "110.00"
-                            : ( */}
                           {(
-                            (Number(pkg.nftCreatedDetails.price) * 5 * 1.1) /
+                            (Number(pkg.nftCreatedDetails.price) * 0.6 +
+                              Number(pkg.nftCreatedDetails.price) *
+                                0.6 *
+                                0.02) /
                             1e18
                           ).toFixed(2)}
                         </button>
@@ -369,16 +353,9 @@ export default function BulkNFT() {
             className="row mt-5"
           >
             {selectedAmount && (
-              // (initialP === 15 ? (
-              //   <p>
-              //     Note: You had selected{" "}
-              //     {Number(selectedAmount * 1.1)?.toFixed(0)} USDT package. You
-              //     can create 2 NFTs of {selectedAmount / 2} USDT.
-              //   </p>
-              // ) : (
               <p>
-                Note: You had selected {selectedAmount * 1.1} USDT package. You
-                can create 5 NFTs of {selectedAmount / 5} USDT.
+                Note: You had selected {selectedAmount} USDT package. You can
+                create 6 NFTs of {selectedAmount / 6} USDT.
               </p>
             )}
             {/* Note: You had selected {selectedAmount * 1.1} USDT package. You can
@@ -488,14 +465,11 @@ export default function BulkNFT() {
             )}
           </button>
           <FaPlus
-            onClick={nfts.length < 5 ? addNFTField : null}
+            onClick={nfts.length < 6 ? addNFTField : null}
             size={20}
             style={{
-              cursor:
-                nfts.length < (initialP === 15 ? 2 : 5)
-                  ? "pointer"
-                  : "not-allowed",
-              opacity: nfts.length < (initialP === 15 ? 2 : 5) ? 1 : 0.5,
+              cursor: nfts.length < 6 ? "pointer" : "not-allowed",
+              opacity: nfts.length < 6,
             }}
           />
         </div>

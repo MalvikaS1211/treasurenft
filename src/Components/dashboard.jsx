@@ -268,31 +268,25 @@ export default function Dashboard() {
   }, [address, isFetch]);
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(referralLink);
-      toast.success("Referral link copied!");
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(referralLink);
+        toast.success("Referral link copied!");
+      } else {
+        // Fallback for insecure contexts (HTTP)
+        const textArea = document.createElement("textarea");
+        textArea.value = referralLink;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+        toast.success("Referral link copied!");
+      }
     } catch (error) {
       console.error("Copy failed:", error);
       toast.error("Failed to copy the link.");
     }
   };
-  // console.log(
-  //   Number(allUsers?.userLastDealProfit ?? 0),
-  //   Number(allUsers?.tradingProfit?.[0]?.profitOrLoss ?? 0),
-  //   Number(dashboardData?.[8] ?? 0),
-  //   Number(dashboardData?.[9] ?? 0),
-  //   Number(dashboardData?.[10] ?? 0),
-  //   "nft::"
-  // );
 
-  // console.log(
-  //   (
-  //     Number(allUsers?.tradingProfit?.[0]?.profitOrLoss ?? 0) +
-  //     Number(allUsers?.userLastDealProfit ?? 0)
-  //   ).toFixed(4),
-  //   "1234 :: "
-  // );
-
-  // console.log(Math.max(-7197.766906894505).toFixed(4), ":::");
   return (
     <>
       <div className="p-4 ">

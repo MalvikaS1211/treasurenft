@@ -25,7 +25,7 @@ export default function Navbar({ title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(
     window.innerWidth > 500 ? true : false
   );
-  const [btnShow, setBtnShow] = useState();
+  const [btnShow, setBtnShow] = useState(true);
   const location = useLocation();
   const { address } = useAccount();
   const toggleSidebar = () => {
@@ -36,7 +36,7 @@ export default function Navbar({ title }) {
     try {
       const res = await getStakingDetail(address);
       // console.log(address, "address in navbar");
-      setBtnShow(res?.data);
+      // setBtnShow(res?.data);
     } catch (error) {}
   };
   useEffect(() => {
@@ -144,7 +144,7 @@ export default function Navbar({ title }) {
               <MdTrendingUp /> Trading Income
             </li>
           </Link>
-          {btnShow?.length > 0 && (
+          {btnShow && (
             <Link to="/staking">
               <li
                 className={

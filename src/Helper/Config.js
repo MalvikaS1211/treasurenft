@@ -1,5 +1,5 @@
-export const CONTRACT_ADDRESS = "0x34d415A3b06eE5a2311e5E71d3fDD5aa07FAeb53";
-// export const CONTRACT_ADDRESS = "0x447C987fC2F77D69D90951B385858FBaB5b582d5";
+// export const CONTRACT_ADDRESS = "0x34d415A3b06eE5a2311e5E71d3fDD5aa07FAeb53";// mainet
+export const CONTRACT_ADDRESS = "0xce70A86FCEB58E4Fb486D6A7BbcB9683407de938";
 
 export const CONTRACT_ADDRESS_ABI = [
   {
@@ -476,6 +476,31 @@ export const CONTRACT_ADDRESS_ABI = [
     anonymous: false,
     inputs: [
       {
+        indexed: false,
+        internalType: "address",
+        name: "user",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "timestamp",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+    ],
+    name: "payLeverage",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
         indexed: true,
         internalType: "address",
         name: "toUser",
@@ -645,6 +670,13 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
+    inputs: [{ internalType: "address", name: "", type: "address" }],
+    name: "isLevPaid",
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [{ internalType: "address", name: "_user", type: "address" }],
     name: "isUserExist",
     outputs: [{ internalType: "bool", name: "", type: "bool" }],
@@ -717,6 +749,13 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "payLev",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
     inputs: [{ internalType: "address", name: "referrer", type: "address" }],
     name: "register",
     outputs: [],
@@ -767,6 +806,17 @@ export const CONTRACT_ADDRESS_ABI = [
     inputs: [],
     name: "symbol",
     outputs: [{ internalType: "string", name: "", type: "string" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    name: "toPay",
+    outputs: [
+      { internalType: "address", name: "user", type: "address" },
+      { internalType: "uint256", name: "balance", type: "uint256" },
+      { internalType: "uint256", name: "distributeBalance", type: "uint256" },
+    ],
     stateMutability: "view",
     type: "function",
   },
@@ -850,7 +900,8 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
 ];
-export const USDT_TOKEN = "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3";
+// export const USDT_TOKEN = "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3";// maiinet
+export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05"; // testnet
 export const tokenAbi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {

@@ -74,6 +74,17 @@ export async function buyNFTFn(
   description,
   metadataURI
 ) {
+  console.log(
+    tokenId,
+    initialPrice,
+    v,
+    r,
+    s,
+    title,
+    description,
+    metadataURI,
+    "vrs "
+  );
   const result = await writeContract(config, {
     abi: CONTRACT_ADDRESS_ABI,
     address: CONTRACT_ADDRESS,
