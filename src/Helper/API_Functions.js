@@ -2,11 +2,11 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-// export const URLApi = "https://magicverse.org/api";
-// export const SOCKET_SERVER_URL = "https://magicverse.org";
+export const URLApi = "https://magicverse.org/api";
+export const SOCKET_SERVER_URL = "https://magicverse.org";
 
-export const URLApi = "http://143.110.253.184:8081/api";
-export const SOCKET_SERVER_URL = "http://143.110.253.184:8081/";
+// export const URLApi = "http://127.0.0.1:8081/api";
+// export const SOCKET_SERVER_URL = "http://127.0.0.1:8081/";
 
 export const pinataApiKey = "e45f06a4f288fd4c7ded";
 export const pinataSecretApiKey =
@@ -94,7 +94,7 @@ export async function getTradeUserFn(address) {
     const response = await axios.post(`${URLApi}/get-all-trades-for-user`, {
       userAddress: address,
     });
-    console.log(response, "response in getTradeUserFn");
+    // console.log(response, "response in getTradeUserFn");
     return response.data;
   } catch (error) {
     const errorMessage =
@@ -534,6 +534,13 @@ export async function claimRoi(address) {
 
 export async function getROIDetails(address) {
   const response = await axios.post(URLApi + "/get-roi-history", {
+    userAddress: address,
+  });
+  return response.data;
+}
+
+export async function isFirstTrade(address) {
+  const response = await axios.post(URLApi + "/is-first-trade", {
     userAddress: address,
   });
   return response.data;

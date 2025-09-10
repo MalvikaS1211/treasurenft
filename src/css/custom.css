@@ -995,3 +995,104 @@ button {
     opacity: 1;
   }
 }
+
+.new-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.184);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.new-modal {
+  background: #a2c2d5;
+  border-radius: 16px;
+  width: 400px;
+  max-width: 90%;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+.new-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.new-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.new-modal-body {
+  margin: 15px 0;
+  color: #555;
+}
+
+.new-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Buttons */
+.new-btn {
+  background: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.new-btn:hover {
+  background: #0056b3;
+}
+
+.new-btn-outline {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.new-btn-outline:hover {
+  background: #e0e0e0;
+}
+
+.new-btn-primary {
+  background: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+.new-btn-primary:hover {
+  background: #218838;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

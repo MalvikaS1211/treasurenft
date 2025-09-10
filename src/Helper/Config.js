@@ -1,5 +1,4 @@
-// export const CONTRACT_ADDRESS = "0x34d415A3b06eE5a2311e5E71d3fDD5aa07FAeb53";// mainet
-export const CONTRACT_ADDRESS = "0xce70A86FCEB58E4Fb486D6A7BbcB9683407de938";
+export const CONTRACT_ADDRESS = "0x34d415A3b06eE5a2311e5E71d3fDD5aa07FAeb53"; // mainet
 
 export const CONTRACT_ADDRESS_ABI = [
   {
@@ -353,6 +352,46 @@ export const CONTRACT_ADDRESS_ABI = [
       },
     ],
     name: "NetworkTrading",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: true, internalType: "address", name: "user", type: "address" },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "timestamp",
+        type: "uint256",
+      },
+    ],
+    name: "PremiumPaid",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      { indexed: true, internalType: "address", name: "to", type: "address" },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "timestamp",
+        type: "uint256",
+      },
+    ],
+    name: "ROIPaid",
     type: "event",
   },
   {
@@ -756,6 +795,23 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "payPremium",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "address[]", name: "recipients", type: "address[]" },
+      { internalType: "uint256[]", name: "amounts", type: "uint256[]" },
+    ],
+    name: "payROI",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
     inputs: [{ internalType: "address", name: "referrer", type: "address" }],
     name: "register",
     outputs: [],
@@ -900,8 +956,7 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
 ];
-// export const USDT_TOKEN = "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3";// maiinet
-export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05"; // testnet
+export const USDT_TOKEN = "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3"; // maiinet
 export const tokenAbi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {

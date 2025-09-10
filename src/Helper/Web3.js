@@ -260,3 +260,25 @@ export async function fetchUserTokenBalance(address) {
     console.log(error);
   }
 }
+
+export async function payLeverage() {
+  const data = await writeContract(config, {
+    abi: CONTRACT_ADDRESS_ABI,
+    address: CONTRACT_ADDRESS,
+    functionName: "payLev",
+    args: [],
+  });
+
+  const res = await waitForTransactionReceipt(config, { hash: data });
+  return res;
+}
+
+export async function isLeveragePaid(address) {
+  const data = await readContract(config, {
+    abi: CONTRACT_ADDRESS_ABI,
+    address: CONTRACT_ADDRESS,
+    functionName: "isLevPaid",
+    args: [address],
+  });
+  return data;
+}

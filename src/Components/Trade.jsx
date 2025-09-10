@@ -12,6 +12,7 @@ import {
   getTradeUserFn,
   getUserCreatedNftsFn,
   getUserInfo,
+  isFirstTrade,
   SOCKET_SERVER_URL,
 } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
@@ -20,6 +21,8 @@ import {
   buyNFTFn,
   fetchUserTokenBalance,
   getNfts,
+  isLeveragePaid,
+  payLeverage,
 } from "../Helper/Web3";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -37,6 +40,9 @@ export default function Trade() {
   const [assetValue, setAssetValue] = useState(0);
   const [pendingNft, setPendingNFT] = useState(0);
   const [newData, setNewData] = useState([]);
+  const [isNew, setIsNew] = useState();
+  const [open, setOpen] = useState(true);
+
   const tokenApp1 = async (amt) => {
     try {
       const appres = await toast.promise(approveToken(amt), {
@@ -347,6 +353,25 @@ export default function Trade() {
     }
   };
 
+  const isNewUser = async () => {
+    try {
+      if (!address) {
+        return;
+      }
+      const resp = await isFirstTrade(address.toLowerCase());
+      if (resp.success && resp?.isNew) {
+        const isLevPaid = await isLeveragePaid(address);
+        const isNew = isLevPaid;
+        setIsNew(!isLevPaid);
+      }
+
+      console.log(resp.isNew, resp.success, "resp in is");
+    } catch (error) {
+      console.log(error, "Errorn in isNewUser");
+      // setIsNew(true);
+    }
+  };
+
   // const handleGetAllTradeForUser = async () => {
   //   try {
   //     const tradeRes = await getAllTradeForUser(address);
@@ -399,6 +424,33 @@ export default function Trade() {
   //   }
   // };
 
+  const payFees = async () => {
+    try {
+      if (!address) {
+        return toast.error("Please connect your wallet to pay Lev");
+      }
+      const isApprove = await tokenApp1(50);
+      if (!isApprove) {
+        return;
+      }
+      const resp = payLeverage();
+      await toast.promise(resp, {
+        loading: "Transaction in process",
+        success: "Transaction done Successfully",
+        error: "Transaction failed",
+      });
+
+      setTimeout(async () => {
+        const isLevPaid = await isLeveragePaid(address);
+        if (isLevPaid) {
+          setIsNew(false);
+        }
+      }, 4000);
+    } catch (error) {
+      console.log(error, "error in payFees");
+    }
+  };
+
   useEffect(() => {
     if (address) {
       UserInfo();
@@ -406,9 +458,11 @@ export default function Trade() {
       totalAssets();
       getWalletFund();
       handlependingNft();
+      isNewUser();
       // handleGetAllTradeForUser();
     }
   }, [address, isfetch]);
+
   return (
     <>
       <HeaderNew />
@@ -756,6 +810,49 @@ export default function Trade() {
               Please wait We are loading data
             </p>
           </>
+        )}
+      </div>
+      <div>
+        {isNew && (
+          <div className="new-modal-overlay" onClick={() => setOpen(false)}>
+            <div
+              className="new-modal"
+              onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+            >
+              <div className="new-modal-header mb-3">
+                <h2 className="new-modal-title" style={{ fontSize: "20px" }}>
+                  Payment Required
+                </h2>
+              </div>
+              <div style={{ color: "black", fontSize: "14px" }}>
+                Pay 50 USDT leverage fee and get 80%–90% Leverage on NFT Trading
+                & Creation. ⚡ Trade more, create more, earn more!
+              </div>
+
+              <div
+                className="new-modal-body"
+                style={{ color: "black", fontSize: "14px" }}
+              >
+                Please confirm your payment to continue.
+              </div>
+
+              <div className="new-modal-footer">
+                <button
+                  className=""
+                  onClick={payFees}
+                  style={{
+                    padding: "0px",
+                    height: "30px",
+                    width: "90px",
+                    borderRadius: "10px",
+                    textAlign: "center",
+                  }}
+                >
+                  Proceed
+                </button>
+              </div>
+            </div>
+          </div>
         )}
       </div>
       <div className="mt-4">
