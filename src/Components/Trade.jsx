@@ -238,11 +238,13 @@ export default function Trade() {
 
       const userBalance = await fetchUserTokenBalance(address);
 
-      console.log(userBalance, totalAmount, "::::");
-      if (Number(userBalance) < Number(totalAmount) / 1e18) {
+      console.log(userBalance, totalAmount, initialPrice, "::::");
+      let amtToCheck = totalAmount - initialPrice;
+      console.log(amtToCheck / 1e18, "amt to cjeck");
+      if (Number(userBalance) < Number(amtToCheck) / 1e18) {
         setIsLoading(false);
         return toast.error(
-          `You need at least ${(Number(totalAmount) / 1e18).toFixed(
+          `You need at least ${(Number(amtToCheck) / 1e18).toFixed(
             4
           )} USDT to Buy`
         );
@@ -535,7 +537,7 @@ export default function Trade() {
 
         <div className="p-4">
           <div class="total-grid" style={{ marginBottom: "3%" }}>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
+            {/* <div class="total-card" style={{ background: "#c2e8ff" }}>
               <div class="sub-total">
                 <h6>Bonus Limit</h6>
               </div>
@@ -545,7 +547,7 @@ export default function Trade() {
                   : 0}
                 <span> USDT</span>
               </p>
-            </div>
+            </div> */}
             <div class="total-card" style={{ background: "#c2e8ff" }}>
               <div class="sub-total">
                 <h6>Max Limit </h6>

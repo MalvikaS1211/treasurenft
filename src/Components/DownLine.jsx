@@ -27,7 +27,9 @@ export default function DownLine() {
     } else toast.error("Please connect your wallet");
   }, [address, selectedLevel]);
 
-  const Level = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+  const Level = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  ];
 
   // Filter data based on selected level
   const filteredData = selectedLevel

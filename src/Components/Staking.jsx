@@ -197,6 +197,12 @@ export default function Staking() {
               </button>
             </div>
           </div>
+          {stakeData?.stakingAmount > 0 && (
+            <p className="text-dark">
+              Note : Your request of {stakeData.stakingAmount?.toFixed(4)} USDT
+              is {stakeData.status} . Please wait for the approval.
+            </p>
+          )}
 
           <div>
             <div style={{ minHeight: "100vh" }}>
