@@ -94,7 +94,7 @@ export default function Registration() {
       }
       const appRes = await tokenApp(65);
       if (appRes) {
-        const reg = await registerfn(ref, 65);
+        const reg = await registerfn(ref, 15);
         if (reg) {
           toast.success("You are navigating to the website!");
           setTimeout(() => {

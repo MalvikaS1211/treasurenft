@@ -282,3 +282,13 @@ export async function isLeveragePaid(address) {
   });
   return data;
 }
+
+export async function getPackagePrice(pkg) {
+  const data = await readContract(config, {
+    abi: CONTRACT_ADDRESS_ABI,
+    address: CONTRACT_ADDRESS,
+    functionName: "packagePrice",
+    args: [pkg],
+  });
+  return Number(data);
+}

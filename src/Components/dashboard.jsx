@@ -11,12 +11,17 @@ import { FaCrown } from "react-icons/fa6";
 import { TfiCup } from "react-icons/tfi";
 import { PiFlowerTulipDuotone } from "react-icons/pi";
 import { useAccount } from "wagmi";
-import { getIdToAddress, getUserInfo } from "../Helper/API_Functions";
+import {
+  getIdToAddress,
+  getUserInfo,
+  getUserStats,
+} from "../Helper/API_Functions";
 import { useBalance } from "wagmi";
 import { fetchBalance } from "@wagmi/core";
 import {
   approveToken,
   getAvailaibleBalance,
+  getPackagePrice,
   upgradePackageFn,
   usersFn,
 } from "../Helper/Web3";
@@ -28,13 +33,14 @@ import { base_url, USDT_TOKEN } from "../Helper/Config";
 import moment from "moment";
 export default function Dashboard() {
   const { address } = useAccount();
-  // const address = "0x3deCa2f62B20D6360e0948286D659dE2e19782Be";
   const [dashboardData, setDashboardData] = useState([]);
   const [allUsers, setAllUsers] = useState(null);
   const [isFetch, setIsFetch] = useState(false);
   const [availableBal, setAvailableBal] = useState(0);
   const [timeLeft, setTimeLeft] = useState(null);
   const [balanceData, setBalanceData] = useState(0);
+  const [latestPackage, setLatestPackage] = useState(0);
+  const [userProfitData, setUserProfitData] = useState();
 
   const data = new URLSearchParams(window.location.search);
   const refLink = data.get("ref");
@@ -157,7 +163,15 @@ export default function Dashboard() {
     try {
       const res = await getUserInfo(address);
       setAllUsers(res);
-      console.log(res, "res:::UserInfo");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const UserProfits = async () => {
+    try {
+      const res = await getUserStats(address);
+      setUserProfitData(res);
     } catch (error) {
       console.log(error);
     }
@@ -167,6 +181,14 @@ export default function Dashboard() {
     try {
       const resUser = await usersFn(address);
       setDashboardData(resUser);
+      getPackagePrice(resUser[6])
+        .then((res) => {
+          console.log(res, "in 123");
+          setLatestPackage(res);
+        })
+        .catch((e) => {
+          console.log(e);
+        });
     } catch (error) {
       console.log(error);
     }
@@ -192,10 +214,10 @@ export default function Dashboard() {
       if (!address) {
         return toast.error("Please connect your wallet");
       }
-      console.log(timeLeft, "appRes", timeLeft == "Expired" ? 1 : 0);
+      // console.log(timeLeft, "appRes", timeLeft == "Expired" ? 1 : 0);
       const appRes = await tokenApp(pkg.subscription);
-      console.log("pkg.subscription", pkg.subscription);
-      console.log("appRes", appRes, timeLeft);
+      // console.log("pkg.subscription", pkg.subscription);
+      // console.log("appRes", appRes, timeLeft);
       if (appRes) {
         await upgradePackageFn(timeLeft == "Expired" ? 1 : 0);
         setTimeout(() => {
@@ -263,7 +285,8 @@ export default function Dashboard() {
       getUserInFoFromContract();
       UserInfo();
       fetchUserTokenBalance();
-      getIdFromUser();
+      UserProfits();
+      // getIdFromUser();
     }
   }, [address, isFetch]);
   const copyToClipboard = async () => {
@@ -320,16 +343,16 @@ export default function Dashboard() {
                   <p className="">{balanceData}</p>
                   <h6>My Total Income</h6>
                   <p className=" p-2">
-                    {Math.max(
-                      Number(allUsers?.userLastDealProfit || 0) +
-                        (allUsers?.tradingProfit?.length > 0
-                          ? Number(allUsers.tradingProfit[0]?.profitOrLoss || 0)
-                          : 0) +
-                        (Number(dashboardData?.[8] || 0) +
-                          Number(dashboardData?.[9] || 0) +
-                          Number(dashboardData?.[10] || 0)) /
-                          1e18,
-                      0
+                    {(
+                      (userProfitData?.tradingProfit?.length > 0
+                        ? Number(
+                            userProfitData.tradingProfit[0]?.profitOrLoss || 0
+                          )
+                        : 0) +
+                      (Number(dashboardData?.[8] || 0) +
+                        Number(dashboardData?.[9] || 0) +
+                        Number(dashboardData?.[10] || 0)) /
+                        1e18
                     ).toFixed(4)}
                   </p>
                 </div>
@@ -342,6 +365,24 @@ export default function Dashboard() {
                   <p>{allUsers?.referrerInfo?.uniqueRandomId || 0}</p>
                 </div>
               </div>
+
+              {timeLeft == "Expired" && (
+                <>
+                  <div className="text-dark mb-3" style={{ fontSize: "20px" }}>
+                    Note: Your Previous package is Expired of {latestPackage}{" "}
+                    USDT Please Renew OR Upgrade your Package.
+                  </div>
+                  <div
+                    className="renew-btn mb-5"
+                    onClick={() => {
+                      handlePackage({ subscription: latestPackage });
+                    }}
+                  >
+                    Renew
+                  </div>
+                </>
+              )}
+
               <section class="dashboard">
                 <h3 className="dashboard-heading">Packages</h3>
                 <div class="package-grid">
@@ -390,11 +431,9 @@ export default function Dashboard() {
                       <h6>Trade Income</h6>
                     </div>
                     <p>
-                      {allUsers?.tradingProfit?.length > 0
-                        ? Math.max(
-                            Number(allUsers.tradingProfit[0]?.profitOrLoss) +
-                              Number(allUsers?.userLastDealProfit),
-                            0
+                      {userProfitData?.tradingProfit?.length > 0
+                        ? Number(
+                            userProfitData.tradingProfit[0]?.profitOrLoss
                           ).toFixed(4)
                         : "0"}
 

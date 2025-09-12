@@ -2,11 +2,11 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const URLApi = "https://magicverse.org/api";
-export const SOCKET_SERVER_URL = "https://magicverse.org";
+// export const URLApi = "https://magicverse.org/api";
+// export const SOCKET_SERVER_URL = "https://magicverse.org";
 
-// export const URLApi = "http://127.0.0.1:8081/api";
-// export const SOCKET_SERVER_URL = "http://127.0.0.1:8081/";
+export const URLApi = "http://127.0.0.1:8081/api";
+export const SOCKET_SERVER_URL = "http://127.0.0.1:8081/";
 
 export const pinataApiKey = "e45f06a4f288fd4c7ded";
 export const pinataSecretApiKey =
@@ -23,6 +23,31 @@ export async function getUserInfo(address) {
     console.log("Error getUserInfo Admin:", error);
   }
 }
+
+export async function getUserStats(address) {
+  try {
+    const response = await axios.post(`${URLApi}/get-user-stat`, {
+      userAddress: address,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getUserInfo Admin:", error);
+  }
+}
+
+export async function getUserLimits(address) {
+  try {
+    const response = await axios.post(`${URLApi}/get-user-Limits`, {
+      userAddress: address,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getUserInfo Admin:", error);
+  }
+}
+
 export async function createNftVrsFn(
   address,
   initialPrice,

@@ -12,6 +12,8 @@ import {
   getTradeUserFn,
   getUserCreatedNftsFn,
   getUserInfo,
+  getUserLimits,
+  getUserStats,
   isFirstTrade,
   SOCKET_SERVER_URL,
 } from "../Helper/API_Functions";
@@ -309,30 +311,26 @@ export default function Trade() {
       setIsLoading(false);
     }
   };
+
   const UserInfo = async () => {
     try {
-      const res = await getUserInfo(address);
+      const res = await getUserLimits(address);
       setAllUsers(res.userLimits);
-      // console.log("UserInfo in SingleNFT", res.userLimits);
     } catch (error) {
       console.log(error);
     }
   };
+
   const totalAssets = async () => {
     try {
       const res = await getOwnedNFTs(address);
       const ownedNFTs = res.usercurrOwnedNfts || [];
-
       const filteredNFTs = ownedNFTs.filter((item) => item?.newPrice);
-
       const totalNftPrice = filteredNFTs.reduce(
         (acc, item) => acc + BigInt(item.newPrice),
         BigInt(0)
       );
-
       const totalAssetValue = Number(totalNftPrice) / 1e18;
-
-      // console.log(totalAssetValue, "Total Asset Value");
       setAssetValue(totalAssetValue);
     } catch (error) {
       console.error("Error calculating total assets:", error);
@@ -341,14 +339,12 @@ export default function Trade() {
 
   const getWalletFund = async () => {
     const res = await fetchUserTokenBalance(address);
-    // console.log(res, "getWalletFund");
     getBalance(res);
   };
 
   const handlependingNft = async () => {
     try {
       const res = await getPendingMaturedNFT(address);
-      // console.log(res?.totalCount, "handlependingNft");
       setPendingNFT(res?.totalCount);
     } catch (error) {
       console.log(error, "eror in handlependingNft");
@@ -373,58 +369,6 @@ export default function Trade() {
       // setIsNew(true);
     }
   };
-
-  // const handleGetAllTradeForUser = async () => {
-  //   try {
-  //     const tradeRes = await getAllTradeForUser(address);
-  //     if (!tradeRes.success || !tradeRes.newData?.length) return;
-
-  //     const data = tradeRes.newData[0];
-  //     const nftRes = await getNfts(data.tokenId);
-
-  //     const ipfsHash = nftRes[2].replace("ipfs://", "");
-  //     const gateways = [
-  //       "https://ipfs.io/ipfs/",
-  //       "https://gateway.pinata.cloud/ipfs/",
-  //       "https://cloudflare-ipfs.com/ipfs/",
-  //     ];
-
-  //     console.log(data, "handleGetAllTradeForUser 1");
-
-  //     let metadata, metadataUrl;
-  //     for (const gateway of gateways) {
-  //       try {
-  //         metadataUrl = `${gateway}${ipfsHash}`;
-  //         const response = await axios.get(metadataUrl, { timeout: 5000 });
-  //         metadata = response.data;
-  //         break; // Exit if successful
-  //       } catch (error) {
-  //         console.warn(`Failed to fetch from ${gateway}, trying next...`);
-  //       }
-  //     }
-
-  //     if (!metadata) throw new Error("All IPFS gateways failed");
-
-  //     const imageUrl = metadata.image
-  //       ? metadata.image.replace("ipfs://", "https://ipfs.io/ipfs/")
-  //       : "https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d456a2af571d980d8b2985472c262b31";
-
-  //     const formattedData = {
-  //       ...data,
-  //       title: metadata.name || "",
-  //       description: metadata.description || "",
-  //       img: imageUrl,
-  //       price: nftRes[4],
-  //       owner: nftRes[6],
-  //       metadataURI: nftRes[2],
-  //       creator: nftRes[3],
-  //     };
-  //     console.log(formattedData, "handleGetAllTradeForUser 2");
-  //     setNewData(formattedData);
-  //   } catch (error) {
-  //     console.log("Error in handleGetAllTradeForUser:", error);
-  //   }
-  // };
 
   const payFees = async () => {
     try {
@@ -537,17 +481,6 @@ export default function Trade() {
 
         <div className="p-4">
           <div class="total-grid" style={{ marginBottom: "3%" }}>
-            {/* <div class="total-card" style={{ background: "#c2e8ff" }}>
-              <div class="sub-total">
-                <h6>Bonus Limit</h6>
-              </div>
-              <p>
-                {allUsers?.status == true
-                  ? ((Number(allUsers?.userUpperLimit) || 0) / 1e18).toFixed(4)
-                  : 0}
-                <span> USDT</span>
-              </p>
-            </div> */}
             <div class="total-card" style={{ background: "#c2e8ff" }}>
               <div class="sub-total">
                 <h6>Max Limit </h6>
