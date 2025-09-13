@@ -141,7 +141,7 @@ export default function Trade() {
         error?.message ||
         "Something went wrong. Please try again.";
       console.log("Error in Buy:", error);
-      toast.error(message);
+      // toast.error(message);
       return true;
     }
   };
@@ -488,8 +488,8 @@ export default function Trade() {
               <p>
                 {allUsers?.status == true
                   ? (
-                      (Number(allUsers?.userUpperLimit) * 90 || 0) / 1e18
-                    ).toFixed(4)
+                    (Number(allUsers?.userUpperLimit) * 90 || 0) / 1e18
+                  ).toFixed(4)
                   : 0}
                 <span> USDT</span>
               </p>
@@ -501,8 +501,8 @@ export default function Trade() {
               <p>
                 {allUsers?.status == true
                   ? (
-                      (Number(allUsers?.userRemainingLimit) || 0) / 1e18
-                    ).toFixed(4)
+                    (Number(allUsers?.userRemainingLimit) || 0) / 1e18
+                  ).toFixed(4)
                   : 0}
                 <span> USDT</span>
               </p>
@@ -514,8 +514,8 @@ export default function Trade() {
               <p>
                 {allUsers?.status == true
                   ? (
-                      (Number(allUsers?.userTodayUtilisedLimit) || 0) / 1e18
-                    ).toFixed(4)
+                    (Number(allUsers?.userTodayUtilisedLimit) || 0) / 1e18
+                  ).toFixed(4)
                   : 0}
                 <span> USDT</span>
               </p>
@@ -558,9 +558,9 @@ export default function Trade() {
                                   src={
                                     nft.img.startsWith("ipfs://")
                                       ? nft.img.replace(
-                                          "ipfs://",
-                                          "https://ipfs.io/ipfs/"
-                                        )
+                                        "ipfs://",
+                                        "https://ipfs.io/ipfs/"
+                                      )
                                       : nft.img
                                   }
                                   alt="NFT"
@@ -663,9 +663,9 @@ export default function Trade() {
                             src={
                               newData?.img?.startsWith("ipfs://")
                                 ? newData?.img?.replace(
-                                    "ipfs://",
-                                    "https://ipfs.io/ipfs/"
-                                  )
+                                  "ipfs://",
+                                  "https://ipfs.io/ipfs/"
+                                )
                                 : newData.img
                             }
                             alt="newData"
@@ -748,7 +748,7 @@ export default function Trade() {
         )}
       </div>
       <div>
-        {isNew && (
+        {true && (
           <div className="new-modal-overlay" onClick={() => setOpen(false)}>
             <div
               className="new-modal"
@@ -756,25 +756,28 @@ export default function Trade() {
             >
               <div className="new-modal-header mb-3">
                 <h2 className="new-modal-title" style={{ fontSize: "20px" }}>
-                  Payment Required
+                  Notice:
                 </h2>
               </div>
               <div style={{ color: "black", fontSize: "14px" }}>
-                Pay 50 USDT leverage fee and get 80%–90% Leverage on NFT Trading
-                & Creation. ⚡ Trade more, create more, earn more!
+                {/* Pay 50 USDT leverage fee and get 80%–90% Leverage on NFT Trading
+                & Creation. ⚡ Trade more, create more, earn more! */}
+                Binance Server is Down !  Working on their gas fees management.
+                It will be Restored by tomorrow 3:00 pm.
+                Team MagicVerse
               </div>
 
-              <div
+              {/* <div
                 className="new-modal-body"
                 style={{ color: "black", fontSize: "14px" }}
               >
                 Please confirm your payment to continue.
-              </div>
+              </div> */}
 
               <div className="new-modal-footer">
                 <button
                   className=""
-                  onClick={payFees}
+                  // onClick={payFees}
                   style={{
                     padding: "0px",
                     height: "30px",
@@ -782,8 +785,9 @@ export default function Trade() {
                     borderRadius: "10px",
                     textAlign: "center",
                   }}
-                >
-                  Proceed
+
+                  onClick={() => { window.open("/dashboard","_self") }}                >
+                  Dashboard
                 </button>
               </div>
             </div>
