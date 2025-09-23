@@ -20,6 +20,7 @@ import {
 import toast from "react-hot-toast";
 import { useAccount } from "wagmi";
 import moment from "moment";
+import { MVT_TOKEN } from "../Helper/Config";
 export default function BulkNFT() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -33,7 +34,7 @@ export default function BulkNFT() {
   const [isFetch, setIsFetch] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [initialP, setInititalP] = useState();
-  const [availablePkg, setAvailablePkg] = useState([]);
+  const [availablePkg, setAvailablePkg] = useState();
   const [initialPrice, setInitialPrice] = useState(0);
 
   const [availableBalance, setAvailableBalance] = useState(0);
@@ -68,9 +69,9 @@ export default function BulkNFT() {
     6750, 7500,
   ];
 
-  const tokenApp = async (amt) => {
+  const tokenApp = async (amt, token) => {
     try {
-      const appres = approveToken(amt);
+      const appres = approveToken(amt, token);
       await toast.promise(appres, {
         loading: "Approval in process",
         success: "Successfully Approved",
@@ -121,7 +122,7 @@ export default function BulkNFT() {
       image: imageHash,
     };
 
-    console.log(metadata, "Metadata for:", nft.title);
+    // console.log(metadata, "Metadata for:", nft.title);
 
     const blob = new Blob([JSON.stringify(metadata)], {
       type: "application/json",
@@ -145,6 +146,7 @@ export default function BulkNFT() {
 
   const nftCreate = async () => {
     setIsLoading(true);
+    console.log("in here");
     let loadingToastId;
     try {
       if (selectedIndex == null) {
@@ -152,13 +154,15 @@ export default function BulkNFT() {
         setIsLoading(false);
         return;
       }
-      console.log("1");
+      // console.log("1");
       loadingToastId = toast.loading("Please wait transaction is in process");
       if (isLoading) {
         return toast.error("Your previous transaction is pending");
+        toast.dismiss(loadingToastId);
       }
       if (nfts.some((nft) => !nft.title || !nft.description || !nft.file)) {
         setIsLoading(false);
+        toast.dismiss(loadingToastId);
         return toast.error(
           "Please fill all fields and select a file for each NFT!"
         );
@@ -173,44 +177,27 @@ export default function BulkNFT() {
       let initialPrices = [];
       for (const nft of nfts) {
         const imageHash = await uploadToIPFS(nft.file);
-        console.log(`Uploaded image: ${imageHash}`);
         const metadataURI = await uploadMetadataToIPFS(imageHash, nft);
-        console.log(
-          `Uploaded metadata: ${metadataURI}`,
-          nft["title"],
-          nft.title,
-          nft
-        );
         metadataURIs.push(metadataURI);
         titles.push(nft.title);
         descriptions.push(nft.description);
         initialPrices.push(initialPrice); // to be changed
       }
 
-      console.log("All metadata uploaded:", metadataURIs, nfts);
-
-      console.log(
-        "check all the array",
-        metadataURIs,
-        titles,
-        descriptions,
-        initialPrices
-      );
-      // const totalAmount = Number(initialPrices) + 0.2 * Number(initialPrices);
       const res = await getCreateBulkNFT(
         address,
         initialPrices,
         titles,
         descriptions,
         metadataURIs,
-        selectedAmount + selectedAmount * 0.02
+        selectedAmount
       );
 
       toast.dismiss(loadingToastId);
       console.log("BulkNFTVrs", res, tokenId);
       setIsLoading(false);
       // return;
-      const tokenRes = await tokenApp(res.vrs.totalAmount);
+      const tokenRes = await tokenApp(res.vrs.totalAmount, MVT_TOKEN);
       console.log(res.vrs.totalAmount, "total amount");
       if (tokenRes) {
         const res1 = createNFTsBulkFn(
@@ -274,7 +261,8 @@ export default function BulkNFT() {
 
   const handleClick = (index, pkg) => {
     setSelectedIndex(index);
-    const amount = (Number(pkg.nftCreatedDetails.price) * 0.6) / 1e18;
+    const amount =
+      ((Number(pkg.nftCreatedDetails.price) / 1e18) * 6 * 120) / 100;
     const ip = Number(pkg.nftCreatedDetails.price) / 1e18;
     // setInititalP(ip);
 
@@ -305,10 +293,10 @@ export default function BulkNFT() {
               className="title-create-item mt-4 col-lg-12"
               style={{ textAlign: "left" }}
             >
-              Available Packages
+              Availaible Packages
             </h4>
             <div className="d-flex flex-wrap justify-content-start gap-3">
-              {availablePkg &&
+              {availablePkg ? (
                 availablePkg?.map((pkg, index) => {
                   const Time = pkg?.time; // From API (in seconds)
                   const currentTime = moment().unix(); // Current time in seconds
@@ -331,18 +319,26 @@ export default function BulkNFT() {
                           onClick={() => handleClick(index, pkg)}
                         >
                           $
-                          {(
-                            (Number(pkg.nftCreatedDetails.price) * 0.6 +
-                              Number(pkg.nftCreatedDetails.price) *
-                                0.6 *
-                                0.02) /
-                            1e18
-                          ).toFixed(2)}
+                          {((
+                            (Number(pkg.nftCreatedDetails.price) / 1e18) *
+                            6
+                          ).toFixed(2) *
+                            120) /
+                            100}
+                          -({pkg.nftCreatedDetails.tokenId})
                         </button>
                       </div>
                     )
                   );
-                })}
+                })
+              ) : (
+                <p
+                  className=""
+                  style={{ fontSize: "20px", textAlign: "center" }}
+                >
+                  Please wait we are loading data
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -355,7 +351,7 @@ export default function BulkNFT() {
             {selectedAmount && (
               <p>
                 Note: You had selected {selectedAmount} USDT package. You can
-                create 6 NFTs of {selectedAmount / 6} USDT.
+                create 6 NFTs of {(selectedAmount * 100) / 120 / 6} USDT.
               </p>
             )}
             {/* Note: You had selected {selectedAmount * 1.1} USDT package. You can

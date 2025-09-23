@@ -14,7 +14,9 @@ import {
   getUserInfo,
   getUserLimits,
   getUserStats,
+  insertInSale,
   isFirstTrade,
+  isInSale,
   SOCKET_SERVER_URL,
 } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
@@ -29,6 +31,7 @@ import {
 import axios from "axios";
 import toast from "react-hot-toast";
 import socket from "./Socket";
+import { MVT_TOKEN } from "../Helper/Config";
 
 export default function Trade() {
   const { address } = useAccount();
@@ -45,9 +48,9 @@ export default function Trade() {
   const [isNew, setIsNew] = useState();
   const [open, setOpen] = useState(true);
 
-  const tokenApp1 = async (amt) => {
+  const tokenApp1 = async (amt, token) => {
     try {
-      const appres = await toast.promise(approveToken(amt), {
+      const appres = await toast.promise(approveToken(amt, token), {
         loading: "Approval in process",
         success: "Successfully Approved",
         error: "Approval failed",
@@ -233,16 +236,27 @@ export default function Trade() {
     tokenId,
     totalAmount
   ) => {
-    // console.log("totalAmount", totalAmount);
+    console.log(
+      initialPrice,
+      title,
+      description,
+      metadataURI,
+      tokenId,
+      totalAmount
+    );
 
     try {
       setIsLoading(true);
+      // const resp = await isTokenAvailaible(tokenId);
+      // console.log(resp, "Fasfssiuhfiahs ");
+      // if (!resp) {
+      //   setIsLoading(false);
+      //   return toast.error("Trade not available, please Try again later");
+      // }
 
-      const userBalance = await fetchUserTokenBalance(address);
-
-      console.log(userBalance, totalAmount, initialPrice, "::::");
-      let amtToCheck = totalAmount - initialPrice;
-      console.log(amtToCheck / 1e18, "amt to cjeck");
+      const userBalance = await fetchUserTokenBalance(address, MVT_TOKEN);
+      let amtToCheck = Number(initialPrice);
+      console.log(amtToCheck / 1e18, "amt to cjeck", userBalance);
       if (Number(userBalance) < Number(amtToCheck) / 1e18) {
         setIsLoading(false);
         return toast.error(
@@ -251,7 +265,9 @@ export default function Trade() {
           )} USDT to Buy`
         );
       }
+
       const status = await ReadyForBuy(tokenId);
+      console.log("step after this276", status);
       if (!status) {
         setTimeout(() => {
           setIsLoading(false);
@@ -260,18 +276,16 @@ export default function Trade() {
       }
       const res = await getReadyForBuyFn(
         address,
-        (Number(totalAmount) - Number(initialPrice)) / 1e18,
+        Number(initialPrice) / 1e18,
         title,
         description,
         metadataURI,
         tokenId,
-        (Number(totalAmount) - Number(initialPrice)) / 1e18
+        totalAmount / 1e18
       );
 
       if (res) {
-        const tokenApp = await tokenApp1(
-          (Number(totalAmount) - Number(initialPrice)) / 1e18 + 0.1
-        );
+        const tokenApp = await tokenApp1(totalAmount / 1e18 + 0.1, MVT_TOKEN);
         if (tokenApp) {
           const nft = buyNFTFn(
             tokenId,
@@ -409,6 +423,24 @@ export default function Trade() {
     }
   }, [address, isfetch]);
 
+  const isTokenAvailaible = async (tokenId) => {
+    try {
+      const resp = await isInSale(tokenId);
+      console.log(resp, !resp.isInSale, "Fasfssiuhfiahs");
+      if (!resp.isInSale) {
+        console.log("in if Fasfssiuhfiahs");
+        const create = await insertInSale(tokenId);
+        if (create.success) {
+          return true;
+        }
+      } else {
+        return false;
+      }
+    } catch (error) {
+      console.log(error, "error in");
+    }
+  };
+
   return (
     <>
       <HeaderNew />
@@ -488,8 +520,8 @@ export default function Trade() {
               <p>
                 {allUsers?.status == true
                   ? (
-                    (Number(allUsers?.userUpperLimit) * 90 || 0) / 1e18
-                  ).toFixed(4)
+                      (Number(allUsers?.userUpperLimit) * 90 || 0) / 1e18
+                    ).toFixed(4)
                   : 0}
                 <span> USDT</span>
               </p>
@@ -501,8 +533,8 @@ export default function Trade() {
               <p>
                 {allUsers?.status == true
                   ? (
-                    (Number(allUsers?.userRemainingLimit) || 0) / 1e18
-                  ).toFixed(4)
+                      (Number(allUsers?.userRemainingLimit) || 0) / 1e18
+                    ).toFixed(4)
                   : 0}
                 <span> USDT</span>
               </p>
@@ -514,8 +546,8 @@ export default function Trade() {
               <p>
                 {allUsers?.status == true
                   ? (
-                    (Number(allUsers?.userTodayUtilisedLimit) || 0) / 1e18
-                  ).toFixed(4)
+                      (Number(allUsers?.userTodayUtilisedLimit) || 0) / 1e18
+                    ).toFixed(4)
                   : 0}
                 <span> USDT</span>
               </p>
@@ -558,9 +590,9 @@ export default function Trade() {
                                   src={
                                     nft.img.startsWith("ipfs://")
                                       ? nft.img.replace(
-                                        "ipfs://",
-                                        "https://ipfs.io/ipfs/"
-                                      )
+                                          "ipfs://",
+                                          "https://ipfs.io/ipfs/"
+                                        )
                                       : nft.img
                                   }
                                   alt="NFT"
@@ -580,7 +612,7 @@ export default function Trade() {
                                       Number(nft.price)
                                     );
                                     BuyNft(
-                                      nft.initialPrice,
+                                      nft.price,
                                       nft.title,
                                       nft.description,
                                       nft.metadataURI,
@@ -663,9 +695,9 @@ export default function Trade() {
                             src={
                               newData?.img?.startsWith("ipfs://")
                                 ? newData?.img?.replace(
-                                  "ipfs://",
-                                  "https://ipfs.io/ipfs/"
-                                )
+                                    "ipfs://",
+                                    "https://ipfs.io/ipfs/"
+                                  )
                                 : newData.img
                             }
                             alt="newData"
@@ -748,7 +780,7 @@ export default function Trade() {
         )}
       </div>
       <div>
-        {true && (
+        {isNew && (
           <div className="new-modal-overlay" onClick={() => setOpen(false)}>
             <div
               className="new-modal"
@@ -760,24 +792,21 @@ export default function Trade() {
                 </h2>
               </div>
               <div style={{ color: "black", fontSize: "14px" }}>
-                {/* Pay 50 USDT leverage fee and get 80%–90% Leverage on NFT Trading
-                & Creation. ⚡ Trade more, create more, earn more! */}
-                Binance Server is Down !  Working on their gas fees management.
-                It will be Restored by tomorrow 3:00 pm.
-                Team MagicVerse
+                Pay 50 USDT leverage fee and get 80%–90% Leverage on NFT Trading
+                & Creation. ⚡ Trade more, create more, earn more!
               </div>
 
-              {/* <div
+              <div
                 className="new-modal-body"
                 style={{ color: "black", fontSize: "14px" }}
               >
                 Please confirm your payment to continue.
-              </div> */}
+              </div>
 
               <div className="new-modal-footer">
                 <button
                   className=""
-                  // onClick={payFees}
+                  onClick={payFees}
                   style={{
                     padding: "0px",
                     height: "30px",
@@ -785,9 +814,11 @@ export default function Trade() {
                     borderRadius: "10px",
                     textAlign: "center",
                   }}
-
-                  onClick={() => { window.open("/dashboard","_self") }}                >
-                  Dashboard
+                  // onClick={() => {
+                  //   window.open("/dashboard", "_self");
+                  // }}
+                >
+                  Proceed
                 </button>
               </div>
             </div>
