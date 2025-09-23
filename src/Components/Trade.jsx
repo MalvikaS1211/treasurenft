@@ -352,8 +352,9 @@ export default function Trade() {
   };
 
   const getWalletFund = async () => {
-    const res = await fetchUserTokenBalance(address);
+    const res = await fetchUserTokenBalance(address, MVT_TOKEN);
     getBalance(res);
+    console.log(res, "Tokenbalance");
   };
 
   const handlependingNft = async () => {
