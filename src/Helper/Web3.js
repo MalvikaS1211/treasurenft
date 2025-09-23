@@ -50,10 +50,10 @@ export async function registerfn(refAddress, amt) {
   }
 }
 
-export async function approveToken(amt) {
+export async function approveToken(amt, token) {
   const result = await writeContract(config, {
     abi: tokenAbi,
-    address: USDT_TOKEN,
+    address: token || USDT_TOKEN,
     functionName: "approve",
     args: [
       CONTRACT_ADDRESS,
@@ -249,11 +249,11 @@ export async function getAvailaibleBalance(address) {
   }
 }
 
-export async function fetchUserTokenBalance(address) {
+export async function fetchUserTokenBalance(address, token) {
   try {
     const balance = await getBalance(config, {
       address: address,
-      token: USDT_TOKEN,
+      token: token || USDT_TOKEN,
     });
     return balance.formatted;
   } catch (error) {
@@ -281,4 +281,14 @@ export async function isLeveragePaid(address) {
     args: [address],
   });
   return data;
+}
+
+export async function getPackagePrice(pkg) {
+  const data = await readContract(config, {
+    abi: CONTRACT_ADDRESS_ABI,
+    address: CONTRACT_ADDRESS,
+    functionName: "packagePrice",
+    args: [pkg],
+  });
+  return Number(data);
 }

@@ -1,4 +1,5 @@
-export const CONTRACT_ADDRESS = "0x34d415A3b06eE5a2311e5E71d3fDD5aa07FAeb53"; // mainet
+// export const CONTRACT_ADDRESS = "0x34d415A3b06eE5a2311e5E71d3fDD5aa07FAeb53"; // mainet
+export const CONTRACT_ADDRESS = "0xeA3Ee7276cB77d5bad8efd271BD55AF5d60eb5c7"; // testnet
 
 export const CONTRACT_ADDRESS_ABI = [
   {
@@ -568,6 +569,13 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "event",
   },
   {
+    inputs: [],
+    name: "MVT",
+    outputs: [{ internalType: "contract IERC20", name: "", type: "address" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [
       { internalType: "address", name: "to", type: "address" },
       { internalType: "uint256", name: "tokenId", type: "uint256" },
@@ -852,6 +860,13 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
+    inputs: [{ internalType: "address", name: "_mvt", type: "address" }],
+    name: "setMVT",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
     inputs: [{ internalType: "bytes4", name: "interfaceId", type: "bytes4" }],
     name: "supportsInterface",
     outputs: [{ internalType: "bool", name: "", type: "bool" }],
@@ -950,13 +965,22 @@ export const CONTRACT_ADDRESS_ABI = [
   },
   {
     inputs: [{ internalType: "uint256", name: "amt", type: "uint256" }],
+    name: "withdrawMVTToken",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "amt", type: "uint256" }],
     name: "withdrawToken",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
 ];
-export const USDT_TOKEN = "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3"; // maiinet
+// export const USDT_TOKEN = "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3"; // maiinet
+export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05"; // testnet
+export const MVT_TOKEN = "0x4a647A2bD96B6B1CE0622Aa422d9e1CbF8A1De6A";
 export const tokenAbi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {

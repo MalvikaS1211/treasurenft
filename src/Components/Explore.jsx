@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { act, useEffect, useState } from "react";
 
 import { FaShoppingBag } from "react-icons/fa";
 import FooterNew from "./FooterNew";
@@ -20,6 +20,7 @@ export default function Expore() {
   const [createdNFTs, setCreateNft] = useState([]);
   const [purchasedNFTs, setPurchasedNFTs] = useState([]);
   const [ownedNFTs, setOwnedNFTs] = useState([]);
+  const [active, setActive] = useState(1);
 
   const readyForSale = async (tokenId) => {
     try {
@@ -33,7 +34,7 @@ export default function Expore() {
       }, 2000);
     } catch (error) {
       console.error("Error in Sell:", error);
-      toast.error("An error occurred while listing the NFT.");
+      // toast.error("An error occurred while listing the NFT.");
     }
   };
 
@@ -182,7 +183,7 @@ export default function Expore() {
       ShowCreatedNFTs();
       ShowPurchasedNfts();
       ShowOwnedNFTs();
-    } else toast.error("Please connect your wallet");
+    }
   }, [address, isFetch]);
 
   return (
@@ -204,7 +205,7 @@ export default function Expore() {
             </div>
           </div>
         </div>
-        <section className="tf-section today-pick">
+        {/* <section className="tf-section today-pick">
           <div className="themesflat-container">
             <div className="row  available-packages">
               <div className="row" style={{ paddingLeft: "34px" }}>
@@ -303,11 +304,90 @@ export default function Expore() {
               )}
             </div>
           </div>
+        </section> */}
+
+        <section className="tf-section today-pick">
+          <div className="themesflat-container">
+            <div className="filter-btn">
+              <span
+                onClick={() => {
+                  setActive(1);
+                }}
+                style={{
+                  background: active == 1 ? "rgb(161 210 242)" : "#a9c1d1",
+                }}
+              >
+                Owned NFT
+              </span>
+              <span
+                onClick={() => {
+                  setActive(2);
+                }}
+                style={{
+                  background: active == 2 ? "rgb(161 210 242)" : "#a9c1d1",
+                }}
+              >
+                Created NFT
+              </span>
+            </div>
+
+            <div className="table-container">
+              <table className="filter-table">
+                <thead>
+                  <tr>
+                    <th>Serial No.</th>
+                    <th>NFT Id</th>
+                    <th>Title</th>
+                    <th>Txn Hash</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {(active === 2 ? createdNFTs : ownedNFTs).length === 0 ? (
+                    <tr>
+                      <td
+                        colSpan="5"
+                        style={{
+                          textAlign: "center",
+                          width: "100%",
+                        }}
+                      >
+                        No Data Found
+                      </td>
+                    </tr>
+                  ) : (
+                    (active === 2 ? createdNFTs : ownedNFTs).map(
+                      (nft, index) => (
+                        <tr key={nft.tokenId}>
+                          <td>{index + 1}</td>
+                          <td>{nft.tokenId}</td>
+                          <td>{nft.title}</td>
+                          <td>
+                            <a
+                              href={`https://sepolia.etherscan.io/tx/${nft.transactionHash}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              {`${nft.transactionHash.slice(
+                                0,
+                                6
+                              )}...${nft.transactionHash.slice(-4)}`}
+                            </a>
+                          </td>
+                          <td>{new Date(nft.time * 1000).toLocaleString()}</td>
+                        </tr>
+                      )
+                    )
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </section>
       </div>
 
       {/* your owned nft  section*/}
-      <section className="tf-section today-pick">
+      {/* <section className="tf-section today-pick">
         <div className="themesflat-container">
           <div className="row  available-packages">
             <div className="row" style={{ paddingLeft: "34px" }}>
@@ -353,19 +433,7 @@ export default function Expore() {
                           style={{ width: "100%", height: "100%" }}
                         />
                       </a>
-                      {/* {nft.isReadyForSale === true && (
-                        <div className="button-place-bid">
-                          <button
-                            className="sc-button style-place-bid style bag fl-button pri-3"
-                            onClick={() => readyForSale(nft.tokenId)}
-                          >
-                            <FaShoppingBag color="black" />
-                            <span>
-                              {nft.isReadyForSale ? "Not for Sell" : "Sell"}
-                            </span>
-                          </button>
-                        </div>
-                      )} */}
+                   
                       <div className="coming-soon"></div>
                     </div>
                     <div className="card-title">
@@ -406,11 +474,11 @@ export default function Expore() {
             )}
           </div>
         </div>
-      </section>
+      </section> */}
       {/*end of  your owned nft  section*/}
 
       {/* your purchased nft  section*/}
-      <section className="tf-section today-pick">
+      {/* <section className="tf-section today-pick">
         <div className="themesflat-container">
           <div className="row  available-packages">
             <div className="row" style={{ paddingLeft: "34px" }}>
@@ -456,19 +524,7 @@ export default function Expore() {
                           style={{ width: "100%", height: "100%" }}
                         />
                       </a>
-                      {/* {nft.isReadyForSale === true && (
-                        <div className="button-place-bid">
-                          <button
-                            className="sc-button style-place-bid style bag fl-button pri-3"
-                            onClick={() => readyForSale(nft.tokenId)}
-                          >
-                            <FaShoppingBag color="black" />
-                            <span>
-                              {nft.isReadyForSale ? "Not for Sell" : "Sell"}
-                            </span>
-                          </button>
-                        </div>
-                      )} */}
+
                       <div className="coming-soon"></div>
                     </div>
                     <div className="card-title">
@@ -509,7 +565,7 @@ export default function Expore() {
             )}
           </div>
         </div>
-      </section>
+      </section> */}
       {/*end of  your purchased  nft  section*/}
       <div className="mt-4">
         <FooterNew />

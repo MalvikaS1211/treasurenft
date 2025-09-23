@@ -37,7 +37,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import Carousel from "./Components/Carousel";
 import AppRoutes from "./Components/AppRoutes/AppRoutes";
 import "../src/css/Signup.css";
-import "../src/css/Collection.css";
+// import "../src/css/Collection.css";
 import "../src/css/depositNFT.css";
 import "../src/css/headernew.css";
 import "../src/css/Buy.css";
@@ -58,7 +58,7 @@ import "./MalvikaCss/shortcodes.css";
 import "./MalvikaCss/style.css";
 import "./css/Blog.css";
 import "./css/chat.css";
-import PayModal from "./Components/PayModal";
+// import PayModal from "./Components/PayModal";
 function App() {
   return (
     <>

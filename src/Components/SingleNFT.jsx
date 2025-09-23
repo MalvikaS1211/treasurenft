@@ -20,6 +20,7 @@ import {
 } from "../Helper/Web3";
 import toast from "react-hot-toast";
 import { useAccount } from "wagmi";
+import { MVT_TOKEN } from "../Helper/Config";
 
 export default function SingleNFT() {
   const { address } = useAccount();
@@ -108,7 +109,7 @@ export default function SingleNFT() {
       console.log("handleNFTPrice".error);
     }
   };
-  const SingleNFTpriceOptions = [30, 50];
+  const SingleNFTpriceOptions = [6, 15, 30];
   // const SingleNFTpriceOptions = [
   //   50, 100, 150, 200, 250, 350, 500, 650, 750, 850, 1000, 1150, 1250, 1350,
   //   1500,
@@ -171,7 +172,7 @@ export default function SingleNFT() {
 
   const tokenApp1 = async (amt) => {
     try {
-      const appres = approveToken(amt);
+      const appres = approveToken(amt, MVT_TOKEN);
       await toast.promise(appres, {
         loading: "Approval in process",
         success: "Successfully Approved",
@@ -226,8 +227,8 @@ export default function SingleNFT() {
         );
       }
       const iphashRes = await handleMintNFT();
-      let totalAmount = Number(nftPrice) * 0.1;
-      totalAmount = totalAmount + totalAmount * 0.02;
+      let totalAmount = (Number(nftPrice) * 120) / 100;
+      // totalAmount = totalAmount + totalAmount * 0.02;
       if (iphashRes) {
         const res = await createNftVrsFn(
           address,
@@ -463,17 +464,17 @@ export default function SingleNFT() {
             <h6>NFT Price</h6>
             <div class="tags">${nftPrice || 0}</div>
           </div>
-          {/* <div class="card-title">
-            <h6>Creation Fee (2%)</h6>
+          <div class="card-title">
+            <h6>Creation Fee (20%)</h6>
             <div class="tags">${creationFee}</div>
-          </div> */}
+          </div>
           {/* <div class="card-title">
             <h6>Total Amount</h6>
             <div class="tags">${totalNFTAmount}</div>
           </div> */}
           <div class="card-title">
             <h6>Total Payable</h6>
-            <div class="tags">${nftPrice * 0.1}</div>
+            <div class="tags">${(nftPrice * 120) / 100}</div>
           </div>
         </div>
       </div>

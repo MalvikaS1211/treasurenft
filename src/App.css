@@ -8,6 +8,19 @@ body {
 .showBorder {
   border: 1px solid red;
 }
+.renew-btn {
+  width: 100px;
+  height: 40px;
+  background-color: #4b83d0;
+  border-radius: 4px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 /* 
 .loader {
   transform: rotateZ(45deg);
@@ -161,4 +174,54 @@ body {
   87% {
     box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
+}
+
+.filter-btn {
+  display: flex;
+  gap: 20px;
+}
+
+.filter-btn span {
+  height: 30px;
+  width: 150px;
+  background-color: #a9c1d1;
+  color: black;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.filter-table {
+  background-color: #bee4fd;
+  color: black;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+}
+.filter-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.filter-table thead {
+  width: 100%;
+}
+
+.filter-table tr {
+  height: 40px;
+  border-bottom: 2px solid black;
+  padding-top: 5px;
+  display: flex;
+  width: 100%;
+}
+.filter-table th,
+td {
+  width: 25%;
+  font-weight: 400;
 }

@@ -16,7 +16,7 @@ import DepositNFT from "../DepositNFT";
 import Account from "../Account";
 
 import Airdrop from "../Airdrop";
-import NFTCreation from "../NftCreation";
+// import NFTCreation from "../NftCreation";
 
 import Dashboard from "../dashboard";
 import Refferal from "../Refferal";
