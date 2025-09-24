@@ -790,12 +790,16 @@ export default function Trade() {
             >
               <div className="new-modal-header mb-3">
                 <h2 className="new-modal-title" style={{ fontSize: "20px" }}>
-                  Notice:
+                  📢 Important Notice
+                </h2>
+                <h2 className="new-modal-title" style={{ fontSize: "14px" }}>
+                  Dear Users,
                 </h2>
               </div>
               <div style={{ color: "black", fontSize: "14px" }}>
-                Pay 50 MVT leverage fee and get 80%–90% Leverage on NFT Trading
-                & Creation. ⚡ Trade more, create more, earn more!
+                💰 An additional platform fee of 25 USDT will be applicable only
+                on the first package. ✅ This is a one-time fee to activate
+                smooth operations and ensure reliable services.
               </div>
 
               <div
