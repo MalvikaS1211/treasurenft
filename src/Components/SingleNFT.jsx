@@ -220,6 +220,7 @@ export default function SingleNFT() {
         return toast.error("Please fill all fields and select a file!");
       }
       const userBalance = await fetchUserTokenBalance(address, MVT_TOKEN);
+      console.log(userBalance, totalNFTAmount, "userBalance");
       if (userBalance < totalNFTAmount) {
         setIsLoading(false);
         return toast.error(
