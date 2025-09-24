@@ -247,12 +247,12 @@ export default function Trade() {
 
     try {
       setIsLoading(true);
-      // const resp = await isTokenAvailaible(tokenId);
-      // console.log(resp, "Fasfssiuhfiahs ");
-      // if (!resp) {
-      //   setIsLoading(false);
-      //   return toast.error("Trade not available, please Try again later");
-      // }
+      const resp = await isTokenAvailaible(tokenId);
+      console.log(resp, "Fasfssiuhfiahs ");
+      if (!resp) {
+        setIsLoading(false);
+        return toast.error("Trade not available, please Try again later");
+      }
 
       const userBalance = await fetchUserTokenBalance(address, MVT_TOKEN);
       let amtToCheck = Number(initialPrice);
@@ -658,8 +658,9 @@ export default function Trade() {
                                 <span>Current Price</span>
                                 <div className="price-details">
                                   <h5>
-                                    {(Number(nft?.price) / 1e18).toFixed(4)}
-                                    USDT
+                                    {(Number(nft?.price) / 1e18).toFixed(4) +
+                                      " "}
+                                    MVT
                                   </h5>
                                 </div>
                               </div>
