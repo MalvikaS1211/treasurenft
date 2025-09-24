@@ -1,5 +1,5 @@
-// export const CONTRACT_ADDRESS = "0x34d415A3b06eE5a2311e5E71d3fDD5aa07FAeb53"; // mainet
-export const CONTRACT_ADDRESS = "0xeA3Ee7276cB77d5bad8efd271BD55AF5d60eb5c7"; // testnet
+export const CONTRACT_ADDRESS = "0x34d415A3b06eE5a2311e5E71d3fDD5aa07FAeb53"; // mainet
+// export const CONTRACT_ADDRESS = "0xeA3Ee7276cB77d5bad8efd271BD55AF5d60eb5c7"; // testnet
 
 export const CONTRACT_ADDRESS_ABI = [
   {
@@ -978,9 +978,10 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
 ];
-// export const USDT_TOKEN = "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3"; // maiinet
-export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05"; // testnet
-export const MVT_TOKEN = "0x4a647A2bD96B6B1CE0622Aa422d9e1CbF8A1De6A";
+export const USDT_TOKEN = "0x9e5AAC1Ba1a2e6aEd6b32689DFcF62A509Ca96f3"; // maiinet
+// export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05"; // testnet
+export const MVT_TOKEN = "0x065F174476BBf5d00fcece74BEA9C23e7fdB8F4F";
+// export const MVT_TOKEN = "0x4a647A2bD96B6B1CE0622Aa422d9e1CbF8A1De6A"; // testnet
 export const tokenAbi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {
