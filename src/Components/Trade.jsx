@@ -262,7 +262,7 @@ export default function Trade() {
         return toast.error(
           `You need at least ${(Number(amtToCheck) / 1e18).toFixed(
             4
-          )} USDT to Buy`
+          )} MVT to Buy`
         );
       }
 
@@ -471,7 +471,7 @@ export default function Trade() {
               <p>
                 {parseFloat(balance).toFixed(4)}
 
-                <span> USDT</span>
+                <span> MVT</span>
               </p>
             </div>
             <div class="total-card" style={{ background: "#c2e8ff" }}>
@@ -480,7 +480,7 @@ export default function Trade() {
               </div>
               <p>
                 {assetValue.toFixed(4)}
-                <span> USDT</span>
+                <span> MVT</span>
               </p>
             </div>
             <div class="total-card" style={{ background: "#c2e8ff" }}>
@@ -493,7 +493,7 @@ export default function Trade() {
                 {allUsers?.status == true
                   ? ((Number(allUsers?.userUpperLimit) || 0) / 1e18).toFixed(4)
                   : 0}
-                <span> USDT</span>
+                <span> MVT</span>
               </p>
             </div>
           </div>
@@ -524,7 +524,7 @@ export default function Trade() {
                       (Number(allUsers?.userUpperLimit) * 90 || 0) / 1e18
                     ).toFixed(4)
                   : 0}
-                <span> USDT</span>
+                <span> MVT</span>
               </p>
             </div>
             <div class="total-card" style={{ background: "#c2e8ff" }}>
@@ -537,7 +537,7 @@ export default function Trade() {
                       (Number(allUsers?.userRemainingLimit) || 0) / 1e18
                     ).toFixed(4)
                   : 0}
-                <span> USDT</span>
+                <span> MVT</span>
               </p>
             </div>
             <div class="total-card" style={{ background: "#c2e8ff" }}>
@@ -550,7 +550,7 @@ export default function Trade() {
                       (Number(allUsers?.userTodayUtilisedLimit) || 0) / 1e18
                     ).toFixed(4)
                   : 0}
-                <span> USDT</span>
+                <span> MVT</span>
               </p>
             </div>
           </div>
@@ -757,7 +757,7 @@ export default function Trade() {
                           <div className="price-details">
                             <h5>
                               {(Number(newData?.price) / 1e18).toFixed(4)}
-                              USDT
+                              MVT
                             </h5>
                           </div>
                         </div>
@@ -794,7 +794,7 @@ export default function Trade() {
                 </h2>
               </div>
               <div style={{ color: "black", fontSize: "14px" }}>
-                Pay 50 USDT leverage fee and get 80%–90% Leverage on NFT Trading
+                Pay 50 MVT leverage fee and get 80%–90% Leverage on NFT Trading
                 & Creation. ⚡ Trade more, create more, earn more!
               </div>
 
