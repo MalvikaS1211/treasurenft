@@ -219,7 +219,8 @@ export default function SingleNFT() {
         setIsLoading(false);
         return toast.error("Please fill all fields and select a file!");
       }
-      const userBalance = await fetchUserTokenBalance(address);
+      const userBalance = await fetchUserTokenBalance(address, MVT_TOKEN);
+      console.log(userBalance, totalNFTAmount, "userBalance");
       if (userBalance < totalNFTAmount) {
         setIsLoading(false);
         return toast.error(
@@ -534,7 +535,7 @@ export default function SingleNFT() {
                   onChange={(e) => setDescription(e.target.value)}
                 />
                 <div className="create-nft-container">
-                  {isAllowed === false &&
+                  {isAllowed === true &&
                     (selectedNft.tokenId ? (
                       <button
                         className="createbtn"
