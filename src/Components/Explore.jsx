@@ -331,7 +331,7 @@ export default function Expore() {
               </span>
             </div>
 
-            <div className="table-container">
+            <div className="table-container table-responsive">
               <table className="filter-table">
                 <thead>
                   <tr>

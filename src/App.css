@@ -203,10 +203,12 @@ body {
   font-weight: 500;
   border: none;
   border-radius: 5px;
+  overflow-x: auto;
 }
 .filter-table {
   width: 100%;
   border-collapse: collapse;
+  min-width: 800px;
 }
 
 .filter-table thead {
@@ -217,8 +219,8 @@ body {
   height: 40px;
   border-bottom: 2px solid black;
   padding-top: 5px;
-  display: flex;
-  width: 100%;
+  /* display: flex;
+  width: 100%; */
 }
 .filter-table th,
 td {
