@@ -532,7 +532,7 @@ export default function SingleNFT() {
                   onChange={(e) => setDescription(e.target.value)}
                 />
                 <div className="create-nft-container">
-                  {isAllowed === true &&
+                  {isAllowed === false &&
                     (selectedNft.tokenId ? (
                       <button
                         className="createbtn"

@@ -2,8 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const URLApi = "https://magicverse.org/api1";
-export const SOCKET_SERVER_URL = "https://magicverse.org1";
+export const URLApi = "http://173.212.221.63:8081/api";
+export const SOCKET_SERVER_URL = "http://173.212.221.63:8081";
 
 // export const URLApi = "https://magicverse-backend.onrender.com/api";
 // export const URLApi = "http://localhost:8081/api";

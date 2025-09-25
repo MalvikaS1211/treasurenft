@@ -267,7 +267,21 @@ export default function Dashboard() {
   }, [address, isFetch]);
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(referralLink);
+      if (navigator.clipboard && window.isSecureContext) {
+        // Modern API (works only in https or localhost)
+        await navigator.clipboard.writeText(referralLink);
+      } else {
+        // Fallback for http (non-secure context)
+        const textarea = document.createElement("textarea");
+        textarea.value = referralLink;
+        textarea.style.position = "fixed"; // avoid scrolling
+        textarea.style.opacity = "0";
+        document.body.appendChild(textarea);
+        textarea.focus();
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+      }
       toast.success("Referral link copied!");
     } catch (error) {
       console.error("Copy failed:", error);

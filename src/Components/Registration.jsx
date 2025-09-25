@@ -89,10 +89,10 @@ export default function Registration() {
         return;
       }
       const userBal = await fetchUserTokenBalance(address);
-      if (userBal < 15) {
+      if (userBal < 40) {
         return toast.error("You need to have at least 15 USDT to register");
       }
-      const appRes = await tokenApp(15);
+      const appRes = await tokenApp(40);
       if (appRes) {
         const reg = await registerfn(ref, 15);
         if (reg) {
