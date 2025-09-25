@@ -364,7 +364,7 @@ export default function Expore() {
                           <td>{nft.title}</td>
                           <td>
                             <a
-                              href={`https://sepolia.etherscan.io/tx/${nft.transactionHash}`}
+                              href={`https://opbnb.bscscan.com/tx/${nft.transactionHash}`}
                               target="_blank"
                               rel="noopener noreferrer"
                             >
