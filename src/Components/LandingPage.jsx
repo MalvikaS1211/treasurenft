@@ -45,7 +45,7 @@ import img2 from "../assets/Stake_06195_compre.webp";
 import img3 from "../assets/Penguin_Pals_549781.webp";
 import sonic from "../assets/sonic.jpg";
 import animal from "../assets/animal.jpg";
-import elephant from "../assets/elephant.jpg";
+import robot from "../assets/robot12.jpg";
 import bunny from "../assets/bunny.jpg";
 import elephantpic from "../assets/elephantpic.jpg";
 import { FiUserPlus } from "react-icons/fi";
@@ -152,7 +152,11 @@ export default function DashboardNew() {
                                   onClick={() => navigate("/signup")}
                                 >
                                   <div className="d-flex justify-content-center gap-3">
-                                    <FiUserPlus color="#5142fc" size={20} />
+                                    <FiUserPlus
+                                      color="#fff"
+                                      className="signupIcon"
+                                      size={20}
+                                    />
                                     <span className="pl-0">Sign Up</span>
                                   </div>
                                 </a>
@@ -348,7 +352,7 @@ export default function DashboardNew() {
                                         <div class="infor">
                                           <span>Created by</span>
                                           <span class="name">
-                                            <a>Ralph Garraway</a>
+                                            <a>Elara Moon</a>
                                           </span>
                                         </div>
                                       </div>
@@ -432,7 +436,7 @@ export default function DashboardNew() {
                                         <div class="infor">
                                           <span>Created by</span>
                                           <span class="name">
-                                            <a>Ralph Garraway</a>
+                                            <a>Noah Velasquez</a>
                                           </span>
                                         </div>
                                       </div>
@@ -516,7 +520,7 @@ export default function DashboardNew() {
                                         <div class="infor">
                                           <span>Created by</span>
                                           <span class="name">
-                                            <a>Ralph Garraway</a>
+                                            <a>Iris Calderon</a>
                                           </span>
                                         </div>
                                       </div>
@@ -745,9 +749,6 @@ export default function DashboardNew() {
             <div class="col-md-12">
               <div class="heading-live-auctions mg-bt-21">
                 <h2 class="tf-title pb-18">Today's Picks</h2>
-                {/* <a class="exp style2" href="/explore-03">
-                  EXPLORE MORE
-                </a> */}
               </div>
             </div>
             <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
@@ -770,7 +771,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a>"The RenaiXance Rising the sun "</a>
+                    <a>"ApeX Legend"</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -821,7 +822,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a>"The RenaiXance Rising the sun "</a>
+                    <a>"Moonlight Bunny Dreams"</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -872,7 +873,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a>"The RenaiXance Rising the sun "</a>
+                    <a>"The Majestic Elephant"</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -923,7 +924,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a>"The RenaiXance Rising the sun "</a>
+                    <a>"Doodle Heroes"</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -974,7 +975,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a>"Eternal Sunrise "</a>
+                    <a>"Sonic Rush "</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -1025,7 +1026,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a>"The RenaiXance Rising the sun "</a>
+                    <a>"Crypto Chimp"</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -1076,7 +1077,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a>"The RenaiXance Rising the sun "</a>
+                    <a>"Whispers of the Wild"</a>
                   </h5>
                 </div>
                 <div class="meta-info">
@@ -1111,7 +1112,7 @@ export default function DashboardNew() {
               <div class="sc-card-product explode style2 mg-bt  ">
                 <div class="card-media">
                   <a>
-                    <img src={elephant} alt="Axies" />
+                    <img src={robot} alt="Axies" />
                   </a>
                   <div class="button-place-bid">
                     <button class="sc-button style-place-bid style bag fl-button pri-3">
@@ -1127,7 +1128,7 @@ export default function DashboardNew() {
                 </div>
                 <div class="card-title">
                   <h5>
-                    <a>"The RenaiXance Rising the sun "</a>
+                    <a>"Neon Automaton"</a>
                   </h5>
                 </div>
                 <div class="meta-info">

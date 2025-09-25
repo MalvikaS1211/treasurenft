@@ -8,7 +8,12 @@ import LivingVase from "../assets/LivingVase.jpg";
 import FlameDress from "../assets/FlameDress.jpg";
 import { FaGripfire } from "react-icons/fa";
 import { FaShoppingBag } from "react-icons/fa";
-import Axies from "../assets/long-hair-woman.jpg";
+import Avatar1 from "../assets/long-hair-woman.jpg";
+import Avatar2 from "../assets/curly-hair-man-with-glasses-2.jpg";
+import Avatar3 from "../assets/man.jpg";
+import Avatar4 from "../assets/man-with-beard.jpg";
+import Avatar5 from "../assets/curly-hair-man-with-glasses.jpg";
+
 import Piggy from "../assets/pigy.jpg";
 import Rino from "../assets/charming-rhinoceros-figurine.jpg";
 import kungfuPanda from "../assets/kungfuPanda.jpg";
@@ -98,7 +103,7 @@ export default function LiveAuction() {
                         <div class="meta-info">
                           <div class="author">
                             <div class="avatar">
-                              <img src={Axies} alt="axies" />
+                              <img src={Avatar1} alt="axies" />
                             </div>
                             <div class="info">
                               <span>Creator</span>
@@ -140,7 +145,7 @@ export default function LiveAuction() {
                         <div class="meta-info">
                           <div class="author">
                             <div class="avatar">
-                              <img src={Axies} alt="axies" />
+                              <img src={Avatar2} alt="axies" />
                             </div>
                             <div class="info">
                               <span>Creator</span>
@@ -182,7 +187,7 @@ export default function LiveAuction() {
                         <div class="meta-info">
                           <div class="author">
                             <div class="avatar">
-                              <img src={Axies} alt="axies" />
+                              <img src={Avatar3} alt="axies" />
                             </div>
                             <div class="info">
                               <span>Creator</span>
@@ -224,7 +229,7 @@ export default function LiveAuction() {
                         <div class="meta-info">
                           <div class="author">
                             <div class="avatar">
-                              <img src={Axies} alt="axies" />
+                              <img src={Avatar4} alt="axies" />
                             </div>
                             <div class="info">
                               <span>Creator</span>
@@ -266,7 +271,7 @@ export default function LiveAuction() {
                         <div class="meta-info">
                           <div class="author">
                             <div class="avatar">
-                              <img src={Axies} alt="axies" />
+                              <img src={Avatar5} alt="axies" />
                             </div>
                             <div class="info">
                               <span>Creator</span>

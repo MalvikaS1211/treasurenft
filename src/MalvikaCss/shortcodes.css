@@ -272,7 +272,9 @@
   background: #fff;
   color: #5142fc;
 }
-
+.light .sc-button.style-1:hover .signupIcon {
+  color: #5142fc !important;
+}
 .sc-button.style-1:hover span,
 .sc-button.style-1:hover span::before {
   color: var(--primary-color3);
