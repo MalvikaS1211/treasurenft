@@ -13,6 +13,7 @@ import { BsMedium } from "react-icons/bs";
 import { GiHamburgerMenu, GiReceiveMoney } from "react-icons/gi";
 import ConnectWallet from "./ConnectWallet";
 import { FaFacebook } from "react-icons/fa";
+import { LiaHistorySolid } from "react-icons/lia";
 import {
   MdAttachMoney,
   MdOutlineSupportAgent,
@@ -21,6 +22,7 @@ import {
 import { FaYoutube } from "react-icons/fa";
 import { getStakingDetail } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
+import { FaHistory } from "react-icons/fa";
 export default function Navbar({ title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(
     window.innerWidth > 500 ? true : false
@@ -144,6 +146,7 @@ export default function Navbar({ title }) {
               <MdTrendingUp /> Trading Income
             </li>
           </Link>
+
           {btnShow && (
             <Link to="/staking">
               <li
@@ -155,6 +158,25 @@ export default function Navbar({ title }) {
               </li>
             </Link>
           )}
+          <Link to="/Create-History">
+            <li
+              className={
+                location.pathname === "/Create-History" ? "active" : "inactive"
+              }
+            >
+              <FaHistory /> Create History
+            </li>
+          </Link>
+          <Link to="/Trade-History">
+            <li
+              className={
+                location.pathname === "/Trade-History" ? "active" : "inactive"
+              }
+            >
+              <FaHistory />
+              Trade History (72 hours)
+            </li>
+          </Link>
         </ul>
 
         <h3 className="follow-us">Follow Us On</h3>

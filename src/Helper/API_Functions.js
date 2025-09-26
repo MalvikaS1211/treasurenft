@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { useReadContracts } from "wagmi";
 
 export const URLApi = "https://magicverse.org/api";
 export const SOCKET_SERVER_URL = "https://magicverse.org";
@@ -583,4 +584,32 @@ export async function insertInSale(address) {
     tokenId: address,
   });
   return response.data;
+}
+
+export async function get72HoursTrade(user, page, limit) {
+  try {
+    const response = await axios.post(`${URLApi}/getLast72HrTrade`, {
+      user,
+      page,
+      limit,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getPendingMaturedNFT Admin:", error);
+  }
+}
+
+export async function createHistory(user, page, limit) {
+  try {
+    const response = await axios.post(`${URLApi}/getLast72HrCreate`, {
+      user,
+      page,
+      limit,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getPendingMaturedNFT Admin:", error);
+  }
 }
