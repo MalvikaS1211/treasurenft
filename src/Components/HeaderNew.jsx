@@ -53,6 +53,13 @@ const Header = () => {
                 <Link to="/buyNft">Trade</Link>
                 <Link to="/NFTcreation">Create NFT</Link>
                 <Link to="/dashboard">Dashboard</Link>
+                <Link
+                  onClick={() => {
+                    window.open("https://swap.magicverse.org/", "_blank");
+                  }}
+                >
+                  Get MVT Tokens
+                </Link>
               </>
             ) : (
               <>
@@ -129,6 +136,13 @@ const Header = () => {
                   <Link to="/buyNft">Trade</Link>
                   <Link to="/NFTcreation">Create NFT</Link>
                   <Link to="/dashboard">Dashboard</Link>
+                  <Link
+                    onClick={() => {
+                      window.open("https://swap.magicverse.org/", "_blank");
+                    }}
+                  >
+                    Get MVT Tokens
+                  </Link>
                 </>
               ) : (
                 <>
