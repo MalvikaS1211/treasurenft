@@ -177,9 +177,55 @@ export default function Navbar({ title }) {
               Trade History (72 hours)
             </li>
           </Link>
+          <li>
+            Follow Us On
+            <div className="d-flex gap-3 pt-2">
+              <a href="https://t.me/magicverse_6669" target="_blank">
+                <i className="fab fa-telegram-plane text-black"></i>
+              </a>
+              <a href="https://x.com/magic_verse_666" target="_blank">
+                <i className="fab fa-x-twitter text-black"></i>
+              </a>
+              <a href="http://medium.com/@magicverse666" target="_blank">
+                <BsMedium className="text-black" />
+              </a>
+              <a
+                href="https://www.instagram.com/magicverse_official?igsh=M2l3enZ4NGpyN2pl"
+                target="_blank"
+              >
+                <i className="fab fa-instagram text-black"></i>
+              </a>
+              <a
+                href="https://www.reddit.com/user/magicverse666"
+                target="_blank"
+              >
+                <FaRedditAlien className="text-black" />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61576285054414"
+                target="_blank"
+              >
+                <FaFacebook className="text-black" />
+              </a>
+              <a
+                href="https://youtube.com/@magicverse-c4o?si=IkOqSaJgKGxw2-7S"
+                target="_blank"
+              >
+                <FaYoutube className="text-black" />
+              </a>
+            </div>
+          </li>
+          <li>
+            Support
+            <div>
+              <Link to="/support">
+                <MdOutlineSupportAgent style={{ fontSize: "30px" }} />
+              </Link>
+            </div>
+          </li>
         </ul>
 
-        <h3 className="follow-us">Follow Us On</h3>
+        {/* <h3 className="follow-us">Follow Us On</h3>
         <div className="social-icons">
           <a href="https://t.me/magicverse_6669" target="_blank">
             <i className="fab fa-telegram-plane text-black"></i>
@@ -211,14 +257,14 @@ export default function Navbar({ title }) {
           >
             <FaYoutube className="text-black" />
           </a>
-        </div>
+        </div> */}
 
-        <h3 className="support-container">Support</h3>
+        {/* <h3 className="support-container">Support</h3>
         <div className="support-icon relative">
           <Link to="/support">
             <MdOutlineSupportAgent style={{ fontSize: "30px" }} />
           </Link>
-        </div>
+        </div> */}
       </aside>
     </>
   );
