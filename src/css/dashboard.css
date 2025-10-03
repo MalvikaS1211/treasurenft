@@ -2330,16 +2330,6 @@ header {
   align-items: center;
 }
 
-.dashboard-sidebar {
-  transition: transform 0.3s ease-in-out;
-  transform: translateX(-100%); /* Sidebar hidden by default */
-  background: linear-gradient(to right, #a0c4ff, #4383fe);
-}
-
-.dashboard-sidebar.active {
-  transform: translateX(0); /* Sidebar slides in */
-}
-
 .header-right {
   display: flex;
   justify-content: center;
