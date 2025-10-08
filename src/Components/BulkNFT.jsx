@@ -350,8 +350,8 @@ export default function BulkNFT() {
           >
             {selectedAmount && (
               <p>
-                Note: You had selected {selectedAmount} USDT package. You can
-                create 6 NFTs of {(selectedAmount * 100) / 120 / 6} USDT.
+                Note: You had selected {selectedAmount} MVT package. You can
+                create 6 NFTs of {(selectedAmount * 100) / 120 / 6} MVT.
               </p>
             )}
             {/* Note: You had selected {selectedAmount * 1.1} USDT package. You can

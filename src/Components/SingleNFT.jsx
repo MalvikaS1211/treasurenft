@@ -224,7 +224,7 @@ export default function SingleNFT() {
       if (userBalance < totalNFTAmount) {
         setIsLoading(false);
         return toast.error(
-          `You need to have at least ${totalNFTAmount} USDT to register`
+          `You need to have at least ${totalNFTAmount} MVT to register`
         );
       }
       const iphashRes = await handleMintNFT();
