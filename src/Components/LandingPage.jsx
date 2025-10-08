@@ -151,7 +151,7 @@ export default function DashboardNew() {
                                   class="sc-button header-slider style style-1 rocket fl-button pri-1"
                                   onClick={() => navigate("/signup")}
                                 >
-                                  <div className="d-flex justify-content-center gap-3">
+                                  <div className="d-flex justify-content-center gap-3 cursor-pointer">
                                     <FiUserPlus
                                       color="#fff"
                                       className="signupIcon"

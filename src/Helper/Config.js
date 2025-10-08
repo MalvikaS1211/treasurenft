@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = "0x51Ba9aEA6818628e287A9e07E9323bBbA1bA2464";
+export const CONTRACT_ADDRESS = "0x40BB0913E1a03d2bA2DD83659358386457B8485E";
 // export const CONTRACT_ADDRESS = "0x447C987fC2F77D69D90951B385858FBaB5b582d5";
 
 export const CONTRACT_ADDRESS_ABI = [
@@ -570,7 +570,7 @@ export const CONTRACT_ADDRESS_ABI = [
   },
   {
     inputs: [],
-    name: "MVT",
+    name: "MIRAIToken",
     outputs: [{ internalType: "contract IERC20", name: "", type: "address" }],
     stateMutability: "view",
     type: "function",
@@ -696,6 +696,13 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "getMiraiPriceInUsdt",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [
       { internalType: "address", name: "usdtAddress", type: "address" },
       { internalType: "address", name: "_owner", type: "address" },
@@ -803,23 +810,6 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "payPremium",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      { internalType: "address[]", name: "recipients", type: "address[]" },
-      { internalType: "uint256[]", name: "amounts", type: "uint256[]" },
-    ],
-    name: "payROI",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     inputs: [{ internalType: "address", name: "referrer", type: "address" }],
     name: "register",
     outputs: [],
@@ -860,8 +850,15 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "_mvt", type: "address" }],
-    name: "setMVT",
+    inputs: [{ internalType: "uint256", name: "_price", type: "uint256" }],
+    name: "setMiraiPriceInUsdt",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "_usdt", type: "address" }],
+    name: "setusdt",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -965,14 +962,14 @@ export const CONTRACT_ADDRESS_ABI = [
   },
   {
     inputs: [{ internalType: "uint256", name: "amt", type: "uint256" }],
-    name: "withdrawMVTToken",
+    name: "withdrawToken",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
     inputs: [{ internalType: "uint256", name: "amt", type: "uint256" }],
-    name: "withdrawToken",
+    name: "withdrawusdtToken",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",

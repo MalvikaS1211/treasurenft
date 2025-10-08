@@ -174,31 +174,22 @@ export default function FooterNew() {
                 <div class="widget-social style-1 mg-t32">
                   <ul>
                     <li>
-                      <a
-                        href="https://x.com/i/flow/login?redirect_after_login=%2Fmagic_verse_666"
-                        target="_blank"
-                      >
+                      <a href="" target="_blank">
                         <FaXTwitter />
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="http://medium.com/@magicverse666"
-                        target="_blank"
-                      >
+                      <a href="" target="_blank">
                         <BsMedium />
                       </a>
                     </li>
                     <li>
-                      <a href="https://t.me/magicverse_6669" target="_blank">
+                      <a href="" target="_blank">
                         <i class="fab fa-telegram-plane"></i>
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="https://www.reddit.com/user/magicverse666/?share_id=dfg-TAP1_q9B4IkwOGI9U&utm_content=1&utm_medium=android_app&utm_name=androidcss&utm_source=share&utm_term=1/"
-                        target="_blank"
-                      >
+                      <a href="" target="_blank">
                         <FaRedditAlien />
                       </a>
                     </li>
@@ -208,26 +199,17 @@ export default function FooterNew() {
                       </a>
                     </li> */}
                     <li>
-                      <a
-                        href="https://www.instagram.com/magic_verse_666/?igsh=ZDZrcWV0ZWdycGw4#"
-                        target="_blank"
-                      >
+                      <a href="" target="_blank">
                         <FaInstagram />
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="https://www.facebook.com/profile.php?id=61576285054414"
-                        target="_blank"
-                      >
+                      <a href="" target="_blank">
                         <FaFacebook />
                       </a>
                     </li>
                     <li>
-                      <a
-                        href="https://youtube.com/@magicverse-c4o?si=IkOqSaJgKGxw2-7S"
-                        target="_blank"
-                      >
+                      <a href="" target="_blank">
                         <FaYoutube />
                       </a>
                     </li>
