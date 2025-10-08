@@ -12,7 +12,7 @@ import {
 } from "../Helper/Web3";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
-import { base_url } from "../Helper/Config";
+import { base_url, MVT_TOKEN } from "../Helper/Config";
 import { getIdToAddress } from "../Helper/API_Functions";
 
 export default function Registration() {
@@ -65,7 +65,7 @@ export default function Registration() {
 
   const tokenApp = async (amt) => {
     try {
-      const appres = approveToken(amt);
+      const appres = approveToken(amt, MVT_TOKEN);
       await toast.promise(appres, {
         loading: "Approval in process",
         success: "Successfully approved",

@@ -29,7 +29,7 @@ import toast from "react-hot-toast";
 import { getBalance } from "@wagmi/core";
 import { opBNB, opBNBTestnet, polygon } from "wagmi/chains";
 import { createConfig, http } from "wagmi";
-import { base_url, USDT_TOKEN } from "../Helper/Config";
+import { base_url, MVT_TOKEN, USDT_TOKEN } from "../Helper/Config";
 import moment from "moment";
 export default function Dashboard() {
   const { address } = useAccount();
@@ -196,7 +196,7 @@ export default function Dashboard() {
 
   const tokenApp = async (amt) => {
     try {
-      const appres = approveToken(amt);
+      const appres = approveToken(amt, MVT_TOKEN);
       await toast.promise(appres, {
         loading: "Approval in process",
         success: "Approved Successfully",

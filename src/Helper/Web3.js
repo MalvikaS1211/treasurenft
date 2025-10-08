@@ -10,6 +10,7 @@ import {
   CONTRACT_ADDRESS,
   tokenAbi,
   USDT_TOKEN,
+  MVT_TOKEN,
 } from "../Helper/Config";
 import { config } from "../main";
 import Web3 from "web3";
@@ -53,7 +54,7 @@ export async function registerfn(refAddress, amt) {
 export async function approveToken(amt, token) {
   const result = await writeContract(config, {
     abi: tokenAbi,
-    address: token || USDT_TOKEN,
+    address: MVT_TOKEN,
     functionName: "approve",
     args: [
       CONTRACT_ADDRESS,
@@ -253,7 +254,7 @@ export async function fetchUserTokenBalance(address, token) {
   try {
     const balance = await getBalance(config, {
       address: address,
-      token: token || USDT_TOKEN,
+      token: MVT_TOKEN,
     });
     return balance.formatted;
   } catch (error) {
