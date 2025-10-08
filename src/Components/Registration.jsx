@@ -90,7 +90,7 @@ export default function Registration() {
       }
       const userBal = await fetchUserTokenBalance(address);
       if (userBal < 25) {
-        return toast.error("You need to have at least 25 USDT to register");
+        return toast.error("You need to have at least 25 MVT to register");
       }
       const appRes = await tokenApp(25);
       if (appRes) {

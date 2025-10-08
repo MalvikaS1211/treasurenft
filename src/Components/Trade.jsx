@@ -792,11 +792,16 @@ export default function Trade() {
                 <h2 className="new-modal-title" style={{ fontSize: "20px" }}>
                   📢 Important Notice
                 </h2>
-                <h2 className="new-modal-title" style={{ fontSize: "14px" }}>
+                {/* <h2 className="new-modal-title" style={{ fontSize: "14px" }}>
                   Dear Users,
-                </h2>
+                </h2> */}
               </div>
               <div style={{ color: "black", fontSize: "14px" }}>
+                Dear Users,
+              </div>
+              <div
+                style={{ color: "black", fontSize: "14px", paddingTop: "10px" }}
+              >
                 💰 An additional platform fee of 10 USDT will be applicable only
                 on the first package. ✅ This is a one-time fee to activate
                 smooth operations and ensure reliable services.
