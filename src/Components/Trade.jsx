@@ -12,6 +12,7 @@ import {
   getUserCreatedNftsFn,
   getUserInfo,
   SOCKET_SERVER_URL,
+  getUserLimits,
 } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
 import {
@@ -91,6 +92,7 @@ export default function Trade() {
       socket.disconnect();
     };
   }, []);
+
   const ReadyForBuy = async (tokenId) => {
     try {
       const isTradeAvailable = await new Promise((resolve, reject) => {
@@ -283,13 +285,15 @@ export default function Trade() {
           )} USDT to Buy`
         );
       }
-      const status = await ReadyForBuy(tokenId);
-      if (!status) {
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 2000);
-        return;
-      }
+      console.log("123");
+      // const status = await ReadyForBuy(tokenId);
+      // console.log(status, "status");
+      // if (!status) {
+      //   setTimeout(() => {
+      //     setIsLoading(false);
+      //   }, 2000);
+      //   return;
+      // }
       const res = await getReadyForBuyFn(
         address,
         Number(initialPrice) / 1e18,
@@ -343,7 +347,7 @@ export default function Trade() {
   };
   const UserInfo = async () => {
     try {
-      const res = await getUserInfo(address);
+      const res = await getUserLimits(address);
       setAllUsers(res.userLimits);
       // console.log("UserInfo in SingleNFT", res.userLimits);
     } catch (error) {
@@ -464,7 +468,7 @@ export default function Trade() {
 
         <div className="p-4" style={{ background: "var(--primary-bg-color)" }}>
           <div class="total-grid" style={{ marginBottom: "3%" }}>
-            <div class="total-card">
+            {/* <div class="total-card">
               <div class="sub-total">
                 <h6>Bonus Limit</h6>
               </div>
@@ -474,8 +478,8 @@ export default function Trade() {
                   : 0}
                 <span> USDT</span>
               </p>
-            </div>
-            <div class="total-card">
+            </div> */}
+            {/* <div class="total-card">
               <div class="sub-total">
                 <h6>Max Limit </h6>
               </div>
@@ -487,7 +491,7 @@ export default function Trade() {
                   : 0}
                 <span> USDT</span>
               </p>
-            </div>
+            </div> */}
             <div class="total-card">
               <div class="sub-total">
                 <h6>Total Limit Remaining</h6>

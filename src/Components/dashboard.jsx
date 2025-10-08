@@ -11,7 +11,11 @@ import { FaCrown } from "react-icons/fa6";
 import { TfiCup } from "react-icons/tfi";
 import { PiFlowerTulipDuotone } from "react-icons/pi";
 import { useAccount } from "wagmi";
-import { getIdToAddress, getUserInfo } from "../Helper/API_Functions";
+import {
+  getIdToAddress,
+  getUserInfo,
+  getUserStats,
+} from "../Helper/API_Functions";
 import { useBalance } from "wagmi";
 import { fetchBalance } from "@wagmi/core";
 import {
@@ -35,7 +39,7 @@ export default function Dashboard() {
   const [availableBal, setAvailableBal] = useState(0);
   const [timeLeft, setTimeLeft] = useState(null);
   const [balanceData, setBalanceData] = useState(0);
-
+  const [userProfitData, setUserProfitData] = useState();
   const data = new URLSearchParams(window.location.search);
   const refLink = data.get("ref");
   const uniqueId = allUsers?.userInfo?.[0]?.uniqueRandomId || "defaultId";
@@ -57,7 +61,14 @@ export default function Dashboard() {
       console.error("Error fetching token balance:", error);
     }
   }
-
+  const UserProfits = async () => {
+    try {
+      const res = await getUserStats(address);
+      setUserProfitData(res);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   const userBalance = fetchUserTokenBalance(address);
 
   const packages = [
@@ -103,54 +114,6 @@ export default function Dashboard() {
       subscription: "200",
       range: "$5000 ",
     },
-    // {
-    //   name: "Legend",
-    //   color: "rgb(212, 55, 102)",
-    //   subscription: "330",
-    //   range: "$7400",
-    // },
-    // {
-    //   name: "Titan",
-    //   color: "rgb(162, 55, 212)",
-    //   subscription: "415",
-    //   range: "$10100",
-    // },
-    // {
-    //   name: "Pioneer",
-    //   color: "rgb(147, 99, 43)",
-    //   subscription: "510",
-    //   range: "$13500",
-    // },
-    // {
-    //   name: "Architect",
-    //   color: "rgb(113, 114, 19)",
-    //   subscription: "615",
-    //   range: "$17600",
-    // },
-    // {
-    //   name: "Emperor",
-    //   color: "rgb(230, 10, 76)",
-    //   subscription: "725",
-    //   range: "$22500",
-    // },
-    // {
-    //   name: "Master",
-    //   color: "rgb(212, 55, 102)",
-    //   subscription: "845",
-    //   range: "$28100",
-    // },
-    // {
-    //   name: "King",
-    //   color: "rgb(160, 212, 54)",
-    //   subscription: "990",
-    //   range: "$34700",
-    // },
-    // {
-    //   name: "Grandmaster",
-    //   color: "rgb(147, 99, 43)",
-    //   subscription: "1125",
-    //   range: "$42200",
-    // },
   ];
 
   const UserInfo = async () => {
@@ -262,7 +225,8 @@ export default function Dashboard() {
       getUserInFoFromContract();
       UserInfo();
       fetchUserTokenBalance();
-      getIdFromUser();
+      UserProfits();
+      // getIdFromUser();
     }
   }, [address, isFetch]);
   const copyToClipboard = async () => {
@@ -322,16 +286,16 @@ export default function Dashboard() {
                   <p className="">{balanceData}</p>
                   <h6>My Total Income</h6>
                   <p className=" p-2">
-                    {Math.max(
-                      Number(allUsers?.userLastDealProfit || 0) +
-                        (allUsers?.tradingProfit?.length > 0
-                          ? Number(allUsers.tradingProfit[0]?.profitOrLoss || 0)
-                          : 0) +
-                        (Number(dashboardData?.[8] || 0) +
-                          Number(dashboardData?.[9] || 0) +
-                          Number(dashboardData?.[10] || 0)) /
-                          1e18,
-                      0
+                    {(
+                      (userProfitData?.tradingProfit?.length > 0
+                        ? Number(
+                            userProfitData.tradingProfit[0]?.profitOrLoss || 0
+                          )
+                        : 0) +
+                      (Number(dashboardData?.[8] || 0) +
+                        Number(dashboardData?.[9] || 0) +
+                        Number(dashboardData?.[10] || 0)) /
+                        1e18
                     ).toFixed(4)}
                   </p>
                 </div>
@@ -394,11 +358,9 @@ export default function Dashboard() {
                       <h6>Trade Income</h6>
                     </div>
                     <p>
-                      {allUsers?.tradingProfit?.length > 0
-                        ? Math.max(
-                            Number(allUsers.tradingProfit[0]?.profitOrLoss) +
-                              Number(allUsers?.userLastDealProfit),
-                            0
+                      {userProfitData?.tradingProfit?.length > 0
+                        ? Number(
+                            userProfitData.tradingProfit[0]?.profitOrLoss
                           ).toFixed(4)
                         : "0"}
 
