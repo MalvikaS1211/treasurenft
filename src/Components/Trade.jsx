@@ -50,7 +50,7 @@ export default function Trade() {
 
   const tokenApp1 = async (amt, token) => {
     try {
-      const appres = await toast.promise(approveToken(amt, token), {
+      const appres = await toast.promise(approveToken(amt, MVT_TOKEN), {
         loading: "Approval in process",
         success: "Successfully Approved",
         error: "Approval failed",
@@ -390,7 +390,7 @@ export default function Trade() {
       if (!address) {
         return toast.error("Please connect your wallet to pay Lev");
       }
-      const isApprove = await tokenApp1(50);
+      const isApprove = await tokenApp1(10);
       if (!isApprove) {
         return;
       }
@@ -802,7 +802,7 @@ export default function Trade() {
               <div
                 style={{ color: "black", fontSize: "14px", paddingTop: "10px" }}
               >
-                💰 An additional platform fee of 10 USDT will be applicable only
+                💰 An additional platform fee of 10 MVT will be applicable only
                 on the first package. ✅ This is a one-time fee to activate
                 smooth operations and ensure reliable services.
               </div>
