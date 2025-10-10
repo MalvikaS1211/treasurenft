@@ -647,7 +647,9 @@ export default function Trade() {
                                 <div className="info">
                                   <span>Creator</span>
                                   <h6>
-                                    <a href="#">{nft.creator?.slice(-9)}</a>
+                                    <a href="#" className="text-dark">
+                                      {nft.creator?.slice(-9)}
+                                    </a>
                                   </h6>
                                 </div>
                               </div>
