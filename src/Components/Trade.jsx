@@ -781,7 +781,7 @@ export default function Trade() {
           </>
         )}
       </div>
-      <div>
+      {/* <div>
         {isNew && (
           <div className="new-modal-overlay" onClick={() => setOpen(false)}>
             <div
@@ -792,9 +792,7 @@ export default function Trade() {
                 <h2 className="new-modal-title" style={{ fontSize: "20px" }}>
                   📢 Important Notice
                 </h2>
-                {/* <h2 className="new-modal-title" style={{ fontSize: "14px" }}>
-                  Dear Users,
-                </h2> */}
+               
               </div>
               <div style={{ color: "black", fontSize: "14px" }}>
                 Dear Users,
@@ -835,7 +833,7 @@ export default function Trade() {
             </div>
           </div>
         )}
-      </div>
+      </div> */}
       <div className="mt-4">
         <FooterNew />
       </div>
