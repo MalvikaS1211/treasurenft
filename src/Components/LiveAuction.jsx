@@ -89,10 +89,10 @@ export default function LiveAuction() {
                 <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div className="swiper-slide">
                     <div className="slider-item">
-                      <div className="sc-card-product explode style2 live-Auction-card">
+                      <div className="sc-card-product explode style2">
                         <div className="card-media">
                           <a>
-                            <img src={Piggy} alt="Hamlet Contemplates" />
+                            <img src={Piggy} alt="Trimphant" />
                           </a>
                         </div>
                         <div className="card-title">
@@ -108,7 +108,7 @@ export default function LiveAuction() {
                             <div class="info">
                               <span>Creator</span>
                               <h6>
-                                <a>VisionMorph</a>
+                                <a>Chris Torres</a>
                               </h6>
                             </div>
                           </div>

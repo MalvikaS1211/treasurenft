@@ -10,6 +10,7 @@ import { FaMedal } from "react-icons/fa6";
 import { FaCrown } from "react-icons/fa6";
 import { TfiCup } from "react-icons/tfi";
 import { PiFlowerTulipDuotone } from "react-icons/pi";
+import { FaRegCopy } from "react-icons/fa6";
 import { useAccount } from "wagmi";
 import {
   getIdToAddress,
@@ -301,9 +302,18 @@ export default function Dashboard() {
                 </div>
                 <div class="user-card wallet-card">
                   <h6>Referral Link</h6>
-                  <p onClick={copyToClipboard} className="copytheRefferal">
-                    {referralLink}
-                  </p>
+                  <div className="d-flex gap-1 align-items-center ">
+                    {" "}
+                    <p onClick={copyToClipboard} className="copytheRefferal">
+                      {referralLink}
+                    </p>
+                    <FaRegCopy
+                      onClick={copyToClipboard}
+                      color="white"
+                      className="fs-4 cursor-pointer"
+                    />
+                  </div>
+
                   <h6>Referred By</h6>
                   <p>{allUsers?.referrerInfo?.uniqueRandomId || 0}</p>
                 </div>

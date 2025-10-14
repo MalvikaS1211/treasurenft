@@ -12,6 +12,7 @@ import { useAccount } from "wagmi";
 import { isUserExist } from "../Helper/Web3";
 import toast from "react-hot-toast";
 import News from "./News";
+import { IoClose } from "react-icons/io5";
 const Header = () => {
   const { address } = useAccount();
 
@@ -54,6 +55,7 @@ const Header = () => {
                 <Link to="/buyNft">Trade</Link>
                 <Link to="/NFTcreation">Create NFT</Link>
                 <Link to="/dashboard">Dashboard</Link>
+                <Link to="/">Mirai Token</Link>
               </>
             ) : (
               <>
@@ -95,31 +97,35 @@ const Header = () => {
             data-bs-target="#offcanvasScrolling"
             aria-controls="offcanvasScrolling"
             className="hamburger-icon"
+            color="#fff"
           />
         </div>
         <div
-          class="offcanvas offcanvas-start"
+          class="offcanvas offcanvas-start bg-black text-white"
           data-bs-scroll="true"
           data-bs-backdrop="false"
           tabindex="-1"
           id="offcanvasScrolling"
           aria-labelledby="offcanvasScrollingLabel"
         >
-          <div class="offcanvas-header">
+          <div class="offcanvas-header pt-4">
             <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
               <img
                 src={Logo}
                 alt=""
                 className="haeder-logo"
-                style={{ width: "50%" }}
+                style={{ width: "70%" }}
               />
             </h5>
+
             <button
               type="button"
-              class="btn-close "
               data-bs-dismiss="offcanvas"
               aria-label="Close"
-            ></button>
+              className="bg-transparent border-0 text-white"
+            >
+              <IoClose size={28} color="#fff" />
+            </button>
           </div>
           <div class="offcanvas-body">
             <nav className="nav-head">
@@ -130,6 +136,7 @@ const Header = () => {
                   <Link to="/buyNft">Trade</Link>
                   <Link to="/NFTcreation">Create NFT</Link>
                   <Link to="/dashboard">Dashboard</Link>
+                  <Link to="/">Mirai Token</Link>
                 </>
               ) : (
                 <>

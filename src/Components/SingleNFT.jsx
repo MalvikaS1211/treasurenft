@@ -389,7 +389,7 @@ export default function SingleNFT() {
     <>
       <div>
         <p
-          className="pt-4 text-white"
+          className="pt-4 text-white p-4"
           style={{ textAlign: "justify", color: "black", fontSize: "16px" }}
         >
           <b> Note :</b> All NFTs must follow the ERC-721 standard. Content must

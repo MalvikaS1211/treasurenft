@@ -292,7 +292,9 @@ export default function Expore() {
                 ))
               ) : (
                 <div className="no-data-container">
-                  <div className="no-data-available">No data available</div>
+                  <div className="no-data-available text-white">
+                    No data available
+                  </div>
                 </div>
               )}
             </div>
@@ -392,7 +394,9 @@ export default function Expore() {
               ))
             ) : (
               <div className="no-data-container">
-                <div className="no-data-available">No data available</div>
+                <div className="no-data-available text-white">
+                  No data available
+                </div>
               </div>
             )}
           </div>
@@ -492,7 +496,9 @@ export default function Expore() {
               ))
             ) : (
               <div className="no-data-container">
-                <div className="no-data-available">No data available</div>
+                <div className="no-data-available text-white">
+                  No data available
+                </div>
               </div>
             )}
           </div>

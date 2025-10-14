@@ -2324,16 +2324,16 @@ header {
   align-items: center;
 }
 
-.dashboard-sidebar {
+/* .dashboard-sidebar {
   transition: transform 0.3s ease-in-out;
-  transform: translateX(-100%); /* Sidebar hidden by default */
-  /* background: linear-gradient(to right, #a0c4ff, #4383fe); */
+  transform: translateX(-100%); 
+ 
   background: #1e1e20;
 }
 
 .dashboard-sidebar.active {
-  transform: translateX(0); /* Sidebar slides in */
-}
+  transform: translateX(0); 
+} */
 
 .header-right {
   display: flex;
@@ -2360,7 +2360,7 @@ header {
 }
 @media (max-width: 748px) {
   .dashboard-container {
-    min-height: 100vh; /* let it grow naturally */
+    min-height: 100vh;
     overflow-y: auto; /* enable vertical scrolling */
   }
 }
@@ -2512,7 +2512,7 @@ td {
 }
 
 .dashboard-container {
-  height: 100vh;
+  /* height: 100vh; */
   padding: 1.5rem 1.5rem !important;
   background: var(--secondary-bg-color);
 }
