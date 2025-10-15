@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = "0x40BB0913E1a03d2bA2DD83659358386457B8485E";
+export const CONTRACT_ADDRESS = "0x1cD1168BcB6412bD6a97C13A11FF31bdbF7D60AC";
 // export const CONTRACT_ADDRESS = "0x447C987fC2F77D69D90951B385858FBaB5b582d5";
 
 export const CONTRACT_ADDRESS_ABI = [
@@ -852,6 +852,13 @@ export const CONTRACT_ADDRESS_ABI = [
   {
     inputs: [{ internalType: "uint256", name: "_price", type: "uint256" }],
     name: "setMiraiPriceInUsdt",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "_mirai", type: "address" }],
+    name: "setMiraiToken",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",

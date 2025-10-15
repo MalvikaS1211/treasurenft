@@ -1715,7 +1715,7 @@
   position: relative;
   background: var(--primary-bg-color);
   background-size: cover;
-  padding: 100px 0 20px;
+  padding: 150px 0 20px;
 }
 .home-2 .flat-title-page {
   padding: 84px 0 156px;
@@ -2474,7 +2474,7 @@ section.today-picks {
 }
 
 .mainslider.home .flat-slider {
-  padding: 0 15px;
+  /* padding: 0 15px; */
 }
 .right .mainslider.home .flat-slider {
   flex-direction: row-reverse;

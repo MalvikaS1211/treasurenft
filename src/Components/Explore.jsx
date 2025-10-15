@@ -193,7 +193,7 @@ export default function Expore() {
         <div className="dashboardbg">
           <div
             class="col-md-12 "
-            style={{ paddingTop: "50px", paddingBottom: "20px" }}
+            style={{ paddingTop: "100px", paddingBottom: "20px" }}
           >
             <h1 class="heading mb-style" style={{ textAlign: "center" }}>
               <span class="tf-text s1">NFT History</span>

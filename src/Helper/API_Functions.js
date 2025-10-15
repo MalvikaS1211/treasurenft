@@ -9,8 +9,8 @@ export const SOCKET_SERVER_URL = "http://173.212.221.63:8081";
 // export const URLApi = "http://localhost:8081/api";
 // export const SOCKET_SERVER_URL = "http://localhost:8081";
 
-// export const URLApi = "http://192.168.1.185:8081/api";
-// export const SOCKET_SERVER_URL = "http://192.168.1.185:8081/api";
+// export const URLApi = "http://192.168.1.25:8081/api";
+// export const SOCKET_SERVER_URL = "http://192.168.1.25:8081/api";
 
 // export const SOCKET_SERVER_URL = "https://magicverse-backend.onrender.com";
 

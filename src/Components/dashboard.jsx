@@ -31,6 +31,7 @@ import { opBNB, opBNBTestnet, polygon } from "wagmi/chains";
 import { createConfig, http } from "wagmi";
 import { base_url, USDT_TOKEN } from "../Helper/Config";
 import moment from "moment";
+import { BsClock } from "react-icons/bs";
 export default function Dashboard() {
   const { address } = useAccount();
   // const address = "0x3deCa2f62B20D6360e0948286D659dE2e19782Be";
@@ -40,6 +41,7 @@ export default function Dashboard() {
   const [availableBal, setAvailableBal] = useState(0);
   const [timeLeft, setTimeLeft] = useState(null);
   const [balanceData, setBalanceData] = useState(0);
+
   const [userProfitData, setUserProfitData] = useState();
   const data = new URLSearchParams(window.location.search);
   const refLink = data.get("ref");
@@ -179,46 +181,125 @@ export default function Dashboard() {
     }
   };
 
-  const countdown = () => {
+  // const countdown = () => {
+  //   if (
+  //     !address ||
+  //     !allUsers?.userPackageInfo?.[0]?.time ||
+  //     !allUsers?.expiryTime
+  //   )
+  //     return;
+
+  //   const interval = setInterval(() => {
+  //     const time = allUsers?.userPackageInfo[0]?.time;
+  //     const expiryDuration = allUsers?.expiryTime;
+
+  //     if (!time || !expiryDuration) {
+  //       console.log("Missing time or expiry duration");
+  //       return;
+  //     }
+
+  //     const expiryTime = time + expiryDuration;
+  //     const now = moment().unix();
+  //     const remainingSeconds = expiryTime - now;
+
+  //     if (remainingSeconds <= 0) {
+  //       clearInterval(interval);
+  //       setTimeLeft("Expired");
+  //       console.log("Package expired");
+  //     } else {
+  //       const duration = moment.duration(remainingSeconds, "seconds");
+  //       const days = Math.floor(duration.asDays());
+  //       const hours = duration.hours();
+  //       const minutes = duration.minutes();
+  //       const seconds = duration.seconds();
+  //       setTimeLeft(`${days}DD ${hours}HH ${minutes}MM ${seconds}SS`);
+  //     }
+  //   }, 1000);
+
+  //   return () => clearInterval(interval);
+  // };
+
+  // useEffect(() => {
+  //   countdown();
+  // }, [address, allUsers]);
+
+  // useEffect(() => {
+  //   if (
+  //     !address ||
+  //     !allUsers?.userPackageInfo?.[0]?.time ||
+  //     !allUsers?.expiryTime
+  //   ) {
+  //     setTimeLeft("");
+  //     return;
+  //   }
+
+  //   const time = allUsers.userPackageInfo[0].time;
+  //   const expiryDuration = allUsers.expiryTime;
+
+  //   const interval = setInterval(() => {
+  //     const expiryTime = time + expiryDuration;
+  //     const now = moment().unix();
+  //     const remainingSeconds = expiryTime - now;
+
+  //     if (remainingSeconds <= 0) {
+  //       clearInterval(interval);
+  //       setTimeLeft("Expired");
+  //     } else {
+  //       const duration = moment.duration(remainingSeconds, "seconds");
+  //       const days = Math.floor(duration.asDays());
+  //       const hours = duration.hours();
+  //       const minutes = duration.minutes();
+  //       const seconds = duration.seconds();
+  //       setTimeLeft(
+  //         `${days}D ${hours.toString().padStart(2, "0")}H ${minutes
+  //           .toString()
+  //           .padStart(2, "0")}M ${seconds.toString().padStart(2, "0")}S`
+  //       );
+  //     }
+  //   }, 1000);
+
+  //   return () => clearInterval(interval);
+  // }, [address, allUsers]);
+  const [timeParts, setTimeParts] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
     if (
       !address ||
       !allUsers?.userPackageInfo?.[0]?.time ||
       !allUsers?.expiryTime
-    )
+    ) {
+      setTimeParts({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       return;
+    }
+
+    const time = allUsers.userPackageInfo[0].time;
+    const expiryDuration = allUsers.expiryTime;
 
     const interval = setInterval(() => {
-      const time = allUsers?.userPackageInfo[0]?.time; // assumed to be Unix timestamp in seconds
-      const expiryDuration = allUsers?.expiryTime; // assumed to be in seconds
-
-      if (!time || !expiryDuration) {
-        console.log("Missing time or expiry duration");
-        return;
-      }
-
       const expiryTime = time + expiryDuration;
-      const now = moment().unix(); // Current Unix timestamp in seconds
+      const now = moment().unix();
       const remainingSeconds = expiryTime - now;
-      // console.log(remainingSeconds, time, expiryDuration, now, "count:::");
+
       if (remainingSeconds <= 0) {
         clearInterval(interval);
-        setTimeLeft("Expired");
-        console.log("Package expired");
+        setTimeParts({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       } else {
         const duration = moment.duration(remainingSeconds, "seconds");
         const days = Math.floor(duration.asDays());
         const hours = duration.hours();
         const minutes = duration.minutes();
         const seconds = duration.seconds();
-        setTimeLeft(`${days}DD ${hours}HH ${minutes}MM ${seconds}SS`);
+
+        setTimeParts({ days, hours, minutes, seconds });
       }
     }, 1000);
 
     return () => clearInterval(interval);
-  };
-
-  useEffect(() => {
-    countdown();
   }, [address, allUsers]);
 
   useEffect(() => {
@@ -268,9 +349,78 @@ export default function Dashboard() {
         >
           <Navbar title="Dashboard"></Navbar>
           {/* <HeaderDashboard title="Dashboard"></HeaderDashboard> */}
-          <h3 class="time-heading" id="timeDisplay">
+          <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+            <div>
+              <button
+                className="btn-upgrade"
+                type="button"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(to right, rgb(33, 82, 175) 0%, rgb(107, 167, 231) 51%, rgb(33, 82, 175) 100%) ",
+                  borderRadius: "5px",
+                }}
+              >
+                Get Token
+              </button>
+            </div>
+            <div
+              className="d-flex justify-content-center align-items-center text-white p-4"
+              style={{
+                backgroundColor: "#000",
+                borderRadius: "12px",
+                // minHeight: "200px",
+              }}
+            >
+              <div className="d-flex align-items-center justify-content-center">
+                {[
+                  { label: "Day(s)", value: timeParts.days },
+                  { label: "Hour(s)", value: timeParts.hours },
+                  { label: "Minute(s)", value: timeParts.minutes },
+                  { label: "Second(s)", value: timeParts.seconds },
+                ].map((item, index) => (
+                  <div
+                    key={index}
+                    className="text-center mx-3 position-relative"
+                  >
+                    <h1
+                      className=""
+                      style={{
+                        fontSize: "40px",
+                        marginBottom: "8px",
+                        fontWeight: "200",
+                      }}
+                    >
+                      {item.value.toString().padStart(2, "0")}
+                    </h1>
+                    <div
+                      className="text-secondary"
+                      style={{ fontSize: "14px", opacity: 0.8 }}
+                    >
+                      {item.label}
+                    </div>
+
+                    {/* Divider line between items */}
+                    {index < 3 && (
+                      <div
+                        className="position-absolute"
+                        style={{
+                          right: "-13px",
+                          top: "14%",
+                          height: "50%",
+                          width: "1px",
+                          backgroundColor: "#444",
+                        }}
+                      ></div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* <h3 class="time-heading" id="timeDisplay">
             {timeLeft || "00 DD:00 HH:00 MM:00 SS"}
-          </h3>
+          </h3> */}
           <div>
             <div class="">
               <div class="user-grid">
