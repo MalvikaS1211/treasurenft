@@ -13,6 +13,8 @@ import {
   getUserInfo,
   SOCKET_SERVER_URL,
   getUserLimits,
+  isInSale,
+  insertInSale,
 } from "../Helper/API_Functions";
 import { useAccount } from "wagmi";
 import {
@@ -261,6 +263,24 @@ export default function Trade() {
     }
   };
 
+  const isTokenAvailaible = async (tokenId) => {
+    try {
+      const resp = await isInSale(tokenId);
+      console.log(resp, !resp.isInSale, "Fasfssiuhfiahs");
+      if (!resp.isInSale) {
+        console.log("in if Fasfssiuhfiahs");
+        const create = await insertInSale(tokenId);
+        if (create.success) {
+          return true;
+        }
+      } else {
+        return false;
+      }
+    } catch (error) {
+      console.log(error, "error in");
+    }
+  };
+
   const BuyNft = async (
     initialPrice,
     title,
@@ -273,7 +293,12 @@ export default function Trade() {
 
     try {
       setIsLoading(true);
-
+      // const resp = await isTokenAvailaible(tokenId);
+      // console.log(resp, "Fasfssiuhfiahs ");
+      // if (!resp) {
+      //   setIsLoading(false);
+      //   return toast.error("Trade not available, please Try again later");
+      // }
       const userBalance = await fetchUserTokenBalance(address);
 
       // console.log(userBalance, totalAmount, "::::");
@@ -633,14 +658,26 @@ export default function Trade() {
           </section>
         ) : (
           <>
-            <div class="d-flex justify-content-center">
+            <div
+              className="no-data-container"
+              style={{ background: "#18181a" }}
+            >
+              <div class="spinner-border text-white" role="status">
+                <span class="sr-only ">Loading...</span>
+              </div>
+              <div className="no-data-available text-white">
+                {" "}
+                Please wait We are loading data
+              </div>
+            </div>
+            {/* <div class="d-flex justify-content-center">
               <div class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
               </div>
             </div>
             <p className=" w-100" style={{ textAlign: "center" }}>
               Please wait We are loading data
-            </p>
+            </p> */}
           </>
         )}
       </div>

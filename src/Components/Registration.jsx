@@ -63,20 +63,20 @@ export default function Registration() {
     getRef();
   }, [window.location.search]);
 
-  const tokenApp = async (amt) => {
-    try {
-      const appres = approveToken(amt);
-      await toast.promise(appres, {
-        loading: "Approval in process",
-        success: "Successfully approved",
-        error: "Approve Failed",
-      });
-      return appres;
-    } catch (error) {
-      console.log(error);
-      return false;
-    }
-  };
+  // const tokenApp = async (amt) => {
+  //   try {
+  //     const appres = approveToken(amt);
+  //     await toast.promise(appres, {
+  //       loading: "Approval in process",
+  //       success: "Successfully approved",
+  //       error: "Approve Failed",
+  //     });
+  //     return appres;
+  //   } catch (error) {
+  //     console.log(error);
+  //     return false;
+  //   }
+  // };
 
   const userReg = async () => {
     try {
@@ -92,19 +92,19 @@ export default function Registration() {
       if (userBal < 40) {
         return toast.error("You need to have at least 15 USDT to register");
       }
-      const appRes = await tokenApp(40);
-      if (appRes) {
-        const reg = await registerfn(ref, 15);
-        if (reg) {
-          toast.success("You are navigating to the website!");
-          setTimeout(() => {
-            setRef("");
-            navigate("/");
-          }, 2000);
-        } else {
-          toast.error("Registration failed. Please try again.");
-        }
+      // const appRes = await tokenApp(40);
+      // if (appRes) {
+      const reg = await registerfn(ref, 15);
+      if (reg) {
+        toast.success("You are navigating to the website!");
+        setTimeout(() => {
+          setRef("");
+          navigate("/");
+        }, 2000);
+      } else {
+        toast.error("Registration failed. Please try again.");
       }
+      // }
     } catch (error) {
       console.log(error);
       toast.error("An error occurred during registration.");

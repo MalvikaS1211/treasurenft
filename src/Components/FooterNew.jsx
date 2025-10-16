@@ -157,7 +157,7 @@ export default function FooterNew() {
                     id="subscribe-form"
                     action="#"
                     method="GET"
-                    accept-charset="utf-8"
+                    acceptCharset="utf-8"
                     class="form-submit"
                   >
                     <input

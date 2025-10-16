@@ -21,6 +21,7 @@ import { useBalance } from "wagmi";
 import { fetchBalance } from "@wagmi/core";
 import {
   approveToken,
+  fetchNftIncome,
   getAvailaibleBalance,
   upgradePackageFn,
   usersFn,
@@ -53,17 +54,7 @@ export default function Dashboard() {
       [opBNB.id]: http(),
     },
   });
-  async function fetchUserTokenBalance() {
-    try {
-      const balance = await getBalance(config, {
-        address: address,
-        token: USDT_TOKEN,
-      });
-      setBalanceData(parseFloat(balance.formatted).toFixed(4));
-    } catch (error) {
-      console.error("Error fetching token balance:", error);
-    }
-  }
+
   const UserProfits = async () => {
     try {
       const res = await getUserStats(address);
@@ -72,7 +63,6 @@ export default function Dashboard() {
       console.log(error);
     }
   };
-  const userBalance = fetchUserTokenBalance(address);
 
   const packages = [
     {
@@ -180,86 +170,6 @@ export default function Dashboard() {
       console.error("Error in getIdFromUser:", error);
     }
   };
-
-  // const countdown = () => {
-  //   if (
-  //     !address ||
-  //     !allUsers?.userPackageInfo?.[0]?.time ||
-  //     !allUsers?.expiryTime
-  //   )
-  //     return;
-
-  //   const interval = setInterval(() => {
-  //     const time = allUsers?.userPackageInfo[0]?.time;
-  //     const expiryDuration = allUsers?.expiryTime;
-
-  //     if (!time || !expiryDuration) {
-  //       console.log("Missing time or expiry duration");
-  //       return;
-  //     }
-
-  //     const expiryTime = time + expiryDuration;
-  //     const now = moment().unix();
-  //     const remainingSeconds = expiryTime - now;
-
-  //     if (remainingSeconds <= 0) {
-  //       clearInterval(interval);
-  //       setTimeLeft("Expired");
-  //       console.log("Package expired");
-  //     } else {
-  //       const duration = moment.duration(remainingSeconds, "seconds");
-  //       const days = Math.floor(duration.asDays());
-  //       const hours = duration.hours();
-  //       const minutes = duration.minutes();
-  //       const seconds = duration.seconds();
-  //       setTimeLeft(`${days}DD ${hours}HH ${minutes}MM ${seconds}SS`);
-  //     }
-  //   }, 1000);
-
-  //   return () => clearInterval(interval);
-  // };
-
-  // useEffect(() => {
-  //   countdown();
-  // }, [address, allUsers]);
-
-  // useEffect(() => {
-  //   if (
-  //     !address ||
-  //     !allUsers?.userPackageInfo?.[0]?.time ||
-  //     !allUsers?.expiryTime
-  //   ) {
-  //     setTimeLeft("");
-  //     return;
-  //   }
-
-  //   const time = allUsers.userPackageInfo[0].time;
-  //   const expiryDuration = allUsers.expiryTime;
-
-  //   const interval = setInterval(() => {
-  //     const expiryTime = time + expiryDuration;
-  //     const now = moment().unix();
-  //     const remainingSeconds = expiryTime - now;
-
-  //     if (remainingSeconds <= 0) {
-  //       clearInterval(interval);
-  //       setTimeLeft("Expired");
-  //     } else {
-  //       const duration = moment.duration(remainingSeconds, "seconds");
-  //       const days = Math.floor(duration.asDays());
-  //       const hours = duration.hours();
-  //       const minutes = duration.minutes();
-  //       const seconds = duration.seconds();
-  //       setTimeLeft(
-  //         `${days}D ${hours.toString().padStart(2, "0")}H ${minutes
-  //           .toString()
-  //           .padStart(2, "0")}M ${seconds.toString().padStart(2, "0")}S`
-  //       );
-  //     }
-  //   }, 1000);
-
-  //   return () => clearInterval(interval);
-  // }, [address, allUsers]);
   const [timeParts, setTimeParts] = useState({
     days: 0,
     hours: 0,
@@ -306,7 +216,7 @@ export default function Dashboard() {
     if (address) {
       getUserInFoFromContract();
       UserInfo();
-      fetchUserTokenBalance();
+
       UserProfits();
       // getIdFromUser();
     }
@@ -334,6 +244,19 @@ export default function Dashboard() {
       toast.error("Failed to copy the link.");
     }
   };
+  const [nftIncomes, setNftIncomes] = useState([]);
+  const nftIncomesFn = async () => {
+    try {
+      const res = await fetchNftIncome(address);
+      console.log(res, address, nftIncomes?.[0], "nftIncomes");
+      setNftIncomes(res);
+    } catch (error) {
+      console.log("Error in nftIncomes:", error);
+    }
+  };
+  useEffect(() => {
+    nftIncomesFn();
+  }, [address]);
 
   return (
     <>
@@ -387,14 +310,18 @@ export default function Dashboard() {
                       style={{
                         fontSize: "40px",
                         marginBottom: "8px",
-                        fontWeight: "200",
+                        fontWeight: "500",
                       }}
                     >
                       {item.value.toString().padStart(2, "0")}
                     </h1>
                     <div
                       className="text-secondary"
-                      style={{ fontSize: "14px", opacity: 0.8 }}
+                      style={{
+                        fontSize: "14px",
+                        color: "#b4b4b4ff",
+                        fontWeight: "500",
+                      }}
                     >
                       {item.label}
                     </div>
@@ -575,13 +502,52 @@ export default function Dashboard() {
                     </div>
                     <p>{allUsers?.userInfo?.[0]?.totalDirectCount ?? "0"}</p>
                   </div>
+                </div>
+                <h3 className="dashboard-heading">NFT Incomes</h3>
+                <div
+                  class="total-grid"
+                  style={{ marginTop: "center", marginBottom: "3%" }}
+                >
                   <div class="total-card">
                     <div class="sub-total">
-                      <h6>Group Trading Income</h6>
+                      <h6>Team Trading Income</h6>
                     </div>
                     <p>
-                      <p>{allUsers?.totalRewardInEth ?? 0}</p>
+                      {allUsers?.totalRewardInEth ?? 0}
+                      <span> USDT</span>
+                    </p>
+                  </div>
+                  <div class="total-card">
+                    <div class="sub-total">
+                      <h6>Trading Income</h6>
+                    </div>
+                    <p>
+                      {nftIncomes?.[0]
+                        ? (Number(nftIncomes?.[0]) / 1e18).toFixed(4)
+                        : "0"}
 
+                      <span> USDT</span>
+                    </p>
+                  </div>
+                  <div class="total-card">
+                    <div class="sub-total">
+                      <h6>Level Income</h6>
+                    </div>
+                    <p>
+                      {nftIncomes?.[1]
+                        ? (Number(nftIncomes?.[1]) / 1e18).toFixed(4)
+                        : "0"}
+                      <span> USDT</span>
+                    </p>
+                  </div>
+                  <div class="total-card">
+                    <div class="sub-total">
+                      <h6>Direct Income</h6>
+                    </div>
+                    <p>
+                      {nftIncomes?.[2]
+                        ? (Number(nftIncomes?.[2]) / 1e18).toFixed(4)
+                        : "0"}
                       <span> USDT</span>
                     </p>
                   </div>

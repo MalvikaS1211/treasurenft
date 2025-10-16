@@ -1,4 +1,4 @@
-export const CONTRACT_ADDRESS = "0x1cD1168BcB6412bD6a97C13A11FF31bdbF7D60AC";
+export const CONTRACT_ADDRESS = "0xd054fba7875f7b3c5c858b476f7860b85dF9a7eb";
 // export const CONTRACT_ADDRESS = "0x447C987fC2F77D69D90951B385858FBaB5b582d5";
 
 export const CONTRACT_ADDRESS_ABI = [
@@ -640,23 +640,6 @@ export const CONTRACT_ADDRESS_ABI = [
   },
   {
     inputs: [
-      { internalType: "string[]", name: "titles", type: "string[]" },
-      { internalType: "string[]", name: "descriptions", type: "string[]" },
-      { internalType: "string[]", name: "metadataURIs", type: "string[]" },
-      { internalType: "uint256[]", name: "initialPrices", type: "uint256[]" },
-      { internalType: "uint256", name: "totalAmt", type: "uint256" },
-      { internalType: "uint8", name: "v", type: "uint8" },
-      { internalType: "bytes32", name: "r", type: "bytes32" },
-      { internalType: "bytes32", name: "s", type: "bytes32" },
-      { internalType: "uint256", name: "tokenId", type: "uint256" },
-    ],
-    name: "createNFTslast",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
       { internalType: "address", name: "", type: "address" },
       { internalType: "uint256", name: "", type: "uint256" },
     ],
@@ -714,6 +697,15 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
+    inputs: [],
+    name: "interfaceContract",
+    outputs: [
+      { internalType: "contract IBuyContract", name: "", type: "address" },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [
       { internalType: "address", name: "owner", type: "address" },
       { internalType: "address", name: "operator", type: "address" },
@@ -754,6 +746,17 @@ export const CONTRACT_ADDRESS_ABI = [
     inputs: [],
     name: "name",
     outputs: [{ internalType: "string", name: "", type: "string" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "", type: "address" }],
+    name: "nftIncome",
+    outputs: [
+      { internalType: "uint256", name: "tradingIncome", type: "uint256" },
+      { internalType: "uint256", name: "levelIncome", type: "uint256" },
+      { internalType: "uint256", name: "directIncome", type: "uint256" },
+    ],
     stateMutability: "view",
     type: "function",
   },
@@ -803,13 +806,6 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "payLev",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     inputs: [{ internalType: "address", name: "referrer", type: "address" }],
     name: "register",
     outputs: [],
@@ -845,6 +841,13 @@ export const CONTRACT_ADDRESS_ABI = [
       { internalType: "bool", name: "approved", type: "bool" },
     ],
     name: "setApprovalForAll",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "_contract", type: "address" }],
+    name: "setInterface",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",

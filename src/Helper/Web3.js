@@ -249,3 +249,18 @@ export async function fetchUserTokenBalance(address) {
     console.log(error);
   }
 }
+
+export async function fetchNftIncome(address) {
+  try {
+    const result = await readContract(config, {
+      abi: CONTRACT_ADDRESS_ABI,
+      address: CONTRACT_ADDRESS,
+      functionName: "nftIncome",
+      args: [address],
+    });
+
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+}

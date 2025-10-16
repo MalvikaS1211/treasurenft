@@ -280,13 +280,13 @@
   color: var(--primary-color3);
 }
 
-.sc-button.style-1:hover span {
+/* .sc-button.style-1:hover span {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
-}
+} */
 
 /* / style-2 / */
 .sc-button.style-2 {
@@ -307,22 +307,22 @@
   font-size: 15px;
   font-weight: 700px;
   color: var(--primary-color2);
-  -webkit-transition: all 0.3s ease-in-out;
+  /* -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
 
 .sc-button.style-2 i {
   font-size: 18px;
   color: var(--primary-color3);
   margin-right: 8px;
-  -webkit-transition: all 0.3s ease-in-out;
+  /* -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
 .is_dark .sc-button.style-2 i {
   color: #fff;
@@ -331,11 +331,11 @@
 .sc-button.style-2:hover span,
 .sc-button.style-2:hover i {
   color: #fff;
-  -webkit-transition: all 0.3s ease-in-out;
+  /* -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
 
 /* style loadmore */
@@ -385,11 +385,11 @@
 
 .sc-button.style.bag span::before {
   /* content: "\e901"; */
-  -webkit-transition: all 0.05s ease;
+  /* -webkit-transition: all 0.05s ease;
   -moz-transition: all 0.05s ease;
   -ms-transition: all 0.05s ease;
   -o-transition: all 0.05s ease;
-  transition: all 0.05s ease;
+  transition: all 0.05s ease; */
 }
 
 .sc-button.style.bag:hover span::before {

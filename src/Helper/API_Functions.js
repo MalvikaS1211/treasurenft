@@ -9,8 +9,8 @@ export const SOCKET_SERVER_URL = "http://173.212.221.63:8081";
 // export const URLApi = "http://localhost:8081/api";
 // export const SOCKET_SERVER_URL = "http://localhost:8081";
 
-// export const URLApi = "http://192.168.1.25:8081/api";
-// export const SOCKET_SERVER_URL = "http://192.168.1.25:8081/api";
+// export const URLApi = "http://192.168.1.47:8081/api";
+// export const SOCKET_SERVER_URL = "http://192.168.1.47:8081/api";
 
 // export const SOCKET_SERVER_URL = "https://magicverse-backend.onrender.com";
 
@@ -537,4 +537,18 @@ export async function getUserStats(address) {
   } catch (error) {
     console.log("Error getUserInfo Admin:", error);
   }
+}
+
+export async function isInSale(address) {
+  const response = await axios.post(URLApi + "/isInsale", {
+    tokenId: address,
+  });
+  return response.data;
+}
+
+export async function insertInSale(address) {
+  const response = await axios.post(URLApi + "/insertInSale", {
+    tokenId: address,
+  });
+  return response.data;
 }
