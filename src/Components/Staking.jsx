@@ -149,7 +149,7 @@ export default function Staking() {
               <p>
                 {Number(stakeData?.totalAmountStaked || 0).toFixed(4)}
 
-                <span> USDT</span>
+                <span> MVT</span>
               </p>
             </div>
             <div class="total-card" style={{ border: "1px solid white" }}>
@@ -197,7 +197,7 @@ export default function Staking() {
               </button>
             </div>
           </div>
-          {stakeData?.stakingAmount > 0 && (
+          {stakeData?.stakingAmount > 0 && stakeData.status == "pending" && (
             <p className="text-dark">
               Note : Your request of {stakeData.stakingAmount?.toFixed(4)} USDT
               is {stakeData.status} . Please wait for the approval.
@@ -212,7 +212,7 @@ export default function Staking() {
                     <tr>
                       <th>Sr.No</th>
 
-                      <th>Amount Claimed</th>
+                      <th>Amount Requested</th>
                       <th>Status</th>
                       <th>Time</th>
                     </tr>
@@ -223,7 +223,7 @@ export default function Staking() {
                         <tr key={index}>
                           <td>{(currentPage - 1) * itemPerpage + index + 1}</td>
 
-                          <td>{data?.amount?.toFixed(2)}</td>
+                          <td>{data?.amount?.toFixed(2)} MVT</td>
                           <td>{data?.status}</td>
                           <td>
                             {moment(data?.createdAt).format(
