@@ -282,6 +282,9 @@ export default function Dashboard() {
                     "linear-gradient(to right, rgb(33, 82, 175) 0%, rgb(107, 167, 231) 51%, rgb(33, 82, 175) 100%) ",
                   borderRadius: "5px",
                 }}
+                onClick={() => {
+                  window.open("https://swap-inout.vercel.app/"), "_blank";
+                }}
               >
                 Get Token
               </button>

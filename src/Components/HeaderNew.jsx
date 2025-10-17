@@ -55,7 +55,9 @@ const Header = () => {
                 <Link to="/buyNft">Trade</Link>
                 <Link to="/NFTcreation">Create NFT</Link>
                 <Link to="/dashboard">Dashboard</Link>
-                <Link to="/">Mirai Token</Link>
+                <Link to="https://swap-inout.vercel.app/" target="_blank">
+                  Mirai Token
+                </Link>
               </>
             ) : (
               <>
@@ -136,7 +138,9 @@ const Header = () => {
                   <Link to="/buyNft">Trade</Link>
                   <Link to="/NFTcreation">Create NFT</Link>
                   <Link to="/dashboard">Dashboard</Link>
-                  <Link to="/">Mirai Token</Link>
+                  <Link to="https://swap-inout.vercel.app/" target="_blank">
+                    Mirai Token
+                  </Link>
                 </>
               ) : (
                 <>
