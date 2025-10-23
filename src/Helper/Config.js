@@ -1,5 +1,5 @@
-export const CONTRACT_ADDRESS = "0xd054fba7875f7b3c5c858b476f7860b85dF9a7eb";
-// export const CONTRACT_ADDRESS = "0x447C987fC2F77D69D90951B385858FBaB5b582d5";
+export const CONTRACT_ADDRESS = "0x1420Aaf1f4ABA1b361A34d16b9001e92923F33a0";
+// export const CONTRACT_ADDRESS = "0xd054fba7875f7b3c5c858b476f7860b85dF9a7eb";
 
 export const CONTRACT_ADDRESS_ABI = [
   {
@@ -690,8 +690,10 @@ export const CONTRACT_ADDRESS_ABI = [
       { internalType: "address", name: "usdtAddress", type: "address" },
       { internalType: "address", name: "_owner", type: "address" },
       { internalType: "address", name: "_operator", type: "address" },
+      { internalType: "address", name: "_mirai", type: "address" },
+      { internalType: "address", name: "_interfaceContract", type: "address" },
     ],
-    name: "initilize",
+    name: "initialize",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -985,7 +987,7 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
 ];
-export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05";
+export const USDT_TOKEN = "0x55d398326f99059ff775485246999027b3197955";
 export const tokenAbi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {

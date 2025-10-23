@@ -5,13 +5,13 @@ import Header from "./HeaderNew";
 
 const fullBlogContent = {
   1: {
-    title: "Building a Winning NFT Portfolio in Mirai Vault",
+    title: "Building a Winning NFT Portfolio in IFT Global",
     content: `
-Mirai Vault is more than just an NFT marketplace—it’s a strategic ecosystem designed for long-term growth and financial success.
+IFT Global is more than just an NFT marketplace—it’s a strategic ecosystem designed for long-term growth and financial success.
 
 To maximize your profits, you need to build a strong NFT portfolio that balances value appreciation, passive income, and trading opportunities.
 
-1. Understanding the Mirai Vault NFT Model
+1. Understanding the IFT Global NFT Model
 
 - Automated Price Growth – Every NFT resale increases its value.
 
@@ -55,23 +55,23 @@ To maximize your profits, you need to build a strong NFT portfolio that balances
 
 Conclusion
 
-A successful NFT portfolio in Mirai Vault is built on diversification, passive income, and strategic selling. By following these principles, you can maximize your earnings, grow your NFT value, and achieve financial success in the Mirai Vault ecosystem.
+A successful NFT portfolio in IFT Global is built on diversification, passive income, and strategic selling. By following these principles, you can maximize your earnings, grow your NFT value, and achieve financial success in the IFT Global ecosystem.
 
 🚀 Start building your winning NFT portfolio today! 💎
     `,
   },
   2: {
-    title: "How Mirai Vault Creates a Sustainable NFT Economy",
+    title: "How IFT Global Creates a Sustainable NFT Economy",
     content: `
   Introduction  
 
-  The NFT space has revolutionized digital ownership, but sustainability remains a challenge for many platforms. Mirai Vault has developed an innovative approach to ensure long-term value, continuous earnings, and a thriving NFT ecosystem.
+  The NFT space has revolutionized digital ownership, but sustainability remains a challenge for many platforms. IFT Global has developed an innovative approach to ensure long-term value, continuous earnings, and a thriving NFT ecosystem.
   
-  In this article, we’ll explore how Mirai Vault creates a sustainable NFT economy and why it stands out in the world of digital assets.
+  In this article, we’ll explore how IFT Global creates a sustainable NFT economy and why it stands out in the world of digital assets.
   
-  The Foundation of Sustainability in Mirai Vault  
+  The Foundation of Sustainability in IFT Global  
 
-  Mirai Vault is not just an NFT marketplace; it’s a structured ecosystem designed to maintain liquidity, reward creators, and encourage long-term participation.
+  IFT Global is not just an NFT marketplace; it’s a structured ecosystem designed to maintain liquidity, reward creators, and encourage long-term participation.
   
   1. Automated Price Growth Model  
 
@@ -82,7 +82,7 @@ A successful NFT portfolio in Mirai Vault is built on diversification, passive i
   🔹 The cycle continues with automated reintroduction, ensuring continuous circulation.
   
   2. Multi-Layered Earning System  
-  Mirai Vault distributes revenue strategically to benefit every participant:
+  IFT Global distributes revenue strategically to benefit every participant:
   
   ✅ Creator Royalty – NFT creators earn a percentage from every resale of their NFT over multiple deals.  
 
@@ -96,7 +96,7 @@ A successful NFT portfolio in Mirai Vault is built on diversification, passive i
   
   3. Referral-Based Growth Model  
 
-  🔹 Mirai Vault encourages community-driven growth through its sponsor and referral system.  
+  🔹 IFT Global encourages community-driven growth through its sponsor and referral system.  
 
   🔹 Users who introduce others earn more and unlock additional benefits.  
 
@@ -112,9 +112,9 @@ A successful NFT portfolio in Mirai Vault is built on diversification, passive i
   
   5. Limited NFT Supply for Value Preservation  
 
-  Mirai Vault avoids oversupply, ensuring NFTs retain their value. Unlike platforms with unlimited minting, this model maintains demand and ensures long-term profitability.
+  IFT Global avoids oversupply, ensuring NFTs retain their value. Unlike platforms with unlimited minting, this model maintains demand and ensures long-term profitability.
   
-  Why Mirai Vault is the Future of NFTs?  
+  Why IFT Global is the Future of NFTs?  
 
   🚀 Automated price growth – Ensures long-term value appreciation.  
 
@@ -126,21 +126,21 @@ A successful NFT portfolio in Mirai Vault is built on diversification, passive i
   
   Final Thoughts  
 
-  Mirai Vault is more than an NFT marketplace—it’s a sustainable, community-driven ecosystem that ensures consistent earnings and asset growth. Whether you’re a creator, investor, or network builder, Mirai Vault provides a profitable and lasting opportunity in the NFT space.
+  IFT Global is more than an NFT marketplace—it’s a sustainable, community-driven ecosystem that ensures consistent earnings and asset growth. Whether you’re a creator, investor, or network builder, IFT Global provides a profitable and lasting opportunity in the NFT space.
   
-  💡 Join Mirai Vault today and be part of the future of NFTs! 🚀
+  💡 Join IFT Global today and be part of the future of NFTs! 🚀
     `,
   },
   3: {
-    title: "How Mirai Vault Ensures Continuous NFT Growth & Market Expansion",
+    title: "How IFT Global Ensures Continuous NFT Growth & Market Expansion",
     content: `
   Introduction 
 
-  Mirai Vault is not just an NFT platform—it’s an evolving ecosystem designed for sustainable growth and continuous market expansion. Unlike traditional NFT marketplaces where assets may lose value over time, Mirai Vault introduces a structured resale mechanism, automated price appreciation, and multiple income streams to keep the ecosystem thriving.
+  IFT Global is not just an NFT platform—it’s an evolving ecosystem designed for sustainable growth and continuous market expansion. Unlike traditional NFT marketplaces where assets may lose value over time, IFT Global introduces a structured resale mechanism, automated price appreciation, and multiple income streams to keep the ecosystem thriving.
   
   1. Automated Price Growth with Every Resale  
 
-  One of the biggest challenges in the NFT space is price fluctuation. Mirai Vault solves this with a systematic price appreciation model, ensuring that each NFT gains value every time it is resold.
+  One of the biggest challenges in the NFT space is price fluctuation. IFT Global solves this with a systematic price appreciation model, ensuring that each NFT gains value every time it is resold.
   
   🔹 Fixed growth rate per resale guarantees steady value increase.  
 
@@ -150,7 +150,7 @@ A successful NFT portfolio in Mirai Vault is built on diversification, passive i
   
   2. Smart Resale & Ownership Transfer Model  
 
-  Mirai Vault ensures that NFTs remain active through a structured resale cycle, preventing stagnation in the marketplace.
+  IFT Global ensures that NFTs remain active through a structured resale cycle, preventing stagnation in the marketplace.
   
   ✅ After a certain number of resales, the NFT undergoes a strategic redistribution. 
 
@@ -160,7 +160,7 @@ A successful NFT portfolio in Mirai Vault is built on diversification, passive i
   
   3. Multiple Income Streams for Users  
 
-  Mirai Vault goes beyond simple NFT trading by offering diverse income opportunities. This creates a self-sustaining financial model where users earn passively through various channels:
+  IFT Global goes beyond simple NFT trading by offering diverse income opportunities. This creates a self-sustaining financial model where users earn passively through various channels:
   
   🚀 Creator Royalty – NFT creators receive earnings for multiple sales.  
 
@@ -182,7 +182,7 @@ A successful NFT portfolio in Mirai Vault is built on diversification, passive i
   
   5. Smart NFT Recycling for Endless Opportunities  
 
-  Instead of NFTs becoming static assets, Mirai Vault introduces an NFT redistribution model to keep the marketplace fresh and dynamic.
+  Instead of NFTs becoming static assets, IFT Global introduces an NFT redistribution model to keep the marketplace fresh and dynamic.
   
   🔹 After completing its resale cycle, the NFT is restructured and reintroduced into the ecosystem. 
 
@@ -192,7 +192,7 @@ A successful NFT portfolio in Mirai Vault is built on diversification, passive i
   
   6. Long-Term Vision for NFT Market Expansion  
 
-  Mirai Vault is designed to grow with time, ensuring its ecosystem remains profitable, engaging, and sustainable.
+  IFT Global is designed to grow with time, ensuring its ecosystem remains profitable, engaging, and sustainable.
   
   ✨ Automated price increase eliminates market fluctuations.  
   
@@ -204,9 +204,9 @@ A successful NFT portfolio in Mirai Vault is built on diversification, passive i
   
   Conclusion  
 
-  Mirai Vault is setting a new standard in the NFT space by ensuring continuous growth, automated value appreciation, and an ever-expanding market. Whether you’re an investor, creator, or community builder, Mirai Vault provides endless opportunities for financial growth and NFT success.
+  IFT Global is setting a new standard in the NFT space by ensuring continuous growth, automated value appreciation, and an ever-expanding market. Whether you’re an investor, creator, or community builder, IFT Global provides endless opportunities for financial growth and NFT success.
   
-  🚀 Join Mirai Vault today and be part of the future of NFTs! 💎
+  🚀 Join IFT Global today and be part of the future of NFTs! 💎
     `,
   },
   4: {

@@ -8,7 +8,7 @@ import {
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
 import { WagmiProvider } from "wagmi";
-import { opBNB, opBNBTestnet, polygon } from "wagmi/chains";
+import { bsc, opBNB, opBNBTestnet, polygon } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 
@@ -21,9 +21,10 @@ import {
   tokenPocketWallet,
   trustWallet,
   walletConnectWallet,
+  argentWallet,
+  metaMaskWallet,
 } from "@rainbow-me/rainbowkit/wallets";
-import { metaMaskWallet } from "@rainbow-me/rainbowkit/wallets";
-import { argentWallet } from "@rainbow-me/rainbowkit/wallets";
+
 export const config = getDefaultConfig({
   appName: "My RainbowKit App",
   projectId: "21538b3e42773b1bcd26d4ab8f177d2d",

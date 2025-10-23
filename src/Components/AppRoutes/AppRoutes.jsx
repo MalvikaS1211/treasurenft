@@ -37,13 +37,17 @@ import ChatSupport from "../ChatSupport";
 import ChatConversation from "../ChatConversation";
 import TradingIncome from "../TradingIncome";
 import Staking from "../Staking";
+import CommingSoon from "../CommingSoon";
 
 function AppRoutes() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Home></Home>} />
+          <Route path="/coming-soon" element={<CommingSoon/>} />
+          <Route path="/" element={<CommingSoon/>} />
+
+          {/* <Route path="/" element={<Home></Home>} /> */}
           {/* <Route path="/signup" element={<SignUp />} /> */}
           <Route path="/explore" element={<Explore></Explore>} />
           <Route path="/collection" element={<Collection />} />

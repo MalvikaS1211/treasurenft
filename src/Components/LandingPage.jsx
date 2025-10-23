@@ -140,7 +140,7 @@ export default function DashboardNew() {
                                 <span class="">mythical</span>
                               </h1>
                               <h1 class="heading">
-                                <span class="fill">Mirai </span>NFTs and Tokens
+                                <span class="fill">IFT </span>NFTs and Tokens
                               </h1>
                               <p class="sub-heading">
                                 Unleash your collection with exclusive beastly

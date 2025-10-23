@@ -62,7 +62,7 @@ export default function FooterNew() {
                   </a>
                 </div>
                 <p class="sub-widget-logo">
-                  Mirai Vault is a Web3 revenue platform based on NFT
+                  IFT Global is a Web3 revenue platform based on NFT
                   collections
                 </p>
               </div>
