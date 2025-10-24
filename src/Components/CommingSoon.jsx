@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import bg from "../../src/assets/comingsoonbg.avif";
 export default function CommingSoon() {
   const calculateTimeLeft = () => {
-    const tomorrow = new Date("2025-10-22T12:00:00");
-    tomorrow.setDate(tomorrow.getDate() + 2);
-    tomorrow.setHours(12, 0, 0, 0);
-    const difference = +tomorrow - +new Date();
+    const targetDate = new Date("2025-10-27T15:00:00"); // 🎯 your target date/time
+    const now = new Date();
+    const difference = targetDate - now;
 
     let timeLeft = {
       days: 0,

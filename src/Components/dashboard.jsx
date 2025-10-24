@@ -363,8 +363,8 @@ export default function Dashboard() {
                   <p>{allUsers?.rank || 0}</p>
                 </div>
                 <div class="user-card wallet-card">
-                  <h6>My Wallet Fund</h6>
-                  <p className="">{balanceData}</p>
+                  {/* <h6>My Wallet Fund</h6>
+                  <p className="">{balanceData}</p> */}
                   <h6>My Total Income</h6>
                   <p className=" p-2">
                     {(
@@ -511,7 +511,7 @@ export default function Dashboard() {
                   class="total-grid"
                   style={{ marginTop: "center", marginBottom: "3%" }}
                 >
-                  <div class="total-card">
+                  {/* <div class="total-card">
                     <div class="sub-total">
                       <h6>Team Trading Income</h6>
                     </div>
@@ -519,7 +519,7 @@ export default function Dashboard() {
                       {allUsers?.totalRewardInEth ?? 0}
                       <span> USDT</span>
                     </p>
-                  </div>
+                  </div> */}
                   <div class="total-card">
                     <div class="sub-total">
                       <h6>Trading Income</h6>

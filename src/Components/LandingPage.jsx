@@ -144,7 +144,7 @@ export default function DashboardNew() {
                               </h1>
                               <p class="sub-heading">
                                 Unleash your collection with exclusive beastly
-                                tokens at Mythic Monster Market
+                                tokens at Mythic IFT Market
                               </p>
                               <div class="flat-bt-slider flex style2 button-container">
                                 <a

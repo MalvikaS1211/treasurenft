@@ -5,6 +5,7 @@ import axios from "axios";
 import {
   createNftVrsFn,
   dueNFT,
+  eligibleForCreateNFT,
   getNftStartStop,
   getStatus,
   getUserInfo,
@@ -384,6 +385,15 @@ export default function SingleNFT() {
       console.log("Error in dueNFTCreate", error);
     }
   };
+  const [eligibleForCreate, setEligibleForCreate] = useState(null);
+  const showNFTBtn = async () => {
+    const res = await eligibleForCreateNFT(address);
+    console.log(res?.eligible, "eligibleForCreateNFT");
+    setEligibleForCreate(res?.eligible);
+  };
+  useEffect(() => {
+    showNFTBtn();
+  }, [address]);
 
   return (
     <>
@@ -532,38 +542,22 @@ export default function SingleNFT() {
                   onChange={(e) => setDescription(e.target.value)}
                 />
                 <div className="create-nft-container">
-                  {isAllowed === false &&
-                    (selectedNft.tokenId ? (
-                      <button
-                        className="createbtn"
-                        onClick={dueNFTCreate}
-                        type="button"
-                      >
-                        {isLoading ? (
-                          <span
-                            className="spinner-border spinner-border-sm"
-                            role="status"
-                          ></span>
-                        ) : (
-                          "Due Create NFT"
-                        )}
-                      </button>
-                    ) : (
-                      <button
-                        className="createbtn"
-                        onClick={nftCreate}
-                        type="button"
-                      >
-                        {isLoading ? (
-                          <span
-                            className="spinner-border spinner-border-sm"
-                            role="status"
-                          ></span>
-                        ) : (
-                          "Create NFT"
-                        )}
-                      </button>
-                    ))}
+                  {eligibleForCreate === true && (
+                    <button
+                      className="createbtn"
+                      onClick={nftCreate}
+                      type="button"
+                    >
+                      {isLoading ? (
+                        <span
+                          className="spinner-border spinner-border-sm"
+                          role="status"
+                        ></span>
+                      ) : (
+                        "Create NFT"
+                      )}
+                    </button>
+                  )}
                 </div>
               </form>
             </div>

@@ -8,7 +8,6 @@ export const SOCKET_SERVER_URL = "https://iftglobal.org";
 // export const URLApi = "http://192.168.1.2:8081/api";
 // export const SOCKET_SERVER_URL = "http://192.168.1.2:8081/api";
 
-
 export const pinataApiKey = "e45f06a4f288fd4c7ded";
 export const pinataSecretApiKey =
   "5d66447d15dde18b2851a2d6aefc48f4ca25b29c05440027f816f7d176cb7fdd";
@@ -546,4 +545,18 @@ export async function insertInSale(address) {
     tokenId: address,
   });
   return response.data;
+}
+
+export async function eligibleForCreateNFT(userAddress) {
+  try {
+    const response = await axios.get(`${URLApi}/eligibleForCreate`, {
+      params: {
+        userAddress,
+      },
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error eligibleForCreate Admin:", error);
+  }
 }
