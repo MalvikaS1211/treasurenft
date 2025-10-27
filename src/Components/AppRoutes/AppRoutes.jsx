@@ -45,9 +45,9 @@ function AppRoutes() {
       <Router>
         <Routes>
    
-          <Route path="/" element={<CommingSoon/>} />
+          {/* <Route path="/" element={<CommingSoon/>} /> */}
 
-          {/* <Route path="/" element={<Home></Home>} /> */}
+          <Route path="/" element={<Home></Home>} />
           {/* <Route path="/signup" element={<SignUp />} /> */}
           <Route path="/explore" element={<Explore></Explore>} />
           <Route path="/collection" element={<Collection />} />
