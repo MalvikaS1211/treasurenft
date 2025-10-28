@@ -239,8 +239,8 @@ export default function SingleNFT() {
         );
         // console.log(res, res.data.message, "VRS response");
         if (res.success) {
-          const tokenApp = await tokenApp1(totalAmount);
-          if (tokenApp) {
+          // const tokenApp = await tokenApp1(totalAmount);
+          if (true) {
             const nft = createNFTFn(
               res.vrs.title,
               res.vrs.description,
