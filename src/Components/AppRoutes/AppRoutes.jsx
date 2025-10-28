@@ -64,7 +64,7 @@ function AppRoutes() {
           <Route path="/downline" element={<DownLine />} />
           <Route path="/royality" element={<Royality />} />
           <Route path="/buyNft" element={<Trade />} />
-          {/* <Route path="/signup" element={<Registration />} /> */}
+          <Route path="/signup" element={<Registration />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/direct" element={<Direct />} />
           <Route path="/level" element={<Level />} />
