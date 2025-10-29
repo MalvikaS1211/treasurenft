@@ -56,7 +56,7 @@ const Header = () => {
                 <Link to="/NFTcreation">Create NFT</Link>
                 <Link to="/dashboard">Dashboard</Link>
                 <Link to="https://swap.iftglobal.org/" target="_blank">
-                  Mirai Token
+                  IFT Token
                 </Link>
               </>
             ) : (
@@ -139,7 +139,7 @@ const Header = () => {
                   <Link to="/NFTcreation">Create NFT</Link>
                   <Link to="/dashboard">Dashboard</Link>
                   <Link to="https://swap.iftglobal.org/" target="_blank">
-                    Mirai Token
+                    IFT Token
                   </Link>
                 </>
               ) : (
