@@ -21,7 +21,9 @@ import { useBalance } from "wagmi";
 import { fetchBalance } from "@wagmi/core";
 import {
   approveToken,
+  fetchIFTTtokenBalance,
   fetchNftIncome,
+  fetchWalletBalance,
   getAvailaibleBalance,
   upgradePackageFn,
   usersFn,
@@ -42,6 +44,8 @@ export default function Dashboard() {
   const [availableBal, setAvailableBal] = useState(0);
   const [timeLeft, setTimeLeft] = useState(null);
   const [balanceData, setBalanceData] = useState(0);
+  const [tokenBalance, setTokenBalance] = useState(0);
+  const [userBalINF, setUserBalINF] = useState(0);
 
   const [userProfitData, setUserProfitData] = useState();
   const data = new URLSearchParams(window.location.search);
@@ -248,14 +252,37 @@ export default function Dashboard() {
   const nftIncomesFn = async () => {
     try {
       const res = await fetchNftIncome(address);
-      console.log(res, address, nftIncomes?.[0], "nftIncomes");
+      // console.log(res, address, nftIncomes?.[0], "nftIncomes");
       setNftIncomes(res);
     } catch (error) {
       console.log("Error in nftIncomes:", error);
     }
   };
+
+  const fetchTokenBal = async () => {
+    try {
+      const res = await fetchIFTTtokenBalance();
+      console.log("Fetched result:", res);
+      setTokenBalance(res);
+    } catch (error) {
+      console.error("fetchbalance error:", error);
+    }
+  };
+
+  const fetchUserBalance = async () => {
+    try {
+      const res = await fetchWalletBalance(address);
+      console.log("fetchUserBalance", res);
+      setUserBalINF(res);
+    } catch (error) {
+      console.error("fetchUserBalance error:", error);
+    }
+  };
+
   useEffect(() => {
     nftIncomesFn();
+    fetchTokenBal();
+    fetchUserBalance();
   }, [address]);
 
   return (
@@ -272,29 +299,43 @@ export default function Dashboard() {
         >
           <Navbar title="Dashboard"></Navbar>
           {/* <HeaderDashboard title="Dashboard"></HeaderDashboard> */}
-          <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
-            <div>
+          <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap flex-md-nowrap  flex-sm-nowrap gap-3">
+            <div className="button-balance-group ">
               <button
                 className="btn-upgrade"
                 type="button"
                 style={{
-                  backgroundImage:
-                    "linear-gradient(to right, rgb(33, 82, 175) 0%, rgb(107, 167, 231) 51%, rgb(33, 82, 175) 100%) ",
                   borderRadius: "5px",
+                  padding: "13px",
                 }}
                 onClick={() => {
-                  window.open("https://swap-inout.vercel.app/"), "_blank";
+                  window.open("https://swap.iftglobal.org/", "_blank");
                 }}
               >
                 Get Token
               </button>
+              <div className="balance-container">
+                <div className="balance-card">
+                  <h6>IFT Token</h6>
+                  <p>
+                    {!isNaN(Number(userBalINF))
+                      ? Number(userBalINF).toFixed(4)
+                      : 0}
+                  </p>
+                </div>
+
+                <div className="balance-card">
+                  <h6>USDT</h6>
+                  <p>{Number(tokenBalance) ?? 0}</p>
+                </div>
+              </div>
             </div>
+
             <div
               className="d-flex justify-content-center align-items-center text-white p-4"
               style={{
                 backgroundColor: "#000",
                 borderRadius: "12px",
-                // minHeight: "200px",
               }}
             >
               <div className="d-flex align-items-center justify-content-center">
@@ -365,6 +406,7 @@ export default function Dashboard() {
                 <div class="user-card wallet-card">
                   {/* <h6>My Wallet Fund</h6>
                   <p className="">{balanceData}</p> */}
+
                   <h6>My Total Income</h6>
                   <p className=" p-2">
                     {(

@@ -10,6 +10,8 @@ import {
   CONTRACT_ADDRESS,
   tokenAbi,
   USDT_TOKEN,
+  IFT_ABI,
+  IFT_Token,
 } from "../Helper/Config";
 import { config } from "../main";
 import Web3 from "web3";
@@ -260,6 +262,29 @@ export async function fetchNftIncome(address) {
     });
 
     return result;
+  } catch (error) {
+    console.log(error);
+  }
+}
+export async function fetchIFTTtokenBalance() {
+  console.log("in Contract result:");
+  const result = await readContract(config, {
+    abi: IFT_ABI,
+    address: IFT_Token,
+    functionName: "rateInUSDT",
+    args: [],
+  });
+  console.log("Contract result:", result);
+  return result;
+}
+
+export async function fetchWalletBalance(address) {
+  try {
+    const balance = await getBalance(config, {
+      address: address,
+      token: IFT_Token,
+    });
+    return balance.formatted;
   } catch (error) {
     console.log(error);
   }

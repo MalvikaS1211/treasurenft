@@ -49,7 +49,7 @@ export default function Navbar({ title }) {
         <h1>{title}</h1>
         <div className="header-right">
           <ConnectWallet />
-          <div className="d-md-block d-lg-none">
+          <div className="block lg:hidden hamburger-icon">
             <GiHamburgerMenu onClick={toggleSidebar} size={25} color="#fff" />
           </div>
         </div>
