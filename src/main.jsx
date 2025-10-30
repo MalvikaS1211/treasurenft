@@ -35,6 +35,7 @@ export const config = getDefaultConfig({
   ],
   chains: [opBNB],
   ssr: false,
+  autoConnect: true,  
 });
 
 const queryClient = new QueryClient();

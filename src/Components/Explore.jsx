@@ -366,7 +366,7 @@ export default function Expore() {
                             <a
                               href={`https://opbnb.bscscan.com/tx/${nft.transactionHash}`}
                               target="_blank"
-                              rel="noopener noreferrer"
+                              rel="noopener noreferrer" className="tx-link"
                             >
                               {`${nft.transactionHash.slice(
                                 0,

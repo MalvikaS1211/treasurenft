@@ -6,9 +6,9 @@ import { useReadContracts } from "wagmi";
 export const URLApi = "https://magicverse.org/api";
 export const SOCKET_SERVER_URL = "https://magicverse.org";
 
-// export const URLApi = "http://217.217.248.14:8081/api";
-// export const SOCKET_SERVER_URL = "http://217.217.248.14:8081/";
-
+// export const URLApi = "http://192.168.1.166:8081/api";
+// export const SOCKET_SERVER_URL = "http://192.168.1.166:8081/";
+// 
 export const pinataApiKey = "e45f06a4f288fd4c7ded";
 export const pinataSecretApiKey =
   "5d66447d15dde18b2851a2d6aefc48f4ca25b29c05440027f816f7d176cb7fdd";

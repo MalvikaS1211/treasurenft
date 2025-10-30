@@ -2492,3 +2492,9 @@ td {
   padding-bottom: 2%;
   text-align: center;
 }
+.tx-link {
+  color: black;
+}
+.tx-link:hover {
+  color: #5142fc;
+}

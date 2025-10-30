@@ -378,7 +378,7 @@ export default function Trade() {
         setIsNew(!isLevPaid);
       }
 
-      console.log(resp.isNew, resp.success, "resp in is");
+      // console.log(resp.isNew, resp.success, "resp in is");
     } catch (error) {
       console.log(error, "Errorn in isNewUser");
       // setIsNew(true);
@@ -412,18 +412,6 @@ export default function Trade() {
     }
   };
 
-  useEffect(() => {
-    if (address) {
-      UserInfo();
-      getTrade();
-      totalAssets();
-      getWalletFund();
-      handlependingNft();
-      isNewUser();
-      // handleGetAllTradeForUser();
-    }
-  }, [address, isfetch]);
-
   const isTokenAvailaible = async (tokenId) => {
     try {
       const resp = await isInSale(tokenId);
@@ -442,6 +430,80 @@ export default function Trade() {
     }
   };
 
+  const handleGetAllTradeForUser = async () => {
+    try {
+      const resp = await getAllTradeForUser(address);
+      const tokenId = resp?.newData?.tokenId;
+
+      if (!tokenId) {
+        console.warn("No tokenId found");
+        return;
+      }
+
+      const res = await getNfts(tokenId);
+
+      // Read IPFS hash from metadataURI (res[2])
+      const metadataURI = res[2];
+      const ipfsHash = metadataURI?.replace("ipfs://", "");
+
+      const gateways = [
+        "https://ipfs.io/ipfs/",
+        "https://gateway.pinata.cloud/ipfs/",
+        "https://cloudflare-ipfs.com/ipfs/",
+      ];
+
+      let metadata = null;
+
+      // Loop through gateways
+      for (const gateway of gateways) {
+        try {
+          const url = `${gateway}${ipfsHash}`;
+          const response = await axios.get(url, { timeout: 2000 });
+          metadata = response.data;
+          break;
+        } catch (err) {
+          console.warn("Gateway failed, trying next...");
+        }
+      }
+
+      if (!metadata) throw new Error("All IPFS gateways failed");
+
+      // Fix NFT image URL
+      const imageUrl = metadata?.image
+        ? metadata.image.replace("ipfs://", "https://ipfs.io/ipfs/")
+        : "https://i.guim.co.uk/img/media/ef8492feb3715ed4de705727d9f513c168a8b196/37_0_1125_675/master/1125.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=d456a2af571d980d8b2985472c262b31";
+      
+      const data = {
+        ...resp.newData,
+        title: metadata?.name || "",
+        description: metadata?.description || "",
+        img: imageUrl,
+        price: res[4],
+        owner: res[6],
+        metadataURI,
+        creator: res[3],
+        initialPrice: Number(res[7]),
+      };
+
+      setNewData(data);
+      console.log("NFT Data:", data);
+    } catch (error) {
+      console.error("Error loading NFT:", error);
+    }
+  };
+
+  useEffect(() => {
+    if (address) {
+      UserInfo();
+      getTrade();
+      totalAssets();
+      getWalletFund();
+      handlependingNft();
+      isNewUser();
+      handleGetAllTradeForUser();
+    }
+  }, [address, isfetch]);
+
   return (
     <>
       <HeaderNew />
@@ -449,23 +511,26 @@ export default function Trade() {
       <div className="tf-create-item tf-section p-0">
         <div className="dashboardbg">
           <div
-            class="col-md-12 "
+            className="col-md-12 "
             style={{ paddingTop: "20px", paddingBottom: "20px" }}
           >
             <div
-              class="page-title-heading mg-bt-40"
+              className="page-title-heading mg-bt-40"
               style={{ marginTop: "40px" }}
             >
-              <h1 class="heading text-center mt-0" style={{ color: "black" }}>
+              <h1
+                className="heading text-center mt-0"
+                style={{ color: "black" }}
+              >
                 Buy Item
               </h1>
             </div>
           </div>
         </div>
         <div className="p-4">
-          <div class="total-grid" style={{ marginTop: "3%" }}>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
-              <div class="sub-total">
+          <div className="total-grid" style={{ marginTop: "3%" }}>
+            <div className="total-card" style={{ background: "#c2e8ff" }}>
+              <div className="sub-total">
                 <h6>Available Fund</h6>
               </div>
               <p>
@@ -474,8 +539,8 @@ export default function Trade() {
                 <span> MVT</span>
               </p>
             </div>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
-              <div class="sub-total">
+            <div className="total-card" style={{ background: "#c2e8ff" }}>
+              <div className="sub-total">
                 <h6>Assets Value</h6>
               </div>
               <p>
@@ -483,8 +548,8 @@ export default function Trade() {
                 <span> MVT</span>
               </p>
             </div>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
-              <div class="sub-total">
+            <div className="total-card" style={{ background: "#c2e8ff" }}>
+              <div className="sub-total">
                 {/* <h6>Total Limit</h6> */}
 
                 <h6>Daily Limit</h6>
@@ -499,7 +564,7 @@ export default function Trade() {
           </div>
           <div>
             <p
-              class=""
+              className=""
               style={{
                 textAlign: "justify",
                 color: "black",
@@ -513,9 +578,9 @@ export default function Trade() {
         </div>
 
         <div className="p-4">
-          <div class="total-grid" style={{ marginBottom: "3%" }}>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
-              <div class="sub-total">
+          <div className="total-grid" style={{ marginBottom: "3%" }}>
+            <div className="total-card" style={{ background: "#c2e8ff" }}>
+              <div className="sub-total">
                 <h6>Max Limit </h6>
               </div>
               <p>
@@ -527,8 +592,8 @@ export default function Trade() {
                 <span> MVT</span>
               </p>
             </div>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
-              <div class="sub-total">
+            <div className="total-card" style={{ background: "#c2e8ff" }}>
+              <div className="sub-total">
                 <h6>Total Limit Remaining</h6>
               </div>
               <p>
@@ -540,8 +605,8 @@ export default function Trade() {
                 <span> MVT</span>
               </p>
             </div>
-            <div class="total-card" style={{ background: "#c2e8ff" }}>
-              <div class="sub-total">
+            <div className="total-card" style={{ background: "#c2e8ff" }}>
+              <div className="sub-total">
                 <h6>Total Limit Utilised</h6>
               </div>
               <p>
@@ -602,7 +667,7 @@ export default function Trade() {
                               </a>
                               {nft.owner != address && (
                                 <div
-                                  class="button-place-bid"
+                                  className="button-place-bid"
                                   onClick={() => {
                                     console.log(
                                       nft.price,
@@ -677,7 +742,7 @@ export default function Trade() {
                     <div className="no-data-available">No data available</div>
                   </div>
                 )}
-                {newData.price > 0 && (
+                {newData?.newPrice > 0 && (
                   <div
                     // key={index}
                     className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6"
@@ -708,9 +773,9 @@ export default function Trade() {
                             style={{ height: "100%", width: "100%" }}
                           />
                         </a>
-                        {newData.owner != address && (
+                        {newData?.owner != address && (
                           <div
-                            class="button-place-bid"
+                            className="button-place-bid"
                             onClick={() => {
                               BuyNft(
                                 newData.price,
@@ -736,7 +801,7 @@ export default function Trade() {
                       </div>
                       <div className="card-title">
                         <h5>
-                          <a href="#">{newData.title}</a>
+                          <a href="#">{newData?.title}</a>
                         </h5>
                       </div>
                       <div className="meta-info">
@@ -747,11 +812,13 @@ export default function Trade() {
                           <div className="info">
                             <span>Creator</span>
                             <h6>
-                              <a href="#">{newData.creator?.slice(-9)}</a>
+                              <a href="#" className="text-dark">
+                                {newData?.creator?.slice(-9)}
+                              </a>
                             </h6>
                           </div>
                         </div>
-                        <div className="tags">{newData.tokenId}</div>
+                        <div className="tags">{newData?.tokenId}</div>
                       </div>
                       <div className="card-bottom style-explode">
                         <div className="price">
@@ -772,9 +839,9 @@ export default function Trade() {
           </section>
         ) : (
           <>
-            <div class="d-flex justify-content-center">
-              <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+            <div className="d-flex justify-content-center">
+              <div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
               </div>
             </div>
             <p className=" w-100" style={{ textAlign: "center" }}>

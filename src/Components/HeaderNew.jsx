@@ -95,24 +95,24 @@ const Header = () => {
           <ConnectWallet />
 
           <GiHamburgerMenu
-            class="text-white"
+        
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasScrolling"
             aria-controls="offcanvasScrolling"
-            className="hamburger-icon"
+            className="hamburger-icon text-white"
           />
         </div>
         <div
-          class="offcanvas offcanvas-start"
+          className="offcanvas offcanvas-start"
           data-bs-scroll="true"
           data-bs-backdrop="false"
-          tabindex="-1"
+          tabIndex="-1"
           id="offcanvasScrolling"
           aria-labelledby="offcanvasScrollingLabel"
         >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+          <div className="offcanvas-header">
+            <h5 className="offcanvas-title" id="offcanvasScrollingLabel">
               <img
                 src={Logo}
                 alt=""
@@ -122,12 +122,12 @@ const Header = () => {
             </h5>
             <button
               type="button"
-              class="btn-close "
+              className="btn-close "
               data-bs-dismiss="offcanvas"
               aria-label="Close"
             ></button>
           </div>
-          <div class="offcanvas-body">
+          <div className="offcanvas-body">
             <nav className="nav-head">
               {address && userExist ? (
                 <>
