@@ -284,7 +284,9 @@ export default function Dashboard() {
     fetchTokenBal();
     fetchUserBalance();
   }, [address]);
-
+  const inf = isNaN(Number(userBalINF)) ? 0 : Number(userBalINF);
+  const token = isNaN(Number(tokenBalance)) ? 0 : Number(tokenBalance) / 1e18;
+  const valueInUSDT = (inf * token).toFixed(4);
   return (
     <>
       <div className="p-4 dashboard-container">
@@ -312,21 +314,22 @@ export default function Dashboard() {
                   window.open("https://swap.iftglobal.org/", "_blank");
                 }}
               >
-                Get Token
+                IFT Token Wallet
               </button>
               <div className="balance-container">
                 <div className="balance-card">
                   <h6>IFT Token</h6>
-                  <p>
-                    {!isNaN(Number(userBalINF))
-                      ? Number(userBalINF).toFixed(4)
-                      : 0}
-                  </p>
+                  <p>{inf.toFixed(4)}</p>
                 </div>
 
                 <div className="balance-card">
-                  <h6>USDT</h6>
-                  <p>{Number(tokenBalance) ?? 0}</p>
+                  <h6>1 IFT</h6>
+                  <p>{token.toFixed(4)} USDT</p>
+                </div>
+
+                <div className="balance-card">
+                  <h6>Value in USDT</h6>
+                  <p>{valueInUSDT} USDT</p>
                 </div>
               </div>
             </div>
