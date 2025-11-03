@@ -15,7 +15,7 @@ export default function Refferal() {
   const handleTableData = async () => {
     try {
       const res = await getUserDirects(address, currentPage, itemPerpage);
-      setTableData(res.userDirects);
+      setTableData(res?.userDirects);
       setTotalPages(res?.pagination?.totalPages);
       console.log("GetDirects", res);
     } catch (error) {
@@ -64,11 +64,11 @@ export default function Refferal() {
                           <td>{(currentPage - 1) * itemPerpage + index + 1}</td>
                           <td>{data?.uniqueRandomId}</td>
                           <td>
-                            {data.user.slice(0, 4)}...{data.user.slice(-7)}
+                            {data?.user.slice(0, 4)}...{data?.user.slice(-7)}
                           </td>
                           <td>
                             {data?.createdAt
-                              ? moment(data.createdAt).format(
+                              ? moment(data?.createdAt).format(
                                   "DD-MM-YYYY HH:mm:ss A"
                                 )
                               : "N/A"}

@@ -16,7 +16,7 @@ export default function Royality() {
   const handleRoyalty = async () => {
     try {
       const res = await getRoyalty(address, currentPage, itemPerpage);
-      setTableData(res.history);
+      setTableData(res?.history);
       setTotalPages(res?.pagination?.totalPages);
       console.log("resRoyalty", res);
     } catch (error) {
@@ -70,7 +70,7 @@ export default function Royality() {
                           </td>
                           <td>
                             {data?.createdAt
-                              ? moment(data.createdAt).format(
+                              ? moment(data?.createdAt).format(
                                   "DD-MM-YYYY HH:mm:ss A"
                                 )
                               : "N/A"}

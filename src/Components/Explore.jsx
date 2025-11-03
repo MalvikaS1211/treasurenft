@@ -233,18 +233,18 @@ export default function Expore() {
                         >
                           <img
                             src={
-                              nft.img.startsWith("ipfs://")
-                                ? nft.img.replace(
+                              nft?.img.startsWith("ipfs://")
+                                ? nft?.img.replace(
                                     "ipfs://",
                                     "https://ipfs.io/ipfs/"
                                   )
-                                : nft.img
+                                : nft?.img
                             }
                             alt="NFT"
                             style={{ width: "100%", height: "100%" }}
                           />
                         </a>
-                        {nft.isReadyForSale === true && (
+                        {nft?.isReadyForSale === true && (
                           <div className="button-place-bid">
                             <button
                               className="sc-button style-place-bid style bag fl-button pri-3"
@@ -252,7 +252,7 @@ export default function Expore() {
                             >
                               <FaShoppingBag color="black" />
                               <span>
-                                {nft.isReadyForSale ? "Not for Sell" : "Sell"}
+                                {nft?.isReadyForSale ? "Not for Sell" : "Sell"}
                               </span>
                             </button>
                           </div>
@@ -261,7 +261,7 @@ export default function Expore() {
                       </div>
                       <div className="card-title">
                         <h5>
-                          <a href="">{nft.title}</a>
+                          <a href="">{nft?.title}</a>
                         </h5>
                       </div>
                       <div className="meta-info">
@@ -269,11 +269,11 @@ export default function Expore() {
                           <div className="info">
                             <span>Creator</span>
                             <h6>
-                              {nft.creator
-                                ? `${nft.creator.slice(
+                              {nft?.creator
+                                ? `${nft?.creator.slice(
                                     0,
                                     6
-                                  )}...${nft.creator.slice(-8)}`
+                                  )}...${nft?.creator.slice(-8)}`
                                 : "Unknown"}
                             </h6>
                           </div>
@@ -283,7 +283,7 @@ export default function Expore() {
                         <div className="price">
                           <span>Buy Price</span>
                           <div className="price-details">
-                            <h5>{(Number(nft.price) / 1e18).toFixed(4)} $</h5>
+                            <h5>{(Number(nft?.price) / 1e18).toFixed(4)} $</h5>
                           </div>
                         </div>
                       </div>
@@ -335,12 +335,12 @@ export default function Expore() {
                       >
                         <img
                           src={
-                            nft.img.startsWith("ipfs://")
-                              ? nft.img.replace(
+                            nft?.img.startsWith("ipfs://")
+                              ? nft?.img.replace(
                                   "ipfs://",
                                   "https://ipfs.io/ipfs/"
                                 )
-                              : nft.img
+                              : nft?.img
                           }
                           alt="NFT"
                           style={{ width: "100%", height: "100%" }}
@@ -363,7 +363,7 @@ export default function Expore() {
                     </div>
                     <div className="card-title">
                       <h5>
-                        <a href="">{nft.title}</a>
+                        <a href="">{nft?.title}</a>
                       </h5>
                     </div>
                     <div className="meta-info">
@@ -371,11 +371,11 @@ export default function Expore() {
                         <div className="info">
                           <span>Creator</span>
                           <h6>
-                            {nft.creator
-                              ? `${nft.creator.slice(
+                            {nft?.creator
+                              ? `${nft?.creator.slice(
                                   0,
                                   6
-                                )}...${nft.creator.slice(-8)}`
+                                )}...${nft?.creator.slice(-8)}`
                               : "Unknown"}
                           </h6>
                         </div>
@@ -385,7 +385,7 @@ export default function Expore() {
                       <div className="price">
                         <span>Buy Price</span>
                         <div className="price-details">
-                          <h5>{(Number(nft.price) / 1e18).toFixed(4)} $</h5>
+                          <h5>{(Number(nft?.price) / 1e18).toFixed(4)} $</h5>
                         </div>
                       </div>
                     </div>
@@ -437,12 +437,12 @@ export default function Expore() {
                       >
                         <img
                           src={
-                            nft.img.startsWith("ipfs://")
-                              ? nft.img.replace(
+                            nft?.img.startsWith("ipfs://")
+                              ? nft?.img.replace(
                                   "ipfs://",
                                   "https://ipfs.io/ipfs/"
                                 )
-                              : nft.img
+                              : nft?.img
                           }
                           alt="NFT"
                           style={{ width: "100%", height: "100%" }}
@@ -465,7 +465,7 @@ export default function Expore() {
                     </div>
                     <div className="card-title">
                       <h5>
-                        <a href="">{nft.title}</a>
+                        <a href="">{nft?.title}</a>
                       </h5>
                     </div>
                     <div className="meta-info">
@@ -473,11 +473,11 @@ export default function Expore() {
                         <div className="info">
                           <span>Creator</span>
                           <h6>
-                            {nft.creator
-                              ? `${nft.creator.slice(
+                            {nft?.creator
+                              ? `${nft?.creator.slice(
                                   0,
                                   6
-                                )}...${nft.creator.slice(-8)}`
+                                )}...${nft?.creator.slice(-8)}`
                               : "Unknown"}
                           </h6>
                         </div>
@@ -487,7 +487,7 @@ export default function Expore() {
                       <div className="price">
                         <span>Buy Price</span>
                         <div className="price-details">
-                          <h5>{(Number(nft.price) / 1e18).toFixed(4)} $</h5>
+                          <h5>{(Number(nft?.price) / 1e18).toFixed(4)} $</h5>
                         </div>
                       </div>
                     </div>

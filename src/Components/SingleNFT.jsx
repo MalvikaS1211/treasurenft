@@ -220,6 +220,7 @@ export default function SingleNFT() {
         return toast.error("Please fill all fields and select a file!");
       }
       const userBalance = await fetchUserTokenBalance(address);
+      console.log(userBalance,totalNFTAmount, "userBalance");
       if (userBalance < totalNFTAmount) {
         setIsLoading(false);
         return toast.error(
@@ -239,8 +240,8 @@ export default function SingleNFT() {
         );
         // console.log(res, res.data.message, "VRS response");
         if (res.success) {
-          // const tokenApp = await tokenApp1(totalAmount);
-          if (true) {
+          const tokenApp = await tokenApp1(totalAmount);
+          if (tokenApp) {
             const nft = createNFTFn(
               res.vrs.title,
               res.vrs.description,

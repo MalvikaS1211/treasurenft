@@ -14,7 +14,7 @@ export default function Level() {
   const itemPerpage = 15;
   const handleTableData = async () => {
     const res = await getLevelIncome(address, currentPage, itemPerpage);
-    setTableData(res.data);
+    setTableData(res?.data);
     setTotalPages(res?.pagination?.totalPages);
     console.log("GetDirects", res);
   };
@@ -57,12 +57,12 @@ export default function Level() {
                           <td>{(currentPage - 1) * itemPerpage + index + 1}</td>
 
                           <td>
-                            {data.fromUser.slice(0, 4)}...
-                            {data.fromUser.slice(-7)}
+                            {data?.fromUser.slice(0, 4)}...
+                            {data?.fromUser.slice(-7)}
                           </td>
                           <td>
                             {data?.createdAt
-                              ? moment(data.createdAt).format(
+                              ? moment(data?.createdAt).format(
                                   "DD-MM-YYYY HH:mm:ss A"
                                 )
                               : "N/A"}

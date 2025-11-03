@@ -14,7 +14,7 @@ export default function Direct() {
   const itemPerpage = 15;
   const handleTableData = async () => {
     const res = await getDirectIncome(address, currentPage, itemPerpage);
-    setTableData(res.data);
+    setTableData(res?.data);
     setTotalPages(res?.pagination?.totalPages);
     console.log("GetDirects", res);
   };
@@ -60,11 +60,11 @@ export default function Direct() {
                           <td>{(currentPage - 1) * itemPerpage + index + 1}</td>
                           {/* <td>{data?.uniqueRandomId}</td> */}
                           <td>
-                            {data.toUser.slice(0, 4)}...{data.toUser.slice(-7)}
+                            {data?.toUser.slice(0, 4)}...{data?.toUser.slice(-7)}
                           </td>
                           <td>
                             {data?.timestamp
-                              ? moment(data.timestamp * 1000).format(
+                              ? moment(data?.timestamp * 1000).format(
                                   "DD-MM-YYYY HH:mm:ss A"
                                 )
                               : "N/A"}

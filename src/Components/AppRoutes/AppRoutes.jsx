@@ -12,10 +12,9 @@ import Home from "../Home";
 import Explore from "../Explore";
 import Collection from "../Collection";
 import DepositNFT from "../DepositNFT";
-// import NoxiousAudience from "../NoxiousAudience";
+
 import Account from "../Account";
 
-import Airdrop from "../Airdrop";
 import NFTCreation from "../NftCreation";
 
 import Dashboard from "../dashboard";
@@ -55,7 +54,7 @@ function AppRoutes() {
 
           <Route path="/account" element={<Account />} />
           {/* <Route path="/account/level" element={<Level />} /> */}
-          <Route path="/Airdrop" element={<Airdrop />} />
+       
           <Route path="/NFTcreation" element={<CreateNFT />} />
 
           <Route path="/dashboard" element={<Dashboard />} />

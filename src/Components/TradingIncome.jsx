@@ -13,7 +13,7 @@ export default function TradingIncome() {
 
   const handleTableData = async () => {
     const res = await getTradingIncome(address, currentPage, itemPerpage);
-    setTableData(res.data);
+    setTableData(res?.data);
     setTotalPages(res?.pagination?.totalPages);
     console.log("GetTradingIncome", res);
   };
@@ -59,15 +59,15 @@ export default function TradingIncome() {
                         <tr key={index}>
                           <td>{(currentPage - 1) * itemPerpage + index + 1}</td>
                           <td>
-                            {data.fromUser.slice(0, 4)}...
-                            {data.fromUser.slice(-7)}
+                            {data?.fromUser.slice(0, 4)}...
+                            {data?.fromUser.slice(-7)}
                           </td>
                           <td>{(data?.reward / 1e18).toFixed(4)}</td>
                           <td>{data?.tokenId}</td>
                           <td>{data?.level}</td>
                           <td>
                             {data?.createdAt
-                              ? moment(data.createdAt).format(
+                              ? moment(data?.createdAt).format(
                                   "DD-MM-YYYY HH:mm:ss A"
                                 )
                               : "N/A"}
