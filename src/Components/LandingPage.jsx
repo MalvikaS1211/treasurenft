@@ -39,29 +39,14 @@ import MattRamos from "../assets/long-hair-woman-with-glasses.jpg";
 import BlakeBanks from "../assets/man-with-beard.jpg";
 import MonicaLucas from "../assets/dreadlocked-man-with-glasses.jpg";
 import HarperWilcher from "../assets/curly-hair-man-with-glasses-2.jpg";
-import Man from "../assets/man.jpg";
-import img1 from "../assets/Stake_01493_compre.webp";
-import img2 from "../assets/Stake_06195_compre.webp";
-import img3 from "../assets/Penguin_Pals_549781.webp";
-import sonic from "../assets/sonic.jpg";
-import animal from "../assets/animal.jpg";
-import robot from "../assets/robot12.jpg";
-import bunny from "../assets/bunny.jpg";
-import elephantpic from "../assets/elephantpic.jpg";
+
 import { FiUserPlus } from "react-icons/fi";
-import space from "../assets/space.jpg";
-import cryptoegg from "../assets/cryptoegg.jpg";
-import cyberprimal from "../assets/cyberprimal.jpg";
-import CyberDoberman from "../assets/CyberDoberman.jpg";
-import { IoIosHeartEmpty } from "react-icons/io";
-import { FaShoppingBag } from "react-icons/fa";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LiveAuction from "./LiveAuction";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import PDF from "../assets/Pdf/MagicVerse.Org.pdf";
-import { GoDownload } from "react-icons/go";
 import toast from "react-hot-toast";
 import walletImage from "../assets/walletImage.png";
 import collectionBtn from "../assets/collectionBtn.png";
@@ -135,12 +120,13 @@ export default function DashboardNew() {
                         <div class="themesflat-container ">
                           <div class="wrap-heading flat-slider flex">
                             <div class="content-custom">
-                              <h2 class="heading">Unleash and Trade</h2>
-                              <h1 class="heading mb-style">
-                                <span class="">mythical</span>
-                              </h1>
                               <h1 class="heading">
-                                <span class="fill">IFT </span>NFTs and Tokens
+                                <span class="fill">Virtual Mine </span>
+                              </h1>
+                              <h1 class="heading mb-style">
+                                <span class="">
+                                  The Ultimate Scalable NFT Experience
+                                </span>
                               </h1>
                               <p class="sub-heading">
                                 Unleash your collection with exclusive beastly
@@ -202,17 +188,32 @@ export default function DashboardNew() {
         class="tf-box-icon create tf-section bg-home-3 "
         style={{ background: "var(--primary-bg-color)" }}
       >
-        <div class="themesflat-container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="sc-box-icon">
+        <div
+          class="themesflat-container"
+          style={{ paddingLeft: "0px", paddingRight: "0px" }}
+        >
+          <div className="col-12">
+       
+            <div class="heading-live-auctions">
+              <h2 class="tf-title pb-22 text-left">How We Work</h2>
+              {/* <p class="sub-heading mb-22">How To Work</p> */}
+            </div>
+          </div>
+
+          <div class="col-12 step-row">
+            <div class="col-lg-3 col-md-6 col-12 step-card ">
+              <div class="corner-tl"></div>
+              <div class="corner-tr"></div>
+              <div class="corner-bl"></div>
+              <div class="corner-br"></div>
+              <div class="sc-box-icon step-card-body ">
                 <div class="image center">
                   <div class="icon-create icon-color1">
                     <img src={walletImage} />
                   </div>
                 </div>
                 <h3 class="heading">
-                  <a>Connect Your Wallet</a>
+                  <a>Set Up Your Wallet</a>
                 </h3>
                 <p class="content-custom">
                   After setting up your preferred wallet, connect it to OpenSea
@@ -221,15 +222,19 @@ export default function DashboardNew() {
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="sc-box-icon">
+            <div class="col-lg-3 col-md-6 col-12 step-card ">
+              <div class="corner-tl"></div>
+              <div class="corner-tr"></div>
+              <div class="corner-bl"></div>
+              <div class="corner-br"></div>
+              <div class="sc-box-icon step-card-body">
                 <div class="image center">
                   <div class="icon-create icon-color2">
                     <img src={collectionBtn} alt="" />
                   </div>
                 </div>
                 <h3 class="heading">
-                  <a>Create Your Collection</a>
+                  <a>Buy Your Collection</a>
                 </h3>
                 <p class="content-custom">
                   Click "Create NFT" to set up your collection. Add social
@@ -238,8 +243,12 @@ export default function DashboardNew() {
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="sc-box-icon">
+            <div class="col-lg-3 col-md-6 col-12 step-card">
+              <div class="corner-tl"></div>
+              <div class="corner-tr"></div>
+              <div class="corner-bl"></div>
+              <div class="corner-br"></div>
+              <div class="sc-box-icon step-card-body">
                 <div class="image center">
                   <div class="icon-create icon-color3">
                     <img src={AddNftIcon} alt="" />
@@ -255,8 +264,12 @@ export default function DashboardNew() {
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="sc-box-icon">
+            <div class="col-lg-3 col-md-6 col-12 step-card">
+              <div class="corner-tl"></div>
+              <div class="corner-tr"></div>
+              <div class="corner-bl"></div>
+              <div class="corner-br"></div>
+              <div class="sc-box-icon step-card-body">
                 <div class="image center">
                   <div class="icon-create icon-color4">
                     <img src={ListIcon} alt="" />
@@ -275,7 +288,7 @@ export default function DashboardNew() {
           </div>
         </div>
       </section>
-      <LiveAuction />
+      {/* <LiveAuction /> */}
       <div id="collections">
         <section className="tf-section popular-collection">
           <div className="themesflat-container">
@@ -743,7 +756,7 @@ export default function DashboardNew() {
           </div>
         </div>
       </section>
-      <section className="tf-section today-pick">
+      {/* <section className="tf-section today-pick">
         <div className="themesflat-container">
           <div className="row">
             <div class="col-md-12">
@@ -763,10 +776,7 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div> */}
+                
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
@@ -814,10 +824,7 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div> */}
+                  
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
@@ -865,10 +872,7 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div> */}
+               
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
@@ -916,10 +920,7 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div> */}
+                
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
@@ -967,10 +968,7 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div> */}
+                
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
@@ -1018,10 +1016,7 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div> */}
+                 
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
@@ -1069,10 +1064,7 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div> */}
+               
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
@@ -1120,10 +1112,7 @@ export default function DashboardNew() {
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
-                    <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
-                  </div> */}
+                
                   <div class="coming-soon"></div>
                 </div>
                 <div class="card-title">
@@ -1161,7 +1150,7 @@ export default function DashboardNew() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

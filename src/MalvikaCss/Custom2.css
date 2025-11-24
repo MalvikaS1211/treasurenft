@@ -48,7 +48,7 @@
 }
 
 .nav-head a:hover {
-  color: #5142fc;
+  color: var(--primary-color3);
 }
 
 /* Search Box */
@@ -75,7 +75,7 @@
 /* Wallet Button */
 .connect-wallet-container {
   padding: 10px;
-  border: 2px solid #5142fc;
+  border: 2px solid var(--primary-color3);
   color: #fff;
   background: transparent;
   cursor: pointer;

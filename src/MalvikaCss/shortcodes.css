@@ -264,16 +264,16 @@
 }
 
 .light .sc-button.style-1 {
-  border: 2px solid #5142fc;
+  border: 2px solid var(--primary-color3);
   color: #fff;
   background: transparent none repeat scroll 0 0;
 }
 .light .sc-button.style-1:hover {
   background: #fff;
-  color: #5142fc;
+  color: var(--primary-color3);
 }
 .light .sc-button.style-1:hover .signupIcon {
-  color: #5142fc !important;
+  color: var(--primary-color3) !important;
 }
 .sc-button.style-1:hover span,
 .sc-button.style-1:hover span::before {
@@ -1758,7 +1758,7 @@
 
 .heading .s1 {
   color: var(--primary-bg-color);
-  background: linear-gradient(-45deg, #e250e5, #4b50e6, #e250e5, #4b50e6);
+  background: var(--gredient-text);
   background-size: 100% 100%;
   -webkit-background-clip: text;
   -webkit-text-stroke: 3px transparent;
@@ -1766,7 +1766,7 @@
 }
 
 .flat-slider .heading .fill {
-  background: linear-gradient(178.56deg, #e250e5 5.32%, #4b50e6 94.32%);
+  background: var(--gredient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1970,7 +1970,7 @@
 .mainslider .swiper-button-next {
   width: 50px;
   height: 50px;
-  background: linear-gradient(216.56deg, #e250e5 5.32%, #4b50e6 94.32%);
+  background: var(--bg-gradient);
   border-radius: 50%;
 }
 .mainslider .swiper-button-next:after,
@@ -2363,21 +2363,21 @@ section.tf-section.live-auctions.home3 {
   bottom: -4px;
   width: 100%;
   height: 1px;
-  background: linear-gradient(216.56deg, #e250e5 5.32%, #4b50e6 94.32%);
+  background: var(--bg-gradient);
 }
 
 .live-auctions .heading-live-auctions .exp.style2::after {
-  background: linear-gradient(216.56deg, #e250e5 5.32%, #4b50e6 94.32%);
+  background: var(--bg-gradient);
 }
 
 /* Top Seller */
 .tf-section.top-seller {
   padding: 58px 0 43px;
-  background: var(--secondary-bg-color);
+  background: var(--primary-bg-color);;
 }
 .tf-section.popular-collection {
   padding: 38px 0 0px;
-  background: var(--primary-bg-color);
+  background: var(--secondary-bg-color);
 }
 .home-2 .tf-section.popular-collection {
   padding: 81px 0 36px;
@@ -2585,7 +2585,7 @@ section.today-picks {
 }
 
 .flat-title-page .shape.item-w-51 {
-  top: 14.5%;
+  top: 22.5%;
   right: 16.4%;
 }
 
@@ -2704,7 +2704,7 @@ section.today-picks {
 }
 
 .shape {
-  background: linear-gradient(216.56deg, #e250e5 5.32%, #4b50e6 94.32%);
+  background: var(--bg-gradient);
 }
 
 .is_dark .shape.style2::before {
@@ -4484,7 +4484,7 @@ section.today-picks {
 }
 
 .mode_switcher a {
-  background: linear-gradient(216.56deg, #e250e5 5.32%, #4b50e6 94.32%);
+  background: var(--bg-gradient);
   border-radius: 10px;
   width: 40px;
   height: 40px;
@@ -5043,7 +5043,7 @@ button.accordion-button {
   overflow: hidden;
   border-radius: 8px;
   padding: 3px;
-  background: linear-gradient(216.56deg, #e250e5 5.32%, #4b50e6 94.32%);
+  background: var(--bg-gradient);
   margin-right: 15px;
 }
 
@@ -6876,12 +6876,12 @@ button.accordion-button {
 
 .is_dark .flat-title-page .swiper-button-prev,
 .is_dark .flat-title-page .swiper-button-next {
-  background: linear-gradient(216.56deg, #e250e5 5.32%, #4b50e6 94.32%);
+  background: var(--bg-gradient);
 }
 
 .is_dark .flat-title-page .swiper-button-prev:hover,
 .is_dark .flat-title-page .swiper-button-next:hover {
-  background: linear-gradient(216.56deg, #e250e5 5.32%, #4b50e6 94.32%);
+  background: var(--bg-gradient);
 }
 
 .flat-title-page.style3 .mainslider.home .flat-slider,

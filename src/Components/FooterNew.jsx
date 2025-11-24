@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BiSolidSend } from "react-icons/bi";
-import Logo from "../assets/LogoNew.png";
+import Logo from "../assets/Logo.png";
 
 import {
   FaFacebook,
@@ -62,7 +62,7 @@ export default function FooterNew() {
                   </a>
                 </div>
                 <p class="sub-widget-logo">
-                  IFT Global is a Web3 revenue platform based on NFT
+                  Virtual Mine is a Web3 revenue platform based on NFT
                   collections
                 </p>
               </div>

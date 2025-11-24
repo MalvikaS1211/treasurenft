@@ -9,26 +9,26 @@ import blogbg3 from "../assets/blogbg3.jpg";
 const blogPosts = [
   {
     id: 1,
-    title: "Building a Winning NFT Portfolio in IFT Global",
+    title: "Building a Winning NFT Portfolio in Virtual Mine",
     excerpt:
-      "IFT Global is more than just an NFT marketplace—it’s a strategic ecosystem designed for long-term growth and financial success. To maximize your profits, you need to build a strong NFT portfolio that balances value appreciation, passive income, and trading opportunities.",
+      "Virtual Mine is more than just an NFT marketplace—it’s a strategic ecosystem designed for long-term growth and financial success. To maximize your profits, you need to build a strong NFT portfolio that balances value appreciation, passive income, and trading opportunities.",
     date: "Mar 23, 2025",
     thumbnail: Blogbg1,
   },
   {
     id: 2,
-    title: "How IFT Global Creates a Sustainable NFT Economy",
+    title: "How Virtual Mine Creates a Sustainable NFT Economy",
     excerpt:
-      "The NFT space has revolutionized digital ownership, but sustainability remains a challenge for many platforms. IFT Global has developed an innovative approach to ensure long-term value, continuous earnings, and a thriving NFT ecosystem.",
+      "The NFT space has revolutionized digital ownership, but sustainability remains a challenge for many platforms. Virtual Mine has developed an innovative approach to ensure long-term value, continuous earnings, and a thriving NFT ecosystem.",
     date: "Mar 24, 2025",
     thumbnail: BlogBg2,
   },
 
   {
     id: 3,
-    title: "How IFT Global Ensures Continuous NFT Growth & Market Expansion",
+    title: "How Virtual Mine Ensures Continuous NFT Growth & Market Expansion",
     excerpt:
-      "IFT Global is not just an NFT platform—it’s an evolving ecosystem designed for sustainable growth and continuous market expansion. Unlike traditional NFT marketplaces where assets may lose value over time, IFT Global introduces a structured resale mechanism, automated price appreciation, and multiple income streams to keep the ecosystem thriving.  ",
+      "Virtual Mine is not just an NFT platform—it’s an evolving ecosystem designed for sustainable growth and continuous market expansion. Unlike traditional NFT marketplaces where assets may lose value over time, Virtual Mine introduces a structured resale mechanism, automated price appreciation, and multiple income streams to keep the ecosystem thriving.  ",
     date: "Mar 25, 2025",
     thumbnail: blogbg3,
   },
@@ -44,9 +44,9 @@ const blogPosts = [
 
   {
     id: 5,
-    title: "IFT Global NFT Resale Model: How Your NFT Grows in Value",
+    title: "Virtual Mine NFT Resale Model: How Your NFT Grows in Value",
     excerpt:
-      "IFT Global introduces a unique NFT resale model that ensures continuous growth in value with each transaction. Unlike traditional NFT platforms where prices fluctuate based on market trends, IFT Global guarantees systematic appreciation in NFT prices, making it a sustainable and profitable ecosystem for creators, traders, and investors.  ",
+      "Virtual Mine introduces a unique NFT resale model that ensures continuous growth in value with each transaction. Unlike traditional NFT platforms where prices fluctuate based on market trends, Virtual Mine guarantees systematic appreciation in NFT prices, making it a sustainable and profitable ecosystem for creators, traders, and investors.  ",
     date: "Mar 25, 2025",
     thumbnail: blogbg3,
   },
