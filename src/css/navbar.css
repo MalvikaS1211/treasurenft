@@ -81,11 +81,11 @@
   color: #bbbbbb;
 }
 .icons-color:hover {
-  color: #5142fc;
+  color: var( --dashoard-primary-color);
 }
 .menu-list li:hover {
-  color: #5142fc;
+  color: var( --dashoard-primary-color);
 }
 .menu-list li.active {
-  color: #5142fc;
+  color: var( --dashoard-primary-color);
 }

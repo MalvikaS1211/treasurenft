@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../assets/LogoNew.png";
+import Logo from "../assets/Logo.png";
 import {
   FaHome,
   FaRedditAlien,
@@ -60,7 +60,7 @@ export default function Navbar({ title }) {
         {/* Menu Sidebar */}
         <aside className="dashboard-sidebar">
           <div className="logo">
-            <img src={Logo} alt="logo" style={{ width: "160px" }} />
+            <img src={Logo} alt="logo" style={{ width: "120px" }} />
           </div>
           <ul className="menu-list">
             <Link to="/">

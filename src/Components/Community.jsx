@@ -203,7 +203,7 @@ export default function Community() {
                   style={{
                     backgroundImage:
                       "linear-gradient(to right, rgb(33, 82, 175) 0%, rgb(107, 167, 231) 51%, rgb(33, 82, 175) 100%);",
-                    borderRadius: "30px",
+                    borderRadius: "10px",
                   }}
                   onClick={handleSearch}
                 >

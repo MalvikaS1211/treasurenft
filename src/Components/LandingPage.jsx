@@ -53,6 +53,8 @@ import collectionBtn from "../assets/collectionBtn.png";
 import AddNftIcon from "../assets/AddNftIcon.png";
 import ListIcon from "../assets/ListIcon.png";
 import WelcomeModal from "./WelcomeModal";
+import HomeBg from "../assets/home-bg.png";
+import HeroImg from "../assets/HeroImg.png";
 
 export default function DashboardNew() {
   const handleDownload = () => {
@@ -71,119 +73,91 @@ export default function DashboardNew() {
   }, [location]);
   return (
     <>
-      <div class="mainslider">
-        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
-          <div class="swiper-scrollbar">
-            <div
-              class="swiper-scrollbar-drag"
-              style={{
-                transform: "translate3d(0px, 0px, 0px)",
-                transitionDuration: "0ms",
-                width: "635px",
-              }}
-            ></div>
-          </div>
-          <div
-            class="swiper-wrapper"
-            id="swiper-wrapper-b1d0a1eb310bca730"
-            aria-live="polite"
-            style={{
-              transform: "translate3d(0px, 0px, 0px)",
-              transitionDuration: "0ms",
-            }}
-          >
-            <div
-              class="swiper-slide left swiper-slide-active"
-              role="group"
-              aria-label="1 / 3"
-              // style={{ width: "1905px" }}
-            >
-              <div class="flat-title-page ">
-                <img class="bgr-gradient gradient1" src={bg1} alt="Axies" />
-                <img class="bgr-gradient gradient2" src={bg2} alt="Axies" />
-                <img class="bgr-gradient gradient3" src={bg3} alt="Axies" />
-                <div class="shape item-w-16"></div>
-                <div class="shape item-w-32"></div>
-                <div class="shape item-w-22"></div>
-                <div class="shape item-w-35"></div>
+    
+     <div className="mainslider">
+  <div className="swiper">
+    
+    {/* Scrollbar */}
+    <div className="swiper-scrollbar">
+      <div className="swiper-scrollbar-drag"></div>
+    </div>
 
-                <div class="shape item-w-48"></div>
-                <div class="shape style2 item-w-51"></div>
-                <div class="shape style2 item-w-51 position2"></div>
+    {/* Slides */}
+    <div className="swiper-wrapper">
 
-                <div class="shape item-w-68"></div>
-                <div class="overlay"></div>
-                <div class="swiper-container mainslider home">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="slider-item">
-                        <div class="themesflat-container ">
-                          <div class="wrap-heading flat-slider flex">
-                            <div class="content-custom">
-                              <h1 class="heading">
-                                <span class="fill">Virtual Mine </span>
-                              </h1>
-                              <h1 class="heading mb-style">
-                                <span class="">
-                                  The Ultimate Scalable NFT Experience
-                                </span>
-                              </h1>
-                              <p class="sub-heading">
-                                Unleash your collection with exclusive beastly
-                                tokens at Mythic IFT Market
-                              </p>
-                              <div class="flat-bt-slider flex style2 button-container">
-                                <a
-                                  class="sc-button header-slider style style-1 rocket fl-button pri-1"
-                                  onClick={() => navigate("/signup")}
-                                >
-                                  <div className="d-flex justify-content-center gap-3 cursor-pointer">
-                                    <FiUserPlus
-                                      color="#fff"
-                                      className="signupIcon"
-                                      size={20}
-                                    />
-                                    <span className="pl-0">Sign Up</span>
-                                  </div>
-                                </a>
+      <div className="swiper-slide left swiper-slide-active">
+        
+        {/* Background Image Container */}
+        <div
+          className="flat-title-page"
+          style={{
+            backgroundImage: `url(${HomeBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
 
-                                {/* <a
-                                  href={PDF}
-                                  download="MagicVerse.pdf"
-                                  class="sc-button header-slider style style-1 rocket fl-button pri-1"
-                                  onClick={handleDownload}
-                                >
-                                  <div className="d-flex justify-content-center gap-3">
-                                    <GoDownload color="#5142fc" size={20} />
-                                    <span className="pl-0">DownLoad Pdf</span>
-                                  </div>
-                                </a> */}
-                              </div>
-                            </div>
-                            <div class="image">
-                              <img class="img-bg" src={bg4} alt="axies" />
-                              <img
-                                src={bg5}
-                                alt="axies"
-                                style={{ width: "90%" }}
+          {/* Inner Slider */}
+          <div className="swiper-container mainslider home">
+            <div className="swiper-wrapper">
+              <div className="swiper-slide">
+                <div className="slider-item">
+                  <div className="themesflat-container">
+
+                    <div className="wrap-heading flat-slider flex">
+
+                      {/* Text Section */}
+                      <div className="content-custom">
+                        <h1 className="heading">
+                          <span className="fill">Virtual Mine</span>
+                        </h1>
+
+                        <h1 className="heading mb-style">
+                          <span>The Ultimate Scalable NFT Experience</span>
+                        </h1>
+
+                        <p className="sub-heading">
+                          Empowering Users With Smarter, Faster, Scalable NFT Utility
+                        </p>
+
+                        <div className="flat-bt-slider flex style2 button-container">
+                          <a
+                            className="sc-button header-slider style style-1 rocket fl-button pri-1"
+                            onClick={() => navigate("/signup")}
+                          >
+                            <div className="d-flex justify-content-center gap-3 cursor-pointer">
+                              <FiUserPlus
+                                color="#fff"
+                                className="signupIcon"
+                                size={20}
                               />
+                              <span className="pl-0">Sign Up</span>
                             </div>
-                          </div>
+                          </a>
                         </div>
                       </div>
+
+                      {/* Hero Image */}
+                      <div className="image">
+                        <img className="img-bg" src={HeroImg} alt="axies"  />
+                      </div>
+
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <span
-            class="swiper-notification"
-            aria-live="assertive"
-            aria-atomic="true"
-          ></span>
+
         </div>
       </div>
+
+    </div>
+
+  </div>
+</div>
+
       <section
         class="tf-box-icon create tf-section bg-home-3 "
         style={{ background: "var(--primary-bg-color)" }}
@@ -193,7 +167,6 @@ export default function DashboardNew() {
           style={{ paddingLeft: "0px", paddingRight: "0px" }}
         >
           <div className="col-12">
-       
             <div class="heading-live-auctions">
               <h2 class="tf-title pb-22 text-left">How We Work</h2>
               {/* <p class="sub-heading mb-22">How To Work</p> */}
@@ -201,7 +174,7 @@ export default function DashboardNew() {
           </div>
 
           <div class="col-12 step-row">
-            <div class="col-lg-3 col-md-6 col-12 step-card ">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 step-card ">
               <div class="corner-tl"></div>
               <div class="corner-tr"></div>
               <div class="corner-bl"></div>
@@ -209,7 +182,7 @@ export default function DashboardNew() {
               <div class="sc-box-icon step-card-body ">
                 <div class="image center">
                   <div class="icon-create icon-color1">
-                    <img src={walletImage} />
+                    <img src={walletImage} alt="Wallet Icon" />
                   </div>
                 </div>
                 <h3 class="heading">
@@ -222,7 +195,7 @@ export default function DashboardNew() {
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12 step-card ">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 step-card ">
               <div class="corner-tl"></div>
               <div class="corner-tr"></div>
               <div class="corner-bl"></div>
@@ -230,7 +203,7 @@ export default function DashboardNew() {
               <div class="sc-box-icon step-card-body">
                 <div class="image center">
                   <div class="icon-create icon-color2">
-                    <img src={collectionBtn} alt="" />
+                    <img src={collectionBtn} alt="Collection Icon" />
                   </div>
                 </div>
                 <h3 class="heading">
@@ -243,7 +216,7 @@ export default function DashboardNew() {
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12 step-card">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 step-card">
               <div class="corner-tl"></div>
               <div class="corner-tr"></div>
               <div class="corner-bl"></div>
@@ -251,7 +224,7 @@ export default function DashboardNew() {
               <div class="sc-box-icon step-card-body">
                 <div class="image center">
                   <div class="icon-create icon-color3">
-                    <img src={AddNftIcon} alt="" />
+                    <img src={AddNftIcon} alt="Add NFT Icon" />
                   </div>
                 </div>
                 <h3 class="heading">
@@ -264,7 +237,7 @@ export default function DashboardNew() {
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12 step-card">
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12 step-card">
               <div class="corner-tl"></div>
               <div class="corner-tr"></div>
               <div class="corner-bl"></div>
@@ -272,7 +245,7 @@ export default function DashboardNew() {
               <div class="sc-box-icon step-card-body">
                 <div class="image center">
                   <div class="icon-create icon-color4">
-                    <img src={ListIcon} alt="" />
+                    <img src={ListIcon} alt="List for Sale Icon" />
                   </div>
                 </div>
                 <h3 class="heading">

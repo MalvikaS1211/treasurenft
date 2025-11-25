@@ -1,3 +1,9 @@
+:root {
+
+  --gredient-text: linear-gradient(135deg, #0A53FF, #00C6FF);
+}
+
+
 .header-dashboard {
   display: flex;
   justify-content: space-between;
@@ -1187,22 +1193,11 @@ main {
   padding: 10px 20px;
   font-size: 1rem;
   color: #fff;
-  background-color: #5142fc;
-
+  background-image: var(--gredient-text);
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.button_container .btn:hover {
-  /* background-color: #1358ed; */
-  background-image: linear-gradient(
-    to right,
-    rgb(33, 82, 175) 0%,
-    rgb(107, 167, 231) 51%,
-    rgb(33, 82, 175) 100%
-  );
 }
 
 @media (min-width: 640px) {
@@ -1546,7 +1541,7 @@ main {
     width: max-content;
     rotate: 0deg;
     margin-top: 20px;
-    margin-left: -3vh;
+    margin-left: -7vh;
   }
 
   .branch-connector {
@@ -1572,7 +1567,7 @@ main {
 
 .heading {
   text-align: center;
-  margin-top: 2%;
+  margin-top: 4%;
   margin-bottom: 2%;
   color: #fff !important;
 }
@@ -2366,12 +2361,7 @@ header {
 }
 .btn-upgrade {
   margin-top: 10px;
-  background-image: linear-gradient(
-    to right,
-    rgb(33, 82, 175) 0%,
-    rgb(107, 167, 231) 51%,
-    rgb(33, 82, 175) 100%
-  );
+  background-image: var(--gredient-text);
   color: white;
   border-radius: 30px;
   padding: 10px 20px;
@@ -2416,14 +2406,7 @@ td {
 }
 
 .wallet-card {
-  /* background-image: linear-gradient(
-    to right,
-    rgb(33, 82, 175) 0%,
-    rgb(107, 167, 231) 51%,
-    rgb(33, 82, 175) 100%
-  ); */
-  /* background: #93bbff; */
-  /* border: 1px solid rgb(33, 82, 175); */
+
   background: #1d1d1f;
   padding: 10px 0px;
   height: 225px;
@@ -2431,8 +2414,8 @@ td {
 
 .copytheRefferal {
   cursor: pointer;
-  display: inline-block; /* Ensures transform applies properly */
-  transition: transform 0.2s ease-in-out; /* Smooth animation */
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
 }
 
 .copytheRefferal:hover {
@@ -2489,14 +2472,6 @@ td {
   font-size: 15px;
   padding-bottom: 10px;
 }
-/* .modal-header {
-  background-image: linear-gradient(
-    to right,
-    rgb(72 120 211) 0%,
-    rgb(107, 167, 231) 51%,
-    rgb(77 122 207) 100%
-  ) !important;
-} */
 
 .msg-container {
   border: 1px solid #7fb1e799 !important;

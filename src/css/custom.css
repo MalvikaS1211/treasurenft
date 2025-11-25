@@ -860,13 +860,10 @@ button {
   justify-content: center;
   align-items: center;
 }
-/* 
-.modal-image {
-  border-radius: 4px;
-} */
+
 
 .custom-pagination-btn {
-  background: #5142fc;
+  background: var(--dashoard-primary-color);
   color: white;
   border: none;
   border-radius: 8px;
@@ -874,11 +871,6 @@ button {
   font-weight: 600;
 }
 
-/* .custom-pagination-btn:hover {
-  background: linear-gradient(to right, #005bea, #00c6fb);
-  box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.5);
-  transform: translateY(-2px);
-} */
 
 .custom-pagination-btn:disabled {
   background: #d3d3d3;

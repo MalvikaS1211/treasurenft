@@ -441,7 +441,7 @@ export default function Trade() {
             </h1>
           </div>
         </div>
-        <div className="p-4" style={{ background: "var(--primary-bg-color)" }}>
+        <div className="p-4" style={{ background: "var(--pages-bg-color)" }}>
           <div class="total-grid" style={{ marginTop: "3%" }}>
             <div class="total-card">
               <div class="sub-total">
@@ -464,7 +464,7 @@ export default function Trade() {
             </div>
             <div class="total-card">
               <div class="sub-total">
-                {/* <h6>Total Limit</h6> */}
+               
 
                 <h6>Daily Limit</h6>
               </div>
@@ -491,32 +491,9 @@ export default function Trade() {
           </div>
         </div>
 
-        <div className="p-4" style={{ background: "var(--primary-bg-color)" }}>
+        <div className="p-4" style={{ background: "var(--pages-bg-color)" }}>
           <div class="total-grid" style={{ marginBottom: "3%" }}>
-            {/* <div class="total-card">
-              <div class="sub-total">
-                <h6>Bonus Limit</h6>
-              </div>
-              <p>
-                {allUsers?.status == true
-                  ? ((Number(allUsers?.userUpperLimit) || 0) / 1e18).toFixed(4)
-                  : 0}
-                <span> USDT</span>
-              </p>
-            </div> */}
-            {/* <div class="total-card">
-              <div class="sub-total">
-                <h6>Max Limit </h6>
-              </div>
-              <p>
-                {allUsers?.status == true
-                  ? (
-                      (Number(allUsers?.userUpperLimit) * 90 || 0) / 1e18
-                    ).toFixed(4)
-                  : 0}
-                <span> USDT</span>
-              </p>
-            </div> */}
+          
             <div class="total-card">
               <div class="sub-total">
                 <h6>Total Limit Remaining</h6>
@@ -553,12 +530,7 @@ export default function Trade() {
                 {allTrade.length > 0 ? (
                   allTrade?.map((nft, index) => {
                     if (Number(nft.price) > 0) {
-                      // console.log(
-                      //   // nft.owner,
-                      //   Number(nft.price),
-                      //   nft.tokenId,
-                      //   "nft.owner"
-                      // );
+                     
                       return (
                         <div
                           key={index}
@@ -568,11 +540,7 @@ export default function Trade() {
                             <div className="card-media">
                               <a
                                 href="#"
-                                style={{
-                                  height: "288px",
-                                  width: "288px",
-                                  display: "flex",
-                                }}
+                                className="tradenftImg"
                               >
                                 <img
                                   src={

@@ -1,27 +1,3 @@
-/**
-    * Tf Title
-	* Button
-  	* sc-box-icon
-	* sc card article
-	* sc author
-	* sc card product
-	* sc card collection
-	* sc card activity
-	* Page Title
-    * Page Title Inner
-    * Page Index
-    * Page Home
-    * Explore 1
-    * Explore 2
-    * Login
-    * Contact
-    * Top Seller Authours
-    * author-tab
-    * help-center
-    * tf item details
-    * Page connect-wallet
-    * Home Update
-*/
 
 .tf-section {
   padding: 80px 0;
@@ -36,8 +12,7 @@
 .tf-connect-wallet.tf-section {
   padding: 80px 0 50px;
 }
-/* Tf-Title
-  -------------------------------------------------------------- */
+
 .tf-title {
   position: relative;
   line-height: 44px;
@@ -1715,7 +1690,7 @@
   position: relative;
   background: var(--primary-bg-color);
   background-size: cover;
-  padding: 150px 0 20px;
+  padding: 180px 0 40px;
 }
 .home-2 .flat-title-page {
   padding: 84px 0 156px;
@@ -1940,7 +1915,7 @@
 .swiper-slide-active .flat-slider h4 {
   transform: translateY(0) !important;
 }
-.swiper-slide.swiper-slide-active .flat-title-page .image {
+/* .swiper-slide.swiper-slide-active .flat-title-page .image {
   transform: translateX(400px);
 }
 .right.swiper-slide .flat-title-page .image {
@@ -1949,7 +1924,7 @@
 
 .swiper-slide.swiper-slide-active .flat-title-page .image {
   transform: translateX(0px);
-}
+} */
 
 .mainslider.home3 .swiper-slide-active .image,
 .mainslider.home .swiper-slide-active .image,
@@ -2373,7 +2348,7 @@ section.tf-section.live-auctions.home3 {
 /* Top Seller */
 .tf-section.top-seller {
   padding: 58px 0 43px;
-  background: var(--primary-bg-color);;
+  background: var(--primary-bg-color);
 }
 .tf-section.popular-collection {
   padding: 38px 0 0px;
@@ -2539,13 +2514,13 @@ section.today-picks {
 .mainslider.home .image {
   position: relative;
   width: 50%;
-  padding-top: 18px;
-  padding-right: 200px;
+  /* padding-top: 18px;
+  padding-right: 200px; */
 }
 
-.mainslider.home .image img {
+/* .mainslider.home .image img {
   animation: move5 10s infinite linear;
-}
+} */
 
 .mainslider.home .image {
   text-align: right;
@@ -2603,10 +2578,60 @@ section.today-picks {
   position: absolute;
   z-index: -1;
   right: 0%;
-  top: 14%;
-  max-width: 100%;
+  top: -28%;
+  width: 139%;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
 }
 
+@media (max-width: 1024px) {
+  .flat-title-page .img-bg {
+    width: 169%;
+    top: 8%;
+    right: 18%;
+  }
+}
+@media (max-width: 992px) {
+  .flat-title-page .img-bg {
+width: 249%;
+        top: 3%;
+        right: 20%;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .flat-title-page .img-bg {
+    width: 249%;
+    top: 23%;
+    right: 20%;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .flat-title-page .img-bg {
+    width: 220%;
+    top: 0%;
+    right: -30%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .flat-title-page .img-bg {
+    width: 179%;
+    top: 0%;
+    right: 10%;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .flat-title-page .img-bg {
+    width: 152% ;
+    top: -27%;
+    right: 10%;
+  }
+}
 .flat-title-page .bgr-gradient {
   display: none;
 }

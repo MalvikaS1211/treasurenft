@@ -44,7 +44,7 @@ export default function CreateNFT() {
           </div>
         </div> */}
 
-        <div style={{ background: "var(--primary-bg-color)" }}>
+        <div style={{ background: "var(--pages-bg-color)" }}>
           {" "}
           <div className="themesflat-container">
             <div className="row">

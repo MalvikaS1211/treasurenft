@@ -44,7 +44,7 @@ const Header = () => {
             src={Logo}
             alt=""
             className="haeder-logo"
-            style={{ width: "7%" }}
+            style={{ width: "4%" }}
           />
 
           <nav className="nav-head">
@@ -88,7 +88,7 @@ const Header = () => {
             src={Logo}
             alt=""
             className="haeder-logo"
-            style={{ width: "30%" }}
+            style={{ width: "25%" }}
           />
           <ConnectWallet />
 
@@ -116,7 +116,7 @@ const Header = () => {
                 src={Logo}
                 alt=""
                 className="haeder-logo"
-                style={{ width: "70%" }}
+                style={{ width: "50%" }}
               />
             </h5>
 
