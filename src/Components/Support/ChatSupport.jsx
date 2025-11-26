@@ -54,18 +54,18 @@ export default function ChatSupport() {
             </button>
 
             <div
-              class="modal fade"
+              className="modal fade"
               id="exampleModalCenter"
               tabindex="-1"
               role="dialog"
               aria-labelledby="exampleModalCenterTitle"
               aria-hidden="true"
             >
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content" style={{ background: "#303031" }}>
-                  <div class="modal-header" style={{ height: "80px" }}>
+              <div className="modal-dialog modal-dialog-centered" role="document">
+                <div className="modal-content" style={{ background: "#303031" }}>
+                  <div className="modal-header" style={{ height: "80px" }}>
                     <h5
-                      class="modal-title text-white "
+                      className="modal-title text-white "
                       id="exampleModalLongTitle"
                     >
                       New Ticket
@@ -117,7 +117,7 @@ export default function ChatSupport() {
                       <p className="text-xs text-gray-500 text-right"></p>
                     </div>
                   </div>
-                  <div class="modal-footer">
+                  <div className="modal-footer">
                     <button
                       type="button"
                       onClick={() => {

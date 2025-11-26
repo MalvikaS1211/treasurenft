@@ -93,25 +93,25 @@ const Header = () => {
           <ConnectWallet />
 
           <GiHamburgerMenu
-            class="text-white"
+          
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasScrolling"
             aria-controls="offcanvasScrolling"
-            className="hamburger-icon"
+            className="hamburger-icon text-white"
             color="#fff"
           />
         </div>
         <div
-          class="offcanvas offcanvas-start bg-black text-white"
+          className="offcanvas offcanvas-start bg-black text-white"
           data-bs-scroll="true"
           data-bs-backdrop="false"
           tabindex="-1"
           id="offcanvasScrolling"
           aria-labelledby="offcanvasScrollingLabel"
         >
-          <div class="offcanvas-header pt-4">
-            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+          <div className="offcanvas-header pt-4">
+            <h5 className="offcanvas-title" id="offcanvasScrollingLabel">
               <img
                 src={Logo}
                 alt=""
@@ -129,7 +129,7 @@ const Header = () => {
               <IoClose size={28} color="#fff" />
             </button>
           </div>
-          <div class="offcanvas-body">
+          <div className="offcanvas-body">
             <nav className="nav-head">
               {address && userExist ? (
                 <>

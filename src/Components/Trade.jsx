@@ -433,18 +433,18 @@ export default function Trade() {
       <div className="tf-create-item tf-section p-0">
         <div className="dashboardbg">
           <div
-            class="col-md-12 "
+            className="col-md-12 "
             style={{ paddingTop: "100px", paddingBottom: "20px" }}
           >
-            <h1 class="heading mb-style" style={{ textAlign: "center" }}>
-              <span class="tf-text s1">Buy Item</span>
+            <h1 className="heading mb-style" style={{ textAlign: "center" }}>
+              <span className="tf-text s1">Buy Item</span>
             </h1>
           </div>
         </div>
         <div className="p-4" style={{ background: "var(--primary-bg-color)" }}>
-          <div class="total-grid" style={{ marginTop: "3%" }}>
-            <div class="total-card">
-              <div class="sub-total">
+          <div className="total-grid" style={{ marginTop: "3%" }}>
+            <div className="total-card">
+              <div className="sub-total">
                 <h6>Available Fund</h6>
               </div>
               <p>
@@ -453,8 +453,8 @@ export default function Trade() {
                 <span> USDT</span>
               </p>
             </div>
-            <div class="total-card">
-              <div class="sub-total">
+            <div className="total-card">
+              <div className="sub-total">
                 <h6>Assets Value</h6>
               </div>
               <p>
@@ -462,8 +462,8 @@ export default function Trade() {
                 <span> USDT</span>
               </p>
             </div>
-            <div class="total-card">
-              <div class="sub-total">
+            <div className="total-card">
+              <div className="sub-total">
                 {/* <h6>Total Limit</h6> */}
 
                 <h6>Daily Limit</h6>
@@ -478,7 +478,7 @@ export default function Trade() {
           </div>
           <div>
             <p
-              class=""
+              className=""
               style={{
                 textAlign: "justify",
                 color: "#fff",
@@ -492,9 +492,9 @@ export default function Trade() {
         </div>
 
         <div className="p-4" style={{ background: "var(--primary-bg-color)" }}>
-          <div class="total-grid" style={{ marginBottom: "3%" }}>
-            {/* <div class="total-card">
-              <div class="sub-total">
+          <div className="total-grid" style={{ marginBottom: "3%" }}>
+            {/* <div className="total-card">
+              <div className="sub-total">
                 <h6>Bonus Limit</h6>
               </div>
               <p>
@@ -504,8 +504,8 @@ export default function Trade() {
                 <span> USDT</span>
               </p>
             </div> */}
-            {/* <div class="total-card">
-              <div class="sub-total">
+            {/* <div className="total-card">
+              <div className="sub-total">
                 <h6>Max Limit </h6>
               </div>
               <p>
@@ -517,8 +517,8 @@ export default function Trade() {
                 <span> USDT</span>
               </p>
             </div> */}
-            <div class="total-card">
-              <div class="sub-total">
+            <div className="total-card">
+              <div className="sub-total">
                 <h6>Total Limit Remaining</h6>
               </div>
               <p>
@@ -530,8 +530,8 @@ export default function Trade() {
                 <span> USDT</span>
               </p>
             </div>
-            <div class="total-card">
-              <div class="sub-total">
+            <div className="total-card">
+              <div className="sub-total">
                 <h6>Total Limit Utilised</h6>
               </div>
               <p>
@@ -589,7 +589,7 @@ export default function Trade() {
                               </a>
                               {nft.owner != address && (
                                 <div
-                                  class="button-place-bid"
+                                  className="button-place-bid"
                                   onClick={() => {
                                     BuyNft(
                                       nft.price,
@@ -662,17 +662,17 @@ export default function Trade() {
               className="no-data-container"
               style={{ background: "#18181a" }}
             >
-              <div class="spinner-border text-white" role="status">
-                <span class="sr-only ">Loading...</span>
+              <div className="spinner-border text-white" role="status">
+                <span className="sr-only ">Loading...</span>
               </div>
               <div className="no-data-available text-white">
                 {" "}
                 Please wait We are loading data
               </div>
             </div>
-            {/* <div class="d-flex justify-content-center">
-              <div class="spinner-border" role="status">
-                <span class="sr-only">Loading...</span>
+            {/* <div className="d-flex justify-content-center">
+              <div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
               </div>
             </div>
             <p className=" w-100" style={{ textAlign: "center" }}>

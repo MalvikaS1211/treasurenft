@@ -45,15 +45,15 @@ export default function FooterNew() {
   };
   return (
     <div>
-      <footer id="footer" class="footer-light-style clearfix bg-style">
-        <div class="themesflat-container">
-          <div class="row">
-            <div class="col-lg-3 col-md-12 col-12">
-              <div class="widget widget-logo">
-                <div class="logo-footer" id="logo-footer">
+      <footer id="footer" className="footer-light-style clearfix bg-style">
+        <div className="themesflat-container">
+          <div className="row">
+            <div className="col-lg-3 col-md-12 col-12">
+              <div className="widget widget-logo">
+                <div className="logo-footer" id="logo-footer">
                   <a href="/">
                     <img
-                      // class="logo-footer-img"
+                      // className="logo-footer-img"
                       // id="logo_footer"
                       src={Logo}
                       alt="nft-Logo"
@@ -61,15 +61,15 @@ export default function FooterNew() {
                     />
                   </a>
                 </div>
-                <p class="sub-widget-logo">
+                <p className="sub-widget-logo">
                   IFT Global is a Web3 revenue platform based on NFT
                   collections
                 </p>
               </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-5 col-5">
-              <div class="widget widget-menu style-1">
-                <h5 class="title-widget">My Account</h5>
+            <div className="col-lg-2 col-md-4 col-sm-5 col-5">
+              <div className="widget widget-menu style-1">
+                <h5 className="title-widget">My Account</h5>
                 <ul>
                   {/* <li>
                     <a>Authors</a>
@@ -93,9 +93,9 @@ export default function FooterNew() {
                 </ul>
               </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-7 col-7">
-              <div class="widget widget-menu style-2">
-                <h5 class="title-widget">Resources</h5>
+            <div className="col-lg-2 col-md-4 col-sm-7 col-7">
+              <div className="widget widget-menu style-2">
+                <h5 className="title-widget">Resources</h5>
                 <ul>
                   <li>
                     {address && userExist ? (
@@ -126,9 +126,9 @@ export default function FooterNew() {
                 </ul>
               </div>
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-5 col-5">
-              <div class="widget widget-menu fl-st-3">
-                <h5 class="title-widget">Company</h5>
+            <div className="col-lg-2 col-md-4 col-sm-5 col-5">
+              <div className="widget widget-menu fl-st-3">
+                <h5 className="title-widget">Company</h5>
                 <ul>
                   <li>
                     {address && userExist ? (
@@ -149,20 +149,20 @@ export default function FooterNew() {
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-7 col-12">
-              <div class="widget widget-subcribe">
-                <h5 class="title-widget">Subscribe Us</h5>
-                <div class="form-subcribe">
+            <div className="col-lg-3 col-md-6 col-sm-7 col-12">
+              <div className="widget widget-subcribe">
+                <h5 className="title-widget">Subscribe Us</h5>
+                <div className="form-subcribe">
                   <form
                     id="subscribe-form"
                     action="#"
                     method="GET"
                     acceptCharset="utf-8"
-                    class="form-submit"
+                    className="form-submit"
                   >
                     <input
                       name="email"
-                      class="email"
+                      className="email"
                       type="email"
                       required=""
                     />
@@ -171,7 +171,7 @@ export default function FooterNew() {
                     </button>
                   </form>
                 </div>
-                <div class="widget-social style-1 mg-t32">
+                <div className="widget-social style-1 mg-t32">
                   <ul>
                     <li>
                       <a href="" target="_blank">
@@ -185,7 +185,7 @@ export default function FooterNew() {
                     </li>
                     <li>
                       <a href="" target="_blank">
-                        <i class="fab fa-telegram-plane"></i>
+                        <i className="fab fa-telegram-plane"></i>
                       </a>
                     </li>
                     <li>

@@ -14,11 +14,11 @@ export default function CreateNFT() {
       <div className="tf-create-item tf-section p-0">
         <div className="dashboardbg">
           <div
-            class="col-md-12 pt-40px pb-"
+            className="col-md-12 pt-40px pb-"
             style={{ paddingTop: "100px", paddingBottom: "40px" }}
           >
-            <h1 class="heading mb-style" style={{ textAlign: "center" }}>
-              <span class="tf-text s1">Create Item</span>
+            <h1 className="heading mb-style" style={{ textAlign: "center" }}>
+              <span className="tf-text s1">Create Item</span>
             </h1>
           </div>
         </div>

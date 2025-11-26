@@ -74,11 +74,11 @@ export default function DashboardNew() {
   }, [location]);
   return (
     <>
-      <div class="mainslider">
-        <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
-          <div class="swiper-scrollbar">
+      <div className="mainslider">
+        <div className="swiper swiper-initialized swiper-horizontal swiper-pointer-events">
+          <div className="swiper-scrollbar">
             <div
-              class="swiper-scrollbar-drag"
+              className="swiper-scrollbar-drag"
               style={{
                 transform: "translate3d(0px, 0px, 0px)",
                 transitionDuration: "0ms",
@@ -87,7 +87,7 @@ export default function DashboardNew() {
             ></div>
           </div>
           <div
-            class="swiper-wrapper"
+            className="swiper-wrapper"
             id="swiper-wrapper-b1d0a1eb310bca730"
             aria-live="polite"
             style={{
@@ -96,47 +96,47 @@ export default function DashboardNew() {
             }}
           >
             <div
-              class="swiper-slide left swiper-slide-active"
+              className="swiper-slide left swiper-slide-active"
               role="group"
               aria-label="1 / 3"
               // style={{ width: "1905px" }}
             >
-              <div class="flat-title-page ">
-                <img class="bgr-gradient gradient1" src={bg1} alt="Axies" />
-                <img class="bgr-gradient gradient2" src={bg2} alt="Axies" />
-                <img class="bgr-gradient gradient3" src={bg3} alt="Axies" />
-                <div class="shape item-w-16"></div>
-                <div class="shape item-w-32"></div>
-                <div class="shape item-w-22"></div>
-                <div class="shape item-w-35"></div>
+              <div className="flat-title-page ">
+                <img className="bgr-gradient gradient1" src={bg1} alt="Axies" />
+                <img className="bgr-gradient gradient2" src={bg2} alt="Axies" />
+                <img className="bgr-gradient gradient3" src={bg3} alt="Axies" />
+                <div className="shape item-w-16"></div>
+                <div className="shape item-w-32"></div>
+                <div className="shape item-w-22"></div>
+                <div className="shape item-w-35"></div>
 
-                <div class="shape item-w-48"></div>
-                <div class="shape style2 item-w-51"></div>
-                <div class="shape style2 item-w-51 position2"></div>
+                <div className="shape item-w-48"></div>
+                <div className="shape style2 item-w-51"></div>
+                <div className="shape style2 item-w-51 position2"></div>
 
-                <div class="shape item-w-68"></div>
-                <div class="overlay"></div>
-                <div class="swiper-container mainslider home">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="slider-item">
-                        <div class="themesflat-container ">
-                          <div class="wrap-heading flat-slider flex">
-                            <div class="content-custom">
-                              <h2 class="heading">Unleash and Trade</h2>
-                              <h1 class="heading mb-style">
-                                <span class="">mythical</span>
+                <div className="shape item-w-68"></div>
+                <div className="overlay"></div>
+                <div className="swiper-container mainslider home">
+                  <div className="swiper-wrapper">
+                    <div className="swiper-slide">
+                      <div className="slider-item">
+                        <div className="themesflat-container ">
+                          <div className="wrap-heading flat-slider flex">
+                            <div className="content-custom">
+                              <h2 className="heading">Unleash and Trade</h2>
+                              <h1 className="heading mb-style">
+                                <span className="">mythical</span>
                               </h1>
-                              <h1 class="heading">
-                                <span class="fill">IFT </span>NFTs and Tokens
+                              <h1 className="heading">
+                                <span className="fill">IFT </span>NFTs and Tokens
                               </h1>
-                              <p class="sub-heading">
+                              <p className="sub-heading">
                                 Unleash your collection with exclusive beastly
                                 tokens at Mythic IFT Market
                               </p>
-                              <div class="flat-bt-slider flex style2 button-container">
+                              <div className="flat-bt-slider flex style2 button-container">
                                 <a
-                                  class="sc-button header-slider style style-1 rocket fl-button pri-1"
+                                  className="sc-button header-slider style style-1 rocket fl-button pri-1"
                                   onClick={() => navigate("/signup")}
                                 >
                                   <div className="d-flex justify-content-center gap-3 cursor-pointer">
@@ -152,7 +152,7 @@ export default function DashboardNew() {
                                 {/* <a
                                   href={PDF}
                                   download="MagicVerse.pdf"
-                                  class="sc-button header-slider style style-1 rocket fl-button pri-1"
+                                  className="sc-button header-slider style style-1 rocket fl-button pri-1"
                                   onClick={handleDownload}
                                 >
                                   <div className="d-flex justify-content-center gap-3">
@@ -162,8 +162,8 @@ export default function DashboardNew() {
                                 </a> */}
                               </div>
                             </div>
-                            <div class="image">
-                              <img class="img-bg" src={bg4} alt="axies" />
+                            <div className="image">
+                              <img className="img-bg" src={bg4} alt="axies" />
                               <img
                                 src={bg5}
                                 alt="axies"
@@ -180,80 +180,80 @@ export default function DashboardNew() {
             </div>
           </div>
           <span
-            class="swiper-notification"
+            className="swiper-notification"
             aria-live="assertive"
             aria-atomic="true"
           ></span>
         </div>
       </div>
       <section
-        class="tf-box-icon create tf-section bg-home-3 "
+        className="tf-box-icon create tf-section bg-home-3 "
         style={{ background: "var(--primary-bg-color)" }}
       >
-        <div class="themesflat-container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="sc-box-icon">
-                <div class="image center">
-                  <div class="icon-create icon-color1">
+        <div className="themesflat-container">
+          <div className="row">
+            <div className="col-lg-3 col-md-6 col-12">
+              <div className="sc-box-icon">
+                <div className="image center">
+                  <div className="icon-create icon-color1">
                     <img src={walletImage} />
                   </div>
                 </div>
-                <h3 class="heading">
+                <h3 className="heading">
                   <a>Connect Your Wallet</a>
                 </h3>
-                <p class="content-custom">
+                <p className="content-custom">
                   After setting up your preferred wallet, connect it to OpenSea
                   by selecting the NFT Marketplace option in the top right
                   corner of the platform.
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="sc-box-icon">
-                <div class="image center">
-                  <div class="icon-create icon-color2">
+            <div className="col-lg-3 col-md-6 col-12">
+              <div className="sc-box-icon">
+                <div className="image center">
+                  <div className="icon-create icon-color2">
                     <img src={collectionBtn} alt="" />
                   </div>
                 </div>
-                <h3 class="heading">
+                <h3 className="heading">
                   <a>Create Your Collection</a>
                 </h3>
-                <p class="content-custom">
+                <p className="content-custom">
                   Click "Create NFT" to set up your collection. Add social
                   links, a description, profile and banner images, and specify a
                   secondary sales fee.
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="sc-box-icon">
-                <div class="image center">
-                  <div class="icon-create icon-color3">
+            <div className="col-lg-3 col-md-6 col-12">
+              <div className="sc-box-icon">
+                <div className="image center">
+                  <div className="icon-create icon-color3">
                     <img src={AddNftIcon} alt="" />
                   </div>
                 </div>
-                <h3 class="heading">
+                <h3 className="heading">
                   <a>Add Your NFTs</a>
                 </h3>
-                <p class="content-custom">
+                <p className="content-custom">
                   Upload your work (image or 3D art), add a title and
                   description, and customize your NFTs with properties and
                   stats.
                 </p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="sc-box-icon">
-                <div class="image center">
-                  <div class="icon-create icon-color4">
+            <div className="col-lg-3 col-md-6 col-12">
+              <div className="sc-box-icon">
+                <div className="image center">
+                  <div className="icon-create icon-color4">
                     <img src={ListIcon} alt="" />
                   </div>
                 </div>
-                <h3 class="heading">
+                <h3 className="heading">
                   <a>Sell Your NFTs</a>
                 </h3>
-                <p class="content-custom">
+                <p className="content-custom">
                   Select your preferred selling method, such as auctions,
                   fixed-price listings, or declining-price listings, to showcase
                   and sell your NFTs your way!
@@ -268,10 +268,10 @@ export default function DashboardNew() {
         <section className="tf-section popular-collection">
           <div className="themesflat-container">
             <div className="row">
-              <div class="col-md-12">
-                <div class="heading-live-auctions">
-                  <h2 class="tf-title pb-22 text-left">Popular Collection</h2>
-                  {/* <a class="exp style2" href="/explore-03">
+              <div className="col-md-12">
+                <div className="heading-live-auctions">
+                  <h2 className="tf-title pb-22 text-left">Popular Collection</h2>
+                  {/* <a className="exp style2" href="/explore-03">
                   EXPLORE MORE
                 </a> */}
                 </div>
@@ -294,60 +294,60 @@ export default function DashboardNew() {
                       style={{ transform: "translate3d(0px, 0px, 0px)" }}
                     >
                       <div
-                        class="swiper-slide swiper-slide-active"
+                        className="swiper-slide swiper-slide-active"
                         role="group"
                         aria-label="1 / 12"
                         // style={{ width: "450px", marginRight: "30px" }}
                       >
-                        <div class="swiper-container show-shadow carousel4 button-arow-style">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                              <div class="slider-item">
-                                <div class="sc-card-collection style-3">
+                        <div className="swiper-container show-shadow carousel4 button-arow-style">
+                          <div className="swiper-wrapper">
+                            <div className="swiper-slide">
+                              <div className="slider-item">
+                                <div className="sc-card-collection style-3">
                                   <a>
-                                    <div class="media-images-box">
-                                      <div class="top-media">
+                                    <div className="media-images-box">
+                                      <div className="top-media">
                                         <img src={collection1} alt="Axies" />
                                         <img src={collection2} alt="Axies" />
                                       </div>
-                                      <div class="bottom-media">
+                                      <div className="bottom-media">
                                         <img src={collection3} alt="Axies" />
                                         <img src={collection8} alt="Axies" />
                                         <img src={collection5} alt="Axies" />
                                       </div>
                                     </div>
                                   </a>
-                                  <div class="card-bottom">
-                                    <div class="author">
-                                      <div class="sc-author-box style-2">
-                                        <div class="author-avatar">
+                                  <div className="card-bottom">
+                                    <div className="author">
+                                      <div className="sc-author-box style-2">
+                                        <div className="author-avatar">
                                           <img
                                             src={creativeArt}
                                             alt=""
-                                            class="avatar"
+                                            className="avatar"
                                           />
-                                          <div class="badge">
+                                          <div className="badge">
                                             <TiTick
                                               style={{ fontSize: "15px" }}
                                             />
                                           </div>
                                         </div>
                                       </div>
-                                      <div class="content-custom">
+                                      <div className="content-custom">
                                         <h4>
                                           <a>Creative Art Collection</a>
                                         </h4>
-                                        <div class="infor">
+                                        <div className="infor">
                                           <span>Created by</span>
-                                          <span class="name">
+                                          <span className="name">
                                             <a>Elara Moon</a>
                                           </span>
                                         </div>
                                       </div>
                                     </div>
-                                    {/* <div class="wishlist-button public heart">
+                                    {/* <div className="wishlist-button public heart">
                                       <IoIosHeartEmpty size={18} />
-                                      <span class="number-like">100</span>
+                                      <span className="number-like">100</span>
                                     </div> */}
                                   </div>
                                 </div>
@@ -378,60 +378,60 @@ export default function DashboardNew() {
                       style={{ transform: "translate3d(0px, 0px, 0px)" }}
                     >
                       <div
-                        class="swiper-slide swiper-slide-active"
+                        className="swiper-slide swiper-slide-active"
                         role="group"
                         aria-label="1 / 12"
                         // style={{ width: "450px", marginRight: "30px" }}
                       >
-                        <div class="swiper-container show-shadow carousel4 button-arow-style">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                              <div class="slider-item">
-                                <div class="sc-card-collection style-3">
+                        <div className="swiper-container show-shadow carousel4 button-arow-style">
+                          <div className="swiper-wrapper">
+                            <div className="swiper-slide">
+                              <div className="slider-item">
+                                <div className="sc-card-collection style-3">
                                   <a>
-                                    <div class="media-images-box">
-                                      <div class="top-media">
+                                    <div className="media-images-box">
+                                      <div className="top-media">
                                         <img src={collection6} alt="Axies" />
                                         <img src={collection11} alt="Axies" />
                                       </div>
-                                      <div class="bottom-media">
+                                      <div className="bottom-media">
                                         <img src={collection13} alt="Axies" />
                                         <img src={collection12} alt="Axies" />
                                         <img src={collection10} alt="Axies" />
                                       </div>
                                     </div>
                                   </a>
-                                  <div class="card-bottom">
-                                    <div class="author">
-                                      <div class="sc-author-box style-2">
-                                        <div class="author-avatar">
+                                  <div className="card-bottom">
+                                    <div className="author">
+                                      <div className="sc-author-box style-2">
+                                        <div className="author-avatar">
                                           <img
                                             src={MonicaLucas}
                                             alt=""
-                                            class="avatar"
+                                            className="avatar"
                                           />
-                                          <div class="badge">
+                                          <div className="badge">
                                             <TiTick
                                               style={{ fontSize: "15px" }}
                                             />
                                           </div>
                                         </div>
                                       </div>
-                                      <div class="content-custom">
+                                      <div className="content-custom">
                                         <h4>
                                           <a>Colorful Abstract</a>
                                         </h4>
-                                        <div class="infor">
+                                        <div className="infor">
                                           <span>Created by</span>
-                                          <span class="name">
+                                          <span className="name">
                                             <a>Noah Velasquez</a>
                                           </span>
                                         </div>
                                       </div>
                                     </div>
-                                    {/* <div class="wishlist-button public heart">
+                                    {/* <div className="wishlist-button public heart">
                                       <IoIosHeartEmpty size={18} />
-                                      <span class="number-like">100</span>
+                                      <span className="number-like">100</span>
                                     </div> */}
                                   </div>
                                 </div>
@@ -462,52 +462,52 @@ export default function DashboardNew() {
                       style={{ transform: "translate3d(0px, 0px, 0px)" }}
                     >
                       <div
-                        class="swiper-slide swiper-slide-active"
+                        className="swiper-slide swiper-slide-active"
                         role="group"
                         aria-label="1 / 12"
                         // style={{ width: "450px", marginRight: "30px" }}
                       >
-                        <div class="swiper-container show-shadow carousel4 button-arow-style">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                              <div class="slider-item">
-                                <div class="sc-card-collection style-3">
+                        <div className="swiper-container show-shadow carousel4 button-arow-style">
+                          <div className="swiper-wrapper">
+                            <div className="swiper-slide">
+                              <div className="slider-item">
+                                <div className="sc-card-collection style-3">
                                   <a>
-                                    <div class="media-images-box">
-                                      <div class="top-media">
+                                    <div className="media-images-box">
+                                      <div className="top-media">
                                         <img src={collection17} alt="Axies" />
                                         <img src={collection18} alt="Axies" />
                                       </div>
-                                      <div class="bottom-media">
+                                      <div className="bottom-media">
                                         <img src={collection16} alt="Axies" />
                                         <img src={collection15} alt="Axies" />
                                         <img src={collection14} alt="Axies" />
                                       </div>
                                     </div>
                                   </a>
-                                  <div class="card-bottom">
-                                    <div class="author">
-                                      <div class="sc-author-box style-2">
-                                        <div class="author-avatar">
+                                  <div className="card-bottom">
+                                    <div className="author">
+                                      <div className="sc-author-box style-2">
+                                        <div className="author-avatar">
                                           <img
                                             src={MattRamos}
                                             alt=""
-                                            class="avatar"
+                                            className="avatar"
                                           />
-                                          <div class="badge">
+                                          <div className="badge">
                                             <TiTick
                                               style={{ fontSize: "15px" }}
                                             />
                                           </div>
                                         </div>
                                       </div>
-                                      <div class="content-custom">
+                                      <div className="content-custom">
                                         <h4>
                                           <a>Modern Art Collection</a>
                                         </h4>
-                                        <div class="infor">
+                                        <div className="infor">
                                           <span>Created by</span>
-                                          <span class="name">
+                                          <span className="name">
                                             <a>Iris Calderon</a>
                                           </span>
                                         </div>
@@ -515,7 +515,7 @@ export default function DashboardNew() {
                                     </div>
                                     {/* <div className="wishlist-button public heart">
                                       <IoIosHeartEmpty size={18} />
-                                      <span class="number-like">100</span>
+                                      <span className="number-like">100</span>
                                     </div> */}
                                   </div>
                                 </div>
@@ -537,192 +537,192 @@ export default function DashboardNew() {
         <div className="themesflat-container">
           <div className="row">
             <div className="col-md-12">
-              <div class="heading-live-auctions">
-                <h2 class="tf-title mb-25">Top Seller</h2>
+              <div className="heading-live-auctions">
+                <h2 className="tf-title mb-25">Top Seller</h2>
               </div>
             </div>
-            <div class="col-md-12">
-              <div class="tf-box grid-container">
-                <div class="box-item">
-                  <div class="sc-author-box style-3 pd-0">
-                    <div class="author-avatar">
+            <div className="col-md-12">
+              <div className="tf-box grid-container">
+                <div className="box-item">
+                  <div className="sc-author-box style-3 pd-0">
+                    <div className="author-avatar">
                       <a>
-                        <img src={creativeArt} alt="axies" class="avatar" />
+                        <img src={creativeArt} alt="axies" className="avatar" />
                       </a>
-                      <div class="badge">
+                      <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
                       </div>
                     </div>
-                    <div class="author-infor">
-                      <h5 class="fs-16">
+                    <div className="author-infor">
+                      <h5 className="fs-16">
                         <a>Crispin Berry</a>
                       </h5>
-                      <span class="price">214.2 $</span>
+                      <span className="price">214.2 $</span>
                     </div>
                   </div>
                 </div>
-                <div class="box-item pl-17">
-                  <div class="sc-author-box style-3 pd-0">
-                    <div class="author-avatar">
+                <div className="box-item pl-17">
+                  <div className="sc-author-box style-3 pd-0">
+                    <div className="author-avatar">
                       <a>
-                        <img src={SamsonFrost} alt="axies" class="avatar" />
+                        <img src={SamsonFrost} alt="axies" className="avatar" />
                       </a>
-                      <div class="badge">
+                      <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
                       </div>
                     </div>
-                    <div class="author-infor">
-                      <h5 class="fs-16">
+                    <div className="author-infor">
+                      <h5 className="fs-16">
                         <a>Samson Frost</a>
                       </h5>
-                      <span class="price">205.43 $</span>
+                      <span className="price">205.43 $</span>
                     </div>
                   </div>
                 </div>
-                <div class="box-item pl-34">
-                  <div class="sc-author-box style-3 pd-0">
-                    <div class="author-avatar">
+                <div className="box-item pl-34">
+                  <div className="sc-author-box style-3 pd-0">
+                    <div className="author-avatar">
                       <a>
-                        <img src={TommyAlrez} alt="axies" class="avatar" />
+                        <img src={TommyAlrez} alt="axies" className="avatar" />
                       </a>
-                      <div class="badge">
+                      <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
                       </div>
                     </div>
-                    <div class="author-infor">
-                      <h5 class="fs-16">
+                    <div className="author-infor">
+                      <h5 className="fs-16">
                         <a>Chris Torres</a>
                       </h5>
-                      <span class="price">170.3 $</span>
+                      <span className="price">170.3 $</span>
                     </div>
                   </div>
                 </div>
-                <div class="box-item pl-51">
-                  <div class="sc-author-box style-3 pd-0">
-                    <div class="author-avatar">
+                <div className="box-item pl-51">
+                  <div className="sc-author-box style-3 pd-0">
+                    <div className="author-avatar">
                       <a>
-                        <img src={WindsorLane} alt="axies" class="avatar" />
+                        <img src={WindsorLane} alt="axies" className="avatar" />
                       </a>
-                      <div class="badge">
+                      <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
                       </div>
                     </div>
-                    <div class="author-infor">
-                      <h5 class="fs-16">
+                    <div className="author-infor">
+                      <h5 className="fs-16">
                         <a>Windsor Lane</a>
                       </h5>
-                      <span class="price">120.7 $</span>
+                      <span className="price">120.7 $</span>
                     </div>
                   </div>
                 </div>
-                <div class="box-item pl-68">
-                  <div class="sc-author-box style-3 pd-0">
-                    <div class="author-avatar">
+                <div className="box-item pl-68">
+                  <div className="sc-author-box style-3 pd-0">
+                    <div className="author-avatar">
                       <a>
-                        <img src={AndyHurlbutt} alt="axies" class="avatar" />
+                        <img src={AndyHurlbutt} alt="axies" className="avatar" />
                       </a>
-                      <div class="badge">
+                      <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
                       </div>
                     </div>
-                    <div class="author-infor">
-                      <h5 class="fs-16">
+                    <div className="author-infor">
+                      <h5 className="fs-16">
                         <a>Andy Hurlbutt</a>
                       </h5>
-                      <span class="price">82.79 $</span>
+                      <span className="price">82.79 $</span>
                     </div>
                   </div>
                 </div>
-                <div class="box-item ">
+                <div className="box-item ">
                   <div
-                    class="sc-author-box 
+                    className="sc-author-box 
                                          style-3 pd-0"
                   >
-                    <div class="author-avatar">
+                    <div className="author-avatar">
                       <a>
-                        <img src={BlakeBanks} alt="axies" class="avatar" />
+                        <img src={BlakeBanks} alt="axies" className="avatar" />
                       </a>
-                      <div class="badge">
+                      <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
                       </div>
                     </div>
-                    <div class="author-infor">
-                      <h5 class="fs-16">
+                    <div className="author-infor">
+                      <h5 className="fs-16">
                         <a>Micah Dowbak</a>
                       </h5>
-                      <span class="price">68.2 $</span>
+                      <span className="price">68.2 $</span>
                     </div>
                   </div>
                 </div>
-                <div class="box-item pl-17">
-                  <div class="sc-author-box style-3 pd-0">
-                    <div class="author-avatar">
+                <div className="box-item pl-17">
+                  <div className="sc-author-box style-3 pd-0">
+                    <div className="author-avatar">
                       <a>
-                        <img src={MonicaLucas} alt="axies" class="avatar" />
+                        <img src={MonicaLucas} alt="axies" className="avatar" />
                       </a>
-                      <div class="badge">
+                      <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
                       </div>
                     </div>
-                    <div class="author-infor">
-                      <h5 class="fs-16">
+                    <div className="author-infor">
+                      <h5 className="fs-16">
                         <a>Monica Lucas</a>
                       </h5>
-                      <span class="price">52.8 $</span>
+                      <span className="price">52.8 $</span>
                     </div>
                   </div>
                 </div>
-                <div class="box-item pl-34">
-                  <div class="sc-author-box style-3 pd-0">
-                    <div class="author-avatar">
+                <div className="box-item pl-34">
+                  <div className="sc-author-box style-3 pd-0">
+                    <div className="author-avatar">
                       <a>
-                        <img src={MattRamos} alt="axies" class="avatar" />
+                        <img src={MattRamos} alt="axies" className="avatar" />
                       </a>
-                      <div class="badge">
+                      <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
                       </div>
                     </div>
-                    <div class="author-infor">
-                      <h5 class="fs-16">
+                    <div className="author-infor">
+                      <h5 className="fs-16">
                         <a>Matt Ramos</a>
                       </h5>
-                      <span class="price">38.4 $</span>
+                      <span className="price">38.4 $</span>
                     </div>
                   </div>
                 </div>
-                <div class="box-item pl-51">
-                  <div class="sc-author-box style-3 pd-0">
-                    <div class="author-avatar">
+                <div className="box-item pl-51">
+                  <div className="sc-author-box style-3 pd-0">
+                    <div className="author-avatar">
                       <a>
-                        <img src={HarperWilcher} alt="axies" class="avatar" />
+                        <img src={HarperWilcher} alt="axies" className="avatar" />
                       </a>
-                      <div class="badge">
+                      <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
                       </div>
                     </div>
-                    <div class="author-infor">
-                      <h5 class="fs-16">
+                    <div className="author-infor">
+                      <h5 className="fs-16">
                         <a>Harper Wilcher</a>
                       </h5>
-                      <span class="price">29.2 $</span>
+                      <span className="price">29.2 $</span>
                     </div>
                   </div>
                 </div>
-                <div class="box-item pl-68">
-                  <div class="sc-author-box style-3 pd-0">
-                    <div class="author-avatar">
+                <div className="box-item pl-68">
+                  <div className="sc-author-box style-3 pd-0">
+                    <div className="author-avatar">
                       <a>
-                        <img src={women} alt="axies" class="avatar" />
+                        <img src={women} alt="axies" className="avatar" />
                       </a>
-                      <div class="badge">
+                      <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
                       </div>
                     </div>
-                    <div class="author-infor">
-                      <h5 class="fs-16">
+                    <div className="author-infor">
+                      <h5 className="fs-16">
                         <a>Kevin McCoy</a>
                       </h5>
-                      <span class="price">214.2 $</span>
+                      <span className="price">214.2 $</span>
                     </div>
                   </div>
                 </div>
@@ -734,55 +734,55 @@ export default function DashboardNew() {
       <section className="tf-section today-pick">
         <div className="themesflat-container">
           <div className="row">
-            <div class="col-md-12">
-              <div class="heading-live-auctions mg-bt-21">
-                <h2 class="tf-title pb-18">Today's Picks</h2>
+            <div className="col-md-12">
+              <div className="heading-live-auctions mg-bt-21">
+                <h2 className="tf-title pb-18">Today's Picks</h2>
               </div>
             </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
+            <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div className="sc-card-product explode style2 mg-bt  ">
+                <div className="card-media">
                   <a>
                     <img src={img1} alt="Axies" />
                   </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                  <div className="button-place-bid">
+                    <button className="sc-button style-place-bid style bag fl-button pri-3">
                       <FaShoppingBag color="black" />
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
+                  {/* <div className="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
+                    <span className="number-like">100</span>
                   </div> */}
-                  <div class="coming-soon"></div>
+                  <div className="coming-soon"></div>
                 </div>
-                <div class="card-title">
+                <div className="card-title">
                   <h5>
                     <a>"ApeX Legend"</a>
                   </h5>
                 </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
+                <div className="meta-info">
+                  <div className="author">
+                    <div className="avatar">
                       <img src={AndyHurlbutt} alt="Axies" />
                     </div>
-                    <div class="info">
+                    <div className="info">
                       <span>Creator</span>
                       <h6>
                         <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
-                  <div class="tags">bsc</div>
+                  <div className="tags">bsc</div>
                 </div>
                 <div
-                  class="card-bottom
+                  className="card-bottom
                         style-explode"
                 >
-                  <div class="price">
+                  <div className="price">
                     <span>Current Bid</span>
-                    <div class="price-details">
+                    <div className="price-details">
                       <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
@@ -790,50 +790,50 @@ export default function DashboardNew() {
                 </div>
               </div>
             </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
+            <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div className="sc-card-product explode style2 mg-bt  ">
+                <div className="card-media">
                   <a>
                     <img src={bunny} alt="Axies" />
                   </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                  <div className="button-place-bid">
+                    <button className="sc-button style-place-bid style bag fl-button pri-3">
                       <FaShoppingBag color="black" />
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
+                  {/* <div className="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
+                    <span className="number-like">100</span>
                   </div> */}
-                  <div class="coming-soon"></div>
+                  <div className="coming-soon"></div>
                 </div>
-                <div class="card-title">
+                <div className="card-title">
                   <h5>
                     <a>"Moonlight Bunny Dreams"</a>
                   </h5>
                 </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
+                <div className="meta-info">
+                  <div className="author">
+                    <div className="avatar">
                       <img src={TommyAlrez} alt="Axies" />
                     </div>
-                    <div class="info">
+                    <div className="info">
                       <span>Creator</span>
                       <h6>
                         <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
-                  <div class="tags">bsc</div>
+                  <div className="tags">bsc</div>
                 </div>
                 <div
-                  class="card-bottom
+                  className="card-bottom
                         style-explode"
                 >
-                  <div class="price">
+                  <div className="price">
                     <span>Current Bid</span>
-                    <div class="price-details">
+                    <div className="price-details">
                       <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
@@ -841,50 +841,50 @@ export default function DashboardNew() {
                 </div>
               </div>
             </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
+            <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div className="sc-card-product explode style2 mg-bt  ">
+                <div className="card-media">
                   <a>
                     <img src={elephantpic} alt="Axies" />
                   </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                  <div className="button-place-bid">
+                    <button className="sc-button style-place-bid style bag fl-button pri-3">
                       <FaShoppingBag color="black" />
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
+                  {/* <div className="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
+                    <span className="number-like">100</span>
                   </div> */}
-                  <div class="coming-soon"></div>
+                  <div className="coming-soon"></div>
                 </div>
-                <div class="card-title">
+                <div className="card-title">
                   <h5>
                     <a>"The Majestic Elephant"</a>
                   </h5>
                 </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
+                <div className="meta-info">
+                  <div className="author">
+                    <div className="avatar">
                       <img src={Man} alt="Axies" />
                     </div>
-                    <div class="info">
+                    <div className="info">
                       <span>Creator</span>
                       <h6>
                         <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
-                  <div class="tags">bsc</div>
+                  <div className="tags">bsc</div>
                 </div>
                 <div
-                  class="card-bottom
+                  className="card-bottom
                         style-explode"
                 >
-                  <div class="price">
+                  <div className="price">
                     <span>Current Bid</span>
-                    <div class="price-details">
+                    <div className="price-details">
                       <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
@@ -892,50 +892,50 @@ export default function DashboardNew() {
                 </div>
               </div>
             </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
+            <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div className="sc-card-product explode style2 mg-bt  ">
+                <div className="card-media">
                   <a>
                     <img src={img3} alt="Axies" />
                   </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                  <div className="button-place-bid">
+                    <button className="sc-button style-place-bid style bag fl-button pri-3">
                       <FaShoppingBag color="black" />
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
+                  {/* <div className="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
+                    <span className="number-like">100</span>
                   </div> */}
-                  <div class="coming-soon"></div>
+                  <div className="coming-soon"></div>
                 </div>
-                <div class="card-title">
+                <div className="card-title">
                   <h5>
                     <a>"Doodle Heroes"</a>
                   </h5>
                 </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
+                <div className="meta-info">
+                  <div className="author">
+                    <div className="avatar">
                       <img src={women} alt="Axies" />
                     </div>
-                    <div class="info">
+                    <div className="info">
                       <span>Creator</span>
                       <h6>
                         <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
-                  <div class="tags">bsc</div>
+                  <div className="tags">bsc</div>
                 </div>
                 <div
-                  class="card-bottom
+                  className="card-bottom
                         style-explode"
                 >
-                  <div class="price">
+                  <div className="price">
                     <span>Current Bid</span>
-                    <div class="price-details">
+                    <div className="price-details">
                       <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
@@ -943,50 +943,50 @@ export default function DashboardNew() {
                 </div>
               </div>
             </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
+            <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div className="sc-card-product explode style2 mg-bt  ">
+                <div className="card-media">
                   <a>
                     <img src={sonic} alt="Axies" />
                   </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                  <div className="button-place-bid">
+                    <button className="sc-button style-place-bid style bag fl-button pri-3">
                       <FaShoppingBag color="black" />
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
+                  {/* <div className="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
+                    <span className="number-like">100</span>
                   </div> */}
-                  <div class="coming-soon"></div>
+                  <div className="coming-soon"></div>
                 </div>
-                <div class="card-title">
+                <div className="card-title">
                   <h5>
                     <a>"Sonic Rush "</a>
                   </h5>
                 </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
+                <div className="meta-info">
+                  <div className="author">
+                    <div className="avatar">
                       <img src={creativeArt} alt="Axies" />
                     </div>
-                    <div class="info">
+                    <div className="info">
                       <span>Creator</span>
                       <h6>
                         <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
-                  <div class="tags">bsc</div>
+                  <div className="tags">bsc</div>
                 </div>
                 <div
-                  class="card-bottom
+                  className="card-bottom
                         style-explode"
                 >
-                  <div class="price">
+                  <div className="price">
                     <span>Current Bid</span>
-                    <div class="price-details">
+                    <div className="price-details">
                       <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
@@ -994,50 +994,50 @@ export default function DashboardNew() {
                 </div>
               </div>
             </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
+            <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div className="sc-card-product explode style2 mg-bt  ">
+                <div className="card-media">
                   <a>
                     <img src={img2} alt="Axies" />
                   </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                  <div className="button-place-bid">
+                    <button className="sc-button style-place-bid style bag fl-button pri-3">
                       <FaShoppingBag color="black" />
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
+                  {/* <div className="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
+                    <span className="number-like">100</span>
                   </div> */}
-                  <div class="coming-soon"></div>
+                  <div className="coming-soon"></div>
                 </div>
-                <div class="card-title">
+                <div className="card-title">
                   <h5>
                     <a>"Crypto Chimp"</a>
                   </h5>
                 </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
+                <div className="meta-info">
+                  <div className="author">
+                    <div className="avatar">
                       <img src={BlakeBanks} alt="Axies" />
                     </div>
-                    <div class="info">
+                    <div className="info">
                       <span>Creator</span>
                       <h6>
                         <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
-                  <div class="tags">bsc</div>
+                  <div className="tags">bsc</div>
                 </div>
                 <div
-                  class="card-bottom
+                  className="card-bottom
                         style-explode"
                 >
-                  <div class="price">
+                  <div className="price">
                     <span>Current Bid</span>
-                    <div class="price-details">
+                    <div className="price-details">
                       <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
@@ -1045,50 +1045,50 @@ export default function DashboardNew() {
                 </div>
               </div>
             </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
+            <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div className="sc-card-product explode style2 mg-bt  ">
+                <div className="card-media">
                   <a>
                     <img src={animal} alt="Axies" />
                   </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                  <div className="button-place-bid">
+                    <button className="sc-button style-place-bid style bag fl-button pri-3">
                       <FaShoppingBag color="black" />
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
+                  {/* <div className="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
+                    <span className="number-like">100</span>
                   </div> */}
-                  <div class="coming-soon"></div>
+                  <div className="coming-soon"></div>
                 </div>
-                <div class="card-title">
+                <div className="card-title">
                   <h5>
                     <a>"Whispers of the Wild"</a>
                   </h5>
                 </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
+                <div className="meta-info">
+                  <div className="author">
+                    <div className="avatar">
                       <img src={SamsonFrost} alt="Axies" />
                     </div>
-                    <div class="info">
+                    <div className="info">
                       <span>Creator</span>
                       <h6>
                         <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
-                  <div class="tags">bsc</div>
+                  <div className="tags">bsc</div>
                 </div>
                 <div
-                  class="card-bottom
+                  className="card-bottom
                         style-explode"
                 >
-                  <div class="price">
+                  <div className="price">
                     <span>Current Bid</span>
-                    <div class="price-details">
+                    <div className="price-details">
                       <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>
@@ -1096,50 +1096,50 @@ export default function DashboardNew() {
                 </div>
               </div>
             </div>
-            <div class="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
-              <div class="sc-card-product explode style2 mg-bt  ">
-                <div class="card-media">
+            <div className="fl-item col-xl-3 col-lg-4 col-md-6 col-sm-6">
+              <div className="sc-card-product explode style2 mg-bt  ">
+                <div className="card-media">
                   <a>
                     <img src={robot} alt="Axies" />
                   </a>
-                  <div class="button-place-bid">
-                    <button class="sc-button style-place-bid style bag fl-button pri-3">
+                  <div className="button-place-bid">
+                    <button className="sc-button style-place-bid style bag fl-button pri-3">
                       <FaShoppingBag color="black" />
                       <span>Place Bid</span>
                     </button>
                   </div>
-                  {/* <div class="wishlist-button heart">
+                  {/* <div className="wishlist-button heart">
                     <IoIosHeartEmpty size={18} />
-                    <span class="number-like">100</span>
+                    <span className="number-like">100</span>
                   </div> */}
-                  <div class="coming-soon"></div>
+                  <div className="coming-soon"></div>
                 </div>
-                <div class="card-title">
+                <div className="card-title">
                   <h5>
                     <a>"Neon Automaton"</a>
                   </h5>
                 </div>
-                <div class="meta-info">
-                  <div class="author">
-                    <div class="avatar">
+                <div className="meta-info">
+                  <div className="author">
+                    <div className="avatar">
                       <img src={HarperWilcher} alt="Axies" />
                     </div>
-                    <div class="info">
+                    <div className="info">
                       <span>Creator</span>
                       <h6>
                         <a>SalvadorDali</a>
                       </h6>
                     </div>
                   </div>
-                  <div class="tags">bsc</div>
+                  <div className="tags">bsc</div>
                 </div>
                 <div
-                  class="card-bottom
+                  className="card-bottom
                         style-explode"
                 >
-                  <div class="price">
+                  <div className="price">
                     <span>Current Bid</span>
-                    <div class="price-details">
+                    <div className="price-details">
                       <h5>4.89 $</h5>
                       <span>= $12.246</span>
                     </div>

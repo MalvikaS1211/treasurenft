@@ -98,24 +98,24 @@ export default function LiveAuction() {
                             <a>The Piggy Paradox</a>
                           </h5>
                         </div>
-                        <div class="meta-info">
-                          <div class="author">
-                            <div class="avatar">
+                        <div className="meta-info">
+                          <div className="author">
+                            <div className="avatar">
                               <img src={Avatar1} alt="axies" />
                             </div>
-                            <div class="info">
+                            <div className="info">
                               <span>Creator</span>
                               <h6>
                                 <a>Chris Torres</a>
                               </h6>
                             </div>
                           </div>
-                          <div class="tags">bsc</div>
+                          <div className="tags">bsc</div>
                         </div>
-                        <div class="card-bottom style-explode">
-                          <div class="price">
+                        <div className="card-bottom style-explode">
+                          <div className="price">
                             <span>Current Bid</span>
-                            <div class="price-details">
+                            <div className="price-details">
                               <h5>4.89 $</h5>
                               <span>= $12.246</span>
                             </div>
@@ -140,24 +140,24 @@ export default function LiveAuction() {
                             <a>Trimphant</a>
                           </h5>
                         </div>
-                        <div class="meta-info">
-                          <div class="author">
-                            <div class="avatar">
+                        <div className="meta-info">
+                          <div className="author">
+                            <div className="avatar">
                               <img src={Avatar2} alt="axies" />
                             </div>
-                            <div class="info">
+                            <div className="info">
                               <span>Creator</span>
                               <h6>
                                 <a>SalvadorDali</a>
                               </h6>
                             </div>
                           </div>
-                          <div class="tags">bsc</div>
+                          <div className="tags">bsc</div>
                         </div>
-                        <div class="card-bottom style-explode">
-                          <div class="price">
+                        <div className="card-bottom style-explode">
+                          <div className="price">
                             <span>Current Bid</span>
-                            <div class="price-details">
+                            <div className="price-details">
                               <h5>4.89 $</h5>
                               <span>= $12.246</span>
                             </div>
@@ -182,24 +182,24 @@ export default function LiveAuction() {
                             <a>Crystal Echoes</a>
                           </h5>
                         </div>
-                        <div class="meta-info">
-                          <div class="author">
-                            <div class="avatar">
+                        <div className="meta-info">
+                          <div className="author">
+                            <div className="avatar">
                               <img src={Avatar3} alt="axies" />
                             </div>
-                            <div class="info">
+                            <div className="info">
                               <span>Creator</span>
                               <h6>
                                 <a>PixelOracle</a>
                               </h6>
                             </div>
                           </div>
-                          <div class="tags">bsc</div>
+                          <div className="tags">bsc</div>
                         </div>
-                        <div class="card-bottom style-explode">
-                          <div class="price">
+                        <div className="card-bottom style-explode">
+                          <div className="price">
                             <span>Current Bid</span>
-                            <div class="price-details">
+                            <div className="price-details">
                               <h5>8.67 $</h5>
                               <span>= $12.246</span>
                             </div>
@@ -224,24 +224,24 @@ export default function LiveAuction() {
                             <a>Flame Dress</a>
                           </h5>
                         </div>
-                        <div class="meta-info">
-                          <div class="author">
-                            <div class="avatar">
+                        <div className="meta-info">
+                          <div className="author">
+                            <div className="avatar">
                               <img src={Avatar4} alt="axies" />
                             </div>
-                            <div class="info">
+                            <div className="info">
                               <span>Creator</span>
                               <h6>
                                 <a>Mike Winkelmann</a>
                               </h6>
                             </div>
                           </div>
-                          <div class="tags">bsc</div>
+                          <div className="tags">bsc</div>
                         </div>
-                        <div class="card-bottom style-explode">
-                          <div class="price">
+                        <div className="card-bottom style-explode">
+                          <div className="price">
                             <span>Current Bid</span>
-                            <div class="price-details">
+                            <div className="price-details">
                               <h5>4.89 $</h5>
                               <span>= $12.246</span>
                             </div>
@@ -266,24 +266,24 @@ export default function LiveAuction() {
                             <a>Kungfu Panda</a>
                           </h5>
                         </div>
-                        <div class="meta-info">
-                          <div class="author">
-                            <div class="avatar">
+                        <div className="meta-info">
+                          <div className="author">
+                            <div className="avatar">
                               <img src={Avatar5} alt="axies" />
                             </div>
-                            <div class="info">
+                            <div className="info">
                               <span>Creator</span>
                               <h6>
                                 <a>SalvadorDali</a>
                               </h6>
                             </div>
                           </div>
-                          <div class="tags">bsc</div>
+                          <div className="tags">bsc</div>
                         </div>
-                        <div class="card-bottom style-explode">
-                          <div class="price">
+                        <div className="card-bottom style-explode">
+                          <div className="price">
                             <span>Current Bid</span>
-                            <div class="price-details">
+                            <div className="price-details">
                               <h5>4.89 $</h5>
                               <span>= $12.246</span>
                             </div>

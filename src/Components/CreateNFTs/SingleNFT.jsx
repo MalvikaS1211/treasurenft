@@ -453,30 +453,30 @@ export default function SingleNFT() {
         </div>
       </div>
       <div
-        class="col-xl-3 col-lg-6 col-md-6 col-12"
+        className="col-xl-3 col-lg-6 col-md-6 col-12"
         style={{ paddingTop: "40px" }}
       >
-        <h4 class="title-create-item">Preview item</h4>
-        <div class="sc-card-product">
-          <div class="card-media">
+        <h4 className="title-create-item">Preview item</h4>
+        <div className="sc-card-product">
+          <div className="card-media">
             <a href="">
               <img src={preview || CyberDoberman} alt="Axies" />
             </a>
-            <a class="wishlist-button heart" href="/login">
+            <a className="wishlist-button heart" href="/login">
               <span className="number-like">${nftPrice || 0}</span>
             </a>
           </div>
-          <div class="card-title">
+          <div className="card-title">
             <h6>NFT Price</h6>
-            <div class="tags">${nftPrice || 0}</div>
+            <div className="tags">${nftPrice || 0}</div>
           </div>
-          <div class="card-title">
+          <div className="card-title">
             <h6>Creation Fee (20%)</h6>
-            <div class="tags">${creationFee}</div>
+            <div className="tags">${creationFee}</div>
           </div>
-          <div class="card-title">
+          <div className="card-title">
             <h6>Total Amount</h6>
-            <div class="tags">${totalNFTAmount}</div>
+            <div className="tags">${totalNFTAmount}</div>
           </div>
         </div>
       </div>

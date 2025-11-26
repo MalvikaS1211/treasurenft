@@ -100,7 +100,7 @@ export default function ChatConversation() {
           </ul>
           <div className="col-lg-12">
             <div className="p-4 border rounded-md w-full max-w-4xl mx-auto mt-10 msg-container">
-              <div class="mb-3 ">
+              <div className="mb-3 ">
                 <div className="d-flex">
                   <label
                     className="form-label msg-label text-white"
@@ -111,7 +111,7 @@ export default function ChatConversation() {
                 </div>
 
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   id="exampleFormControlTextarea1 textAreaBox"
                   rows="6"
                   value={message}

@@ -69,7 +69,7 @@ function ConnectWallet() {
                   return (
                     <>
                       <div
-                        class="sc-btn-top mg-r-12"
+                        className="sc-btn-top mg-r-12"
                         id="site-header"
                         onClick={openConnectModal}
                       >
@@ -82,12 +82,12 @@ function ConnectWallet() {
                       </div>
                       {/* <div
                         data-v-014c2687=""
-                        class="wallet-btn-wrap"
+                        className="wallet-btn-wrap"
                         onClick={openConnectModal}
                       >
                         <div
                           data-v-014c2687=""
-                          class="wallet-btn cursor-pointer"
+                          className="wallet-btn cursor-pointer"
                         >
                           <img
                             data-v-014c2687=""
