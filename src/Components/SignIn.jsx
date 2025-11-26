@@ -26,7 +26,7 @@ export default function SignIn() {
   };
 
   useEffect(() => {
-    userExistFn(); // Call the function properly
+    userExistFn(); 
   }, [address]);
 
   const handleSignIn = () => {

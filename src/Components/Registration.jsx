@@ -96,10 +96,10 @@ export default function Registration() {
       // if (appRes) {
       const reg = await registerfn(ref, 15);
       if (reg) {
-        toast.success("You are navigating to the website!");
+        toast.success("You are navigating to the dashboard!");
         setTimeout(() => {
           setRef("");
-          navigate("/");
+          navigate("/dashboard");
         }, 2000);
       } else {
         toast.error("Registration failed. Please try again.");
@@ -116,7 +116,7 @@ export default function Registration() {
       <HeaderNew />
       <section className="tf-login tf-section dashboardbg">
         <div className="themesflat-container">
-          <div className="row" style={{ padding: "53px 0" }}>
+          <div className="row" style={{ padding: "60px 0 40px" }}>
             <div className="col-12">
               <h2 className="tf-title-heading ct style-1">Sign Up To NFTs</h2>
 
@@ -159,7 +159,7 @@ export default function Registration() {
                         Alreaady have an account?
                       </span>
                       <h6>
-                        <Link to="/signin">
+                        <Link to="/dashboard">
                           <a href="">SignIn</a>
                         </Link>
                       </h6>

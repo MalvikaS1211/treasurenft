@@ -36,6 +36,7 @@
 /* Navigation */
 .nav-head {
   display: flex;
+  flex-direction: row;
   gap: 20px;
   color: #fff !important;
 }
@@ -104,9 +105,10 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .nav-head {
-    flex-direction: column;
-    gap: 40px;
-    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: #fff !important;
   }
 
   .header-logo {
