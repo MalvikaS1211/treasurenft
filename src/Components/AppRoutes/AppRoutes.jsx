@@ -6,35 +6,27 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-import SignUp from "../SignUp";
-
-import Home from "../Home";
+import Home from "../LandingPage/Home";
 import Explore from "../Explore";
-import Collection from "../Collection";
-import DepositNFT from "../DepositNFT";
 
-import Account from "../Account";
+import Dashboard from "../Dashboard/dashboard";
+import Refferal from "../Dashboard/Refferal";
+import Community from "../Dashboard/Community";
+import DownLine from "../Dashboard/DownLine";
 
-import NFTCreation from "../NftCreation";
-
-import Dashboard from "../dashboard";
-import Refferal from "../Refferal";
-import Community from "../Community";
-import DownLine from "../DownLine";
-
-import Registration from "../Registration";
-import CreateNFT from "../CreateNFT";
-import LiveAuction from "../LiveAuction";
+import Registration from "../Login/Registration";
+import CreateNFT from "../CreateNFT/CreateNFT";
+import LiveAuction from "../LandingPage/LiveAuction";
 import Trade from "../Trade";
-import Royality from "../Royality";
-import SignIn from "../SignIn";
-import Direct from "../Direct";
-import Level from "../Level";
-import BlogPage from "../Blog";
-import BlogDetail from "../BlogDetail";
-import ChatSupport from "../ChatSupport";
-import ChatConversation from "../ChatConversation";
-import TradingIncome from "../TradingIncome";
+import Royality from "../Dashboard/Royality";
+import SignIn from "../Login/SignIn";
+import Direct from "../Dashboard/Direct";
+import Level from "../Dashboard/Level";
+import BlogPage from "../Blog/Blog";
+import BlogDetail from "../Blog/BlogDetail";
+import ChatSupport from "../Support/ChatSupport";
+import ChatConversation from "../Support/ChatConversation";
+import TradingIncome from "../Dashboard/TradingIncome";
 import Staking from "../Staking";
 import CommingSoon from "../CommingSoon";
 
@@ -43,35 +35,34 @@ function AppRoutes() {
     <>
       <Router>
         <Routes>
-   
           {/* <Route path="/" element={<CommingSoon/>} /> */}
 
-          <Route path="/" element={<Home></Home>} />
+          <Route path="/" element={<Home />} />
           {/* <Route path="/signup" element={<SignUp />} /> */}
-          <Route path="/explore" element={<Explore></Explore>} />
-          <Route path="/collection" element={<Collection />} />
-          <Route path="/depositNFT" element={<DepositNFT />} />
+          <Route path="/explore" element={<Explore />} />
 
-          <Route path="/account" element={<Account />} />
           {/* <Route path="/account/level" element={<Level />} /> */}
-       
-          <Route path="/NFTcreation" element={<CreateNFT />} />
 
+          <Route path="/NFTcreation" element={<CreateNFT />} />
+          {/* dashboard routes */}
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/refferal" element={<Refferal />} />
           <Route path="/community" element={<Community />} />
           <Route path="/downline" element={<DownLine />} />
           <Route path="/royality" element={<Royality />} />
           <Route path="/buyNft" element={<Trade />} />
-          <Route path="/signup" element={<Registration />} />
-          <Route path="/signin" element={<SignIn />} />
           <Route path="/direct" element={<Direct />} />
           <Route path="/level" element={<Level />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:id" element={<BlogDetail />} />
+          <Route path="/Trading-Income" element={<TradingIncome />} />
           <Route path="/support" element={<ChatSupport />} />
           <Route path="/support-chat" element={<ChatConversation />} />
-          <Route path="/Trading-Income" element={<TradingIncome />} />
+          {/* dashboard routes */}
+          <Route path="/signup" element={<Registration />} />
+          <Route path="/signin" element={<SignIn />} />
+
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
+
           <Route path="/staking" element={<Staking />} />
         </Routes>
       </Router>

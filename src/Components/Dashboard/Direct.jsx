@@ -1,34 +1,20 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "./Dashboard/Navbar";
-
-import { getROI, getStakingDetail } from "../Helper/API_Functions";
+import Navbar from "./Navbar";
+import { getDirectIncome } from "../../Helper/API_Functions";
 import { useAccount } from "wagmi";
 import moment from "moment";
-export default function Staking() {
+export default function Direct() {
   const { address } = useAccount();
   const [tabledata, setTableData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+
   const itemPerpage = 15;
-  const [totals, setTotals] = useState();
-  const [roi, setROI] = useState();
-
-  const handleGetDetals = async () => {
-    const res = await getStakingDetail(address, currentPage, itemPerpage);
-    setTableData(res.data);
-    setTotals(res.stakingDetais);
+  const handleTableData = async () => {
+    const res = await getDirectIncome(address, currentPage, itemPerpage);
+    setTableData(res?.data);
     setTotalPages(res?.pagination?.totalPages);
-    // console.log("getStakingDetail", res);
-  };
-
-  const handleGetROI = async () => {
-    try {
-      const res = await getROI(address);
-      console.log("getROI", res);
-      setROI(res?.roi);
-    } catch (error) {
-      console.log("error in getROI", error);
-    }
+    console.log("GetDirects", res);
   };
 
   const handleNextPage = () => {
@@ -40,63 +26,29 @@ export default function Staking() {
   const handlePreviousPage = () => {
     setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage));
   };
-
+  console.log("tabledata:::", tabledata);
   useEffect(() => {
-    if (address) {
-      handleGetROI();
-      handleGetDetals();
-    }
+    handleTableData();
   }, [address, currentPage]);
 
   return (
     <>
       <div className="p-4 dashboardbg">
         <main className="content-dashboard">
-          <Navbar title="Staking" />
-
-          <div class="total-grid" style={{ marginTop: "0px" }}>
-            <div class="total-card" style={{ border: "1px solid white" }}>
-              <div class="sub-total">
-                <h6>Total Amount</h6>
-              </div>
-              <p>
-                {((totals?.totalPaid ?? 0) / 1e18).toFixed(4)}
-
-                <span> USDT</span>
-              </p>
-            </div>
-            <div class="total-card" style={{ border: "1px solid white" }}>
-              <div class="sub-total">
-                <h6>Total NFT</h6>
-              </div>
-              <p> {totals?.totalHold ?? 0}</p>
-            </div>
-            <div class="total-card" style={{ border: "1px solid white" }}>
-              <div class="sub-total">
-                <h6>ROI</h6>
-              </div>
-              <p>
-                {((roi ?? 0) / 1e18).toFixed(4)}
-                <span> USDT</span>
-              </p>
-            </div>
-            {/* <div className="d-flex justify-content-center align-items-center ">
-              <button className="stake-btn  m-2">Claim ROI</button>
-            </div> */}
-          </div>
+          <Navbar title="Direct Income " />
+          {/* <HeaderDashboard title="Direct" /> */}
           <div>
-            <div style={{ minHeight: "100vh" }}>
+            <div style={{ height: "100vh" }}>
               <div className="rank-income">
                 <table className="table-responsiveness">
                   <thead>
                     <tr>
                       <th>Sr.No</th>
-
-                      <th>Token Id</th>
-                      <th>Sales Count</th>
-                      <th>Buyer Paid</th>
-
-                      <th>Time</th>
+                      {/* <th>Id</th> */}
+                      <th>Address</th>
+                      <th>Activation Date</th>
+                      <th>Level</th>
+                      {/* <th>Direct Team</th> */}
                     </tr>
                   </thead>
                   <tbody>
@@ -104,16 +56,19 @@ export default function Staking() {
                       tabledata?.map((data, index) => (
                         <tr key={index}>
                           <td>{(currentPage - 1) * itemPerpage + index + 1}</td>
-
-                          <td>{data?.tokenId}</td>
-                          <td>{data?.salesCount}</td>
-
-                          <td>{(data?.buyerPaid / 1e18).toFixed(4)}</td>
+                          {/* <td>{data?.uniqueRandomId}</td> */}
                           <td>
-                            {moment
-                              .unix(data?.time)
-                              .format("DD-MM-YYYY HH:mm:ss A")}
+                            {data?.toUser.slice(0, 4)}...{data?.toUser.slice(-7)}
                           </td>
+                          <td>
+                            {data?.timestamp
+                              ? moment(data?.timestamp * 1000).format(
+                                  "DD-MM-YYYY HH:mm:ss A"
+                                )
+                              : "N/A"}
+                          </td>
+                          <td>{(data?.amount / 1e18).toFixed(4)}</td>
+                          {/* <td>{data?.directTeam}</td> */}
                         </tr>
                       ))
                     ) : (

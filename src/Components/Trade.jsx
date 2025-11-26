@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 
 import creativeArt from "../assets/creativeArt.jpg";
 import io from "socket.io-client";
-import FooterNew from "./FooterNew";
-import HeaderNew from "./HeaderNew";
+import FooterNew from "./Common/Footer";
+import HeaderNew from "./Common/Header";
 import {
   getOwnedNFTs,
   getPendingMaturedNFT,

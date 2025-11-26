@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import { FaShoppingBag } from "react-icons/fa";
-import FooterNew from "./FooterNew";
-import HeaderNew from "./HeaderNew";
+import FooterNew from "./Common/Footer";
+import HeaderNew from "./Common/Header";
 import {
   getOwnedNFTs,
   getPurchasedNFTs,
