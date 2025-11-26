@@ -54,9 +54,9 @@ export default function Staking() {
         <main className="content-dashboard">
           <Navbar title="Staking" />
 
-          <div class="total-grid" style={{ marginTop: "0px" }}>
-            <div class="total-card" style={{ border: "1px solid white" }}>
-              <div class="sub-total">
+          <div className="total-grid" style={{ marginTop: "0px" }}>
+            <div className="total-card" style={{ border: "1px solid white" }}>
+              <div className="sub-total">
                 <h6>Total Amount</h6>
               </div>
               <p>
@@ -65,14 +65,14 @@ export default function Staking() {
                 <span> USDT</span>
               </p>
             </div>
-            <div class="total-card" style={{ border: "1px solid white" }}>
-              <div class="sub-total">
+            <div className="total-card" style={{ border: "1px solid white" }}>
+              <div className="sub-total">
                 <h6>Total NFT</h6>
               </div>
               <p> {totals?.totalHold ?? 0}</p>
             </div>
-            <div class="total-card" style={{ border: "1px solid white" }}>
-              <div class="sub-total">
+            <div className="total-card" style={{ border: "1px solid white" }}>
+              <div className="sub-total">
                 <h6>ROI</h6>
               </div>
               <p>

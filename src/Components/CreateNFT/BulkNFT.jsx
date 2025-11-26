@@ -403,19 +403,19 @@ export default function BulkNFT() {
                         <span className="number-like">${nft.price || 0}</span>
                       </a> */}
                   </div>
-                  {/* <div class="card-title">
+                  {/* <div className="card-title">
                       <h6>NFT Price</h6>
-                      <div class="tags">${nft.price || 0}</div>
+                      <div className="tags">${nft.price || 0}</div>
                     </div>
-                    <div class="card-title">
+                    <div className="card-title">
                       <h6>Creation Fee (10%)</h6>
-                      <div class="tags">${(nft.price * 10) / 100}</div>
+                      <div className="tags">${(nft.price * 10) / 100}</div>
                     </div>
-                    <div class="card-title">
+                    <div className="card-title">
                       <h6>Total Amount</h6>
-                      <div class="tags">
+                      <div className="tags">
                         {" "}
-                        <div class="tags">
+                        <div className="tags">
                           $
                           {parseFloat(nft.price || 0) +
                             parseFloat((nft.price * 20) / 100 || 0)}

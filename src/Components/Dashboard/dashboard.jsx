@@ -286,7 +286,7 @@ export default function Dashboard() {
     <>
       <div className="p-4 dashboard-container">
         <main
-          class="content-dashboard "
+          className="content-dashboard "
           style={{
             marginLeft:
               window.innerWidth > 300 && window.innerWidth < 1200
@@ -387,13 +387,13 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* <h3 class="time-heading" id="timeDisplay">
+          {/* <h3 className="time-heading" id="timeDisplay">
             {timeLeft || "00 DD:00 HH:00 MM:00 SS"}
           </h3> */}
           <div>
-            <div class="">
-              <div class="user-grid">
-                <div class="user-card wallet-card">
+            <div className="">
+              <div className="user-grid">
+                <div className="user-card wallet-card">
                   <h6>User ID</h6>
                   <p>
                     {allUsers?.userInfo[0]?.uniqueRandomId || "No user found"}
@@ -401,7 +401,7 @@ export default function Dashboard() {
                   <h6>Rank</h6>
                   <p>{allUsers?.rank || 0}</p>
                 </div>
-                <div class="user-card wallet-card">
+                <div className="user-card wallet-card">
                   {/* <h6>My Wallet Fund</h6>
                   <p className="">{balanceData}</p> */}
 
@@ -420,7 +420,7 @@ export default function Dashboard() {
                     ).toFixed(4)}
                   </p>
                 </div>
-                <div class="user-card wallet-card">
+                <div className="user-card wallet-card">
                   <h6>Referral Link</h6>
                   <div className="d-flex gap-1 align-items-center ">
                     {" "}
@@ -438,9 +438,9 @@ export default function Dashboard() {
                   <p>{allUsers?.referrerInfo?.uniqueRandomId || 0}</p>
                 </div>
               </div>
-              <section class="dashboard">
+              <section className="dashboard">
                 <h3 className="dashboard-heading">Packages</h3>
-                <div class="package-grid">
+                <div className="package-grid">
                   {packages.map((pkg, index) => (
                     <div className="package-card" key={index}>
                       <span>${pkg.subscription}</span>
@@ -480,11 +480,11 @@ export default function Dashboard() {
                   ))}
                 </div>
                 <div
-                  class="total-grid"
+                  className="total-grid"
                   style={{ marginTop: "center", marginBottom: "3%" }}
                 >
-                  <div class="total-card">
-                    <div class="sub-total">
+                  <div className="total-card">
+                    <div className="sub-total">
                       <h6>Trade Income</h6>
                     </div>
                     <p>
@@ -497,8 +497,8 @@ export default function Dashboard() {
                       <span> USDT</span>
                     </p>
                   </div>
-                  <div class="total-card">
-                    <div class="sub-total">
+                  <div className="total-card">
+                    <div className="sub-total">
                       <h6>Referral Income</h6>
                     </div>
                     <p>
@@ -508,8 +508,8 @@ export default function Dashboard() {
                       <span> USDT</span>
                     </p>
                   </div>
-                  <div class="total-card">
-                    <div class="sub-total">
+                  <div className="total-card">
+                    <div className="sub-total">
                       <h6>Level Income</h6>
                     </div>
                     <p>
@@ -520,9 +520,9 @@ export default function Dashboard() {
                     </p>
                   </div>
                 </div>
-                <div class="total-grid" style={{ marginTop: "0px" }}>
-                  <div class="total-card">
-                    <div class="sub-total">
+                <div className="total-grid" style={{ marginTop: "0px" }}>
+                  <div className="total-card">
+                    <div className="sub-total">
                       <h6>Royalty Income</h6>
                     </div>
                     <p>
@@ -533,14 +533,14 @@ export default function Dashboard() {
                       <span> USDT</span>
                     </p>
                   </div>
-                  <div class="total-card">
-                    <div class="sub-total">
+                  <div className="total-card">
+                    <div className="sub-total">
                       <h6>My Community Size</h6>
                     </div>
                     <p>{allUsers?.userInfo?.[0]?.totalTeamCount ?? "0"}</p>
                   </div>
-                  <div class="total-card">
-                    <div class="sub-total">
+                  <div className="total-card">
+                    <div className="sub-total">
                       <h6>Direct Referrals</h6>
                     </div>
                     <p>{allUsers?.userInfo?.[0]?.totalDirectCount ?? "0"}</p>
@@ -548,11 +548,11 @@ export default function Dashboard() {
                 </div>
                 <h3 className="dashboard-heading">NFT Incomes</h3>
                 <div
-                  class="total-grid"
+                  className="total-grid"
                   style={{ marginTop: "center", marginBottom: "3%" }}
                 >
-                  {/* <div class="total-card">
-                    <div class="sub-total">
+                  {/* <div className="total-card">
+                    <div className="sub-total">
                       <h6>Team Trading Income</h6>
                     </div>
                     <p>
@@ -560,8 +560,8 @@ export default function Dashboard() {
                       <span> USDT</span>
                     </p>
                   </div> */}
-                  <div class="total-card">
-                    <div class="sub-total">
+                  <div className="total-card">
+                    <div className="sub-total">
                       <h6>Trading Income</h6>
                     </div>
                     <p>
@@ -572,8 +572,8 @@ export default function Dashboard() {
                       <span> USDT</span>
                     </p>
                   </div>
-                  <div class="total-card">
-                    <div class="sub-total">
+                  <div className="total-card">
+                    <div className="sub-total">
                       <h6>Level Income</h6>
                     </div>
                     <p>
@@ -583,8 +583,8 @@ export default function Dashboard() {
                       <span> USDT</span>
                     </p>
                   </div>
-                  <div class="total-card">
-                    <div class="sub-total">
+                  <div className="total-card">
+                    <div className="sub-total">
                       <h6>Direct Income</h6>
                     </div>
                     <p>

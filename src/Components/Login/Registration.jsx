@@ -153,7 +153,7 @@ export default function Registration() {
                     ) : (
                       <ConnectWallet />
                     )}
-                    <div class="info Already-container text-white">
+                    <div className="info Already-container text-white">
                       <span style={{ fontSize: "small" }}>
                         Alreaady have an account?
                       </span>

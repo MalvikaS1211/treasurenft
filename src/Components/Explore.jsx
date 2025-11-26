@@ -192,11 +192,11 @@ export default function Expore() {
       <div className="tf-create-item tf-section p-0">
         <div className="dashboardbg">
           <div
-            class="col-md-12 "
+            className="col-md-12 "
             style={{ paddingTop: "100px", paddingBottom: "20px" }}
           >
-            <h1 class="heading mb-style" style={{ textAlign: "center" }}>
-              <span class="tf-text s1">NFT History</span>
+            <h1 className="heading mb-style" style={{ textAlign: "center" }}>
+              <span className="tf-text s1">NFT History</span>
             </h1>
           </div>
         </div>
