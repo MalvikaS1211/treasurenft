@@ -6,35 +6,27 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-import SignUp from "../SignUp";
 
-import Home from "../Home";
+
+import Home from "../LandingPage/Home";
 import Explore from "../Explore";
-import Collection from "../Collection";
-import DepositNFT from "../DepositNFT";
 
-import Account from "../Account";
-
-import NFTCreation from "../NftCreation";
-
-import Dashboard from "../dashboard";
-import Refferal from "../Refferal";
-import Community from "../Community";
-import DownLine from "../DownLine";
-
-import Registration from "../Registration";
-import CreateNFT from "../CreateNFT";
-import LiveAuction from "../LiveAuction";
+import Dashboard from "../Dashboard/dashboard";
+import Refferal from "../Dashboard/Refferal";
+import Community from "../Dashboard/Community";
+import DownLine from "../Dashboard/DownLine";
+import Registration from "../Login/Registration";
+import CreateNFT from "../CreateNFTs/CreateNFT";
 import Trade from "../Trade";
-import Royality from "../Royality";
-import SignIn from "../SignIn";
-import Direct from "../Direct";
-import Level from "../Level";
-import BlogPage from "../Blog";
-import BlogDetail from "../BlogDetail";
-import ChatSupport from "../ChatSupport";
-import ChatConversation from "../ChatConversation";
-import TradingIncome from "../TradingIncome";
+import Royality from "../Dashboard/Royality";
+import SignIn from "../Login/SignIn";
+import Direct from "../Dashboard/Direct";
+import Level from "../Dashboard/Level";
+import BlogPage from "../Blog/Blog";
+import BlogDetail from "../Blog/BlogDetail";
+import ChatSupport from "../Support/ChatSupport";
+import ChatConversation from "../Support/ChatConversation";
+import TradingIncome from "../Dashboard/TradingIncome";
 import Staking from "../Staking";
 import CommingSoon from "../CommingSoon";
 
@@ -49,10 +41,8 @@ function AppRoutes() {
           <Route path="/" element={<Home></Home>} />
           {/* <Route path="/signup" element={<SignUp />} /> */}
           <Route path="/explore" element={<Explore></Explore>} />
-          <Route path="/collection" element={<Collection />} />
-          <Route path="/depositNFT" element={<DepositNFT />} />
+   
 
-          <Route path="/account" element={<Account />} />
           {/* <Route path="/account/level" element={<Level />} /> */}
        
           <Route path="/NFTcreation" element={<CreateNFT />} />
