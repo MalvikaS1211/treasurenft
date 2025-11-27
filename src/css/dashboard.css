@@ -556,7 +556,11 @@ main {
   margin-bottom: 8px;
   font-weight: 700;
 }
-
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #77a1d3;
+}
 .card-data {
   font-size: 1em;
   background: #fff3;
@@ -2324,16 +2328,6 @@ header {
   align-items: center;
 }
 
-/* .dashboard-sidebar {
-  transition: transform 0.3s ease-in-out;
-  transform: translateX(-100%); 
- 
-  background: #1e1e20;
-}
-
-.dashboard-sidebar.active {
-  transform: translateX(0); 
-} */
 
 .header-right {
   display: flex;

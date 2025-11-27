@@ -71,26 +71,6 @@
   box-shadow: none !important;
   transition: none !important;
 }
-
-/* .nft-btn:hover {
-  background-color: #77a1d3;
-  transform: scale(1.05);
-} */
-
-/* .nft-card:hover {
-  box-shadow: 0 15px 25px rgba(0, 255, 128, 0.2);
-} */
-
-/* .Footerbg {
-  height: 354px !important;
-  background-image: url(../assets/banner.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-} */
-
-/* NFT buy Sell  */
-
 .nft-buy-sell-card {
   max-width: 400px;
   margin: auto;
@@ -99,14 +79,12 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   color: #fff;
 }
-
 .nft-buy-sell-card .card-header {
   background: rgba(255, 255, 255, 0.1);
   border-bottom: none;
   font-size: 1.5rem;
   font-weight: bold;
 }
-
 .nft-input {
   background-color: transparent;
   border: 1px solid #77a1d3;
@@ -163,11 +141,6 @@
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
 }
-/* 
-.nav-pills li a:hover {
-  background-color: #4a4a4a;
-} */
-
 .nav-pills li.active a {
   border-bottom: 2px solid #5142fc;
   border-radius: 0px;

@@ -49,7 +49,7 @@ export default function CreateNFT() {
           <div className="themesflat-container">
             <div className="row">
               {activeTab === "single" ? <SingleNFT /> : <BulkNFT />}
-              <SingleNFT />
+              {/* <SingleNFT /> */}
             </div>
           </div>
         </div>
