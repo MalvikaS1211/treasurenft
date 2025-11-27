@@ -151,7 +151,7 @@ export default function Dashboard() {
       console.log(timeLeft, "appRes", timeLeft == "Expired" ? 1 : 0);
       const appRes = await tokenApp(pkg.subscription);
       console.log("pkg.subscription", pkg.subscription);
-      console.log("appRes", appRes, timeLeft);
+      console.log("upgrade", appRes, timeLeft, pkg);
       if (appRes) {
         await upgradePackageFn(timeLeft == "Expired" ? 1 : 0);
         setTimeout(() => {

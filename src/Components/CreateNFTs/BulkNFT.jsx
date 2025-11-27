@@ -319,8 +319,8 @@ export default function BulkNFT() {
             <div className="d-flex flex-wrap justify-content-start gap-3">
               {availablePkg &&
                 availablePkg?.map((pkg, index) => {
-                  const Time = pkg?.time; // From API (in seconds)
-                  const currentTime = moment().unix(); // Current time in seconds
+                  const Time = pkg?.time; 
+                  const currentTime = moment().unix(); 
 
                   const timeDifferenceInSeconds = currentTime - Time;
                   const hoursDifference = timeDifferenceInSeconds / 3600;
@@ -332,7 +332,7 @@ export default function BulkNFT() {
                   //   "123::"
                   // );
                   return (
-                    hoursDifference >= 12 && (
+              
                       <div className="package-container" key={index}>
                         <button
                           type="button"
@@ -358,7 +358,7 @@ export default function BulkNFT() {
                         </button>
                       </div>
                     )
-                  );
+                
                 })}
             </div>
           </div>
