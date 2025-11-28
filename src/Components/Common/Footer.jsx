@@ -18,7 +18,7 @@ import toast from "react-hot-toast";
 
 import telegram from "../../assets/Icons/telegram.png";
 import instagram from "../../assets/Icons/instagram.png";
-import twitter from "../../assets/Icons/twitterwithoutBG.png";
+import twitter from "../../assets/Icons/twitter.png";
 import facebook from "../../assets/Icons/facebook.png";
 import youtube from "../../assets/Icons/youtube.png";
 
