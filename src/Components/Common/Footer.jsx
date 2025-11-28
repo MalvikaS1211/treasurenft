@@ -15,6 +15,13 @@ import { BsMedium } from "react-icons/bs";
 import { useAccount } from "wagmi";
 import { isUserExist } from "../../Helper/Web3";
 import toast from "react-hot-toast";
+
+import telegram from "../../assets/Icons/telegram.png";
+import instagram from "../../assets/Icons/instagram.png";
+import twitter from "../../assets/Icons/twitterwithoutBG.png";
+import facebook from "../../assets/Icons/facebook.png";
+import youtube from "../../assets/Icons/youtube.png";
+
 export default function Footer() {
   const { address } = useAccount();
   const [userExist, setUserExist] = useState(false);
@@ -53,8 +60,7 @@ export default function Footer() {
                 <div className="logo-footer" id="logo-footer">
                   <a href="/">
                     <img
-                      // className="logo-footer-img"
-                      // id="logo_footer"
+                  
                       src={Logo}
                       alt="nft-Logo"
                       width={150}
@@ -71,17 +77,13 @@ export default function Footer() {
               <div className="widget widget-menu style-1">
                 <h5 className="title-widget">My Account</h5>
                 <ul>
-                  {/* <li>
-                    <a>Authors</a>
-                  </li> */}
+              
                   <li>
                     <a href="#collections" onClick={handleCollection}>
                       Collection
                     </a>
                   </li>
-                  {/* <li>
-                    <a>Author Profile</a>
-                  </li> */}
+                 
 
                   <li>
                     {address && userExist ? (
@@ -117,12 +119,7 @@ export default function Footer() {
                     <></>
                   )}
 
-                  {/* <li>
-                    <a>Item Details</a>
-                  </li> */}
-                  {/* <li>
-                    <a>Activity</a>
-                  </li> */}
+                
                 </ul>
               </div>
             </div>
@@ -137,15 +134,7 @@ export default function Footer() {
                       <></>
                     )}
                   </li>
-                  {/* <li>
-                    <a>Contact Us</a>
-                  </li> */}
-                  {/* <li>
-                    <a>Our Blog</a>
-                  </li> */}
-                  {/* <li>
-                    <a>FAQ</a>
-                  </li> */}
+                 
                 </ul>
               </div>
             </div>
@@ -175,42 +164,30 @@ export default function Footer() {
                   <ul>
                     <li>
                       <a href="" target="_blank">
-                        <FaXTwitter />
+                      <img src={twitter} alt="twitter" width={20} />
+                      </a>
+                    </li>
+                
+                    <li>
+                      <a href="" target="_blank">
+                      <img src={telegram} alt="telegram" width={20} />
+                      </a>
+                    </li>
+                  
+                  
+                    <li>
+                      <a href="" target="_blank">
+                       <img src={instagram} alt="instagram" width={20} />
                       </a>
                     </li>
                     <li>
                       <a href="" target="_blank">
-                        <BsMedium />
+                       <img src={facebook} alt="facebook" width={20} />
                       </a>
                     </li>
                     <li>
                       <a href="" target="_blank">
-                        <i className="fab fa-telegram-plane"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="" target="_blank">
-                        <FaRedditAlien />
-                      </a>
-                    </li>
-                    {/* <li>
-                      <a>
-                        <FaWhatsapp />
-                      </a>
-                    </li> */}
-                    <li>
-                      <a href="" target="_blank">
-                        <FaInstagram />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="" target="_blank">
-                        <FaFacebook />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="" target="_blank">
-                        <FaYoutube />
+                     <img src={youtube} alt="youtube" width={20} />
                       </a>
                     </li>
                   </ul>
@@ -221,9 +198,6 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* <a id="scroll-top">
-        <IoIosArrowUp size={30} color="#4b50e6 " />
-      </a> */}
     </div>
   );
 }

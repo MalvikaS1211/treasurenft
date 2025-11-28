@@ -1,5 +1,5 @@
-export const CONTRACT_ADDRESS = "0x1420Aaf1f4ABA1b361A34d16b9001e92923F33a0";
-export const USDT_TOKEN = "0x55d398326f99059ff775485246999027b3197955";
+export const CONTRACT_ADDRESS = "0x7BCD11ccBa80B071b3Ab682B4E8266880AF8D110"; //testnet
+export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05";
 export const IFT_Token = "0x52af8EbE295B470F945B6322a926f607847e98Ed";
 export const CONTRACT_ADDRESS_ABI = [
   {
@@ -360,46 +360,6 @@ export const CONTRACT_ADDRESS_ABI = [
     inputs: [
       { indexed: true, internalType: "address", name: "user", type: "address" },
       {
-        indexed: false,
-        internalType: "uint256",
-        name: "amount",
-        type: "uint256",
-      },
-      {
-        indexed: false,
-        internalType: "uint256",
-        name: "timestamp",
-        type: "uint256",
-      },
-    ],
-    name: "PremiumPaid",
-    type: "event",
-  },
-  {
-    anonymous: false,
-    inputs: [
-      { indexed: true, internalType: "address", name: "to", type: "address" },
-      {
-        indexed: false,
-        internalType: "uint256",
-        name: "amount",
-        type: "uint256",
-      },
-      {
-        indexed: false,
-        internalType: "uint256",
-        name: "timestamp",
-        type: "uint256",
-      },
-    ],
-    name: "ROIPaid",
-    type: "event",
-  },
-  {
-    anonymous: false,
-    inputs: [
-      { indexed: true, internalType: "address", name: "user", type: "address" },
-      {
         indexed: true,
         internalType: "address",
         name: "referrer",
@@ -410,13 +370,6 @@ export const CONTRACT_ADDRESS_ABI = [
         internalType: "uint256",
         name: "userId",
         type: "uint256",
-      },
-      { indexed: false, internalType: "bool", name: "position", type: "bool" },
-      {
-        indexed: true,
-        internalType: "address",
-        name: "promoter",
-        type: "address",
       },
       {
         indexed: false,
@@ -524,17 +477,17 @@ export const CONTRACT_ADDRESS_ABI = [
       {
         indexed: false,
         internalType: "uint256",
-        name: "timestamp",
+        name: "poolAmt",
         type: "uint256",
       },
       {
         indexed: false,
         internalType: "uint256",
-        name: "amount",
+        name: "timestamp",
         type: "uint256",
       },
     ],
-    name: "payLeverage",
+    name: "addedInPool",
     type: "event",
   },
   {
@@ -570,9 +523,19 @@ export const CONTRACT_ADDRESS_ABI = [
   },
   {
     inputs: [],
-    name: "MIRAIToken",
+    name: "USDT",
     outputs: [{ internalType: "contract IERC20", name: "", type: "address" }],
     stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      { internalType: "address", name: "user", type: "address" },
+      { internalType: "uint256", name: "amount", type: "uint256" },
+    ],
+    name: "addInPool",
+    outputs: [],
+    stateMutability: "nonpayable",
     type: "function",
   },
   {
@@ -589,6 +552,13 @@ export const CONTRACT_ADDRESS_ABI = [
     inputs: [{ internalType: "address", name: "owner", type: "address" }],
     name: "balanceOf",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "burningWallet",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
     stateMutability: "view",
     type: "function",
   },
@@ -640,21 +610,25 @@ export const CONTRACT_ADDRESS_ABI = [
   },
   {
     inputs: [
-      { internalType: "address", name: "", type: "address" },
-      { internalType: "uint256", name: "", type: "uint256" },
+      { internalType: "string[]", name: "titles", type: "string[]" },
+      { internalType: "string[]", name: "descriptions", type: "string[]" },
+      { internalType: "string[]", name: "metadataURIs", type: "string[]" },
+      { internalType: "uint256[]", name: "initialPrices", type: "uint256[]" },
+      { internalType: "uint256", name: "totalAmt", type: "uint256" },
+      { internalType: "uint8", name: "v", type: "uint8" },
+      { internalType: "bytes32", name: "r", type: "bytes32" },
+      { internalType: "bytes32", name: "s", type: "bytes32" },
+      { internalType: "uint256", name: "tokenId", type: "uint256" },
     ],
-    name: "downline",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
-    stateMutability: "view",
+    name: "createNFTslast",
+    outputs: [],
+    stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    name: "dueBalances",
-    outputs: [
-      { internalType: "address", name: "user", type: "address" },
-      { internalType: "uint256", name: "amt", type: "uint256" },
-    ],
+    inputs: [],
+    name: "creatorWallet",
+    outputs: [{ internalType: "address", name: "", type: "address" }],
     stateMutability: "view",
     type: "function",
   },
@@ -679,32 +653,16 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "getMiraiPriceInUsdt",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
     inputs: [
       { internalType: "address", name: "usdtAddress", type: "address" },
       { internalType: "address", name: "_owner", type: "address" },
       { internalType: "address", name: "_operator", type: "address" },
-      { internalType: "address", name: "_mirai", type: "address" },
-      { internalType: "address", name: "_interfaceContract", type: "address" },
+      { internalType: "address", name: "_burnWallet", type: "address" },
+      { internalType: "address", name: "_creatorWallet", type: "address" },
     ],
-    name: "initialize",
+    name: "initilize",
     outputs: [],
     stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "interfaceContract",
-    outputs: [
-      { internalType: "contract IBuyContract", name: "", type: "address" },
-    ],
-    stateMutability: "view",
     type: "function",
   },
   {
@@ -713,13 +671,6 @@ export const CONTRACT_ADDRESS_ABI = [
       { internalType: "address", name: "operator", type: "address" },
     ],
     name: "isApprovedForAll",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "isLevPaid",
     outputs: [{ internalType: "bool", name: "", type: "bool" }],
     stateMutability: "view",
     type: "function",
@@ -748,17 +699,6 @@ export const CONTRACT_ADDRESS_ABI = [
     inputs: [],
     name: "name",
     outputs: [{ internalType: "string", name: "", type: "string" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "nftIncome",
-    outputs: [
-      { internalType: "uint256", name: "tradingIncome", type: "uint256" },
-      { internalType: "uint256", name: "levelIncome", type: "uint256" },
-      { internalType: "uint256", name: "directIncome", type: "uint256" },
-    ],
     stateMutability: "view",
     type: "function",
   },
@@ -848,34 +788,6 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "_contract", type: "address" }],
-    name: "setInterface",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "uint256", name: "_price", type: "uint256" }],
-    name: "setMiraiPriceInUsdt",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "_mirai", type: "address" }],
-    name: "setMiraiToken",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "_usdt", type: "address" }],
-    name: "setusdt",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
     inputs: [{ internalType: "bytes4", name: "interfaceId", type: "bytes4" }],
     name: "supportsInterface",
     outputs: [{ internalType: "bool", name: "", type: "bool" }],
@@ -891,11 +803,13 @@ export const CONTRACT_ADDRESS_ABI = [
   },
   {
     inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    name: "toPay",
+    name: "tokenPendingDetails",
     outputs: [
       { internalType: "address", name: "user", type: "address" },
-      { internalType: "uint256", name: "balance", type: "uint256" },
-      { internalType: "uint256", name: "distributeBalance", type: "uint256" },
+      { internalType: "uint256", name: "pendingAmount", type: "uint256" },
+      { internalType: "bool", name: "isPaid", type: "bool" },
+      { internalType: "uint256", name: "paidTimestamp", type: "uint256" },
+      { internalType: "uint256", name: "pendingTimestamp", type: "uint256" },
     ],
     stateMutability: "view",
     type: "function",
@@ -933,13 +847,6 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "usdt",
-    outputs: [{ internalType: "contract IERC20", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
     inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     name: "userIdToAddress",
     outputs: [{ internalType: "address", name: "", type: "address" }],
@@ -961,8 +868,6 @@ export const CONTRACT_ADDRESS_ABI = [
       { internalType: "address", name: "userAddress", type: "address" },
       { internalType: "address", name: "userReferralAddress", type: "address" },
       { internalType: "uint256", name: "totalDirect", type: "uint256" },
-      { internalType: "address", name: "promoterAddress", type: "address" },
-      { internalType: "bool", name: "position", type: "bool" },
       { internalType: "uint256", name: "latestPackage", type: "uint256" },
       { internalType: "uint256", name: "totalDeposit", type: "uint256" },
       { internalType: "uint256", name: "totalDirectIncome", type: "uint256" },
@@ -975,13 +880,6 @@ export const CONTRACT_ADDRESS_ABI = [
   {
     inputs: [{ internalType: "uint256", name: "amt", type: "uint256" }],
     name: "withdrawToken",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "uint256", name: "amt", type: "uint256" }],
-    name: "withdrawusdtToken",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -1184,7 +1082,6 @@ export const tokenAbi = [
     type: "function",
   },
 ];
-
 
 export const IFT_ABI = [
   {

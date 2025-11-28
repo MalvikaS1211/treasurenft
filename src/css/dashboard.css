@@ -2376,6 +2376,7 @@ td {
   cursor: pointer;
   display: inline-block;
   transition: transform 0.2s ease-in-out;
+  padding-right: 5px;
 }
 
 .copytheRefferal:hover {

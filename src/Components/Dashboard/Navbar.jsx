@@ -20,6 +20,11 @@ import {
 } from "react-icons/md";
 import { useAccount } from "wagmi";
 import { getStakingDetail } from "../../Helper/API_Functions";
+import telegram from "../../assets/Icons/telegram.png";
+import instagram from "../../assets/Icons/instagram.png";
+import twitter from "../../assets/Icons/twitter.png";
+import facebook from "../../assets/Icons/facebook.png";
+import youtube from "../../assets/Icons/youtube.png";
 
 export default function Navbar({ title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 500);
@@ -49,7 +54,7 @@ export default function Navbar({ title }) {
         <h1>{title}</h1>
         <div className="header-right">
           <ConnectWallet />
-          <div className="block lg:hidden hamburger-icon">
+          <div className="d-block d-lg-none  hamburger-icon">
             <GiHamburgerMenu onClick={toggleSidebar} size={25} color="#fff" />
           </div>
         </div>
@@ -152,29 +157,25 @@ export default function Navbar({ title }) {
               Follow Us On
               <div className="d-flex gap-3 pt-4 ">
                 <a href="" target="_blank" rel="noreferrer">
-                  <i className="fab fa-telegram-plane icons-color"></i>
+                  <img src={telegram} alt="" />
                 </a>
                 <a href="" target="_blank" rel="noreferrer">
-                  <i className="fab fa-x-twitter icons-color"></i>
+                <img src={twitter} alt="" />
                 </a>
+              
                 <a href="" target="_blank" rel="noreferrer">
-                  <BsMedium className="icons-color" />
+                 <img src={instagram} alt="" />
                 </a>
+            
                 <a href="" target="_blank" rel="noreferrer">
-                  <i className="fab fa-instagram icons-color"></i>
-                </a>
-                <a href="" target="_blank" rel="noreferrer">
-                  <FaRedditAlien className="icons-color" />
-                </a>
-                <a href="" target="_blank" rel="noreferrer">
-                  <FaFacebook className="icons-color" />
+                <img src={facebook} alt="" />
                 </a>
                 <a
                   href="https://youtube.com/@magicverse-c4o?si=IkOqSaJgKGxw2-7S"
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <FaYoutube className="icons-color" />
+                 <img src={youtube} alt="" />
                 </a>
               </div>
             </li>

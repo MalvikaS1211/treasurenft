@@ -135,14 +135,27 @@ export default function Dashboard() {
     }
   };
 
+  // const getUserInFoFromContract = async () => {
+  //   try {
+  //     const resUser = await usersFn(address);
+  //     setDashboardData(resUser);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+
   const getUserInFoFromContract = async () => {
-    try {
-      const resUser = await usersFn(address);
-      setDashboardData(resUser);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const resUser = await usersFn(address);
+
+  if (resUser?.error) {
+    setError("Failed to load user data. Please try again.");
+    setDashboardData(null); // safe fallback
+    return;
+  }
+
+  setDashboardData(resUser);
+};
 
   const tokenApp = async (amt) => {
     try {
@@ -293,7 +306,7 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
-    nftIncomesFn();
+    // nftIncomesFn();
     fetchTokenBal();
     fetchUserBalance();
   }, [address]);
@@ -316,35 +329,7 @@ export default function Dashboard() {
           {/* <HeaderDashboard title="Dashboard"></HeaderDashboard> */}
           <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap flex-md-nowrap  flex-sm-nowrap gap-3">
             <div className="button-balance-group ">
-              <button
-                className="btn-upgrade"
-                type="button"
-                style={{
-                  borderRadius: "5px",
-                  padding: "13px",
-                }}
-                onClick={() => {
-                  window.open("https://swap.iftglobal.org/", "_blank");
-                }}
-              >
-                IFT Token Wallet
-              </button>
-              <div className="balance-container">
-                <div className="balance-card">
-                  <h6>IFT Token</h6>
-                  <p>{inf.toFixed(4)}</p>
-                </div>
-
-                <div className="balance-card">
-                  <h6>1 IFT</h6>
-                  <p>{token.toFixed(4)} USDT</p>
-                </div>
-
-                <div className="balance-card">
-                  <h6>Value in USDT</h6>
-                  <p>{valueInUSDT} USDT</p>
-                </div>
-              </div>
+        
             </div>
 
             <div
@@ -385,8 +370,6 @@ export default function Dashboard() {
                     >
                       {item.label}
                     </div>
-
-                    {/* Divider line between items */}
                     {index < 3 && (
                       <div
                         className="position-absolute"
@@ -405,9 +388,6 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* <h3 className="time-heading" id="timeDisplay">
-            {timeLeft || "00 DD:00 HH:00 MM:00 SS"}
-          </h3> */}
           <div>
             <div className="">
               <div className="user-grid">
@@ -441,15 +421,15 @@ export default function Dashboard() {
                 <div className="user-card wallet-card">
                   <h6>Referral Link</h6>
                   <div className="d-flex gap-1 align-items-center ">
-                    {" "}
-                    <p onClick={copyToClipboard} className="copytheRefferal">
+               <div className="gap-2">    <p onClick={copyToClipboard} className="copytheRefferal">
                       {referralLink}
                     </p>
                     <FaRegCopy
                       onClick={copyToClipboard}
                       color="white"
                       className="fs-4 cursor-pointer"
-                    />
+                    /></div>
+                
                   </div>
 
                   <h6>Referred By</h6>
@@ -569,7 +549,7 @@ export default function Dashboard() {
                   className="total-grid"
                   style={{ marginTop: "center", marginBottom: "3%" }}
                 >
-                  {/* <div className="total-card">
+                  <div className="total-card">
                     <div className="sub-total">
                       <h6>Team Trading Income</h6>
                     </div>
@@ -577,7 +557,7 @@ export default function Dashboard() {
                       {allUsers?.totalRewardInEth ?? 0}
                       <span> USDT</span>
                     </p>
-                  </div> */}
+                  </div>
                   <div className="total-card">
                     <div className="sub-total">
                       <h6>Trading Income</h6>

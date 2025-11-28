@@ -6,6 +6,8 @@ import ConnectWallet from "../Common/ConnectWallet";
 import { useAccount } from "wagmi";
 import {
  
+  approveToken,
+  fetchUserTokenBalance,
   isUserExist,
   registerfn,
 } from "../../Helper/Web3";
@@ -62,20 +64,20 @@ export default function Registration() {
     getRef();
   }, [window.location.search]);
 
-  // const tokenApp = async (amt) => {
-  //   try {
-  //     const appres = approveToken(amt);
-  //     await toast.promise(appres, {
-  //       loading: "Approval in process",
-  //       success: "Successfully approved",
-  //       error: "Approve Failed",
-  //     });
-  //     return appres;
-  //   } catch (error) {
-  //     console.log(error);
-  //     return false;
-  //   }
-  // };
+  const tokenApp = async (amt) => {
+    try {
+      const appres = approveToken(amt);
+      await toast.promise(appres, {
+        loading: "Approval in process",
+        success: "Successfully approved",
+        error: "Approve Failed",
+      });
+      return appres;
+    } catch (error) {
+      console.log(error);
+      return false;
+    }
+  };
 
   const userReg = async () => {
     try {
@@ -87,13 +89,13 @@ export default function Registration() {
         toast.error("You are already registered");
         return;
       }
-      // const userBal = await fetchUserTokenBalance(address);
-      // if (userBal < 40) {
-      //   return toast.error("You need to have at least 15 USDT to register");
-      // }
-      // const appRes = await tokenApp(40);
-      // if (appRes) {
-      const reg = await registerfn(ref, 15);
+      const userBal = await fetchUserTokenBalance(address);
+      if (userBal < 20) {
+        return toast.error("You need to have at least 20 USDT to register");
+      }
+      const appRes = await tokenApp(20);
+      if (appRes) {
+      const reg = await registerfn(ref);
       if (reg) {
         toast.success("You are navigating to the website!");
         setTimeout(() => {
@@ -103,7 +105,7 @@ export default function Registration() {
       } else {
         toast.error("Registration failed. Please try again.");
       }
-      // }
+      }
     } catch (error) {
       console.log(error);
       toast.error("An error occurred during registration.");

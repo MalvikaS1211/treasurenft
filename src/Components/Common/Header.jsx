@@ -48,16 +48,18 @@ const Header = () => {
           />
 
           <nav className="nav-head">
-            {address && userExist ? (
+            {address 
+            // && userExist 
+            ? (
               <>
                 <Link to="/">Home</Link>
                 <Link to="/explore">Explore</Link>
                 <Link to="/buyNft">Trade</Link>
                 <Link to="/NFTcreation">Create NFT</Link>
                 <Link to="/dashboard">Dashboard</Link>
-                <Link to="https://swap.iftglobal.org/" target="_blank">
+                {/* <Link to="https://swap.iftglobal.org/" target="_blank">
                   IFT Token
-                </Link>
+                </Link> */}
               </>
             ) : (
               <>
@@ -66,29 +68,18 @@ const Header = () => {
               </>
             )}
           </nav>
-          {/* <div className="search-box">
-            <input type="text" placeholder="Select" className="search-input" />
-            <AiOutlineSearch className="search-icon" />
-          </div> */}
-          {/* <div>
-            <button className="connect-wallet-container">
-              <div className="connect-wallet-btn">
-                <FaWallet />
-                Connect Wallet
-              </div>
-            </button>
-          </div> */}
+          
           <ConnectWallet />
         </div>
       </header>
 
-      <header className="header-new-container d-block d-md-none">
+      <header className="header-new-container d-block d-md-none w-100">
         <div className="header-new">
           <img
             src={Logo}
             alt=""
             className="haeder-logo"
-            style={{ width: "25%" }}
+            style={{ width: "12%" }}
           />
           <ConnectWallet />
 
@@ -131,16 +122,18 @@ const Header = () => {
           </div>
           <div className="offcanvas-body">
             <nav className="nav-head">
-              {address && userExist ? (
+              {address
+              //  && userExist
+                ? (
                 <>
                   <Link to="/">Home</Link>
                   <Link to="/explore">Explore</Link>
                   <Link to="/buyNft">Trade</Link>
                   <Link to="/NFTcreation">Create NFT</Link>
                   <Link to="/dashboard">Dashboard</Link>
-                  <Link to="https://swap.iftglobal.org/" target="_blank">
+                  {/* <Link to="https://swap.iftglobal.org/" target="_blank">
                     IFT Token
-                  </Link>
+                  </Link> */}
                 </>
               ) : (
                 <>

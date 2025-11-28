@@ -210,6 +210,21 @@ export async function upgradePackageFn(amt) {
   }
 }
 
+// export async function usersFn(address) {
+//   try {
+//     const result = await readContract(config, {
+//       abi: CONTRACT_ADDRESS_ABI,
+//       address: CONTRACT_ADDRESS,
+//       functionName: "users",
+//       args: [address],
+//     });
+
+//     return result;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
 export async function usersFn(address) {
   try {
     const result = await readContract(config, {
@@ -221,9 +236,16 @@ export async function usersFn(address) {
 
     return result;
   } catch (error) {
-    console.log(error);
+    console.error("usersFn Error:", error);
+
+    return {
+      error: true,
+      exists: false,
+      data: null,
+    };
   }
 }
+
 
 export async function getAvailaibleBalance(address) {
   try {

@@ -2313,10 +2313,10 @@ header {
   color: #ffffff;
 }
 
-.widget-social.style-1 a:hover {
+/* .widget-social.style-1 a:hover {
   color: var(--primary-color);
   background-color: var(--primary-color3);
-}
+} */
 
 .is_dark .widget-social.style-1 a:hover {
   color: #ffffff;
@@ -2546,7 +2546,7 @@ header {
   top: 0;
   right: 0;
   background-color: var(--primary-color3);
-  font-size: 21px;
+  font-size: 23px;
   padding: 15px 18px 14px 19px;
   color: var(--primary-color);
   -webkit-transition: all 0.3s ease-in-out;
