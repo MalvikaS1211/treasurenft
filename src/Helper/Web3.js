@@ -154,10 +154,22 @@ export async function createNFTsBulkFn(
   s,
   tokenId
 ) {
+  console.log({
+    title,
+    descriptions,
+    metadataURIs,
+    initialPrices,
+    totalAmt,
+    v,
+    r,
+    s,
+    tokenId,
+  });
+
   const result = await writeContract(config, {
     abi: CONTRACT_ADDRESS_ABI,
     address: CONTRACT_ADDRESS,
-    functionName: "createNFTslast",
+    functionName: "createNFTBulk",
     args: [
       title,
       descriptions,

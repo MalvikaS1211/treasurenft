@@ -1,7 +1,9 @@
-// export const CONTRACT_ADDRESS = "0x1420Aaf1f4ABA1b361A34d16b9001e92923F33a0"; //Mainnet
-// export const USDT_TOKEN = "0x55d398326f99059ff775485246999027b3197955"; //Mainnet
-export const CONTRACT_ADDRESS = "0x021083E537A4c6811e95612bfd1E0fbf0FAeB817"; //Testnet
-export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05"; //Testnet
+export const CONTRACT_ADDRESS = "0x1420Aaf1f4ABA1b361A34d16b9001e92923F33a0"; //Mainnet
+export const USDT_TOKEN = "0x55d398326f99059ff775485246999027b3197955"; //Mainnet
+
+
+// export const CONTRACT_ADDRESS = "0x021083E537A4c6811e95612bfd1E0fbf0FAeB817"; //Testnet
+// export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05"; //Testnet
 
 export const IFT_Token = "0x52af8EbE295B470F945B6322a926f607847e98Ed";
 
@@ -527,6 +529,37 @@ export const CONTRACT_ADDRESS_ABI = [
       },
       {
         indexed: false,
+        internalType: "address",
+        name: "fromUser",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "incomeCount",
+        type: "uint256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "timestamp",
+        type: "uint256",
+      },
+    ],
+    name: "duePaid",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: false,
+        internalType: "address",
+        name: "user",
+        type: "address",
+      },
+      {
+        indexed: false,
         internalType: "uint256",
         name: "timestamp",
         type: "uint256",
@@ -644,6 +677,23 @@ export const CONTRACT_ADDRESS_ABI = [
   },
   {
     inputs: [
+      { internalType: "string[]", name: "titles", type: "string[]" },
+      { internalType: "string[]", name: "descriptions", type: "string[]" },
+      { internalType: "string[]", name: "metadataURIs", type: "string[]" },
+      { internalType: "uint256[]", name: "initialPrices", type: "uint256[]" },
+      { internalType: "uint256", name: "totalAmount", type: "uint256" },
+      { internalType: "uint8", name: "v", type: "uint8" },
+      { internalType: "bytes32", name: "r", type: "bytes32" },
+      { internalType: "bytes32", name: "s", type: "bytes32" },
+      { internalType: "uint256", name: "previousTokenId", type: "uint256" },
+    ],
+    name: "createNFTBulk",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
       { internalType: "address", name: "", type: "address" },
       { internalType: "uint256", name: "", type: "uint256" },
     ],
@@ -685,6 +735,13 @@ export const CONTRACT_ADDRESS_ABI = [
   {
     inputs: [],
     name: "getMiraiPriceInUsdt",
+    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    name: "incomeCount",
     outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     stateMutability: "view",
     type: "function",
@@ -991,7 +1048,6 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
 ];
-
 export const tokenAbi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {
