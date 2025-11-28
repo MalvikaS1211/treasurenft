@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <>
       {/* <News /> */}
-      <header className="header-new-container d-none d-md-block " style={{width:"100%"}} >
+      <header className="header-new-container d-none d-md-block w-100">
         <div className="header-new">
           <img
             src={Logo}

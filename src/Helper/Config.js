@@ -1,6 +1,6 @@
 export const CONTRACT_ADDRESS = "0x1420Aaf1f4ABA1b361A34d16b9001e92923F33a0";
-// export const CONTRACT_ADDRESS = "0xd054fba7875f7b3c5c858b476f7860b85dF9a7eb";
-
+export const USDT_TOKEN = "0x55d398326f99059ff775485246999027b3197955";
+export const IFT_Token = "0x52af8EbE295B470F945B6322a926f607847e98Ed";
 export const CONTRACT_ADDRESS_ABI = [
   {
     inputs: [
@@ -987,7 +987,7 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
 ];
-export const USDT_TOKEN = "0x55d398326f99059ff775485246999027b3197955";
+
 export const tokenAbi = [
   { inputs: [], stateMutability: "nonpayable", type: "constructor" },
   {
@@ -1184,7 +1184,7 @@ export const tokenAbi = [
     type: "function",
   },
 ];
-export const IFT_Token = "0x52af8EbE295B470F945B6322a926f607847e98Ed";
+
 
 export const IFT_ABI = [
   {

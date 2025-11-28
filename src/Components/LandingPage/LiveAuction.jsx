@@ -17,7 +17,7 @@ import Avatar5 from "../../assets/curly-hair-man-with-glasses.jpg";
 import Piggy from "../../assets/pigy.jpg";
 import Rino from "../../assets/charming-rhinoceros-figurine.jpg";
 import kungfuPanda from "../../assets/kungfuPanda.jpg";
-import robot from "../../assets/robot1.jpg";
+import robot from "../../assets/robot.jpg";
 
 import squirel from "../../assets/squirel.jpg";
 

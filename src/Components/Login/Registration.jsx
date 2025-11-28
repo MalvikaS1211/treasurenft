@@ -98,7 +98,7 @@ export default function Registration() {
         toast.success("You are navigating to the website!");
         setTimeout(() => {
           setRef("");
-          navigate("/");
+          navigate("/dashboard");
         }, 2000);
       } else {
         toast.error("Registration failed. Please try again.");
@@ -158,7 +158,7 @@ export default function Registration() {
                         Alreaady have an account?
                       </span>
                       <h6>
-                        <Link to="/signin">
+                        <Link to="/dashboard">
                           <a href="">SignIn</a>
                         </Link>
                       </h6>

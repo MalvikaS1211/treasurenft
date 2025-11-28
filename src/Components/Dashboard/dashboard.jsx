@@ -67,44 +67,62 @@ export default function Dashboard() {
     {
       name: "Silver",
       color: "rgba(221, 84, 84, 1)",
-      subscription: "5",
-      range: "$60",
+      subscription: "17",
+      range: "$250",
     },
     {
       name: "Gold",
       color: "rgb(212, 139, 55)",
-      subscription: "15",
-      range: "$160 ",
+      subscription: "50",
+      range: "$500 ",
     },
     {
       name: "Platinum",
       color: "rgb(209, 212, 55)",
-      subscription: "30",
-      range: "$460",
+      subscription: "100",
+      range: "$1000",
     },
     {
       name: "Diamond",
       color: "rgb(55, 212, 133)",
-      subscription: "50",
-      range: "$1160",
+      subscription: "200",
+      range: "$2000",
     },
     {
       name: "Crown",
       color: "rgb(55, 212, 204)",
-      subscription: "100",
-      range: "$2660",
+      subscription: "400",
+      range: "$4000",
     },
     {
       name: "Kohinoor",
       color: "rgba(76, 147, 194, 1)",
-      subscription: "150",
-      range: "$5660",
+      subscription: "600",
+      range: "$6000",
     },
     {
       name: "King",
       color: "rgb(162, 55, 212)",
-      subscription: "200",
-      range: "$10660",
+      subscription: "800",
+      range: "$8000",
+    },
+       {
+      name: "King",
+      color: "rgba(41, 161, 87, 1)",
+      subscription: "1000",
+      range: "$10000",
+    },
+       {
+      name: "King",
+      color: "rgba(196, 212, 55, 1)",
+      subscription: "1500",
+      range: "$15000",
+    },
+       {
+      name: "King",
+      color: "rgba(143, 101, 24, 1)",
+      subscription: "2500",
+      range: "$25000",
     },
   ];
 
@@ -443,8 +461,8 @@ export default function Dashboard() {
                 <div className="package-grid">
                   {packages.map((pkg, index) => (
                     <div className="package-card" key={index}>
-                      <span>${pkg.subscription}</span>
-                      <p style={{ color: pkg.color }}>{pkg.name}</p>
+                      <span className="pb-4">${pkg.subscription}</span>
+                      {/* <p style={{ color: pkg.color }}>{pkg.name}</p> */}
                       <div className="range-container">
                         <span style={{ fontSize: "15px" }}>Trade Limit</span>
                         <span style={{ color: "rgb(221 148 233)" }}>

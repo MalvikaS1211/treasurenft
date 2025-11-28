@@ -47,6 +47,7 @@ import ListIcon from "../../assets/ListIcon.png";
 import WelcomeModal from "../Common/WelcomeModal";
 import HomeBg from "../../assets/home-bg.png";
 import HeroImg from "../../assets/HeroImg.png";
+import Autism from "../../assets/autism-day-with-colorful-portrait.jpg";
 
 export default function DashboardNew() {
   const handleDownload = () => {
@@ -298,10 +299,10 @@ export default function DashboardNew() {
                                     <div className="media-images-box">
                                       <div className="top-media">
                                         <img src={collection1} alt="Axies" />
-                                        <img src={collection2} alt="Axies" />
+                                        <img src={Autism} alt="Axies" />
                                       </div>
                                       <div className="bottom-media">
-                                        <img src={collection3} alt="Axies" />
+                                        <img src={collection4} alt="Axies" />
                                         <img src={collection8} alt="Axies" />
                                         <img src={collection5} alt="Axies" />
                                       </div>
@@ -547,7 +548,7 @@ export default function DashboardNew() {
                       <h5 className="fs-16">
                         <a>Crispin Berry</a>
                       </h5>
-                      <span className="price">214.2 $</span>
+                      <span className="price">292.2 $</span>
                     </div>
                   </div>
                 </div>
@@ -565,7 +566,7 @@ export default function DashboardNew() {
                       <h5 className="fs-16">
                         <a>Samson Frost</a>
                       </h5>
-                      <span className="price">205.43 $</span>
+                      <span className="price">122.43 $</span>
                     </div>
                   </div>
                 </div>
@@ -583,7 +584,7 @@ export default function DashboardNew() {
                       <h5 className="fs-16">
                         <a>Chris Torres</a>
                       </h5>
-                      <span className="price">170.3 $</span>
+                      <span className="price">245.3 $</span>
                     </div>
                   </div>
                 </div>
@@ -591,7 +592,7 @@ export default function DashboardNew() {
                   <div className="sc-author-box style-3 pd-0">
                     <div className="author-avatar">
                       <a>
-                        <img src={WindsorLane} alt="axies" className="avatar" />
+                        <img src={MonicaLucas} alt="axies" className="avatar" />
                       </a>
                       <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
@@ -599,9 +600,9 @@ export default function DashboardNew() {
                     </div>
                     <div className="author-infor">
                       <h5 className="fs-16">
-                        <a>Windsor Lane</a>
+                        <a>Monica Lucas</a>
                       </h5>
-                      <span className="price">120.7 $</span>
+                      <span className="price">90.7 $</span>
                     </div>
                   </div>
                 </div>
@@ -619,7 +620,7 @@ export default function DashboardNew() {
                       <h5 className="fs-16">
                         <a>Andy Hurlbutt</a>
                       </h5>
-                      <span className="price">82.79 $</span>
+                      <span className="price">82.73 $</span>
                     </div>
                   </div>
                 </div>
@@ -648,7 +649,7 @@ export default function DashboardNew() {
                   <div className="sc-author-box style-3 pd-0">
                     <div className="author-avatar">
                       <a>
-                        <img src={MonicaLucas} alt="axies" className="avatar" />
+                        <img src={WindsorLane} alt="axies" className="avatar" />
                       </a>
                       <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
@@ -656,9 +657,9 @@ export default function DashboardNew() {
                     </div>
                     <div className="author-infor">
                       <h5 className="fs-16">
-                        <a>Monica Lucas</a>
+                        <a>Windsor Lane</a>
                       </h5>
-                      <span className="price">52.8 $</span>
+                      <span className="price">87.8 $</span>
                     </div>
                   </div>
                 </div>
@@ -676,7 +677,7 @@ export default function DashboardNew() {
                       <h5 className="fs-16">
                         <a>Matt Ramos</a>
                       </h5>
-                      <span className="price">38.4 $</span>
+                      <span className="price">36.4 $</span>
                     </div>
                   </div>
                 </div>
@@ -694,7 +695,7 @@ export default function DashboardNew() {
                       <h5 className="fs-16">
                         <a>Harper Wilcher</a>
                       </h5>
-                      <span className="price">29.2 $</span>
+                      <span className="price">65.2 $</span>
                     </div>
                   </div>
                 </div>
@@ -712,7 +713,7 @@ export default function DashboardNew() {
                       <h5 className="fs-16">
                         <a>Kevin McCoy</a>
                       </h5>
-                      <span className="price">214.2 $</span>
+                      <span className="price">93.2 $</span>
                     </div>
                   </div>
                 </div>

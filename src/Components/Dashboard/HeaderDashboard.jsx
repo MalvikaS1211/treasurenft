@@ -17,7 +17,7 @@ export default function Header({ title }) {
         <h1>{title}</h1>
         <div className="header-right">
           <ConnectWallet />
-          <div className="d-md-block d-lg-none ">
+          <div className="d-block d-lg-none">
             <GiHamburgerMenu
               onClick={toggleSidebar}
               data-bs-toggle="offcanvas"
@@ -30,7 +30,6 @@ export default function Header({ title }) {
         </div>
       </header>
 
-      {/* Render Navbar and pass the state */}
       <Navbar isSidebarOpen={!isSidebarOpen} />
     </>
   );

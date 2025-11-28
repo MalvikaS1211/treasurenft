@@ -1,8 +1,7 @@
-/* General Header Styles */
 
 :root {
   /* --primary-bg-color: #18181a; */
-  --primary-bg-color: #050a28;
+  --primary-bg-color: #040928;
   --secondary-bg-color: #030303;
   --pages-bg-color: #0e0e0e;
   --card-bg: #303031;
@@ -21,7 +20,7 @@
   z-index: 1020;
 }
 
-/* Header Inner Container */
+
 .header-new {
   width: 100%;
   /* max-width: 1440px; */
@@ -71,12 +70,8 @@
   outline: none;
 }
 
-/* .search-icon {
-  padding: 8px;
-  color: gray;
-} */
 
-/* Wallet Button */
+
 .connect-wallet-container {
   padding: 10px;
   border: 2px solid var(--primary-color3);
