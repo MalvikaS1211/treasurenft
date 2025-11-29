@@ -49,7 +49,7 @@ const Header = () => {
 
           <nav className="nav-head">
             {address 
-            // && userExist 
+            && userExist 
             ? (
               <>
                 <Link to="/">Home</Link>
@@ -123,7 +123,7 @@ const Header = () => {
           <div className="offcanvas-body">
             <nav className="nav-head">
               {address
-              //  && userExist
+               && userExist
                 ? (
                 <>
                   <Link to="/">Home</Link>

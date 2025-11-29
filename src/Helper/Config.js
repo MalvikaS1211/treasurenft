@@ -1,6 +1,6 @@
-export const CONTRACT_ADDRESS = "0x7BCD11ccBa80B071b3Ab682B4E8266880AF8D110"; //testnet
+export const CONTRACT_ADDRESS = "0xFF957203A90554445f49B023a582BC0d22e3A89F"; //testnet
 export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05";
-export const IFT_Token = "0x52af8EbE295B470F945B6322a926f607847e98Ed";
+export const IFT_Token = "0x8c5884b8B8281151abe5E381E252514b47FBCD05";
 export const CONTRACT_ADDRESS_ABI = [
   {
     inputs: [
@@ -703,6 +703,16 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
+    inputs: [{ internalType: "address", name: "", type: "address" }],
+    name: "nftIncomes",
+    outputs: [
+      { internalType: "uint256", name: "levelIncome", type: "uint256" },
+      { internalType: "uint256", name: "tradeIncome", type: "uint256" },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
     inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
     name: "nfts",
     outputs: [
@@ -783,6 +793,13 @@ export const CONTRACT_ADDRESS_ABI = [
       { internalType: "bool", name: "approved", type: "bool" },
     ],
     name: "setApprovalForAll",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [{ internalType: "address", name: "usdt", type: "address" }],
+    name: "setUSDT",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",

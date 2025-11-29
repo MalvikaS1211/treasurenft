@@ -279,7 +279,7 @@ export async function fetchNftIncome(address) {
     const result = await readContract(config, {
       abi: CONTRACT_ADDRESS_ABI,
       address: CONTRACT_ADDRESS,
-      functionName: "nftIncome",
+      functionName: "nftIncomes",
       args: [address],
     });
 

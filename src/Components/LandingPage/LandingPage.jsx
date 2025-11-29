@@ -66,90 +66,86 @@ export default function DashboardNew() {
   }, [location]);
   return (
     <>
-    
-     <div className="mainslider">
-  <div className="swiper">
-    
-    {/* Scrollbar */}
-    <div className="swiper-scrollbar">
-      <div className="swiper-scrollbar-drag"></div>
-    </div>
+      <div className="mainslider">
+        <div className="swiper">
+          {/* Scrollbar */}
+          <div className="swiper-scrollbar">
+            <div className="swiper-scrollbar-drag"></div>
+          </div>
 
-    {/* Slides */}
-    <div className="swiper-wrapper">
+          {/* Slides */}
+          <div className="swiper-wrapper">
+            <div className="swiper-slide left swiper-slide-active">
+              {/* Background Image Container */}
+              <div
+                className="flat-title-page"
+                style={{
+                  backgroundImage: `url(${HomeBg})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                {/* Inner Slider */}
+                <div className="swiper-container mainslider home">
+                  <div className="swiper-wrapper">
+                    <div className="swiper-slide">
+                      <div className="slider-item">
+                        <div className="themesflat-container">
+                          <div className="wrap-heading flat-slider flex">
+                            {/* Text Section */}
+                            <div className="content-custom">
+                              <h1 className="heading">
+                                <span className="fill">Virtual Mine</span>
+                              </h1>
 
-      <div className="swiper-slide left swiper-slide-active">
-        
-        {/* Background Image Container */}
-        <div
-          className="flat-title-page"
-          style={{
-            backgroundImage: `url(${HomeBg})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
+                              <h1 className="heading mb-style">
+                                <span>
+                                  The Ultimate Scalable NFT Experience
+                                </span>
+                              </h1>
 
-          {/* Inner Slider */}
-          <div className="swiper-container mainslider home">
-            <div className="swiper-wrapper">
-              <div className="swiper-slide">
-                <div className="slider-item">
-                  <div className="themesflat-container">
+                              <p className="sub-heading">
+                                Empowering Users With Smarter, Faster, Scalable
+                                NFT Utility
+                              </p>
 
-                    <div className="wrap-heading flat-slider flex">
-
-                      {/* Text Section */}
-                      <div className="content-custom">
-                        <h1 className="heading">
-                          <span className="fill">Virtual Mine</span>
-                        </h1>
-
-                        <h1 className="heading mb-style">
-                          <span>The Ultimate Scalable NFT Experience</span>
-                        </h1>
-
-                        <p className="sub-heading">
-                          Empowering Users With Smarter, Faster, Scalable NFT Utility
-                        </p>
-
-                        <div className="flat-bt-slider flex style2 button-container">
-                          <a
-                            className="sc-button header-slider style style-1 rocket fl-button pri-1"
-                            onClick={() => navigate("/signup")}
-                          >
-                            <div className="d-flex justify-content-center gap-3 cursor-pointer">
-                              <FiUserPlus
-                                color="#fff"
-                                className="signupIcon"
-                                size={20}
-                              />
-                              <span className="pl-0">Sign Up</span>
+                              <div className="flat-bt-slider flex style2 button-container">
+                                <a
+                                  className="sc-button header-slider style style-1 rocket fl-button pri-1"
+                                  onClick={() => navigate("/signup")}
+                                >
+                                  <div className="d-flex justify-content-center gap-3 cursor-pointer">
+                                    <FiUserPlus
+                                      color="#fff"
+                                      className="signupIcon"
+                                      size={20}
+                                    />
+                                    <span className="pl-0">Sign Up</span>
+                                  </div>
+                                </a>
+                              </div>
                             </div>
-                          </a>
+
+                            {/* Hero Image */}
+                            <div className="image">
+                              <img
+                                className="img-bg"
+                                src={HeroImg}
+                                alt="axies"
+                              />
+                            </div>
+                          </div>
                         </div>
                       </div>
-
-                      {/* Hero Image */}
-                      <div className="image">
-                        <img className="img-bg" src={HeroImg} alt="axies"  />
-                      </div>
-
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
-
-    </div>
-
-  </div>
-</div>
 
       <section
         className="tf-box-icon create tf-section bg-home-3 "
@@ -179,12 +175,11 @@ export default function DashboardNew() {
                   </div>
                 </div>
                 <h3 className="heading">
-                  <a>Set Up Your Wallet</a>
+                  <a>Connect Wallet</a>
                 </h3>
                 <p className="content-custom">
-                  After setting up your preferred wallet, connect it to OpenSea
-                  by selecting the NFT Marketplace option in the top right
-                  corner of the platform.
+                  Users start by securely connecting their cryptocurrency wallet
+                  to the Virtual Mine platform.
                 </p>
               </div>
             </div>
@@ -200,12 +195,11 @@ export default function DashboardNew() {
                   </div>
                 </div>
                 <h3 className="heading">
-                  <a>Buy Your Collection</a>
+                  <a>Browse NFTS</a>
                 </h3>
                 <p className="content-custom">
-                  Click "Create NFT" to set up your collection. Add social
-                  links, a description, profile and banner images, and specify a
-                  secondary sales fee.
+                  Users can explore a diverse selection of NFTs available for
+                  trade, tailored to match their interests.
                 </p>
               </div>
             </div>
@@ -221,12 +215,11 @@ export default function DashboardNew() {
                   </div>
                 </div>
                 <h3 className="heading">
-                  <a>Add Your NFTs</a>
+                  <a> Initiate Trade</a>
                 </h3>
                 <p className="content-custom">
-                  Upload your work (image or 3D art), add a title and
-                  description, and customize your NFTs with properties and
-                  stats.
+                  Once an NFT is selected, users can easily initiate a trade
+                  through a smart contract.
                 </p>
               </div>
             </div>
@@ -242,12 +235,11 @@ export default function DashboardNew() {
                   </div>
                 </div>
                 <h3 className="heading">
-                  <a>Sell Your NFTs</a>
+                  <a> Instant Confirmation</a>
                 </h3>
                 <p className="content-custom">
-                  Select your preferred selling method, such as auctions,
-                  fixed-price listings, or declining-price listings, to showcase
-                  and sell your NFTs your way!
+                  The transaction is confirmed instantly, ensuring a smooth and
+                  seamless trading experience.
                 </p>
               </div>
             </div>
@@ -261,7 +253,9 @@ export default function DashboardNew() {
             <div className="row">
               <div className="col-md-12">
                 <div className="heading-live-auctions">
-                  <h2 className="tf-title pb-22 text-left">Popular Collection</h2>
+                  <h2 className="tf-title pb-22 text-left">
+                    Popular Collection
+                  </h2>
                   {/* <a className="exp style2" href="/explore-03">
                   EXPLORE MORE
                 </a> */}
@@ -610,7 +604,11 @@ export default function DashboardNew() {
                   <div className="sc-author-box style-3 pd-0">
                     <div className="author-avatar">
                       <a>
-                        <img src={AndyHurlbutt} alt="axies" className="avatar" />
+                        <img
+                          src={AndyHurlbutt}
+                          alt="axies"
+                          className="avatar"
+                        />
                       </a>
                       <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
@@ -685,7 +683,11 @@ export default function DashboardNew() {
                   <div className="sc-author-box style-3 pd-0">
                     <div className="author-avatar">
                       <a>
-                        <img src={HarperWilcher} alt="axies" className="avatar" />
+                        <img
+                          src={HarperWilcher}
+                          alt="axies"
+                          className="avatar"
+                        />
                       </a>
                       <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />

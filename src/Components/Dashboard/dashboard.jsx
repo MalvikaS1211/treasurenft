@@ -67,7 +67,7 @@ export default function Dashboard() {
     {
       name: "Silver",
       color: "rgba(221, 84, 84, 1)",
-      subscription: "17",
+      subscription: "20",
       range: "$250",
     },
     {
@@ -106,19 +106,19 @@ export default function Dashboard() {
       subscription: "800",
       range: "$8000",
     },
-       {
+    {
       name: "King",
       color: "rgba(41, 161, 87, 1)",
       subscription: "1000",
       range: "$10000",
     },
-       {
+    {
       name: "King",
       color: "rgba(196, 212, 55, 1)",
       subscription: "1500",
       range: "$15000",
     },
-       {
+    {
       name: "King",
       color: "rgba(143, 101, 24, 1)",
       subscription: "2500",
@@ -144,18 +144,17 @@ export default function Dashboard() {
   //   }
   // };
 
-
   const getUserInFoFromContract = async () => {
-  const resUser = await usersFn(address);
+    const resUser = await usersFn(address);
 
-  if (resUser?.error) {
-    setError("Failed to load user data. Please try again.");
-    setDashboardData(null); // safe fallback
-    return;
-  }
+    if (resUser?.error) {
+      setError("Failed to load user data. Please try again.");
+      setDashboardData(null); // safe fallback
+      return;
+    }
 
-  setDashboardData(resUser);
-};
+    setDashboardData(resUser);
+  };
 
   const tokenApp = async (amt) => {
     try {
@@ -278,7 +277,7 @@ export default function Dashboard() {
   const nftIncomesFn = async () => {
     try {
       const res = await fetchNftIncome(address);
-      // console.log(res, address, nftIncomes?.[0], "nftIncomes");
+      console.log("Fetched nftIncomes:", res);
       setNftIncomes(res);
     } catch (error) {
       console.log("Error in nftIncomes:", error);
@@ -306,7 +305,7 @@ export default function Dashboard() {
   };
 
   useEffect(() => {
-    // nftIncomesFn();
+    nftIncomesFn();
     fetchTokenBal();
     fetchUserBalance();
   }, [address]);
@@ -328,9 +327,7 @@ export default function Dashboard() {
           <Navbar title="Dashboard"></Navbar>
           {/* <HeaderDashboard title="Dashboard"></HeaderDashboard> */}
           <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap flex-md-nowrap  flex-sm-nowrap gap-3">
-            <div className="button-balance-group ">
-        
-            </div>
+            <div className="button-balance-group "></div>
 
             <div
               className="d-flex justify-content-center align-items-center text-white p-4"
@@ -339,7 +336,7 @@ export default function Dashboard() {
                 borderRadius: "12px",
               }}
             >
-              <div className="d-flex align-items-center justify-content-center">
+              {/* <div className="d-flex align-items-center justify-content-center">
                 {[
                   { label: "Day(s)", value: timeParts.days },
                   { label: "Hour(s)", value: timeParts.hours },
@@ -384,7 +381,7 @@ export default function Dashboard() {
                     )}
                   </div>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -421,15 +418,17 @@ export default function Dashboard() {
                 <div className="user-card wallet-card">
                   <h6>Referral Link</h6>
                   <div className="d-flex gap-1 align-items-center ">
-               <div className="gap-2">    <p onClick={copyToClipboard} className="copytheRefferal">
-                      {referralLink}
-                    </p>
-                    <FaRegCopy
-                      onClick={copyToClipboard}
-                      color="white"
-                      className="fs-4 cursor-pointer"
-                    /></div>
-                
+                    <div className="gap-2">
+                      {" "}
+                      <p onClick={copyToClipboard} className="copytheRefferal">
+                        {referralLink}
+                      </p>
+                      <FaRegCopy
+                        onClick={copyToClipboard}
+                        color="white"
+                        className="fs-4 cursor-pointer"
+                      />
+                    </div>
                   </div>
 
                   <h6>Referred By</h6>
@@ -451,8 +450,8 @@ export default function Dashboard() {
                       </div>
 
                       {(timeLeft == "Expired"
-                        ? index < Number(dashboardData[6]) - 1
-                        : index < Number(dashboardData[6])) && (
+                        ? index < Number(dashboardData[4]) - 1
+                        : index < Number(dashboardData[4])) && (
                         <button
                           className="btn-upgrade"
                           type="button"
@@ -464,8 +463,8 @@ export default function Dashboard() {
                       )}
 
                       {(timeLeft == "Expired"
-                        ? index >= Number(dashboardData[6]) - 1
-                        : index >= Number(dashboardData[6])) && (
+                        ? index >= Number(dashboardData[4]) - 1
+                        : index >= Number(dashboardData[4])) && (
                         <button
                           className="btn-upgrade"
                           type="button"
@@ -481,7 +480,7 @@ export default function Dashboard() {
                   className="total-grid"
                   style={{ marginTop: "center", marginBottom: "3%" }}
                 >
-                  <div className="total-card">
+                  {/* <div className="total-card">
                     <div className="sub-total">
                       <h6>Trade Income</h6>
                     </div>
@@ -494,14 +493,14 @@ export default function Dashboard() {
 
                       <span> USDT</span>
                     </p>
-                  </div>
+                  </div> */}
                   <div className="total-card">
                     <div className="sub-total">
                       <h6>Referral Income</h6>
                     </div>
                     <p>
-                      {Number(dashboardData?.[8])
-                        ? (Number(dashboardData?.[8]) / 1e18).toFixed(4)
+                      {Number(dashboardData?.[6])
+                        ? (Number(dashboardData?.[6]) / 1e18).toFixed(4)
                         : "0"}
                       <span> USDT</span>
                     </p>
@@ -511,8 +510,8 @@ export default function Dashboard() {
                       <h6>Level Income</h6>
                     </div>
                     <p>
-                      {Number(dashboardData?.[9])
-                        ? (Number(dashboardData?.[9]) / 1e18).toFixed(4)
+                      {Number(dashboardData?.[7])
+                        ? (Number(dashboardData?.[7]) / 1e18).toFixed(4)
                         : "0"}
                       <span> USDT</span>
                     </p>
@@ -524,8 +523,8 @@ export default function Dashboard() {
                       <h6>Royalty Income</h6>
                     </div>
                     <p>
-                      {Number(dashboardData?.[10])
-                        ? (Number(dashboardData[10]) / 1e18).toFixed(4)
+                      {Number(dashboardData?.[9])
+                        ? (Number(dashboardData[9]) / 1e18).toFixed(4)
                         : "0"}
 
                       <span> USDT</span>
@@ -541,7 +540,12 @@ export default function Dashboard() {
                     <div className="sub-total">
                       <h6>Direct Referrals</h6>
                     </div>
-                    <p>{allUsers?.userInfo?.[0]?.totalDirectCount ?? "0"}</p>
+                    <p>
+                      {" "}
+                      {Number(dashboardData?.[3])
+                        ? Number(dashboardData?.[3])
+                        : "0"}
+                    </p>
                   </div>
                 </div>
                 <h3 className="dashboard-heading">NFT Incomes</h3>
@@ -549,7 +553,7 @@ export default function Dashboard() {
                   className="total-grid"
                   style={{ marginTop: "center", marginBottom: "3%" }}
                 >
-                  <div className="total-card">
+                  {/* <div className="total-card">
                     <div className="sub-total">
                       <h6>Team Trading Income</h6>
                     </div>
@@ -569,25 +573,25 @@ export default function Dashboard() {
 
                       <span> USDT</span>
                     </p>
-                  </div>
+                  </div> */}
                   <div className="total-card">
                     <div className="sub-total">
                       <h6>Level Income</h6>
                     </div>
                     <p>
-                      {nftIncomes?.[1]
-                        ? (Number(nftIncomes?.[1]) / 1e18).toFixed(4)
+                      {nftIncomes?.length > 0
+                        ? (Number(nftIncomes[0]) / 1e18).toFixed(4)
                         : "0"}
                       <span> USDT</span>
                     </p>
                   </div>
                   <div className="total-card">
                     <div className="sub-total">
-                      <h6>Direct Income</h6>
+                      <h6>Trade Income</h6>
                     </div>
                     <p>
-                      {nftIncomes?.[2]
-                        ? (Number(nftIncomes?.[2]) / 1e18).toFixed(4)
+                      {nftIncomes?.length > 0
+                        ? (Number(nftIncomes[1]) / 1e18).toFixed(4)
                         : "0"}
                       <span> USDT</span>
                     </p>

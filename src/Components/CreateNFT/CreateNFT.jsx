@@ -22,7 +22,7 @@ export default function CreateNFT() {
             </h1>
           </div>
         </div>
-        {/* <div style={{ background: "var(--pages-bg-color)" }}>
+        <div style={{ background: "var(--pages-bg-color)" }}>
           <div className="container justify-content-center ">
             <ul
               className="nav nav-pills w-100 text-white"
@@ -42,14 +42,14 @@ export default function CreateNFT() {
               </li>
             </ul>
           </div>
-        </div> */}
+        </div>
 
         <div style={{ background: "var(--pages-bg-color)" }}>
-          {" "}
+  
           <div className="themesflat-container">
             <div className="row">
-              {/* {activeTab === "single" ? <SingleNFT /> : <BulkNFT />} */}
-              <SingleNFT />
+              {activeTab === "single" ? <SingleNFT /> : <BulkNFT />}
+              {/* <SingleNFT /> */}
             </div>
           </div>
         </div>

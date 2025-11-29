@@ -109,7 +109,7 @@ export default function SingleNFT() {
       console.log("handleNFTPrice".error);
     }
   };
-  const SingleNFTpriceOptions = [5, 15, 100];
+  const SingleNFTpriceOptions = [25,50];
   // const SingleNFTpriceOptions = [
   //   50, 100, 150, 200, 250, 350, 500, 650, 750, 850, 1000, 1150, 1250, 1350,
   //   1500,
@@ -543,7 +543,7 @@ export default function SingleNFT() {
                   onChange={(e) => setDescription(e.target.value)}
                 />
                 <div className="create-nft-container">
-                  {eligibleForCreate === true && (
+                  {/* {eligibleForCreate === true && ( */}
                     <button
                       className="createbtn"
                       onClick={nftCreate}
@@ -558,7 +558,7 @@ export default function SingleNFT() {
                         "Create NFT"
                       )}
                     </button>
-                  )}
+                  {/* )} */}
                 </div>
               </form>
             </div>

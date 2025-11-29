@@ -91,7 +91,7 @@ export default function Navbar({ title }) {
                 <i className="fas fa-users"></i> Referral
               </li>
             </Link>
-            <Link to="/community">
+            {/* <Link to="/community">
               <li
                 className={
                   location.pathname === "/community" ? "active" : "inactive"
@@ -99,7 +99,7 @@ export default function Navbar({ title }) {
               >
                 <i className="fas fa-users-cog"></i> Community
               </li>
-            </Link>
+            </Link> */}
             <Link to="/downline">
               <li
                 className={

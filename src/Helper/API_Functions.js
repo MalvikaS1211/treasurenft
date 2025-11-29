@@ -2,11 +2,12 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const URLApi = "https://iftglobal1.org/api";
-export const SOCKET_SERVER_URL = "https://iftglobal1.org";
+// export const URLApi = "https://magicverse.org/api";
+// export const SOCKET_SERVER_URL = "https://magicverse.org";
 
-// export const URLApi = "http://192.168.1.2:8081/api";
-// export const SOCKET_SERVER_URL = "http://192.168.1.2:8081/api";
+
+export const URLApi = "http://89.117.53.36:8082/api";
+export const SOCKET_SERVER_URL = "http://89.117.53.36:8082/";
 
 export const pinataApiKey = "e45f06a4f288fd4c7ded";
 export const pinataSecretApiKey =
