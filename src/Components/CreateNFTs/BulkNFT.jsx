@@ -40,6 +40,7 @@ export default function BulkNFT() {
   // const address = "0x25b0ecc38e02e9ee0dfe4c22680d1605be80dcc9";
   const [nfts, setNfts] = useState([
     { file: null, price: "", title: "", description: "", preview: null },
+     { file: null, price: "", title: "", description: "", preview: null },
   ]);
 
   const handleFileChange = (event, index) => {
@@ -382,29 +383,9 @@ export default function BulkNFT() {
                     <a href="">
                       <img src={nft.preview || CyberDoberman} alt="Axies" />
                     </a>
-                    {/* <a className="wishlist-button heart" href="/login">
-                        <span className="number-like">${nft.price || 0}</span>
-                      </a> */}
+               
                   </div>
-                  {/* <div className="card-title">
-                      <h6>NFT Price</h6>
-                      <div className="tags">${nft.price || 0}</div>
-                    </div>
-                    <div className="card-title">
-                      <h6>Creation Fee (10%)</h6>
-                      <div className="tags">${(nft.price * 10) / 100}</div>
-                    </div>
-                    <div className="card-title">
-                      <h6>Total Amount</h6>
-                      <div className="tags">
-                        {" "}
-                        <div className="tags">
-                          $
-                          {parseFloat(nft.price || 0) +
-                            parseFloat((nft.price * 20) / 100 || 0)}
-                        </div>
-                      </div>
-                    </div> */}
+                
                 </div>
               </div>
 
@@ -463,7 +444,7 @@ export default function BulkNFT() {
               "Create NFT"
             )}
           </button>
-          <FaPlus
+          {/* <FaPlus
             onClick={nfts.length < 2 ? addNFTField : null}
             size={20}
             style={{
@@ -471,7 +452,7 @@ export default function BulkNFT() {
               opacity: nfts.length < (initialP === 15 ? 2 : 5) ? 1 : 0.5,
               color: "#ddd7d7",
             }}
-          />
+          /> */}
         </div>
         {/* )} */}
       </>
