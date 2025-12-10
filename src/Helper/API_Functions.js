@@ -5,8 +5,8 @@ import toast from "react-hot-toast";
 export const URLApi = "https://iftglobal.org/api";
 export const SOCKET_SERVER_URL = "https://iftglobal.org";
 
-// export const URLApi = "http://192.168.1.196:8081/api";
-// export const SOCKET_SERVER_URL = "http://192.168.1.196:8081/api";
+// export const URLApi = "http://192.168.1.76:8081/api";
+// export const SOCKET_SERVER_URL = "http://192.168.1.76:8081/api";
 
 export const pinataApiKey = "e45f06a4f288fd4c7ded";
 export const pinataSecretApiKey =
@@ -558,5 +558,29 @@ export async function eligibleForCreateNFT(userAddress) {
     return response.data;
   } catch (error) {
     console.log("Error eligibleForCreate Admin:", error);
+  }
+}
+export async function getDepostList(user, page, limit) {
+  try {
+    const response = await axios.post(`${URLApi}/getUserDepositList`, {
+      user,
+      page,
+      limit,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getDepostList Admin:", error);
+  }
+}
+export async function getPackageDetails(userAddress) {
+  try {
+    const response = await axios.post(`${URLApi}/packageDetails`, {
+      userAddress,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getPackageDetails Admin:", error);
   }
 }

@@ -22,7 +22,7 @@ const Header = () => {
     try {
       if (address) {
         const resUserExist = await isUserExist(address);
-        // console.log(resUserExist, "resUserExist");
+      
         setUserExist(resUserExist);
       }
     } catch (error) {
@@ -34,7 +34,8 @@ const Header = () => {
       userExistFn();
     } else toast.error("Please connect your wallet");
   }, [address, userExist]);
-
+  
+  console.log(userExist, address, "userExist");
   return (
     <>
       {/* <News /> */}
@@ -93,7 +94,6 @@ const Header = () => {
           <ConnectWallet />
 
           <GiHamburgerMenu
-          
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasScrolling"

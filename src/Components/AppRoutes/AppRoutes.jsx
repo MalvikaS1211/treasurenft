@@ -29,8 +29,10 @@ import ChatConversation from "../Support/ChatConversation";
 import TradingIncome from "../Dashboard/TradingIncome";
 import Staking from "../Staking";
 import CommingSoon from "../CommingSoon";
+import DepositHistory from "../Dashboard/DepositHistory";
 
 function AppRoutes() {
+  
   return (
     <>
       <Router>
@@ -63,6 +65,8 @@ function AppRoutes() {
           <Route path="/support-chat" element={<ChatConversation />} />
           <Route path="/Trading-Income" element={<TradingIncome />} />
           <Route path="/staking" element={<Staking />} />
+          <Route path="/deposit" element={<DepositHistory />} />
+
         </Routes>
       </Router>
     </>

@@ -11,6 +11,7 @@ import { FaRegCopy } from "react-icons/fa6";
 import { useAccount } from "wagmi";
 import {
   getIdToAddress,
+  getPackageDetails,
   getUserInfo,
   getUserStats,
 } from "../../Helper/API_Functions";
@@ -43,12 +44,12 @@ export default function Dashboard() {
   const [balanceData, setBalanceData] = useState(0);
   const [tokenBalance, setTokenBalance] = useState(0);
   const [userBalINF, setUserBalINF] = useState(0);
-
   const [userProfitData, setUserProfitData] = useState();
   const data = new URLSearchParams(window.location.search);
   const refLink = data.get("ref");
   const uniqueId = allUsers?.userInfo?.[0]?.uniqueRandomId || "defaultId";
   const referralLink = `${base_url}/signup?ref=${uniqueId}`;
+  const [packageData, setPackageData] = useState([]);
   const config = createConfig({
     chains: [opBNB],
     transports: {
@@ -76,37 +77,37 @@ export default function Dashboard() {
       name: "Gold",
       color: "rgb(212, 139, 55)",
       subscription: "15",
-      range: "$160 ",
+      range: "$100 ",
     },
     {
       name: "Platinum",
       color: "rgb(209, 212, 55)",
       subscription: "30",
-      range: "$460",
+      range: "$300",
     },
     {
       name: "Diamond",
       color: "rgb(55, 212, 133)",
       subscription: "50",
-      range: "$1160",
+      range: "$700",
     },
     {
       name: "Crown",
       color: "rgb(55, 212, 204)",
       subscription: "100",
-      range: "$2660",
+      range: "$1500",
     },
     {
       name: "Kohinoor",
       color: "rgba(76, 147, 194, 1)",
       subscription: "150",
-      range: "$5660",
+      range: "$3000",
     },
     {
       name: "King",
       color: "rgb(162, 55, 212)",
       subscription: "200",
-      range: "$10660",
+      range: "$5000",
     },
   ];
 
@@ -143,7 +144,7 @@ export default function Dashboard() {
     }
   };
 
-  const handlePackage = async (pkg) => {
+  const handlePackage = async (pkg, index, details) => {
     try {
       if (!address) {
         return toast.error("Please connect your wallet");
@@ -153,7 +154,7 @@ export default function Dashboard() {
       console.log("pkg.subscription", pkg.subscription);
       console.log("upgrade", appRes, timeLeft, pkg);
       if (appRes) {
-        await upgradePackageFn(timeLeft == "Expired" ? 1 : 0);
+        await upgradePackageFn(details, index);
         setTimeout(() => {
           setIsFetch(!isFetch);
         }, 2000);
@@ -163,21 +164,13 @@ export default function Dashboard() {
     }
   };
 
-  const getIdFromUser = async () => {
-    try {
-      const uniqueId = allUsers?.userInfo[0]?.uniqueRandomId;
-      const res = await getIdToAddress(uniqueId);
-    } catch (error) {
-      console.error("Error in getIdFromUser:", error);
-    }
-  };
   const [timeParts, setTimeParts] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
   });
-
+  const [isExpired, setIsExpired] = useState(false);
   useEffect(() => {
     if (
       !address ||
@@ -185,19 +178,21 @@ export default function Dashboard() {
       !allUsers?.expiryTime
     ) {
       setTimeParts({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      setIsExpired(false);
       return;
     }
 
     const time = allUsers.userPackageInfo[0].time;
     const expiryDuration = allUsers.expiryTime;
-    console.log("time111", time);
+
     const interval = setInterval(() => {
       const expiryTime = time + expiryDuration;
       const now = moment().unix();
       const remainingSeconds = expiryTime - now;
-
+      console.log(remainingSeconds, "remainingSeconds");
       if (remainingSeconds <= 0) {
         clearInterval(interval);
+        setIsExpired(true);
         setTimeParts({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       } else {
         const duration = moment.duration(remainingSeconds, "seconds");
@@ -206,6 +201,7 @@ export default function Dashboard() {
         const minutes = duration.minutes();
         const seconds = duration.seconds();
 
+        setIsExpired(false);
         setTimeParts({ days, hours, minutes, seconds });
       }
     }, 1000);
@@ -213,13 +209,23 @@ export default function Dashboard() {
     return () => clearInterval(interval);
   }, [address, allUsers]);
 
+  const packageDetails = async () => {
+    try {
+      const res = await getPackageDetails(address);
+      console.log(res, "packageDetails");
+      setPackageData(res);
+    } catch (error) {
+      console.log("Error in package", error);
+    }
+  };
+
   useEffect(() => {
     if (address) {
       getUserInFoFromContract();
       UserInfo();
 
       UserProfits();
-      // getIdFromUser();
+      packageDetails();
     }
   }, [address, isFetch]);
   const copyToClipboard = async () => {
@@ -298,8 +304,8 @@ export default function Dashboard() {
         >
           <Navbar title="Dashboard"></Navbar>
           {/* <Header title="Dashboard"></Header> */}
-          <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap flex-md-nowrap  flex-sm-nowrap gap-3">
-            <div className="button-balance-group ">
+          <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap flex-lg-nowrap gap-3">
+            <div className="button-balance-group">
               <button
                 className="btn-upgrade"
                 type="button"
@@ -313,82 +319,90 @@ export default function Dashboard() {
               >
                 IFT Token Wallet
               </button>
-              <div className="balance-container">
-                <div className="balance-card">
-                  <h6>IFT Token</h6>
-                  <p>{inf.toFixed(4)}</p>
-                </div>
+            </div>
+            {isExpired ? (
+              <h1
+                className=""
+                style={{
+                  fontSize: "40px",
+                  marginBottom: "8px",
+                  fontWeight: "100",
+                  color: "#fff",
+                }}
+              >
+                Expired
+              </h1>
+            ) : (
+              <div className="d-flex justify-content-center align-items-center text-white p-4 timer-container">
+                <div className="d-flex align-items-center justify-content-center flex-wrap">
+                  {[
+                    { label: "Day(s)", value: timeParts.days },
+                    { label: "Hour(s)", value: timeParts.hours },
+                    { label: "Minute(s)", value: timeParts.minutes },
+                    { label: "Second(s)", value: timeParts.seconds },
+                  ].map((item, index) => (
+                    <div
+                      key={index}
+                      className="text-center mx-3 position-relative"
+                    >
+                      <h1
+                        className=""
+                        style={{
+                          fontSize: "40px",
+                          marginBottom: "8px",
+                          fontWeight: "500",
+                        }}
+                      >
+                        {item.value.toString().padStart(2, "0")}
+                      </h1>
+                      <div
+                        className="text-secondary"
+                        style={{
+                          fontSize: "14px",
+                          color: "#b4b4b4ff",
+                          fontWeight: "500",
+                        }}
+                      >
+                        {item.label}
+                      </div>
 
-                <div className="balance-card">
-                  <h6>1 IFT</h6>
-                  <p>{token.toFixed(4)} USDT</p>
-                </div>
-
-                <div className="balance-card">
-                  <h6>Value in USDT</h6>
-                  <p>{valueInUSDT} USDT</p>
+                      {/* Divider line between items */}
+                      {index < 3 && index !== 1 && (
+                        <div
+                          className="position-absolute"
+                          style={{
+                            right: "-13px",
+                            top: "14%",
+                            height: "50%",
+                            width: "1px",
+                            backgroundColor: "#444",
+                          }}
+                        ></div>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
+            )}
+          </div>
+          <div className="pb-4">
+            <div className="balance-container">
+              <div className="balance-card">
+                <h6>IFT Token</h6>
+                <p>{inf.toFixed(4)}</p>
+              </div>
 
-            <div
-              className="d-flex justify-content-center align-items-center text-white p-4"
-              style={{
-                backgroundColor: "#000",
-                borderRadius: "12px",
-              }}
-            >
-              <div className="d-flex align-items-center justify-content-center">
-                {[
-                  { label: "Day(s)", value: timeParts.days },
-                  { label: "Hour(s)", value: timeParts.hours },
-                  { label: "Minute(s)", value: timeParts.minutes },
-                  { label: "Second(s)", value: timeParts.seconds },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="text-center mx-3 position-relative"
-                  >
-                    <h1
-                      className=""
-                      style={{
-                        fontSize: "40px",
-                        marginBottom: "8px",
-                        fontWeight: "500",
-                      }}
-                    >
-                      {item.value.toString().padStart(2, "0")}
-                    </h1>
-                    <div
-                      className="text-secondary"
-                      style={{
-                        fontSize: "14px",
-                        color: "#b4b4b4ff",
-                        fontWeight: "500",
-                      }}
-                    >
-                      {item.label}
-                    </div>
+              <div className="balance-card">
+                <h6>1 IFT</h6>
+                <p>{token.toFixed(4)} USDT</p>
+              </div>
 
-                    {/* Divider line between items */}
-                    {index < 3 && (
-                      <div
-                        className="position-absolute"
-                        style={{
-                          right: "-13px",
-                          top: "14%",
-                          height: "50%",
-                          width: "1px",
-                          backgroundColor: "#444",
-                        }}
-                      ></div>
-                    )}
-                  </div>
-                ))}
+              <div className="balance-card">
+                <h6>Value in USDT</h6>
+                <p>{valueInUSDT} USDT</p>
               </div>
             </div>
           </div>
-
           {/* <h3 className="time-heading" id="timeDisplay">
             {timeLeft || "00 DD:00 HH:00 MM:00 SS"}
           </h3> */}
@@ -454,30 +468,37 @@ export default function Dashboard() {
                         </span>
                       </div>
 
-                      {(timeLeft == "Expired"
-                        ? index < Number(dashboardData[6]) - 1
-                        : index < Number(dashboardData[6])) && (
+                      {packageData?.activePackages?.includes(index + 1) && (
                         <button
                           className="btn-upgrade"
                           type="button"
-                          // onClick={() => handlePackage(pkg)}
-                          style={{ cursor: "default" }}
+                          // onClick={() => handlePackage(pkg, index + 1)}
                         >
                           Active
                         </button>
                       )}
 
-                      {(timeLeft == "Expired"
-                        ? index >= Number(dashboardData[6]) - 1
-                        : index >= Number(dashboardData[6])) && (
-                        <button
-                          className="btn-upgrade"
-                          type="button"
-                          onClick={() => handlePackage(pkg)}
-                        >
-                          Upgrade
-                        </button>
-                      )}
+                      {!packageData?.activePackages?.includes(index + 1) &&
+                        !packageData?.expiredPackages?.includes(index + 1) && (
+                          <button
+                            className="btn-upgrade"
+                            type="button"
+                            onClick={() => handlePackage(pkg, index + 1, 0)}
+                          >
+                            Upgrade
+                          </button>
+                        )}
+
+                      {packageData?.expiredPackages?.includes(index + 1) &&
+                        !packageData?.activePackages?.includes(index + 1) && (
+                          <button
+                            className="btn-upgrade"
+                            type="button"
+                            onClick={() => handlePackage(pkg, index + 1, 1)}
+                          >
+                            Renew
+                          </button>
+                        )}
                     </div>
                   ))}
                 </div>

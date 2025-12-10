@@ -201,13 +201,13 @@ export async function getNfts(tokenId) {
   }
 }
 
-export async function upgradePackageFn(amt) {
+export async function upgradePackageFn(amt,index) {
   try {
     const result = await writeContract(config, {
       abi: CONTRACT_ADDRESS_ABI,
       address: CONTRACT_ADDRESS,
       functionName: "upgradePackage",
-      args: [amt],
+      args: [amt,index],
     });
     const res = waitForTransactionReceipt(config, { hash: result });
     const data = await toast.promise(res, {

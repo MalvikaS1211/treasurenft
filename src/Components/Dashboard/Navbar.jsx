@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Logo from "../../assets/LogoNew.png";
 import {
   FaHome,
   FaRedditAlien,
   FaCrown,
   FaLevelUpAlt,
-  FaHistory,
   FaFacebook,
   FaYoutube,
 } from "react-icons/fa";
 import { BsMedium } from "react-icons/bs";
-import { GiHamburgerMenu, GiReceiveMoney } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import ConnectWallet from "../Common/ConnectWallet";
 import {
   MdAttachMoney,
@@ -20,21 +19,25 @@ import {
 } from "react-icons/md";
 import { useAccount } from "wagmi";
 import { getStakingDetail } from "../../Helper/API_Functions";
+import { isUserExist } from "../../Helper/Web3";
+import { toast } from "react-hot-toast"; 
 
 export default function Navbar({ title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 500);
-  const [btnShow, setBtnShow] = useState(true);
   const location = useLocation();
+  const navigate = useNavigate();
   const { address } = useAccount();
+  const [userExist, setUserExist] = useState(true); 
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-
+  
   const handleStakingBtn = async () => {
     try {
-      const res = await getStakingDetail(address);
-      // setBtnShow(res?.data);
+      if (address) {
+        await getStakingDetail(address);
+      }
     } catch (error) {}
   };
 
@@ -42,9 +45,37 @@ export default function Navbar({ title }) {
     if (address) handleStakingBtn();
   }, [address]);
 
+  const userExistFn = async () => {
+    try {
+      if (address) {
+        const res = await isUserExist(address);
+        setUserExist(res);
+      }
+    } catch (error) {
+      console.error("User exist check failed:", error);
+    }
+  };
+
+  useEffect(() => {
+    if (address) {
+      userExistFn();
+    } else {
+      toast.error("Please connect your wallet");
+      setUserExist(true); 
+    }
+  }, [address]);
+
+  // REDIRECT logic (Only if address connected AND user is not registered)
+  useEffect(() => {
+    if (address && userExist === false) {
+      if (location.pathname !== "/") {
+        navigate("/", { replace: true });
+      }
+    }
+  }, [userExist, address, location.pathname]);
+
   return (
     <>
-      {/* Header */}
       <header className="header-dashboard">
         <h1>{title}</h1>
         <div className="header-right">
@@ -55,19 +86,19 @@ export default function Navbar({ title }) {
         </div>
       </header>
 
-      {/* Sidebar Container */}
       <div className={`sidebar-container ${isSidebarOpen ? "active" : ""}`}>
-        {/* Menu Sidebar */}
         <aside className="dashboard-sidebar">
           <div className="logo">
             <img src={Logo} alt="logo" style={{ width: "160px" }} />
           </div>
+
           <ul className="menu-list">
             <Link to="/">
               <li className={location.pathname === "/" ? "active" : "inactive"}>
                 <FaHome /> Home
               </li>
             </Link>
+
             <Link to="/dashboard">
               <li
                 className={
@@ -77,6 +108,17 @@ export default function Navbar({ title }) {
                 <i className="fas fa-tachometer-alt"></i> Dashboard
               </li>
             </Link>
+
+            <Link to="/deposit">
+              <li
+                className={
+                  location.pathname === "/deposit" ? "active" : "inactive"
+                }
+              >
+                <MdTrendingUp /> Deposits
+              </li>
+            </Link>
+
             <Link to="/refferal">
               <li
                 className={
@@ -86,6 +128,7 @@ export default function Navbar({ title }) {
                 <i className="fas fa-users"></i> Referral
               </li>
             </Link>
+
             <Link to="/community">
               <li
                 className={
@@ -95,6 +138,7 @@ export default function Navbar({ title }) {
                 <i className="fas fa-users-cog"></i> Community
               </li>
             </Link>
+
             <Link to="/downline">
               <li
                 className={
@@ -104,6 +148,7 @@ export default function Navbar({ title }) {
                 <i className="fas fa-sitemap"></i> Downline
               </li>
             </Link>
+
             <Link to="/royality">
               <li
                 className={
@@ -113,6 +158,7 @@ export default function Navbar({ title }) {
                 <FaCrown /> NFT Royality
               </li>
             </Link>
+
             <Link to="/direct">
               <li
                 className={
@@ -122,6 +168,7 @@ export default function Navbar({ title }) {
                 <MdAttachMoney /> Direct
               </li>
             </Link>
+
             <Link to="/level">
               <li
                 className={
@@ -131,6 +178,7 @@ export default function Navbar({ title }) {
                 <FaLevelUpAlt /> Level
               </li>
             </Link>
+
             <Link to="/Trading-Income">
               <li
                 className={
@@ -145,53 +193,30 @@ export default function Navbar({ title }) {
           </ul>
         </aside>
 
-        {/* Social + Support Sidebar */}
+        {/* Social */}
         <aside className="sidebar-social-media">
           <ul>
             <li className="mb-3 text-white">
               Follow Us On
-              <div className="d-flex gap-3 pt-4 ">
-                <a href="" target="_blank" rel="noreferrer">
-                  <i className="fab fa-telegram-plane icons-color"></i>
-                </a>
-                <a href="" target="_blank" rel="noreferrer">
-                  <i className="fab fa-x-twitter icons-color"></i>
-                </a>
-                <a href="" target="_blank" rel="noreferrer">
-                  <BsMedium className="icons-color" />
-                </a>
-                <a href="" target="_blank" rel="noreferrer">
-                  <i className="fab fa-instagram icons-color"></i>
-                </a>
-                <a href="" target="_blank" rel="noreferrer">
-                  <FaRedditAlien className="icons-color" />
-                </a>
-                <a href="" target="_blank" rel="noreferrer">
-                  <FaFacebook className="icons-color" />
-                </a>
-                <a
-                  href="https://youtube.com/@magicverse-c4o?si=IkOqSaJgKGxw2-7S"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaYoutube className="icons-color" />
-                </a>
+              <div className="d-flex gap-3 pt-4">
+                <i className="fab fa-telegram-plane icons-color"></i>
+                <i className="fab fa-x-twitter icons-color"></i>
+                <BsMedium className="icons-color" />
+                <i className="fab fa-instagram icons-color"></i>
+                <FaRedditAlien className="icons-color" />
+                <FaFacebook className="icons-color" />
+                <FaYoutube className="icons-color" />
               </div>
             </li>
 
             <li className="text-white">
               Support
-              <div>
-                <Link to="/support">
-                  <MdOutlineSupportAgent
-                    className="icons-color"
-                    style={{
-                      fontSize: "40px",
-                      paddingTop: "10px",
-                    }}
-                  />
-                </Link>
-              </div>
+              <Link to="/support">
+                <MdOutlineSupportAgent
+                  className="icons-color"
+                  style={{ fontSize: "40px", paddingTop: "10px" }}
+                />
+              </Link>
             </li>
           </ul>
         </aside>

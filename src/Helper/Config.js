@@ -1,8 +1,7 @@
 export const CONTRACT_ADDRESS = "0x1420Aaf1f4ABA1b361A34d16b9001e92923F33a0"; //Mainnet
 export const USDT_TOKEN = "0x55d398326f99059ff775485246999027b3197955"; //Mainnet
 
-
-// export const CONTRACT_ADDRESS = "0x021083E537A4c6811e95612bfd1E0fbf0FAeB817"; //Testnet
+// export const CONTRACT_ADDRESS = "0x05557a53d4D72a99DC8FeC8E835FA05013652e14"; //Testnet
 // export const USDT_TOKEN = "0x8c5884b8B8281151abe5E381E252514b47FBCD05"; //Testnet
 
 export const IFT_Token = "0x52af8EbE295B470F945B6322a926f607847e98Ed";
@@ -987,7 +986,10 @@ export const CONTRACT_ADDRESS_ABI = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "plan", type: "uint256" }],
+    inputs: [
+      { internalType: "uint256", name: "plan", type: "uint256" },
+      { internalType: "uint256", name: "newPackage", type: "uint256" },
+    ],
     name: "upgradePackage",
     outputs: [],
     stateMutability: "nonpayable",
