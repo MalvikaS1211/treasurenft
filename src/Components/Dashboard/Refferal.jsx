@@ -16,12 +16,12 @@ export default function Refferal() {
       const res = await getUserDirects(address, currentPage, itemPerpage);
       setTableData(res?.userDirects);
       setTotalPages(res?.pagination?.totalPages);
-      console.log("GetDirects", res);
+      
     } catch (error) {
       console.log(error);
     }
   };
-  console.log("tabledata:::", tabledata);
+
   useEffect(() => {
     handleTableData();
   }, [address, currentPage]);

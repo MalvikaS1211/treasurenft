@@ -238,7 +238,7 @@ export default function SingleNFT() {
           iphashRes,
           totalAmount
         );
-        // console.log(res, res.data.message, "VRS response");
+       
         if (res.success) {
           const tokenApp = await tokenApp1(totalAmount);
           if (tokenApp) {
@@ -341,7 +341,7 @@ export default function SingleNFT() {
               error: "error in nft creation",
             });
 
-            console.log(tx);
+       
             let obj = {};
             obj["txHash"] = tx.transactionHash;
             obj["from"] = tx.from;

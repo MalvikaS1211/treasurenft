@@ -39,7 +39,7 @@ export default function Community() {
     try {
       const res = await getFetchTree(address);
       if (res.success) {
-        console.log(res.rootUserUniqueId, "tree");
+    
         if (!isNavigation) {
           setPrevNext((prev) => [...prev, address]);
           setNextStack([]);
@@ -48,7 +48,7 @@ export default function Community() {
         const data = res?.obj?.sort((a, b) => {
           return a.timestamp - b.timestamp;
         });
-        console.log(data.length, ":data");
+    
 
         setTree(data?.slice(0, 6));
         const level1P = data?.filter(
@@ -58,7 +58,7 @@ export default function Community() {
         const level2p = data?.filter(
           (it) => it.level === 1 && it.position === true
         );
-        console.log(level1P[0]?.user, level2p[0]?.user, ":data");
+      
         setRootUser(res.rootUserUniqueId);
 
         setleve1(data?.filter((it) => it.level === 1 && it.position === false));
@@ -99,7 +99,7 @@ export default function Community() {
             )
           );
         } else {
-          console.log("hfhasifhnisa");
+       
           setleve6("");
           setleve5("");
         }
@@ -109,7 +109,7 @@ export default function Community() {
     }
   };
 
-  console.log(prevStack, ":::prevStack");
+
 
   const handlePrevNext = (action) => {
     setPrevNext((prev) => {
@@ -333,7 +333,7 @@ export default function Community() {
                             handleTree(
                               level5 && level5[0]?.uniqueRandomId.toString()
                             );
-                            console.log("level5", level5);
+                     
                           }}
                         />
                         <p>{(level5 && level5[0]?.uniqueRandomId) || "N/A"}</p>

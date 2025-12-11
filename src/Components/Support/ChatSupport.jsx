@@ -25,12 +25,11 @@ export default function ChatSupport() {
   const generateTicket = async () => {
     const res = await generateTicketFn(address, name, subject, message);
 
-    console.log(res, address, name, subject, message, "generateticket");
   };
 
   const getTicketByUserAddress = async () => {
     const res = await getTicketByUserAddressFn(address);
-    console.log("getTicket", res);
+
     setDataByTicket(res.data);
   };
 
