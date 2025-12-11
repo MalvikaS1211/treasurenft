@@ -40,7 +40,7 @@ export async function createNftVrsFn(
       metadataURI: metadataURI,
       totalAmount: totalAmount,
     });
-    console.log(response, "from api call");
+  
     return response.data;
   } catch (error) {
     console.log(error, "create-nft-vrs");

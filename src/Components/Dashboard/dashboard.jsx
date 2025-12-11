@@ -149,10 +149,8 @@ export default function Dashboard() {
       if (!address) {
         return toast.error("Please connect your wallet");
       }
-      console.log(timeLeft, "appRes", timeLeft == "Expired" ? 1 : 0);
       const appRes = await tokenApp(pkg.subscription);
-      console.log("pkg.subscription", pkg.subscription);
-      console.log("upgrade", appRes, timeLeft, pkg);
+  
       if (appRes) {
         await upgradePackageFn(details, index);
         setTimeout(() => {
@@ -189,7 +187,7 @@ export default function Dashboard() {
       const expiryTime = time + expiryDuration;
       const now = moment().unix();
       const remainingSeconds = expiryTime - now;
-      console.log(remainingSeconds, "remainingSeconds");
+   
       if (remainingSeconds <= 0) {
         clearInterval(interval);
         setIsExpired(true);
@@ -255,7 +253,7 @@ export default function Dashboard() {
   const nftIncomesFn = async () => {
     try {
       const res = await fetchNftIncome(address);
-      // console.log(res, address, nftIncomes?.[0], "nftIncomes");
+  
       setNftIncomes(res);
     } catch (error) {
       console.log("Error in nftIncomes:", error);
@@ -265,7 +263,7 @@ export default function Dashboard() {
   const fetchTokenBal = async () => {
     try {
       const res = await fetchIFTTtokenBalance();
-      console.log("Fetched result:", res);
+    
       setTokenBalance(res);
     } catch (error) {
       console.error("fetchbalance error:", error);
@@ -275,7 +273,7 @@ export default function Dashboard() {
   const fetchUserBalance = async () => {
     try {
       const res = await fetchWalletBalance(address);
-      console.log("fetchUserBalance", res);
+   
       setUserBalINF(res);
     } catch (error) {
       console.error("fetchUserBalance error:", error);
@@ -438,16 +436,18 @@ export default function Dashboard() {
                 </div>
                 <div className="user-card wallet-card">
                   <h6>Referral Link</h6>
-                  <div className="d-flex gap-1 align-items-center ">
-                    {" "}
-                    <p onClick={copyToClipboard} className="copytheRefferal">
-                      {referralLink}
-                    </p>
-                    <FaRegCopy
-                      onClick={copyToClipboard}
-                      color="white"
-                      className="fs-4 cursor-pointer"
-                    />
+                    <div className="d-flex gap-1 align-items-center ">
+                    <div className="gap-2">
+                      {" "}
+                      <p onClick={copyToClipboard} className="copytheRefferal">
+                        {referralLink}
+                      </p>
+                      <FaRegCopy
+                        onClick={copyToClipboard}
+                        color="#fff"
+                        className="fs-4 cursor-pointer"
+                      />
+                    </div>
                   </div>
 
                   <h6>Referred By</h6>

@@ -16,7 +16,7 @@ export default function Royality() {
       const res = await getRoyalty(address, currentPage, itemPerpage);
       setTableData(res?.history);
       setTotalPages(res?.pagination?.totalPages);
-      console.log("resRoyalty", res);
+ 
     } catch (error) {
       console.log(error);
     }

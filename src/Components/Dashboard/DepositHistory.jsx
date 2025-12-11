@@ -16,7 +16,7 @@ export default function DepositHistory() {
     setExpireTime(res.expiryTime);
     setTableData(res?.data);
     setTotalPages(res?.pagination?.totalPages);
-    console.log("GetTradingIncome", res);
+   
   };
 
   useEffect(() => {

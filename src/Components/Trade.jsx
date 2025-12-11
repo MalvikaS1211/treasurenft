@@ -57,22 +57,22 @@ export default function Trade() {
 
   const handleIsTradeAvailable = (payload) => {
     const { tokenId, isTradeAvailable } = payload;
-    // console.log(tokenId, isTradeAvailable, "isTradeAvailable : ");
+
     setIsAvailable(isTradeAvailable);
   };
   const handleTradeOngoing = (payload) => {
-    // console.log(payload, "payload");
+   ;
     const { tokenId } = payload;
-    // console.log(tokenId, "TradeOngoing  ");
+
   };
   useEffect(() => {
     socket.on("connect", () => {
-      // console.log("Connected to server");
+     
     });
 
     socket.on("UpdateMarket", (payload) => {
       getTrade();
-      // console.log(payload, "payload");
+     
     });
     socket.emit("join");
     socket.on("joined", () => {
@@ -100,7 +100,7 @@ export default function Trade() {
       const isTradeAvailable = await new Promise((resolve, reject) => {
         const handleResponse = (payload) => {
           const { tokenId: resTokenId, isTradeAvailable } = payload;
-          // console.log(resTokenId, isTradeAvailable, "isTradeAvailable : ");
+          
           if (resTokenId === tokenId) {
             socket.off("isTradeAvailable", handleResponse); // Clean up listener
             resolve(isTradeAvailable);
@@ -147,7 +147,7 @@ export default function Trade() {
       setApiLoading(true);
 
       const { userTrades } = await getTradeUserFn(address);
-      console.log(userTrades, "userTrades");
+ 
       const fetchedTrades = await Promise.all(
         userTrades.map(async (trade) => {
           try {
@@ -210,11 +210,7 @@ export default function Trade() {
           }
         })
       );
-      // console.log(
-      //   fetchedTrades.length,
-      //   "fetchedTrades length",
-      //   userTrades.length
-      // );
+   
       setAllTrade(fetchedTrades);
       return;
       const newList = fetchedTrades.filter(Boolean);
@@ -268,7 +264,7 @@ export default function Trade() {
       const resp = await isInSale(tokenId);
       console.log(resp, !resp.isInSale, "Fasfssiuhfiahs");
       if (!resp.isInSale) {
-        console.log("in if Fasfssiuhfiahs");
+     
         const create = await insertInSale(tokenId);
         if (create.success) {
           return true;
@@ -289,7 +285,7 @@ export default function Trade() {
     tokenId,
     totalAmount
   ) => {
-    // console.log("totalAmount", totalAmount);
+
 
     try {
       setIsLoading(true);
@@ -301,7 +297,6 @@ export default function Trade() {
       // }
       const userBalance = await fetchUserTokenBalance(address);
 
-      // console.log(userBalance, totalAmount, "::::");
       if (Number(userBalance) < Number(totalAmount) / 1e18) {
         setIsLoading(false);
         return toast.error(
@@ -364,7 +359,7 @@ export default function Trade() {
     } finally {
       setTimeout(() => {
         setIsFetch(!isfetch);
-        // console.log("time :");
+  
       }, 5000);
       socket.emit("TradeDone", tokenId);
       setIsLoading(false);
@@ -393,7 +388,6 @@ export default function Trade() {
 
       const totalAssetValue = Number(totalNftPrice) / 1e18;
 
-      // console.log(totalAssetValue, "Total Asset Value");
       setAssetValue(totalAssetValue);
     } catch (error) {
       console.error("Error calculating total assets:", error);
@@ -402,7 +396,7 @@ export default function Trade() {
 
   const getWalletFund = async () => {
     const res = await fetchUserTokenBalance(address);
-    // console.log(res, "getWalletFund");
+ 
     getBalance(res);
   };
 
@@ -411,7 +405,7 @@ export default function Trade() {
   const handlependingNft = async () => {
     try {
       const res = await getPendingMaturedNFT(address);
-      // console.log(res?.totalCount, "handlependingNft");
+  
       setPendingNFT(res?.totalCount);
     } catch (error) {
       console.log(error, "eror in handlependingNft");

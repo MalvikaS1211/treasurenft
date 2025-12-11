@@ -305,8 +305,7 @@ export default function BulkNFT() {
   const handleIsAllowedNFT = async () => {
     try {
       const res = await getStatus(address);
-      console.log(res, "getStatus");
-      console.log(res.data.isBulkAllowed, "IsAllowed");
+     
       setIsAllowed(res?.data?.isBulkAllowed);
     } catch (error) {
       console.log("Error in isAllowedNFT", error);

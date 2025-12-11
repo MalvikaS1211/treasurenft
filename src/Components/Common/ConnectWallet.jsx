@@ -10,7 +10,6 @@ function ConnectWallet() {
       try {
         const elements = document.getElementsByClassName("ju367v8r");
 
-        console.log(elements[0], elements[0]?.textContent, elements.length);
 
         if (window.ethereum?.isTrust) {
           toast.error("Trust Wallet detected");

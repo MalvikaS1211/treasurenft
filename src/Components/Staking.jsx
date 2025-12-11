@@ -18,13 +18,13 @@ export default function Staking() {
     setTableData(res.data);
     setTotals(res.stakingDetais);
     setTotalPages(res?.pagination?.totalPages);
-    // console.log("getStakingDetail", res);
+
   };
 
   const handleGetROI = async () => {
     try {
       const res = await getROI(address);
-      console.log("getROI", res);
+  
       setROI(res?.roi);
     } catch (error) {
       console.log("error in getROI", error);

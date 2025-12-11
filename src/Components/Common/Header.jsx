@@ -35,7 +35,6 @@ const Header = () => {
     } else toast.error("Please connect your wallet");
   }, [address, userExist]);
   
-  console.log(userExist, address, "userExist");
   return (
     <>
       {/* <News /> */}

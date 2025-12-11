@@ -22,7 +22,7 @@ export default function FooterNew() {
     try {
       if (address) {
         const resUserExist = await isUserExist(address);
-        // console.log(resUserExist, "resUserExist");
+ 
         setUserExist(resUserExist);
       }
     } catch (error) {

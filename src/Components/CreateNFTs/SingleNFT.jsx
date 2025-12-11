@@ -56,8 +56,8 @@ export default function SingleNFT() {
   const handleIsAllowedNFT = async () => {
     try {
       const res = await getStatus(address);
-      console.log(res, "getStatus");
-      console.log(res.data.isAllowed, "IsAllowed");
+
+ 
       setIsAllowed(res.data.isAllowed);
     } catch (error) {}
   };
@@ -65,9 +65,9 @@ export default function SingleNFT() {
   const handleDueNFT = async () => {
     try {
       const response = await dueNFT(address);
-      console.log(response, "DueNFT");
+
       setDueNFTs(response?.dueData);
-      console.log(response?.dueData, "buyerpaid");
+
     } catch (error) {
       setDueNFTs([]);
     }
@@ -146,7 +146,7 @@ export default function SingleNFT() {
         description: description,
         image: imageHash,
       };
-      console.log(metadata, "metadata");
+
       const blob = new Blob([JSON.stringify(metadata)], {
         type: "application/json",
       });
@@ -191,11 +191,11 @@ export default function SingleNFT() {
       return;
     }
     try {
-      console.log(selectedFile, title, description);
+     
       const imageHash = await uploadToIPFS(selectedFile);
-      console.log(imageHash, "imagasHash aftewr firesat step");
+   
       const metadataURI = await uploadMetadataToIPFS(imageHash);
-      console.log(title, "::::", description, imageHash, metadataURI);
+    
       return metadataURI;
     } catch (error) {
       console.error(error);
@@ -220,7 +220,7 @@ export default function SingleNFT() {
         return toast.error("Please fill all fields and select a file!");
       }
       const userBalance = await fetchUserTokenBalance(address);
-      console.log(userBalance, totalNFTAmount, "userBalance");
+    
       if (userBalance < totalNFTAmount) {
         setIsLoading(false);
         return toast.error(
@@ -281,7 +281,7 @@ export default function SingleNFT() {
   const handleNftAction = async () => {
     try {
       const response = await getNftStartStop("GET");
-      console.log(response.nftCreationBlockStatus, "response::::::");
+    
       setNftAction(response?.nftCreationBlockStatus);
     } catch (error) {
       console.log(error);
@@ -320,7 +320,7 @@ export default function SingleNFT() {
           iphashRes,
           totalAmount
         );
-        console.log(iphashRes, "iphashRes");
+     
 
         if (res.success) {
           const tokenApp = await tokenApp1(totalAmount);
@@ -346,20 +346,20 @@ export default function SingleNFT() {
             obj["txHash"] = tx.transactionHash;
             obj["from"] = tx.from;
             obj["blockNumber"] = Number(tx.blockNumber);
-            console.log(obj, ":::obj");
+    
             if (tx) {
               const apiRes = await updateNFTDetails(
                 address,
                 selectedNft.tokenId,
                 obj
               );
-              console.log(apiRes);
+      
 
               setTimeout(() => {
                 handleDueNFT();
               }, 3000);
             }
-            console.log(tx, "::::::::asdfasfdfsadfdsfsdafdsasadfdfs");
+         
             setIsLoading(false);
             setSelectedFile("");
             setNftPrice("");
@@ -389,7 +389,7 @@ export default function SingleNFT() {
   const [eligibleForCreate, setEligibleForCreate] = useState(null);
   const showNFTBtn = async () => {
     const res = await eligibleForCreateNFT(address);
-    console.log(res?.eligible, "eligibleForCreateNFT");
+ 
     setEligibleForCreate(res?.eligible);
   };
   useEffect(() => {

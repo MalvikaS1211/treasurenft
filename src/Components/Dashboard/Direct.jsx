@@ -16,7 +16,7 @@ export default function Direct() {
     const res = await getDirectIncome(address, currentPage, itemPerpage);
     setTableData(res?.data);
     setTotalPages(res?.pagination?.totalPages);
-    console.log("GetDirects", res);
+
   };
 
   const handleNextPage = () => {
@@ -28,7 +28,7 @@ export default function Direct() {
   const handlePreviousPage = () => {
     setCurrentPage((prevPage) => (prevPage > 1 ? prevPage - 1 : prevPage));
   };
-  console.log("tabledata:::", tabledata);
+
   useEffect(() => {
     handleTableData();
   }, [address, currentPage]);

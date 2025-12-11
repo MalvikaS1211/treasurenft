@@ -77,7 +77,7 @@ export default function Expore() {
       );
 
       setCreateNft(data);
-      console.log("Fetched NFTs:", data);
+     
     } catch (error) {
       console.error("Error fetching user-created NFTs:", error);
     }
@@ -124,7 +124,7 @@ export default function Expore() {
       );
 
       setPurchasedNFTs(data);
-      console.log("Fetched purchased NFTs:", data);
+     
     } catch (error) {
       console.error("Error fetching purchased NFTs:", error);
     }
@@ -133,7 +133,7 @@ export default function Expore() {
   const ShowOwnedNFTs = async () => {
     try {
       const resNFT = await getOwnedNFTs(address);
-      console.log(resNFT, "ownedNFT");
+   
       const data = await Promise.all(
         resNFT.usercurrOwnedNfts.map(async (it) => {
           try {
@@ -172,7 +172,7 @@ export default function Expore() {
       );
 
       setOwnedNFTs(data);
-      console.log("Fetched Owned NFTs:", data);
+ 
     } catch (error) {
       console.error("Error fetching Owned NFTs:", error);
     }

@@ -25,7 +25,7 @@ export default function Registration() {
     try {
       if (address) {
         const resUserExist = await isUserExist(address);
-        // console.log(resUserExist, "resUserExist");
+   
         setUserExist(resUserExist);
       }
     } catch (error) {
@@ -50,12 +50,12 @@ export default function Registration() {
     const getRef = async () => {
       const data = new URLSearchParams(window.location.search);
       const refLink = data.get("ref");
-      console.log(refLink, "refLink");
+     
       if (refLink) {
         const res = await getIdToAddress(refLink);
-        console.log(res, "refferal link to address");
+     
         if (res.success) {
-          console.log(res, ":::");
+         
           setRef(res.address);
         }
       }

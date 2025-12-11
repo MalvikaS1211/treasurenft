@@ -19,11 +19,11 @@ export default function ChatConversation() {
       const userAdd = res.get("userAddress");
       setTicketId(ticketID);
       setAddress(userAdd);
-      console.log(ticketID, userAdd, "in getMessage");
+ 
       if (ticketID && userAdd) {
         const res = await getAllTicket(ticketID, userAdd);
         setMessages(res.data);
-        console.log(res, "from getAll");
+   
       }
     } catch (error) {
       console.log(error);

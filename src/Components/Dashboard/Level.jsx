@@ -14,9 +14,9 @@ export default function Level() {
     const res = await getLevelIncome(address, currentPage, itemPerpage);
     setTableData(res?.data);
     setTotalPages(res?.pagination?.totalPages);
-    console.log("GetDirects", res);
+
   };
-  console.log("tabledata:::", tabledata);
+
   useEffect(() => {
     handleTableData();
   }, [address, currentPage]);

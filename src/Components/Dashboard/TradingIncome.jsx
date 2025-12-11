@@ -14,9 +14,9 @@ export default function TradingIncome() {
     const res = await getTradingIncome(address, currentPage, itemPerpage);
     setTableData(res?.data);
     setTotalPages(res?.pagination?.totalPages);
-    console.log("GetTradingIncome", res);
+
   };
-  // console.log("tabledata:::", tabledata);
+
 
   useEffect(() => {
     handleTableData();
