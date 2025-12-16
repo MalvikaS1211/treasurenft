@@ -278,6 +278,7 @@ export default function Expore() {
                             </h6>
                           </div>
                         </div>
+                         <div className="tags">{nft.tokenId}</div>
                       </div>
                       <div className="card-bottom style-explode">
                         <div className="price">
@@ -380,6 +381,7 @@ export default function Expore() {
                           </h6>
                         </div>
                       </div>
+                       <div className="tags">{nft.tokenId}</div>
                     </div>
                     <div className="card-bottom style-explode">
                       <div className="price">
@@ -482,6 +484,7 @@ export default function Expore() {
                           </h6>
                         </div>
                       </div>
+                       <div className="tags">{nft.tokenId}</div>
                     </div>
                     <div className="card-bottom style-explode">
                       <div className="price">
