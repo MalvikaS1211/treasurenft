@@ -6,11 +6,8 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-
-
 import Home from "../LandingPage/Home";
 import Explore from "../Explore";
-
 import Dashboard from "../Dashboard/dashboard";
 import Refferal from "../Dashboard/Refferal";
 import Community from "../Dashboard/Community";
@@ -30,25 +27,20 @@ import TradingIncome from "../Dashboard/TradingIncome";
 import Staking from "../Staking";
 import CommingSoon from "../CommingSoon";
 import DepositHistory from "../Dashboard/DepositHistory";
+import GetYourTxHash from "../Dashboard/GetYourTxHash";
 
 function AppRoutes() {
-  
   return (
     <>
       <Router>
         <Routes>
-   
           {/* <Route path="/" element={<CommingSoon/>} /> */}
 
           <Route path="/" element={<Home></Home>} />
           {/* <Route path="/signup" element={<SignUp />} /> */}
           <Route path="/explore" element={<Explore></Explore>} />
-   
-
           {/* <Route path="/account/level" element={<Level />} /> */}
-       
           <Route path="/NFTcreation" element={<CreateNFT />} />
-
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/refferal" element={<Refferal />} />
           <Route path="/community" element={<Community />} />
@@ -66,7 +58,7 @@ function AppRoutes() {
           <Route path="/Trading-Income" element={<TradingIncome />} />
           <Route path="/staking" element={<Staking />} />
           <Route path="/deposit" element={<DepositHistory />} />
-
+          <Route path="/get-tx-hash" element={<GetYourTxHash />} />
         </Routes>
       </Router>
     </>

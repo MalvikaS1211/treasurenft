@@ -5,8 +5,8 @@ import toast from "react-hot-toast";
 export const URLApi = "https://iftglobal.org/api";
 export const SOCKET_SERVER_URL = "https://iftglobal.org";
 
-// export const URLApi = "http://192.168.1.76:8081/api";
-// export const SOCKET_SERVER_URL = "http://192.168.1.76:8081/api";
+// export const URLApi = "http://192.168.1.31:8081/api";
+// export const SOCKET_SERVER_URL = "http://192.168.1.31:8081/api";
 
 export const pinataApiKey = "e45f06a4f288fd4c7ded";
 export const pinataSecretApiKey =
@@ -570,7 +570,7 @@ export async function getDepostList(user, page, limit) {
 
     return response.data;
   } catch (error) {
-    console.log("Error getDepostList Admin:", error);
+    console.log("Error getDepostList :", error);
   }
 }
 export async function getPackageDetails(userAddress) {
@@ -581,6 +581,19 @@ export async function getPackageDetails(userAddress) {
 
     return response.data;
   } catch (error) {
-    console.log("Error getPackageDetails Admin:", error);
+    console.log("Error getPackageDetails :", error);
+  }
+}
+
+
+export async function getTransactionHash(txHash) {
+  try {
+    const response = await axios.post(`${URLApi}/recover-MissedTx`, {
+      txHash ,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getTransactionHash :", error);
   }
 }

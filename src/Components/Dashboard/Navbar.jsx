@@ -20,19 +20,19 @@ import {
 import { useAccount } from "wagmi";
 import { getStakingDetail } from "../../Helper/API_Functions";
 import { isUserExist } from "../../Helper/Web3";
-import { toast } from "react-hot-toast"; 
-
+import { toast } from "react-hot-toast";
+import { GrTransaction } from "react-icons/gr";
 export default function Navbar({ title }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(window.innerWidth > 500);
   const location = useLocation();
   const navigate = useNavigate();
   const { address } = useAccount();
-  const [userExist, setUserExist] = useState(true); 
+  const [userExist, setUserExist] = useState(true);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-  
+
   const handleStakingBtn = async () => {
     try {
       if (address) {
@@ -61,7 +61,7 @@ export default function Navbar({ title }) {
       userExistFn();
     } else {
       toast.error("Please connect your wallet");
-      setUserExist(true); 
+      setUserExist(true);
     }
   }, [address]);
 
@@ -108,7 +108,15 @@ export default function Navbar({ title }) {
                 <i className="fas fa-tachometer-alt"></i> Dashboard
               </li>
             </Link>
-
+            <Link to="/get-tx-hash">
+              <li
+                className={
+                  location.pathname === "/get-tx-hash" ? "active" : "inactive"
+                }
+              >
+                <GrTransaction  /> Get Tx Hash
+              </li>
+            </Link>
             <Link to="/deposit">
               <li
                 className={
