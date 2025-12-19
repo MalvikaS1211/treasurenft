@@ -81,7 +81,7 @@ export default function ChatConversation() {
                             {/* <h5 className="mb-1 fs-4 fw-medium">
                               {msg.Sender}
                             </h5> */}
-                            <p className="mb-4 text-muted msg-text text-break">
+                            <p className="mb-4 text-white msg-text text-break">
                               {msg.Message}
                             </p>
                           </div>
@@ -111,7 +111,7 @@ export default function ChatConversation() {
                 </div>
 
                 <textarea
-                  className="form-control"
+                  className="form-control text-white"
                   id="exampleFormControlTextarea1 textAreaBox"
                   rows="6"
                   value={message}

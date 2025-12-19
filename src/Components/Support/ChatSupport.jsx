@@ -110,7 +110,7 @@ export default function ChatSupport() {
                         maxLength={500}
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        className="mt-1 w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-emerald-500 chat-inputs"
+                        className="mt-1 w-full px-3 py-2 border rounded-md text-sm focus:outline-none focus:ring focus:ring-emerald-500 chat-inputs text-white"
                         placeholder="Enter your message"
                       />
                       <p className="text-xs text-gray-500 text-right"></p>
