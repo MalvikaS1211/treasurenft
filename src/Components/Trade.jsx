@@ -40,6 +40,13 @@ export default function Trade() {
   const [allUsers, setAllUsers] = useState(null);
   const [balance, getBalance] = useState(0);
   const [assetValue, setAssetValue] = useState(0);
+  const [timeParts, setTimeParts] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+  const [isExpired, setIsExpired] = useState(false);
   const tokenApp1 = async (amt) => {
     try {
       const appres = await toast.promise(approveToken(amt), {
@@ -61,18 +68,13 @@ export default function Trade() {
     setIsAvailable(isTradeAvailable);
   };
   const handleTradeOngoing = (payload) => {
-   ;
     const { tokenId } = payload;
-
   };
   useEffect(() => {
-    socket.on("connect", () => {
-     
-    });
+    socket.on("connect", () => {});
 
     socket.on("UpdateMarket", (payload) => {
       getTrade();
-     
     });
     socket.emit("join");
     socket.on("joined", () => {
@@ -100,7 +102,7 @@ export default function Trade() {
       const isTradeAvailable = await new Promise((resolve, reject) => {
         const handleResponse = (payload) => {
           const { tokenId: resTokenId, isTradeAvailable } = payload;
-          
+
           if (resTokenId === tokenId) {
             socket.off("isTradeAvailable", handleResponse); // Clean up listener
             resolve(isTradeAvailable);
@@ -147,7 +149,7 @@ export default function Trade() {
       setApiLoading(true);
 
       const { userTrades } = await getTradeUserFn(address);
- 
+
       const fetchedTrades = await Promise.all(
         userTrades.map(async (trade) => {
           try {
@@ -210,7 +212,7 @@ export default function Trade() {
           }
         })
       );
-   
+
       setAllTrade(fetchedTrades);
       return;
       const newList = fetchedTrades.filter(Boolean);
@@ -264,7 +266,6 @@ export default function Trade() {
       const resp = await isInSale(tokenId);
       console.log(resp, !resp.isInSale, "Fasfssiuhfiahs");
       if (!resp.isInSale) {
-     
         const create = await insertInSale(tokenId);
         if (create.success) {
           return true;
@@ -285,8 +286,6 @@ export default function Trade() {
     tokenId,
     totalAmount
   ) => {
-
-
     try {
       setIsLoading(true);
       // const resp = await isTokenAvailaible(tokenId);
@@ -359,7 +358,6 @@ export default function Trade() {
     } finally {
       setTimeout(() => {
         setIsFetch(!isfetch);
-  
       }, 5000);
       socket.emit("TradeDone", tokenId);
       setIsLoading(false);
@@ -396,7 +394,7 @@ export default function Trade() {
 
   const getWalletFund = async () => {
     const res = await fetchUserTokenBalance(address);
- 
+
     getBalance(res);
   };
 
@@ -405,7 +403,7 @@ export default function Trade() {
   const handlependingNft = async () => {
     try {
       const res = await getPendingMaturedNFT(address);
-  
+
       setPendingNFT(res?.totalCount);
     } catch (error) {
       console.log(error, "eror in handlependingNft");
@@ -435,6 +433,69 @@ export default function Trade() {
             </h1>
           </div>
         </div>
+        {isExpired ? (
+          <h1
+            className=""
+            style={{
+              fontSize: "40px",
+              marginBottom: "8px",
+              fontWeight: "100",
+              color: "#fff",
+            }}
+          >
+            Expired
+          </h1>
+        ) : (
+          <div
+            className="d-flex justify-content-center align-items-center text-white p-4 timer-container "
+            style={{ background: "#18181a" }}
+          >
+            <div className="d-flex align-items-center justify-content-center flex-wrap">
+              {[
+                { label: "Day(s)", value: timeParts.days },
+                { label: "Hour(s)", value: timeParts.hours },
+                { label: "Minute(s)", value: timeParts.minutes },
+                { label: "Second(s)", value: timeParts.seconds },
+              ].map((item, index) => (
+                <div key={index} className="text-center mx-3 position-relative">
+                  <h1
+                    className=""
+                    style={{
+                      fontSize: "40px",
+                      marginBottom: "8px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    {item.value.toString().padStart(2, "0")}
+                  </h1>
+                  <div
+                    className="text-secondary"
+                    style={{
+                      fontSize: "14px",
+                      color: "#b4b4b4ff",
+                      fontWeight: "500",
+                    }}
+                  >
+                    {item.label}
+                  </div>
+
+                  {/* Divider line between items */}
+                  {index < 3 && index !== 1 && (
+                    <div
+                      className="position-absolute"
+                      style={{
+                        right: "-13px",
+                        top: "14%",
+                        height: "50%",
+                        width: "1px",
+                      }}
+                    ></div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
         <div className="p-4" style={{ background: "var(--primary-bg-color)" }}>
           <div className="total-grid" style={{ marginTop: "3%" }}>
             <div className="total-card">
@@ -533,6 +594,17 @@ export default function Trade() {
                   ? (
                       (Number(allUsers?.userTodayUtilisedLimit) || 0) / 1e18
                     ).toFixed(4)
+                  : 0}
+                <span> USDT</span>
+              </p>
+            </div>
+            <div className="total-card">
+              <div className="sub-total">
+                <h6>NFT Created Value</h6>
+              </div>
+              <p>
+                {allUsers?.status == true
+                  ? ((allUsers?.createdValue || 0) / 1e18).toFixed(4)
                   : 0}
                 <span> USDT</span>
               </p>

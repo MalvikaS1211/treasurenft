@@ -2697,7 +2697,7 @@ td {
 
 /* ---- Timer Card Cleanup ---- */
 .timer-container {
-  background: #000 !important;
+  background: #000;
   border-radius: 12px;
   min-width: 260px;
   width: auto;

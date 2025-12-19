@@ -50,6 +50,13 @@ export default function Dashboard() {
   const uniqueId = allUsers?.userInfo?.[0]?.uniqueRandomId || "defaultId";
   const referralLink = `${base_url}/signup?ref=${uniqueId}`;
   const [packageData, setPackageData] = useState([]);
+    const [timeParts, setTimeParts] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+  const [isExpired, setIsExpired] = useState(false);
   const config = createConfig({
     chains: [opBNB],
     transports: {
@@ -162,13 +169,7 @@ export default function Dashboard() {
     }
   };
 
-  const [timeParts, setTimeParts] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-  const [isExpired, setIsExpired] = useState(false);
+
   useEffect(() => {
     if (
       !address ||
