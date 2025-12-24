@@ -40,7 +40,7 @@ export async function createNftVrsFn(
       metadataURI: metadataURI,
       totalAmount: totalAmount,
     });
-  
+
     return response.data;
   } catch (error) {
     console.log(error, "create-nft-vrs");
@@ -585,11 +585,10 @@ export async function getPackageDetails(userAddress) {
   }
 }
 
-
 export async function getTransactionHash(txHash) {
   try {
     const response = await axios.post(`${URLApi}/recover-MissedTx`, {
-      txHash ,
+      txHash,
     });
 
     return response.data;

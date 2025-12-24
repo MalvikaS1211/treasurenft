@@ -127,7 +127,7 @@
 }
 
 .dashboardbg {
-  background: var(--primary-bg-color);
+  /* background: var(--primary-bg-color); */
   position: relative;
 }
 

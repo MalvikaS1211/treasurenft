@@ -121,7 +121,7 @@ export default function Trade() {
       if (isTradeAvailable) {
         socket.emit("StartedTrade", tokenId);
       } else {
-        console.log("trade not available");
+      
         toast.error("Sorry, this trade is not available!");
         setApiLoading(false);
 
@@ -378,7 +378,7 @@ export default function Trade() {
       const ownedNFTs = res.usercurrOwnedNfts || [];
 
       const filteredNFTs = ownedNFTs.filter((item) => item?.newPrice);
-
+console.log("Filtered NFTs:", filteredNFTs);
       const totalNftPrice = filteredNFTs.reduce(
         (acc, item) => acc + BigInt(item.newPrice),
         BigInt(0)
@@ -433,7 +433,7 @@ export default function Trade() {
             </h1>
           </div>
         </div>
-        {isExpired ? (
+        {/* {isExpired ? (
           <h1
             className=""
             style={{
@@ -479,7 +479,6 @@ export default function Trade() {
                     {item.label}
                   </div>
 
-                  {/* Divider line between items */}
                   {index < 3 && index !== 1 && (
                     <div
                       className="position-absolute"
@@ -495,7 +494,7 @@ export default function Trade() {
               ))}
             </div>
           </div>
-        )}
+        )} */}
         <div className="p-4" style={{ background: "var(--primary-bg-color)" }}>
           <div className="total-grid" style={{ marginTop: "3%" }}>
             <div className="total-card">
@@ -618,13 +617,7 @@ export default function Trade() {
               <div className="row">
                 {allTrade.length > 0 ? (
                   allTrade?.map((nft, index) => {
-                    if (Number(nft.price) > 0) {
-                      // console.log(
-                      //   // nft.owner,
-                      //   Number(nft.price),
-                      //   nft.tokenId,
-                      //   "nft.owner"
-                      // );
+                    if  (Number(nft.price) / 1e18 < 32) {
                       return (
                         <div
                           key={index}
@@ -712,7 +705,7 @@ export default function Trade() {
                           </div>
                         </div>
                       );
-                    }
+                      } 
                   })
                 ) : (
                   <div className="no-data-container">
@@ -736,14 +729,6 @@ export default function Trade() {
                 Please wait We are loading data
               </div>
             </div>
-            {/* <div className="d-flex justify-content-center">
-              <div className="spinner-border" role="status">
-                <span className="sr-only">Loading...</span>
-              </div>
-            </div>
-            <p className=" w-100" style={{ textAlign: "center" }}>
-              Please wait We are loading data
-            </p> */}
           </>
         )}
       </div>

@@ -50,7 +50,7 @@ export default function Dashboard() {
   const uniqueId = allUsers?.userInfo?.[0]?.uniqueRandomId || "defaultId";
   const referralLink = `${base_url}/signup?ref=${uniqueId}`;
   const [packageData, setPackageData] = useState([]);
-    const [timeParts, setTimeParts] = useState({
+  const [timeParts, setTimeParts] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -157,7 +157,7 @@ export default function Dashboard() {
         return toast.error("Please connect your wallet");
       }
       const appRes = await tokenApp(pkg.subscription);
-  
+
       if (appRes) {
         await upgradePackageFn(details, index);
         setTimeout(() => {
@@ -168,7 +168,6 @@ export default function Dashboard() {
       console.log(error);
     }
   };
-
 
   useEffect(() => {
     if (
@@ -188,7 +187,7 @@ export default function Dashboard() {
       const expiryTime = time + expiryDuration;
       const now = moment().unix();
       const remainingSeconds = expiryTime - now;
-   
+
       if (remainingSeconds <= 0) {
         clearInterval(interval);
         setIsExpired(true);
@@ -254,7 +253,7 @@ export default function Dashboard() {
   const nftIncomesFn = async () => {
     try {
       const res = await fetchNftIncome(address);
-  
+
       setNftIncomes(res);
     } catch (error) {
       console.log("Error in nftIncomes:", error);
@@ -264,7 +263,7 @@ export default function Dashboard() {
   const fetchTokenBal = async () => {
     try {
       const res = await fetchIFTTtokenBalance();
-    
+
       setTokenBalance(res);
     } catch (error) {
       console.error("fetchbalance error:", error);
@@ -274,7 +273,7 @@ export default function Dashboard() {
   const fetchUserBalance = async () => {
     try {
       const res = await fetchWalletBalance(address);
-   
+
       setUserBalINF(res);
     } catch (error) {
       console.error("fetchUserBalance error:", error);
@@ -289,6 +288,32 @@ export default function Dashboard() {
   const inf = isNaN(Number(userBalINF)) ? 0 : Number(userBalINF);
   const token = isNaN(Number(tokenBalance)) ? 0 : Number(tokenBalance) / 1e18;
   const valueInUSDT = (inf * token).toFixed(4);
+  const tradingProfit =
+    userProfitData?.tradingProfit?.length > 0
+      ? Number(userProfitData.tradingProfit[0]?.profitOrLoss || 0)
+      : 0;
+
+  const referralIncome = Number(dashboardData?.[8] || 0) / 1e18;
+  const levelIncome = Number(dashboardData?.[9] || 0) / 1e18;
+  const royaltyIncome = Number(dashboardData?.[10] || 0) / 1e18;
+
+  const nftTradingIncome = Number(nftIncomes?.[0] || 0) / 1e18;
+  const nftLevelIncome = Number(nftIncomes?.[1] || 0) / 1e18;
+  const nftDirectIncome = Number(nftIncomes?.[2] || 0) / 1e18;
+
+  const totalIncome =
+    tradingProfit +
+    referralIncome +
+    levelIncome +
+    royaltyIncome +
+    nftTradingIncome +
+    nftLevelIncome +
+    nftDirectIncome;
+
+  const initialPrice = 0.1;
+  const currentPrice = token;
+  const percentageGrowth = ((currentPrice - initialPrice) / initialPrice) * 100;
+
   return (
     <>
       <div className="p-4 dashboard-container">
@@ -395,7 +420,10 @@ export default function Dashboard() {
                 <h6>1 IFT</h6>
                 <p>{token.toFixed(4)} USDT</p>
               </div>
-
+              <div className="balance-card">
+                <h6>Token Growth Percentage</h6>
+                <p>{percentageGrowth.toFixed(2)}%</p>
+              </div>
               <div className="balance-card">
                 <h6>Value in USDT</h6>
                 <p>{valueInUSDT} USDT</p>
@@ -421,23 +449,11 @@ export default function Dashboard() {
                   <p className="">{balanceData}</p> */}
 
                   <h6>My Total Income</h6>
-                  <p className=" p-2">
-                    {(
-                      (userProfitData?.tradingProfit?.length > 0
-                        ? Number(
-                            userProfitData.tradingProfit[0]?.profitOrLoss || 0
-                          )
-                        : 0) +
-                      (Number(dashboardData?.[8] || 0) +
-                        Number(dashboardData?.[9] || 0) +
-                        Number(dashboardData?.[10] || 0)) /
-                        1e18
-                    ).toFixed(4)}
-                  </p>
+                  <p className=" p-2">{totalIncome.toFixed(4)} USDT</p>
                 </div>
                 <div className="user-card wallet-card">
                   <h6>Referral Link</h6>
-                    <div className="d-flex gap-1 align-items-center ">
+                  <div className="d-flex gap-1 align-items-center ">
                     <div className="gap-2">
                       {" "}
                       <p onClick={copyToClipboard} className="copytheRefferal">

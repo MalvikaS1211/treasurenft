@@ -10,7 +10,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { BsMedium } from "react-icons/bs";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu, GiTrade } from "react-icons/gi";
 import ConnectWallet from "../Common/ConnectWallet";
 import {
   MdAttachMoney,
@@ -106,6 +106,16 @@ export default function Navbar({ title }) {
                 }
               >
                 <i className="fas fa-tachometer-alt"></i> Dashboard
+              </li>
+            </Link>
+
+              <Link to="/buyNft">
+              <li
+                className={
+                  location.pathname === "/buyNft" ? "active" : "inactive"
+                }
+              >
+               <GiTrade /> Trade
               </li>
             </Link>
             <Link to="/get-tx-hash">

@@ -40,8 +40,14 @@ export default function BulkNFT() {
   // const address = "0x25b0ecc38e02e9ee0dfe4c22680d1605be80dcc9";
   const [nfts, setNfts] = useState([
     { file: null, price: "", title: "", description: "", preview: null },
-     { file: null, price: "", title: "", description: "", preview: null },
+    { file: null, price: "", title: "", description: "", preview: null },
   ]);
+  const resetNfts = () => {
+    setNfts([
+      { file: null, price: "", title: "", description: "", preview: null },
+      { file: null, price: "", title: "", description: "", preview: null },
+    ]);
+  };
 
   const handleFileChange = (event, index) => {
     const file = event.target.files[0];
@@ -110,7 +116,6 @@ export default function BulkNFT() {
         },
       }
     );
-    console.log("first one", data.IpfsHash, "::::");
     return `ipfs://${data.IpfsHash}`;
   };
 
@@ -121,7 +126,6 @@ export default function BulkNFT() {
       image: imageHash,
     };
 
-    console.log(metadata, "Metadata for:", nft.title);
 
     const blob = new Blob([JSON.stringify(metadata)], {
       type: "application/json",
@@ -151,14 +155,12 @@ export default function BulkNFT() {
     let descriptions = [];
     let initialPrices = [];
     try {
-      // console.log("asdfsadfasd", selectedAmount);
-      // return;
       if (selectedIndex == null) {
         toast.error("Please select package before creating NFT.");
         setIsLoading(false);
         return;
       }
-      console.log("1");
+     
       loadingToastId = toast.loading("Please wait transaction is in process");
       if (isLoading) {
         return toast.error("Your previous transaction is pending");
@@ -170,44 +172,18 @@ export default function BulkNFT() {
         );
       }
 
-      const userBalance = await fetchUserTokenBalance(address);
-      const totalPrice = selectedAmount * 1.1;
-      // const totalPrice = nfts.reduce((sum, nft) => sum + Number(nft.price), 0);
-      // if (userBalance < totalPrice) {
-      //   setIsLoading(false);
-      //   return toast.error(`You need at least ${totalPrice} USDT to Buy`);
-      // }
-
       for (const nft of nfts) {
         const imageHash = await uploadToIPFS(nft.file);
-        console.log(`Uploaded image: ${imageHash}`);
+     
         const metadataURI = await uploadMetadataToIPFS(imageHash, nft);
-        console.log(
-          `Uploaded metadata: ${metadataURI}`,
-          nft["title"],
-          nft.title,
-          nft
-        );
+      
         metadataURIs.push(metadataURI);
         titles.push(nft.title);
         descriptions.push(nft.description);
-        console.log(
-          Number(selectedAmount / (initialP == 15 ? 2 : 5)),
-          selectedAmount,
-          "ASFsadfsafdsadfnasifhas"
-        );
+      
         initialPrices.push(Number(5)); // to be changed
       }
 
-      console.log("All metadata uploaded:", metadataURIs, nfts);
-
-      console.log(
-        "check all the array",
-        metadataURIs,
-        titles,
-        descriptions,
-        initialPrices
-      );
       // const totalAmount = Number(initialPrices) + 0.2 * Number(initialPrices);
       const res = await getCreateBulkNFT(
         address,
@@ -219,11 +195,10 @@ export default function BulkNFT() {
       );
 
       toast.dismiss(loadingToastId);
-      console.log("BulkNFTVrs", res, tokenId);
       setIsLoading(false);
       // return;
       const tokenRes = await tokenApp(res.vrs.totalAmount);
-      console.log(res.vrs.totalAmount, "total amount");
+ 
       if (tokenRes) {
         const res1 = createNFTsBulkFn(
           res.vrs.titles,
@@ -244,7 +219,7 @@ export default function BulkNFT() {
         setTimeout(() => {
           setIsFetch(!isFetch);
         }, 2000);
-        console.log("NFTs created:", res1);
+       
         setIsLoading(false);
       }
       setIsLoading(false);
@@ -253,7 +228,7 @@ export default function BulkNFT() {
       descriptions = [];
       initialPrices = [];
     } catch (error) {
-      if (loadingToastId) toast.dismiss(loadingToastId); 
+      if (loadingToastId) toast.dismiss(loadingToastId);
       const message =
         error?.response?.data?.message ||
         error?.message ||
@@ -265,6 +240,10 @@ export default function BulkNFT() {
       titles = [];
       descriptions = [];
       initialPrices = [];
+    } finally {
+      // ✅ ALWAYS reset — success or error
+      resetNfts();
+      setIsLoading(false);
     }
   };
 
@@ -272,8 +251,7 @@ export default function BulkNFT() {
     try {
       const resPkg = await getMaturedNFTs(address);
       setAvailablePkg(resPkg?.userMaturedNfts);
-      console.log("Available packages:", resPkg);
-      // console.log("Available package price", resPkg?.nftCreatedDetails.price);
+
     } catch (error) {
       setAvailablePkg([]);
       console.log(error);
@@ -281,7 +259,6 @@ export default function BulkNFT() {
   };
   const ShowAvailablepkg = async () => {
     const availablBal = await getAvailaibleBalance(address);
-    console.log(availablBal, "Available balance in package");
     setAvailableBalance(availablBal);
   };
 
@@ -305,7 +282,7 @@ export default function BulkNFT() {
   const handleIsAllowedNFT = async () => {
     try {
       const res = await getStatus(address);
-     
+
       setIsAllowed(res?.data?.isBulkAllowed);
     } catch (error) {
       console.log("Error in isAllowedNFT", error);
@@ -382,9 +359,7 @@ export default function BulkNFT() {
                     <a href="">
                       <img src={nft.preview || CyberDoberman} alt="Axies" />
                     </a>
-               
                   </div>
-                
                 </div>
               </div>
 
