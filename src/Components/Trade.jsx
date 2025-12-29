@@ -617,7 +617,7 @@ console.log("Filtered NFTs:", filteredNFTs);
               <div className="row">
                 {allTrade.length > 0 ? (
                   allTrade?.map((nft, index) => {
-                    if  (Number(nft.price) / 1e18 < 32) {
+                    if  (Number(nft.price) / 1e18 < 34) {
                       return (
                         <div
                           key={index}

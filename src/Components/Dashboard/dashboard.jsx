@@ -302,7 +302,6 @@ export default function Dashboard() {
   const nftDirectIncome = Number(nftIncomes?.[2] || 0) / 1e18;
 
   const totalIncome =
-    tradingProfit +
     referralIncome +
     levelIncome +
     royaltyIncome +
@@ -523,7 +522,7 @@ export default function Dashboard() {
                   className="total-grid"
                   style={{ marginTop: "center", marginBottom: "3%" }}
                 >
-                  <div className="total-card">
+                  {/* <div className="total-card">
                     <div className="sub-total">
                       <h6>Trade Income</h6>
                     </div>
@@ -536,7 +535,7 @@ export default function Dashboard() {
 
                       <span> USDT</span>
                     </p>
-                  </div>
+                  </div> */}
                   <div className="total-card">
                     <div className="sub-total">
                       <h6>Referral Income</h6>

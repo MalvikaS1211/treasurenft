@@ -11,6 +11,7 @@ import {
 } from "../../Helper/Web3";
 import {
   createNftVrsFn,
+  getAllowBulkNFT,
   getCreateBulkNFT,
   getMaturedNFTs,
   getStatus,
@@ -126,7 +127,6 @@ export default function BulkNFT() {
       image: imageHash,
     };
 
-
     const blob = new Blob([JSON.stringify(metadata)], {
       type: "application/json",
     });
@@ -160,7 +160,7 @@ export default function BulkNFT() {
         setIsLoading(false);
         return;
       }
-     
+
       loadingToastId = toast.loading("Please wait transaction is in process");
       if (isLoading) {
         return toast.error("Your previous transaction is pending");
@@ -174,13 +174,13 @@ export default function BulkNFT() {
 
       for (const nft of nfts) {
         const imageHash = await uploadToIPFS(nft.file);
-     
+
         const metadataURI = await uploadMetadataToIPFS(imageHash, nft);
-      
+
         metadataURIs.push(metadataURI);
         titles.push(nft.title);
         descriptions.push(nft.description);
-      
+
         initialPrices.push(Number(5)); // to be changed
       }
 
@@ -198,7 +198,7 @@ export default function BulkNFT() {
       setIsLoading(false);
       // return;
       const tokenRes = await tokenApp(res.vrs.totalAmount);
- 
+
       if (tokenRes) {
         const res1 = createNFTsBulkFn(
           res.vrs.titles,
@@ -219,7 +219,7 @@ export default function BulkNFT() {
         setTimeout(() => {
           setIsFetch(!isFetch);
         }, 2000);
-       
+
         setIsLoading(false);
       }
       setIsLoading(false);
@@ -251,7 +251,6 @@ export default function BulkNFT() {
     try {
       const resPkg = await getMaturedNFTs(address);
       setAvailablePkg(resPkg?.userMaturedNfts);
-
     } catch (error) {
       setAvailablePkg([]);
       console.log(error);
@@ -281,9 +280,9 @@ export default function BulkNFT() {
 
   const handleIsAllowedNFT = async () => {
     try {
-      const res = await getStatus(address);
-
-      setIsAllowed(res?.data?.isBulkAllowed);
+      const res = await getAllowBulkNFT(address);
+      console.log("res bulk allow", res);
+      setIsAllowed(res?.isBulkAllow);
     } catch (error) {
       console.log("Error in isAllowedNFT", error);
     }
@@ -291,6 +290,7 @@ export default function BulkNFT() {
   useEffect(() => {
     handleIsAllowedNFT();
   }, [address]);
+
   return (
     <>
       <>
@@ -403,21 +403,24 @@ export default function BulkNFT() {
         </div>
         {/* {isAllowed == true && ( */}
         <div className="create-nft-container ">
-          <button
-            className="createbtn"
-            type="button"
-            onClick={nftCreate}
-            disabled={isLoading}
-          >
-            {isLoading ? (
-              <span
-                className="spinner-border spinner-border-sm"
-                role="status"
-              ></span>
-            ) : (
-              "Create NFT"
-            )}
-          </button>
+          {isAllowed === true && (
+            <button
+              className="createbtn"
+              type="button"
+              onClick={nftCreate}
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <span
+                  className="spinner-border spinner-border-sm"
+                  role="status"
+                ></span>
+              ) : (
+                "Create NFT"
+              )}
+            </button>
+          )}
+
           {/* <FaPlus
             onClick={nfts.length < 2 ? addNFTField : null}
             size={20}
