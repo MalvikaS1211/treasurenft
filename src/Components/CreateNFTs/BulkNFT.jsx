@@ -294,38 +294,40 @@ export default function BulkNFT() {
   return (
     <>
       <>
-        <div className="row available-packages">
-          <div className="row" style={{ paddingLeft: "34px" }}>
-            <h4
-              className="title-create-item mt-4 col-lg-12"
-              style={{ textAlign: "left" }}
-            >
-              Available Packages
-            </h4>
-            <div className="d-flex flex-wrap justify-content-start gap-3">
-              {availablePkg &&
-                availablePkg?.map((pkg, index) => {
-                  return (
-                    <div className="package-container" key={index}>
-                      <button
-                        type="button"
-                        className="sc-button style style-1"
-                        style={{
-                          padding: "5px 26px",
-                          backgroundColor:
-                            selectedIndex === index ? "#5142fc" : "",
-                          color: selectedIndex === index ? "white" : "",
-                        }}
-                        onClick={() => handleClick(index, pkg)}
-                      >
-                        $ {(pkg.price * 2 * 120) / 100 / 1e18}
-                      </button>
-                    </div>
-                  );
-                })}
+        {isAllowed === true && (
+          <div className="row available-packages">
+            <div className="row" style={{ paddingLeft: "34px" }}>
+              <h4
+                className="title-create-item mt-4 col-lg-12"
+                style={{ textAlign: "left" }}
+              >
+                Available Packages
+              </h4>
+              <div className="d-flex flex-wrap justify-content-start gap-3">
+                {availablePkg &&
+                  availablePkg?.map((pkg, index) => {
+                    return (
+                      <div className="package-container" key={index}>
+                        <button
+                          type="button"
+                          className="sc-button style style-1"
+                          style={{
+                            padding: "5px 26px",
+                            backgroundColor:
+                              selectedIndex === index ? "#5142fc" : "",
+                            color: selectedIndex === index ? "white" : "",
+                          }}
+                          onClick={() => handleClick(index, pkg)}
+                        >
+                          $ {(pkg.price * 2 * 120) / 100 / 1e18}
+                        </button>
+                      </div>
+                    );
+                  })}
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         {selectedAmount > 0 && (
           <div
