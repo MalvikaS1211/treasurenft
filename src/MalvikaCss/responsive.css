@@ -231,13 +231,7 @@
   .right .mainslider.home .wrap-heading .content-custom {
     padding-right: 30px;
   }
-  .col-box-83 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 75%;
-    -ms-flex: 0 0 75%;
-    flex: 0 0 75%;
-    max-width: 75%;
-  }
+
   .flat-tabs.items .react-tabs__tab-panel .col-item {
     width: calc(50% - 30px) !important;
   }
@@ -402,13 +396,7 @@
   .home-1 .sc-box-icon-inner {
     margin-left: -30px;
   }
-  .col-box-17 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 25%;
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
-  }
+
   .side-bar.item {
     width: 27%;
   }
@@ -441,12 +429,7 @@
   #side-bar.item .wrap-category {
     padding: 15px;
   }
-  .tf-soft {
-    flex-wrap: wrap;
-  }
-  .tf-soft .soft-left {
-    margin-bottom: 20px;
-  }
+
   .home-3 .flat-title-page {
     padding: 111px 0 111px;
   }
@@ -769,10 +752,6 @@
     margin: 0 30px;
   }
 
-  .header-search {
-    margin-right: 30px !important;
-  }
-
   .sc-card-activity .content-custom .media {
     margin-right: 15px;
   }
@@ -875,14 +854,7 @@
   .tab-authors .author-profile {
     display: block !important;
   }
-  .col-box-83,
-  .col-box-17 {
-    -webkit-box-flex: 0;
-    -webkit-flex: 0 0 100%;
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+
   .side-bar.item {
     width: 100%;
     margin-top: 0;
@@ -965,27 +937,23 @@
   .top-seller.home5 .box-item {
     width: 100%;
   }
-  .tf-soft .soft-left {
-    flex-wrap: wrap;
-  }
-  .tf-soft .soft-left .dropdown {
+
+  .dropdown {
     margin-bottom: 10px;
   }
   .sc-card-product .card-bottom .sc-button {
     padding: 10px;
   }
-  .wrap-cart {
-    flex-wrap: wrap;
-  }
-  .wrap-cart .cart_item.item1 {
+
+  .cart_item.item1 {
     width: calc(31.8% - 30px);
   }
 
-  .wrap-cart .cart_item {
+  .cart_item {
     width: 100%;
   }
 
-  .wrap-cart .cart_item.style2 {
+  .cart_item.style2 {
     width: 100%;
   }
 
@@ -1395,16 +1363,12 @@
     display: block;
   }
 
-  .wrap-cart .cart_item {
+  .cart_item {
     width: calc(100% - 30px) !important;
   }
 
   .flat-search-btn {
     right: 55px !important;
-  }
-
-  .header-search {
-    margin-right: 10px !important;
   }
 
   .uploadFile input[type="file"],

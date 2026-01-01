@@ -1865,7 +1865,7 @@ header {
 }
 
 /* Search icon */
-#site-header .header-search-icon {
+#site-header -icon {
   display: block;
   font-size: 14px;
   line-height: 100px;
@@ -1876,13 +1876,13 @@ header {
 }
 
 /* Search Form */
-.header-search {
+ {
   position: relative;
   margin-right: 36px;
   padding: 14px 0;
 }
 
-.header-search .show-search {
+ .show-search {
   font-size: 20px;
   color: #fff;
 }

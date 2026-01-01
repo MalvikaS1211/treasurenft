@@ -273,7 +273,6 @@ export default function BulkNFT() {
     const amount = (Number(pkg.price) * 2) / 1e18;
     const ip = Number(pkg.price) / 1e18;
     setInititalP(ip);
-
     setAmount(ip == 15 ? Number(100) : amount);
     setTokenId(pkg?.tokenId);
   };
