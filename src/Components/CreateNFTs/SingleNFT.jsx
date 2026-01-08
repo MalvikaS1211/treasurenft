@@ -6,6 +6,7 @@ import {
   createNftVrsFn,
   dueNFT,
   eligibleForCreateNFT,
+  getAllowBulkNFT,
   getNftStartStop,
   getStatus,
   getUserInfo,
@@ -109,7 +110,7 @@ export default function SingleNFT() {
       console.log("handleNFTPrice".error);
     }
   };
-  const SingleNFTpriceOptions = [5, 15, 100];
+  const SingleNFTpriceOptions = [5];
   // const SingleNFTpriceOptions = [
   //   50, 100, 150, 200, 250, 350, 500, 650, 750, 850, 1000, 1150, 1250, 1350,
   //   1500,
@@ -388,9 +389,9 @@ export default function SingleNFT() {
   };
   const [eligibleForCreate, setEligibleForCreate] = useState(null);
   const showNFTBtn = async () => {
-    const res = await eligibleForCreateNFT(address);
- 
-    setEligibleForCreate(res?.eligible);
+    const res = await getAllowBulkNFT(address);
+ console.log("res bulk allow", res.isBulkAllow);
+    setEligibleForCreate(res?.isBulkAllow);
   };
   useEffect(() => {
     showNFTBtn();
