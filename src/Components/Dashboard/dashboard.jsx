@@ -558,6 +558,12 @@ export default function Dashboard() {
                       <span> USDT</span>
                     </p>
                   </div>
+                   <div className="total-card">
+                    <div className="sub-total">
+                      <h6>Total NFT Team Bussiness</h6>
+                    </div>
+                    <p>{allUsers?.userInfo?.[0]?.totalNftBuyTeamBusines?.toFixed(4) ?? "0"}</p>
+                  </div>
                 </div>
                 <div className="total-grid" style={{ marginTop: "0px" }}>
                   <div className="total-card">

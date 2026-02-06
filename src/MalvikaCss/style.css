@@ -1876,11 +1876,7 @@ header {
 }
 
 /* Search Form */
- {
-  position: relative;
-  margin-right: 36px;
-  padding: 14px 0;
-}
+
 
  .show-search {
   font-size: 20px;
