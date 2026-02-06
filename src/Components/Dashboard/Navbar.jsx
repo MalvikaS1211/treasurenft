@@ -109,13 +109,13 @@ export default function Navbar({ title }) {
               </li>
             </Link>
 
-              <Link to="/buyNft">
+            <Link to="/buyNft">
               <li
                 className={
                   location.pathname === "/buyNft" ? "active" : "inactive"
                 }
               >
-               <GiTrade /> Trade
+                <GiTrade /> Trade
               </li>
             </Link>
             <Link to="/get-tx-hash">
@@ -124,7 +124,16 @@ export default function Navbar({ title }) {
                   location.pathname === "/get-tx-hash" ? "active" : "inactive"
                 }
               >
-                <GrTransaction  /> Get Tx Hash
+                <GrTransaction /> Get Tx Hash
+              </li>
+            </Link>
+            <Link to="/salary">
+              <li
+                className={
+                  location.pathname === "/salary" ? "active" : "inactive"
+                }
+              >
+                <MdTrendingUp /> Salary
               </li>
             </Link>
             <Link to="/deposit">

@@ -1,55 +1,43 @@
 import React, { useEffect, useState } from "react";
-import { FaArrowLeft } from "react-icons/fa";
-import { FaArrowRight } from "react-icons/fa";
 import Navbar from "./Navbar";
-import ConnectWallet from "../Common/ConnectWallet";
-import Header from "./Header";
 import "../../css/navbar.css";
 import "../../css/dashboard.css";
-
 import { FaRegCopy } from "react-icons/fa6";
 import { useAccount } from "wagmi";
 import {
-  getIdToAddress,
+  claimSalaryIncome,
   getPackageDetails,
   getUserInfo,
   getUserStats,
 } from "../../Helper/API_Functions";
-import { useBalance } from "wagmi";
-import { fetchBalance } from "@wagmi/core";
+
 import {
   approveToken,
   fetchIFTTtokenBalance,
   fetchNftIncome,
   fetchWalletBalance,
-  getAvailaibleBalance,
   upgradePackageFn,
   usersFn,
 } from "../../Helper/Web3";
 import toast from "react-hot-toast";
-import { getBalance } from "@wagmi/core";
-import { opBNB, opBNBTestnet, polygon } from "wagmi/chains";
+import { opBNB } from "wagmi/chains";
 import { createConfig, http } from "wagmi";
-import { base_url, USDT_TOKEN } from "../../Helper/Config";
+import { base_url } from "../../Helper/Config";
 import moment from "moment";
-import { BsClock } from "react-icons/bs";
 export default function Dashboard() {
   const { address } = useAccount();
-  // const address = "0x3deCa2f62B20D6360e0948286D659dE2e19782Be";
   const [dashboardData, setDashboardData] = useState([]);
   const [allUsers, setAllUsers] = useState(null);
   const [isFetch, setIsFetch] = useState(false);
-  const [availableBal, setAvailableBal] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(null);
-  const [balanceData, setBalanceData] = useState(0);
+
   const [tokenBalance, setTokenBalance] = useState(0);
   const [userBalINF, setUserBalINF] = useState(0);
   const [userProfitData, setUserProfitData] = useState();
-  const data = new URLSearchParams(window.location.search);
-  const refLink = data.get("ref");
+
   const uniqueId = allUsers?.userInfo?.[0]?.uniqueRandomId || "defaultId";
   const referralLink = `${base_url}/signup?ref=${uniqueId}`;
   const [packageData, setPackageData] = useState([]);
+  const [isFunc, setIsFunc] = useState(false);
   const [timeParts, setTimeParts] = useState({
     days: 0,
     hours: 0,
@@ -57,12 +45,6 @@ export default function Dashboard() {
     seconds: 0,
   });
   const [isExpired, setIsExpired] = useState(false);
-  const config = createConfig({
-    chains: [opBNB],
-    transports: {
-      [opBNB.id]: http(),
-    },
-  });
 
   const UserProfits = async () => {
     try {
@@ -131,6 +113,9 @@ export default function Dashboard() {
     try {
       const resUser = await usersFn(address);
       setDashboardData(resUser);
+      setTimeout(() => {
+        UserInfo();
+      }, 2000);
     } catch (error) {
       console.log(error);
     }
@@ -166,6 +151,37 @@ export default function Dashboard() {
       }
     } catch (error) {
       console.log(error);
+    }
+  };
+  const claimSalary = async () => {
+    try {
+      if (!address) {
+        toast.error("Please connect wallet");
+        return;
+      }
+
+      if (isFunc) {
+        toast.error("Please wait");
+        return;
+      }
+
+      setIsFunc(true);
+
+      const resp = await claimSalaryIncome(address);
+
+      if (resp.success) {
+        toast.success(resp.message);
+        setTimeout(() => {
+          UserInfo();
+        }, 2000);
+      } else {
+        toast.error(resp.message);
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error(error?.response?.data?.message || "Something went wrong");
+    } finally {
+      setIsFunc(false);
     }
   };
 
@@ -273,7 +289,6 @@ export default function Dashboard() {
   const fetchUserBalance = async () => {
     try {
       const res = await fetchWalletBalance(address);
-
       setUserBalINF(res);
     } catch (error) {
       console.error("fetchUserBalance error:", error);
@@ -288,11 +303,6 @@ export default function Dashboard() {
   const inf = isNaN(Number(userBalINF)) ? 0 : Number(userBalINF);
   const token = isNaN(Number(tokenBalance)) ? 0 : Number(tokenBalance) / 1e18;
   const valueInUSDT = (inf * token).toFixed(4);
-  const tradingProfit =
-    userProfitData?.tradingProfit?.length > 0
-      ? Number(userProfitData.tradingProfit[0]?.profitOrLoss || 0)
-      : 0;
-
   const referralIncome = Number(dashboardData?.[8] || 0) / 1e18;
   const levelIncome = Number(dashboardData?.[9] || 0) / 1e18;
   const royaltyIncome = Number(dashboardData?.[10] || 0) / 1e18;
@@ -522,20 +532,6 @@ export default function Dashboard() {
                   className="total-grid"
                   style={{ marginTop: "center", marginBottom: "3%" }}
                 >
-                  {/* <div className="total-card">
-                    <div className="sub-total">
-                      <h6>Trade Income</h6>
-                    </div>
-                    <p>
-                      {userProfitData?.tradingProfit?.length > 0
-                        ? Number(
-                            userProfitData.tradingProfit[0]?.profitOrLoss
-                          ).toFixed(4)
-                        : "0"}
-
-                      <span> USDT</span>
-                    </p>
-                  </div> */}
                   <div className="total-card">
                     <div className="sub-total">
                       <h6>Referral Income</h6>
@@ -558,11 +554,15 @@ export default function Dashboard() {
                       <span> USDT</span>
                     </p>
                   </div>
-                   <div className="total-card">
+                  <div className="total-card">
                     <div className="sub-total">
                       <h6>Total NFT Team Bussiness</h6>
                     </div>
-                    <p>{allUsers?.userInfo?.[0]?.totalNftBuyTeamBusines?.toFixed(4) ?? "0"}</p>
+                    <p>
+                      {allUsers?.userInfo?.[0]?.totalNftBuyTeamBusines?.toFixed(
+                        4
+                      ) ?? "0"}
+                    </p>
                   </div>
                 </div>
                 <div className="total-grid" style={{ marginTop: "0px" }}>
@@ -636,6 +636,56 @@ export default function Dashboard() {
                       {nftIncomes?.[2]
                         ? (Number(nftIncomes?.[2]) / 1e18).toFixed(4)
                         : "0"}
+                      <span> USDT</span>
+                    </p>
+                  </div>
+                </div>
+                <h3 className="dashboard-heading">Salary Income</h3>
+                <div
+                  className="total-grid"
+                  style={{ marginTop: "center", marginBottom: "3%" }}
+                >
+                  <div className="total-card">
+                    <div className="sub-total">
+                      <h6>Avalaible Income</h6>
+                    </div>
+                    <p>
+                      {Number(
+                        allUsers?.userInfo?.[0]?.salaryToClaim || 0
+                      ).toFixed(2) ?? 0}
+                      <span> USDT</span>
+                    </p>
+                    <button
+                      onClick={claimSalary}
+                      style={{
+                        borderRadius: "5px",
+                        lineHeight: 0,
+                        padding: "15px 20px",
+                      }}
+                    >
+                      Claim
+                    </button>
+                  </div>
+                  <div className="total-card">
+                    <div className="sub-total">
+                      <h6>Total Salary Income</h6>
+                    </div>
+                    <p>
+                      {Number(
+                        allUsers?.userInfo?.[0]?.salaryIncome || 0
+                      ).toFixed(2)}
+
+                      <span> USDT</span>
+                    </p>
+                  </div>
+                  <div className="total-card">
+                    <div className="sub-total">
+                      <h6>Salary Income Claimed</h6>
+                    </div>
+                    <p>
+                      {Number(
+                        allUsers?.userInfo?.[0]?.claimedSalary || 0
+                      ).toFixed(2) ?? 0}
                       <span> USDT</span>
                     </p>
                   </div>

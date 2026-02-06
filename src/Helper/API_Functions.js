@@ -23,6 +23,18 @@ export async function getUserInfo(address) {
     console.log("Error getUserInfo Admin:", error);
   }
 }
+export async function claimSalaryIncome(address) {
+  try {
+    const response = await axios.post(`${URLApi}/claimSalaryIncome`, {
+      user: address,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getUserInfo Admin:", error);
+  }
+}
+
 export async function createNftVrsFn(
   address,
   initialPrice,
@@ -573,6 +585,20 @@ export async function getDepostList(user, page, limit) {
     console.log("Error getDepostList :", error);
   }
 }
+export async function getSalaryHist(user, page, limit) {
+  try {
+    const response = await axios.post(`${URLApi}/userSalaryData`, {
+      user,
+      page,
+      limit,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getDepostList :", error);
+  }
+}
+
 export async function getPackageDetails(userAddress) {
   try {
     const response = await axios.post(`${URLApi}/packageDetails`, {

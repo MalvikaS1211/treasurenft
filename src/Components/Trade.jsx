@@ -121,7 +121,6 @@ export default function Trade() {
       if (isTradeAvailable) {
         socket.emit("StartedTrade", tokenId);
       } else {
-      
         toast.error("Sorry, this trade is not available!");
         setApiLoading(false);
 
@@ -214,46 +213,7 @@ export default function Trade() {
       );
 
       setAllTrade(fetchedTrades);
-      return;
-      const newList = fetchedTrades.filter(Boolean);
-      // setAllTrade((prevTrades) => {
-      //   const updatedTrades = fetchedTrades.map((newTrade) => {
-      //     const existing = prevTrades.find(
-      //       (t) => t.tokenId === newTrade.tokenId
-      //     );
 
-      //     // If price/owner changed, update
-      //     if (
-      //       !existing ||
-      //       existing.price !== newTrade.price ||
-      //       existing.owner !== newTrade.owner
-      //     ) {
-      //       return newTrade;
-      //     }
-
-      //     // Otherwise, keep the old one to avoid re-render
-      //     return existing;
-      //   });
-
-      //   return updatedTrades;
-      // });
-      setAllTrade((prevList) => {
-        // Only include NFTs that are still present
-        const updatedList = prevList.filter((nft) =>
-          newList.some((newNft) => newNft.tokenId === nft.tokenId)
-        );
-
-        // Add any new NFTs that weren't in the old list
-        newList.forEach((newNft) => {
-          const exists = updatedList.find((n) => n.tokenId === newNft.tokenId);
-          // console.log("NFT Exist", exists);
-          if (!exists) {
-            updatedList.push(newNft);
-          }
-        });
-
-        return updatedList;
-      });
       setApiLoading(false);
     } catch (error) {
       setApiLoading(false);
@@ -378,7 +338,7 @@ export default function Trade() {
       const ownedNFTs = res.usercurrOwnedNfts || [];
 
       const filteredNFTs = ownedNFTs.filter((item) => item?.newPrice);
-console.log("Filtered NFTs:", filteredNFTs);
+      console.log("Filtered NFTs:", filteredNFTs);
       const totalNftPrice = filteredNFTs.reduce(
         (acc, item) => acc + BigInt(item.newPrice),
         BigInt(0)
@@ -617,7 +577,7 @@ console.log("Filtered NFTs:", filteredNFTs);
               <div className="row">
                 {allTrade.length > 0 ? (
                   allTrade?.map((nft, index) => {
-                    if  (Number(nft.price) / 1e18 < 34) {
+                    if (Number(nft.price) / 1e18 < 34) {
                       return (
                         <div
                           key={index}
@@ -705,7 +665,7 @@ console.log("Filtered NFTs:", filteredNFTs);
                           </div>
                         </div>
                       );
-                      } 
+                    }
                   })
                 ) : (
                   <div className="no-data-container">

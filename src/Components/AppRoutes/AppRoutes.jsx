@@ -28,6 +28,7 @@ import Staking from "../Staking";
 import CommingSoon from "../CommingSoon";
 import DepositHistory from "../Dashboard/DepositHistory";
 import TransactionHash from "../Dashboard/GetYourTxHash";
+import SalaryHistory from "../Dashboard/SalaryHistory";
 
 function AppRoutes() {
   return (
@@ -58,6 +59,7 @@ function AppRoutes() {
           <Route path="/Trading-Income" element={<TradingIncome />} />
           <Route path="/staking" element={<Staking />} />
           <Route path="/deposit" element={<DepositHistory />} />
+          <Route path="/salary" element={<SalaryHistory />} />
           <Route path="/get-tx-hash" element={<TransactionHash />} />
         </Routes>
       </Router>
