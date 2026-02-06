@@ -34,7 +34,7 @@ export const config = getDefaultConfig({
       wallets: [safepalWallet, metaMaskWallet, trustWallet],
     },
   ],
-  chains: [bsc],
+  chains: [opBNBTestnet],
   ssr: false,
 });
 
