@@ -632,3 +632,15 @@ export async function getAllowBulkNFT() {
     console.log("Error eligibleForCreate Admin:", error);
   }
 }
+
+export async function getDirectNFTBusiness(user ) {
+  try {
+    const response = await axios.post(`${URLApi}/getDirectNftBusinesss`, {
+      user ,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error getTransactionHash :", error);
+  }
+}
