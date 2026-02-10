@@ -8,12 +8,12 @@ import { TiTick } from "react-icons/ti";
 import collection1 from "../../assets/scene.jpg";
 import collection2 from "../../assets/squirrel.jpg";
 import collection3 from "../../assets/dolphinart.jpg";
-import collection4 from "../../assets/art1.jpg";
+
 import collection5 from "../../assets/deer.jpg";
 import collection6 from "../../assets/peacock.jpg";
-import collection7 from "../../assets/collection7.jpg";
+
 import collection8 from "../../assets/butterfly.jpg";
-import collection9 from "../../assets/collection9.jpg";
+
 import collection10 from "../../assets/collection10.jpg";
 import collection11 from "../../assets/collection11.jpg";
 import collection12 from "../../assets/parrot.jpg";
@@ -48,9 +48,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LiveAuction from "./LiveAuction";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import PDF from "../../assets/Pdf/MagicVerse.Org.pdf";
-import { GoDownload } from "react-icons/go";
-import toast from "react-hot-toast";
+
 import walletImage from "../../assets/walletImage.png";
 import collectionBtn from "../../assets/collectionBtn.png";
 import AddNftIcon from "../../assets/AddNftIcon.png";
@@ -58,10 +56,6 @@ import ListIcon from "../../assets/ListIcon.png";
 import WelcomeModal from "../Common/WelcomeModal";
 
 export default function DashboardNew() {
-  const handleDownload = () => {
-    toast.success("PDF downloaded successfully!");
-  };
-
   const location = useLocation();
   const navigate = useNavigate();
   useEffect(() => {
@@ -99,7 +93,6 @@ export default function DashboardNew() {
               className="swiper-slide left swiper-slide-active"
               role="group"
               aria-label="1 / 3"
-              // style={{ width: "1905px" }}
             >
               <div className="flat-title-page ">
                 <img className="bgr-gradient gradient1" src={bg1} alt="Axies" />
@@ -128,7 +121,8 @@ export default function DashboardNew() {
                                 <span className="">mythical</span>
                               </h1>
                               <h1 className="heading">
-                                <span className="fill">IFT </span>NFTs and Tokens
+                                <span className="fill">IFT </span>NFTs and
+                                Tokens
                               </h1>
                               <p className="sub-heading">
                                 Unleash your collection with exclusive beastly
@@ -270,7 +264,9 @@ export default function DashboardNew() {
             <div className="row">
               <div className="col-md-12">
                 <div className="heading-live-auctions">
-                  <h2 className="tf-title pb-22 text-left">Popular Collection</h2>
+                  <h2 className="tf-title pb-22 text-left">
+                    Popular Collection
+                  </h2>
                   {/* <a className="exp style2" href="/explore-03">
                   EXPLORE MORE
                 </a> */}
@@ -619,7 +615,11 @@ export default function DashboardNew() {
                   <div className="sc-author-box style-3 pd-0">
                     <div className="author-avatar">
                       <a>
-                        <img src={AndyHurlbutt} alt="axies" className="avatar" />
+                        <img
+                          src={AndyHurlbutt}
+                          alt="axies"
+                          className="avatar"
+                        />
                       </a>
                       <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />
@@ -694,7 +694,11 @@ export default function DashboardNew() {
                   <div className="sc-author-box style-3 pd-0">
                     <div className="author-avatar">
                       <a>
-                        <img src={HarperWilcher} alt="axies" className="avatar" />
+                        <img
+                          src={HarperWilcher}
+                          alt="axies"
+                          className="avatar"
+                        />
                       </a>
                       <div className="badge">
                         <TiTick style={{ fontSize: "15px" }} />

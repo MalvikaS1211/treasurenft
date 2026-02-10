@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Navbar from "./Dashboard/Navbar";
 
 import { getROI, getStakingDetail } from "../Helper/API_Functions";
@@ -13,27 +13,28 @@ export default function Staking() {
   const [totals, setTotals] = useState();
   const [roi, setROI] = useState();
 
-  const handleGetDetals = async () => {
+  const handleGetDetals = useCallback(async () => {
+    if (!address) return;
     const res = await getStakingDetail(address, currentPage, itemPerpage);
     setTableData(res.data);
     setTotals(res.stakingDetais);
     setTotalPages(res?.pagination?.totalPages);
+  }, [address, currentPage]);
 
-  };
-
-  const handleGetROI = async () => {
+  const handleGetROI = useCallback(async () => {
+    if (!address) return;
     try {
       const res = await getROI(address);
-  
+
       setROI(res?.roi);
     } catch (error) {
       console.log("error in getROI", error);
     }
-  };
+  }, [address]);
 
   const handleNextPage = () => {
     setCurrentPage((prevPage) =>
-      prevPage < totalPages ? prevPage + 1 : prevPage
+      prevPage < totalPages ? prevPage + 1 : prevPage,
     );
   };
 
@@ -46,7 +47,7 @@ export default function Staking() {
       handleGetROI();
       handleGetDetals();
     }
-  }, [address, currentPage]);
+  }, [address, currentPage, handleGetROI, handleGetDetals]);
 
   return (
     <>

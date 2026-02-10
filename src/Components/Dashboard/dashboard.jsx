@@ -574,18 +574,15 @@ export default function Dashboard() {
                     <p>
                       {allUsers?.userInfo?.[0]?.totalNftBuyTeamBusines?.toFixed(
                         4,
-                      ) ?? "0"} USDT
+                      ) ?? "0"}{" "}
+                      USDT
                     </p>
                   </div>
                   <div className="total-card">
                     <div className="sub-total">
                       <h6>Direct NFT Bussiness</h6>
                     </div>
-                    <p>
-                      {NFTBusiness?.toFixed(
-                        4,
-                      ) ?? "0"} USDT
-                    </p>
+                    <p>{Number(NFTBusiness / 1e18)?.toFixed(4) || 0} USDT</p>
                   </div>
                 </div>
                 <div className="total-grid" style={{ marginTop: "0px" }}>
