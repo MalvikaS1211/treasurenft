@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 import { FaShoppingBag } from "react-icons/fa";
 import FooterNew from "./Common/Footer";
@@ -37,7 +37,7 @@ export default function Expore() {
     }
   };
 
-  const ShowCreatedNFTs = async () => {
+  const ShowCreatedNFTs = useCallback(async () => {
     try {
       const resNFT = await getUserCreatedNftsFn(address);
       const data = await Promise.all(
@@ -46,13 +46,13 @@ export default function Expore() {
             const res = await getNfts(it.tokenId);
             const metadataUrl = res[2].replace(
               "ipfs://",
-              "https://ipfs.io/ipfs/"
+              "https://ipfs.io/ipfs/",
             );
             const metadataRes = await axios.get(metadataUrl);
             const metadata = metadataRes.data;
             const imageUrl = metadata.image.replace(
               "ipfs://",
-              "https://ipfs.io/ipfs/"
+              "https://ipfs.io/ipfs/",
             );
             return {
               ...it,
@@ -64,7 +64,7 @@ export default function Expore() {
           } catch (err) {
             console.error(
               `Error fetching metadata for Token ID ${it.tokenId}:`,
-              err
+              err,
             );
             return {
               ...it,
@@ -73,17 +73,16 @@ export default function Expore() {
               img: "",
             };
           }
-        })
+        }),
       );
 
       setCreateNft(data);
-     
     } catch (error) {
       console.error("Error fetching user-created NFTs:", error);
     }
-  };
+  }, [address]);
 
-  const ShowPurchasedNfts = async () => {
+  const ShowPurchasedNfts = useCallback(async () => {
     try {
       const resNFT = await getPurchasedNFTs(address);
       const data = await Promise.all(
@@ -92,13 +91,13 @@ export default function Expore() {
             const res = await getNfts(it.tokenId);
             const metadataUrl = res[2].replace(
               "ipfs://",
-              "https://ipfs.io/ipfs/"
+              "https://ipfs.io/ipfs/",
             );
             const metadataRes = await axios.get(metadataUrl);
             const metadata = metadataRes.data;
             const imageUrl = metadata.image.replace(
               "ipfs://",
-              "https://ipfs.io/ipfs/"
+              "https://ipfs.io/ipfs/",
             );
             return {
               ...it,
@@ -111,7 +110,7 @@ export default function Expore() {
           } catch (err) {
             console.error(
               `Error fetching metadata for Token ID ${it.tokenId}:`,
-              err
+              err,
             );
             return {
               ...it,
@@ -120,33 +119,32 @@ export default function Expore() {
               img: "",
             };
           }
-        })
+        }),
       );
 
       setPurchasedNFTs(data);
-     
     } catch (error) {
       console.error("Error fetching purchased NFTs:", error);
     }
-  };
+  }, [address]);
 
-  const ShowOwnedNFTs = async () => {
+  const ShowOwnedNFTs = useCallback(async () => {
     try {
       const resNFT = await getOwnedNFTs(address);
-   
+
       const data = await Promise.all(
         resNFT.usercurrOwnedNfts.map(async (it) => {
           try {
             const res = await getNfts(it.tokenId);
             const metadataUrl = res[2].replace(
               "ipfs://",
-              "https://ipfs.io/ipfs/"
+              "https://ipfs.io/ipfs/",
             );
             const metadataRes = await axios.get(metadataUrl);
             const metadata = metadataRes.data;
             const imageUrl = metadata.image.replace(
               "ipfs://",
-              "https://ipfs.io/ipfs/"
+              "https://ipfs.io/ipfs/",
             );
             return {
               ...it,
@@ -159,7 +157,7 @@ export default function Expore() {
           } catch (err) {
             console.error(
               `Error fetching metadata for Token ID ${it.tokenId}:`,
-              err
+              err,
             );
             return {
               ...it,
@@ -168,22 +166,21 @@ export default function Expore() {
               img: "",
             };
           }
-        })
+        }),
       );
 
       setOwnedNFTs(data);
- 
     } catch (error) {
       console.error("Error fetching Owned NFTs:", error);
     }
-  };
+  }, [address]);
   useEffect(() => {
     if (address) {
       ShowCreatedNFTs();
       ShowPurchasedNfts();
       ShowOwnedNFTs();
     } else toast.error("Please connect your wallet");
-  }, [address, isFetch]);
+  }, [address, isFetch, ShowCreatedNFTs, ShowPurchasedNfts, ShowOwnedNFTs]);
 
   return (
     <>
@@ -236,7 +233,7 @@ export default function Expore() {
                               nft?.img.startsWith("ipfs://")
                                 ? nft?.img.replace(
                                     "ipfs://",
-                                    "https://ipfs.io/ipfs/"
+                                    "https://ipfs.io/ipfs/",
                                   )
                                 : nft?.img
                             }
@@ -272,13 +269,13 @@ export default function Expore() {
                               {nft?.creator
                                 ? `${nft?.creator.slice(
                                     0,
-                                    6
+                                    6,
                                   )}...${nft?.creator.slice(-8)}`
                                 : "Unknown"}
                             </h6>
                           </div>
                         </div>
-                         <div className="tags">{nft.tokenId}</div>
+                        <div className="tags">{nft.tokenId}</div>
                       </div>
                       <div className="card-bottom style-explode">
                         <div className="price">
@@ -339,7 +336,7 @@ export default function Expore() {
                             nft?.img.startsWith("ipfs://")
                               ? nft?.img.replace(
                                   "ipfs://",
-                                  "https://ipfs.io/ipfs/"
+                                  "https://ipfs.io/ipfs/",
                                 )
                               : nft?.img
                           }
@@ -375,13 +372,13 @@ export default function Expore() {
                             {nft?.creator
                               ? `${nft?.creator.slice(
                                   0,
-                                  6
+                                  6,
                                 )}...${nft?.creator.slice(-8)}`
                               : "Unknown"}
                           </h6>
                         </div>
                       </div>
-                       <div className="tags">{nft.tokenId}</div>
+                      <div className="tags">{nft.tokenId}</div>
                     </div>
                     <div className="card-bottom style-explode">
                       <div className="price">
@@ -442,7 +439,7 @@ export default function Expore() {
                             nft?.img.startsWith("ipfs://")
                               ? nft?.img.replace(
                                   "ipfs://",
-                                  "https://ipfs.io/ipfs/"
+                                  "https://ipfs.io/ipfs/",
                                 )
                               : nft?.img
                           }
@@ -478,13 +475,13 @@ export default function Expore() {
                             {nft?.creator
                               ? `${nft?.creator.slice(
                                   0,
-                                  6
+                                  6,
                                 )}...${nft?.creator.slice(-8)}`
                               : "Unknown"}
                           </h6>
                         </div>
                       </div>
-                       <div className="tags">{nft.tokenId}</div>
+                      <div className="tags">{nft.tokenId}</div>
                     </div>
                     <div className="card-bottom style-explode">
                       <div className="price">

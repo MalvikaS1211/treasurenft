@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick-theme.css";
-import hemlet from "../../assets/hemlet.jpg";
+
 import Trimphant from "../../assets/Trimphant.jpg";
 import LivingVase from "../../assets/LivingVase.jpg";
 import FlameDress from "../../assets/FlameDress.jpg";
@@ -17,7 +17,6 @@ import Piggy from "../../assets/pigy.jpg";
 import Rino from "../../assets/charming-rhinoceros-figurine.jpg";
 import kungfuPanda from "../../assets/kungfuPanda.jpg";
 import robot from "../../assets/robot1.jpg";
-import squirel from "../../assets/squirel.jpg";
 
 export default function LiveAuction() {
   const settings = {
