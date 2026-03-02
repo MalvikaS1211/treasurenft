@@ -15,7 +15,7 @@ export default function DownLine() {
     try {
       const res = await getTotalTeam(address, 1, 100, selectedLevel);
       setTableData(res.userTeam);
-    
+
     } catch (error) {
       console.log("Error", error);
     }
@@ -57,9 +57,8 @@ export default function DownLine() {
                       {Level.map((lev, index) => (
                         <li key={index + 1}>
                           <button
-                            className={`MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-rounded MuiPaginationItem-page css-ksll4a ${
-                              selectedLevel === lev ? "active-level" : ""
-                            }`}
+                            className={`MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-rounded MuiPaginationItem-page css-ksll4a ${selectedLevel === lev ? "active-level" : ""
+                              }`}
                             type="button"
                             style={{ fontSize: "15px" }}
                             onClick={() => setSelectedLevel(lev)}
@@ -81,6 +80,7 @@ export default function DownLine() {
                       <th>Sr.No</th>
                       <th>Id</th>
                       <th>Address</th>
+                      <th>Mobile Number</th>
                       {/* <th>Activation Date</th> */}
                       <th>Level</th>
                       <th>Direct Team</th>
@@ -97,6 +97,7 @@ export default function DownLine() {
                             {data?.user.slice(0, 4)}...
                             {data?.user.slice(-7)}
                           </td>
+                          <td>{data?.mobileNumber || "N/A"}</td>
                           {/* <td>{data.activationDate}</td> */}
                           <td>{data?.level}</td>
                           <td>{data?.totalDirectCount}</td>

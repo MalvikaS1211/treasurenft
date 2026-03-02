@@ -454,8 +454,8 @@ export default function Dashboard() {
                   <p>{allUsers?.rank || 0}</p>
                 </div>
                 <div className="user-card wallet-card">
-                  {/* <h6>My Wallet Fund</h6>
-                  <p className="">{balanceData}</p> */}
+                  <h6>My Mobile Number</h6>
+                  <p className="">{allUsers?.userInfo[0]?.mobileNumber || "N/A"}</p>
 
                   <h6>My Total Income</h6>
                   <p className=" p-2">{totalIncome.toFixed(4)} USDT</p>
@@ -498,7 +498,7 @@ export default function Dashboard() {
                         <button
                           className="btn-upgrade"
                           type="button"
-                          // onClick={() => handlePackage(pkg, index + 1)}
+                        // onClick={() => handlePackage(pkg, index + 1)}
                         >
                           Active
                         </button>

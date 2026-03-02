@@ -15,6 +15,7 @@ import ConnectWallet from "../Common/ConnectWallet";
 import {
   MdAttachMoney,
   MdOutlineSupportAgent,
+  MdPhone,
   MdTrendingUp,
 } from "react-icons/md";
 import { useAccount } from "wagmi";
@@ -38,7 +39,7 @@ export default function Navbar({ title }) {
       if (address) {
         await getStakingDetail(address);
       }
-    } catch (error) {}
+    } catch (error) { }
   };
 
   useEffect(() => {
@@ -116,6 +117,15 @@ export default function Navbar({ title }) {
                 }
               >
                 <GiTrade /> Trade
+              </li>
+            </Link>
+            <Link to="/update-number">
+              <li
+                className={
+                  location.pathname === "/update-number" ? "active" : "inactive"
+                }
+              >
+                <MdPhone /> Update Number
               </li>
             </Link>
             <Link to="/get-tx-hash">

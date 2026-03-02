@@ -2,7 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-export const URLApi = "https://iftglobal.org/api";
+// export const URLApi = "https://iftglobal.org/api";
+export const URLApi = "http://localhost:8081/api";
 export const SOCKET_SERVER_URL = "https://iftglobal.org";
 
 // export const URLApi = "http://127.0.0.1:8081/api";
@@ -630,5 +631,19 @@ export async function getAllowBulkNFT() {
     return response.data;
   } catch (error) {
     console.log("Error eligibleForCreate Admin:", error);
+  }
+}
+
+export async function updateNumber(user, mobileNumber) {
+  try {
+    const response = await axios.post(`${URLApi}/updateMobileNumber`, {
+      user,
+      mobileNumber: mobileNumber
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error updateNumber Admin:", error);
+    return error.response.data;
   }
 }

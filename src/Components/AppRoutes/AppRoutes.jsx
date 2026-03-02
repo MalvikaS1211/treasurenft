@@ -29,6 +29,7 @@ import CommingSoon from "../CommingSoon";
 import DepositHistory from "../Dashboard/DepositHistory";
 import TransactionHash from "../Dashboard/GetYourTxHash";
 import SalaryHistory from "../Dashboard/SalaryHistory";
+import UpdateNumber from "../Dashboard/UpdateNumber";
 
 function AppRoutes() {
   return (
@@ -42,6 +43,7 @@ function AppRoutes() {
           <Route path="/explore" element={<Explore></Explore>} />
           {/* <Route path="/account/level" element={<Level />} /> */}
           <Route path="/NFTcreation" element={<CreateNFT />} />
+          <Route path="/update-number" element={<UpdateNumber />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/refferal" element={<Refferal />} />
           <Route path="/community" element={<Community />} />
