@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import Navbar from "../Dashboard/Navbar";
 
 import {
@@ -23,19 +23,18 @@ export default function ChatSupport() {
   const navigate = useNavigate();
 
   const generateTicket = async () => {
-    const res = await generateTicketFn(address, name, subject, message);
-
+    await generateTicketFn(address, name, subject, message);
   };
 
-  const getTicketByUserAddress = async () => {
+  const getTicketByUserAddress = useCallback(async () => {
     const res = await getTicketByUserAddressFn(address);
 
     setDataByTicket(res.data);
-  };
+  }, [address]);
 
   useEffect(() => {
     getTicketByUserAddress();
-  }, [address]);
+  }, [getTicketByUserAddress]);
 
   return (
     <>
@@ -60,8 +59,14 @@ export default function ChatSupport() {
               aria-labelledby="exampleModalCenterTitle"
               aria-hidden="true"
             >
-              <div className="modal-dialog modal-dialog-centered" role="document">
-                <div className="modal-content" style={{ background: "#303031" }}>
+              <div
+                className="modal-dialog modal-dialog-centered"
+                role="document"
+              >
+                <div
+                  className="modal-content"
+                  style={{ background: "#303031" }}
+                >
                   <div className="modal-header" style={{ height: "80px" }}>
                     <h5
                       className="modal-title text-white "
@@ -158,7 +163,7 @@ export default function ChatSupport() {
                             onClick={(e) => {
                               if (data?.Status === true) {
                                 navigate(
-                                  `/support-chat?msgId=${data._id}&userAddress=${data.UserAddress}`
+                                  `/support-chat?msgId=${data._id}&userAddress=${data.UserAddress}`,
                                 );
                               } else {
                                 e.stopPropagation();
@@ -169,7 +174,7 @@ export default function ChatSupport() {
                             <td>{index + 1}</td>
                             <td>{`${data.UserAddress.slice(
                               0,
-                              5
+                              5,
                             )}...${data.UserAddress.slice(-6)}`}</td>
 
                             <td>{data.Subject}</td>

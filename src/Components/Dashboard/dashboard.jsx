@@ -6,6 +6,7 @@ import { FaRegCopy } from "react-icons/fa6";
 import { useAccount } from "wagmi";
 import {
   claimSalaryIncome,
+  getDirectNFTBusiness,
   getPackageDetails,
   getUserInfo,
   getUserStats,
@@ -45,6 +46,17 @@ export default function Dashboard() {
     seconds: 0,
   });
   const [isExpired, setIsExpired] = useState(false);
+
+  const [NFTBusiness, setNFTBusiness] = useState(0);
+
+  const fetchNFTBusiness = async () => {
+    try {
+      const res = await getDirectNFTBusiness(address);
+      setNFTBusiness(res?.totalBusiness);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const UserProfits = async () => {
     try {
@@ -240,6 +252,7 @@ export default function Dashboard() {
 
       UserProfits();
       packageDetails();
+      fetchNFTBusiness();
     }
   }, [address, isFetch]);
   const copyToClipboard = async () => {
@@ -560,9 +573,16 @@ export default function Dashboard() {
                     </div>
                     <p>
                       {allUsers?.userInfo?.[0]?.totalNftBuyTeamBusines?.toFixed(
-                        4
-                      ) ?? "0"}
+                        4,
+                      ) ?? "0"}{" "}
+                      USDT
                     </p>
+                  </div>
+                  <div className="total-card">
+                    <div className="sub-total">
+                      <h6>Direct NFT Bussiness</h6>
+                    </div>
+                    <p>{Number(NFTBusiness / 1e18)?.toFixed(4) || 0} USDT</p>
                   </div>
                 </div>
                 <div className="total-grid" style={{ marginTop: "0px" }}>
@@ -651,7 +671,7 @@ export default function Dashboard() {
                     </div>
                     <p>
                       {Number(
-                        allUsers?.userInfo?.[0]?.salaryToClaim || 0
+                        allUsers?.userInfo?.[0]?.salaryToClaim || 0,
                       ).toFixed(2) ?? 0}
                       <span> USDT</span>
                     </p>
@@ -672,7 +692,7 @@ export default function Dashboard() {
                     </div>
                     <p>
                       {Number(
-                        allUsers?.userInfo?.[0]?.salaryIncome || 0
+                        allUsers?.userInfo?.[0]?.salaryIncome || 0,
                       ).toFixed(2)}
 
                       <span> USDT</span>
@@ -684,7 +704,7 @@ export default function Dashboard() {
                     </div>
                     <p>
                       {Number(
-                        allUsers?.userInfo?.[0]?.claimedSalary || 0
+                        allUsers?.userInfo?.[0]?.claimedSalary || 0,
                       ).toFixed(2) ?? 0}
                       <span> USDT</span>
                     </p>

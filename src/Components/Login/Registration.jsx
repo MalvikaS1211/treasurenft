@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 
 import HeaderNew from "../Common/Header";
 import FooterNew from "../Common/Footer";
 import ConnectWallet from "../Common/ConnectWallet";
 import { useAccount } from "wagmi";
-import {
-  approveToken,
-  fetchUserTokenBalance,
-  isUserExist,
-  registerfn,
-} from "../../Helper/Web3";
+import { isUserExist, registerfn } from "../../Helper/Web3";
 import toast from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
-import { base_url } from "../../Helper/Config";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { getIdToAddress } from "../../Helper/API_Functions";
 
 export default function Registration() {
@@ -21,24 +15,26 @@ export default function Registration() {
   const { address } = useAccount();
   const [userExist, setUserExist] = useState(false);
 
-  const userExistFn = async () => {
+  const location = useLocation();
+  const userExistFn = useCallback(async () => {
     try {
       if (address) {
         const resUserExist = await isUserExist(address);
-   
+
         setUserExist(resUserExist);
       }
     } catch (error) {
       console.error("Error checking user existence:", error);
     }
-  };
+  }, [address]);
+
   useEffect(() => {
     if (address) {
       userExistFn();
     } else {
       // toast.error("Please connect your wallet");
     }
-  }, [address, userExist]);
+  }, [address, userExistFn]);
 
   useEffect(() => {
     if (userExist) {
@@ -48,20 +44,19 @@ export default function Registration() {
 
   useEffect(() => {
     const getRef = async () => {
-      const data = new URLSearchParams(window.location.search);
+      const data = new URLSearchParams(location.search);
       const refLink = data.get("ref");
-     
+
       if (refLink) {
         const res = await getIdToAddress(refLink);
-     
+
         if (res.success) {
-         
           setRef(res.address);
         }
       }
     };
     getRef();
-  }, [window.location.search]);
+  }, [location.search]);
 
   // const tokenApp = async (amt) => {
   //   try {

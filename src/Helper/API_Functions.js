@@ -647,3 +647,15 @@ export async function updateNumber(user, mobileNumber) {
     return error.response.data;
   }
 }
+export async function getDirectNFTBusiness(user) {
+  try {
+    const response = await axios.post(`${URLApi}/getDirectNftBusinesss`, {
+      user,
+    });
+
+    return response.data;
+  } catch (error) {
+    console.log("Error updateNumber Admin:", error);
+    return error.response.data;
+  }
+}

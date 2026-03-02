@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import AdminIcon from "../../assets/BlakeBanks.jpg";
 import UserIcon from "../../assets/creativeArt.jpg";
 import Navbar from "../Dashboard/Navbar";
@@ -12,18 +13,19 @@ export default function ChatConversation() {
   const [ticketId, setTicketId] = useState("");
   const [address, setAddress] = useState("");
 
+  const location = useLocation();
+
   const getMessage = async () => {
     try {
-      const res = new URLSearchParams(window.location.search);
+      const res = new URLSearchParams(location.search);
       const ticketID = res.get("msgId");
       const userAdd = res.get("userAddress");
       setTicketId(ticketID);
       setAddress(userAdd);
- 
+
       if (ticketID && userAdd) {
         const res = await getAllTicket(ticketID, userAdd);
         setMessages(res.data);
-   
       }
     } catch (error) {
       console.log(error);
@@ -32,7 +34,7 @@ export default function ChatConversation() {
 
   useEffect(() => {
     getMessage();
-  }, [window.location.search]);
+  }, [location.search]);
 
   const handleSendMsg = async () => {
     try {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import HeaderNew from "../Common/Header";
 import FooterNew from "../Common/Footer";
 import ConnectWallet from "../Common/ConnectWallet";
@@ -12,21 +12,21 @@ export default function SignIn() {
   const [userExist, setUserExist] = useState(false);
   const navigate = useNavigate();
 
-  const userExistFn = async () => {
+  const userExistFn = useCallback(async () => {
     try {
       if (address) {
         const resUserExist = await isUserExist(address);
-      
+
         setUserExist(resUserExist);
       }
     } catch (error) {
       console.error("Error checking user existence:", error);
     }
-  };
+  }, [address]);
 
   useEffect(() => {
-    userExistFn(); 
-  }, [address]);
+    userExistFn();
+  }, [userExistFn]);
 
   const handleSignIn = () => {
     if (userExist) {
