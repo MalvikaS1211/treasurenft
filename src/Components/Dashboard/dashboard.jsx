@@ -135,6 +135,7 @@ export default function Dashboard() {
 
   const tokenApp = async (amt) => {
     try {
+      console.log(amt, "amt");
       const appres = approveToken(amt);
       await toast.promise(appres, {
         loading: "Approval in process",
