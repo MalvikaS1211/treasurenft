@@ -2,8 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-// export const URLApi = "https://iftglobal.org/api";
-export const URLApi = "http://localhost:8081/api";
+export const URLApi = "https://iftglobal.org/api";
+// export const URLApi = "http://localhost:8081/api";
 // export const SOCKET_SERVER_URL = "https://iftglobal.org";
 
 // export const URLApi = "http://127.0.0.1:8081/api";
